@@ -1,7 +1,0 @@
-C:\Users\Yohann\Desktop\software\ZadGestion\Common\bin\Release\Common.dll
-C:\Users\Yohann\Desktop\software\ZadGestion\Common\obj\Release\Common.csproj.ResolveComReference.cache
-C:\Users\Yohann\Desktop\software\ZadGestion\Common\obj\Release\Common.dll
-D:\Yohann\Zadig & Co\ZadGestion\Common\bin\Release\Common.dll
-D:\Yohann\Zadig & Co\ZadGestion\Common\obj\Release\Common.csproj.ResolveComReference.cache
-D:\Yohann\Zadig & Co\ZadGestion\Common\obj\Release\Common.csproj.CoreCompileInputs.cache
-D:\Yohann\Zadig & Co\ZadGestion\Common\obj\Release\Common.dll
