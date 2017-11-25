@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_software_1_1_properties_1_1_settings" kind="class" language="C#" prot="package">
+    <compoundname>Software::Properties::Settings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ApplicationSettingsBase</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_software_1_1_properties_1_1_settings_1ae90c1617d1dc8dac00947170613d34b6" prot="private" static="yes" mutable="no">
+        <type>Settings</type>
+        <definition>Settings Software.Properties.Settings.defaultInstance</definition>
+        <argsstring></argsstring>
+        <name>defaultInstance</name>
+        <initializer>= ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Settings.Designer.cs" line="20" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Settings.Designer.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_settings_1af49b7dea2361e071963a53431906faec" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Settings</type>
+        <definition>Settings Software.Properties.Settings.Default</definition>
+        <argsstring></argsstring>
+        <name>Default</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Settings.Designer.cs" line="22" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Settings.Designer.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="162">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="161">
+        <label>Software.Properties.Settings</label>
+        <childnode refid="162" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="164">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="163">
+        <label>Software.Properties.Settings</label>
+        <childnode refid="164" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Settings.Designer.cs" line="18" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Settings.Designer.cs" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_software_1_1_properties_1_1_settings_1af49b7dea2361e071963a53431906faec" prot="public" virt="non-virtual"><scope>Software::Properties::Settings</scope><name>Default</name></member>
+      <member refid="class_software_1_1_properties_1_1_settings_1ae90c1617d1dc8dac00947170613d34b6" prot="private" virt="non-virtual"><scope>Software::Properties::Settings</scope><name>defaultInstance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

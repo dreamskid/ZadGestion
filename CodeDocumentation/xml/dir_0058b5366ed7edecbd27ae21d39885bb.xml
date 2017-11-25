@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_0058b5366ed7edecbd27ae21d39885bb" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion</compoundname>
+    <innerdir refid="dir_49529c2a3ad0056cfbfe1da3ae13f8b5">C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/bin</innerdir>
+    <innerdir refid="dir_df57aa453ad21c28886b8e7c4d204b85">C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms</innerdir>
+    <innerdir refid="dir_960e88f51f0a2b3132f5036650dd115d">C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Language</innerdir>
+    <innerdir refid="dir_47e84a346d068fd49522ebad7bc0a95d">C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj</innerdir>
+    <innerdir refid="dir_46559a8aefc52e3b7713b66567846e8e">C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Properties</innerdir>
+    <innerfile refid="_app_8xaml_8cs">App.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/"/>
+  </compounddef>
+</doxygen>

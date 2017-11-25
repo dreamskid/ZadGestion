@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_41acd4282f0ec8c468d4c58a368603c7" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/WindowWait</compoundname>
+    <innerdir refid="dir_8097a6aae4ff59f1eca7d2932ea04fb1">C:/Users/Yohann/Desktop/software/ZadGestion/WindowWait/Forms</innerdir>
+    <innerdir refid="dir_c015b5340a28dce9e16e106c22253139">C:/Users/Yohann/Desktop/software/ZadGestion/WindowWait/obj</innerdir>
+    <innerdir refid="dir_b23604250a792f0642b808acd82f43b9">C:/Users/Yohann/Desktop/software/ZadGestion/WindowWait/Properties</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowWait/"/>
+  </compounddef>
+</doxygen>

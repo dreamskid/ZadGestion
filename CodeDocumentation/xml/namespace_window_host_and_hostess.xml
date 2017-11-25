@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="namespace_window_host_and_hostess" kind="namespace" language="C#">
+    <compoundname>WindowHostAndHostess</compoundname>
+    <innerclass refid="class_window_host_and_hostess_1_1_main_window___host_and_hostess" prot="public">WindowHostAndHostess::MainWindow_HostAndHostess</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostAndHostess.g.cs" line="34" column="1"/>
+  </compounddef>
+</doxygen>

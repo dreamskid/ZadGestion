@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_general_classes_1_1_error" kind="class" language="C#" prot="public">
+    <compoundname>GeneralClasses::Error</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_general_classes_1_1_error_1a437825c2a1b3f640e26773e5bc00c711" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GeneralClasses.Error.m_LogFile</definition>
+        <argsstring></argsstring>
+        <name>m_LogFile</name>
+        <initializer>= &quot;ZadGestion.log&quot;</initializer>
+        <briefdescription>
+<para>Log file name </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" line="16" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_general_classes_1_1_error_1ac5d42b4ed7695630bfc7364a49aee638" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string GeneralClasses.Error.error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <briefdescription>
+<para>Getter/Setter for the error </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" line="25" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_general_classes_1_1_error_1abef9e9d3976da8d8fbeabf25d3febd87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string GeneralClasses.Error.Get_LogFilename</definition>
+        <argsstring>()</argsstring>
+        <name>Get_LogFilename</name>
+        <briefdescription>
+<para>Getter for the log filename </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" line="30" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_error_1ac38158307f9b6575d80594dfda075982" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralClasses.Error.Set_LogFilename</definition>
+        <argsstring>(string _LogFileName)</argsstring>
+        <name>Set_LogFilename</name>
+        <param>
+          <type>string</type>
+          <declname>_LogFileName</declname>
+        </param>
+        <briefdescription>
+<para>Setter for the log filename <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_LogFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Log file name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" line="38" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_error_1ae9c5c4317891366c23808a07b4f7fe5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralClasses.Error.WriteMessage</definition>
+        <argsstring>(string _MethodName, string _Message2=&quot;&quot;)</argsstring>
+        <name>WriteMessage</name>
+        <param>
+          <type>string</type>
+          <declname>_MethodName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Message2</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Write a line in the log file from a primary and a secondary messages <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_MethodName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message number 1</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Message2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message number 2</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" line="52" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" bodystart="52" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_error_1a671a39c4c3fc69c59de6dc9c4f32b89a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralClasses.Error.WriteException</definition>
+        <argsstring>(string _MethodName, Exception _Exception)</argsstring>
+        <name>WriteException</name>
+        <param>
+          <type>string</type>
+          <declname>_MethodName</declname>
+        </param>
+        <param>
+          <type>Exception</type>
+          <declname>_Exception</declname>
+        </param>
+        <briefdescription>
+<para>Write a line in the log file from an exception <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_MethodName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message number 1</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exception</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" line="69" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" bodystart="69" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class <ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref> containing all the functions for handling error </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" line="9" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Error.cs" bodystart="8" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_general_classes_1_1_error_1ac5d42b4ed7695630bfc7364a49aee638" prot="public" virt="non-virtual"><scope>GeneralClasses::Error</scope><name>error</name></member>
+      <member refid="class_general_classes_1_1_error_1abef9e9d3976da8d8fbeabf25d3febd87" prot="public" virt="non-virtual"><scope>GeneralClasses::Error</scope><name>Get_LogFilename</name></member>
+      <member refid="class_general_classes_1_1_error_1a437825c2a1b3f640e26773e5bc00c711" prot="private" virt="non-virtual"><scope>GeneralClasses::Error</scope><name>m_LogFile</name></member>
+      <member refid="class_general_classes_1_1_error_1ac38158307f9b6575d80594dfda075982" prot="public" virt="non-virtual"><scope>GeneralClasses::Error</scope><name>Set_LogFilename</name></member>
+      <member refid="class_general_classes_1_1_error_1a671a39c4c3fc69c59de6dc9c4f32b89a" prot="public" virt="non-virtual"><scope>GeneralClasses::Error</scope><name>WriteException</name></member>
+      <member refid="class_general_classes_1_1_error_1ae9c5c4317891366c23808a07b4f7fe5e" prot="public" virt="non-virtual"><scope>GeneralClasses::Error</scope><name>WriteMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

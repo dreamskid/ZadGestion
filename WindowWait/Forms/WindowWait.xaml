@@ -1,0 +1,12 @@
+﻿<Window x:Name="Window_Wait" x:Class="WindowWait.MainWindow_Wait"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Waiting..." Height="224" Width="360" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Opacity="0.95" Foreground="{x:Null}" Background="#FF595C61" BorderBrush="White" WindowStyle="None" BorderThickness="2">
+
+    <Grid x:Name="Grid_WindowWait" HorizontalAlignment="Left" Height="189" Margin="10,10,0,0" VerticalAlignment="Top" Width="340">
+        <!--Label-->
+        <Label x:Name="Lbl_PrincipalMessage" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" Content="Lbl_PrincipalMessage" VerticalAlignment="Top" Width="320" FontWeight="Bold" FontSize="20" BorderBrush="{x:Null}" Foreground="White"/>
+        <Label x:Name="Lbl_SecondaryMessage" HorizontalAlignment="Left" Height="99" Margin="10,80,0,0" Content="Lbl_SecondaryMessage" VerticalAlignment="Top" Width="320" BorderBrush="{x:Null}" Foreground="White"/>
+    </Grid>
+
+</Window>

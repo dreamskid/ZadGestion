@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_43e0f86149f38660768bbe0dd51f27a8" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess</compoundname>
+    <innerdir refid="dir_c00da1fb37c4ceb1dfbf8651be3df8c6">C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms</innerdir>
+    <innerdir refid="dir_084eac1aebb4437663f3deb3f2343161">C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj</innerdir>
+    <innerdir refid="dir_789fdbf5a27ea4e3662e7fb9068dabb8">C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Properties</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/"/>
+  </compounddef>
+</doxygen>

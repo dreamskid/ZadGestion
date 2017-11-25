@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_general_classes_1_1_date_and_time" kind="class" language="C#" prot="public">
+    <compoundname>GeneralClasses::DateAndTime</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_general_classes_1_1_date_and_time_1a02afde95f797ddbf8635c72b1a327a6b" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref></type>
+        <definition>Error GeneralClasses.DateAndTime.m_Error_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Error_Handler</name>
+        <initializer>= new <ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref>()</initializer>
+        <briefdescription>
+<para><ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref> handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" line="17" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_general_classes_1_1_date_and_time_1ab83734f5ad13be8782949a3c0ef0d230" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string GeneralClasses.DateAndTime.Get_PresentYear</definition>
+        <argsstring>()</argsstring>
+        <name>Get_PresentYear</name>
+        <briefdescription>
+<para>Get the present year <simplesect kind="return"><para>string containing the present year</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" line="27" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_date_and_time_1aec581a62ec0cd324a313b9b6dc1c3436" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string GeneralClasses.DateAndTime.Get_PresentYearShort</definition>
+        <argsstring>()</argsstring>
+        <name>Get_PresentYearShort</name>
+        <briefdescription>
+<para>Get the present year in the short format <simplesect kind="return"><para>string containing the present year in the short format</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" line="37" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_date_and_time_1ad4506b01dc25ed4fc8efcebbf3e98484" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string GeneralClasses.DateAndTime.Get_PresentMonth</definition>
+        <argsstring>()</argsstring>
+        <name>Get_PresentMonth</name>
+        <briefdescription>
+<para>Get the present month <simplesect kind="return"><para>string containing the present month</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" line="48" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" bodystart="48" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_date_and_time_1ac3d0f04a7341188797aaa7028602d0ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string GeneralClasses.DateAndTime.Get_PresentDay</definition>
+        <argsstring>()</argsstring>
+        <name>Get_PresentDay</name>
+        <briefdescription>
+<para>Get the present day <simplesect kind="return"><para>string containing the present day</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" line="60" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_date_and_time_1afdb6de82ec4fd85dafe5a2fe423e990c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string GeneralClasses.DateAndTime.Get_PresentHour</definition>
+        <argsstring>()</argsstring>
+        <name>Get_PresentHour</name>
+        <briefdescription>
+<para>Get the present hour <simplesect kind="return"><para>string containing the present hour</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" line="72" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" bodystart="72" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_date_and_time_1aa670e1785f6af57d4792494d770c41d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string GeneralClasses.DateAndTime.Treat_Date</definition>
+        <argsstring>(string _Date, string _Language)</argsstring>
+        <name>Treat_Date</name>
+        <param>
+          <type>string</type>
+          <declname>_Date</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Language</declname>
+        </param>
+        <briefdescription>
+<para>Transform the date in function of the culture in order to be shown <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Date to treat</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Language</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Language</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string containing the treated date</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" line="86" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" bodystart="86" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class DateTime containing all the functions for handling date and time </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" line="10" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/DateAndTime.cs" bodystart="9" bodyend="121"/>
+    <listofallmembers>
+      <member refid="class_general_classes_1_1_date_and_time_1ac3d0f04a7341188797aaa7028602d0ba" prot="public" virt="non-virtual"><scope>GeneralClasses::DateAndTime</scope><name>Get_PresentDay</name></member>
+      <member refid="class_general_classes_1_1_date_and_time_1afdb6de82ec4fd85dafe5a2fe423e990c" prot="public" virt="non-virtual"><scope>GeneralClasses::DateAndTime</scope><name>Get_PresentHour</name></member>
+      <member refid="class_general_classes_1_1_date_and_time_1ad4506b01dc25ed4fc8efcebbf3e98484" prot="public" virt="non-virtual"><scope>GeneralClasses::DateAndTime</scope><name>Get_PresentMonth</name></member>
+      <member refid="class_general_classes_1_1_date_and_time_1ab83734f5ad13be8782949a3c0ef0d230" prot="public" virt="non-virtual"><scope>GeneralClasses::DateAndTime</scope><name>Get_PresentYear</name></member>
+      <member refid="class_general_classes_1_1_date_and_time_1aec581a62ec0cd324a313b9b6dc1c3436" prot="public" virt="non-virtual"><scope>GeneralClasses::DateAndTime</scope><name>Get_PresentYearShort</name></member>
+      <member refid="class_general_classes_1_1_date_and_time_1a02afde95f797ddbf8635c72b1a327a6b" prot="private" virt="non-virtual"><scope>GeneralClasses::DateAndTime</scope><name>m_Error_Handler</name></member>
+      <member refid="class_general_classes_1_1_date_and_time_1aa670e1785f6af57d4792494d770c41d2" prot="public" virt="non-virtual"><scope>GeneralClasses::DateAndTime</scope><name>Treat_Date</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

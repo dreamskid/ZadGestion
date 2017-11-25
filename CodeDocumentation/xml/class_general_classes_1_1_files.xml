@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_general_classes_1_1_files" kind="class" language="C#" prot="public">
+    <compoundname>GeneralClasses::Files</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_general_classes_1_1_files_1a5f887fe5e5e82179040dcf7887ad484c" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref></type>
+        <definition>Error GeneralClasses.Files.m_Error_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Error_Handler</name>
+        <initializer>= new <ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref>()</initializer>
+        <briefdescription>
+<para><ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref> handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Files.cs" line="17" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Files.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_general_classes_1_1_files_1ade61ac2dc9ea6d78c85d3734bdd605d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.Files.File_Exists</definition>
+        <argsstring>(string _FileName)</argsstring>
+        <name>File_Exists</name>
+        <param>
+          <type>string</type>
+          <declname>_FileName</declname>
+        </param>
+        <briefdescription>
+<para>Test if a file exists <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location of the file</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the file exists, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Files.cs" line="28" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Files.cs" bodystart="28" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_files_1a68b885f2f66e5f6f19370cfd1c4bf745" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.Files.Delete_File</definition>
+        <argsstring>(string _FileName)</argsstring>
+        <name>Delete_File</name>
+        <param>
+          <type>string</type>
+          <declname>_FileName</declname>
+        </param>
+        <briefdescription>
+<para>Delete a file <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location of the file</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the operation went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Files.cs" line="50" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Files.cs" bodystart="50" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class <ref refid="class_general_classes_1_1_files" kindref="compound">Files</ref> containing all the functions for handling files </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Files.cs" line="10" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Files.cs" bodystart="9" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_general_classes_1_1_files_1a68b885f2f66e5f6f19370cfd1c4bf745" prot="public" virt="non-virtual"><scope>GeneralClasses::Files</scope><name>Delete_File</name></member>
+      <member refid="class_general_classes_1_1_files_1ade61ac2dc9ea6d78c85d3734bdd605d2" prot="public" virt="non-virtual"><scope>GeneralClasses::Files</scope><name>File_Exists</name></member>
+      <member refid="class_general_classes_1_1_files_1a5f887fe5e5e82179040dcf7887ad484c" prot="private" virt="non-virtual"><scope>GeneralClasses::Files</scope><name>m_Error_Handler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

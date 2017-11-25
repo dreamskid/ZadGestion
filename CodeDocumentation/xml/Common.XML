@@ -1,0 +1,1101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="T:GeneralClasses.Controls">
+            <summary>
+            Class Controls containing all the functions for handling WPF controls
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Controls.Clean_Fields(System.Collections.Generic.List{System.Windows.Controls.Control})">
+            <summary>
+            Function which cleans all the fields
+            <param name="_ListFields">List of fields to clean</param>
+            <returns>True if the cleaning has been correctly done, false otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Controls.Verify_BlankFields(System.Collections.Generic.List{System.Windows.Controls.Control},System.Collections.Generic.List{System.String},GeneralClasses.ResourcesManager)">
+            <summary>
+            Function which verify which fields are blank in a list of fields
+            <param name="_ListFields">List of all the fields</param>
+            <param name="_NeededFields">Fields needed to be verify</param>
+            <param name="_RessourceHandler">Ressource handler</param>
+            <returns>A list of fields containing the blank fields</returns>
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Controls.m_textBoxChanging">
+            <summary>
+            Boolean text box changing
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Controls.Validate_NumericTextBox(System.Windows.Controls.TextBox)">
+            <summary>
+            Function validating a numeric text box
+            <param name="_TextBox">the numeric text box</param>
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.DateAndTime">
+            <summary>
+            Class DateTime containing all the functions for handling date
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.DateAndTime.Get_PresentYear">
+            <summary>
+            Function getting the present year
+            <returns>String containing the present year</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.DateAndTime.Get_PresentMonth">
+            <summary>
+            Function getting the present month
+            <returns>String containing the present month</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.DateAndTime.Get_PresentDay">
+            <summary>
+            Function getting the present day
+            <returns>String containing the present day</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.DateAndTime.Get_PresentHour">
+            <summary>
+            Function getting the present hour
+            <returns>String containing the present hour</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.DateAndTime.Treat_Date(System.String,System.String)">
+            <summary>
+            Function treating the date
+            <param name="_Date">Date to treat</param>
+            <param name="_Language">Language</param>
+            <returns>String containing the date</returns>
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.Email">
+            <summary>
+            Class Email containing all the functions for handling email
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Email.MAPI_LOGON_UI">
+            <summary>
+            Adress of the default email software
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Email.MAPI_DIALOG">
+            <summary>
+            Adress of the dialog email software
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Email.m_MaxAttachments">
+            <summary>
+            Number of maximum attachments
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Email.m_Recipients">
+            <summary>
+            List of recipients
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Email.m_attachments">
+            <summary>
+            List of attachments file name
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Email.m_LastError">
+            <summary>
+            Integer of the last error
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Email.errors">
+            <summary>
+            Table of possible errors
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Add_Recipient(System.String,GeneralClasses.Email.HowTo)">
+            <summary>
+            Function which add recipients to the email 
+            <param name="_Email">The email</param>
+            <param name="_HowTo">Which type of recipient</param>
+            <returns>True if the operation went well, false otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Add_RecipientTo(System.String)">
+            <summary>
+            Function which add recipients to the email 
+            <param name="_Email">The email</param>
+            <returns>True if the operation went well, false otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Add_RecipientCC(System.String)">
+            <summary>
+            Function which add recipient CC to the email 
+            <param name="_Email">The Email</param>
+            <returns>True if the operation went well, false otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Add_RecipientBCC(System.String)">
+            <summary>
+            Function which add recipients BCC to the email 
+            <param name="_Email">The Email</param>
+            <returns>True if the operation went well, false otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Add_Attachment(System.String)">
+            <summary>
+            Function which add attachments
+            <param name="_AttachmentFileName">The attachment</param>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Send_Mail(System.String,System.String,System.Int32)">
+            <summary>
+            Function which treat the email (popu or not)
+            <param name="_Subject">Subject of the email</param>
+            <param name="_Body">Body of the email</param>
+            <param name="_How">Way to send the email</param>
+            <returns>0 if the operation went well, >0 otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Get_Recipients(System.Int32@)">
+            <summary>
+            Function which returns the size of recipient
+            <param name="_RecipCount">Number of recipients</param>
+            <returns>Size of recipients</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Get_Attachments(System.Int32@)">
+            <summary>
+            Function which returns the size of attachments
+            <param name="_FileCount">Number of attachments</param>
+            <returns>Size of attachments</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Send_MailPopup(System.String,System.String)">
+            <summary>
+            Function which call the function to open the default emailing software
+            <param name="_Subject">Subject of the email</param>
+            <param name="_Body">Body of the email</param>
+            <returns>0 if the operation went well, >0 otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Send_MailDirect(System.String,System.String)">
+            <summary>
+            Function which call the function to send directly the email
+            <param name="_Subject">Subject of the email</param>
+            <param name="_Body">Body of the email</param>
+            <returns>0 if the operation went well, >0 otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Compose_Mail(System.String[],System.String,System.String,System.String[])">
+            <summary>
+            Function which call the function to send directly the email
+            <param name="_Recipients">List of recipients</param>
+            <param name="_Subject">Subject of the email</param>
+            <param name="_Body">Body of the email</param>
+            <param name="_Attachments">List of attachments</param>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Cleanup(GeneralClasses.MapiMessage@)">
+            <summary>
+            Clean all memory and variables
+            <param name="_Message">Mapi message</param>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Email.Get_LastError">
+            <summary>
+            Get the last error
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.Email.HowTo">
+            <summary>
+            Enum of HowTO
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.MapiMessage">
+            <summary>
+            Class MapiMessage containing all the members defining a mapi message
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.reserved">
+            <summary>
+            reserved
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.subject">
+            <summary>
+            subject
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.noteText">
+            <summary>
+            noteText
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.messageType">
+            <summary>
+            messageType
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.dateReceived">
+            <summary>
+            dateReceived
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.conversationID">
+            <summary>
+            conversationID
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.flags">
+            <summary>
+            flags
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.originator">
+            <summary>
+            originator
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.recipCount">
+            <summary>
+            recipCount
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.recips">
+            <summary>
+            recips
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.fileCount">
+            <summary>
+            fileCount
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiMessage.files">
+            <summary>
+            files
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.MapiFileDesc">
+            <summary>
+            Class MapiMessage containing all the members defining a mapi file
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiFileDesc.reserved">
+            <summary>
+            reserved
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiFileDesc.flags">
+            <summary>
+            flags
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiFileDesc.position">
+            <summary>
+            position
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiFileDesc.path">
+            <summary>
+            path
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiFileDesc.name">
+            <summary>
+            name
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiFileDesc.type">
+            <summary>
+            type
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.MapiRecipDesc">
+            <summary>
+            Class MapiMessage containing all the members defining a mapi recipient
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiRecipDesc.reserved">
+            <summary>
+            reserved
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiRecipDesc.recipClass">
+            <summary>
+            recipClass
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiRecipDesc.name">
+            <summary>
+            name
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiRecipDesc.address">
+            <summary>
+            address
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiRecipDesc.eIDSize">
+            <summary>
+            eIDSize
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.MapiRecipDesc.entryID">
+            <summary>
+            entryID
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.Error">
+            <summary>
+            Class Error containing all the functions for handling error
+            </summary>
+        </member>
+        <member name="P:GeneralClasses.Error.error">
+            <summary>
+            Getter/Setter for the error
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.Handlers">
+            <summary>
+            Class Handlers containing all the handlers for common classes
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Handlers.m_Language_Handler">
+            <summary>
+            Handler for language
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Handlers.m_File_Handler">
+            <summary>
+            Handler for files
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Handlers.m_DateAndTime_Handler">
+            <summary>
+            Handler for date and times
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Handlers.m_Image_Handler">
+            <summary>
+            Handler for images
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Handlers.m_Controls_Handler">
+            <summary>
+            Handler for controls
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Handlers.m_Resources_Handler">
+            <summary>
+            Handler for resources
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.Handlers.m_Word_Handler">
+            <summary>
+            Handler for word generation
+            </summary>
+        </member>
+        <member name="P:GeneralClasses.Handlers.Language_Handler">
+            <summary>
+            Getter/Setter for language
+            </summary>
+        </member>
+        <member name="P:GeneralClasses.Handlers.File_Handler">
+            <summary>
+            Getter/Setter for File_Handler
+            </summary>
+        </member>
+        <member name="P:GeneralClasses.Handlers.DateAndTime_Handler">
+            <summary>
+            Getter/Setter for DateAndTime_Handler
+            </summary>
+        </member>
+        <member name="P:GeneralClasses.Handlers.Image_Handler">
+            <summary>
+            Getter/Setter for Image_Handler
+            </summary>
+        </member>
+        <member name="P:GeneralClasses.Handlers.Controls_Handler">
+            <summary>
+            Getter/Setter for Controls_Handler
+            </summary>
+        </member>
+        <member name="P:GeneralClasses.Handlers.Resources_Handler">
+            <summary>
+            Getter/Setter for Resources_Handler
+            </summary>
+        </member>
+        <member name="P:GeneralClasses.Handlers.Word_Handler">
+            <summary>
+            Getter/Setter for m_Word_Handler
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.ResourcesManager">
+            <summary>
+            Class ResourcesManager containing all the functions for handling files
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.ResourcesManager.m_ResourceMap">
+            <summary>
+            Dictionnary containing all the entries in the ressource file
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.ResourcesManager.Fill_Resources(System.String,GeneralClasses.Files)">
+            <summary>
+            Function which fills the Dictionnary
+            <param name="_Language">Language chosen for the software</param>
+            <param name="_File_Handler">Global file handler</param>
+            <returns>True if the filling has been correctly done, false otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.ResourcesManager.Get_Resources(System.String)">
+            <summary>
+            Function which get a ressource from the dictionnary
+            <param name="_ResourceId">Id of the resource to retrieve</param>
+            <returns>The string corresponding to the given resource Id in the resource map</returns>
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.Files">
+            <summary>
+            Class Files containing all the functions for handling files
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Files.File_Exists(System.String)">
+            <summary>
+            Function testing the presence of the file at a given location
+            <param name="_FileName">Location of the file</param>
+            <returns>True if the file exists, false otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Files.Delete_File(System.String)">
+            <summary>
+            Function deleting a file
+            <param name="_FileName">Location of the file</param>
+            <returns>True if the operation went well, false otherwise</returns>
+            </summary>
+        </member>
+        <member name="T:GeneralClasses.Images">
+            <summary>
+            Class Images containing all the functions for handling images
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.Images.ToBitmapSource(System.Drawing.Bitmap)">
+            <summary>
+            Converts a <see cref="T:System.Drawing.Bitmap"/> into a WPF <see cref="T:System.Windows.Media.Imaging.BitmapSource"/>.
+            </summary>
+            <remarks>Uses GDI to do the conversion. Hence the call to the marshalled DeleteObject.
+            </remarks>
+            <param name="_Source">The source bitmap.</param>
+            <returns>A BitmapSource</returns>
+        </member>
+        <member name="M:GeneralClasses.Images.ResizeImage(System.Drawing.Image,System.Drawing.Size)">
+            <summary>
+            Resize a <see cref="T:System.Drawing.Bitmap"/> to a new Size
+            </summary>
+            <param name="_ImgToResize">The source bitmap.</param>
+            <param name="_Size">The final size.</param>
+            <returns>The resized image</returns>
+        </member>
+        <member name="M:GeneralClasses.Images.ResizeImage(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            Resize a <see cref="T:System.Drawing.Bitmap"/> to a new Size
+            </summary>
+            <param name="_ImgToResize">The source bitmap</param>
+            <param name="_Width">The final width</param>
+            <param name="_Height">The final height</param>
+            <returns>The resized image</returns>
+        </member>
+        <member name="M:GeneralClasses.Images.Is_ImageFromFilename(System.String,GeneralClasses.Handlers)">
+            <summary>
+            Test if a file is an image
+            </summary>
+            <param name="_Filename">File name of the file to test</param>
+            <param name="_GlobalHandler">Global handler to create the message box</param>
+            <returns>True if the file is an image, false otherwise</returns>
+        </member>
+        <member name="T:GeneralClasses.WordGeneration">
+            <summary>
+            Class WordGeneration containing all the tools to generate an estimate to word
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.WordGeneration.m_AppWord">
+            <summary>
+            Word application
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.WordGeneration.m_NewWordDoc">
+            <summary>
+            Word document to generate
+            </summary>
+        </member>
+        <member name="F:GeneralClasses.WordGeneration.m_GeneratedEstimateFileName">
+            <summary>
+            Estimate generated filename
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.WordGeneration.Get_GeneratedEstimateFileName">
+            <summary>
+            Getter for the generated estimate
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.WordGeneration.Replace_Text(System.String,System.String,Microsoft.Office.Interop.Word.Application)">
+            <summary>
+            Function replacing a text in the word templace in the new one
+            <param name="_TextToReplace">Text in the template</param>
+            <param name="_NewText">New text</param>
+            <param name="_MsWord">Document where to replace the text</param>
+            <returns>True if everything went well, false otherwise</returns>
+            </summary>
+        </member>
+        <member name="M:GeneralClasses.WordGeneration.Generate_Estimate(GeneralClasses.Handlers,SoftwareClasses.Billing,System.Boolean)">
+            <summary>
+            Function creating a table containing the services in a word document
+            <param name="_Global_Handler">Global handler to get the ressources</param>
+            <param name="_Estimate">Estimate to generate</param>
+            <param name="_Is_Visible">Word visible during generation or not</param>
+            </summary>
+        </member>
+        <member name="T:SoftwareClasses.Billing">
+            <summary>
+            Class Billing containing all the variables describing a billing
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.id">
+            <summary>
+            Getter/Setter for Id
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.id_contact">
+            <summary>
+            Getter/Setter for Contact
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.id_company">
+            <summary>
+            Getter/Setter for Company
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.num_estimate">
+            <summary>
+            Getter/Setter for Estimate number
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.num_invoice">
+            <summary>
+            Getter/Setter for Invoice number
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.amount">
+            <summary>
+            Getter/Setter for Amount
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.discount">
+            <summary>
+            Getter/Setter for Discount
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.subject">
+            <summary>
+            Getter/Setter for Subject
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.date_estimate_sent">
+            <summary>
+            Getter/Setter for Estimate sent date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.date_invoice_sent">
+            <summary>
+            Getter/Setter for Billing date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.date_term">
+            <summary>
+            Getter/Setter for Term date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.date_estimate_creation">
+            <summary>
+            Getter/Setter for Estimate creation date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.date_invoice_creation">
+            <summary>
+            Getter/Setter for Invoice creation date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.date_estimate_modification">
+            <summary>
+            Getter/Setter for Estimate modification date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.date_invoice_modification">
+            <summary>
+            Getter/Setter for Invoice modification date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.payment_terms">
+            <summary>
+            Getter/Setter for Terms of payment
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.services">
+            <summary>
+            Getter/Setter for Services
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Billing.payments">
+            <summary>
+            Getter/Setter for Payments
+            </summary>
+        </member>
+        <member name="T:SoftwareClasses.Contact">
+            <summary>
+            Class Client containing all the variables describing a contact
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.id">
+            <summary>
+            Getter/Setter for Id
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.id_user">
+            <summary>
+            Getter/Setter for IdUser
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.firstname">
+            <summary>
+            Getter/Setter for FirstName
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.lastname">
+            <summary>
+            Getter/Setter for LastName
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.phone">
+            <summary>
+            Getter/Setter for Phone
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.cellphone">
+            <summary>
+            Getter/Setter for CellPhone
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.fax">
+            <summary>
+            Getter/Setter for Fax
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.email">
+            <summary>
+            Getter/Setter for Email
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.address">
+            <summary>
+            Getter/Setter for Address
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.city">
+            <summary>
+            Getter/Setter for City
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.zipcode">
+            <summary>
+            Getter/Setter for ZipCode
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.state">
+            <summary>
+            Getter/Setter for State
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.country">
+            <summary>
+            Getter/Setter for Country
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.company">
+            <summary>
+            Getter/Setter for ClientCompanyName
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.EIN">
+            <summary>
+            Getter/Setter for EIN
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Contact.date_creation">
+            <summary>
+            Getter/Setter for CreationDate
+            </summary>
+        </member>
+        <member name="T:SoftwareClasses.Payment">
+            <summary>
+            Class Billing containing all the variables describing a payment
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Payment.id">
+            <summary>
+            Getter/Setter for Id
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Payment.description">
+            <summary>
+            Getter/Setter for Description
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Payment.date_payment">
+            <summary>
+            Getter/Setter for Payment date
+            </summary>
+        </member>
+        <member name="T:SoftwareClasses.Service">
+            <summary>
+            Class Service containing all the variables describing a service
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Service.id">
+            <summary>
+            Getter/Setter for Id
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Service.reference">
+            <summary>
+            Getter/Setter for Reference
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Service.description">
+            <summary>
+            Getter/Setter for Description
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Service.unit">
+            <summary>
+            Getter/Setter for Unit
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Service.amount">
+            <summary>
+            Getter/Setter for Amount
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Service.VAT">
+            <summary>
+            Getter/Setter for VAT
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Service.quantity">
+            <summary>
+            Getter/Setter for quantity
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Service.discount">
+            <summary>
+            Getter/Setter for discount
+            </summary>
+        </member>
+        <member name="T:SoftwareClasses.Settings">
+            <summary>
+            Class Settings containing all the variables corresponding to the Settings choosen by the user
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Settings.id">
+            <summary>
+            Getter/Setter for Id
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Settings.id_company">
+            <summary>
+            Getter/Setter for Id_company
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Settings.header">
+            <summary>
+            Getter/Setter for Header
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Settings.footer">
+            <summary>
+            Getter/Setter for Footer
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Settings.unit">
+            <summary>
+            Getter/Setter for Unit
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Settings.vat">
+            <summary>
+            Getter/Setter for VAT
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Settings.date_creation">
+            <summary>
+            Getter/Setter for Creation date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.Settings.date_modification">
+            <summary>
+            Getter/Setter for Modification date
+            </summary>
+        </member>
+        <member name="T:SoftwareClasses.SoftwareObjects">
+            <summary>
+            Class containing all the collection of class for the software
+            </summary>
+        </member>
+        <member name="F:SoftwareClasses.SoftwareObjects.m_ContactsCollection">
+            <summary>
+            List of clients
+            </summary>
+        </member>
+        <member name="F:SoftwareClasses.SoftwareObjects.m_BillingCollection">
+            <summary>
+            List of Estimates
+            </summary>
+        </member>
+        <member name="F:SoftwareClasses.SoftwareObjects.m_ServicesCollection">
+            <summary>
+            List of services
+            </summary>
+        </member>
+        <member name="F:SoftwareClasses.SoftwareObjects.m_Settings">
+            <summary>
+            Settings
+            </summary>
+        </member>
+        <member name="F:SoftwareClasses.SoftwareObjects.m_User">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="F:SoftwareClasses.SoftwareObjects.m_UserCompany">
+            <summary>
+            UserCompany
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.SoftwareObjects.ContactsCollection">
+            <summary>
+            Getter/Setter for ContactsCollection
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.SoftwareObjects.BillingCollection">
+            <summary>
+            Getter/Setter for ContactsCollection
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.SoftwareObjects.ServicesCollection">
+            <summary>
+            Getter/Setter for ServicesCollection
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.SoftwareObjects.GlobalSettings">
+            <summary>
+            Getter/Setter for GlobalSettings
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.SoftwareObjects.GeneralUser">
+            <summary>
+            Getter/Setter for User
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.SoftwareObjects.GeneralUserCompany">
+            <summary>
+            Getter/Setter for User company
+            </summary>
+        </member>
+        <member name="T:SoftwareClasses.User">
+            <summary>
+            Class User containing all the variables describing a user
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.id">
+            <summary>
+            Getter/Setter for Id
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.id_company">
+            <summary>
+            Getter/Setter for Id_company
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.firstname">
+            <summary>
+            Getter/Setter for Firstname
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.lastname">
+            <summary>
+            Getter/Setter for Lastname
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.phone">
+            <summary>
+            Getter/Setter for Phone
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.cellphone">
+            <summary>
+            Getter/Setter for Cell phone
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.email">
+            <summary>
+            Getter/Setter for Email
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.password">
+            <summary>
+            Getter/Setter for Password
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.token">
+            <summary>
+            Getter/Setter for Token
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.date_token_creation">
+            <summary>
+            Getter/Setter for Date token creation
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.licence">
+            <summary>
+            Getter/Setter for Licence
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.date_licence_creation">
+            <summary>
+            Getter/Setter for Date licence creation
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.date_licence_expiration">
+            <summary>
+            Getter/Setter for Date licence expiration
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.type">
+            <summary>
+            Getter/Setter for Type
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.code_lang">
+            <summary>
+            Getter/Setter for Code language
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.active">
+            <summary>
+            Getter/Setter for Active
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.date_creation">
+            <summary>
+            Getter/Setter for Creation date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.User.date_modification">
+            <summary>
+            Getter/Setter for Modification date
+            </summary>
+        </member>
+        <member name="T:SoftwareClasses.UserCompany">
+            <summary>
+            Class UserCompany containing all the variables describing the user company
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.id">
+            <summary>
+            Getter/Setter for Id
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.id_user">
+            <summary>
+            Getter/Setter for Id_user
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.name">
+            <summary>
+            Getter/Setter for Name
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.type">
+            <summary>
+            Getter/Setter for Type
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.EIN">
+            <summary>
+            Getter/Setter for EIN
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.phone">
+            <summary>
+            Getter/Setter for Phone
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.fax">
+            <summary>
+            Getter/Setter for Fax
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.email">
+            <summary>
+            Getter/Setter for Email
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.address">
+            <summary>
+            Getter/Setter for Address
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.postbox">
+            <summary>
+            Getter/Setter for Postbox
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.zipcode">
+            <summary>
+            Getter/Setter for Zipcode
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.city">
+            <summary>
+            Getter/Setter for City
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.state">
+            <summary>
+            Getter/Setter for State
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.country">
+            <summary>
+            Getter/Setter for Country
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.logo">
+            <summary>
+            Getter/Setter for Logo
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.date_creation">
+            <summary>
+            Getter/Setter for Creation date
+            </summary>
+        </member>
+        <member name="P:SoftwareClasses.UserCompany.date_modification">
+            <summary>
+            Getter/Setter for Modification date
+            </summary>
+        </member>
+    </members>
+</doc>

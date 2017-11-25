@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_window_mission_1_1_main_window___mission" kind="class" language="C#" prot="public">
+    <compoundname>WindowMission::MainWindow_Mission</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_window_mission_1_1_main_window___mission_1a12fbc3519edeab213d9f89f0109e4c51" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WindowMission.MainWindow_Mission.m_ConfirmQuit</definition>
+        <argsstring></argsstring>
+        <name>m_ConfirmQuit</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Confirmation of quit the window </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" line="26" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_mission_1_1_main_window___mission_1a06099ca6184028a741c1f794afe19cc4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WindowMission.MainWindow_Mission::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowEstimate.g.i.cs" line="50" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowEstimate.g.i.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_window_mission_1_1_main_window___mission_1ab46e11a7299a09a3e818a8eee3bbb403" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+        <definition>Handlers WindowMission.MainWindow_Mission.m_Global_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Global_Handler</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Global handlers for common objects </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" line="31" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_mission_1_1_main_window___mission_1a40b0742d17bb7ef9eecf6ee0837e20ae" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_database_1_1_database" kindref="compound">Database.Database</ref></type>
+        <definition>Database.Database WindowMission.MainWindow_Mission.m_Database_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Database_Handler</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para><ref refid="namespace_internet" kindref="compound">Internet</ref> handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" line="36" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_window_mission_1_1_main_window___mission_1a99c9686edb3fb41e569ae5853b6a1f8b" prot="public" static="no" mutable="no">
+        <type><ref refid="class_software_classes_1_1_billing" kindref="compound">Billing</ref></type>
+        <definition>Billing WindowMission.MainWindow_Mission.m_Mission</definition>
+        <argsstring></argsstring>
+        <name>m_Mission</name>
+        <briefdescription>
+<para>Missions </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" line="41" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_window_mission_1_1_main_window___mission_1a452dd53c604e66f26dff89d9db69efd1" prot="package" static="no" mutable="no">
+        <type><ref refid="class_window_mission_1_1_main_window___mission" kindref="compound">WindowMission.MainWindow_Mission</ref></type>
+        <definition>WindowMission MainWindow_Mission WindowMission.MainWindow_Mission::Window_Mission</definition>
+        <argsstring></argsstring>
+        <name>Window_Mission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowEstimate.g.i.cs" line="45" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowEstimate.g.i.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1ae821af5d2ccfe2215b4a7c29d7f524d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WindowMission.MainWindow_Mission.MainWindow_Mission</definition>
+        <argsstring>(Handlers _Global_Handler, Database.Database _Database_Handler, Billing _Mission)</argsstring>
+        <name>MainWindow_Mission</name>
+        <param>
+          <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+          <declname>_Global_Handler</declname>
+        </param>
+        <param>
+          <type><ref refid="class_database_1_1_database" kindref="compound">Database.Database</ref></type>
+          <declname>_Database_Handler</declname>
+        </param>
+        <param>
+          <type><ref refid="class_software_classes_1_1_billing" kindref="compound">Billing</ref></type>
+          <declname>_Mission</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the services main window </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" line="50" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" bodystart="50" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowMission.MainWindow_Mission.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowEstimate.g.i.cs" line="57" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowEstimate.g.i.cs" bodystart="57" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowMission.MainWindow_Mission.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowMission.g.cs" line="57" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowMission.g.cs" bodystart="57" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowMission.MainWindow_Mission.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowMission.g.i.cs" line="57" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowMission.g.i.cs" bodystart="57" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowMission.MainWindow_Mission.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Release/Forms/WindowMission.g.cs" line="57" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Release/Forms/WindowMission.g.cs" bodystart="57" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowMission.MainWindow_Mission.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Release/Forms/WindowMission.g.i.cs" line="57" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Release/Forms/WindowMission.g.i.cs" bodystart="57" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1aa719fbd2cba7ab9699a10e9bbf1caabe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowMission.MainWindow_Mission.Define_Content</definition>
+        <argsstring>()</argsstring>
+        <name>Define_Content</name>
+        <briefdescription>
+<para>Define each content for labels, button, text in the form </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" line="79" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1a1294cb549b1dee8ef734c8692f209b92" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowMission.MainWindow_Mission.Window_Closing</definition>
+        <argsstring>(object sender, System.ComponentModel.CancelEventArgs e)</argsstring>
+        <name>Window_Closing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.ComponentModel.CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Closing event by clicking oon the X </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" line="95" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" bodystart="95" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowMission.MainWindow_Mission.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowEstimate.g.i.cs" line="77" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowEstimate.g.i.cs" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowMission.MainWindow_Mission.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowMission.g.cs" line="77" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowMission.g.cs" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowMission.MainWindow_Mission.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowMission.g.i.cs" line="77" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/WindowMission.g.i.cs" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowMission.MainWindow_Mission.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Release/Forms/WindowMission.g.cs" line="77" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Release/Forms/WindowMission.g.cs" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowMission.MainWindow_Mission.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Release/Forms/WindowMission.g.i.cs" line="77" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Release/Forms/WindowMission.g.i.cs" bodystart="77" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class MainWindow_Services from the namespace Services </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_window_mission_1_1_main_window___mission" kindref="compound">MainWindow_Mission</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="111">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="113">
+        <label>Window</label>
+      </node>
+      <node id="110">
+        <label>WindowMission.MainWindow_Mission</label>
+        <link refid="class_window_mission_1_1_main_window___mission"/>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+        <childnode refid="113" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="115">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="117">
+        <label>Window</label>
+      </node>
+      <node id="114">
+        <label>WindowMission.MainWindow_Mission</label>
+        <link refid="class_window_mission_1_1_main_window___mission"/>
+        <childnode refid="115" relation="public-inheritance">
+        </childnode>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+        <childnode refid="115" relation="public-inheritance">
+        </childnode>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+        <childnode refid="115" relation="public-inheritance">
+        </childnode>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+        <childnode refid="115" relation="public-inheritance">
+        </childnode>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+        <childnode refid="115" relation="public-inheritance">
+        </childnode>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+        <childnode refid="117" relation="public-inheritance">
+        </childnode>
+        <childnode refid="114" relation="usage">
+          <edgelabel>Window_Mission</edgelabel>
+        </childnode>
+      </node>
+      <node id="116">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" line="17" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Forms/WindowMission.xaml.cs" bodystart="16" bodyend="121"/>
+    <listofallmembers>
+      <member refid="class_window_mission_1_1_main_window___mission_1a06099ca6184028a741c1f794afe19cc4" prot="private" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>_contentLoaded</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>Connect</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>Connect</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>Connect</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>Connect</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1ac8c89376b9f218249a16c9eb2b5e5e64" prot="private" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>Connect</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1aa719fbd2cba7ab9699a10e9bbf1caabe" prot="private" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>Define_Content</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a377a746634ff3a2f5ae3f52e6914164b" prot="public" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a12fbc3519edeab213d9f89f0109e4c51" prot="private" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>m_ConfirmQuit</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a40b0742d17bb7ef9eecf6ee0837e20ae" prot="public" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>m_Database_Handler</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1ab46e11a7299a09a3e818a8eee3bbb403" prot="public" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>m_Global_Handler</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a99c9686edb3fb41e569ae5853b6a1f8b" prot="public" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>m_Mission</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1ae821af5d2ccfe2215b4a7c29d7f524d0" prot="public" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>MainWindow_Mission</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a1294cb549b1dee8ef734c8692f209b92" prot="private" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>Window_Closing</name></member>
+      <member refid="class_window_mission_1_1_main_window___mission_1a452dd53c604e66f26dff89d9db69efd1" prot="package" virt="non-virtual"><scope>WindowMission::MainWindow_Mission</scope><name>Window_Mission</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

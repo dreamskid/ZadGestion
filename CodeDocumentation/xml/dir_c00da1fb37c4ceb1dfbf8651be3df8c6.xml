@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_c00da1fb37c4ceb1dfbf8651be3df8c6" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms</compoundname>
+    <innerfile refid="_window_host_or_hostess_8xaml_8cs">WindowHostOrHostess.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/"/>
+  </compounddef>
+</doxygen>

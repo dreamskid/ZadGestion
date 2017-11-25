@@ -1,0 +1,530 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_window_contact_1_1_main_window___host_and_hostess" kind="class" language="C#" prot="public">
+    <compoundname>WindowContact::MainWindow_HostAndHostess</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1ab21cea6274b51396db26cd3cad764405" prot="package" static="no" mutable="no">
+        <type><ref refid="class_window_contact_1_1_main_window___host_and_hostess" kindref="compound">WindowContact.MainWindow_HostAndHostess</ref></type>
+        <definition>WindowContact.MainWindow_HostAndHostess WindowContact.MainWindow_HostAndHostess.Window_HostAndHostess</definition>
+        <argsstring></argsstring>
+        <name>Window_HostAndHostess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="45" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1ad63b9eaef57d0dde9b38f4042dd08ed0" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System.Windows.Controls.Button WindowContact.MainWindow_HostAndHostess.Btn_HostAndHostess_Add</definition>
+        <argsstring></argsstring>
+        <name>Btn_HostAndHostess_Add</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="53" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1ad37f946549596fe2f3f99b5b4191ce37" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System.Windows.Controls.Button WindowContact.MainWindow_HostAndHostess.Btn_HostAndHostess_QuitWithoutSaving</definition>
+        <argsstring></argsstring>
+        <name>Btn_HostAndHostess_QuitWithoutSaving</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="61" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a8d741ca87791f29e3886d0cc44009cf8" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ComboBox</type>
+        <definition>System.Windows.Controls.ComboBox WindowContact.MainWindow_HostAndHostess.Cmb_HostAndHostess_City</definition>
+        <argsstring></argsstring>
+        <name>Cmb_HostAndHostess_City</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="69" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a1fadd2148df4550e1b99cfaf588bbef7" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ComboBox</type>
+        <definition>System.Windows.Controls.ComboBox WindowContact.MainWindow_HostAndHostess.Cmb_HostAndHostess_Country</definition>
+        <argsstring></argsstring>
+        <name>Cmb_HostAndHostess_Country</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="77" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a40d19ddc52685db22715379540c55523" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_Address</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="85" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1aa934ce1f69a120871815da9624f2103d" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_CellPhone</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_CellPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="93" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a122c99b6290f1e42f89c8d55ad5b4409" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_City</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_City</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="101" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a9430e49247c0ae81c3a8d72703260575" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_ClientCompanyName</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_ClientCompanyName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="109" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a11599d820cc0b4c4505a74d5fd12071a" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_ClientCompanyNumber</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_ClientCompanyNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="117" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a195a17293955b11f5a04694b0f4eb09d" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_Country</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Country</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="125" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1aa0270c9d787d75972a02411c6bbca795" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_Email</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="133" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a81b9c2ed20769f85482eb0da4caece7a" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_Fax</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Fax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="141" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a41e1ff4e8b8e2bf44c63b334c2412552" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_FirstNameContact</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_FirstNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="149" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1ac3456badf5137f2efc6f30302193e89b" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_LastNameContact</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_LastNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="157" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a9e49efd7ab15f1735f930ba5b21c5636" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_Phone</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="165" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1aeaf9341b337e6d41a5993c6a286733e5" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_State</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="173" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1ac2fa601b9d52220d44d8e9b654d30bdd" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_HostAndHostess.Lbl_HostAndHostess_ZipCode</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_ZipCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="181" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1abf76276374bc7804bc41dcc2fd4d5121" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_Address</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="189" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a4d7c58308cc2000272555656a2166896" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_CellPhone</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_CellPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="197" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a3c88ecbeedd7a9dff57783bb42f34222" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_ClientCompanyName</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_ClientCompanyName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="205" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1abf58448f93f5fa4b5004b2be8d08fbfd" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_ClientCompanyNumber</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_ClientCompanyNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="213" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a88647b786dabd9026d66deb8825f9ffb" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_Email</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="221" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a1f93fc75bb27b344bf6e28c6ae1bb5c5" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_Fax</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_Fax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="229" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a0328ca5a1ecc90211f7d05fb89e5afd0" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_FirstNameContact</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_FirstNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="237" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1ae69c7ec66c8d447b3f0178120b264272" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_LastNameContact</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_LastNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="245" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1abd8e163ae7bf7a16915178a6c1363b45" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_Phone</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_Phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="253" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a8c0df7e40a9b6e9e17842bb633f35b76" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_State</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="261" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a568b8c3710858899fe78106d4b6bd443" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_HostAndHostess.Txt_HostAndHostess_ZipCode</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_ZipCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="269" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___host_and_hostess_1a4860d87e6fbe8dd0528c92d81c05befc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WindowContact.MainWindow_HostAndHostess._contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="274" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___host_and_hostess_1a3d1a68780875ce9fa31653291b3cbec4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowContact.MainWindow_HostAndHostess.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="281" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="281" bodyend="293"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___host_and_hostess_1a830761b364d3aac23bd73a468fa66920" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowContact.MainWindow_HostAndHostess.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="301" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="301" bodyend="417"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_window_contact_1_1_main_window___host_and_hostess" kindref="compound">MainWindow_HostAndHostess</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="80">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="81">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+      <node id="79">
+        <label>WindowContact.MainWindow_HostAndHostess</label>
+        <link refid="class_window_contact_1_1_main_window___host_and_hostess"/>
+        <childnode refid="80" relation="public-inheritance">
+        </childnode>
+        <childnode refid="81" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="83">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="85">
+        <label>System</label>
+      </node>
+      <node id="84">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+      <node id="82">
+        <label>WindowContact.MainWindow_HostAndHostess</label>
+        <link refid="class_window_contact_1_1_main_window___host_and_hostess"/>
+        <childnode refid="83" relation="public-inheritance">
+        </childnode>
+        <childnode refid="84" relation="public-inheritance">
+        </childnode>
+        <childnode refid="82" relation="usage">
+          <edgelabel>Window_HostAndHostess</edgelabel>
+        </childnode>
+        <childnode refid="85" relation="usage">
+          <edgelabel>Lbl_HostAndHostess_Phone</edgelabel>
+          <edgelabel>Txt_HostAndHostess_LastNameContact</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_Email</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_Fax</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_Country</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_City</edgelabel>
+          <edgelabel>Txt_HostAndHostess_ClientCompanyNumber</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_LastNameContact</edgelabel>
+          <edgelabel>Cmb_HostAndHostess_Country</edgelabel>
+          <edgelabel>Txt_HostAndHostess_CellPhone</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" line="40" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.i.cs" bodystart="40" bodyend="418"/>
+    <listofallmembers>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a4860d87e6fbe8dd0528c92d81c05befc" prot="private" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>_contentLoaded</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1ad63b9eaef57d0dde9b38f4042dd08ed0" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Btn_HostAndHostess_Add</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1ad37f946549596fe2f3f99b5b4191ce37" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Btn_HostAndHostess_QuitWithoutSaving</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a8d741ca87791f29e3886d0cc44009cf8" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Cmb_HostAndHostess_City</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a1fadd2148df4550e1b99cfaf588bbef7" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Cmb_HostAndHostess_Country</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a830761b364d3aac23bd73a468fa66920" prot="private" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Connect</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a3d1a68780875ce9fa31653291b3cbec4" prot="public" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a40d19ddc52685db22715379540c55523" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_Address</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1aa934ce1f69a120871815da9624f2103d" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_CellPhone</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a122c99b6290f1e42f89c8d55ad5b4409" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_City</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a9430e49247c0ae81c3a8d72703260575" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_ClientCompanyName</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a11599d820cc0b4c4505a74d5fd12071a" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_ClientCompanyNumber</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a195a17293955b11f5a04694b0f4eb09d" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_Country</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1aa0270c9d787d75972a02411c6bbca795" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_Email</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a81b9c2ed20769f85482eb0da4caece7a" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_Fax</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a41e1ff4e8b8e2bf44c63b334c2412552" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_FirstNameContact</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1ac3456badf5137f2efc6f30302193e89b" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_LastNameContact</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a9e49efd7ab15f1735f930ba5b21c5636" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_Phone</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1aeaf9341b337e6d41a5993c6a286733e5" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_State</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1ac2fa601b9d52220d44d8e9b654d30bdd" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Lbl_HostAndHostess_ZipCode</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1abf76276374bc7804bc41dcc2fd4d5121" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_Address</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a4d7c58308cc2000272555656a2166896" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_CellPhone</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a3c88ecbeedd7a9dff57783bb42f34222" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_ClientCompanyName</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1abf58448f93f5fa4b5004b2be8d08fbfd" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_ClientCompanyNumber</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a88647b786dabd9026d66deb8825f9ffb" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_Email</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a1f93fc75bb27b344bf6e28c6ae1bb5c5" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_Fax</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a0328ca5a1ecc90211f7d05fb89e5afd0" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_FirstNameContact</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1ae69c7ec66c8d447b3f0178120b264272" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_LastNameContact</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1abd8e163ae7bf7a16915178a6c1363b45" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_Phone</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a8c0df7e40a9b6e9e17842bb633f35b76" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_State</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1a568b8c3710858899fe78106d4b6bd443" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Txt_HostAndHostess_ZipCode</name></member>
+      <member refid="class_window_contact_1_1_main_window___host_and_hostess_1ab21cea6274b51396db26cd3cad764405" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_HostAndHostess</scope><name>Window_HostAndHostess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

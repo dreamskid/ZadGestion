@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_efcf19764a90c96207add8cfe1b388b5" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms</compoundname>
+    <innerfile refid="_release_2_forms_2_launcher_8g_8cs">Launcher.g.cs</innerfile>
+    <innerfile refid="_release_2_forms_2_launcher_8g_8i_8cs">Launcher.g.i.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms/"/>
+  </compounddef>
+</doxygen>

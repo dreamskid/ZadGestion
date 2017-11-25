@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="namespace_software_classes" kind="namespace" language="C#">
+    <compoundname>SoftwareClasses</compoundname>
+    <innerclass refid="class_software_classes_1_1_billing" prot="public">SoftwareClasses::Billing</innerclass>
+    <innerclass refid="class_software_classes_1_1_hostess" prot="public">SoftwareClasses::Hostess</innerclass>
+    <innerclass refid="class_software_classes_1_1_settings" prot="public">SoftwareClasses::Settings</innerclass>
+    <innerclass refid="class_software_classes_1_1_software_objects" prot="public">SoftwareClasses::SoftwareObjects</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_software_classes_1a8710507fdc97166bd50087331bd184c7" prot="public" static="no">
+        <name>BillType</name>
+        <enumvalue id="namespace_software_classes_1a8710507fdc97166bd50087331bd184c7a70d529695c253d17e992cb9265abc57f" prot="public">
+          <name>Mission</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1a8710507fdc97166bd50087331bd184c7ab44ad2df76d20268134ed96a4ce8cc7e" prot="public">
+          <name>INVOICE</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1a8710507fdc97166bd50087331bd184c7a278b3efb30babe69a76a462776c4943b" prot="public">
+          <name>CREDITNOTE</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Billing.cs" line="10" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Billing.cs" bodystart="9" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_software_classes_1ab92629106cf60158c0face083277fd18" prot="public" static="no">
+        <name>MissionStatus</name>
+        <enumvalue id="namespace_software_classes_1ab92629106cf60158c0face083277fd18ab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1ab92629106cf60158c0face083277fd18a98690bf632c29c17c9e4c5a64069903c" prot="public">
+          <name>CREATED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1ab92629106cf60158c0face083277fd18a381fe0b09931a4acf5bc2176e1e6f854" prot="public">
+          <name>GENERATED</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1ab92629106cf60158c0face083277fd18a145d630174eaf95ef13b8a02f76e1f75" prot="public">
+          <name>SENT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1ab92629106cf60158c0face083277fd18aa806f1d2c42338ef5fa6497b66153e79" prot="public">
+          <name>ACCEPTED</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1ab92629106cf60158c0face083277fd18a4ea3ded788dcac04d3f0f948c934f777" prot="public">
+          <name>DECLINED</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1ab92629106cf60158c0face083277fd18ae99593915bc40e5d22bfe3ee9a1e4713" prot="public">
+          <name>BILLED</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Missions status </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Billing.cs" line="20" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Billing.cs" bodystart="19" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_software_classes_1a43139593ce0db27e07f52f97b4e5d4a2" prot="public" static="no">
+        <name>InvoiceStatus</name>
+        <enumvalue id="namespace_software_classes_1a43139593ce0db27e07f52f97b4e5d4a2ab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1a43139593ce0db27e07f52f97b4e5d4a2a98690bf632c29c17c9e4c5a64069903c" prot="public">
+          <name>CREATED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1a43139593ce0db27e07f52f97b4e5d4a2a381fe0b09931a4acf5bc2176e1e6f854" prot="public">
+          <name>GENERATED</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1a43139593ce0db27e07f52f97b4e5d4a2a145d630174eaf95ef13b8a02f76e1f75" prot="public">
+          <name>SENT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1a43139593ce0db27e07f52f97b4e5d4a2ac4812ee2b789226193ad2511495fa559" prot="public">
+          <name>PAID</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1a43139593ce0db27e07f52f97b4e5d4a2a4121cb4edd86da36f20b1ce632fa2ca5" prot="public">
+          <name>UNPAID</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Invoice status </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Billing.cs" line="34" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Billing.cs" bodystart="33" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_software_classes_1aeb31ec45a81151f5f8040fc3070a6f26" prot="public" static="no">
+        <name>CreditNoteStatus</name>
+        <enumvalue id="namespace_software_classes_1aeb31ec45a81151f5f8040fc3070a6f26ab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1aeb31ec45a81151f5f8040fc3070a6f26a98690bf632c29c17c9e4c5a64069903c" prot="public">
+          <name>CREATED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1aeb31ec45a81151f5f8040fc3070a6f26a381fe0b09931a4acf5bc2176e1e6f854" prot="public">
+          <name>GENERATED</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1aeb31ec45a81151f5f8040fc3070a6f26a145d630174eaf95ef13b8a02f76e1f75" prot="public">
+          <name>SENT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_software_classes_1aeb31ec45a81151f5f8040fc3070a6f26ad725ec4321dfa3a30ec3b096511be30e" prot="public">
+          <name>USED</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Credit note status </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Billing.cs" line="47" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Billing.cs" bodystart="46" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Billing.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

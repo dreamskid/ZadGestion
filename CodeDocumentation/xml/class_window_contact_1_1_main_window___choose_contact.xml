@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_window_contact_1_1_main_window___choose_contact" kind="class" language="C#" prot="public">
+    <compoundname>WindowContact::MainWindow_ChooseContact</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___choose_contact_1a4a45a7de407be5652fe8590cfb0548a0" prot="package" static="no" mutable="no">
+        <type><ref refid="class_window_contact_1_1_main_window___choose_contact" kindref="compound">WindowContact.MainWindow_ChooseContact</ref></type>
+        <definition>WindowContact MainWindow_ChooseContact WindowContact.MainWindow_ChooseContact::Window_ChooseContact</definition>
+        <argsstring></argsstring>
+        <name>Window_ChooseContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="45" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___choose_contact_1af5037897b7a170223f32e5b82e20e982" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button WindowContact.MainWindow_ChooseContact::Btn_ChooseContact_Continue</definition>
+        <argsstring></argsstring>
+        <name>Btn_ChooseContact_Continue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="53" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___choose_contact_1a5ac0d971e22296591d40606156683066" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button WindowContact.MainWindow_ChooseContact::Btn_ChooseContact_Cancel</definition>
+        <argsstring></argsstring>
+        <name>Btn_ChooseContact_Cancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="61" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___choose_contact_1aedb9f6d4f6c69a282ce7334b1447ed75" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ComboBox</type>
+        <definition>System.Windows.Controls.ComboBox WindowContact.MainWindow_ChooseContact.Cmb_ChooseContact_Contacts</definition>
+        <argsstring></argsstring>
+        <name>Cmb_ChooseContact_Contacts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="69" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___choose_contact_1ac01123dba5d7e5ffc1b1f01bb47af098" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowContact.MainWindow_ChooseContact::Lbl_ChooseContact_SelectContact</definition>
+        <argsstring></argsstring>
+        <name>Lbl_ChooseContact_SelectContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="77" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___choose_contact_1a5c923e47549684fd49caeb2aff5de270" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_ChooseContact.Lbl_ChooseContact_Contact</definition>
+        <argsstring></argsstring>
+        <name>Lbl_ChooseContact_Contact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="85" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___choose_contact_1abd081bcd38da64872b4f281d5d7d109a" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ComboBox</type>
+        <definition>System Windows Controls ComboBox WindowContact.MainWindow_ChooseContact::Cmb_ChooseContact_HostAndHostesss</definition>
+        <argsstring></argsstring>
+        <name>Cmb_ChooseContact_HostAndHostesss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.i.cs" line="69" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.i.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___choose_contact_1a6cc97b02b9d3dc095e91f92f1e840a99" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowContact.MainWindow_ChooseContact::Lbl_ChooseContact_HostAndHostess</definition>
+        <argsstring></argsstring>
+        <name>Lbl_ChooseContact_HostAndHostess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.i.cs" line="85" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.i.cs" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___choose_contact_1a56f3eefd06dd08817950ead1a79cc5ab" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WindowContact.MainWindow_ChooseContact::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="90" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___choose_contact_1a7f5545f408ef09ec29e1fbbcada42ead" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowContact.MainWindow_ChooseContact.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="97" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="97" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___choose_contact_1a7f5545f408ef09ec29e1fbbcada42ead" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowContact.MainWindow_ChooseContact.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.i.cs" line="97" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.i.cs" bodystart="97" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___choose_contact_1a7f5545f408ef09ec29e1fbbcada42ead" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowContact.MainWindow_ChooseContact.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseHostAndHostess.g.i.cs" line="97" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseHostAndHostess.g.i.cs" bodystart="97" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___choose_contact_1a0199db14494f4f1798e2789d6e5f22f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowContact.MainWindow_ChooseContact.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="117" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="117" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___choose_contact_1a0199db14494f4f1798e2789d6e5f22f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowContact.MainWindow_ChooseContact.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.i.cs" line="117" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.i.cs" bodystart="117" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___choose_contact_1a0199db14494f4f1798e2789d6e5f22f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowContact.MainWindow_ChooseContact.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseHostAndHostess.g.i.cs" line="117" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseHostAndHostess.g.i.cs" bodystart="117" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_window_contact_1_1_main_window___choose_contact" kindref="compound">MainWindow_ChooseContact</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="59">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="60">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+      <node id="58">
+        <label>WindowContact.MainWindow_ChooseContact</label>
+        <link refid="class_window_contact_1_1_main_window___choose_contact"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="62">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="64">
+        <label>System</label>
+      </node>
+      <node id="63">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+      <node id="61">
+        <label>WindowContact.MainWindow_ChooseContact</label>
+        <link refid="class_window_contact_1_1_main_window___choose_contact"/>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>Window_ChooseContact</edgelabel>
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>Btn_ChooseContact_Cancel</edgelabel>
+          <edgelabel>Lbl_ChooseContact_Contact</edgelabel>
+          <edgelabel>Cmb_ChooseContact_Contacts</edgelabel>
+          <edgelabel>Lbl_ChooseContact_HostAndHostess</edgelabel>
+          <edgelabel>Lbl_ChooseContact_SelectContact</edgelabel>
+          <edgelabel>Cmb_ChooseContact_HostAndHostesss</edgelabel>
+          <edgelabel>Btn_ChooseContact_Continue</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="40" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" bodystart="40" bodyend="159"/>
+    <listofallmembers>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a56f3eefd06dd08817950ead1a79cc5ab" prot="private" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>_contentLoaded</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a5ac0d971e22296591d40606156683066" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Btn_ChooseContact_Cancel</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1af5037897b7a170223f32e5b82e20e982" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Btn_ChooseContact_Continue</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1aedb9f6d4f6c69a282ce7334b1447ed75" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Cmb_ChooseContact_Contacts</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1abd081bcd38da64872b4f281d5d7d109a" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Cmb_ChooseContact_HostAndHostesss</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a0199db14494f4f1798e2789d6e5f22f0" prot="private" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Connect</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a0199db14494f4f1798e2789d6e5f22f0" prot="private" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Connect</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a0199db14494f4f1798e2789d6e5f22f0" prot="private" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Connect</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a7f5545f408ef09ec29e1fbbcada42ead" prot="public" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a7f5545f408ef09ec29e1fbbcada42ead" prot="public" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a7f5545f408ef09ec29e1fbbcada42ead" prot="public" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a5c923e47549684fd49caeb2aff5de270" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Lbl_ChooseContact_Contact</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a6cc97b02b9d3dc095e91f92f1e840a99" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Lbl_ChooseContact_HostAndHostess</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1ac01123dba5d7e5ffc1b1f01bb47af098" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Lbl_ChooseContact_SelectContact</name></member>
+      <member refid="class_window_contact_1_1_main_window___choose_contact_1a4a45a7de407be5652fe8590cfb0548a0" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_ChooseContact</scope><name>Window_ChooseContact</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

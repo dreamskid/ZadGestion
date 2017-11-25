@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_internet_1_1_properties_1_1_settings" kind="class" language="C#" prot="package">
+    <compoundname>Internet::Properties::Settings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ApplicationSettingsBase</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_internet_1_1_properties_1_1_settings_1a1dc7bff290430afe7ffb9775f24e68eb" prot="private" static="yes" mutable="no">
+        <type>Settings</type>
+        <definition>Settings Internet.Properties.Settings.defaultInstance</definition>
+        <argsstring></argsstring>
+        <name>defaultInstance</name>
+        <initializer>= ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Properties/Settings.Designer.cs" line="18" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Properties/Settings.Designer.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_internet_1_1_properties_1_1_settings_1a80735baecb77b85e8d658c99abfb4365" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Settings</type>
+        <definition>Settings Internet.Properties.Settings.Default</definition>
+        <argsstring></argsstring>
+        <name>Default</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Properties/Settings.Designer.cs" line="20" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Properties/Settings.Designer.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="157">
+        <label>Internet.Properties.Settings</label>
+        <childnode refid="158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="159">
+        <label>Internet.Properties.Settings</label>
+        <childnode refid="160" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Properties/Settings.Designer.cs" line="16" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Properties/Settings.Designer.cs" bodystart="16" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_internet_1_1_properties_1_1_settings_1a80735baecb77b85e8d658c99abfb4365" prot="public" virt="non-virtual"><scope>Internet::Properties::Settings</scope><name>Default</name></member>
+      <member refid="class_internet_1_1_properties_1_1_settings_1a1dc7bff290430afe7ffb9775f24e68eb" prot="private" virt="non-virtual"><scope>Internet::Properties::Settings</scope><name>defaultInstance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

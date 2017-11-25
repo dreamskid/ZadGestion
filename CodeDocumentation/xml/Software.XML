@@ -1,0 +1,570 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Software</name>
+    </assembly>
+    <members>
+        <member name="T:Software.MainWindow_Software">
+            <summary>
+            Class MainWindow_Software from the namespace Software
+            </summary>
+            <summary>
+            MainWindow_Software
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Blue">
+            <summary>
+            Color blue
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_LightBlue">
+            <summary>
+            Color light blue
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Green">
+            <summary>
+            Color green
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Red">
+            <summary>
+            Color red
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Is_InitializationDone">
+            <summary>
+            Boolean indicating if the initialization of the window is done
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Login">
+            <summary>
+            Login
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Licence">
+            <summary>
+            Licence
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Cities_DocFrance">
+            <summary>
+            Xml document containing all the cities in France with zipcode
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_MainDefaultButtonColor">
+            <summary>
+            Default brush for main buttons
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Global_Handler">
+            <summary>
+            Global handlers for common objects
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Internet_Handler">
+            <summary>
+            Internet handler
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_ClassCollection">
+            <summary>
+            Class collection containing all the classes used in the software
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Id_SelectedContact">
+            <summary>
+            Selected contact id
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Button_SelectedContact">
+            <summary>
+            Selected contact button
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Button_SelectedEstimate">
+            <summary>
+            Selected Estimate button
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_ListFields">
+            <summary>
+            List of controls
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Estimates_VAT">
+            <summary>
+            VAT for Estimates
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_SelectedServices">
+            <summary>
+            List of selected services
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Datagrid_Contacts_BillingCollection">
+            <summary>
+            Collection for Datagrid_ContactsEstimatesBilling
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_DataGrid_Estimates_ServicesCollection">
+            <summary>
+            Collection for Datagrid_Estimates
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_Grid_Details_Estimates_BillingCollection">
+            <summary>
+            Collection for Grid_Details_Estimates
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_SelectedPayments">
+            <summary>
+            List of selected payments
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.#ctor(GeneralClasses.Handlers,Internet.Internet,System.String,System.String,System.Boolean)">
+            <summary>
+            Constructor for the software main window
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Define_Content">
+            <summary>
+            Define each content for labels, button, text in the form
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Software_Window_Closing_Event(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Animation for the form closing event
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Software_Contacts_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on the contacts button
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Software_Estimates_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on the estimates button
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Software_Invoices_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on the invoices button
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Software_Services_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on the services button
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Software_Settings_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on the settings button
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Datagrid_ContactsBilling_AutoGeneratingColumn(System.Object,System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs)">
+            <summary>
+            Datagrid_ContactsBilling auto generating columns event
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.actualizationContactsDone">
+            <summary>
+            Boolean tagging the full actualization avoiding to do it multiple time
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Txt_Contacts_Research_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Text changed in the research text box (contacts)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Contacts_Create_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on add (contacts)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Contacts_Edit_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on edit (contacts)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Contacts_Delete_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on delete (contacts)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Datagrid_ContactsBilling_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Double click on a row of the Datagrid_ContactsBilling
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Contacts_Estimates_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on estimates button
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Cmb_Contacts_SortBy_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Select a type of sort in the contact combo box
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.IsPressed_ContactButton(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Mouse down on a panel of the contact grid
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Datagrid_Estimates_Services_AutoGeneratingColumn(System.Object,System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs)">
+            <summary>
+            Datagrid_Estimates auto generating columns event
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.actualizationEstimatesDone">
+            <summary>
+            Boolean tagging the full actualization avoiding to do it multiple time
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Txt_Estimates_Research_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Text changed in the research text box (estimates)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Estimates_Create_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Add (estimates)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Estimates_Edit_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Edit (estimates)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Estimates_Delete_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Delete (estimates)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Estimates_ShowAll_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on ShowAll button
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Estimates_SendByEmail_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Sent by email (Estimates)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Estimates_PdfGeneration_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Word generation (Estimates)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Cmb_Estimates_SortBy_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Select a type of sort in the estimates combo box
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.IsPressed_EstimateButton(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Mouse down on a panel of the estimates grid
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Datagrid_Services_Services_AutoGeneratingColumn(System.Object,System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs)">
+            <summary>
+            Datagrid_Services auto generating columns event
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Txt_Services_Services_Research_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Text changed in the research text box
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Services_Services_ExcelImport_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Excel import
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Services_Services_Create_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Add
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Services_Services_Edit_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Edit
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Services_Services_Delete_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Delete
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Services_Services_DeleteAll_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on DeleteAll
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Settings_LogoChoose_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Choose (logo)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Img_Settings_Logo_Drop(System.Object,System.Windows.DragEventArgs)">
+            <summary>
+            Drop an image in the logo image box event
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Cmb_Setting_Language_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Change the selection in the combo box
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Settings_PaymentTerms_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Open the payment terms window
+            </summary>         
+        </member>
+        <member name="M:Software.MainWindow_Software.Txt_Settings_Header_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Text changed in the header text box (settings)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Txt_Settings_Footer_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Text changed in the footer text box (settings)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Txt_Settings_DefaultUnit_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Text changed in the default unit text box (settings)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Txt_Settings_DefaultVAT_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Text changed in the default VAT text box (settings)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Btn_Settings_Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on Save (settings)
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.NetworkChange_NetworkAvailabilityChanged(System.Object,System.EventArgs)">
+            <summary>
+            Internet connection lost event handler
+            Need to be better TODO
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_GridContacts_Column">
+            <summary>
+            Increment on Grid_Contact's columns
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_GridContacts_Row">
+            <summary>
+            Increment on Grid_Contact's rows
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Add_ContactToGrid(SoftwareClasses.Contact)">
+            <summary>
+            Add a contact to the grid, create a stack panel containing all the information of the contact
+            <param name="_Contact">Contact</param>
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Actualize_GridContactsFromWeb">
+            <summary>
+            Actualize the grid of contacts from the collection saved on cloud
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Actualize_GridContactsFromContactsCollection">
+            <summary>
+            Actualize the grid of contacts from the actual collection
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Get_SelectedContactFromButton">
+            <summary>
+            Get a contact from his id
+            <returns>Returns the contact consperonding to the id</returns>
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_GridEstimates_Column">
+            <summary>
+            Increment on Grid_Estimates's columns
+            </summary>
+        </member>
+        <member name="F:Software.MainWindow_Software.m_GridEstimates_Row">
+            <summary>
+            Increment on Grid_Estimates's rows
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Add_EstimateToGrid(SoftwareClasses.Billing)">
+            <summary>
+            Add a Estimate to the grid, create a stack panel containing all the information of the Estimate
+            <param name="_Estimate">Estimate</param>
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Actualize_GridsBillsFromWeb">
+            <summary>
+            Actualize the grid of Estimates from the collection saved on cloud
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Actualize_GridEstimatesFromBillingCollection">
+            <summary>
+            Actualize the grid of estimates from the actual billing collection
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Get_SelectedEstimateFromButton(System.Boolean)">
+            <summary>
+            Get a Estimate from its button
+            <returns>Returns the Estimate corresponding to the button</returns>
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Compute_Estimate_AmountET_WithoutGlobalDiscount">
+            <summary>
+            Compute amount excluding taxes
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Get_ServicesFromEstimateId(System.Int32)">
+            <summary>
+            Get the services associated to an estimate
+            <param name="_EstimateId">Id of the estimate</param>
+            <returns>List of the services associated to the asked estimate</returns>
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Actualize_ServicesFromWeb">
+            <summary>
+            Actualize the grid of services from the collection saved on cloud
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Get_ServiceFromDataGrid_Services_Services">
+            <summary>
+            Get the selected service in the datagrid
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Actualize_SettingsFromWeb">
+            <summary>
+            Actualize the settings fields from the collection saved on cloud
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Save_LogoToWebDatabase(System.Windows.Media.Imaging.BitmapImage)">
+            <summary>
+            Save the logo to web database
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Get_Cell(System.Windows.Controls.DataGrid,System.Windows.Controls.DataGridRow,System.Int32)">
+            <summary>
+            Function allowing to get a particular cell in a datagrid
+            <param name="_DataGrid">Datagrid where to get the cell</param>
+            <param name="_RowContainer">Row where to get the cell</param>
+            <param name="_IndexColumn">Index of the column where to get the cell</param>
+            <returns>The cell</returns>
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.Find_VisualChild``1(System.Windows.DependencyObject)">
+            <summary>
+            Function allowing to get the visual child from an object
+            <param name="_Object">The object where to get the visual child</param>
+            <returns>The visual child</returns>
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Software.MainWindow_Software.m_Datagrid_Contacts_Billing">
+            <summary>
+            Class for Datagrid_Estimates
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.m_Datagrid_Contacts_Billing.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Double)">
+            <summary>
+            Constructor for m_Datagrid_ContactsEstimatesBilling
+            </summary>
+        </member>
+        <member name="P:Software.MainWindow_Software.m_Datagrid_Contacts_Billing.id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Software.MainWindow_Software.m_Datagrid_Contacts_Billing.type">
+            <summary>
+            Type (Estimate or invoice)
+            </summary>
+        </member>
+        <member name="P:Software.MainWindow_Software.m_Datagrid_Contacts_Billing.creationDate">
+            <summary>
+            Creation date
+            </summary>
+        </member>
+        <member name="P:Software.MainWindow_Software.m_Datagrid_Contacts_Billing.sentDate">
+            <summary>
+            Sent date
+            </summary>
+        </member>
+        <member name="P:Software.MainWindow_Software.m_Datagrid_Contacts_Billing.subject">
+            <summary>
+            Number of services
+            </summary>
+        </member>
+        <member name="P:Software.MainWindow_Software.m_Datagrid_Contacts_Billing.amount">
+            <summary>
+            Amount
+            </summary>
+        </member>
+        <member name="T:Software.MainWindow_Software.m_Datagrid_Estimates_Services">
+            <summary>
+            Class for Datagrid_Estimates
+            </summary>
+        </member>
+        <member name="M:Software.MainWindow_Software.m_Datagrid_Estimates_Services.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor for m_DatagridServices
+            </summary>
+        </member>
+        <member name="P:Software.MainWindow_Software.m_Datagrid_Estimates_Services.reference">
+            <summary>
+            Reference
+            </summary>
+        </member>
+        <member name="P:Software.MainWindow_Software.m_Datagrid_Estimates_Services.description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:Software.MainWindow_Software.m_Datagrid_Estimates_Services.quantity">
+            <summary>
+            Amount
+            </summary>
+        </member>
+        <member name="T:Software.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Software.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Software.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Software.Properties.Resources.Icon_Logo_256x256">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="P:Software.Properties.Resources.Logo_Big">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Software.Properties.Resources.Logo_Example">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

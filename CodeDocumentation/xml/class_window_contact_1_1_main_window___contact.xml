@@ -1,0 +1,530 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_window_contact_1_1_main_window___contact" kind="class" language="C#" prot="public">
+    <compoundname>WindowContact::MainWindow_Contact</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1afffd5562c6365758df6b72a99fac3107" prot="package" static="no" mutable="no">
+        <type><ref refid="class_window_contact_1_1_main_window___contact" kindref="compound">WindowContact.MainWindow_Contact</ref></type>
+        <definition>WindowContact.MainWindow_Contact WindowContact.MainWindow_Contact.Window_Contact</definition>
+        <argsstring></argsstring>
+        <name>Window_Contact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="45" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a62e1cc69fa079d59e5829eea5c426be5" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System.Windows.Controls.Button WindowContact.MainWindow_Contact.Btn_Contact_Add</definition>
+        <argsstring></argsstring>
+        <name>Btn_Contact_Add</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="53" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a1f3b440fb2823567f6800af3f4babdb5" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System.Windows.Controls.Button WindowContact.MainWindow_Contact.Btn_Contact_QuitWithoutSaving</definition>
+        <argsstring></argsstring>
+        <name>Btn_Contact_QuitWithoutSaving</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="61" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a8ccac78d22c560063e09dcc38da150e6" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ComboBox</type>
+        <definition>System.Windows.Controls.ComboBox WindowContact.MainWindow_Contact.Cmb_Contacts_City</definition>
+        <argsstring></argsstring>
+        <name>Cmb_Contacts_City</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="69" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1afb8f48ed500f238b7fcef8a292f9c343" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ComboBox</type>
+        <definition>System.Windows.Controls.ComboBox WindowContact.MainWindow_Contact.Cmb_Contacts_Country</definition>
+        <argsstring></argsstring>
+        <name>Cmb_Contacts_Country</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="77" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1ad5df568372580cd250b91d6c4d864d9d" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_Address</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="85" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a8c80da86c2bcf189a6eafafc078e42d6" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_CellPhone</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_CellPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="93" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a54f2c79a08fba70a790b1e90b7da35e4" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_City</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_City</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="101" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a871f8751d9a61e7a444ae4ba206c2289" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_ClientCompanyName</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_ClientCompanyName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="109" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1ac0d3772deddf8e11a228dae7e2c4f328" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_ClientCompanyNumber</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_ClientCompanyNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="117" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1aa483311c997aefe6e631da35dbc634d1" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_Country</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_Country</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="125" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a87fd967d1129134c5786acf16042deae" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_Email</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="133" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a1fbd257edeb80036df14989f95886cf1" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_Fax</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_Fax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="141" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a04b9733561e261b8f2d1916d3c320878" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_FirstNameContact</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_FirstNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="149" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1aedea417e15434291d7016cd8c6f6a9dd" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_LastNameContact</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_LastNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="157" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a4be1567791dce305605517bbfbfe1353" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_Phone</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_Phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="165" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a07f52b07ff53131ffa6993f1f55766f6" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_State</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="173" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1af4483bd21958903311edcf0d4e4d36a5" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label WindowContact.MainWindow_Contact.Lbl_Contacts_ZipCode</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Contacts_ZipCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="181" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1ad2b6c900a2dc36d486798dc5bb9e2dfb" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_Address</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="189" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1ab2f5392a412005b24dffcbc100e8a3ae" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_CellPhone</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_CellPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="197" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1ab2d85f49ae65488c78bd261f60fb468f" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_ClientCompanyName</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_ClientCompanyName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="205" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a4f4aefd2548e45ac55cd90fc48a8cd8a" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_ClientCompanyNumber</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_ClientCompanyNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="213" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a3532360c8d99077c5917f452f05ea969" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_Email</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="221" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a716a7d5df0f311aded307b8d7b32f850" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_Fax</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_Fax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="229" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a7ff141d6eae74484a1695e302da7ce37" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_FirstNameContact</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_FirstNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="237" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a452494d8298eaa9be2572e1c961dd401" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_LastNameContact</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_LastNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="245" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a9b4cfd4c8e1c7119ed2f73edf8e19767" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_Phone</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_Phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="253" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a9a6234b8403f6add900f9e3477a617e3" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_State</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="261" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1a5dc525fb62ddf29d28a2c23ab1dc06da" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox WindowContact.MainWindow_Contact.Txt_Contacts_ZipCode</definition>
+        <argsstring></argsstring>
+        <name>Txt_Contacts_ZipCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="269" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_window_contact_1_1_main_window___contact_1abe73d83dbaed7bc0f09b351641185829" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WindowContact.MainWindow_Contact._contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="274" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___contact_1a0d38a980cb9c0afae7cd100ef8e0c58a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowContact.MainWindow_Contact.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="281" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="281" bodyend="293"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_window_contact_1_1_main_window___contact_1a5671054b1b632322c0d2d811f723b801" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowContact.MainWindow_Contact.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="301" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="301" bodyend="417"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_window_contact_1_1_main_window___contact" kindref="compound">MainWindow_Contact</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="66">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="65">
+        <label>WindowContact.MainWindow_Contact</label>
+        <link refid="class_window_contact_1_1_main_window___contact"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="69">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="68">
+        <label>WindowContact.MainWindow_Contact</label>
+        <link refid="class_window_contact_1_1_main_window___contact"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+        <childnode refid="71" relation="usage">
+          <edgelabel>Txt_Contacts_Fax</edgelabel>
+          <edgelabel>Txt_Contacts_ClientCompanyName</edgelabel>
+          <edgelabel>Lbl_Contacts_FirstNameContact</edgelabel>
+          <edgelabel>Btn_Contact_Add</edgelabel>
+          <edgelabel>Txt_Contacts_State</edgelabel>
+          <edgelabel>Lbl_Contacts_ClientCompanyNumber</edgelabel>
+          <edgelabel>Lbl_Contacts_Email</edgelabel>
+          <edgelabel>Lbl_Contacts_Country</edgelabel>
+          <edgelabel>Lbl_Contacts_ClientCompanyName</edgelabel>
+          <edgelabel>Lbl_Contacts_CellPhone</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="68" relation="usage">
+          <edgelabel>Window_Contact</edgelabel>
+        </childnode>
+      </node>
+      <node id="71">
+        <label>System</label>
+      </node>
+      <node id="70">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" line="40" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowContact.g.cs" bodystart="40" bodyend="418"/>
+    <listofallmembers>
+      <member refid="class_window_contact_1_1_main_window___contact_1abe73d83dbaed7bc0f09b351641185829" prot="private" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>_contentLoaded</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a62e1cc69fa079d59e5829eea5c426be5" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Btn_Contact_Add</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a1f3b440fb2823567f6800af3f4babdb5" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Btn_Contact_QuitWithoutSaving</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a8ccac78d22c560063e09dcc38da150e6" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Cmb_Contacts_City</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1afb8f48ed500f238b7fcef8a292f9c343" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Cmb_Contacts_Country</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a5671054b1b632322c0d2d811f723b801" prot="private" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Connect</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a0d38a980cb9c0afae7cd100ef8e0c58a" prot="public" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1ad5df568372580cd250b91d6c4d864d9d" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_Address</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a8c80da86c2bcf189a6eafafc078e42d6" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_CellPhone</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a54f2c79a08fba70a790b1e90b7da35e4" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_City</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a871f8751d9a61e7a444ae4ba206c2289" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_ClientCompanyName</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1ac0d3772deddf8e11a228dae7e2c4f328" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_ClientCompanyNumber</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1aa483311c997aefe6e631da35dbc634d1" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_Country</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a87fd967d1129134c5786acf16042deae" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_Email</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a1fbd257edeb80036df14989f95886cf1" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_Fax</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a04b9733561e261b8f2d1916d3c320878" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_FirstNameContact</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1aedea417e15434291d7016cd8c6f6a9dd" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_LastNameContact</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a4be1567791dce305605517bbfbfe1353" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_Phone</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a07f52b07ff53131ffa6993f1f55766f6" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_State</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1af4483bd21958903311edcf0d4e4d36a5" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Lbl_Contacts_ZipCode</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1ad2b6c900a2dc36d486798dc5bb9e2dfb" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_Address</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1ab2f5392a412005b24dffcbc100e8a3ae" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_CellPhone</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1ab2d85f49ae65488c78bd261f60fb468f" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_ClientCompanyName</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a4f4aefd2548e45ac55cd90fc48a8cd8a" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_ClientCompanyNumber</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a3532360c8d99077c5917f452f05ea969" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_Email</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a716a7d5df0f311aded307b8d7b32f850" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_Fax</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a7ff141d6eae74484a1695e302da7ce37" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_FirstNameContact</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a452494d8298eaa9be2572e1c961dd401" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_LastNameContact</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a9b4cfd4c8e1c7119ed2f73edf8e19767" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_Phone</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a9a6234b8403f6add900f9e3477a617e3" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_State</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1a5dc525fb62ddf29d28a2c23ab1dc06da" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Txt_Contacts_ZipCode</name></member>
+      <member refid="class_window_contact_1_1_main_window___contact_1afffd5562c6365758df6b72a99fac3107" prot="package" virt="non-virtual"><scope>WindowContact::MainWindow_Contact</scope><name>Window_Contact</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

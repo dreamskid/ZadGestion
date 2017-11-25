@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_general_classes_1_1_excel_generation" kind="class" language="C#" prot="public">
+    <compoundname>GeneralClasses::ExcelGeneration</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_general_classes_1_1_excel_generation_1abf53920024f13a5100fb4dc74bdec085" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+        <definition>Handlers GeneralClasses.ExcelGeneration.m_Global_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Global_Handler</name>
+        <initializer>= new <ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref>()</initializer>
+        <briefdescription>
+<para>Global handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" line="21" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_excel_generation_1a7b1d10f31fc3b4288ffb8cbaa521c4d1" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref></type>
+        <definition>Error GeneralClasses.ExcelGeneration.m_Error_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Error_Handler</name>
+        <initializer>= new <ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref>()</initializer>
+        <briefdescription>
+<para><ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref> handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" line="26" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_excel_generation_1acff5a065a13334579f062147b2422e1d" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_software_classes_1_1_billing" kindref="compound">Billing</ref></type>
+        <definition>Billing GeneralClasses.ExcelGeneration.m_Bill</definition>
+        <argsstring></argsstring>
+        <name>m_Bill</name>
+        <initializer>= new <ref refid="class_software_classes_1_1_billing" kindref="compound">Billing</ref>()</initializer>
+        <briefdescription>
+<para>Bill to treat </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" line="31" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_general_classes_1_1_excel_generation_1a0b73356194aa2f6f69fa906b604a42c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GeneralClasses.ExcelGeneration.Generate_ExcelStatement</definition>
+        <argsstring>(string _Filename, List&lt; string &gt; _BillingList)</argsstring>
+        <name>Generate_ExcelStatement</name>
+        <param>
+          <type>string</type>
+          <declname>_Filename</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>_BillingList</declname>
+        </param>
+        <briefdescription>
+<para>Transform a list of bills to an excel file <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Excel filename</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_BillingList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of bills</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" line="43" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" bodystart="43" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class <ref refid="class_general_classes_1_1_excel_generation" kindref="compound">ExcelGeneration</ref> containing all the tools to generate a excel statement from a list of bills </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" line="14" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/ExcelGeneration.cs" bodystart="13" bodyend="104"/>
+    <listofallmembers>
+      <member refid="class_general_classes_1_1_excel_generation_1a0b73356194aa2f6f69fa906b604a42c8" prot="public" virt="non-virtual"><scope>GeneralClasses::ExcelGeneration</scope><name>Generate_ExcelStatement</name></member>
+      <member refid="class_general_classes_1_1_excel_generation_1acff5a065a13334579f062147b2422e1d" prot="private" virt="non-virtual"><scope>GeneralClasses::ExcelGeneration</scope><name>m_Bill</name></member>
+      <member refid="class_general_classes_1_1_excel_generation_1a7b1d10f31fc3b4288ffb8cbaa521c4d1" prot="private" virt="non-virtual"><scope>GeneralClasses::ExcelGeneration</scope><name>m_Error_Handler</name></member>
+      <member refid="class_general_classes_1_1_excel_generation_1abf53920024f13a5100fb4dc74bdec085" prot="private" virt="non-virtual"><scope>GeneralClasses::ExcelGeneration</scope><name>m_Global_Handler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

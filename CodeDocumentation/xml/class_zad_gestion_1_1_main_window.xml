@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_zad_gestion_1_1_main_window" kind="class" language="C#" prot="public">
+    <compoundname>ZadGestion::MainWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_zad_gestion_1_1_main_window_1a8ac1159ac4fb0b82a978fa20dbc60e1e" prot="public" static="no">
+        <name>Panel</name>
+        <enumvalue id="class_zad_gestion_1_1_main_window_1a8ac1159ac4fb0b82a978fa20dbc60e1ea588631b5599f09c7826a82f5094513ec" prot="public">
+          <name>ZADGESTION</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_zad_gestion_1_1_main_window_1a8ac1159ac4fb0b82a978fa20dbc60e1ea74bd580a5278ff0f64cdda38eb6ccdac" prot="public">
+          <name>HOSTANDHOSTESS</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_zad_gestion_1_1_main_window_1a8ac1159ac4fb0b82a978fa20dbc60e1eaed6f7aca7887a927b9ed3d62aa347a86" prot="public">
+          <name>SETTINGS</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Panel </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="21" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="20" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1abd1247af9c739a8fc554dd0a393ddcbc" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+        <definition>Handlers ZadGestion.MainWindow.m_Global_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Global_Handler</name>
+        <initializer>= new <ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref>()</initializer>
+        <briefdescription>
+<para>Global handlers for common objects </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="30" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1ac4ca9cc7032a1654938cf69bce6bb50d" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_database_1_1_database" kindref="compound">Database.Database</ref></type>
+        <definition>Database.Database ZadGestion.MainWindow.m_Database_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Database_Handler</name>
+        <initializer>= new <ref refid="class_database_1_1_database" kindref="compound">Database.Database</ref>()</initializer>
+        <briefdescription>
+<para>Handler for internet </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="35" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1a6fd5cc635a3c8da07e36e33719dc59f4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ZadGestion.MainWindow.AlreadyFaded</definition>
+        <argsstring></argsstring>
+        <name>AlreadyFaded</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Boolean indicating if the form is already faded or not </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="214" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1ac511fdece9366373bccc2c5331348da7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ZadGestion.MainWindow::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="99" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1ae06e2a92da98f1c21a683a9848b5cfd6" prot="package" static="no" mutable="no">
+        <type><ref refid="class_zad_gestion_1_1_main_window" kindref="compound">ZadGestion.MainWindow</ref></type>
+        <definition>ZadGestion MainWindow ZadGestion.MainWindow::Window_Main</definition>
+        <argsstring></argsstring>
+        <name>Window_Main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="46" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1a5222e9536b795b2f1c1375b9f4c64aca" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Grid</type>
+        <definition>System Windows Controls Grid ZadGestion.MainWindow::Grid_Main</definition>
+        <argsstring></argsstring>
+        <name>Grid_Main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="54" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1a0d0af1b5ebec0fe2c19a002a38c2a6bf" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button ZadGestion.MainWindow::Btn_Main_Close</definition>
+        <argsstring></argsstring>
+        <name>Btn_Main_Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="62" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1ac4da99657996c66db1bf948d71971447" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button ZadGestion.MainWindow::Btn_Main_HostAndHostess</definition>
+        <argsstring></argsstring>
+        <name>Btn_Main_HostAndHostess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="70" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1ac366b5072047faeb66a0bbd6dc6a09a7" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button ZadGestion.MainWindow::Btn_Main_Settings</definition>
+        <argsstring></argsstring>
+        <name>Btn_Main_Settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="78" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1a45a833deec058967b7f1e7f42c2efe4f" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button ZadGestion.MainWindow::Btn_Main_Soft</definition>
+        <argsstring></argsstring>
+        <name>Btn_Main_Soft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="86" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zad_gestion_1_1_main_window_1a57b7fc9d32ab2f460d57b76c488ae47e" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox ZadGestion.MainWindow::Txt_Version</definition>
+        <argsstring></argsstring>
+        <name>Txt_Version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="94" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1aef36d04e162a9082ea8f9c34d3549e08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ZadGestion.MainWindow.MainWindow</definition>
+        <argsstring>()</argsstring>
+        <name>MainWindow</name>
+        <briefdescription>
+<para>Constructor for the main window </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="40" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="40" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1aef358c8871971754c931373ae7e97bc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="106" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="106" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1aef358c8871971754c931373ae7e97bc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.i.cs" line="106" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.i.cs" bodystart="106" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1a4952f92839b94dffa015bfdfa839023e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.Define_Content</definition>
+        <argsstring>()</argsstring>
+        <name>Define_Content</name>
+        <briefdescription>
+<para>Define each content for labels, button, text in the form </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="106" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="106" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1adc448d47b8a728c2f20388676f39d781" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.Btn_Main_Soft_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_Main_Soft_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Click on the button <ref refid="namespace_software" kindref="compound">Software</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="126" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="126" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1a1a167d82ba6f052c9bef48d869f4b93d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.Btn_Main_Close_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_Main_Close_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Click on the cross button </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="149" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1a4f6f477b7b7326855be712b47ad7b17f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.Btn_Main_HostAndHostess_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_Main_HostAndHostess_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Click on the button Host and hostess </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="157" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="157" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1a8f997c721c3bd247e7c381e14aaafefe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.Btn_Main_Settings_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_Main_Settings_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Click on the button Settings </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="179" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="179" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1ae30b93a00f745a7cb02a5ec22bc5c07f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.NetworkChange_NetworkAvailabilityChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>NetworkChange_NetworkAvailabilityChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_internet" kindref="compound">Internet</ref> connection lost event handler Need to be better TODO </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="202" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1aea1b399e2dd4347a4f43f6a5a3749c8e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.Main_Window_Closing</definition>
+        <argsstring>()</argsstring>
+        <name>Main_Window_Closing</name>
+        <briefdescription>
+<para>Animation for the closing of the form </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="219" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="219" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1a38ae6c4adf3c19c62102c3efe2137cf3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZadGestion.MainWindow.Main_Window_Closing_Completed</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Main_Window_Closing_Completed</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>End of the animation </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="233" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="233" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1a1e3eda70e5a8a78ba96fec3c3c0c6d86" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. ZadGestion.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" line="126" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.cs" bodystart="126" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zad_gestion_1_1_main_window_1a1e3eda70e5a8a78ba96fec3c3c0c6d86" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. ZadGestion.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.i.cs" line="126" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/ZadGestion.g.i.cs" bodystart="126" bodyend="176"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class <ref refid="class_zad_gestion_1_1_main_window" kindref="compound">MainWindow</ref> from the namespace WindowChoice </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_zad_gestion_1_1_main_window" kindref="compound">MainWindow</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="42">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="44">
+        <label>Window</label>
+      </node>
+      <node id="41">
+        <label>ZadGestion.MainWindow</label>
+        <link refid="class_zad_gestion_1_1_main_window"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="46">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="48">
+        <label>Window</label>
+      </node>
+      <node id="49">
+        <label>System</label>
+      </node>
+      <node id="45">
+        <label>ZadGestion.MainWindow</label>
+        <link refid="class_zad_gestion_1_1_main_window"/>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+        <childnode refid="48" relation="public-inheritance">
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>Window_Main</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>Btn_Main_Settings</edgelabel>
+          <edgelabel>Txt_Version</edgelabel>
+          <edgelabel>Grid_Main</edgelabel>
+          <edgelabel>Btn_Main_HostAndHostess</edgelabel>
+          <edgelabel>Btn_Main_Close</edgelabel>
+          <edgelabel>Btn_Main_Soft</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" line="13" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Forms/ZadGestion.xaml.cs" bodystart="12" bodyend="240"/>
+    <listofallmembers>
+      <member refid="class_zad_gestion_1_1_main_window_1ac511fdece9366373bccc2c5331348da7" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>_contentLoaded</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a6fd5cc635a3c8da07e36e33719dc59f4" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>AlreadyFaded</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a0d0af1b5ebec0fe2c19a002a38c2a6bf" prot="package" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Btn_Main_Close</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a1a167d82ba6f052c9bef48d869f4b93d" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Btn_Main_Close_Click</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1ac4da99657996c66db1bf948d71971447" prot="package" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Btn_Main_HostAndHostess</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a4f6f477b7b7326855be712b47ad7b17f" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Btn_Main_HostAndHostess_Click</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1ac366b5072047faeb66a0bbd6dc6a09a7" prot="package" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Btn_Main_Settings</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a8f997c721c3bd247e7c381e14aaafefe" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Btn_Main_Settings_Click</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a45a833deec058967b7f1e7f42c2efe4f" prot="package" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Btn_Main_Soft</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1adc448d47b8a728c2f20388676f39d781" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Btn_Main_Soft_Click</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a1e3eda70e5a8a78ba96fec3c3c0c6d86" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a1e3eda70e5a8a78ba96fec3c3c0c6d86" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a4952f92839b94dffa015bfdfa839023e" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Define_Content</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a5222e9536b795b2f1c1375b9f4c64aca" prot="package" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Grid_Main</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1aef358c8871971754c931373ae7e97bc3" prot="public" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1aef358c8871971754c931373ae7e97bc3" prot="public" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1ac4ca9cc7032a1654938cf69bce6bb50d" prot="public" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>m_Database_Handler</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1abd1247af9c739a8fc554dd0a393ddcbc" prot="public" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>m_Global_Handler</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1aea1b399e2dd4347a4f43f6a5a3749c8e" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Main_Window_Closing</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a38ae6c4adf3c19c62102c3efe2137cf3" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Main_Window_Closing_Completed</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1aef36d04e162a9082ea8f9c34d3549e08" prot="public" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>MainWindow</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1ae30b93a00f745a7cb02a5ec22bc5c07f" prot="private" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>NetworkChange_NetworkAvailabilityChanged</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a8ac1159ac4fb0b82a978fa20dbc60e1e" prot="public" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Panel</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1a57b7fc9d32ab2f460d57b76c488ae47e" prot="package" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Txt_Version</name></member>
+      <member refid="class_zad_gestion_1_1_main_window_1ae06e2a92da98f1c21a683a9848b5cfd6" prot="package" virt="non-virtual"><scope>ZadGestion::MainWindow</scope><name>Window_Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+﻿<Window x:Name="Window_Mission" x:Class="WindowMission.MainWindow_Mission"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mission" Height="600" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.Resources>
+            <StackPanel x:Key="ToolTipContent">
+                <TextBlock Text="{Binding Path=PaymentTermsItem}" />
+            </StackPanel>
+        </Grid.Resources>
+
+        <!--Button-->
+
+        <!--Radio button-->
+
+        <!--Check box-->
+
+        <!--Combobox-->
+
+        <!--Datagrid-->
+
+        <!--Date picker-->
+
+        <!--Label-->
+
+        <!--Text box-->
+    </Grid>
+
+</Window>

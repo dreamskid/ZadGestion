@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <?define ZadGestion_TargetDir=$(var.ZadGestion.TargetDir)?>
+  <?define Launcher_TargetDir=$(var.Launcher.TargetDir)?>
+  <Product Id="163be2cb-0de5-48c7-8591-80988c626d47" Name="ZadGestion" Language="1033" Version="1.4.6.11" Manufacturer="ZadGestion" UpgradeCode="4acd7c8c-a1b8-4ef7-b075-2e18d786c6ff">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perUser" />
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+    <Property Id="ApplicationFolderName" Value="ZadGestion" />
+
+    <UIRef Id="MyWixUI_InstallDir" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+    <Icon Id="icon.ico" SourceFile="$(var.ProjectDir)Icon_Logo_64x64.ico" />
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+    <Property Id="INSTALLDESKTOPSHORTCUT" Value="1" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+
+    <WixVariable Id="WixUIBannerBmp" Value="Images\Logo_Banner.bmp" />
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\License.rtf" />
+    <WixVariable Id="WixUISupportPerUser" Value="0" />
+
+    <Feature Id="ProductFeature" Title="ZadGestion" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="Resources_files" />
+      <ComponentGroupRef Id="Cities_files" />
+      <ComponentGroupRef Id="Language_files" />
+      <ComponentGroupRef Id="Template_files" />
+      <ComponentRef Id="PrivateData" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+      <ComponentRef Id="France.xml" />
+    </Feature>
+
+    <UI>
+      <Publish Dialog="ExitDialog"
+          Control="Finish"
+          Event="DoAction"
+          Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
+    </UI>
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="!(loc.LaunchApplication)" />
+    <Property Id="WixShellExecTarget" Value="[#ZadGestion.exe]" />
+    <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+
+  </Product>
+
+  <Fragment>
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="INSTALLFOLDER" Name="ZadGestion">
+        <Directory Id="Resources" Name="Resources" />
+        <Directory Id="Cities" Name="Cities" />
+        <Directory Id="Language" Name="Language" />
+        <Directory Id="Template" Name="Template" />
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="ZadGestion" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+    <Property Id="INSTALLFOLDER">
+      <RegistrySearch Root="HKCU" Key="Software\ZadGestion" Type="raw"
+                      Id="APPLICATIONFOLDER_REGSEARCH" Name="PrivateDir" />
+    </Property>
+    <DirectoryRef Id='INSTALLFOLDER'>
+      <Component Id="PrivateData" Guid="dc39111e-2abe-40ed-a4ae-9e8211a36ceb">
+        <CreateFolder Directory="INSTALLFOLDER"/>
+        <util:RemoveFolderEx Property="INSTALLFOLDER" On="uninstall"/>
+        <RemoveFolder Id="INSTALLFOLDER" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\ZadGestion" Name="PrivateDir"
+                       Type="string" Value="[INSTALLFOLDER]" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+
+  </Fragment>
+
+  <Fragment>
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="e6d728fb-432d-4440-9c9e-a5a59ec8de84">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="ZadGestion" Description="ZadGestion" Target="[INSTALLFOLDER]ZadGestion.exe" WorkingDirectory="INSTALLFOLDER" />
+        <Shortcut Id="UninstallProduct" Name="!(loc.UninstallShortcut)" Description="!(loc.UninstallDescription)" Target="[System64Folder]msiexec.exe" Arguments="/x [ProductCode]" />
+        <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\ZadGestion" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationShortcutDesktop" Guid="7d142172-0320-4967-8418-91bd3e24606a">
+        <Condition>INSTALLDESKTOPSHORTCUT</Condition>
+        <Shortcut Id="ApplicationDesktopShortcut" Name="SLCloud" Description="ZadGestion" Target="[INSTALLFOLDER]ZadGestion.exe" WorkingDirectory="INSTALLFOLDER" />
+        <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\ZadGestion" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+  </Fragment>
+
+  <Fragment>
+
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="ZadGestion.exe" Guid="f37c2dbe-50bc-431c-980d-ba6f9bd3e0fa">
+        <File Id="ZadGestion.exe" Name="ZadGestion.exe" Source="$(var.ZadGestion_TargetDir)ZadGestion.exe" />
+      </Component>
+      <Component Id="ZadGestion.exe.config" Guid="6862c31a-beb8-48f5-a5e4-63b9e2e6e348">
+        <File Id="ZadGestion.exe.config" Name="ZadGestion.exe.config" Source="$(var.ZadGestion_TargetDir)ZadGestion.exe.config" />
+      </Component>
+
+      <Component Id="Common.dll" Guid="417fd0b8-b33f-4164-a986-41a26fbef596">
+        <File Id="Common.dll" Name="Common.dll" Source="$(var.Launcher_TargetDir)Common.dll" />
+      </Component>
+      <Component Id="Internet.dll" Guid="d3822d1d-db72-49a4-a82e-3476ccc33d86">
+        <File Id="Internet.dll" Name="Internet.dll" Source="$(var.Launcher_TargetDir)Internet.dll" />
+      </Component>
+      <Component Id="Software.dll" Guid="d61ecb0d-f6ca-4dc2-b6ce-dfc337e9fea6">
+        <File Id="Software.dll" Name="Software.dll" Source="$(var.Launcher_TargetDir)Software.dll" />
+      </Component>
+      <Component Id="WindowHostAndHostess.dll" Guid="6ec8b200-3d32-4aa5-8992-3e64b7829b58">
+        <File Id="WindowHostAndHostess.dll" Name="WindowHostAndHostess.dll" Source="$(var.Launcher_TargetDir)WindowHostAndHostess.dll" />
+      </Component>
+      <Component Id="WindowCreditNote.dll" Guid="1671228e-491c-4a46-9efc-17c151cb886f">
+        <File Id="WindowCreditNote.dll" Name="WindowCreditNote.dll" Source="$(var.Launcher_TargetDir)WindowCreditNote.dll" />
+      </Component>
+      <Component Id="WindowMission.dll" Guid="91dbc3bd-f885-497e-913e-c2f1632a435c">
+        <File Id="WindowMission.dll" Name="WindowMission.dll" Source="$(var.Launcher_TargetDir)WindowMission.dll" />
+      </Component>
+      <Component Id="WindowInvoice.dll" Guid="b007d86f-874c-424b-9b78-f73d331651f5">
+        <File Id="WindowInvoice.dll" Name="WindowInvoice.dll" Source="$(var.Launcher_TargetDir)WindowInvoice.dll" />
+      </Component>
+      <Component Id="WindowPaymentTerms.dll" Guid="759e1ba0-3c6a-4228-8f1c-d1f72d08d385">
+        <File Id="WindowPaymentTerms.dll" Name="WindowPaymentTerms.dll" Source="$(var.Launcher_TargetDir)WindowPaymentTerms.dll" />
+      </Component>
+      <Component Id="WindowServices.dll" Guid="f14d00ae-ac92-40ee-89ba-65524aa5be37">
+        <File Id="WindowServices.dll" Name="WindowServices.dll" Source="$(var.Launcher_TargetDir)WindowServices.dll" />
+      </Component>
+      <Component Id="WindowWait.dll" Guid="13be00ce-4dc2-4537-9a87-ac5fc0f625a4">
+        <File Id="WindowWait.dll" Name="WindowWait.dll" Source="$(var.Launcher_TargetDir)WindowWait.dll" />
+      </Component>
+      <Component Id="Launcher.exe" Guid="e097af8b-de6a-4db9-b809-8ab1ab567a28">
+        <File Id="Launcher.exe" Name="Launcher.exe" Source="$(var.Launcher_TargetDir)Launcher.exe" />
+      </Component>
+      <Component Id="Launcher.exe.config" Guid="adc844b6-e326-49bf-92ae-b6a4d5517e91">
+        <File Id="Launcher.exe.config" Name="Launcher.exe.config" Source="$(var.Launcher_TargetDir)Launcher.exe.config" />
+      </Component>
+
+      <Component Id="System.Windows.Controls.DataVisualization.Toolkit.dll" Guid="05df1215-4f38-4c09-a615-ef80d32355d7">
+        <File Id="System.Windows.Controls.DataVisualization.Toolkit.dll" Name="System.Windows.Controls.DataVisualization.Toolkit.dll" Source="$(var.Launcher_TargetDir)System.Windows.Controls.DataVisualization.Toolkit.dll" />
+      </Component>
+      <Component Id="System.Windows.Controls.Input.Toolkit.dll" Guid="133d7eae-4824-4d67-a6de-b5a4231e5522">
+        <File Id="System.Windows.Controls.Input.Toolkit.dll" Name="System.Windows.Controls.Input.Toolkit.dll" Source="$(var.Launcher_TargetDir)System.Windows.Controls.Input.Toolkit.dll" />
+      </Component>
+      <Component Id="System.Windows.Controls.Layout.Toolkit.dll" Guid="a98b6b26-a839-49f9-a490-9d948fc0ce98">
+        <File Id="System.Windows.Controls.Layout.Toolkit.dll" Name="System.Windows.Controls.Layout.Toolkit.dll" Source="$(var.Launcher_TargetDir)System.Windows.Controls.Layout.Toolkit.dll" />
+      </Component>
+      <Component Id="WPFToolkit.dll" Guid="a13bb435-293b-4a57-b2f3-98af75ea5c4a">
+        <File Id="WPFToolkit.dll" Name="WPFToolkit.dll" Source="$(var.Launcher_TargetDir)WPFToolkit.dll" />
+      </Component>
+      <Component Id="HtmlRenderer.dll" Guid="d3f0c07b-acb8-42da-945c-0b97cc62596d">
+        <File Id="HtmlRenderer.dll" Name="HtmlRenderer.dll" Source="$(var.Launcher_TargetDir)HtmlRenderer.dll" />
+      </Component>
+      <Component Id="HtmlRenderer.WPF.dll" Guid="90d93080-5072-4a15-b43f-8b19ca9d282e">
+        <File Id="HtmlRenderer.WPF.dll" Name="HtmlRenderer.WPF.dll" Source="$(var.Launcher_TargetDir)HtmlRenderer.WPF.dll" />
+      </Component>
+    </ComponentGroup>
+
+  </Fragment>
+
+  <Fragment>
+
+    <ComponentGroup Id="Resources_files" Directory="Resources">
+      <Component Id="Update.slc" Guid="dfd61b92-a009-4afb-959b-ca6e7163ae46">
+        <File Id="Update.slc" Name="Update.slc" Source="$(var.Launcher_TargetDir)Resources\Update.slc" />
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="Cities_files" Directory="Cities">
+      <Component Id="France.xml" Guid="9e004013-50a7-4781-82c9-be3aa72bf45e">
+        <File Id="France.xml" Name="France.xml" Source="$(var.Launcher_TargetDir)Cities\France.xml" />
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="Language_files" Directory="Language">
+      <Component Id="Language_en_US.Designer.cs" Guid="c4faaae9-aaaf-4283-864f-a04334e88850">
+        <File Id="Language_en_US.Designer.cs" Name="Language_en-US.Designer.cs" Source="$(var.Launcher_TargetDir)Language\Language_en-US.Designer.cs" />
+      </Component>
+      <Component Id="Language_en_US.resx" Guid="4d42b697-8985-4dcb-bd12-8fdabb1fc715">
+        <File Id="Language_en_US.resx" Name="Language_en-US.resx" Source="$(var.Launcher_TargetDir)Language\Language_en-US.resx" />
+      </Component>
+      <Component Id="Language_fr_FR.Designer.cs" Guid="30f8290d-7f58-4baf-8db2-325cd1ba8992">
+        <File Id="Language_fr_FR.Designer.cs" Name="Language_fr-FR.Designer.cs" Source="$(var.Launcher_TargetDir)Language\Language_fr-FR.Designer.cs" />
+      </Component>
+      <Component Id="Language_fr_FR.resx" Guid="ea50af46-f599-441c-ab35-de6eb602ce65">
+        <File Id="Language_fr_FR.resx" Name="Language_fr-FR.resx" Source="$(var.Launcher_TargetDir)Language\Language_fr-FR.resx" />
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="Template_files" Directory="Template">
+      <Component Id="Template.docx" Guid="bb4277c1-13f9-4fa7-823c-c279c535244d">
+        <File Id="Template.docx" Name="Template.docx" Source="$(var.Launcher_TargetDir)Template\Template.docx" />
+      </Component>
+      <Component Id="TemplateCreditNote.docx" Guid="27ed76e5-ccb9-471e-aa2d-a62f1ccc1b36">
+        <File Id="TemplateCreditNote.docx" Name="TemplateCreditNote.docx" Source="$(var.Launcher_TargetDir)Template\TemplateCreditNote.docx" />
+      </Component>
+    </ComponentGroup>
+
+  </Fragment>
+
+</Wix>

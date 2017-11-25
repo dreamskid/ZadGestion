@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_e141a12e7f28258f1ffd6c55ea4f771f" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses</compoundname>
+    <innerfile refid="_controls_8cs">Controls.cs</innerfile>
+    <innerfile refid="_date_and_time_8cs">DateAndTime.cs</innerfile>
+    <innerfile refid="_email_8cs">Email.cs</innerfile>
+    <innerfile refid="_error_8cs">Error.cs</innerfile>
+    <innerfile refid="_excel_generation_8cs">ExcelGeneration.cs</innerfile>
+    <innerfile refid="_files_8cs">Files.cs</innerfile>
+    <innerfile refid="_handlers_8cs">Handlers.cs</innerfile>
+    <innerfile refid="_images_8cs">Images.cs</innerfile>
+    <innerfile refid="_resources_manager_8cs">ResourcesManager.cs</innerfile>
+    <innerfile refid="_word_generation_8cs">WordGeneration.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/"/>
+  </compounddef>
+</doxygen>

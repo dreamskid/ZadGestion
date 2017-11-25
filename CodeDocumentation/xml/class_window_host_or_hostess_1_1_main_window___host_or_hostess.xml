@@ -1,0 +1,1066 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_window_host_or_hostess_1_1_main_window___host_or_hostess" kind="class" language="C#" prot="public">
+    <compoundname>WindowHostOrHostess::MainWindow_HostOrHostess</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a90d00fba8ef9205d4f0dab3c3334a1c3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WindowHostOrHostess.MainWindow_HostOrHostess.m_ConfirmQuit</definition>
+        <argsstring></argsstring>
+        <name>m_ConfirmQuit</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Initialization Variables Confirmation of quit the window </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="32" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad1b39351ceab538a2ecca785cef628d5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WindowHostOrHostess.MainWindow_HostOrHostess.m_IsLoaded</definition>
+        <argsstring></argsstring>
+        <name>m_IsLoaded</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Initialization Variables Confirmation of window loaded </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="39" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a18dc616214f4e37529e113da6e19f52d" prot="private" static="no" mutable="no">
+        <type>List&lt; System.Windows.Controls.Control &gt;</type>
+        <definition>List&lt;System.Windows.Controls.Control&gt; WindowHostOrHostess.MainWindow_HostOrHostess.m_ListFields</definition>
+        <argsstring></argsstring>
+        <name>m_ListFields</name>
+        <initializer>= new List&lt;System.Windows.Controls.Control&gt;()</initializer>
+        <briefdescription>
+<para>Initialization Variables List of controls </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="60" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae884970d6a61dfd78194fb9f0d8fc276" prot="private" static="no" mutable="no">
+        <type>XmlDocument</type>
+        <definition>XmlDocument WindowHostOrHostess.MainWindow_HostOrHostess.m_Cities_DocFrance</definition>
+        <argsstring></argsstring>
+        <name>m_Cities_DocFrance</name>
+        <initializer>= new XmlDocument()</initializer>
+        <briefdescription>
+<para>Initialization Variables Xml document containing all the cities in France with zipcode </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="67" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a86bdc96cd15073abfdac8d52bd524e0e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WindowHostOrHostess.MainWindow_HostOrHostess.m_IsModification</definition>
+        <argsstring></argsstring>
+        <name>m_IsModification</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Initialization Variables Boolean indiciating if it is a modification of contact (true) or a creation (false) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="74" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a113e02acf90bbf5bb54bd22986107c57" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WindowHostOrHostess.MainWindow_HostOrHostess::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="298" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a478e4bc990f0f939c1f2426b71c9a07a" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+        <definition>Handlers WindowHostOrHostess.MainWindow_HostOrHostess.m_Global_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Global_Handler</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Initialization Variables Global handlers for common objects </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="46" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a092905b81ed99226a54f7d81f92af475" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_database_1_1_database" kindref="compound">Database.Database</ref></type>
+        <definition>Database.Database WindowHostOrHostess.MainWindow_HostOrHostess.m_Database_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Database_Handler</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Initialization Variables <ref refid="namespace_internet" kindref="compound">Internet</ref> handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="53" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aca1505c4796b73b4aa9d3fdf5f4076eb" prot="public" static="no" mutable="no">
+        <type><ref refid="class_software_classes_1_1_hostess" kindref="compound">Hostess</ref></type>
+        <definition>Hostess WindowHostOrHostess.MainWindow_HostOrHostess.m_HostOrHostess</definition>
+        <argsstring></argsstring>
+        <name>m_HostOrHostess</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Initialization Variables Contact modified or created </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="81" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a88c9c6f7cc25cee5851d7f961e29f950" prot="public" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; WindowHostOrHostess.MainWindow_HostOrHostess.m_ListOfPhotos</definition>
+        <argsstring></argsstring>
+        <name>m_ListOfPhotos</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+<para>Initialization Variables List of photos </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="88" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a3faa3e1382462e14dbdcc60cc3e21305" prot="package" static="no" mutable="no">
+        <type><ref refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess" kindref="compound">WindowHostOrHostess.MainWindow_HostOrHostess</ref></type>
+        <definition>WindowHostOrHostess MainWindow_HostOrHostess WindowHostOrHostess.MainWindow_HostOrHostess::Window_HostAndHostess</definition>
+        <argsstring></argsstring>
+        <name>Window_HostAndHostess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="45" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a9cfd0d6e1a98f443e982170e7bfa7bae" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button WindowHostOrHostess.MainWindow_HostOrHostess::Btn_HostAndHostess_Add</definition>
+        <argsstring></argsstring>
+        <name>Btn_HostAndHostess_Add</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="53" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a2cdceafc0d02ad7cdfda6d08f7e938e6" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button WindowHostOrHostess.MainWindow_HostOrHostess::Btn_HostAndHostess_AddPhoto</definition>
+        <argsstring></argsstring>
+        <name>Btn_HostAndHostess_AddPhoto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="61" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a1d55ee560d93c08f735806cf556491cd" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button WindowHostOrHostess.MainWindow_HostOrHostess::Btn_HostAndHostess_DeletePhoto</definition>
+        <argsstring></argsstring>
+        <name>Btn_HostAndHostess_DeletePhoto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="69" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a5889c48a0c8698f4a8ef4ed42f078de0" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button WindowHostOrHostess.MainWindow_HostOrHostess::Btn_HostAndHostess_NextPhoto</definition>
+        <argsstring></argsstring>
+        <name>Btn_HostAndHostess_NextPhoto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="77" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae00b6260dce6112e5d5eaca0330597c4" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button WindowHostOrHostess.MainWindow_HostOrHostess::Btn_HostAndHostess_PreviousPhoto</definition>
+        <argsstring></argsstring>
+        <name>Btn_HostAndHostess_PreviousPhoto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="85" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1abe562e40616b551b467f9127e57b5b2e" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button WindowHostOrHostess.MainWindow_HostOrHostess::Btn_HostAndHostess_QuitWithoutSaving</definition>
+        <argsstring></argsstring>
+        <name>Btn_HostAndHostess_QuitWithoutSaving</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="93" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a2ee8b6802dbd7f37c2b2f9bb03a463dc" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ComboBox</type>
+        <definition>System Windows Controls ComboBox WindowHostOrHostess.MainWindow_HostOrHostess::Cmb_HostAndHostess_City</definition>
+        <argsstring></argsstring>
+        <name>Cmb_HostAndHostess_City</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="101" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a03c414b5c971964adf2420ce4e775f8b" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ComboBox</type>
+        <definition>System Windows Controls ComboBox WindowHostOrHostess.MainWindow_HostOrHostess::Cmb_HostAndHostess_Country</definition>
+        <argsstring></argsstring>
+        <name>Cmb_HostAndHostess_Country</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="109" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad6513af2ce7f5673967bd2becef4a713" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ComboBox</type>
+        <definition>System Windows Controls ComboBox WindowHostOrHostess.MainWindow_HostOrHostess::Cmb_HostAndHostess_Sex</definition>
+        <argsstring></argsstring>
+        <name>Cmb_HostAndHostess_Sex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="117" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a41bdd7e826d5aea54c8741f18b013fe0" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Image</type>
+        <definition>System Windows Controls Image WindowHostOrHostess.MainWindow_HostOrHostess::Img_HostAndHostess_Photo</definition>
+        <argsstring></argsstring>
+        <name>Img_HostAndHostess_Photo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="125" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a484e4f5b10ffb6728d0ff539ed09324f" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_Address</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="133" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a3751ab6076cb801aa76812a77a2a76a0" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_CellPhone</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_CellPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="141" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a5d5b32d38563afdcfb26ce029a8764c1" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_City</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_City</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="149" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a04d65398f256b610f8d41c8a73bc67a8" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_Country</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Country</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="157" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a1fc9ad2a7e545870ed98af85da3587eb" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_Email</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="165" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1abd348cb2e6905c42138742188f580fba" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_FirstNameContact</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_FirstNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="173" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a3eb0c684af2d674c3a55b6d38fc254cd" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_IdPaycheck</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_IdPaycheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="181" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aaca66e1d82aed62e3bd65ab8930d1839" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_LastNameContact</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_LastNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="189" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae7af814363e08c3f0861973b7cd2f5e4" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_Phone</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="197" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a5e1e73cbc294e850287980fedc0dbb3e" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_Sex</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_Sex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="205" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a8b018ab2e51a02b1c1f4662da08d166e" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_State</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="213" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a5832d4ac4908365a2c9c897b23fd75a0" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label WindowHostOrHostess.MainWindow_HostOrHostess::Lbl_HostAndHostess_ZipCode</definition>
+        <argsstring></argsstring>
+        <name>Lbl_HostAndHostess_ZipCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="221" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a069937eea428ae259a565f160cf0fa90" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox WindowHostOrHostess.MainWindow_HostOrHostess::Txt_HostAndHostess_Address</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="229" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a6bf889ab5efb1dbb98fd5f65f518ca09" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox WindowHostOrHostess.MainWindow_HostOrHostess::Txt_HostAndHostess_CellPhone</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_CellPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="237" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ab68ec5508e014e88baa373dbceaf5570" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox WindowHostOrHostess.MainWindow_HostOrHostess::Txt_HostAndHostess_Email</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="245" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a4c9753f9fd716805b09eca4af21c5aae" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox WindowHostOrHostess.MainWindow_HostOrHostess::Txt_HostAndHostess_FirstNameContact</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_FirstNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="253" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a67c61f71422d01d3798508464f0414df" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox WindowHostOrHostess.MainWindow_HostOrHostess::Txt_HostAndHostess_LastNameContact</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_LastNameContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="261" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae6b7734642713d3b443cc7514be1e6f6" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox WindowHostOrHostess.MainWindow_HostOrHostess::Txt_HostAndHostess_Phone</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_Phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="269" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1abb1cbddc4d78769d298f4cacff688e92" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox WindowHostOrHostess.MainWindow_HostOrHostess::Txt_HostAndHostess_State</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="277" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a54d9763fdf94c3348dc50f8528d1194b" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox WindowHostOrHostess.MainWindow_HostOrHostess::Txt_HostAndHostess_ZipCode</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_ZipCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="285" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a08c0c085dff53290611659848786c426" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox WindowHostOrHostess.MainWindow_HostOrHostess::Txt_HostAndHostess_IdPaycheck</definition>
+        <argsstring></argsstring>
+        <name>Txt_HostAndHostess_IdPaycheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="293" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a26be2bae32a309febf48a0cef9a2fbf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WindowHostOrHostess.MainWindow_HostOrHostess.MainWindow_HostOrHostess</definition>
+        <argsstring>(Handlers _Global_Handler, Database.Database _Database_Handler, XmlDocument _Cities_DocFrance, bool _IsModification, Hostess _HostAndHostess)</argsstring>
+        <name>MainWindow_HostOrHostess</name>
+        <param>
+          <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+          <declname>_Global_Handler</declname>
+        </param>
+        <param>
+          <type><ref refid="class_database_1_1_database" kindref="compound">Database.Database</ref></type>
+          <declname>_Database_Handler</declname>
+        </param>
+        <param>
+          <type>XmlDocument</type>
+          <declname>_Cities_DocFrance</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>_IsModification</declname>
+        </param>
+        <param>
+          <type><ref refid="class_software_classes_1_1_hostess" kindref="compound">Hostess</ref></type>
+          <declname>_HostAndHostess</declname>
+        </param>
+        <briefdescription>
+<para>Initialization Functions Constructor for the host and hostess main window </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="99" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="99" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a7a2ccdea19efe1b7d937f2a7e14d4377" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="305" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="305" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a7a2ccdea19efe1b7d937f2a7e14d4377" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.i.cs" line="305" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.i.cs" bodystart="305" bodyend="317"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a988150add586186e4c92d169fae276e2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Define_Content</definition>
+        <argsstring>()</argsstring>
+        <name>Define_Content</name>
+        <briefdescription>
+<para>Initialization Functions Define each content for labels, button, text in the form </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="166" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="166" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a3bf4485b7f0b3b7102bff551570deb91" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Txt_HostAndHostess_ZipCode_TextChanged</definition>
+        <argsstring>(object sender, TextChangedEventArgs e)</argsstring>
+        <name>Txt_HostAndHostess_ZipCode_TextChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>TextChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event Text changed in the zip code text box </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="296" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="296" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aaff29e1a178bea90b03383b94f1c9660" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Cmb_HostAndHostess_Country_SelectionChanged</definition>
+        <argsstring>(object sender, SelectionChangedEventArgs e)</argsstring>
+        <name>Cmb_HostAndHostess_Country_SelectionChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>SelectionChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event Change in the country combo box </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="361" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="361" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a7161b79da06b345ce766fb7f0ba9cc0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Btn_HostAndHostess_AddPhoto_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_HostAndHostess_AddPhoto_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event Click on add photo button </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="384" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="384" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a6005256e3c6fa6b327e7236cbdadf3cd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Btn_HostAndHostess_NextPhoto_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_HostAndHostess_NextPhoto_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event Click on next photo button </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="430" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="430" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad8b8e8f0969274585a02f1ef0d5112de" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Btn_HostAndHostess_PreviousPhoto_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_HostAndHostess_PreviousPhoto_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event Click on previous photo button </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="439" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="439" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1adbf204c21d7a9f522d15dd0ace7c9cda" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Btn_HostAndHostess_DeletePhoto_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_HostAndHostess_DeletePhoto_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event Click on delete photo button </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="448" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="448" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae07c6692845fc20ed9b1c22ed4dc781b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Btn_HostAndHostess_Add_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_HostAndHostess_Add_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event Click on add button </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="457" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="457" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1afa3b9607e9c7ef132b73a4f9625e8090" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Btn_HostAndHostess_QuitWithoutSaving_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Btn_HostAndHostess_QuitWithoutSaving_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event Click on quit wihout saving button </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="585" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="585" bodyend="599"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a659e9696ad680d95c51bcca8f3d8d425" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Window_Closing</definition>
+        <argsstring>(object sender, CancelEventArgs e)</argsstring>
+        <name>Window_Closing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event Closing window </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="605" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="605" bodyend="627"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aa7f54acd9d35b288aaeb662a84d6945b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string WindowHostOrHostess.MainWindow_HostOrHostess.Create_HostOrHostessId</definition>
+        <argsstring>(Hostess _HostOrHostess)</argsstring>
+        <name>Create_HostOrHostessId</name>
+        <param>
+          <type><ref refid="class_software_classes_1_1_hostess" kindref="compound">Hostess</ref></type>
+          <declname>_HostOrHostess</declname>
+        </param>
+        <briefdescription>
+<para>Functions Creation of the Id of the host or hostess </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="637" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="637" bodyend="657"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ab918dc3cd063c86ce82add7cb529b9b5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowHostOrHostess.MainWindow_HostOrHostess.Save_PhotosToDisc</definition>
+        <argsstring>(Hostess _HostOrHostess)</argsstring>
+        <name>Save_PhotosToDisc</name>
+        <param>
+          <type><ref refid="class_software_classes_1_1_hostess" kindref="compound">Hostess</ref></type>
+          <declname>_HostOrHostess</declname>
+        </param>
+        <briefdescription>
+<para>Functions Save the picture on the disc </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="663" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="663" bodyend="687"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad1dd57232002f2fd4e126e87311b0945" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowHostOrHostess.MainWindow_HostOrHostess.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" line="325" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.cs" bodystart="325" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad1dd57232002f2fd4e126e87311b0945" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. WindowHostOrHostess.MainWindow_HostOrHostess.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.i.cs" line="325" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowHostOrHostess.g.i.cs" bodystart="325" bodyend="474"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aacf6178e729276c7d3fcfff4c9310e9b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>static List&lt;string&gt; WindowHostOrHostess.MainWindow_HostOrHostess.Get_CountryList</definition>
+        <argsstring>()</argsstring>
+        <name>Get_CountryList</name>
+        <briefdescription>
+<para>Initialization Functions Get the list of countries &lt;return&gt;The list of countries&lt;/return&gt; </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="257" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="257" bodyend="284"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class <ref refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess" kindref="compound">MainWindow_HostOrHostess</ref> from the namespace <ref refid="namespace_window_host_or_hostess" kindref="compound">WindowHostOrHostess</ref> </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess" kindref="compound">MainWindow_HostOrHostess</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="94">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="96">
+        <label>Window</label>
+      </node>
+      <node id="93">
+        <label>WindowHostOrHostess.MainWindow_HostOrHostess</label>
+        <link refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess"/>
+        <childnode refid="94" relation="public-inheritance">
+        </childnode>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+        <childnode refid="94" relation="public-inheritance">
+        </childnode>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="98">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="100">
+        <label>Window</label>
+      </node>
+      <node id="101">
+        <label>System</label>
+      </node>
+      <node id="97">
+        <label>WindowHostOrHostess.MainWindow_HostOrHostess</label>
+        <link refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess"/>
+        <childnode refid="98" relation="public-inheritance">
+        </childnode>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+        <childnode refid="98" relation="public-inheritance">
+        </childnode>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+        <childnode refid="97" relation="usage">
+          <edgelabel>Window_HostAndHostess</edgelabel>
+        </childnode>
+        <childnode refid="101" relation="usage">
+          <edgelabel>Lbl_HostAndHostess_Phone</edgelabel>
+          <edgelabel>Txt_HostAndHostess_LastNameContact</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_Email</edgelabel>
+          <edgelabel>Cmb_HostAndHostess_Sex</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_Country</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_City</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_LastNameContact</edgelabel>
+          <edgelabel>Btn_HostAndHostess_PreviousPhoto</edgelabel>
+          <edgelabel>Lbl_HostAndHostess_Sex</edgelabel>
+          <edgelabel>Cmb_HostAndHostess_Country</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="99">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" line="21" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/Forms/WindowHostOrHostess.xaml.cs" bodystart="20" bodyend="691"/>
+    <listofallmembers>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a113e02acf90bbf5bb54bd22986107c57" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>_contentLoaded</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a9cfd0d6e1a98f443e982170e7bfa7bae" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_Add</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae07c6692845fc20ed9b1c22ed4dc781b" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_Add_Click</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a2cdceafc0d02ad7cdfda6d08f7e938e6" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_AddPhoto</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a7161b79da06b345ce766fb7f0ba9cc0e" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_AddPhoto_Click</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a1d55ee560d93c08f735806cf556491cd" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_DeletePhoto</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1adbf204c21d7a9f522d15dd0ace7c9cda" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_DeletePhoto_Click</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a5889c48a0c8698f4a8ef4ed42f078de0" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_NextPhoto</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a6005256e3c6fa6b327e7236cbdadf3cd" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_NextPhoto_Click</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae00b6260dce6112e5d5eaca0330597c4" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_PreviousPhoto</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad8b8e8f0969274585a02f1ef0d5112de" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_PreviousPhoto_Click</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1abe562e40616b551b467f9127e57b5b2e" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_QuitWithoutSaving</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1afa3b9607e9c7ef132b73a4f9625e8090" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Btn_HostAndHostess_QuitWithoutSaving_Click</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a2ee8b6802dbd7f37c2b2f9bb03a463dc" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Cmb_HostAndHostess_City</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a03c414b5c971964adf2420ce4e775f8b" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Cmb_HostAndHostess_Country</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aaff29e1a178bea90b03383b94f1c9660" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Cmb_HostAndHostess_Country_SelectionChanged</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad6513af2ce7f5673967bd2becef4a713" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Cmb_HostAndHostess_Sex</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad1dd57232002f2fd4e126e87311b0945" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Connect</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad1dd57232002f2fd4e126e87311b0945" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Connect</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aa7f54acd9d35b288aaeb662a84d6945b" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Create_HostOrHostessId</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a988150add586186e4c92d169fae276e2" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Define_Content</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aacf6178e729276c7d3fcfff4c9310e9b" prot="public" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Get_CountryList</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a41bdd7e826d5aea54c8741f18b013fe0" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Img_HostAndHostess_Photo</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a7a2ccdea19efe1b7d937f2a7e14d4377" prot="public" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a7a2ccdea19efe1b7d937f2a7e14d4377" prot="public" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>InitializeComponent</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a484e4f5b10ffb6728d0ff539ed09324f" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_Address</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a3751ab6076cb801aa76812a77a2a76a0" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_CellPhone</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a5d5b32d38563afdcfb26ce029a8764c1" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_City</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a04d65398f256b610f8d41c8a73bc67a8" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_Country</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a1fc9ad2a7e545870ed98af85da3587eb" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_Email</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1abd348cb2e6905c42138742188f580fba" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_FirstNameContact</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a3eb0c684af2d674c3a55b6d38fc254cd" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_IdPaycheck</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aaca66e1d82aed62e3bd65ab8930d1839" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_LastNameContact</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae7af814363e08c3f0861973b7cd2f5e4" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_Phone</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a5e1e73cbc294e850287980fedc0dbb3e" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_Sex</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a8b018ab2e51a02b1c1f4662da08d166e" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_State</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a5832d4ac4908365a2c9c897b23fd75a0" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Lbl_HostAndHostess_ZipCode</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae884970d6a61dfd78194fb9f0d8fc276" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>m_Cities_DocFrance</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a90d00fba8ef9205d4f0dab3c3334a1c3" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>m_ConfirmQuit</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a092905b81ed99226a54f7d81f92af475" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>m_Database_Handler</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a478e4bc990f0f939c1f2426b71c9a07a" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>m_Global_Handler</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1aca1505c4796b73b4aa9d3fdf5f4076eb" prot="public" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>m_HostOrHostess</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ad1b39351ceab538a2ecca785cef628d5" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>m_IsLoaded</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a86bdc96cd15073abfdac8d52bd524e0e" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>m_IsModification</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a18dc616214f4e37529e113da6e19f52d" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>m_ListFields</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a88c9c6f7cc25cee5851d7f961e29f950" prot="public" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>m_ListOfPhotos</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a26be2bae32a309febf48a0cef9a2fbf3" prot="public" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>MainWindow_HostOrHostess</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ab918dc3cd063c86ce82add7cb529b9b5" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Save_PhotosToDisc</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a069937eea428ae259a565f160cf0fa90" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_Address</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a6bf889ab5efb1dbb98fd5f65f518ca09" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_CellPhone</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ab68ec5508e014e88baa373dbceaf5570" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_Email</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a4c9753f9fd716805b09eca4af21c5aae" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_FirstNameContact</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a08c0c085dff53290611659848786c426" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_IdPaycheck</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a67c61f71422d01d3798508464f0414df" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_LastNameContact</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1ae6b7734642713d3b443cc7514be1e6f6" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_Phone</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1abb1cbddc4d78769d298f4cacff688e92" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_State</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a54d9763fdf94c3348dc50f8528d1194b" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_ZipCode</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a3bf4485b7f0b3b7102bff551570deb91" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Txt_HostAndHostess_ZipCode_TextChanged</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a659e9696ad680d95c51bcca8f3d8d425" prot="private" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Window_Closing</name></member>
+      <member refid="class_window_host_or_hostess_1_1_main_window___host_or_hostess_1a3faa3e1382462e14dbdcc60cc3e21305" prot="package" virt="non-virtual"><scope>WindowHostOrHostess::MainWindow_HostOrHostess</scope><name>Window_HostAndHostess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

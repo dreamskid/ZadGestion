@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_launcher_1_1_app" kind="class" language="C#" prot="public">
+    <compoundname>Launcher::App</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Application</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Application</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Application</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Application</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Application</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_launcher_1_1_app_1a54192f6b148fb44474320357c48dbf53" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Launcher.App::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.cs" line="43" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_launcher_1_1_app_1a6695faf761768ad419304444a55bf915" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Launcher.App.OnStartup</definition>
+        <argsstring>(StartupEventArgs e)</argsstring>
+        <name>OnStartup</name>
+        <param>
+          <type>StartupEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Add events on startup for textbox </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/App.xaml.cs" line="14" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/App.xaml.cs" bodystart="14" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_launcher_1_1_app_1a36820a00620f7ce2c81d24ec7acd96fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.App.TextBox_GotFocus</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>TextBox_GotFocus</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Select all the text on text box GotFocus </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/App.xaml.cs" line="27" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/App.xaml.cs" bodystart="27" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_launcher_1_1_app_1a395eeff8292fbdeb13a86fc7d253f84a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.App.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.cs" line="50" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.cs" bodystart="50" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_app_1a395eeff8292fbdeb13a86fc7d253f84a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.App.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.i.cs" line="50" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.i.cs" bodystart="50" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_app_1a395eeff8292fbdeb13a86fc7d253f84a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.App.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/App.g.cs" line="50" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/App.g.cs" bodystart="50" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_app_1a395eeff8292fbdeb13a86fc7d253f84a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.App.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/App.g.i.cs" line="50" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/App.g.i.cs" bodystart="50" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_launcher_1_1_app_1ac51fa8add10c77c032b0d6de3e51249c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Launcher.App.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Application Entry Point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.cs" line="76" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.cs" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_app_1ac51fa8add10c77c032b0d6de3e51249c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Launcher.App.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Application Entry Point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.i.cs" line="76" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/App.g.i.cs" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_app_1ac51fa8add10c77c032b0d6de3e51249c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Launcher.App.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Application Entry Point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/App.g.cs" line="76" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/App.g.cs" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_app_1ac51fa8add10c77c032b0d6de3e51249c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Launcher.App.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Application Entry Point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/App.g.i.cs" line="76" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/App.g.i.cs" bodystart="76" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interaction logic for App.xaml </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_launcher_1_1_app" kindref="compound">App</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>System::Windows::Application</label>
+      </node>
+      <node id="2">
+        <label>Application</label>
+      </node>
+      <node id="0">
+        <label>Launcher.App</label>
+        <link refid="class_launcher_1_1_app"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>System::Windows::Application</label>
+      </node>
+      <node id="5">
+        <label>Application</label>
+      </node>
+      <node id="3">
+        <label>Launcher.App</label>
+        <link refid="class_launcher_1_1_app"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/App.xaml.cs" line="10" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/App.xaml.cs" bodystart="9" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_launcher_1_1_app_1a54192f6b148fb44474320357c48dbf53" prot="private" virt="non-virtual"><scope>Launcher::App</scope><name>_contentLoaded</name></member>
+      <member refid="class_launcher_1_1_app_1a395eeff8292fbdeb13a86fc7d253f84a" prot="public" virt="non-virtual"><scope>Launcher::App</scope><name>InitializeComponent</name></member>
+      <member refid="class_launcher_1_1_app_1a395eeff8292fbdeb13a86fc7d253f84a" prot="public" virt="non-virtual"><scope>Launcher::App</scope><name>InitializeComponent</name></member>
+      <member refid="class_launcher_1_1_app_1a395eeff8292fbdeb13a86fc7d253f84a" prot="public" virt="non-virtual"><scope>Launcher::App</scope><name>InitializeComponent</name></member>
+      <member refid="class_launcher_1_1_app_1a395eeff8292fbdeb13a86fc7d253f84a" prot="public" virt="non-virtual"><scope>Launcher::App</scope><name>InitializeComponent</name></member>
+      <member refid="class_launcher_1_1_app_1ac51fa8add10c77c032b0d6de3e51249c" prot="public" virt="non-virtual"><scope>Launcher::App</scope><name>Main</name></member>
+      <member refid="class_launcher_1_1_app_1ac51fa8add10c77c032b0d6de3e51249c" prot="public" virt="non-virtual"><scope>Launcher::App</scope><name>Main</name></member>
+      <member refid="class_launcher_1_1_app_1ac51fa8add10c77c032b0d6de3e51249c" prot="public" virt="non-virtual"><scope>Launcher::App</scope><name>Main</name></member>
+      <member refid="class_launcher_1_1_app_1ac51fa8add10c77c032b0d6de3e51249c" prot="public" virt="non-virtual"><scope>Launcher::App</scope><name>Main</name></member>
+      <member refid="class_launcher_1_1_app_1a6695faf761768ad419304444a55bf915" prot="protected" virt="non-virtual"><scope>Launcher::App</scope><name>OnStartup</name></member>
+      <member refid="class_launcher_1_1_app_1a36820a00620f7ce2c81d24ec7acd96fe" prot="private" virt="non-virtual"><scope>Launcher::App</scope><name>TextBox_GotFocus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

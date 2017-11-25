@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="fr-fr" Codepage="1252" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+
+  <String Id="InstallDirDlgDesktopShortcut" Overridable="yes">Créer un raccourci sur le bureau.</String>
+
+  <String Id="UninstallShortcut" Overridable="yes">Désinstaller ZadGestion</String>
+  <String Id="UninstallDescription" Overridable="yes">Désinstaller ZadGestion de votre ordinateur.</String>
+
+  <String Id="LaunchApplication" Overridable="yes">Démarrer ZadGestion</String>
+
+  <String Id="UpgradeDescription" Overridable="yes">Une version plus récente de ZadGestion est déjà installée sur votre ordinateur.</String>
+
+</WixLocalization>

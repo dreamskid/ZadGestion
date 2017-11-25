@@ -1,0 +1,18 @@
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\bin\Release\Internet.dll.config
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\bin\Release\Internet.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\bin\Release\Common.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\obj\Release\Database.csprojResolveAssemblyReference.cache
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\obj\Release\Internet.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Database\bin\Release\Internet.dll.config
+C:\Users\Yohann\Desktop\software\ZadGestion\Database\bin\Release\Internet.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Database\bin\Release\Common.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Database\bin\Release\MySql.Data.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Database\bin\Release\MySql.Data.Entity.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Database\bin\Release\MySql.Web.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Database\obj\Release\Database.csprojResolveAssemblyReference.cache
+C:\Users\Yohann\Desktop\software\ZadGestion\Database\obj\Release\Internet.dll
+D:\Yohann\Zadig & Co\ZadGestion\Database\bin\Release\Database.dll
+D:\Yohann\Zadig & Co\ZadGestion\Database\bin\Release\Common.dll
+D:\Yohann\Zadig & Co\ZadGestion\Database\obj\Release\Database.csprojResolveAssemblyReference.cache
+D:\Yohann\Zadig & Co\ZadGestion\Database\obj\Release\Database.csproj.CoreCompileInputs.cache
+D:\Yohann\Zadig & Co\ZadGestion\Database\obj\Release\Database.dll

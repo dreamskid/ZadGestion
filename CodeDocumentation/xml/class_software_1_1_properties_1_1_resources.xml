@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_software_1_1_properties_1_1_resources" kind="class" language="C#" prot="package">
+    <compoundname>Software::Properties::Resources</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_software_1_1_properties_1_1_resources_1a9e1d6e10fdd51752dd74ee230bedee13" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager Software.Properties.Resources.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="27" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_1_1_properties_1_1_resources_1a3574e5dfcab7a5e937a33aba461bc3d9" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo Software.Properties.Resources.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="29" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1ada066149c644442a1b767698a863ee63" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager Software.Properties.Resources.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Returns the cached ResourceManager instance used by this class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="39" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1aacc7ea49e0c9229a3a4614420b1681fe" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo Software.Properties.Resources.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Overrides the current thread&apos;s CurrentUICulture property for all resource lookups using this strongly typed resource class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="54" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a0215f6a757eaa51c96ad969d3af00c8e" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon Software.Properties.Resources.Icon_Logo_64x64</definition>
+        <argsstring></argsstring>
+        <name>Icon_Logo_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (Icon). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="66" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a21d8d9c024ce18a34a2fb6bf62db1193" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Icon_Mission_Accepted</definition>
+        <argsstring></argsstring>
+        <name>Icon_Mission_Accepted</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="76" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a3f7dad1c7ead6b9e6cd42edafe3d9f60" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Icon_Mission_Billed</definition>
+        <argsstring></argsstring>
+        <name>Icon_Mission_Billed</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="86" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a0e366462c34cb3a70dfad7e3c18a5d02" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Icon_Mission_Created</definition>
+        <argsstring></argsstring>
+        <name>Icon_Mission_Created</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="96" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a44c35fc5904802e51acb6dbbf8943300" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Icon_Mission_Declined</definition>
+        <argsstring></argsstring>
+        <name>Icon_Mission_Declined</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="106" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a2d22d8efbffedcc4216617c062e722e9" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Icon_Mission_Generated</definition>
+        <argsstring></argsstring>
+        <name>Icon_Mission_Generated</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="116" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a6539da1cb0758f159c8e9f7c748b2311" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Icon_Mission_Sent</definition>
+        <argsstring></argsstring>
+        <name>Icon_Mission_Sent</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="126" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a2f8798bdfdacbeb24f243d0c89c190ef" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Image_CellPhone</definition>
+        <argsstring></argsstring>
+        <name>Image_CellPhone</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="136" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1abc14a289f5c15835e55fe58e71bbd290" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Image_Email</definition>
+        <argsstring></argsstring>
+        <name>Image_Email</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="146" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1ad777e668c5620e567795b4b47a3c176a" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Image_Phone</definition>
+        <argsstring></argsstring>
+        <name>Image_Phone</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="156" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a2715f49a83d820de3c59f5fcea14d890" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Logo</definition>
+        <argsstring></argsstring>
+        <name>Logo</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="166" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_1_1_properties_1_1_resources_1a7f6bc1537437f4a5a70d55d01826f1ec" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap Software.Properties.Resources.Logo_Small</definition>
+        <argsstring></argsstring>
+        <name>Logo_Small</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="176" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_software_1_1_properties_1_1_resources_1a6250fceb23d2b8d9c4a422f46a151a80" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Software.Properties.Resources.Resources</definition>
+        <argsstring>()</argsstring>
+        <name>Resources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="32" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="32" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A strongly-typed resource class, for looking up localized strings, etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" line="25" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Properties/Resources.Designer.cs" bodystart="25" bodyend="182"/>
+    <listofallmembers>
+      <member refid="class_software_1_1_properties_1_1_resources_1aacc7ea49e0c9229a3a4614420b1681fe" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Culture</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a0215f6a757eaa51c96ad969d3af00c8e" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Icon_Logo_64x64</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a21d8d9c024ce18a34a2fb6bf62db1193" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Icon_Mission_Accepted</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a3f7dad1c7ead6b9e6cd42edafe3d9f60" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Icon_Mission_Billed</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a0e366462c34cb3a70dfad7e3c18a5d02" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Icon_Mission_Created</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a44c35fc5904802e51acb6dbbf8943300" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Icon_Mission_Declined</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a2d22d8efbffedcc4216617c062e722e9" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Icon_Mission_Generated</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a6539da1cb0758f159c8e9f7c748b2311" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Icon_Mission_Sent</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a2f8798bdfdacbeb24f243d0c89c190ef" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Image_CellPhone</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1abc14a289f5c15835e55fe58e71bbd290" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Image_Email</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1ad777e668c5620e567795b4b47a3c176a" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Image_Phone</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a2715f49a83d820de3c59f5fcea14d890" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Logo</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a7f6bc1537437f4a5a70d55d01826f1ec" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Logo_Small</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a3574e5dfcab7a5e937a33aba461bc3d9" prot="private" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>resourceCulture</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a9e1d6e10fdd51752dd74ee230bedee13" prot="private" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>resourceMan</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1ada066149c644442a1b767698a863ee63" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>ResourceManager</name></member>
+      <member refid="class_software_1_1_properties_1_1_resources_1a6250fceb23d2b8d9c4a422f46a151a80" prot="package" virt="non-virtual"><scope>Software::Properties::Resources</scope><name>Resources</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

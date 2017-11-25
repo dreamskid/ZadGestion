@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_software_classes_1_1_hostess" kind="class" language="C#" prot="public">
+    <compoundname>SoftwareClasses::Hostess</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1a889f7c0a0cbee570966bd9eeaafd86c6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s id </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="11" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1ae0882c8a31126504123944a397278c8a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::id_paycheck</definition>
+        <argsstring></argsstring>
+        <name>id_paycheck</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s id </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="20" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1a1f1b68717e4f25b0f810ac48e2406e16" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::firstname</definition>
+        <argsstring></argsstring>
+        <name>firstname</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s first name </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="29" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1ad6aded0fe235821d001047219bbd542c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::lastname</definition>
+        <argsstring></argsstring>
+        <name>lastname</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s last name </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="38" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1ac08f5f3322254acfdb824b02c0ed0a65" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::phone</definition>
+        <argsstring></argsstring>
+        <name>phone</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s phone </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="47" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1abf64754dcd04992cdffc5691d99662e6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::cellphone</definition>
+        <argsstring></argsstring>
+        <name>cellphone</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s cell phone </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="56" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1a07f976e6e1f0c7c16405a5857f0aa340" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::email</definition>
+        <argsstring></argsstring>
+        <name>email</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s email </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="65" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1a717de0b720224e004d794d93eae29066" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s adress </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="74" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1acd778fd541eb597c0af2f02fef7eebe6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::city</definition>
+        <argsstring></argsstring>
+        <name>city</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s city </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="83" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1a2f3ac2fffb9a673c8fea36d5e184f59d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::zipcode</definition>
+        <argsstring></argsstring>
+        <name>zipcode</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s zip code </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="92" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1ab86c350f450c18e0db8fe2bd3dbd85ff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::sex</definition>
+        <argsstring></argsstring>
+        <name>sex</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s sex </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="101" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1a1027d2538d19a603157117dd578b9c7a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s state </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="110" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1abd520da1b20efdc8a1c91a4f061acbee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::country</definition>
+        <argsstring></argsstring>
+        <name>country</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s country </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="119" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1ac6a8351d294bff42bf003b5249e154f3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SoftwareClasses.Hostess::date_creation</definition>
+        <argsstring></argsstring>
+        <name>date_creation</name>
+        <briefdescription>
+<para>Getter/Setter for the creation date of the contact </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="128" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_software_classes_1_1_hostess_1a226ff662cba564149b989bf49184bbd2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SoftwareClasses.Hostess.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>Getter/Setter for hostess&apos;s id </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Properties/HostAndHostess.cs" line="11" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Properties/HostAndHostess.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class HostAndHostess containing all the variables describing a host and a hostess </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" line="7" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/SoftwareClasses/Hostess.cs" bodystart="6" bodyend="134"/>
+    <listofallmembers>
+      <member refid="class_software_classes_1_1_hostess_1a717de0b720224e004d794d93eae29066" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>address</name></member>
+      <member refid="class_software_classes_1_1_hostess_1abf64754dcd04992cdffc5691d99662e6" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>cellphone</name></member>
+      <member refid="class_software_classes_1_1_hostess_1acd778fd541eb597c0af2f02fef7eebe6" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>city</name></member>
+      <member refid="class_software_classes_1_1_hostess_1abd520da1b20efdc8a1c91a4f061acbee" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>country</name></member>
+      <member refid="class_software_classes_1_1_hostess_1ac6a8351d294bff42bf003b5249e154f3" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>date_creation</name></member>
+      <member refid="class_software_classes_1_1_hostess_1a07f976e6e1f0c7c16405a5857f0aa340" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>email</name></member>
+      <member refid="class_software_classes_1_1_hostess_1a1f1b68717e4f25b0f810ac48e2406e16" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>firstname</name></member>
+      <member refid="class_software_classes_1_1_hostess_1a889f7c0a0cbee570966bd9eeaafd86c6" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>id</name></member>
+      <member refid="class_software_classes_1_1_hostess_1a226ff662cba564149b989bf49184bbd2" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>id</name></member>
+      <member refid="class_software_classes_1_1_hostess_1ae0882c8a31126504123944a397278c8a" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>id_paycheck</name></member>
+      <member refid="class_software_classes_1_1_hostess_1ad6aded0fe235821d001047219bbd542c" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>lastname</name></member>
+      <member refid="class_software_classes_1_1_hostess_1ac08f5f3322254acfdb824b02c0ed0a65" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>phone</name></member>
+      <member refid="class_software_classes_1_1_hostess_1ab86c350f450c18e0db8fe2bd3dbd85ff" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>sex</name></member>
+      <member refid="class_software_classes_1_1_hostess_1a1027d2538d19a603157117dd578b9c7a" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>state</name></member>
+      <member refid="class_software_classes_1_1_hostess_1a2f3ac2fffb9a673c8fea36d5e184f59d" prot="public" virt="non-virtual"><scope>SoftwareClasses::Hostess</scope><name>zipcode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

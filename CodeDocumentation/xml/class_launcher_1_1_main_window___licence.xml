@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_launcher_1_1_main_window___licence" kind="class" language="C#" prot="public">
+    <compoundname>Launcher::MainWindow_Licence</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a6a151d0ba967474138b56752ec839c03" prot="package" static="no" mutable="no">
+        <type><ref refid="class_launcher_1_1_main_window___licence" kindref="compound">Launcher.MainWindow_Licence</ref></type>
+        <definition>Launcher.MainWindow_Licence Launcher.MainWindow_Licence.Window_Main_Licence</definition>
+        <argsstring></argsstring>
+        <name>Window_Main_Licence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="46" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a236bba1946121b644281acac71de8107" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Grid</type>
+        <definition>System.Windows.Controls.Grid Launcher.MainWindow_Licence.Grid_Main</definition>
+        <argsstring></argsstring>
+        <name>Grid_Main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="54" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1ac5fff129b7446fbde307ae6f14a18544" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System.Windows.Controls.Button Launcher.MainWindow_Licence.Btn_Main_Close</definition>
+        <argsstring></argsstring>
+        <name>Btn_Main_Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="62" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1ae2a3ff252735329b995bcc82144992d9" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ProgressBar</type>
+        <definition>System.Windows.Controls.ProgressBar Launcher.MainWindow_Licence.progressBar1</definition>
+        <argsstring></argsstring>
+        <name>progressBar1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="70" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a282a049a9c4142b89cdf7cccacfb50a0" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox Launcher.MainWindow_Licence.Txt_Licence_Email</definition>
+        <argsstring></argsstring>
+        <name>Txt_Licence_Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="78" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1aaf8a2fb3a70425529aaa9b25f3de6b5c" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox Launcher.MainWindow_Licence.Txt_Licence_Licence1</definition>
+        <argsstring></argsstring>
+        <name>Txt_Licence_Licence1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="86" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1aaf4582f2eaa04f246d1fb86323a89e4c" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox Launcher.MainWindow_Licence.Txt_Licence_Licence2</definition>
+        <argsstring></argsstring>
+        <name>Txt_Licence_Licence2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="94" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a2382d6918085d3efc2a0a618e6cc4daa" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox Launcher.MainWindow_Licence.Txt_Licence_Licence3</definition>
+        <argsstring></argsstring>
+        <name>Txt_Licence_Licence3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="102" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a1125b3bd2f3c369fb2a0f3dc8733451c" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System.Windows.Controls.TextBox Launcher.MainWindow_Licence.Txt_Licence_Licence4</definition>
+        <argsstring></argsstring>
+        <name>Txt_Licence_Licence4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="110" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a150c070d1205727a8c7b4d115dd8c1c6" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label Launcher.MainWindow_Licence.Lbl_Licence_Email</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Licence_Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="118" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a653ee94887f70cf0532adfa00dec5c07" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System.Windows.Controls.Label Launcher.MainWindow_Licence.Lbl_Licence_Licence</definition>
+        <argsstring></argsstring>
+        <name>Lbl_Licence_Licence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="126" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a0c91873e7314d2599addafd643be9d77" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System.Windows.Controls.Button Launcher.MainWindow_Licence.Btn_Licence_Save</definition>
+        <argsstring></argsstring>
+        <name>Btn_Licence_Save</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="134" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a41cff82d2e6bcb1ec4f39ec07fcdcccf" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System.Windows.Controls.Button Launcher.MainWindow_Licence.Btn_Licence_Cancel</definition>
+        <argsstring></argsstring>
+        <name>Btn_Licence_Cancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="142" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_launcher_1_1_main_window___licence_1a48ef73703acfde6f28e2d478cc276923" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Launcher.MainWindow_Licence._contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="147" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_launcher_1_1_main_window___licence_1ae96e91f1099375c5029c8768634bf297" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.MainWindow_Licence.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="154" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="154" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_launcher_1_1_main_window___licence_1af5d0b449a4375de18a1fa8a224c6042f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. Launcher.MainWindow_Licence.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="174" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="174" bodyend="260"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_launcher_1_1_main_window___licence" kindref="compound">MainWindow_Licence</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="102">
+        <label>Launcher.MainWindow_Licence</label>
+        <link refid="class_launcher_1_1_main_window___licence"/>
+        <childnode refid="103" relation="public-inheritance">
+        </childnode>
+        <childnode refid="104" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="104">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="105">
+        <label>Launcher.MainWindow_Licence</label>
+        <link refid="class_launcher_1_1_main_window___licence"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+        <childnode refid="107" relation="public-inheritance">
+        </childnode>
+        <childnode refid="108" relation="usage">
+          <edgelabel>Window_Main_Licence</edgelabel>
+        </childnode>
+        <childnode refid="109" relation="usage">
+          <edgelabel>Grid_Main</edgelabel>
+          <edgelabel>Lbl_Licence_Licence</edgelabel>
+          <edgelabel>Txt_Licence_Email</edgelabel>
+          <edgelabel>Txt_Licence_Licence1</edgelabel>
+          <edgelabel>progressBar1</edgelabel>
+          <edgelabel>Btn_Main_Close</edgelabel>
+          <edgelabel>Txt_Licence_Licence2</edgelabel>
+          <edgelabel>Btn_Licence_Save</edgelabel>
+          <edgelabel>Lbl_Licence_Email</edgelabel>
+          <edgelabel>Txt_Licence_Licence3</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="106">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="108">
+        <label>Launcher</label>
+      </node>
+      <node id="109">
+        <label>System</label>
+      </node>
+      <node id="107">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" line="41" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/WindowLicence.g.i.cs" bodystart="41" bodyend="261"/>
+    <listofallmembers>
+      <member refid="class_launcher_1_1_main_window___licence_1a48ef73703acfde6f28e2d478cc276923" prot="private" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>_contentLoaded</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1a41cff82d2e6bcb1ec4f39ec07fcdcccf" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Btn_Licence_Cancel</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1a0c91873e7314d2599addafd643be9d77" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Btn_Licence_Save</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1ac5fff129b7446fbde307ae6f14a18544" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Btn_Main_Close</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1af5d0b449a4375de18a1fa8a224c6042f" prot="private" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Connect</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1a236bba1946121b644281acac71de8107" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Grid_Main</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1ae96e91f1099375c5029c8768634bf297" prot="public" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>InitializeComponent</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1a150c070d1205727a8c7b4d115dd8c1c6" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Lbl_Licence_Email</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1a653ee94887f70cf0532adfa00dec5c07" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Lbl_Licence_Licence</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1ae2a3ff252735329b995bcc82144992d9" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>progressBar1</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1a282a049a9c4142b89cdf7cccacfb50a0" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Txt_Licence_Email</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1aaf8a2fb3a70425529aaa9b25f3de6b5c" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Txt_Licence_Licence1</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1aaf4582f2eaa04f246d1fb86323a89e4c" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Txt_Licence_Licence2</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1a2382d6918085d3efc2a0a618e6cc4daa" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Txt_Licence_Licence3</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1a1125b3bd2f3c369fb2a0f3dc8733451c" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Txt_Licence_Licence4</name></member>
+      <member refid="class_launcher_1_1_main_window___licence_1a6a151d0ba967474138b56752ec839c03" prot="package" virt="non-virtual"><scope>Launcher::MainWindow_Licence</scope><name>Window_Main_Licence</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

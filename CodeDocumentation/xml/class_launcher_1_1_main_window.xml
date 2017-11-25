@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_launcher_1_1_main_window" kind="class" language="C#" prot="public">
+    <compoundname>Launcher::MainWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_launcher_1_1_main_window_1a054b071d81502e91d32a019d2593cd47" prot="package" static="no" mutable="no">
+        <type><ref refid="class_launcher_1_1_main_window" kindref="compound">Launcher.MainWindow</ref></type>
+        <definition>Launcher MainWindow Launcher.MainWindow::Window_Main</definition>
+        <argsstring></argsstring>
+        <name>Window_Main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="46" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window_1a08d5b4a333370c531dd71175d640447f" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Grid</type>
+        <definition>System Windows Controls Grid Launcher.MainWindow::Grid_Main</definition>
+        <argsstring></argsstring>
+        <name>Grid_Main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="54" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window_1a8f1c7ca68a3795830447ecf6605eea6d" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button Launcher.MainWindow::Btn_Main_Close</definition>
+        <argsstring></argsstring>
+        <name>Btn_Main_Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="62" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window_1ae64488eef33beaf5ff96f42175064844" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button Launcher.MainWindow::Btn_Main_HostAndHostess</definition>
+        <argsstring></argsstring>
+        <name>Btn_Main_HostAndHostess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="70" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window_1a9d1ac41a87f86667e5a14953db5ee654" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button Launcher.MainWindow::Btn_Main_Settings</definition>
+        <argsstring></argsstring>
+        <name>Btn_Main_Settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="78" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window_1a2400319fcc8210f3996067130950a16b" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button Launcher.MainWindow::Btn_Main_Soft</definition>
+        <argsstring></argsstring>
+        <name>Btn_Main_Soft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="86" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_launcher_1_1_main_window_1acaaa4b53a3be2a4c6250225c5175df21" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.TextBox</type>
+        <definition>System Windows Controls TextBox Launcher.MainWindow::Txt_Version</definition>
+        <argsstring></argsstring>
+        <name>Txt_Version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="94" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_launcher_1_1_main_window_1abcbeff90cf34f5327b5c08109fbf548d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Launcher.MainWindow::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="99" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_launcher_1_1_main_window_1a7d0639c3614075ea943e1e8b9ec457fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="106" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="106" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_main_window_1a7d0639c3614075ea943e1e8b9ec457fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.i.cs" line="106" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.i.cs" bodystart="106" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_main_window_1a7d0639c3614075ea943e1e8b9ec457fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms/Launcher.g.cs" line="106" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms/Launcher.g.cs" bodystart="106" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_main_window_1a7d0639c3614075ea943e1e8b9ec457fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Launcher.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms/Launcher.g.i.cs" line="106" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms/Launcher.g.i.cs" bodystart="106" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_launcher_1_1_main_window_1ad9a7903ce2471a71aff9c409de08f75e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. Launcher.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="126" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="126" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_main_window_1ad9a7903ce2471a71aff9c409de08f75e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. Launcher.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.i.cs" line="126" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.i.cs" bodystart="126" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_main_window_1ad9a7903ce2471a71aff9c409de08f75e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. Launcher.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms/Launcher.g.cs" line="126" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms/Launcher.g.cs" bodystart="126" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_launcher_1_1_main_window_1ad9a7903ce2471a71aff9c409de08f75e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. Launcher.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms/Launcher.g.i.cs" line="126" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Release/Forms/Launcher.g.i.cs" bodystart="126" bodyend="176"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_launcher_1_1_main_window" kindref="compound">MainWindow</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="51">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="50">
+        <label>Launcher.MainWindow</label>
+        <link refid="class_launcher_1_1_main_window"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="54">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="56">
+        <label>Launcher</label>
+      </node>
+      <node id="57">
+        <label>System</label>
+      </node>
+      <node id="53">
+        <label>Launcher.MainWindow</label>
+        <link refid="class_launcher_1_1_main_window"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+        <childnode refid="56" relation="usage">
+          <edgelabel>Window_Main</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>Btn_Main_Settings</edgelabel>
+          <edgelabel>Txt_Version</edgelabel>
+          <edgelabel>Grid_Main</edgelabel>
+          <edgelabel>Btn_Main_HostAndHostess</edgelabel>
+          <edgelabel>Btn_Main_Close</edgelabel>
+          <edgelabel>Btn_Main_Soft</edgelabel>
+        </childnode>
+      </node>
+      <node id="55">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" line="41" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/obj/Debug/Forms/Launcher.g.cs" bodystart="41" bodyend="177"/>
+    <listofallmembers>
+      <member refid="class_launcher_1_1_main_window_1abcbeff90cf34f5327b5c08109fbf548d" prot="private" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>_contentLoaded</name></member>
+      <member refid="class_launcher_1_1_main_window_1a8f1c7ca68a3795830447ecf6605eea6d" prot="package" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Btn_Main_Close</name></member>
+      <member refid="class_launcher_1_1_main_window_1ae64488eef33beaf5ff96f42175064844" prot="package" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Btn_Main_HostAndHostess</name></member>
+      <member refid="class_launcher_1_1_main_window_1a9d1ac41a87f86667e5a14953db5ee654" prot="package" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Btn_Main_Settings</name></member>
+      <member refid="class_launcher_1_1_main_window_1a2400319fcc8210f3996067130950a16b" prot="package" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Btn_Main_Soft</name></member>
+      <member refid="class_launcher_1_1_main_window_1ad9a7903ce2471a71aff9c409de08f75e" prot="private" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_launcher_1_1_main_window_1ad9a7903ce2471a71aff9c409de08f75e" prot="private" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_launcher_1_1_main_window_1ad9a7903ce2471a71aff9c409de08f75e" prot="private" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_launcher_1_1_main_window_1ad9a7903ce2471a71aff9c409de08f75e" prot="private" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_launcher_1_1_main_window_1a08d5b4a333370c531dd71175d640447f" prot="package" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Grid_Main</name></member>
+      <member refid="class_launcher_1_1_main_window_1a7d0639c3614075ea943e1e8b9ec457fb" prot="public" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_launcher_1_1_main_window_1a7d0639c3614075ea943e1e8b9ec457fb" prot="public" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_launcher_1_1_main_window_1a7d0639c3614075ea943e1e8b9ec457fb" prot="public" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_launcher_1_1_main_window_1a7d0639c3614075ea943e1e8b9ec457fb" prot="public" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_launcher_1_1_main_window_1acaaa4b53a3be2a4c6250225c5175df21" prot="package" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Txt_Version</name></member>
+      <member refid="class_launcher_1_1_main_window_1a054b071d81502e91d32a019d2593cd47" prot="package" virt="non-virtual"><scope>Launcher::MainWindow</scope><name>Window_Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

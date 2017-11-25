@@ -1,0 +1,1955 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZadGestion</name>
+    </assembly>
+    <members>
+        <member name="T:ZadGestion.App">
+            <summary>
+            Application
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:ZadGestion.App.OnStartup(System.Windows.StartupEventArgs)">
+            <summary>
+            Add events on startup for textbox
+            </summary>
+        </member>
+        <member name="M:ZadGestion.App.TextBox_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Select all the text on text box GotFocus
+            </summary>
+        </member>
+        <member name="M:ZadGestion.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ZadGestion.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:ZadGestion.MainWindow">
+            <summary>
+            Class MainWindow from the namespace ZadGestion
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:ZadGestion.MainWindow.m_Login">
+            <summary>
+            Login
+            </summary>
+        </member>
+        <member name="F:ZadGestion.MainWindow.m_Licence">
+            <summary>
+            Login
+            </summary>
+        </member>
+        <member name="F:ZadGestion.MainWindow.m_Global_Handler">
+            <summary>
+            Global handlers for common objects
+            </summary>
+        </member>
+        <member name="F:ZadGestion.MainWindow.m_Internet_Handler">
+            <summary>
+            Handler for internet
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.#ctor">
+            <summary>
+            Constructor for the main window
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.Define_Content">
+            <summary>
+            Define each content for labels, button, text in the form
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.Btn_Main_Soft_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on the button Software
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.Btn_Main_Close_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on the cross button
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.Btn_Main_MyAccount_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on the My account button
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.Btn_Main_Settings_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Click on the button Settings
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.NetworkChange_NetworkAvailabilityChanged(System.Object,System.EventArgs)">
+            <summary>
+            Internet connection lost event handler
+            Need to be better TODO
+            </summary>
+        </member>
+        <member name="F:ZadGestion.MainWindow.AlreadyFaded">
+            <summary>
+            Boolean indicating if the form is already faded or not
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.Main_Window_Closing">
+            <summary>
+            Animation for the closing of the form
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.Main_Window_Closing_Completed(System.Object,System.EventArgs)">
+            <summary>
+            End of the animation
+            </summary>
+        </member>
+        <member name="M:ZadGestion.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ZadGestion.Language.Language_en_US">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Add">
+            <summary>
+              Looks up a localized string similar to Add.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Address">
+            <summary>
+              Looks up a localized string similar to Address.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Amount">
+            <summary>
+              Looks up a localized string similar to Amount.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.AmountET">
+            <summary>
+              Looks up a localized string similar to Amount ET.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.AmountETUnit">
+            <summary>
+              Looks up a localized string similar to Unit amount ET.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.AmountIT">
+            <summary>
+              Looks up a localized string similar to Amount IT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.AmountITFinal">
+            <summary>
+              Looks up a localized string similar to Final amount IT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.AmountToPay">
+            <summary>
+              Looks up a localized string similar to Total to pay.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.BillingDate">
+            <summary>
+              Looks up a localized string similar to Billing date.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.BlankFields">
+            <summary>
+              Looks up a localized string similar to The following fields are blank : .
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.BlankFieldsTitle">
+            <summary>
+              Looks up a localized string similar to Blank fields.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.CellPhone">
+            <summary>
+              Looks up a localized string similar to Cell phone.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Choose">
+            <summary>
+              Looks up a localized string similar to Choose.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ChooseServices">
+            <summary>
+              Looks up a localized string similar to Choose services.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.City">
+            <summary>
+              Looks up a localized string similar to City.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ClientCompanyName">
+            <summary>
+              Looks up a localized string similar to Company name.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ClientCompanyNumber">
+            <summary>
+              Looks up a localized string similar to Number associated to the company.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ConnectivityErrorCaption">
+            <summary>
+              Looks up a localized string similar to Connectivity error.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ConnectivityErrorText">
+            <summary>
+              Looks up a localized string similar to Unable to connect to internet, please verify your configuration.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ConnectivityLostCaption">
+            <summary>
+              Looks up a localized string similar to Connection to internet lost.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ConnectivityLostText">
+            <summary>
+              Looks up a localized string similar to Connection to internet lost. Please, verify your configuration. Unable to save your work while the connection is not effective.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactConfirmDelete">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to delete the selected contact ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactConfirmDeleteCaption">
+            <summary>
+              Looks up a localized string similar to Delete contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactCreationPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Creation of the contact in progress....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactCreationSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to The contact is currently created and saved on Cloud, please wait until this window closes automatically.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactDeletionPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Deletion of the contact in progress....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactDeletionSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to The contact is currently deleted, please wait until this window closes automatically.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactEditionPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Edit of the contact in progress....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactEditionSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to The contact is currently modified and saved on Cloud, please wait until this window closes automatically.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Contacts">
+            <summary>
+              Looks up a localized string similar to Contacts.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactSelectedError">
+            <summary>
+              Looks up a localized string similar to Please, select a contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContactSelectedErrorCaption">
+            <summary>
+              Looks up a localized string similar to No contact selected.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ContinueQuestion">
+            <summary>
+              Looks up a localized string similar to Do you want to continue ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Country">
+            <summary>
+              Looks up a localized string similar to Country.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Create">
+            <summary>
+              Looks up a localized string similar to Create.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.CreateContact">
+            <summary>
+              Looks up a localized string similar to Create a contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.CreateEstimate">
+            <summary>
+              Looks up a localized string similar to Create an estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.CreateService">
+            <summary>
+              Looks up a localized string similar to Create a service.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.CreationDate">
+            <summary>
+              Looks up a localized string similar to Creation date.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Currency">
+            <summary>
+              Looks up a localized string similar to $.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.DefaultUnit">
+            <summary>
+              Looks up a localized string similar to Default unit.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.DefaultVAT">
+            <summary>
+              Looks up a localized string similar to Default VAT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.DeleteAll">
+            <summary>
+              Looks up a localized string similar to Delete all.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.DeleteContact">
+            <summary>
+              Looks up a localized string similar to Delete the contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.DeleteEstimate">
+            <summary>
+              Looks up a localized string similar to Delete the estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.DeleteService">
+            <summary>
+              Looks up a localized string similar to Delete the selected service.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Description">
+            <summary>
+              Looks up a localized string similar to Description.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Discount">
+            <summary>
+              Looks up a localized string similar to Discount.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.DropImage">
+            <summary>
+              Looks up a localized string similar to Drag and dop your image here.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Edit">
+            <summary>
+              Looks up a localized string similar to Edit.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EditContact">
+            <summary>
+              Looks up a localized string similar to Edit a contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EditEstimate">
+            <summary>
+              Looks up a localized string similar to Edit the estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EditService">
+            <summary>
+              Looks up a localized string similar to Edit the selected service.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Email">
+            <summary>
+              Looks up a localized string similar to E-mail.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EmailDate">
+            <summary>
+              Looks up a localized string similar to E-mail sent date.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Error">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Estimate">
+            <summary>
+              Looks up a localized string similar to Estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateConfirmDelete">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to delete the selected Estimate?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateConfirmDeleteCaption">
+            <summary>
+              Looks up a localized string similar to Delete Estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateContactError">
+            <summary>
+              Looks up a localized string similar to Please, select a contact to affiliate to this Estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateContactNotFound">
+            <summary>
+              Looks up a localized string similar to The contact associated to the estimate as not been found in the database.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateContactNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to Contact not found.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateCreationPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Creation of the estimate in progress....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateCreationSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to The estimate is currently created and saved on Cloud, please wait until this window closes automatically.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateDate">
+            <summary>
+              Looks up a localized string similar to Estimate sent date.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateDeletionPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Deletion of the estimate in progress....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateDeletionSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to The estimate is currently deleted, please wait until this window closes automatically.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateEditionPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Edit of the estimate in progress....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateEditionSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to The estimate is currently modified and saved on Cloud, please wait until this window closes automatically.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateMailBody">
+             <summary>
+               Looks up a localized string similar to Hello, 
+            
+            Please find attached the asked estimate.
+            
+            Regards,.
+             </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateOverwriteConfirmation">
+            <summary>
+              Looks up a localized string similar to The estimate has already been generated, do you want to overwrite it ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateOverwriteConfirmationCaption">
+            <summary>
+              Looks up a localized string similar to The estimate already exists.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatePDFGenerationFailed">
+            <summary>
+              Looks up a localized string similar to The estimate could not have been generated. If this happens again, please contact the client support..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatePDFGenerationFailedCaption">
+            <summary>
+              Looks up a localized string similar to Failure of the estimate generation.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatePDFGenerationPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Generation of the estimate to PDF format....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatePDFGenerationSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to The estimate is being generated, please wait until the PDF file is opened..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatePDFGenerationSuccesCaption">
+            <summary>
+              Looks up a localized string similar to Generation of the estimate ended.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatePDFGenerationSuccess">
+            <summary>
+              Looks up a localized string similar to The estimate has been generated with success..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatePDFOpenConfirmation">
+            <summary>
+              Looks up a localized string similar to Do you want to visualise the estimate in PDF format ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatePDFOpenConfirmationCaption">
+            <summary>
+              Looks up a localized string similar to Open the estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Estimates">
+            <summary>
+              Looks up a localized string similar to Estimates.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatesConfirmShowAll">
+            <summary>
+              Looks up a localized string similar to Are you sure to show all the Estimates ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimatesConfirmShowAllCaption">
+            <summary>
+              Looks up a localized string similar to Show all the estimates.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateSelectedError">
+            <summary>
+              Looks up a localized string similar to Please, select a estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateSelectedErrorCaption">
+            <summary>
+              Looks up a localized string similar to No estimate selected.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.EstimateSubject">
+            <summary>
+              Looks up a localized string similar to Subject of the estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ExcelImport">
+            <summary>
+              Looks up a localized string similar to Import from Excel.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Fax">
+            <summary>
+              Looks up a localized string similar to Fax.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.FinalTotal">
+            <summary>
+              Looks up a localized string similar to Final total.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.FirstName">
+            <summary>
+              Looks up a localized string similar to First name.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.FirstNameContact">
+            <summary>
+              Looks up a localized string similar to Contact&apos;s first name.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Footer">
+            <summary>
+              Looks up a localized string similar to Footer.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.GenerationDate">
+            <summary>
+              Looks up a localized string similar to Generation date.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Header">
+            <summary>
+              Looks up a localized string similar to Header.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ImageExtensionFalse">
+            <summary>
+              Looks up a localized string similar to This file does not correspond to an image file (jpg, jpeg, bmp, png ou gif).
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Invoice">
+            <summary>
+              Looks up a localized string similar to Invoice.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.InvoiceEmailDate">
+            <summary>
+              Looks up a localized string similar to Invoice sent by email date.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Invoices">
+            <summary>
+              Looks up a localized string similar to Invoices.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.LastName">
+            <summary>
+              Looks up a localized string similar to Last name.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.LastNameContact">
+            <summary>
+              Looks up a localized string similar to Contact&apos;s last name.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Logo">
+            <summary>
+              Looks up a localized string similar to Logo.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.LogoExplanation">
+            <summary>
+              Looks up a localized string similar to This logo will be automaticaly added during the genereation of  your documents.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ModificationDate">
+            <summary>
+              Looks up a localized string similar to Modification date.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.MyAccount">
+            <summary>
+              Looks up a localized string similar to My account.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.NbServices">
+            <summary>
+              Looks up a localized string similar to Number of services.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.PaymentTerms">
+            <summary>
+              Looks up a localized string similar to Terms of payment.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.PdfGeneration">
+            <summary>
+              Looks up a localized string similar to Generate to PDF.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Phone">
+            <summary>
+              Looks up a localized string similar to Phone.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Quantity">
+            <summary>
+              Looks up a localized string similar to Quantity.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.QuitWithoutSaving">
+            <summary>
+              Looks up a localized string similar to Quit without saving.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.QuitWithoutSavingCaption">
+            <summary>
+              Looks up a localized string similar to Quit without saving.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.QuitWithoutSavingMessage">
+            <summary>
+              Looks up a localized string similar to Qre you sure to quit without saving ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Reference">
+            <summary>
+              Looks up a localized string similar to Reference.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ResearchClient">
+            <summary>
+              Looks up a localized string similar to Research a client.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ResearchEstimates">
+            <summary>
+              Looks up a localized string similar to Researche a estimate.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ResearchInvoices">
+            <summary>
+              Looks up a localized string similar to Researche an invoice.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ResearchService">
+            <summary>
+              Looks up a localized string similar to Research a service.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ResourcesNotFound">
+            <summary>
+              Looks up a localized string similar to Resources not found. Please, resinstall the software..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ResourcesNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to Ressources non trouvées..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.RestartNeededCaption">
+            <summary>
+              Looks up a localized string similar to Restart needed.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.RestartNeededText">
+            <summary>
+              Looks up a localized string similar to To apply this change, the software needs to be restarted. Do you want to restart now ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Save">
+            <summary>
+              Looks up a localized string similar to Save.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.SaveAndQuit">
+            <summary>
+              Looks up a localized string similar to Save and quit.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.SendByEmail">
+            <summary>
+              Looks up a localized string similar to Send by email.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.SentDate">
+            <summary>
+              Looks up a localized string similar to Sent date.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Service">
+            <summary>
+              Looks up a localized string similar to Service.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceConfirmDelete">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to delete the selected service?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceConfirmDeleteAll">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to delete all the services?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceConfirmDeleteAllCaption">
+            <summary>
+              Looks up a localized string similar to Delete all the services.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceConfirmDeleteCaption">
+            <summary>
+              Looks up a localized string similar to Delete service.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceConfirmEdit">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to edit the selected service?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceConfirmEditCaption">
+            <summary>
+              Looks up a localized string similar to Edit service.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceConfirmReallyDeleteAll">
+            <summary>
+              Looks up a localized string similar to Are you really sure you want to delete all the services ? This action is definitive.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceConfirmReallyDeleteAllCaption">
+            <summary>
+              Looks up a localized string similar to Confirmation - Delete all the services.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceCreationPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Creation of the service in progress....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServiceCreationSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to The service is currently created and saved on Cloud, please wait until this window closes automatically.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Services">
+            <summary>
+              Looks up a localized string similar to Services.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesDeleteAllPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Deletion of all the estimates in progress....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesDeleteAllSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to All the estimates are currently deleted, please wait until this window closes automatically. This operation can take a while.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesDeleteEnded">
+            <summary>
+              Looks up a localized string similar to Delete of all the services ended.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesDeleteEndedCaption">
+            <summary>
+              Looks up a localized string similar to Delete ended.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesExcelImportPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Import of the services from Excel in progress....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesExcelImportSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to The import of all the services from Excel is in progress and saved on Cloud, please wait until this window closes automatically. This operation can take a while.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesImportEnded">
+            <summary>
+              Looks up a localized string similar to Import of the services from Excel ended.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesImportEndedCaption">
+            <summary>
+              Looks up a localized string similar to Import ended.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesNoReference">
+            <summary>
+              Looks up a localized string similar to No reference is associated to the service, please enter one in the corresponding field.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ServicesNoReferenceCaption">
+            <summary>
+              Looks up a localized string similar to No reference.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Settings">
+            <summary>
+              Looks up a localized string similar to Settings.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.SettingsConfirmEdit">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to edit the settings?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.SettingsConfirmEditCaption">
+            <summary>
+              Looks up a localized string similar to Edit settings.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ShortEstimate">
+            <summary>
+              Looks up a localized string similar to QU.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ShortInvoice">
+            <summary>
+              Looks up a localized string similar to IN.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ShortPhone">
+            <summary>
+              Looks up a localized string similar to Ph..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.SoftwareName">
+            <summary>
+              Looks up a localized string similar to ZadGestion.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.SortBy">
+            <summary>
+              Looks up a localized string similar to Sort by.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.State">
+            <summary>
+              Looks up a localized string similar to State.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Subject">
+            <summary>
+              Looks up a localized string similar to Subject.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.TemplateWordNotFound">
+            <summary>
+              Looks up a localized string similar to Word template not found, please contact the technical service.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.TemplateWordNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to Template not found.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Total">
+            <summary>
+              Looks up a localized string similar to Total.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.TotalET">
+            <summary>
+              Looks up a localized string similar to Total ET.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.TotalIT">
+            <summary>
+              Looks up a localized string similar to Total IT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.TotalVAT">
+            <summary>
+              Looks up a localized string similar to Total VAT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Type">
+            <summary>
+              Looks up a localized string similar to Type.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.Unit">
+            <summary>
+              Looks up a localized string similar to Unit.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.UserCompanyNotFound">
+            <summary>
+              Looks up a localized string similar to User company not found, verify the information entered in Your Account on the ZadGestion&apos;s website.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.UserCompanyNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to User company  not found.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.UserNotFound">
+            <summary>
+              Looks up a localized string similar to User not found, verify your licence.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.UserNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to User not found.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ValidUntil">
+            <summary>
+              Looks up a localized string similar to Valid until.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.VAT">
+            <summary>
+              Looks up a localized string similar to VAT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.VATType">
+            <summary>
+              Looks up a localized string similar to Type of VAT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.WordGeneration">
+            <summary>
+              Looks up a localized string similar to Word generation.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.WrongFile">
+            <summary>
+              Looks up a localized string similar to Wrong file.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_en_US.ZipCode">
+            <summary>
+              Looks up a localized string similar to Zip code.
+            </summary>
+        </member>
+        <member name="T:ZadGestion.Language.Language_fr_FR">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Add">
+            <summary>
+              Looks up a localized string similar to Ajouter.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Address">
+            <summary>
+              Looks up a localized string similar to Addresse.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Amount">
+            <summary>
+              Looks up a localized string similar to Montant.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.AmountET">
+            <summary>
+              Looks up a localized string similar to Montant HT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.AmountETUnit">
+            <summary>
+              Looks up a localized string similar to P.U. HT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.AmountIT">
+            <summary>
+              Looks up a localized string similar to Montant TTC.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.AmountITFinal">
+            <summary>
+              Looks up a localized string similar to Montant TTC final.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.AmountToPay">
+            <summary>
+              Looks up a localized string similar to Net à payer.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.BillingDate">
+            <summary>
+              Looks up a localized string similar to Date de facturation.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.BlankFields">
+            <summary>
+              Looks up a localized string similar to Les champs suivants n&apos;ont pas été renseignés :.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.BlankFieldsTitle">
+            <summary>
+              Looks up a localized string similar to Champs non renseignés.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Cancel">
+            <summary>
+              Looks up a localized string similar to Annuler.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.CellPhone">
+            <summary>
+              Looks up a localized string similar to Téléphone portable.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Choose">
+            <summary>
+              Looks up a localized string similar to Choisir.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ChooseServices">
+            <summary>
+              Looks up a localized string similar to Choisir les prestations.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.City">
+            <summary>
+              Looks up a localized string similar to Ville.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ClientCompanyName">
+            <summary>
+              Looks up a localized string similar to Société.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ClientCompanyNumber">
+            <summary>
+              Looks up a localized string similar to Numéro de SIRET.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ConnectivityErrorCaption">
+            <summary>
+              Looks up a localized string similar to Erreur de connection.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ConnectivityErrorText">
+            <summary>
+              Looks up a localized string similar to Impossible de se connecter à internet, veuillez verifier votre configuration.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ConnectivityLostCaption">
+            <summary>
+              Looks up a localized string similar to Connection à internet perdue.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ConnectivityLostText">
+            <summary>
+              Looks up a localized string similar to Connection à internet perdue. Veuillez vérifier votre configuration. Aucune sauvegarde ne peut être effectuée.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactConfirmDelete">
+            <summary>
+              Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer le contact sélectionné ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactConfirmDeleteCaption">
+            <summary>
+              Looks up a localized string similar to Suppresion d&apos;un contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactCreationPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Création du contact en cours....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactCreationSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to Le contact est en cours de création et sauvegardé sur le Cloud, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactDeletionPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Suppression du contact en cours ....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactDeletionSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to Le contact est en cours de suppression, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactEditionPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Modification du contact en cours ....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactEditionSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to Le contact est en cours de modification et sauvegardé sur le Cloud, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Contacts">
+            <summary>
+              Looks up a localized string similar to Contacts.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactSelectedError">
+            <summary>
+              Looks up a localized string similar to Veuillez sélectionner un contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContactSelectedErrorCaption">
+            <summary>
+              Looks up a localized string similar to Aucun contact sélectionné.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ContinueQuestion">
+            <summary>
+              Looks up a localized string similar to Voulez-vous continuer ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Country">
+            <summary>
+              Looks up a localized string similar to Pays.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Create">
+            <summary>
+              Looks up a localized string similar to Créer.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.CreateContact">
+            <summary>
+              Looks up a localized string similar to Créer un contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.CreateEstimate">
+            <summary>
+              Looks up a localized string similar to Créer un devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.CreateService">
+            <summary>
+              Looks up a localized string similar to Créer une prestation.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.CreationDate">
+            <summary>
+              Looks up a localized string similar to Date de création.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Currency">
+            <summary>
+              Looks up a localized string similar to €.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.DefaultUnit">
+            <summary>
+              Looks up a localized string similar to Unité par défaut.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.DefaultVAT">
+            <summary>
+              Looks up a localized string similar to TVA par défaut.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Delete">
+            <summary>
+              Looks up a localized string similar to Supprimer.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.DeleteAll">
+            <summary>
+              Looks up a localized string similar to Tout supprimer.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.DeleteContact">
+            <summary>
+              Looks up a localized string similar to Supprimer le contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.DeleteEstimate">
+            <summary>
+              Looks up a localized string similar to Supprimer le devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.DeleteService">
+            <summary>
+              Looks up a localized string similar to Supprimer la prestation sélectionnée.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Description">
+            <summary>
+              Looks up a localized string similar to Désignation.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Discount">
+            <summary>
+              Looks up a localized string similar to Remise.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.DropImage">
+            <summary>
+              Looks up a localized string similar to Glisser-Déplacer votre logo ici.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Edit">
+            <summary>
+              Looks up a localized string similar to Modifier.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EditContact">
+            <summary>
+              Looks up a localized string similar to Modifier le contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EditEstimate">
+            <summary>
+              Looks up a localized string similar to Modifier le devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EditService">
+            <summary>
+              Looks up a localized string similar to Modifier la prestation sélectionnée.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Email">
+            <summary>
+              Looks up a localized string similar to E-mail.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EmailDate">
+            <summary>
+              Looks up a localized string similar to Date d&apos;envoi.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Error">
+            <summary>
+              Looks up a localized string similar to Erreur.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Estimate">
+            <summary>
+              Looks up a localized string similar to Devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateConfirmDelete">
+            <summary>
+              Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer le devis sélectionné ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateConfirmDeleteCaption">
+            <summary>
+              Looks up a localized string similar to Suppresion d&apos;un devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateContactError">
+            <summary>
+              Looks up a localized string similar to Merci de sélectionner un contact à affilier au devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateContactNotFound">
+            <summary>
+              Looks up a localized string similar to Le contact associé à ce devis n&apos;a pas été trouvé dans la base.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateContactNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to Contact non trouvé.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateCreationPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Création du devis en cours....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateCreationSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to Le devis est en cours de création et sauvegardé sur le Cloud, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateDate">
+            <summary>
+              Looks up a localized string similar to Date d&apos;envoi du devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateDeletionPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Suppression du devis en cours ....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateDeletionSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to Le devis est en cours de suppression, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateEditionPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Modification du devis en cours ....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateEditionSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to Le devis est en cours de modification et sauvegardé sur le Cloud, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateMailBody">
+             <summary>
+               Looks up a localized string similar to Bonjour,
+            
+            Vous trouverez en pièce-jointe le devis attendu.
+            
+            Cordialement,.
+             </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatePDFGenerationFailed">
+            <summary>
+              Looks up a localized string similar to Le devis n&apos;a pu être généré,. Si cela se reproduit, merci de contacter le service client..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatePDFGenerationFailedCaption">
+            <summary>
+              Looks up a localized string similar to Echec de la génération du devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatePDFGenerationPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Génération du devis au format PDF en cours ....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatePDFGenerationSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to Le devis est en cours de génération, merci de patienter jusqu&apos;à l&apos;ouverture automatique du fichier PDF..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatePDFGenerationSuccesCaption">
+            <summary>
+              Looks up a localized string similar to Génération du devis terminée.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatePDFGenerationSuccess">
+            <summary>
+              Looks up a localized string similar to Le devis a été généré avec succès.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatePDFOpenConfirmation">
+            <summary>
+              Looks up a localized string similar to Voulez-vous visualiser le devis au format PDF ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatePDFOpenConfirmationCaption">
+            <summary>
+              Looks up a localized string similar to Ouverture du devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Estimates">
+            <summary>
+              Looks up a localized string similar to Devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatesConfirmShowAll">
+            <summary>
+              Looks up a localized string similar to Êtes-vous sûr(e) de vouloir  visualiser tous les devis ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimatesConfirmShowAllCaption">
+            <summary>
+              Looks up a localized string similar to Visualiser tous les devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateSelectedError">
+            <summary>
+              Looks up a localized string similar to Veuillez sélectionner un devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateSelectedErrorCaption">
+            <summary>
+              Looks up a localized string similar to Aucun devis sélectionné.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.EstimateSubject">
+            <summary>
+              Looks up a localized string similar to Object du devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ExcelImport">
+            <summary>
+              Looks up a localized string similar to Importer depuis Excel.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Fax">
+            <summary>
+              Looks up a localized string similar to Fax.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.FinalTotal">
+            <summary>
+              Looks up a localized string similar to Total final.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.FirstName">
+            <summary>
+              Looks up a localized string similar to Prénom.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.FirstNameContact">
+            <summary>
+              Looks up a localized string similar to Prénom du contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Footer">
+            <summary>
+              Looks up a localized string similar to Pied-de-page.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.GenerationDate">
+            <summary>
+              Looks up a localized string similar to Date de génération.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Header">
+            <summary>
+              Looks up a localized string similar to En-tête.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ImageExtensionFalse">
+            <summary>
+              Looks up a localized string similar to Le fichier ne correspond pas à un fichier image (jpg, jpeg, bmp, png ou gif).
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Invoice">
+            <summary>
+              Looks up a localized string similar to Facture.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Invoices">
+            <summary>
+              Looks up a localized string similar to Factures.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.LastName">
+            <summary>
+              Looks up a localized string similar to Nom.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.LastNameContact">
+            <summary>
+              Looks up a localized string similar to Nom du contact.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Logo">
+            <summary>
+              Looks up a localized string similar to Logo.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.LogoExplanation">
+            <summary>
+              Looks up a localized string similar to Ce logo sera intégré automatiquement lors de la génération de vos documents.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ModificationDate">
+            <summary>
+              Looks up a localized string similar to Date de modification.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.MyAccount">
+            <summary>
+              Looks up a localized string similar to Mon compte.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.NbServices">
+            <summary>
+              Looks up a localized string similar to Nombre de prestations.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.PaymentTerms">
+            <summary>
+              Looks up a localized string similar to Conditions de paiement.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.PdfGeneration">
+            <summary>
+              Looks up a localized string similar to Générer en PDF.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Phone">
+            <summary>
+              Looks up a localized string similar to Téléphone fixe.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Quantity">
+            <summary>
+              Looks up a localized string similar to Quantité.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.QuitWithoutSaving">
+            <summary>
+              Looks up a localized string similar to Quitter sans enregistrer.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.QuitWithoutSavingCaption">
+            <summary>
+              Looks up a localized string similar to Quitter sans enregistrer.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.QuitWithoutSavingMessage">
+            <summary>
+              Looks up a localized string similar to Êtes-vous sûr(e) de vouloir quitter sans enregistrer ? .
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Reference">
+            <summary>
+              Looks up a localized string similar to Référence.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ResearchClient">
+            <summary>
+              Looks up a localized string similar to Rechercher un client.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ResearchEstimates">
+            <summary>
+              Looks up a localized string similar to Rechercher un devis.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ResearchInvoices">
+            <summary>
+              Looks up a localized string similar to Rechercher une facture.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ResearchService">
+            <summary>
+              Looks up a localized string similar to Rechercher une prestation.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ResourcesNotFound">
+            <summary>
+              Looks up a localized string similar to Ressources non trouvées. Veuillez réinstaller le logiciel..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ResourcesNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to Ressources non trouvées..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.RestartNeededCaption">
+            <summary>
+              Looks up a localized string similar to Redémarrage nécessaire.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.RestartNeededText">
+            <summary>
+              Looks up a localized string similar to L&apos;application de cette modification nécéssite le redémarrage du logiciel. Voulez-vous redémarrer maintenant ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Save">
+            <summary>
+              Looks up a localized string similar to Enregistrer.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.SaveAndQuit">
+            <summary>
+              Looks up a localized string similar to Enregistrer et quitter.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.SendByEmail">
+            <summary>
+              Looks up a localized string similar to Envoyer par email.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.SentDate">
+            <summary>
+              Looks up a localized string similar to Date d&apos;envoi.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Service">
+            <summary>
+              Looks up a localized string similar to Prestation.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceConfirmDelete">
+            <summary>
+              Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer la prestation sélectionnée ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceConfirmDeleteAll">
+            <summary>
+              Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer toutes les prestations ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceConfirmDeleteAllCaption">
+            <summary>
+              Looks up a localized string similar to Suppression de toutes les prestations.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceConfirmDeleteCaption">
+            <summary>
+              Looks up a localized string similar to Suppresion d&apos;une prestation.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceConfirmEdit">
+            <summary>
+              Looks up a localized string similar to Êtes-vous sûr(e) de vouloir modifier la prestation sélectionnée ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceConfirmEditCaption">
+            <summary>
+              Looks up a localized string similar to Modification d&apos;une prestation.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceConfirmReallyDeleteAll">
+            <summary>
+              Looks up a localized string similar to Êtes-vous réellement sûr(e) de vouloir supprimer toutes les prestations ? Cette opération est définitive.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceConfirmReallyDeleteAllCaption">
+            <summary>
+              Looks up a localized string similar to Conifrmation - Suppression de toutes les prestations.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceCreationPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Création de la prestation en cours....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServiceCreationSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to La prestation est en cours de création et sauvegardée sur le Cloud, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Services">
+            <summary>
+              Looks up a localized string similar to Prestations.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesDeleteAllPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Suppression de toutes les prestations en cours ....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesDeleteAllSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to Toutes les prestations sont en cours de suppression, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre. Cette opération peut être longue..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesDeleteEnded">
+            <summary>
+              Looks up a localized string similar to Suppression de toutes les prestations terminée.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesDeleteEndedCaption">
+            <summary>
+              Looks up a localized string similar to Suppression terminée.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesExcelImportPrincipalMessage">
+            <summary>
+              Looks up a localized string similar to Importation des prestations depuis Excel en cours....
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesExcelImportSecondaryMessage">
+            <summary>
+              Looks up a localized string similar to L&apos;importation des services depuis Excel est en cours et sauvegardée sur le web, merci de patienter jusqu&apos;à la fermeture de cette fenêtre. Cette opération peut être longue.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesImportEnded">
+            <summary>
+              Looks up a localized string similar to Import des prestations depuis Excel terminée.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesImportEndedCaption">
+            <summary>
+              Looks up a localized string similar to Import terminé.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesNoReference">
+            <summary>
+              Looks up a localized string similar to Aucune référence n&apos;associée à la prestation, merci de remplir le champ correspondant.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ServicesNoReferenceCaption">
+            <summary>
+              Looks up a localized string similar to Référence absente.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Settings">
+            <summary>
+              Looks up a localized string similar to Paramètres.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.SettingsConfirmEdit">
+            <summary>
+              Looks up a localized string similar to Êtes-vous sûr(e) de vouloir modifier les paramètres ?.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.SettingsConfirmEditCaption">
+            <summary>
+              Looks up a localized string similar to Modification des paramètres.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ShortEstimate">
+            <summary>
+              Looks up a localized string similar to DE.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ShortInvoice">
+            <summary>
+              Looks up a localized string similar to FA.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ShortPhone">
+            <summary>
+              Looks up a localized string similar to Tel..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.SoftwareName">
+            <summary>
+              Looks up a localized string similar to ZadGestion.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.SortBy">
+            <summary>
+              Looks up a localized string similar to Trier par.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.State">
+            <summary>
+              Looks up a localized string similar to Etat.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Subject">
+            <summary>
+              Looks up a localized string similar to Objet.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.TemplateWordNotFound">
+            <summary>
+              Looks up a localized string similar to Modèle word non trouvé, veuillez contacter le service client..
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.TemplateWordNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to Modèle word absent.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Total">
+            <summary>
+              Looks up a localized string similar to Total.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.TotalET">
+            <summary>
+              Looks up a localized string similar to Total HT.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.TotalIT">
+            <summary>
+              Looks up a localized string similar to Total TTC.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.TotalVAT">
+            <summary>
+              Looks up a localized string similar to Total TVA.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Type">
+            <summary>
+              Looks up a localized string similar to Type.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.Unit">
+            <summary>
+              Looks up a localized string similar to Unité.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.UserCompanyNotFound">
+            <summary>
+              Looks up a localized string similar to Votre compagnie n&apos;a pas été trouvée. Veuillez vérifier les informations entrées dans la rubrique Mon Compte sur le site ZadGestion.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.UserCompanyNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to Compagnie non trouvée.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.UserNotFound">
+            <summary>
+              Looks up a localized string similar to Utilisateur inexistant, verifiez votre licence.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.UserNotFoundCaption">
+            <summary>
+              Looks up a localized string similar to Utilisateur inexistant.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ValidUntil">
+            <summary>
+              Looks up a localized string similar to Valide jusqu&apos;à.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.VAT">
+            <summary>
+              Looks up a localized string similar to TVA.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.VATType">
+            <summary>
+              Looks up a localized string similar to Type de TVA.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.WordGeneration">
+            <summary>
+              Looks up a localized string similar to Générer sous word.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.WrongFile">
+            <summary>
+              Looks up a localized string similar to Mauvais fichier.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Language.Language_fr_FR.ZipCode">
+            <summary>
+              Looks up a localized string similar to Code postal.
+            </summary>
+        </member>
+        <member name="T:ZadGestion.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Properties.Resources.Icon_Logo_256x256">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Properties.Resources.Logo_Big">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ZadGestion.Properties.Resources.Styles">
+             <summary>
+               Looks up a localized string similar to &lt;!-- Styles.xaml --&gt;
+            &lt;ResourceDictionary xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+                                xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;&gt;
+                &lt;!-- Buttons --&gt;
+                &lt;Style x:Key=&quot;ButtonFocusVisual&quot;&gt;
+                    &lt;Setter Property=&quot;Control.Template&quot;&gt;
+                        &lt;Setter.Value&gt;
+                            &lt;ControlTemplate&gt;
+                                &lt;Border&gt;
+                                    &lt;Rectangle SnapsToDevicePixels=&quot;true&quot; Margin=&quot;4&quot; Stroke=&quot;Black&quot; StrokeDashArray=&quot;1 2&quot; StrokeThickness= [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+    </members>
+</doc>

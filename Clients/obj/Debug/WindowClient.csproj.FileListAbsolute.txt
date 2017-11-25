@@ -1,0 +1,17 @@
+D:\Yohann\Zadig & Co\ZadGestion\Clients\bin\Debug\WindowClient.dll
+D:\Yohann\Zadig & Co\ZadGestion\Clients\bin\Debug\WindowClient.pdb
+D:\Yohann\Zadig & Co\ZadGestion\Clients\bin\Debug\Common.dll
+D:\Yohann\Zadig & Co\ZadGestion\Clients\bin\Debug\Database.dll
+D:\Yohann\Zadig & Co\ZadGestion\Clients\bin\Debug\MySql.Data.dll
+D:\Yohann\Zadig & Co\ZadGestion\Clients\bin\Debug\Common.pdb
+D:\Yohann\Zadig & Co\ZadGestion\Clients\bin\Debug\Database.pdb
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\WindowClient.csprojResolveAssemblyReference.cache
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\Forms\WindowClients.baml
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\Forms\WindowClients.g.cs
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\WindowClient_MarkupCompile.cache
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\WindowClient.g.resources
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\WindowClient.Properties.Resources.resources
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\WindowClient.csproj.GenerateResource.Cache
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\WindowClient.csproj.CoreCompileInputs.cache
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\WindowClient.dll
+D:\Yohann\Zadig & Co\ZadGestion\Clients\obj\Debug\WindowClient.pdb

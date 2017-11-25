@@ -1,0 +1,673 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_general_classes_1_1_word_generation" kind="class" language="C#" prot="public">
+    <compoundname>GeneralClasses::WordGeneration</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a34a031be584f0919382b3a0b801a43a1" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+        <definition>Handlers GeneralClasses.WordGeneration.m_Global_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Global_Handler</name>
+        <initializer>= new <ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref>()</initializer>
+        <briefdescription>
+<para>Global handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="23" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1aea2d8a96ebee11de438787efb801d84d" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_software_classes_1_1_billing" kindref="compound">Billing</ref></type>
+        <definition>Billing GeneralClasses.WordGeneration.m_Bill</definition>
+        <argsstring></argsstring>
+        <name>m_Bill</name>
+        <initializer>= new <ref refid="class_software_classes_1_1_billing" kindref="compound">Billing</ref>()</initializer>
+        <briefdescription>
+<para>Bill to treat </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="28" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1aea59ed4ab3258f59caef6876be88431b" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref></type>
+        <definition>Error GeneralClasses.WordGeneration.m_Error_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Error_Handler</name>
+        <initializer>= new <ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref>()</initializer>
+        <briefdescription>
+<para><ref refid="class_general_classes_1_1_error" kindref="compound">Error</ref> handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="53" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1af212e73fe7ec315af7ca4420003d642b" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string GeneralClasses.WordGeneration.m_AppDir</definition>
+        <argsstring></argsstring>
+        <name>m_AppDir</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+<para>Application directory </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="58" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1adf3011a27d33ef84874df76e1d66239b" prot="private" static="yes" mutable="no">
+        <type>object</type>
+        <definition>object GeneralClasses.WordGeneration.m_Missing</definition>
+        <argsstring></argsstring>
+        <name>m_Missing</name>
+        <initializer>= System.Reflection.Missing.Value</initializer>
+        <briefdescription>
+<para>Object missing definition </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="63" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a2445c32d0e94fc341c63b2eaed98d4f7" prot="private" static="yes" mutable="no">
+        <type>Range</type>
+        <definition>Range GeneralClasses.WordGeneration.m_RngCell</definition>
+        <argsstring></argsstring>
+        <name>m_RngCell</name>
+        <briefdescription>
+<para>Range in the tables </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="68" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1acb48252b0bd50bba2a8630b01babdda9" prot="private" static="no" mutable="no">
+        <type>Microsoft.Office.Interop.Word.Application</type>
+        <definition>Microsoft.Office.Interop.Word.Application GeneralClasses.WordGeneration.m_AppWord</definition>
+        <argsstring></argsstring>
+        <name>m_AppWord</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Word application </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="33" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a2be04dd4138d4f26464e3ad99f9ac9a7" prot="private" static="no" mutable="no">
+        <type>Document</type>
+        <definition>Document GeneralClasses.WordGeneration.m_NewWordDoc</definition>
+        <argsstring></argsstring>
+        <name>m_NewWordDoc</name>
+        <briefdescription>
+<para>Word document to generate </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="38" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a367bbd0336df5e116a4889f5f8e59632" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GeneralClasses.WordGeneration.m_GeneratedBillFileName</definition>
+        <argsstring></argsstring>
+        <name>m_GeneratedBillFileName</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+<para>Missions generated filename </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="43" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a1ca3865b86122fc8f44d2bf38ec517bc" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_software_classes_1a8710507fdc97166bd50087331bd184c7" kindref="member">BillType</ref></type>
+        <definition>BillType GeneralClasses.WordGeneration.m_Type</definition>
+        <argsstring></argsstring>
+        <name>m_Type</name>
+        <briefdescription>
+<para>Type of bill to generate </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="48" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a5f85d19714801da1113f5f13bf2397f8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GeneralClasses.WordGeneration.m_TableIndex</definition>
+        <argsstring></argsstring>
+        <name>m_TableIndex</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Table index </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="73" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a8488aaf7a21e576cddec8b64e70e5faf" prot="private" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object GeneralClasses.WordGeneration.m_BeforeRow</definition>
+        <argsstring></argsstring>
+        <name>m_BeforeRow</name>
+        <initializer>= Type.Missing</initializer>
+        <briefdescription>
+<para>Object for adding row in tables </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="78" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a767076b9caa234f1144644d7375aa207" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GeneralClasses.WordGeneration.m_AmountET</definition>
+        <argsstring></argsstring>
+        <name>m_AmountET</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Total amount excluding taxes </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="83" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a1639a4ac2087fa47b144986ed4ba4f35" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GeneralClasses.WordGeneration.m_AmountVAT</definition>
+        <argsstring></argsstring>
+        <name>m_AmountVAT</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Amount of VAT </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="88" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a99c289a641472434b70fa683c7e9c041" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GeneralClasses.WordGeneration.m_AmountIT</definition>
+        <argsstring></argsstring>
+        <name>m_AmountIT</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Amount including taxes </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="93" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a4a75ea863703cf951fe06c7db372386e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GeneralClasses.WordGeneration.m_AmountITFinal</definition>
+        <argsstring></argsstring>
+        <name>m_AmountITFinal</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Amount including taxes and global discount </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="97" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_word_generation_1a590d4bd1f53bd403d31ae3bef6a237dc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GeneralClasses.WordGeneration.m_AmountAdvancesTotal</definition>
+        <argsstring></argsstring>
+        <name>m_AmountAdvancesTotal</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Amount of total advances </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="102" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1ac4ee8c8846e21619eb03e48164e509cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string GeneralClasses.WordGeneration.Get_GeneratedBillFileName</definition>
+        <argsstring>()</argsstring>
+        <name>Get_GeneratedBillFileName</name>
+        <briefdescription>
+<para>Getter for the generated bill </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="111" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1a16eaa9437fe4ac099e48717194e6463b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GeneralClasses.WordGeneration.Generate_Bill</definition>
+        <argsstring>(Handlers _Global_Handler, Billing _Bill, BillType _Type, bool _Is_Visible, string _FinalFilename)</argsstring>
+        <name>Generate_Bill</name>
+        <param>
+          <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+          <declname>_Global_Handler</declname>
+        </param>
+        <param>
+          <type><ref refid="class_software_classes_1_1_billing" kindref="compound">Billing</ref></type>
+          <declname>_Bill</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_software_classes_1a8710507fdc97166bd50087331bd184c7" kindref="member">BillType</ref></type>
+          <declname>_Type</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>_Is_Visible</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_FinalFilename</declname>
+        </param>
+        <briefdescription>
+<para>Generate the bill <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Global_Handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Global handler to get the ressources</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Bill</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bill to generate</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_IsMission</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Generation of an Mission or a bill</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Is_Visible</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Word visible during generation or not</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_FinalFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PDF output file name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if everything went well, 1 otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="201" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="201" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1a504d964a56021a9147662dab62169448" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GeneralClasses.WordGeneration.Generate_CreditNote</definition>
+        <argsstring>(Handlers _Global_Handler, Billing _CreditNote, bool _Is_Visible, string _FinalFilename)</argsstring>
+        <name>Generate_CreditNote</name>
+        <param>
+          <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+          <declname>_Global_Handler</declname>
+        </param>
+        <param>
+          <type><ref refid="class_software_classes_1_1_billing" kindref="compound">Billing</ref></type>
+          <declname>_CreditNote</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>_Is_Visible</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_FinalFilename</declname>
+        </param>
+        <briefdescription>
+<para>Generate the bill <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Global_Handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Global handler to get the ressources</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_CreditNote</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Credit note to generate</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Is_Visible</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Word visible during generation or not</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_FinalFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PDF output file name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if everything went well, 1 otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="316" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="316" bodyend="416"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1a3526bc50b433a6978221d2fa3506ed81" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Replace_Text</definition>
+        <argsstring>(string _TextToReplace, string _NewText, Microsoft.Office.Interop.Word.Application _MsWord)</argsstring>
+        <name>Replace_Text</name>
+        <param>
+          <type>string</type>
+          <declname>_TextToReplace</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_NewText</declname>
+        </param>
+        <param>
+          <type>Microsoft.Office.Interop.Word.Application</type>
+          <declname>_MsWord</declname>
+        </param>
+        <briefdescription>
+<para>Replace a text in the word template in the new one <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_TextToReplace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text in the template</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_NewText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New text</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_MsWord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Document where to replace the text</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="127" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="127" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1affc3d24b4461c9038fcda1835c466760" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Replace_LargeText</definition>
+        <argsstring>(string _TextToReplace, string _NewText, Microsoft.Office.Interop.Word.Application _MsWord)</argsstring>
+        <name>Replace_LargeText</name>
+        <param>
+          <type>string</type>
+          <declname>_TextToReplace</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_NewText</declname>
+        </param>
+        <param>
+          <type>Microsoft.Office.Interop.Word.Application</type>
+          <declname>_MsWord</declname>
+        </param>
+        <briefdescription>
+<para>Replace a large text in the word template in the new one <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_TextToReplace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text in the template</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_NewText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New text</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_MsWord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Document where to replace the text</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="170" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="170" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1ae85e537abaf2324fc3c41733c90a6fe9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Generate_Logo</definition>
+        <argsstring>()</argsstring>
+        <name>Generate_Logo</name>
+        <briefdescription>
+<para>Generate the logo on the word document <simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="422" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="422" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1afd6635187c60d54b098d320bb99a6fd0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Replace_Fields</definition>
+        <argsstring>()</argsstring>
+        <name>Replace_Fields</name>
+        <briefdescription>
+<para>Replace the fields on the word document <simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="466" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="466" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1afa74ec0039962f26a89b1d9eca71e41a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Generate_TableCreditNote</definition>
+        <argsstring>()</argsstring>
+        <name>Generate_TableCreditNote</name>
+        <briefdescription>
+<para>Generate the table for the credit note on the word document <simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="585" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="585" bodyend="624"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1a05a04c74cefc858d7e8439c1f5bade46" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Generate_TableVAT</definition>
+        <argsstring>(List&lt; string &gt; _ListVAT, List&lt; double &gt; _ListAmountVAT)</argsstring>
+        <name>Generate_TableVAT</name>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>_ListVAT</declname>
+        </param>
+        <param>
+          <type>List&lt; double &gt;</type>
+          <declname>_ListAmountVAT</declname>
+        </param>
+        <briefdescription>
+<para>Generate the table of VAT on the word document <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_ListVAT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of percentages VAT</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_ListAmountVAT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of amount of a particular VAT</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="632" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="632" bodyend="681"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1a8b545ccdb69398b5fc38818d1320add2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Generate_TableAmounts</definition>
+        <argsstring>()</argsstring>
+        <name>Generate_TableAmounts</name>
+        <briefdescription>
+<para>Generate the table of amounts on the word document <simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="687" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="687" bodyend="755"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1a8b4c52a471e6c7cc17ad7824ddb1c2c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Generate_Header</definition>
+        <argsstring>()</argsstring>
+        <name>Generate_Header</name>
+        <briefdescription>
+<para>Generate the header on the word document <simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="761" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="761" bodyend="783"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1af641892b129427c4b2ad5e2bc70682ed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Generate_Footer</definition>
+        <argsstring>()</argsstring>
+        <name>Generate_Footer</name>
+        <briefdescription>
+<para>Generate the footer on the word document <simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="789" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="789" bodyend="819"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1a8824891466eb5ac1999eb8a77e6a21c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.WordGeneration.Finalize</definition>
+        <argsstring>()</argsstring>
+        <name>Finalize</name>
+        <briefdescription>
+<para>Finalize the word document <simplesect kind="return"><para>True if everything went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="825" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="825" bodyend="883"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_word_generation_1a2b493d2725339ce8622d2e02de198209" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralClasses.WordGeneration.Close_Word</definition>
+        <argsstring>()</argsstring>
+        <name>Close_Word</name>
+        <briefdescription>
+<para>Close the word document </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="888" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="888" bodyend="898"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class <ref refid="class_general_classes_1_1_word_generation" kindref="compound">WordGeneration</ref> containing all the tools to generate a bill to word </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" line="16" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/WordGeneration.cs" bodystart="15" bodyend="902"/>
+    <listofallmembers>
+      <member refid="class_general_classes_1_1_word_generation_1a2b493d2725339ce8622d2e02de198209" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Close_Word</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a8824891466eb5ac1999eb8a77e6a21c6" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Finalize</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a16eaa9437fe4ac099e48717194e6463b" prot="public" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Generate_Bill</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a504d964a56021a9147662dab62169448" prot="public" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Generate_CreditNote</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1af641892b129427c4b2ad5e2bc70682ed" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Generate_Footer</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a8b4c52a471e6c7cc17ad7824ddb1c2c8" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Generate_Header</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1ae85e537abaf2324fc3c41733c90a6fe9" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Generate_Logo</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a8b545ccdb69398b5fc38818d1320add2" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Generate_TableAmounts</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1afa74ec0039962f26a89b1d9eca71e41a" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Generate_TableCreditNote</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a05a04c74cefc858d7e8439c1f5bade46" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Generate_TableVAT</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1ac4ee8c8846e21619eb03e48164e509cc" prot="public" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Get_GeneratedBillFileName</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a590d4bd1f53bd403d31ae3bef6a237dc" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_AmountAdvancesTotal</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a767076b9caa234f1144644d7375aa207" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_AmountET</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a99c289a641472434b70fa683c7e9c041" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_AmountIT</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a4a75ea863703cf951fe06c7db372386e" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_AmountITFinal</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a1639a4ac2087fa47b144986ed4ba4f35" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_AmountVAT</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1af212e73fe7ec315af7ca4420003d642b" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_AppDir</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1acb48252b0bd50bba2a8630b01babdda9" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_AppWord</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a8488aaf7a21e576cddec8b64e70e5faf" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_BeforeRow</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1aea2d8a96ebee11de438787efb801d84d" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_Bill</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1aea59ed4ab3258f59caef6876be88431b" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_Error_Handler</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a367bbd0336df5e116a4889f5f8e59632" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_GeneratedBillFileName</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a34a031be584f0919382b3a0b801a43a1" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_Global_Handler</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1adf3011a27d33ef84874df76e1d66239b" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_Missing</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a2be04dd4138d4f26464e3ad99f9ac9a7" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_NewWordDoc</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a2445c32d0e94fc341c63b2eaed98d4f7" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_RngCell</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a5f85d19714801da1113f5f13bf2397f8" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_TableIndex</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a1ca3865b86122fc8f44d2bf38ec517bc" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>m_Type</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1afd6635187c60d54b098d320bb99a6fd0" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Replace_Fields</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1affc3d24b4461c9038fcda1835c466760" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Replace_LargeText</name></member>
+      <member refid="class_general_classes_1_1_word_generation_1a3526bc50b433a6978221d2fa3506ed81" prot="private" virt="non-virtual"><scope>GeneralClasses::WordGeneration</scope><name>Replace_Text</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

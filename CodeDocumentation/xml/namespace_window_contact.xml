@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="namespace_window_contact" kind="namespace" language="C#">
+    <compoundname>WindowContact</compoundname>
+    <innerclass refid="class_window_contact_1_1_main_window___choose_contact" prot="public">WindowContact::MainWindow_ChooseContact</innerclass>
+    <innerclass refid="class_window_contact_1_1_main_window___contact" prot="public">WindowContact::MainWindow_Contact</innerclass>
+    <innerclass refid="class_window_contact_1_1_main_window___host_and_hostess" prot="public">WindowContact::MainWindow_HostAndHostess</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowHostOrHostess/obj/Debug/Forms/WindowChooseContact.g.cs" line="34" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_46559a8aefc52e3b7713b66567846e8e" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Properties</compoundname>
+    <innerfile refid="_zad_gestion_2_properties_2_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <innerfile refid="_host_and_hostess_8cs">HostAndHostess.cs</innerfile>
+    <innerfile refid="_zad_gestion_2_properties_2_resources_8_designer_8cs">Resources.Designer.cs</innerfile>
+    <innerfile refid="_zad_gestion_2_properties_2_settings_8_designer_8cs">Settings.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/Properties/"/>
+  </compounddef>
+</doxygen>

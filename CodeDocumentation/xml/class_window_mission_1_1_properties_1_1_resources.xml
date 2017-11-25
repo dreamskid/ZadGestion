@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_window_mission_1_1_properties_1_1_resources" kind="class" language="C#" prot="package">
+    <compoundname>WindowMission::Properties::Resources</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_window_mission_1_1_properties_1_1_resources_1a90b643661b8be31a357161caa031402a" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager WindowMission.Properties.Resources.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" line="27" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_window_mission_1_1_properties_1_1_resources_1ab8bcb195a9dd2c972c7c3bfcb67483df" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo WindowMission.Properties.Resources.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" line="29" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_window_mission_1_1_properties_1_1_resources_1a68000a9ce978d38a5d88746782fc0f29" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager WindowMission.Properties.Resources.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Returns the cached ResourceManager instance used by this class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" line="39" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_window_mission_1_1_properties_1_1_resources_1af8373ff3475aa61db57031e4332feda1" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo WindowMission.Properties.Resources.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Overrides the current thread&apos;s CurrentUICulture property for all resource lookups using this strongly typed resource class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" line="54" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_window_mission_1_1_properties_1_1_resources_1abf689bf524a3775f4e8d235c31622417" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon WindowMission.Properties.Resources.Icon_Logo_64x64</definition>
+        <argsstring></argsstring>
+        <name>Icon_Logo_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (Icon). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" line="66" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_window_mission_1_1_properties_1_1_resources_1a25a8a2ae2484ce6468f691389baf2ed9" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WindowMission.Properties.Resources.Resources</definition>
+        <argsstring>()</argsstring>
+        <name>Resources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" line="32" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" bodystart="32" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A strongly-typed resource class, for looking up localized strings, etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" line="25" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/Properties/Resources.Designer.cs" bodystart="25" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_window_mission_1_1_properties_1_1_resources_1af8373ff3475aa61db57031e4332feda1" prot="package" virt="non-virtual"><scope>WindowMission::Properties::Resources</scope><name>Culture</name></member>
+      <member refid="class_window_mission_1_1_properties_1_1_resources_1abf689bf524a3775f4e8d235c31622417" prot="package" virt="non-virtual"><scope>WindowMission::Properties::Resources</scope><name>Icon_Logo_64x64</name></member>
+      <member refid="class_window_mission_1_1_properties_1_1_resources_1ab8bcb195a9dd2c972c7c3bfcb67483df" prot="private" virt="non-virtual"><scope>WindowMission::Properties::Resources</scope><name>resourceCulture</name></member>
+      <member refid="class_window_mission_1_1_properties_1_1_resources_1a90b643661b8be31a357161caa031402a" prot="private" virt="non-virtual"><scope>WindowMission::Properties::Resources</scope><name>resourceMan</name></member>
+      <member refid="class_window_mission_1_1_properties_1_1_resources_1a68000a9ce978d38a5d88746782fc0f29" prot="package" virt="non-virtual"><scope>WindowMission::Properties::Resources</scope><name>ResourceManager</name></member>
+      <member refid="class_window_mission_1_1_properties_1_1_resources_1a25a8a2ae2484ce6468f691389baf2ed9" prot="package" virt="non-virtual"><scope>WindowMission::Properties::Resources</scope><name>Resources</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

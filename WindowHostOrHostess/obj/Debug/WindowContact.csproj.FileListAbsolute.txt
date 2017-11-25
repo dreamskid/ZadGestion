@@ -1,0 +1,17 @@
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\bin\Debug\WindowContact.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\bin\Debug\WindowContact.pdb
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\bin\Debug\Common.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\bin\Debug\Internet.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\bin\Debug\Common.pdb
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\bin\Debug\Internet.pdb
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\WindowContact.csprojResolveAssemblyReference.cache
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\Forms\WindowContact.baml
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\Forms\WindowChooseContact.baml
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\Forms\WindowContact.g.cs
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\Forms\WindowChooseContact.g.cs
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\WindowContact_MarkupCompile.cache
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\WindowContact.g.resources
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\WindowContact.Properties.Resources.resources
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\WindowContact.csproj.GenerateResource.Cache
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\WindowContact.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Debug\WindowContact.pdb

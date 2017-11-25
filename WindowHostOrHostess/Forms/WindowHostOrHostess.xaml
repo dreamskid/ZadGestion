@@ -1,0 +1,88 @@
+﻿<Window xmlns:Toolkit="http://schemas.xceed.com/wpf/xaml/toolkit" x:Name="Window_HostAndHostess" x:Class="WindowHostOrHostess.MainWindow_HostOrHostess"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HostOrHostess" Height="555" Width="1014.452" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid>
+        <!--Rectangles-->
+        <Rectangle x:Name="Rct_HostOrHostess_CarInfos" Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="364,217,0,246.667" Stroke="Black" Width="340"/>
+        <Rectangle x:Name="Rct_HostOrHostess_Langugages" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="74" Margin="364,0,0,167.667" Stroke="Black" VerticalAlignment="Bottom" Width="340"/>
+        <Rectangle x:Name="Rct_HostOrHostess_Profile" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="77" Margin="364,0,0,85.667" Stroke="Black" VerticalAlignment="Bottom" Width="340"/>
+        <Rectangle x:Name="Rct_HostOrHostess_Sizes" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="92" Margin="364,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="340"/>
+
+        <!--Buttons-->
+        <Button x:Name="Btn_HostAndHostess_Add" Height="33" Margin="10,0,305.333,47.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" Click="Btn_HostAndHostess_Add_Click" TabIndex="19" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Width="694"/>
+        <Button x:Name="Btn_HostAndHostess_AddPhoto" Height="33" Margin="709,0,10.333,9.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="AddPhoto" Click="Btn_HostAndHostess_AddPhoto_Click" TabIndex="18" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Width="290" HorizontalAlignment="Right"/>
+        <Button x:Name="Btn_HostAndHostess_DeletePhoto" Height="27" Margin="0,0,137.333,53.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="X" Click="Btn_HostAndHostess_DeletePhoto_Click" TabIndex="16" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FFF03535" Width="32" HorizontalAlignment="Right"/>
+        <Button x:Name="Btn_HostAndHostess_NextPhoto" Height="27" Margin="0,0,99.333,53.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="&gt;" Click="Btn_HostAndHostess_NextPhoto_Click" TabIndex="17" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Width="33" HorizontalAlignment="Right"/>
+        <Button x:Name="Btn_HostAndHostess_PreviousPhoto" Height="27" Margin="0,0,174.333,53.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="&lt;" Click="Btn_HostAndHostess_PreviousPhoto_Click" TabIndex="15" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Width="32" HorizontalAlignment="Right"/>
+        <Button x:Name="Btn_HostAndHostess_QuitWithoutSaving" Height="33" Margin="10,0,305.333,9.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Click="Btn_HostAndHostess_QuitWithoutSaving_Click" Foreground="White" TabIndex="21" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" Width="694"/>
+
+        <!--Check boxes-->
+        <CheckBox x:Name="Chk_HostOrhostess_Language_English" Content="English" HorizontalAlignment="Left" Height="20" Margin="369,0,0,192.667" VerticalAlignment="Bottom" Width="98"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Language_German" Content="German" HorizontalAlignment="Left" Height="20" Margin="486,0,0,192.667" VerticalAlignment="Bottom" Width="98"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Language_Italian" Content="Italian" HorizontalAlignment="Left" Height="20" Margin="369,0,0,172.667" VerticalAlignment="Bottom" Width="98"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Language_Spanish" Content="Spanish" HorizontalAlignment="Left" Height="20" Margin="606,0,0,192.667" VerticalAlignment="Bottom" Width="98"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Profile_Event" Content="Event" HorizontalAlignment="Left" Height="20" Margin="486,0,0,102.667" VerticalAlignment="Bottom" Width="98"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Profile_Permanent" Content="Permanent" HorizontalAlignment="Left" Height="20" Margin="606,0,0,102.667" VerticalAlignment="Bottom" Width="91"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Profile_Street" Content="Street" HorizontalAlignment="Left" Height="20" Margin="369,0,0,102.667" VerticalAlignment="Bottom" Width="98"/>
+
+        <!--Combo boxes-->
+        <ComboBox x:Name="Cmb_HostAndHostess_BirthDate_Day" HorizontalAlignment="Left" Height="20" Margin="364,38,0,0" VerticalAlignment="Top" Width="50" TabIndex="4" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_BirthDate_Month" HorizontalAlignment="Left" Height="20" Margin="419,38,0,0" VerticalAlignment="Top" Width="190" TabIndex="5" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_BirthDate_Year" HorizontalAlignment="Left" Height="20" Margin="614,38,0,0" VerticalAlignment="Top" Width="90" TabIndex="6" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Car" HorizontalAlignment="Left" Height="20" Margin="619,230,0,0" VerticalAlignment="Top" Width="80" TabIndex="4"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_City" HorizontalAlignment="Left" Height="20" Margin="185,0,0,202" VerticalAlignment="Bottom" Width="174" TabIndex="11" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Country" HorizontalAlignment="Left" Height="20" Margin="10,0,0,144" VerticalAlignment="Bottom" Width="170" TabIndex="12" SelectionChanged="Cmb_HostAndHostess_Country_SelectionChanged"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Licence" HorizontalAlignment="Left" Height="20" Margin="450,230,0,0" VerticalAlignment="Top" Width="80" TabIndex="4"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Sex" HorizontalAlignment="Left" Height="20" Margin="185,95,0,0" VerticalAlignment="Top" Width="174" TabIndex="7"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Size" HorizontalAlignment="Left" Height="20" Margin="481,124,0,0" VerticalAlignment="Top" Width="107" TabIndex="4" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Sizes_Shirt" HorizontalAlignment="Left" Height="20" Margin="369,178,0,0" VerticalAlignment="Top" Width="107" TabIndex="4" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Sizes_Pants" HorizontalAlignment="Left" Height="20" Margin="481,178,0,0" VerticalAlignment="Top" Width="107" TabIndex="4" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Sizes_Shoes" HorizontalAlignment="Left" Height="20" Margin="593,178,0,0" VerticalAlignment="Top" Width="106" TabIndex="4" IsEditable="True"/>
+
+        <!--Image-->
+        <Image x:Name="Img_HostAndHostess_Photo" Margin="709,10,10.333,85.667"/>
+
+        <!--Labels-->
+        <Label x:Name="Lbl_HostAndHostess_Address" Content="Address" HorizontalAlignment="Left" Height="28" Margin="10,185,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label x:Name="Lbl_HostAndHostess_BirthCity" Content="BirthCity" HorizontalAlignment="Left" Height="23" Margin="366,63,0,0" VerticalAlignment="Top" Width="129"/>
+        <Label x:Name="Lbl_HostAndHostess_BirthDate" Content="BirthDate" HorizontalAlignment="Left" Height="23" Margin="364,10,0,0" VerticalAlignment="Top" Width="340"/>
+        <Label x:Name="Lbl_HostAndHostess_Car" Content="Car" HorizontalAlignment="Left" Height="23" Margin="538,227,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="Lbl_HostAndHostess_CellPhone" Content="CellPhone" HorizontalAlignment="Left" Height="27" Margin="10,63,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label x:Name="Lbl_HostAndHostess_City" Content="City" HorizontalAlignment="Left" Height="28" Margin="185,0,0,227" VerticalAlignment="Bottom" Width="131"/>
+        <Label x:Name="Lbl_HostAndHostess_Cm" Content="cm" HorizontalAlignment="Left" Height="23" Margin="593,124,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label x:Name="Lbl_HostAndHostess_Country" Content="Country" HorizontalAlignment="Left" Height="28" Margin="10,0,0,169" VerticalAlignment="Bottom" Width="131"/>
+        <Label x:Name="Lbl_HostAndHostess_Email" Content="Email" HorizontalAlignment="Left" Height="23" Margin="10,127,0,0" VerticalAlignment="Top" Width="121"/>
+        <Label x:Name="Lbl_HostAndHostess_FirstName" Content="FirstNameContact" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label x:Name="Lbl_HostAndHostess_IdPaycheck" Content="IdPaycheck" HorizontalAlignment="Left" Height="28" Margin="10,0,0,111" VerticalAlignment="Bottom" Width="131"/>
+        <Label x:Name="Lbl_HostAndHostess_Languages" Content="Languages" HorizontalAlignment="Left" Height="28" Margin="369,0,0,212.667" VerticalAlignment="Bottom" Width="328"/>
+        <Label x:Name="Lbl_HostAndHostess_Languages_Others" Content="Others" HorizontalAlignment="Left" Height="28" Margin="481,0,0,168.667" VerticalAlignment="Bottom" Width="75"/>
+        <Label x:Name="Lbl_HostAndHostess_LastName" Content="LastNameContact" HorizontalAlignment="Left" Height="23" Margin="185,10,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label x:Name="Lbl_HostAndHostess_Licence" Content="Licence" HorizontalAlignment="Left" Height="23" Margin="369,227,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="Lbl_HostAndHostess_Profile" Content="Profile" HorizontalAlignment="Left" Height="30" Margin="371,0,0,127.667" VerticalAlignment="Bottom" Width="328"/>
+        <Label x:Name="Lbl_HostAndHostess_Sex" Content="Sex" HorizontalAlignment="Left" Height="23" Margin="185,63,0,0" VerticalAlignment="Top" Width="52"/>
+        <Label x:Name="Lbl_HostAndHostess_Size" Content="Size" HorizontalAlignment="Left" Height="23" Margin="369,124,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label x:Name="Lbl_HostAndHostess_Sizes_Pants" Content="Pants" HorizontalAlignment="Left" Height="23" Margin="481,150,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label x:Name="Lbl_HostAndHostess_Sizes_Shirt" Content="Shirt" HorizontalAlignment="Left" Height="23" Margin="369,150,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label x:Name="Lbl_HostAndHostess_Sizes_Shoes" Content="Shoes" HorizontalAlignment="Left" Height="23" Margin="593,150,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label x:Name="Lbl_HostAndHostess_SocialSecurityNumber" Content="SocialSecurityNumber" HorizontalAlignment="Left" Height="23" Margin="500,63,0,0" VerticalAlignment="Top" Width="204"/>
+        <Label x:Name="Lbl_HostAndHostess_State" Content="State" HorizontalAlignment="Left" Height="28" Margin="185,0,0,169" VerticalAlignment="Bottom" Width="131"/>
+        <Label x:Name="Lbl_HostAndHostess_ZipCode" Content="ZipCode" HorizontalAlignment="Left" Height="28" Margin="10,0,0,227" VerticalAlignment="Bottom" Width="131"/>
+
+        <!--Text boxes-->
+        <TextBox x:Name="Txt_HostAndHostess_Address" Margin="10,218,0,260" TextWrapping="Wrap" TabIndex="9" HorizontalAlignment="Left" Width="349"/>
+        <TextBox x:Name="Txt_HostAndHostess_BirthCity" HorizontalAlignment="Left" Height="20" Margin="366,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" TabIndex="3"/>
+        <TextBox x:Name="Txt_HostAndHostess_CellPhone" HorizontalAlignment="Left" Height="20" Margin="10,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TabIndex="3"/>
+        <TextBox x:Name="Txt_HostAndHostess_Email" HorizontalAlignment="Left" Height="20" Margin="10,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" TabIndex="8"/>
+        <TextBox x:Name="Txt_HostAndHostess_FirstName" HorizontalAlignment="Left" Height="20" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TabIndex="1"/>
+        <TextBox x:Name="Txt_HostAndHostess_IdPaycheck" Height="20" Margin="10,0,0,86" TextWrapping="Wrap" VerticalAlignment="Bottom" TabIndex="14" HorizontalAlignment="Left" Width="349"/>
+        <TextBox x:Name="Txt_HostAndHostess_Language_Others" HorizontalAlignment="Left" Height="20" Margin="561,0,0,172.667" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="138" TabIndex="10"/>
+        <TextBox x:Name="Txt_HostAndHostess_LastName" HorizontalAlignment="Left" Height="20" Margin="185,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" TabIndex="2"/>
+        <TextBox x:Name="Txt_HostAndHostess_SocialSecurityNumber" HorizontalAlignment="Left" Height="20" Margin="500,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" TabIndex="3"/>
+        <TextBox x:Name="Txt_HostAndHostess_State" HorizontalAlignment="Left" Height="20" Margin="185,0,0,144" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="174" TabIndex="13"/>
+        <TextBox x:Name="Txt_HostAndHostess_ZipCode" HorizontalAlignment="Left" Height="20" Margin="10,0,0,202" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="170" TabIndex="10" TextChanged="Txt_HostAndHostess_ZipCode_TextChanged"/>
+
+    </Grid>
+
+</Window>

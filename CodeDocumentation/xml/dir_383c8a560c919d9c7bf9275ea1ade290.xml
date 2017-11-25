@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_383c8a560c919d9c7bf9275ea1ade290" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms</compoundname>
+    <innerfile refid="_debug_2_forms_2_software_8g_8cs">Software.g.cs</innerfile>
+    <innerfile refid="_debug_2_forms_2_software_8g_8i_8cs">Software.g.i.cs</innerfile>
+    <innerfile refid="_debug_2_forms_2_window_date_picker_8g_8cs">WindowDatePicker.g.cs</innerfile>
+    <innerfile refid="_debug_2_forms_2_window_date_picker_8g_8i_8cs">WindowDatePicker.g.i.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_software_1_1_window_date_picker" kind="class" language="C#" prot="public">
+    <compoundname>Software::WindowDatePicker</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_software_1_1_window_date_picker_1ac157761aa0039ca01fd8396e09acc2a4" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+        <definition>Handlers Software.WindowDatePicker.m_Global_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Global_Handler</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Global handlers for common objects </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" line="20" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_software_1_1_window_date_picker_1a502e25a8f38e3516bb407cf3124584bd" prot="public" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime Software.WindowDatePicker.m_FirstSelectedDate</definition>
+        <argsstring></argsstring>
+        <name>m_FirstSelectedDate</name>
+        <briefdescription>
+<para>First date selected </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" line="25" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_1_1_window_date_picker_1a3d85462fca9c16fb7fee72e7761681f2" prot="public" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime Software.WindowDatePicker.m_EndSelectedDate</definition>
+        <argsstring></argsstring>
+        <name>m_EndSelectedDate</name>
+        <briefdescription>
+<para>End date selected </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" line="30" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_software_1_1_window_date_picker_1a471485438661696f56807e442d5d1570" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.DatePicker</type>
+        <definition>System Windows Controls DatePicker Software.WindowDatePicker::Dtp_EndDatePicker</definition>
+        <argsstring></argsstring>
+        <name>Dtp_EndDatePicker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" line="46" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_1_1_window_date_picker_1abb635e3e3d95ad780fd04c6995eab34c" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.DatePicker</type>
+        <definition>System Windows Controls DatePicker Software.WindowDatePicker::Dtp_FirstDatePicker</definition>
+        <argsstring></argsstring>
+        <name>Dtp_FirstDatePicker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" line="54" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_1_1_window_date_picker_1aa84b90d9dfbed66946f13b7b2767051b" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label Software.WindowDatePicker::Lbl_FirstDateExplanation</definition>
+        <argsstring></argsstring>
+        <name>Lbl_FirstDateExplanation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" line="62" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_1_1_window_date_picker_1a4eca15cbcaee66a2dc0e14cd8f876013" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label Software.WindowDatePicker::Lbl_EndDateExplanation</definition>
+        <argsstring></argsstring>
+        <name>Lbl_EndDateExplanation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" line="70" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_software_1_1_window_date_picker_1acdb13a6cc946de160ef8b7268030ad05" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Software.WindowDatePicker::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" line="75" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1ac9cd8c6d38484032a9ffab64b19795c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Software.WindowDatePicker.WindowDatePicker</definition>
+        <argsstring>(GeneralClasses.Handlers _GlobalHandler, string _FirstDateExplanation, string _EndDateExplanation)</argsstring>
+        <name>WindowDatePicker</name>
+        <param>
+          <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">GeneralClasses.Handlers</ref></type>
+          <declname>_GlobalHandler</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_FirstDateExplanation</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_EndDateExplanation</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the date picker main window </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" line="39" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" bodystart="39" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1a546a5c2e6fe7413550ba0a1aaa6f3806" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Software.WindowDatePicker.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" line="82" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" bodystart="82" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1a546a5c2e6fe7413550ba0a1aaa6f3806" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Software.WindowDatePicker.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.i.cs" line="82" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.i.cs" bodystart="82" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1a546a5c2e6fe7413550ba0a1aaa6f3806" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Software.WindowDatePicker.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Release/Forms/WindowDatePicker.g.cs" line="82" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Release/Forms/WindowDatePicker.g.cs" bodystart="82" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1a546a5c2e6fe7413550ba0a1aaa6f3806" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Software.WindowDatePicker.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Release/Forms/WindowDatePicker.g.i.cs" line="82" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Release/Forms/WindowDatePicker.g.i.cs" bodystart="82" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1a1f2e1ee0fbe03f6919cf69ac5f8c1a41" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Software.WindowDatePicker.Dtp_EndDatePicker_CalendarClosed</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Dtp_EndDatePicker_CalendarClosed</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Save dates and quit on selected date event in the Dtp_EndDatePicker </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" line="71" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1a4738845dca681e4ac351b3a9191ca0a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Software.WindowDatePicker.Dtp_EndDatePicker_PreviewKeyUp</definition>
+        <argsstring>(object sender, System.Windows.Input.KeyEventArgs e)</argsstring>
+        <name>Dtp_EndDatePicker_PreviewKeyUp</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.Windows.Input.KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Save dates and quit on key Enter event in the Dtp_EndDatePicker </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" line="80" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" bodystart="80" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1aa002dc49c96f402f72f023bac3be0907" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Software.WindowDatePicker.Save_Dates</definition>
+        <argsstring>()</argsstring>
+        <name>Save_Dates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" line="92" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" bodystart="92" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1ae3f0c15fc18e610488398cfd8fac9df9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. Software.WindowDatePicker.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" line="102" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.cs" bodystart="102" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1ae3f0c15fc18e610488398cfd8fac9df9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. Software.WindowDatePicker.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.i.cs" line="102" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Debug/Forms/WindowDatePicker.g.i.cs" bodystart="102" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1ae3f0c15fc18e610488398cfd8fac9df9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. Software.WindowDatePicker.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Release/Forms/WindowDatePicker.g.cs" line="102" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Release/Forms/WindowDatePicker.g.cs" bodystart="102" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_1_1_window_date_picker_1ae3f0c15fc18e610488398cfd8fac9df9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. Software.WindowDatePicker.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Release/Forms/WindowDatePicker.g.i.cs" line="102" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/obj/Release/Forms/WindowDatePicker.g.i.cs" bodystart="102" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interaction logic for WindowDatePicker.xaml </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_software_1_1_window_date_picker" kindref="compound">WindowDatePicker</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="171">
+        <label>Software.WindowDatePicker</label>
+        <link refid="class_software_1_1_window_date_picker"/>
+        <childnode refid="172" relation="public-inheritance">
+        </childnode>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="172" relation="public-inheritance">
+        </childnode>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="172" relation="public-inheritance">
+        </childnode>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="172" relation="public-inheritance">
+        </childnode>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="172">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="174">
+        <label>Window</label>
+      </node>
+      <node id="173">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="175">
+        <label>Software.WindowDatePicker</label>
+        <link refid="class_software_1_1_window_date_picker"/>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+        <childnode refid="177" relation="public-inheritance">
+        </childnode>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+        <childnode refid="177" relation="public-inheritance">
+        </childnode>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+        <childnode refid="177" relation="public-inheritance">
+        </childnode>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+        <childnode refid="177" relation="public-inheritance">
+        </childnode>
+        <childnode refid="178" relation="public-inheritance">
+        </childnode>
+        <childnode refid="179" relation="usage">
+          <edgelabel>Dtp_FirstDatePicker</edgelabel>
+          <edgelabel>Lbl_FirstDateExplanation</edgelabel>
+          <edgelabel>Lbl_EndDateExplanation</edgelabel>
+          <edgelabel>Dtp_EndDatePicker</edgelabel>
+        </childnode>
+      </node>
+      <node id="176">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="178">
+        <label>Window</label>
+      </node>
+      <node id="179">
+        <label>System</label>
+      </node>
+      <node id="177">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" line="12" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Software/Forms/WindowDatePicker.xaml.cs" bodystart="11" bodyend="118"/>
+    <listofallmembers>
+      <member refid="class_software_1_1_window_date_picker_1acdb13a6cc946de160ef8b7268030ad05" prot="private" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>_contentLoaded</name></member>
+      <member refid="class_software_1_1_window_date_picker_1ae3f0c15fc18e610488398cfd8fac9df9" prot="private" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Connect</name></member>
+      <member refid="class_software_1_1_window_date_picker_1ae3f0c15fc18e610488398cfd8fac9df9" prot="private" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Connect</name></member>
+      <member refid="class_software_1_1_window_date_picker_1ae3f0c15fc18e610488398cfd8fac9df9" prot="private" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Connect</name></member>
+      <member refid="class_software_1_1_window_date_picker_1ae3f0c15fc18e610488398cfd8fac9df9" prot="private" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Connect</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a471485438661696f56807e442d5d1570" prot="package" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Dtp_EndDatePicker</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a1f2e1ee0fbe03f6919cf69ac5f8c1a41" prot="private" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Dtp_EndDatePicker_CalendarClosed</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a4738845dca681e4ac351b3a9191ca0a2" prot="private" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Dtp_EndDatePicker_PreviewKeyUp</name></member>
+      <member refid="class_software_1_1_window_date_picker_1abb635e3e3d95ad780fd04c6995eab34c" prot="package" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Dtp_FirstDatePicker</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a546a5c2e6fe7413550ba0a1aaa6f3806" prot="public" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>InitializeComponent</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a546a5c2e6fe7413550ba0a1aaa6f3806" prot="public" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>InitializeComponent</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a546a5c2e6fe7413550ba0a1aaa6f3806" prot="public" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>InitializeComponent</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a546a5c2e6fe7413550ba0a1aaa6f3806" prot="public" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>InitializeComponent</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a4eca15cbcaee66a2dc0e14cd8f876013" prot="package" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Lbl_EndDateExplanation</name></member>
+      <member refid="class_software_1_1_window_date_picker_1aa84b90d9dfbed66946f13b7b2767051b" prot="package" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Lbl_FirstDateExplanation</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a3d85462fca9c16fb7fee72e7761681f2" prot="public" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>m_EndSelectedDate</name></member>
+      <member refid="class_software_1_1_window_date_picker_1a502e25a8f38e3516bb407cf3124584bd" prot="public" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>m_FirstSelectedDate</name></member>
+      <member refid="class_software_1_1_window_date_picker_1ac157761aa0039ca01fd8396e09acc2a4" prot="public" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>m_Global_Handler</name></member>
+      <member refid="class_software_1_1_window_date_picker_1aa002dc49c96f402f72f023bac3be0907" prot="private" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>Save_Dates</name></member>
+      <member refid="class_software_1_1_window_date_picker_1ac9cd8c6d38484032a9ffab64b19795c2" prot="public" virt="non-virtual"><scope>Software::WindowDatePicker</scope><name>WindowDatePicker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_d7d25e2cc9f4cebf37e2c575fc04da85" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms</compoundname>
+    <innerfile refid="_window_estimate_8g_8cs">WindowEstimate.g.cs</innerfile>
+    <innerfile refid="_window_estimate_8g_8i_8cs">WindowEstimate.g.i.cs</innerfile>
+    <innerfile refid="_debug_2_forms_2_window_mission_8g_8cs">WindowMission.g.cs</innerfile>
+    <innerfile refid="_debug_2_forms_2_window_mission_8g_8i_8cs">WindowMission.g.i.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowMission/obj/Debug/Forms/"/>
+  </compounddef>
+</doxygen>

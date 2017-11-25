@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_general_classes_1_1_email" kind="class" language="C#" prot="public">
+    <compoundname>GeneralClasses::Email</compoundname>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_general_classes_1_1_email_1aee28ad9c88034c42e15c399d9326108e" prot="private" static="no">
+        <name>HowTo</name>
+        <enumvalue id="class_general_classes_1_1_email_1aee28ad9c88034c42e15c399d9326108ea2a9131d1842e17b54121f3cd15c40158" prot="public">
+          <name>MAPI_ORIG</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_general_classes_1_1_email_1aee28ad9c88034c42e15c399d9326108ea12719fddd62d405e2cf2d1f0c643cd20" prot="public">
+          <name>MAPI_TO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_general_classes_1_1_email_1aee28ad9c88034c42e15c399d9326108ea346386b0d9bc6fbc313653b4fcbf6b3c" prot="public">
+          <name>MAPI_CC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_general_classes_1_1_email_1aee28ad9c88034c42e15c399d9326108eaba5ef6a044090b70c99a87ac5a178cd6" prot="public">
+          <name>MAPI_BCC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum of HowTO </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="53" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_general_classes_1_1_email_1a10b3deffc93172e1173a44fc4bd1394b" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_general_classes_1_1_mapi_recip_desc" kindref="compound">MapiRecipDesc</ref> &gt;</type>
+        <definition>List&lt;MapiRecipDesc&gt; GeneralClasses.Email.m_Recipients</definition>
+        <argsstring></argsstring>
+        <name>m_Recipients</name>
+        <initializer>= new
+            List&lt;<ref refid="class_general_classes_1_1_mapi_recip_desc" kindref="compound">MapiRecipDesc</ref>&gt;()</initializer>
+        <briefdescription>
+<para>List of recipients </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="22" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_email_1a157c17eb7b0b2f86be15ec9acc5418c8" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; GeneralClasses.Email.m_attachments</definition>
+        <argsstring></argsstring>
+        <name>m_attachments</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+<para>List of attachments file name </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="28" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_email_1a96c04ac30a4d14ebe07f16f707c49422" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GeneralClasses.Email.m_LastError</definition>
+        <argsstring></argsstring>
+        <name>m_LastError</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Integer of the last error </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="33" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_email_1abb383df50072e4ebb57e3540e268561b" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int GeneralClasses.Email.MAPI_LOGON_UI</definition>
+        <argsstring></argsstring>
+        <name>MAPI_LOGON_UI</name>
+        <initializer>= 0x00000001</initializer>
+        <briefdescription>
+<para>Address of the default email software </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="38" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_email_1a6e37b4941e08b5dce702bda3e3b1de7b" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int GeneralClasses.Email.MAPI_DIALOG</definition>
+        <argsstring></argsstring>
+        <name>MAPI_DIALOG</name>
+        <initializer>= 0x00000008</initializer>
+        <briefdescription>
+<para>Address of the dialog email software </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="43" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_email_1ade8a2d1c54411cd7b284eaab662311d4" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int GeneralClasses.Email.m_MaxAttachments</definition>
+        <argsstring></argsstring>
+        <name>m_MaxAttachments</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+<para>Number of maximum attachments </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="48" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_general_classes_1_1_email_1ac6170d9b7c289651093a36d27e0d1dbc" prot="private" static="no" mutable="no">
+        <type>readonly string[]</type>
+        <definition>readonly string [] GeneralClasses.Email.errors</definition>
+        <argsstring></argsstring>
+        <name>errors</name>
+        <initializer>= new string[] {
+        &quot;OK [0]&quot;, &quot;User abort [1]&quot;, &quot;General MAPI failure [2]&quot;,
+                &quot;MAPI login failure [3]&quot;, &quot;Disk full [4]&quot;,
+                &quot;Insufficient memory [5]&quot;, &quot;Access denied [6]&quot;,
+                &quot;-unknown- [7]&quot;, &quot;Too many sessions [8]&quot;,
+                &quot;Too many files were specified [9]&quot;,
+                &quot;Too many recipients were specified [10]&quot;,
+                &quot;A specified attachment was not found [11]&quot;,
+        &quot;Attachment open failure [12]&quot;,
+                &quot;Attachment write failure [13]&quot;, &quot;Unknown recipient [14]&quot;,
+                &quot;Bad recipient type [15]&quot;, &quot;No messages [16]&quot;,
+                &quot;Invalid message [17]&quot;, &quot;Text too large [18]&quot;,
+                &quot;Invalid session [19]&quot;, &quot;Type not supported [20]&quot;,
+                &quot;A recipient was specified ambiguously [21]&quot;,
+                &quot;Message in use [22]&quot;, &quot;Network failure [23]&quot;,
+        &quot;Invalid edit fields [24]&quot;, &quot;Invalid recipients [25]&quot;,
+                &quot;Not supported [26]&quot;
+        }</initializer>
+        <briefdescription>
+<para>Table of possible errors </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="58" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_general_classes_1_1_email_1a8e65bde7cab0d3852a466dfcf06241c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.Email.Add_Recipient</definition>
+        <argsstring>(string _Email, HowTo _HowTo)</argsstring>
+        <name>Add_Recipient</name>
+        <param>
+          <type>string</type>
+          <declname>_Email</declname>
+        </param>
+        <param>
+          <type>HowTo</type>
+          <declname>_HowTo</declname>
+        </param>
+        <briefdescription>
+<para>Add recipients to the email <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The email</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_HowTo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which type of recipient</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the operation went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="87" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="87" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1a2ea73348291a733888888110516118ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int GeneralClasses.Email.MAPISendMail</definition>
+        <argsstring>(IntPtr sess, IntPtr hwnd, MapiMessage message, int flg, int rsv)</argsstring>
+        <name>MAPISendMail</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>sess</declname>
+        </param>
+        <param>
+          <type>IntPtr</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type><ref refid="class_general_classes_1_1_mapi_message" kindref="compound">MapiMessage</ref></type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rsv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="138" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1ab907ddc398a26c7e997b76ba7c28ef9f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GeneralClasses.Email.Send_Mail</definition>
+        <argsstring>(string _Subject, string _Body, int _How)</argsstring>
+        <name>Send_Mail</name>
+        <param>
+          <type>string</type>
+          <declname>_Subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Body</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_How</declname>
+        </param>
+        <briefdescription>
+<para>Treat the email (popu or not) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subject of the email</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Body of the email</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_How</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Way to send the email</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the operation went well, &gt;0 otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="147" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="147" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1a1e8130e8533657874e1a25d7b40ea40d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IntPtr</type>
+        <definition>IntPtr GeneralClasses.Email.Get_Recipients</definition>
+        <argsstring>(out int _RecipCount)</argsstring>
+        <name>Get_Recipients</name>
+        <param>
+          <type>out int</type>
+          <declname>_RecipCount</declname>
+        </param>
+        <briefdescription>
+<para>Get the size of recipient <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_RecipCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of recipients</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Size of recipients</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="173" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="173" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1a476c4d3d13fc86adc37e6efff6564dfb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IntPtr</type>
+        <definition>IntPtr GeneralClasses.Email.Get_Attachments</definition>
+        <argsstring>(out int _FileCount)</argsstring>
+        <name>Get_Attachments</name>
+        <param>
+          <type>out int</type>
+          <declname>_FileCount</declname>
+        </param>
+        <briefdescription>
+<para>Get the size of attachments <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_FileCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of attachments</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Size of attachments</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="198" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="198" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1ada9724822028f8ca29aebcbb22a12e8d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralClasses.Email.Cleanup</definition>
+        <argsstring>(ref MapiMessage _Message)</argsstring>
+        <name>Cleanup</name>
+        <param>
+          <type>ref <ref refid="class_general_classes_1_1_mapi_message" kindref="compound">MapiMessage</ref></type>
+          <declname>_Message</declname>
+        </param>
+        <briefdescription>
+<para>Clean all memory and variables <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mapi message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="276" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="276" bodyend="310"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_general_classes_1_1_email_1a7917b24fa2e2226663d067795911a9d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.Email.Add_RecipientTo</definition>
+        <argsstring>(string _Email)</argsstring>
+        <name>Add_RecipientTo</name>
+        <param>
+          <type>string</type>
+          <declname>_Email</declname>
+        </param>
+        <briefdescription>
+<para>Add recipients to the email type To <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The email</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the operation went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="103" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1aebac935f9faf2797306b0eb008db7354" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.Email.Add_RecipientCC</definition>
+        <argsstring>(string _Email)</argsstring>
+        <name>Add_RecipientCC</name>
+        <param>
+          <type>string</type>
+          <declname>_Email</declname>
+        </param>
+        <briefdescription>
+<para>Ad recipient to the email type CC <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_general_classes_1_1_email" kindref="compound">Email</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the operation went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="113" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1a6aa867107fb0c6f2da89445a7337bd9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralClasses.Email.Add_RecipientBCC</definition>
+        <argsstring>(string _Email)</argsstring>
+        <name>Add_RecipientBCC</name>
+        <param>
+          <type>string</type>
+          <declname>_Email</declname>
+        </param>
+        <briefdescription>
+<para>Add recipients to the email type BCC <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_general_classes_1_1_email" kindref="compound">Email</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the operation went well, false otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="123" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1ac27b19a58e94165afafff7efcc87ac3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralClasses.Email.Add_Attachment</definition>
+        <argsstring>(string _AttachmentFileName)</argsstring>
+        <name>Add_Attachment</name>
+        <param>
+          <type>string</type>
+          <declname>_AttachmentFileName</declname>
+        </param>
+        <briefdescription>
+<para>Add attachment type File <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_AttachmentFileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attachment</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="132" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1a28565917471a17c45d3d85a6d753fe49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GeneralClasses.Email.Send_MailPopup</definition>
+        <argsstring>(string _Subject, string _Body)</argsstring>
+        <name>Send_MailPopup</name>
+        <param>
+          <type>string</type>
+          <declname>_Subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Body</declname>
+        </param>
+        <briefdescription>
+<para>Call the function to open the default emailing software <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subject of the email</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Body of the email</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the operation went well, &gt;0 otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="233" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="233" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1a060ab3efa86a9c00c641a1cc96ad1ee3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GeneralClasses.Email.Send_MailDirect</definition>
+        <argsstring>(string _Subject, string _Body)</argsstring>
+        <name>Send_MailDirect</name>
+        <param>
+          <type>string</type>
+          <declname>_Subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Body</declname>
+        </param>
+        <briefdescription>
+<para>Call the function to send the email directly <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subject of the email</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Body of the email</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the operation went well, &gt;0 otherwise</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="244" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1a1dfe1b3a7c0f3e2529bb5114b9d98abe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralClasses.Email.Compose_Mail</definition>
+        <argsstring>(string[] _Recipients, string _Subject, string _Body, string[] _Attachments)</argsstring>
+        <name>Compose_Mail</name>
+        <param>
+          <type>string[]</type>
+          <declname>_Recipients</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Body</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>_Attachments</declname>
+        </param>
+        <briefdescription>
+<para>Call the function to send the email adding the recipients and attachments <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Recipients</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of recipients</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subject of the email</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Body of the email</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Attachments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of attachments</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="256" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="256" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="class_general_classes_1_1_email_1aa891615cdbacaf149e9f23a12e04395f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string GeneralClasses.Email.Get_LastError</definition>
+        <argsstring>()</argsstring>
+        <name>Get_LastError</name>
+        <briefdescription>
+<para>Get the last error </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="315" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="315" bodyend="320"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class <ref refid="class_general_classes_1_1_email" kindref="compound">Email</ref> containing all the functions for handling email </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" line="15" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Email.cs" bodystart="14" bodyend="324"/>
+    <listofallmembers>
+      <member refid="class_general_classes_1_1_email_1ac27b19a58e94165afafff7efcc87ac3c" prot="public" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Add_Attachment</name></member>
+      <member refid="class_general_classes_1_1_email_1a8e65bde7cab0d3852a466dfcf06241c3" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Add_Recipient</name></member>
+      <member refid="class_general_classes_1_1_email_1a6aa867107fb0c6f2da89445a7337bd9c" prot="public" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Add_RecipientBCC</name></member>
+      <member refid="class_general_classes_1_1_email_1aebac935f9faf2797306b0eb008db7354" prot="public" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Add_RecipientCC</name></member>
+      <member refid="class_general_classes_1_1_email_1a7917b24fa2e2226663d067795911a9d7" prot="public" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Add_RecipientTo</name></member>
+      <member refid="class_general_classes_1_1_email_1ada9724822028f8ca29aebcbb22a12e8d" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Cleanup</name></member>
+      <member refid="class_general_classes_1_1_email_1a1dfe1b3a7c0f3e2529bb5114b9d98abe" prot="public" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Compose_Mail</name></member>
+      <member refid="class_general_classes_1_1_email_1ac6170d9b7c289651093a36d27e0d1dbc" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>errors</name></member>
+      <member refid="class_general_classes_1_1_email_1a476c4d3d13fc86adc37e6efff6564dfb" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Get_Attachments</name></member>
+      <member refid="class_general_classes_1_1_email_1aa891615cdbacaf149e9f23a12e04395f" prot="public" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Get_LastError</name></member>
+      <member refid="class_general_classes_1_1_email_1a1e8130e8533657874e1a25d7b40ea40d" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Get_Recipients</name></member>
+      <member refid="class_general_classes_1_1_email_1aee28ad9c88034c42e15c399d9326108e" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>HowTo</name></member>
+      <member refid="class_general_classes_1_1_email_1a157c17eb7b0b2f86be15ec9acc5418c8" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>m_attachments</name></member>
+      <member refid="class_general_classes_1_1_email_1a96c04ac30a4d14ebe07f16f707c49422" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>m_LastError</name></member>
+      <member refid="class_general_classes_1_1_email_1ade8a2d1c54411cd7b284eaab662311d4" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>m_MaxAttachments</name></member>
+      <member refid="class_general_classes_1_1_email_1a10b3deffc93172e1173a44fc4bd1394b" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>m_Recipients</name></member>
+      <member refid="class_general_classes_1_1_email_1a6e37b4941e08b5dce702bda3e3b1de7b" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>MAPI_DIALOG</name></member>
+      <member refid="class_general_classes_1_1_email_1abb383df50072e4ebb57e3540e268561b" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>MAPI_LOGON_UI</name></member>
+      <member refid="class_general_classes_1_1_email_1a2ea73348291a733888888110516118ac" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>MAPISendMail</name></member>
+      <member refid="class_general_classes_1_1_email_1ab907ddc398a26c7e997b76ba7c28ef9f" prot="private" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Send_Mail</name></member>
+      <member refid="class_general_classes_1_1_email_1a060ab3efa86a9c00c641a1cc96ad1ee3" prot="public" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Send_MailDirect</name></member>
+      <member refid="class_general_classes_1_1_email_1a28565917471a17c45d3d85a6d753fe49" prot="public" virt="non-virtual"><scope>GeneralClasses::Email</scope><name>Send_MailPopup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

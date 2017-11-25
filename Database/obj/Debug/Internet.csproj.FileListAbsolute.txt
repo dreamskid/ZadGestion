@@ -1,0 +1,8 @@
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\bin\Debug\Internet.dll.config
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\bin\Debug\Internet.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\bin\Debug\Internet.pdb
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\bin\Debug\Common.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\bin\Debug\Common.pdb
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\obj\Debug\Internet.csprojResolveAssemblyReference.cache
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\obj\Debug\Internet.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\Internet\obj\Debug\Internet.pdb

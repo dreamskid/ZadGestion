@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_93ed842cd072e92e57ee58c2daad4859" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/Common/obj</compoundname>
+    <innerdir refid="dir_29dc10ff4fa5d4478c7a6df3f38d803a">C:/Users/Yohann/Desktop/software/ZadGestion/Common/obj/Debug</innerdir>
+    <innerdir refid="dir_64f7d647402f759d3d31946bc83be2f7">C:/Users/Yohann/Desktop/software/ZadGestion/Common/obj/Release</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/obj/"/>
+  </compounddef>
+</doxygen>

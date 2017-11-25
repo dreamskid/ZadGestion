@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_3038c8dcd7f00b115980b79894b406d1" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/WindowWait/obj/Debug/Forms</compoundname>
+    <innerfile refid="_debug_2_forms_2_window_wait_8g_8cs">WindowWait.g.cs</innerfile>
+    <innerfile refid="_debug_2_forms_2_window_wait_8g_8i_8cs">WindowWait.g.i.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/WindowWait/obj/Debug/Forms/"/>
+  </compounddef>
+</doxygen>

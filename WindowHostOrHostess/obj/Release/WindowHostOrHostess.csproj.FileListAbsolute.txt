@@ -1,0 +1,25 @@
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\bin\Release\WindowHostAndHostess.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\bin\Release\Common.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\bin\Release\Internet.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\bin\Release\MySql.Data.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostOrHostess.csprojResolveAssemblyReference.cache
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\obj\Release\Forms\WindowHostOrHostess.baml
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\obj\Release\Forms\WindowHostOrHostess.g.cs
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostAndHostess_MarkupCompile.cache
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostAndHostess.g.resources
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostAndHostess.Properties.Resources.resources
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostOrHostess.csproj.GenerateResource.Cache
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostAndHostess.dll
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\bin\Release\WindowHostAndHostess.dll
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\bin\Release\Common.dll
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\bin\Release\Database.dll
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\bin\Release\MySql.Data.dll
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostOrHostess.csprojResolveAssemblyReference.cache
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\obj\Release\Forms\WindowHostOrHostess.baml
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\obj\Release\Forms\WindowHostOrHostess.g.cs
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostAndHostess_MarkupCompile.cache
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostAndHostess.g.resources
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostAndHostess.Properties.Resources.resources
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostOrHostess.csproj.GenerateResource.Cache
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostOrHostess.csproj.CoreCompileInputs.cache
+D:\Yohann\Zadig & Co\ZadGestion\WindowHostOrHostess\obj\Release\WindowHostAndHostess.dll

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_654bc7ce72d9f17ad0317b10a6472071" kind="dir">
+    <compoundname>C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/bin/Release/Language</compoundname>
+    <innerfile refid="bin_2_release_2_language_2_language__en-_u_s_8_designer_8cs">Language_en-US.Designer.cs</innerfile>
+    <innerfile refid="bin_2_release_2_language_2_language__fr-_f_r_8_designer_8cs">Language_fr-FR.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/ZadGestion/bin/Release/Language/"/>
+  </compounddef>
+</doxygen>

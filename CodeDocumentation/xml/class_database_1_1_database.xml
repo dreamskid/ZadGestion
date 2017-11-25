@@ -1,0 +1,692 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_database_1_1_database" kind="class" language="C#" prot="public">
+    <compoundname>Database::Database</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_database_1_1_database_1a9912a7615399a361c7b65afb866bbbc0" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref></type>
+        <definition>Handlers Database.Database.m_Global_Handler</definition>
+        <argsstring></argsstring>
+        <name>m_Global_Handler</name>
+        <initializer>= new <ref refid="class_general_classes_1_1_handlers" kindref="compound">Handlers</ref>()</initializer>
+        <briefdescription>
+<para>Global handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="25" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_database_1_1_database_1abaa9c68e0ae224c9c5cc96d4bb588634" prot="private" static="no" mutable="no">
+        <type>MySqlConnection</type>
+        <definition>MySqlConnection Database.Database.m_MySQLConnection</definition>
+        <argsstring></argsstring>
+        <name>m_MySQLConnection</name>
+        <briefdescription>
+<para>MySQL connection </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="30" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_database_1_1_database_1ac33362cdb659c3a35f129d3833f8b881" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T Database.Database.Deserialize_JSON&lt; T &gt;</definition>
+        <argsstring>(string _JsonString)</argsstring>
+        <name>Deserialize_JSON&lt; T &gt;</name>
+        <param>
+          <type>string</type>
+          <declname>_JsonString</declname>
+        </param>
+        <briefdescription>
+<para>Template Deserialization function for JSON <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_JsonString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string containing the json</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the collection of objects red in the string</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="41" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="41" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1a5233d7417f3c227e9ce7a800ed9c70f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Database.Database.Database</definition>
+        <argsstring>()</argsstring>
+        <name>Database</name>
+        <briefdescription>
+<para>Constructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="97" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1a064ec094df732382ef9c75a20f89e5c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Get_HostsAndHostessesFromDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>Get_HostsAndHostessesFromDatabase</name>
+        <briefdescription>
+<para>Get all the hosts and hostesses from <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <simplesect kind="return"><para>The string containing all the hosts and hostesses</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="121" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="121" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1af1c3f38d9e135a21f5f1711681759878" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Edit_HostAndHostessToDatabase</definition>
+        <argsstring>(string _Id, string _FirstName, string _LastName, string _IdPaycheck, string _Phone, string _CellPhone, string _Email, string _Address, string _ZipCode, string _City, string _Sex, string _State, string _Country)</argsstring>
+        <name>Edit_HostAndHostessToDatabase</name>
+        <param>
+          <type>string</type>
+          <declname>_Id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_FirstName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_LastName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_IdPaycheck</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Phone</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_CellPhone</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Email</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Address</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_ZipCode</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_City</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Sex</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_State</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Country</declname>
+        </param>
+        <briefdescription>
+<para>Edit a host or hostess to the <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_FirstName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First name of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_LastName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Last name of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_IdPaycheck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the paycheck of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Phone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Phone of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_CellPhone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cell phone of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Fax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fax of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E-mail of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_ZipCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zip code of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_City</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>City of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Sex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>_Sex of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_State</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Country</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Country of the host or hostess</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing the result of the operation (OK, error)</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="152" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="152" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1ae4c9a2337a6be6fa3dba6dc9fe2e16fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Add_HostAndHostessToDatabase</definition>
+        <argsstring>(string _Id, string _FirstName, string _LastName, string _IdPaycheck, string _Phone, string _CellPhone, string _Email, string _Address, string _ZipCode, string _City, string _State, string _Sex, string _Country)</argsstring>
+        <name>Add_HostAndHostessToDatabase</name>
+        <param>
+          <type>string</type>
+          <declname>_Id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_FirstName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_LastName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_IdPaycheck</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Phone</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_CellPhone</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Email</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Address</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_ZipCode</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_City</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_State</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Sex</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>_Country</declname>
+        </param>
+        <briefdescription>
+<para>Add a host or hostess to the <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_FirstName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First name of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_LastName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Last name of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_IdPaycheck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the paycheck of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Phone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Phone of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_CellPhone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cell phone of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Fax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fax of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E-mail of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_ZipCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zip code of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_City</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>City of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Sex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sex of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_State</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State of the host or hostess</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_Country</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Country of the host or hostess</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing the result of the operation (Id of the contact created, error)</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="184" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="184" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1ac3f097293b209eed5b190d12608c2a93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Delete_HostAndHostessToDatabase</definition>
+        <argsstring>(string _Id)</argsstring>
+        <name>Delete_HostAndHostessToDatabase</name>
+        <param>
+          <type>string</type>
+          <declname>_Id</declname>
+        </param>
+        <briefdescription>
+<para>Delete a host or hostess to the <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the contact</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing the result of the operation (OK, error)</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="242" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="242" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1a52cb7a4a98a0b3e272c062266aadefbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Get_MissionsFromDatabaseDatabase</definition>
+        <argsstring>(bool _GetClosed)</argsstring>
+        <name>Get_MissionsFromDatabaseDatabase</name>
+        <param>
+          <type>bool</type>
+          <declname>_GetClosed</declname>
+        </param>
+        <briefdescription>
+<para>Get all the missions from <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_GetClosed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean indicating if closed missions should be pulled</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing all the missions</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="264" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="264" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1a6b5cfff4d435cdaac3343139985c266f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Get_MissionByIdFromDatabaseDatabase</definition>
+        <argsstring>(int _Id)</argsstring>
+        <name>Get_MissionByIdFromDatabaseDatabase</name>
+        <param>
+          <type>int</type>
+          <declname>_Id</declname>
+        </param>
+        <briefdescription>
+<para>Get the mission from its Id from <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the mission asked</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing the mission</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="282" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="282" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1a6d13fe1ce418b3ccb0c6d42bc7e010ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Edit_MissionToDatabase</definition>
+        <argsstring>(int _Id)</argsstring>
+        <name>Edit_MissionToDatabase</name>
+        <param>
+          <type>int</type>
+          <declname>_Id</declname>
+        </param>
+        <briefdescription>
+<para>Edit an mission to the <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the mission</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing the result of the operation (OK, error)</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="300" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="300" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1a4b04bb6e54d4247a9a3a4ccfda488553" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Add_MissionToDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>Add_MissionToDatabase</name>
+        <briefdescription>
+<para>Add a mission to the <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <simplesect kind="return"><para>The string containing the result of the operation (Id of the mission created, error)</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="317" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="317" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1aeddfd90f036aad75e2612587546ff66e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Delete_MissionToDatabase</definition>
+        <argsstring>(int _Id)</argsstring>
+        <name>Delete_MissionToDatabase</name>
+        <param>
+          <type>int</type>
+          <declname>_Id</declname>
+        </param>
+        <briefdescription>
+<para>Delete an mission to the <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the mission</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing the result of the operation (OK, error)</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="335" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="335" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1a4554ae4c157819d1605d29d09fd39f95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Close_Mission</definition>
+        <argsstring>(int _Id)</argsstring>
+        <name>Close_Mission</name>
+        <param>
+          <type>int</type>
+          <declname>_Id</declname>
+        </param>
+        <briefdescription>
+<para>Close a mission to the <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the mission</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing the result of the operation (OK, error)</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="353" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="353" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1acedf6101c3ad6e72aaceda9fee1ebe85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Reopen_Mission</definition>
+        <argsstring>(int _Id)</argsstring>
+        <name>Reopen_Mission</name>
+        <param>
+          <type>int</type>
+          <declname>_Id</declname>
+        </param>
+        <briefdescription>
+<para>Restore a mission to the <ref refid="namespace_zad_gestion" kindref="compound">ZadGestion</ref>&apos;s database <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the mission</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string containing the result of the operation (OK, error)</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="371" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="371" bodyend="382"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_database_1_1_database_1aafc49ac041a9c7d7b5c9a4aec952e4f2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Database.Database.Calculate_MD5Hash</definition>
+        <argsstring>()</argsstring>
+        <name>Calculate_MD5Hash</name>
+        <briefdescription>
+<para>Function which calculate the MD5 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input key</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The calculated key</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="62" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="62" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_database_1_1_database_1aeb3f2d1f9b68a6ba697a6c4dac1ef3f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Database.Database.InitConnection</definition>
+        <argsstring>()</argsstring>
+        <name>InitConnection</name>
+        <briefdescription>
+<para>Initialize the connection to the database </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="106" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="106" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class <ref refid="class_database_1_1_database" kindref="compound">Database</ref> containing all the databse stuff </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12">
+        <label>GeneralClasses.Handlers</label>
+        <link refid="class_general_classes_1_1_handlers"/>
+      </node>
+      <node id="11">
+        <label>Database.Database</label>
+        <link refid="class_database_1_1_database"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Global_Handler</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" line="18" column="1" bodyfile="C:/Users/Yohann/Desktop/software/ZadGestion/Database/Classes/Database.cs" bodystart="17" bodyend="386"/>
+    <listofallmembers>
+      <member refid="class_database_1_1_database_1ae4c9a2337a6be6fa3dba6dc9fe2e16fd" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Add_HostAndHostessToDatabase</name></member>
+      <member refid="class_database_1_1_database_1a4b04bb6e54d4247a9a3a4ccfda488553" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Add_MissionToDatabase</name></member>
+      <member refid="class_database_1_1_database_1aafc49ac041a9c7d7b5c9a4aec952e4f2" prot="private" virt="non-virtual"><scope>Database::Database</scope><name>Calculate_MD5Hash</name></member>
+      <member refid="class_database_1_1_database_1a4554ae4c157819d1605d29d09fd39f95" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Close_Mission</name></member>
+      <member refid="class_database_1_1_database_1a5233d7417f3c227e9ce7a800ed9c70f5" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Database</name></member>
+      <member refid="class_database_1_1_database_1ac3f097293b209eed5b190d12608c2a93" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Delete_HostAndHostessToDatabase</name></member>
+      <member refid="class_database_1_1_database_1aeddfd90f036aad75e2612587546ff66e" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Delete_MissionToDatabase</name></member>
+      <member refid="class_database_1_1_database_1ac33362cdb659c3a35f129d3833f8b881" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Deserialize_JSON&lt; T &gt;</name></member>
+      <member refid="class_database_1_1_database_1af1c3f38d9e135a21f5f1711681759878" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Edit_HostAndHostessToDatabase</name></member>
+      <member refid="class_database_1_1_database_1a6d13fe1ce418b3ccb0c6d42bc7e010ed" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Edit_MissionToDatabase</name></member>
+      <member refid="class_database_1_1_database_1a064ec094df732382ef9c75a20f89e5c5" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Get_HostsAndHostessesFromDatabase</name></member>
+      <member refid="class_database_1_1_database_1a6b5cfff4d435cdaac3343139985c266f" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Get_MissionByIdFromDatabaseDatabase</name></member>
+      <member refid="class_database_1_1_database_1a52cb7a4a98a0b3e272c062266aadefbc" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Get_MissionsFromDatabaseDatabase</name></member>
+      <member refid="class_database_1_1_database_1aeb3f2d1f9b68a6ba697a6c4dac1ef3f3" prot="private" virt="non-virtual"><scope>Database::Database</scope><name>InitConnection</name></member>
+      <member refid="class_database_1_1_database_1a9912a7615399a361c7b65afb866bbbc0" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>m_Global_Handler</name></member>
+      <member refid="class_database_1_1_database_1abaa9c68e0ae224c9c5cc96d4bb588634" prot="private" virt="non-virtual"><scope>Database::Database</scope><name>m_MySQLConnection</name></member>
+      <member refid="class_database_1_1_database_1acedf6101c3ad6e72aaceda9fee1ebe85" prot="public" virt="non-virtual"><scope>Database::Database</scope><name>Reopen_Mission</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

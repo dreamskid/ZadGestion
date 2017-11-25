@@ -1,0 +1,11 @@
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\bin\Release\WindowHostAndHostess.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\bin\Release\Common.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\bin\Release\Internet.dll
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Release\WindowHostAndHostess.csprojResolveAssemblyReference.cache
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Release\Forms\WindowHostAndHostess.baml
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Release\Forms\WindowHostAndHostess.g.cs
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Release\WindowHostAndHostess_MarkupCompile.cache
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Release\WindowHostAndHostess.g.resources
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Release\WindowHostAndHostess.Properties.Resources.resources
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Release\WindowHostAndHostess.csproj.GenerateResource.Cache
+C:\Users\Yohann\Desktop\software\ZadGestion\WindowContact\obj\Release\WindowHostAndHostess.dll

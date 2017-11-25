@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="namespace_general_classes" kind="namespace" language="C#">
+    <compoundname>GeneralClasses</compoundname>
+    <innerclass refid="class_general_classes_1_1_controls" prot="public">GeneralClasses::Controls</innerclass>
+    <innerclass refid="class_general_classes_1_1_date_and_time" prot="public">GeneralClasses::DateAndTime</innerclass>
+    <innerclass refid="class_general_classes_1_1_email" prot="public">GeneralClasses::Email</innerclass>
+    <innerclass refid="class_general_classes_1_1_error" prot="public">GeneralClasses::Error</innerclass>
+    <innerclass refid="class_general_classes_1_1_excel_generation" prot="public">GeneralClasses::ExcelGeneration</innerclass>
+    <innerclass refid="class_general_classes_1_1_files" prot="public">GeneralClasses::Files</innerclass>
+    <innerclass refid="class_general_classes_1_1_handlers" prot="public">GeneralClasses::Handlers</innerclass>
+    <innerclass refid="class_general_classes_1_1_images" prot="public">GeneralClasses::Images</innerclass>
+    <innerclass refid="class_general_classes_1_1_mapi_file_desc" prot="public">GeneralClasses::MapiFileDesc</innerclass>
+    <innerclass refid="class_general_classes_1_1_mapi_message" prot="public">GeneralClasses::MapiMessage</innerclass>
+    <innerclass refid="class_general_classes_1_1_mapi_recip_desc" prot="public">GeneralClasses::MapiRecipDesc</innerclass>
+    <innerclass refid="class_general_classes_1_1_resources_manager" prot="public">GeneralClasses::ResourcesManager</innerclass>
+    <innerclass refid="class_general_classes_1_1_word_generation" prot="public">GeneralClasses::WordGeneration</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Yohann/Desktop/software/ZadGestion/Common/GeneralClasses/Controls.cs" line="7" column="1"/>
+  </compounddef>
+</doxygen>
