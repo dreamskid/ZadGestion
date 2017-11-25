@@ -10,12 +10,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Xml;
 
-namespace WindowClients
+namespace WindowClient
 {
     /// <summary>
     /// Class MainWindow_Clients from the namespace WindowHostOrHostess
     /// </summary>
-    public partial class MainWindow_Clients : Window
+    public partial class MainWindow_Client : Window
     {
 
         #region Initialization
@@ -87,7 +87,7 @@ namespace WindowClients
         /// Functions
         /// Constructor for the host and hostess main window
         /// </summary>
-        public MainWindow_Clients(Handlers _Global_Handler, Database.Database _Database_Handler, XmlDocument _Cities_DocFrance,
+        public MainWindow_Client(Handlers _Global_Handler, Database.Database _Database_Handler, XmlDocument _Cities_DocFrance,
             bool _IsModification, Client _Client)
         {
             try
@@ -168,6 +168,7 @@ namespace WindowClients
                 Lbl_Client_ZipCode.Content = m_Global_Handler.Resources_Handler.Get_Resources("ZipCode");
 
                 //Languages specificities
+                Cmb_Client_Country.ItemsSource = Get_CountryList();
                 if (m_Global_Handler.Language_Handler == "en-US")
                 {
                     Lbl_Client_State.Visibility = Visibility.Visible;
@@ -443,7 +444,7 @@ namespace WindowClients
                                     if (childNode.Name == "table" && childNode.Attributes["name"].Value == "villes_france")
                                     {
                                         string zipCode = childNode.ChildNodes[7].InnerText;
-                                        if (zipCode == Txt_Client_ZipCode.Text)
+                                        if (zipCode.Contains(Txt_Client_ZipCode.Text))
                                         {
                                             string city = childNode.ChildNodes[4].InnerText;
                                             Cmb_Client_City.Items.Add(city);

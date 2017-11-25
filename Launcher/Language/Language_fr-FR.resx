@@ -182,7 +182,7 @@
     <comment>Texte de suppression de l'hôte/hôtesse</comment>
   </data>
   <data name="HostessConfirmDeleteCaption" xml:space="preserve">
-    <value>Suppresion hôte/hôtesse</value>
+    <value>Suppression hôte/hôtesse</value>
     <comment>Titre de suppression de l'hôte/hôtesse</comment>
   </data>
   <data name="HostessSelectedError" xml:space="preserve">
@@ -245,10 +245,6 @@
     <value>Prénom de l'hôte ou l'hôtesse</value>
     <comment>Prénom de l'hôte ou l'hôtesse</comment>
   </data>
-  <data name="Invoices" xml:space="preserve">
-    <value>Factures</value>
-    <comment>Factures</comment>
-  </data>
   <data name="LastName" xml:space="preserve">
     <value>Nom</value>
     <comment>Nom</comment>
@@ -301,11 +297,11 @@
     <value>Missions</value>
     <comment>Missions</comment>
   </data>
-  <data name="missionselectedError" xml:space="preserve">
+  <data name="MissionSelectedError" xml:space="preserve">
     <value>Veuillez sélectionner une mission</value>
     <comment>Texte d'erreur de selection de la mission</comment>
   </data>
-  <data name="missionselectedErrorCaption" xml:space="preserve">
+  <data name="MissionSelectedErrorCaption" xml:space="preserve">
     <value>Aucune mission sélectionné</value>
     <comment>Titre d'erreur de sélection de la mission</comment>
   </data>
@@ -360,10 +356,6 @@
   <data name="Description" xml:space="preserve">
     <value>Description</value>
     <comment>Description</comment>
-  </data>
-  <data name="Invoice" xml:space="preserve">
-    <value>Facture</value>
-    <comment>Facture</comment>
   </data>
   <data name="Mission" xml:space="preserve">
     <value>Mission</value>
@@ -759,7 +751,7 @@ Cordialement,</value>
   </data>
   <data name="HostessDeletionSecondaryMessage" xml:space="preserve">
     <value>L'hôte/hôtesse est en cours de suppression, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
-    <comment>Message secondaire d'attente de suppression du l'hôte/hôtesse</comment>
+    <comment>Message secondaire d'attente de suppression de l'hôte/hôtesse</comment>
   </data>
   <data name="HostOrHostessEditionPrincipalMessage" xml:space="preserve">
     <value>Modification de l'hôte/hôtesse en cours ...</value>
@@ -897,10 +889,6 @@ Cordialement,</value>
     <value>%AA</value>
     <comment>Format de l'année</comment>
   </data>
-  <data name="InvoicesNumerotationFormat" xml:space="preserve">
-    <value>Format de numérotation des factures</value>
-    <comment>Format de numérotation des factures</comment>
-  </data>
   <data name="Month" xml:space="preserve">
     <value>Mois</value>
     <comment>Mois</comment>
@@ -953,14 +941,6 @@ Cordialement,</value>
     <value>Prochain numéro de devis :</value>
     <comment>Prochain numéro de devis</comment>
   </data>
-  <data name="InvoiceNextNumerotation" xml:space="preserve">
-    <value>Prochaine facture:</value>
-    <comment>Prochaine facture</comment>
-  </data>
-  <data name="InvoicesNextNumber" xml:space="preserve">
-    <value>Prochain numéro de facture :</value>
-    <comment>Prochain numéro de facture</comment>
-  </data>
   <data name="OpenSoftPrincipalMessage" xml:space="preserve">
     <value>Ouverture du logiciel en cours, merci de patienter...</value>
     <comment>Message principal d'ouverture du logiciel</comment>
@@ -1001,70 +981,6 @@ Cordialement,</value>
     <value>Modifier la facture</value>
     <comment>Modifier la facture</comment>
   </data>
-  <data name="InvoiceContactNotFound" xml:space="preserve">
-    <value>Le contact associé à cette facture n'a pas été trouvé dans la base</value>
-    <comment>Texte contact non trouvé</comment>
-  </data>
-  <data name="InvoiceContactNotFoundCaption" xml:space="preserve">
-    <value>Contact non trouvé</value>
-    <comment>Titre contact non trouvé</comment>
-  </data>
-  <data name="InvoiceDate" xml:space="preserve">
-    <value>Date d'envoi de la facture</value>
-    <comment>Date d'envoi de la facture</comment>
-  </data>
-  <data name="InvoicePDFGenerationFailed" xml:space="preserve">
-    <value>La facture n'a pu être générée. Si cela se reproduit, merci de contacter le service client.</value>
-    <comment>Texte d'echec de la génération de la facture au format PDF</comment>
-  </data>
-  <data name="InvoicePDFGenerationFailedCaption" xml:space="preserve">
-    <value>Echec de la génération de la facture</value>
-    <comment>Titre d'echec de la génération de la facture au format PDF</comment>
-  </data>
-  <data name="InvoicePDFGenerationPrincipalMessage" xml:space="preserve">
-    <value>Génération de la facture au format PDF en cours ...</value>
-    <comment>Génération de la facture au format PDF en cours</comment>
-  </data>
-  <data name="InvoicePDFGenerationSecondaryMessage" xml:space="preserve">
-    <value>La facture est en cours de génération, merci de patienter jusqu'à l'ouverture automatique du fichier PDF.</value>
-    <comment>Texte d'attente de génération de la facture</comment>
-  </data>
-  <data name="InvoicePDFGenerationSuccesCaption" xml:space="preserve">
-    <value>Génération de la facture terminée</value>
-    <comment>Titre de succès de génération de la facture au format PDF</comment>
-  </data>
-  <data name="InvoicePDFGenerationSuccess" xml:space="preserve">
-    <value>La facture a été généré avec succès</value>
-    <comment>Texte de succès de génération de la facture au format PDF</comment>
-  </data>
-  <data name="InvoicePDFOpenConfirmation" xml:space="preserve">
-    <value>Voulez-vous visualiser la facture au format PDF ?</value>
-    <comment>Texte de demande de visualisation de la facture au format pdf</comment>
-  </data>
-  <data name="InvoicePDFOpenConfirmationCaption" xml:space="preserve">
-    <value>Ouverture de la facture</value>
-    <comment>Titre de demande de visualisation de la facture au format pdf</comment>
-  </data>
-  <data name="InvoicesConfirmShowAll" xml:space="preserve">
-    <value>Êtes-vous sûr(e) de vouloir  visualiser toutes les factures ?</value>
-    <comment>Texte de confirmation de visualisation de toutes les factures</comment>
-  </data>
-  <data name="InvoicesConfirmShowAllCaption" xml:space="preserve">
-    <value>Visualiser toutes les factures</value>
-    <comment>Titre de confirmation de visualisation de toutes les facture</comment>
-  </data>
-  <data name="InvoiceSelectedError" xml:space="preserve">
-    <value>Veuillez sélectionner une facture</value>
-    <comment>Texte d'erreur de selection de la facture</comment>
-  </data>
-  <data name="InvoiceSelectedErrorCaption" xml:space="preserve">
-    <value>Aucune facture sélectionnée</value>
-    <comment>Titre d'erreur de sélection de la facture</comment>
-  </data>
-  <data name="InvoiceSubject" xml:space="preserve">
-    <value>Objet de la facture</value>
-    <comment>Objet de la facture</comment>
-  </data>
   <data name="TermDate" xml:space="preserve">
     <value>Date d'échéance</value>
     <comment>Date d'échéance</comment>
@@ -1073,33 +989,9 @@ Cordialement,</value>
     <value>Sélection de la date d'échéance</value>
     <comment>Sélection de la date d'échéance</comment>
   </data>
-  <data name="InvoiceCreation" xml:space="preserve">
-    <value>Création de facture</value>
-    <comment>Création de facture</comment>
-  </data>
-  <data name="InvoiceConfirmDelete" xml:space="preserve">
-    <value>Êtes-vous sûr(e) de vouloir supprimer la facture sélectionnée ?</value>
-    <comment>Texte de suppression de facture</comment>
-  </data>
-  <data name="InvoiceConfirmDeleteCaption" xml:space="preserve">
-    <value>Suppresion d'une facture</value>
-    <comment>Titre de suppression de facture</comment>
-  </data>
-  <data name="InvoiceDeletionPrincipalMessage" xml:space="preserve">
-    <value>Suppression de la facture en cours ...</value>
-    <comment>Message principal d'attente de suppression de la facture</comment>
-  </data>
-  <data name="InvoiceDeletionSecondaryMessage" xml:space="preserve">
-    <value>La facture est en cours de suppression, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
-    <comment>Message secondaire d'attente de suppression de la facture</comment>
-  </data>
   <data name="DueDate" xml:space="preserve">
     <value>Date d'échéance</value>
     <comment>Date d'échéance</comment>
-  </data>
-  <data name="InvoiceNumber" xml:space="preserve">
-    <value>Numéro de la facture</value>
-    <comment>Numéro de la facture</comment>
   </data>
   <data name="Advance" xml:space="preserve">
     <value>Acompte</value>
@@ -1153,14 +1045,6 @@ Cordialement,</value>
     <value>Missions en cours</value>
     <comment>Missions en cours</comment>
   </data>
-  <data name="InvoiceCreationPrincipalMessage" xml:space="preserve">
-    <value>Création de la facture en cours...</value>
-    <comment>Message principal d'attente lors de création de la facture</comment>
-  </data>
-  <data name="InvoiceCreationSecondaryMessage" xml:space="preserve">
-    <value>Merci de patienter lors de la création et de l'export dans la base de données de la facture</value>
-    <comment>Message secondaire d'attente lors de création de la facture</comment>
-  </data>
   <data name="Restore" xml:space="preserve">
     <value>Restaurer</value>
     <comment>Resturer</comment>
@@ -1168,14 +1052,6 @@ Cordialement,</value>
   <data name="ArchiveDate" xml:space="preserve">
     <value>Date d'archivage</value>
     <comment>Date d'archivage</comment>
-  </data>
-  <data name="InvoicesShowArchives" xml:space="preserve">
-    <value>Factures archivées</value>
-    <comment>Factures archivées</comment>
-  </data>
-  <data name="InvoicesShowInProgress" xml:space="preserve">
-    <value>Factures en cours</value>
-    <comment>Factures en cours</comment>
   </data>
   <data name="AddPayment" xml:space="preserve">
     <value>Ajouter un paiement</value>
@@ -1188,18 +1064,6 @@ Cordialement,</value>
   <data name="MissionAssociateToInvoiceCaption" xml:space="preserve">
     <value>Devis associé à une facture</value>
     <comment>Titre d'erreur de modification de devis associé à une facture</comment>
-  </data>
-  <data name="InvoiceDueDate" xml:space="preserve">
-    <value>Date d'échéance</value>
-    <comment>Date d'échéance</comment>
-  </data>
-  <data name="InvoiceEditionPrincipalMessage" xml:space="preserve">
-    <value>Modification de la facture en cours ...</value>
-    <comment>Message principal d'attente de modification de la facture</comment>
-  </data>
-  <data name="InvoiceEditionSecondaryMessage" xml:space="preserve">
-    <value>La facture est en cours de modification et sauvegardé dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
-    <comment>Message secondaire d'attente de modification de la facture</comment>
   </data>
   <data name="Card" xml:space="preserve">
     <value>Carte bancaire</value>
@@ -1221,30 +1085,6 @@ Cordialement,</value>
     <value>Date du paiement</value>
     <comment>Date du paiement</comment>
   </data>
-  <data name="InvoiceAddPaymentNoAmountCaption" xml:space="preserve">
-    <value>Absence de montant</value>
-    <comment>Titre d'erreur d'absence de montant</comment>
-  </data>
-  <data name="InvoiceAddPaymentNoAmountText" xml:space="preserve">
-    <value>Veuillez entrer un montant pour le paiement</value>
-    <comment>Texte d'erreur d'absence de montant</comment>
-  </data>
-  <data name="InvoiceArchivePrincipalMessage" xml:space="preserve">
-    <value>Archivage de la facture en cours...</value>
-    <comment>Message principal d'attente lors de l'archivage de la facture</comment>
-  </data>
-  <data name="InvoiceArchiveSecondaryMessage" xml:space="preserve">
-    <value>Merci de patienter lors de l'archivage et de l'enregistrement dans la base de données de la facture. la mission associé est automatiquement archivé.</value>
-    <comment>Message secondaire d'attente lors de l'archivage de la facture</comment>
-  </data>
-  <data name="InvoiceRestorePrincipalMessage" xml:space="preserve">
-    <value>Restauration de la facture en cours...</value>
-    <comment>Message principal d'attente lors de la restauration de la facture</comment>
-  </data>
-  <data name="InvoiceRestoreSecondaryMessage" xml:space="preserve">
-    <value>Merci de patienter lors de la restauration et de l'enregistrement dans la base de données de la facture</value>
-    <comment>Message secondaire d'attente lors de la restauration de la facture</comment>
-  </data>
   <data name="PaymentMethod" xml:space="preserve">
     <value>Moyen de paiement</value>
     <comment>Moyen de paiement</comment>
@@ -1260,14 +1100,6 @@ Cordialement,</value>
   <data name="Wire" xml:space="preserve">
     <value>Virement</value>
     <comment>Virement</comment>
-  </data>
-  <data name="InvoiceDeletePaymentCaption" xml:space="preserve">
-    <value>Suppression du paiement</value>
-    <comment>Titre de demande de suppression du paiement</comment>
-  </data>
-  <data name="InvoiceDeletePaymentText" xml:space="preserve">
-    <value>Êtes-vous sûr(e) de vouloir supprimer le paiement ?</value>
-    <comment>Texte de demande de suppression du paiement</comment>
   </data>
   <data name="MissionAssociateToInProgressInvoice" xml:space="preserve">
     <value>Cette mission est associé à une facture en cours</value>
@@ -1349,14 +1181,6 @@ Cordialement,</value>
     <value>Merci de patienter lors de la vérification, du téléchargement et de l'application des mises à jours si disponible</value>
     <comment>Message secondaire d'attente lors de la mise à jour du logiciel</comment>
   </data>
-  <data name="InvoiceMailBody" xml:space="preserve">
-    <value>Bonjour,
-
-Vous trouverez en pièce-jointe la facture attendue.
-
-Cordialement,</value>
-    <comment>Corps du mail pour l'envoi d'une facture</comment>
-  </data>
   <data name="MissionPDFSendEmailCaption" xml:space="preserve">
     <value>Confirmation d'envoi de la mission</value>
     <comment>Titre de confirmation d'envoi de la mission</comment>
@@ -1364,14 +1188,6 @@ Cordialement,</value>
   <data name="MissionPDFSendEmailConfirmation" xml:space="preserve">
     <value>Voulez-vous toujours envoyer la mission ?</value>
     <comment>Texte de confirmation d'envoi de la mission</comment>
-  </data>
-  <data name="InvoicePDFSendEmailCaption" xml:space="preserve">
-    <value>Confirmation d'envoi de la facture</value>
-    <comment>Titre de confirmation d'envoi de la facture</comment>
-  </data>
-  <data name="InvoicePDFSendEmailConfirmation" xml:space="preserve">
-    <value>Voulez-vous toujours envoyer la facture ?</value>
-    <comment>Texte de confirmation d'envoi de la facture</comment>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>Profil</value>
@@ -1392,26 +1208,6 @@ Cordialement,</value>
   <data name="Name" xml:space="preserve">
     <value>Nom</value>
     <comment>Nom</comment>
-  </data>
-  <data name="CreditNoteNextNumber" xml:space="preserve">
-    <value>Prochain numéro d'avoir :</value>
-    <comment>Prochain numéro d'avoir</comment>
-  </data>
-  <data name="CreditNoteNextNumerotation" xml:space="preserve">
-    <value>Prochain avoir:</value>
-    <comment>Prochain avoir</comment>
-  </data>
-  <data name="CreditNoteNumerotationFormat" xml:space="preserve">
-    <value>Format de numérotation des avoirs</value>
-    <comment>Format de numérotation des avoirs</comment>
-  </data>
-  <data name="Credit" xml:space="preserve">
-    <value>Avoir</value>
-    <comment>Avoir</comment>
-  </data>
-  <data name="Credits" xml:space="preserve">
-    <value>Avoirs</value>
-    <comment>Avoirs</comment>
   </data>
   <data name="PickDate" xml:space="preserve">
     <value>Choix de la date</value>
@@ -1457,22 +1253,6 @@ Cordialement,</value>
     <value>Synthèse des missions non générée</value>
     <comment>Titre d'erreur de non génération de la synthèse des missions</comment>
   </data>
-  <data name="InvoicesExcelGenerationPrincipalMessage" xml:space="preserve">
-    <value>Génération de la synthèse des factures en cours...</value>
-    <comment>Message principal d'attente lors de la génération de la synthèse des factures</comment>
-  </data>
-  <data name="InvoicesExcelGenerationSecondaryMessage" xml:space="preserve">
-    <value>Veuillez patienter lors de la génération de la synthèse des factures jusqu'à l'ouverture de Microsoft Excel®</value>
-    <comment>Message secondaire d'attente lors de la génération de la synthèse des factures</comment>
-  </data>
-  <data name="InvoicesStatementExcelGenerationFailed" xml:space="preserve">
-    <value>La synthèse des factures n'a pu être générée. Si cela se reproduit, veuillez contacter le service client.</value>
-    <comment>Texte d'erreur de non génération de la synthèse des factures</comment>
-  </data>
-  <data name="InvoicesStatementExcelGenerationFailedCaption" xml:space="preserve">
-    <value>Synthèse des factures non générée</value>
-    <comment>Titre d'erreur de non génération de la synthèse des factures</comment>
-  </data>
   <data name="MicrosoftExcelNotFound" xml:space="preserve">
     <value>Microsoft Excel® n'a pu démarré. Verifiez si votre installation d'Office est correcte</value>
     <comment>Texte d'erreur Excel non trouvé</comment>
@@ -1507,46 +1287,6 @@ Voulez-vous continuer l'importation ?</value>
     <value>Créer un avoir</value>
     <comment>Créer un avoir</comment>
   </data>
-  <data name="CreditNoteCreationPrincipalMessage" xml:space="preserve">
-    <value>Création de l'avoir en cours...</value>
-    <comment>Message principal d'attente lors de création de l'avoir</comment>
-  </data>
-  <data name="CreditNoteCreationSecondaryMessage" xml:space="preserve">
-    <value>Merci de patienter lors de la création et de l'export dans la base de données de l'avoir</value>
-    <comment>Message secondaire d'attente lors de création de l'avoir</comment>
-  </data>
-  <data name="CreditNoteDate" xml:space="preserve">
-    <value>Date d'envoi de l'avoir</value>
-    <comment>Date d'envoi de l'avoir</comment>
-  </data>
-  <data name="CreditNotesShowArchives" xml:space="preserve">
-    <value>Avoirs archivés</value>
-    <comment>Avoirs archivés</comment>
-  </data>
-  <data name="CreditNotesShowInProgress" xml:space="preserve">
-    <value>Avoirs en cours</value>
-    <comment>Avoirs en cours</comment>
-  </data>
-  <data name="CreditNumber" xml:space="preserve">
-    <value>Numéro de l'avoir</value>
-    <comment>Numéro de l'avoir</comment>
-  </data>
-  <data name="CreditSubject" xml:space="preserve">
-    <value>Objet de l'avoir</value>
-    <comment>Objet de l'avoir</comment>
-  </data>
-  <data name="InvoiceAssociateToArchivedCreditNote" xml:space="preserve">
-    <value>Cette facture est associée à un avoir archivé</value>
-    <comment>Facture déjà associée à un avoir archivé</comment>
-  </data>
-  <data name="InvoiceAssociateToCreditNoteCaption" xml:space="preserve">
-    <value>Facture associée à un avoir</value>
-    <comment>Facture associée à un avoir</comment>
-  </data>
-  <data name="InvoiceAssociateToInProgressCreditNote" xml:space="preserve">
-    <value>Cette facture est associée à un avoir en cours</value>
-    <comment>Facture déjà associée à un avoir en cours</comment>
-  </data>
   <data name="PaidDate" xml:space="preserve">
     <value>Date de paiement</value>
     <comment>Date de paiement</comment>
@@ -1571,113 +1311,9 @@ Voulez-vous continuer l'importation ?</value>
     <value>Montant TVA</value>
     <comment>Montant TVA</comment>
   </data>
-  <data name="CreditNoteConfirmDelete" xml:space="preserve">
-    <value>Êtes-vous sûr(e) de vouloir supprimer l'avoir sélectionné ?</value>
-    <comment>Texte de suppression de l'avoir</comment>
-  </data>
-  <data name="CreditNoteConfirmDeleteCaption" xml:space="preserve">
-    <value>Suppresion d'un avoir</value>
-    <comment>Titre de suppression de l'avoir</comment>
-  </data>
-  <data name="CreditNoteContactNotFound" xml:space="preserve">
-    <value>Le contact associé à cet avoir n'a pas été trouvé dans la base</value>
-    <comment>Texte contact non trouvé</comment>
-  </data>
-  <data name="CreditNoteContactNotFoundCaption" xml:space="preserve">
-    <value>Contact non trouvé</value>
-    <comment>Titre contact non trouvé</comment>
-  </data>
-  <data name="CreditNoteDeletionPrincipalMessage" xml:space="preserve">
-    <value>Suppression de l'avoir en cours ...</value>
-    <comment>Message principal d'attente de suppression de l'avoir</comment>
-  </data>
-  <data name="CreditNoteDeletionSecondaryMessage" xml:space="preserve">
-    <value>L'avoir est en cours de suppression, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
-    <comment>Message secondaire d'attente de suppression de l'avoir</comment>
-  </data>
-  <data name="CreditNoteMailBody" xml:space="preserve">
-    <value>Bonjour,
-
-Vous trouverez en pièce-jointe l'avoir attendu.
-
-Cordialement,</value>
-    <comment>Corps du mail pour l'envoi d'un avoir</comment>
-  </data>
-  <data name="CreditNotePDFGenerationFailed" xml:space="preserve">
-    <value>L'avoir n'a pu être généré. Si cela se reproduit, merci de contacter le service client.</value>
-    <comment>Texte d'echec de la génération de l'avoir au format PDF</comment>
-  </data>
-  <data name="CreditNotePDFGenerationFailedCaption" xml:space="preserve">
-    <value>Echec de la génération de l'avoir</value>
-    <comment>Titre d'echec de la génération de l'avoir au format PDF</comment>
-  </data>
-  <data name="CreditNotePDFGenerationPrincipalMessage" xml:space="preserve">
-    <value>Génération de l'avoir au format PDF en cours ...</value>
-    <comment>Génération de l'avoir au format PDF en cours</comment>
-  </data>
-  <data name="CreditNotePDFGenerationSecondaryMessage" xml:space="preserve">
-    <value>L'avoir est en cours de génération, merci de patienter jusqu'à l'ouverture automatique du fichier PDF.</value>
-    <comment>Texte d'attente de génération de l'avoir</comment>
-  </data>
-  <data name="CreditNotePDFOpenConfirmation" xml:space="preserve">
-    <value>Voulez-vous visualiser l'avoir au format PDF ?</value>
-    <comment>Texte de demande de visualisation de l'avoir au format pdf</comment>
-  </data>
-  <data name="CreditNotePDFOpenConfirmationCaption" xml:space="preserve">
-    <value>Ouverture de l'avoir</value>
-    <comment>Titre de demande de visualisation de l'avoir au format pdf</comment>
-  </data>
-  <data name="CreditNotePDFSendEmailCaption" xml:space="preserve">
-    <value>Confirmation d'envoi de l'avoir</value>
-    <comment>Titre de confirmation d'envoi de l'avoir</comment>
-  </data>
-  <data name="CreditNotePDFSendEmailConfirmation" xml:space="preserve">
-    <value>Voulez-vous toujours envoyer l'avoir ?</value>
-    <comment>Texte de confirmation d'envoi de l'avoir</comment>
-  </data>
-  <data name="CreditNoteSelectedError" xml:space="preserve">
-    <value>Veuillez sélectionner un avoir</value>
-    <comment>Texte d'erreur de selection de l'avoir</comment>
-  </data>
-  <data name="CreditNoteSelectedErrorCaption" xml:space="preserve">
-    <value>Aucun avoir sélectionné</value>
-    <comment>Titre d'erreur de sélection de l'avoir</comment>
-  </data>
   <data name="CustomerID" xml:space="preserve">
     <value>ID client</value>
     <comment>ID client</comment>
-  </data>
-  <data name="CreditNoteArchivePrincipalMessage" xml:space="preserve">
-    <value>Archivage de l'avoir en cours...</value>
-    <comment>Message principal d'attente lors de l'archivage de l'avoir</comment>
-  </data>
-  <data name="CreditNoteArchiveSecondaryMessage" xml:space="preserve">
-    <value>Merci de patienter lors de l'archivage et de l'enregistrement dans la base de données de l'avoir</value>
-    <comment>Message secondaire d'attente lors de l'archivage de l'avoir</comment>
-  </data>
-  <data name="CreditNoteEditionPrincipalMessage" xml:space="preserve">
-    <value>Modification de l'avoir en cours ...</value>
-    <comment>Message principal d'attente de modification de l'avoir</comment>
-  </data>
-  <data name="CreditNoteEditionSecondaryMessage" xml:space="preserve">
-    <value>L'avoir est en cours de modification et sauvegardé dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
-    <comment>Message secondaire d'attente de modification de l'avoir</comment>
-  </data>
-  <data name="CreditNoteRestorePrincipalMessage" xml:space="preserve">
-    <value>Restauration de l'avoir en cours...</value>
-    <comment>Message principal d'attente lors de la restauration de l'avoir</comment>
-  </data>
-  <data name="CreditNoteRestoreSecondaryMessage" xml:space="preserve">
-    <value>Merci de patienter lors de la restauration et de l'enregistrement dans la base de données de l'avoir</value>
-    <comment>Message secondaire d'attente lors de la restauration de l'avoir</comment>
-  </data>
-  <data name="CreditNoteSubjectMissingSubject" xml:space="preserve">
-    <value>Le champ 'Objet' doit être rempli afin d'apparaître sur l'avoir</value>
-    <comment>Texte d'erreur de champ objet manquant lors de l'édition de l'avoir</comment>
-  </data>
-  <data name="CreditNoteSubjectMissingSubjectCaption" xml:space="preserve">
-    <value>Champ manquant</value>
-    <comment>Titre d'erreur de champ objet manquant lors de l'édition de l'avoir</comment>
   </data>
   <data name="Statistics" xml:space="preserve">
     <value>Statistiques</value>
@@ -1730,18 +1366,6 @@ Cordialement,</value>
   <data name="GlobalDiscountGeneration2" xml:space="preserve">
     <value>% a été appliquée.</value>
     <comment>Seconde partie du texte de la génération de la remise globale</comment>
-  </data>
-  <data name="InvoiceAddPaymentNoPaymentMethodCaption" xml:space="preserve">
-    <value>Absence de moyen de paiement</value>
-    <comment>Titre d'absence de moyen de paiement</comment>
-  </data>
-  <data name="InvoiceAddPaymentNoPaymentMethodText" xml:space="preserve">
-    <value>Veuillez sélectionner un moyen de paiement</value>
-    <comment>Text d'absence de moyen de paiement</comment>
-  </data>
-  <data name="InvoicePaidDate" xml:space="preserve">
-    <value>Date de paiement</value>
-    <comment>Date de paiement</comment>
   </data>
   <data name="DeclinedDate" xml:space="preserve">
     <value>Date de refus</value>
@@ -1860,33 +1484,9 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Septembre</value>
     <comment>Septembre</comment>
   </data>
-  <data name="InvoicesCreated" xml:space="preserve">
-    <value>Factures créées</value>
-    <comment>Factures créées</comment>
-  </data>
-  <data name="InvoicesInprogress" xml:space="preserve">
-    <value>Factures en cours</value>
-    <comment>Factures en cours</comment>
-  </data>
-  <data name="InvoicesNumber" xml:space="preserve">
-    <value>Nombre de factures</value>
-    <comment>Nombre de factures</comment>
-  </data>
-  <data name="InvoicesPaid" xml:space="preserve">
-    <value>Factures payées</value>
-    <comment>Factures payées</comment>
-  </data>
-  <data name="InvoicesUnpaid" xml:space="preserve">
-    <value>Factures impayées</value>
-    <comment>Factures impayées</comment>
-  </data>
   <data name="StatisticsInvoices" xml:space="preserve">
     <value>Nombre de factures par statut et par mois pour l'année</value>
     <comment>Nombre de factures par statut et par mois pour l'année sélectionnée</comment>
-  </data>
-  <data name="InvoicesDueDate" xml:space="preserve">
-    <value>Echéance factures</value>
-    <comment>Echéance factures</comment>
   </data>
   <data name="ExcelNotPresentErrorCaption" xml:space="preserve">
     <value>Microsoft Excel® absent</value>
@@ -1895,14 +1495,6 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="ExcelNotPresentErrorText" xml:space="preserve">
     <value>Microsoft Excel® n'est pas présent, merci de l'installer afin d'utiliser ZadGestion</value>
     <comment>Texte d'erreur d'absence d'Excel</comment>
-  </data>
-  <data name="InvoiceShowInProgressPrincipalMessage" xml:space="preserve">
-    <value>Actualisation des factures en cours...</value>
-    <comment>Message principal d'actualisation des factures en cours</comment>
-  </data>
-  <data name="InvoiceShowInProgressSecondaryMessage" xml:space="preserve">
-    <value>Actualisation des factures en cours depuis la base de données. Merci de patienter jusqu'à la fermeture de cette fenêtre, selon le nombre de factures, cette opération peut prendre quelques minutes</value>
-    <comment>Message secondaire d'actualisation des factures en cours</comment>
   </data>
   <data name="WordNotPresentErrorCaption" xml:space="preserve">
     <value>Microsoft Word® absent</value>
@@ -1919,10 +1511,6 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="MissionshowInProgressSecondaryMessage" xml:space="preserve">
     <value>Actualisation des missions en cours depuis la base de données. Merci de patienter jusqu'à la fermeture de cette fenêtre, selon le nombre de devis, cette opération peut prendre quelques minutes</value>
     <comment>Message secondaire d'actualisation des missions en cours</comment>
-  </data>
-  <data name="InvoicesEvolution" xml:space="preserve">
-    <value>Factures - Evolution</value>
-    <comment>Factures - Evolution</comment>
   </data>
   <data name="StatisticsInvoicesEvolution" xml:space="preserve">
     <value>Evolution du nombre de factures par statut le long de l'année</value>
@@ -1960,42 +1548,6 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Utilisé(e)</value>
     <comment>Utilisé(e)</comment>
   </data>
-  <data name="CreditNoteCreated" xml:space="preserve">
-    <value>Créé</value>
-    <comment>Créé</comment>
-  </data>
-  <data name="CreditNoteGenerated" xml:space="preserve">
-    <value>Généré</value>
-    <comment>Généré</comment>
-  </data>
-  <data name="CreditNoteSent" xml:space="preserve">
-    <value>Envoyé</value>
-    <comment>Envoyé</comment>
-  </data>
-  <data name="CreditNoteUsed" xml:space="preserve">
-    <value>Utilisé</value>
-    <comment>Utilisé</comment>
-  </data>
-  <data name="InvoiceCreated" xml:space="preserve">
-    <value>Créée</value>
-    <comment>Créée</comment>
-  </data>
-  <data name="InvoiceGenerated" xml:space="preserve">
-    <value>Généréé</value>
-    <comment>Générée</comment>
-  </data>
-  <data name="InvoicePaid" xml:space="preserve">
-    <value>Payée</value>
-    <comment>Payée</comment>
-  </data>
-  <data name="InvoiceSent" xml:space="preserve">
-    <value>Envoyée</value>
-    <comment>Envoyée</comment>
-  </data>
-  <data name="InvoiceUnpaid" xml:space="preserve">
-    <value>Impayée</value>
-    <comment>Impayée</comment>
-  </data>
   <data name="SubjectMissingCaption" xml:space="preserve">
     <value>Object manquant</value>
     <comment>Titre d'erreur d'objet manquant</comment>
@@ -2003,42 +1555,6 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="SubjectMissingText" xml:space="preserve">
     <value>Veuillez rajouter un objet s'il vous plait dans le champ correspondant</value>
     <comment>Texte d'erreur d'objet manquant</comment>
-  </data>
-  <data name="CreditNoteLegendCreated" xml:space="preserve">
-    <value>Créé</value>
-    <comment>Créé</comment>
-  </data>
-  <data name="CreditNoteLegendGenerated" xml:space="preserve">
-    <value>Généré</value>
-    <comment>Généré</comment>
-  </data>
-  <data name="CreditNoteLegendSent" xml:space="preserve">
-    <value>Envoyé</value>
-    <comment>Envoyé</comment>
-  </data>
-  <data name="CreditNoteLegendUsed" xml:space="preserve">
-    <value>Utilisé</value>
-    <comment>Utilisé</comment>
-  </data>
-  <data name="CreditNotesExcelGenerationPrincipalMessage" xml:space="preserve">
-    <value>Génération de la synthèse des avoirs en cours...</value>
-    <comment>Message principal d'attente lors de la génération de la synthèse des avoirs</comment>
-  </data>
-  <data name="CreditNotesExcelGenerationSecondaryMessage" xml:space="preserve">
-    <value>Veuillez patienter lors de la génération de la synthèse des avoirs jusqu'à l'ouverture de Microsoft Excel®</value>
-    <comment>Message secondaire d'attente lors de la génération de la synthèse des avoirs</comment>
-  </data>
-  <data name="CreditNotes" xml:space="preserve">
-    <value>Avoirs</value>
-    <comment>Avoirs</comment>
-  </data>
-  <data name="CreditNotesStatementExcelGenerationFailedCaption" xml:space="preserve">
-    <value>Synthèse des avoirs non générée</value>
-    <comment>Titre d'erreur de non génération de la synthèse des avoirs</comment>
-  </data>
-  <data name="CredtNotesStatementExcelGenerationFailed" xml:space="preserve">
-    <value>La synthèse des avoirs n'a pu être générée. Si cela se reproduit, veuillez contacter le service client.</value>
-    <comment>Texte d'erreur de non génération de la synthèse des avoirs</comment>
   </data>
   <data name="UsedDate" xml:space="preserve">
     <value>Date d'utilisation</value>
@@ -2087,22 +1603,6 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="MissionshowArchivedSecondaryMessage" xml:space="preserve">
     <value>Actualisation des missions archivés depuis la base de données. Merci de patienter jusqu'à la fermeture de cette fenêtre, selon le nombre de devis, cette opération peut prendre quelques minutes</value>
     <comment>Message secondaire d'actualisation des missions archivés</comment>
-  </data>
-  <data name="InvoiceGetMissionPrincipalMessage" xml:space="preserve">
-    <value>Récupération de la mission en cours</value>
-    <comment>Message principal de récupération de la mission</comment>
-  </data>
-  <data name="InvoiceGetMissionsecondaryMessage" xml:space="preserve">
-    <value>la mission associé à cette facture est en cours de récupération. Merci de patienter jusqu'`a la fermeture de cette fenêtre</value>
-    <comment>Message secondaire de récupération de la mission</comment>
-  </data>
-  <data name="InvoiceShowArchivedPrincipalMessage" xml:space="preserve">
-    <value>Actualisation des factures archivées...</value>
-    <comment>Message principal d'actualisation des factures archivées</comment>
-  </data>
-  <data name="InvoiceShowArchivedSecondaryMessage" xml:space="preserve">
-    <value>Actualisation des factures archivées depuis la base de données. Merci de patienter jusqu'à la fermeture de cette fenêtre, selon le nombre de factures, cette opération peut prendre quelques minutes</value>
-    <comment>Message secondaire d'actualisation des factures archivées</comment>
   </data>
   <data name="SeeCredit" xml:space="preserve">
     <value>Voir l'avoir</value>
@@ -2359,5 +1859,73 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="Yes" xml:space="preserve">
     <value>Oui</value>
     <comment>Oui</comment>
+  </data>
+  <data name="ClientConfirmDelete" xml:space="preserve">
+    <value>Êtes-vous sûr(e) de vouloir supprimer le client sélectionné(e) ?</value>
+    <comment>Texte de suppression du client</comment>
+  </data>
+  <data name="ClientConfirmDeleteCaption" xml:space="preserve">
+    <value>Suppression client</value>
+    <comment>Titre de suppression du client</comment>
+  </data>
+  <data name="ClientCreationPrincipalMessage" xml:space="preserve">
+    <value>Création du client en cours...</value>
+    <comment>Message principal d'attente de création du client</comment>
+  </data>
+  <data name="ClientCreationSecondaryMessage" xml:space="preserve">
+    <value>Le client est en cours de création et sauvegardé(e) dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
+    <comment>Message secondaire d'attente de création du client</comment>
+  </data>
+  <data name="ClientDeletionPrincipalMessage" xml:space="preserve">
+    <value>Suppression du client en cours ...</value>
+    <comment>Message principal d'attente de suppression du client</comment>
+  </data>
+  <data name="ClientDeletionSecondaryMessage" xml:space="preserve">
+    <value>Le client est en cours de suppression, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
+    <comment>Message secondaire d'attente de suppression du client</comment>
+  </data>
+  <data name="ClientEmailPrincipalMessage" xml:space="preserve">
+    <value>Lancement de votre application d'e-mailing par défaut...</value>
+    <comment>Message principal lors du click sur le bouton email du client</comment>
+  </data>
+  <data name="ClientEmailSecondaryMessage" xml:space="preserve">
+    <value>Si une application d'e-mailing est installée sur votre ordinateur, l'application est lancée, merci de patienter</value>
+    <comment>Message secondaire lors du click sur le bouton email du client</comment>
+  </data>
+  <data name="ClientExcelGenerationPrincipalMessage" xml:space="preserve">
+    <value>Génération de la synthèse des clients en cours...</value>
+    <comment>Message principal d'attente lors de la génération de la synthèse des clients</comment>
+  </data>
+  <data name="ClientExcelGenerationSecondaryMessage" xml:space="preserve">
+    <value>Veuillez patienter lors de la génération de la synthèse des clients jusqu'à l'ouverture de Microsoft Excel®</value>
+    <comment>Message secondaire d'attente lors de la génération de la synthèse des clients</comment>
+  </data>
+  <data name="ClientID" xml:space="preserve">
+    <value>ID client</value>
+    <comment>ID client</comment>
+  </data>
+  <data name="ClientPhonePrincipalMessage" xml:space="preserve">
+    <value>Lancement de Skype...</value>
+    <comment>Message principal lors du click sur le bouton téléphone du client</comment>
+  </data>
+  <data name="ClientPhoneSecondaryMessage" xml:space="preserve">
+    <value>Si Skype est installée sur votre ordinateur, l'application est lancée, merci de patienter</value>
+    <comment>Message secondaire lors du click sur le bouton téléphone du client</comment>
+  </data>
+  <data name="ClientSelectedError" xml:space="preserve">
+    <value>Veuillez sélectionner un client</value>
+    <comment>Veuillez sélectionner un client</comment>
+  </data>
+  <data name="ClientSelectedErrorCaption" xml:space="preserve">
+    <value>Aucun client sélectionné</value>
+    <comment>Titre d'erreur de sélection du client</comment>
+  </data>
+  <data name="CorporateName" xml:space="preserve">
+    <value>Nom de la société</value>
+    <comment>Nom de la société</comment>
+  </data>
+  <data name="CorporateNumber" xml:space="preserve">
+    <value>Numéro de la société</value>
+    <comment>Numéro de la société</comment>
   </data>
 </root>

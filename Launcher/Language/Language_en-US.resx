@@ -241,14 +241,6 @@
     <value>Host or hostess' first name</value>
     <comment>Host or hostess' first name</comment>
   </data>
-  <data name="InvoiceEmailDate" xml:space="preserve">
-    <value>Invoice sent by email date</value>
-    <comment>Invoice sent by email date</comment>
-  </data>
-  <data name="Invoices" xml:space="preserve">
-    <value>Invoices</value>
-    <comment>Invoices</comment>
-  </data>
   <data name="LastName" xml:space="preserve">
     <value>Last name</value>
     <comment>Last name</comment>
@@ -301,11 +293,11 @@
     <value>Missions</value>
     <comment>Missions</comment>
   </data>
-  <data name="missionselectedError" xml:space="preserve">
+  <data name="MissionSelectedError" xml:space="preserve">
     <value>Please, select an mission</value>
     <comment>Select mission error text</comment>
   </data>
-  <data name="missionselectedErrorCaption" xml:space="preserve">
+  <data name="MissionSelectedErrorCaption" xml:space="preserve">
     <value>No mission selected</value>
     <comment>Select mission error caption</comment>
   </data>
@@ -356,10 +348,6 @@
   <data name="Description" xml:space="preserve">
     <value>Description</value>
     <comment>Description</comment>
-  </data>
-  <data name="Invoice" xml:space="preserve">
-    <value>Invoice</value>
-    <comment>Invoice</comment>
   </data>
   <data name="Mission" xml:space="preserve">
     <value>Mission</value>
@@ -908,10 +896,6 @@ Regards,</value>
     <value>%YY</value>
     <comment>Year format</comment>
   </data>
-  <data name="InvoicesNumerotationFormat" xml:space="preserve">
-    <value>Format of invoices numerotation</value>
-    <comment>Format of invoices numerotation</comment>
-  </data>
   <data name="Numerotation" xml:space="preserve">
     <value>Numerotation</value>
     <comment>Numerotation</comment>
@@ -956,14 +940,6 @@ Regards,</value>
     <value>Mission next number:</value>
     <comment>Mission next number</comment>
   </data>
-  <data name="InvoiceNextNumerotation" xml:space="preserve">
-    <value>Next invoice:</value>
-    <comment>Next invoice</comment>
-  </data>
-  <data name="InvoicesNextNumber" xml:space="preserve">
-    <value>Invoice next next number:</value>
-    <comment>Invoice next number</comment>
-  </data>
   <data name="OpenSoftPrincipalMessage" xml:space="preserve">
     <value>Opening the software, please wait...</value>
     <comment>Principal message of opening the software</comment>
@@ -1004,70 +980,6 @@ Regards,</value>
     <value>Edit the invoice</value>
     <comment>Edit the invoice</comment>
   </data>
-  <data name="InvoiceContactNotFound" xml:space="preserve">
-    <value>The contact associated to the invoice has not been found in the database</value>
-    <comment>Contact not found text</comment>
-  </data>
-  <data name="InvoiceContactNotFoundCaption" xml:space="preserve">
-    <value>Contact not found</value>
-    <comment>Contact not found caption</comment>
-  </data>
-  <data name="InvoiceDate" xml:space="preserve">
-    <value>Invoice sent date</value>
-    <comment>Invoice sent date</comment>
-  </data>
-  <data name="InvoicePDFGenerationFailed" xml:space="preserve">
-    <value>The invoice could not have been generated. If this happens again, please contact the client support.</value>
-    <comment>Text of the failure of the generation of the invoice to PDF format</comment>
-  </data>
-  <data name="InvoicePDFGenerationFailedCaption" xml:space="preserve">
-    <value>Failure of the invoice generation</value>
-    <comment>Caption of the failure of the generation of the invoice to PDF format</comment>
-  </data>
-  <data name="InvoicePDFGenerationPrincipalMessage" xml:space="preserve">
-    <value>Generation of the invoice to PDF format...</value>
-    <comment>Generation of the invoice to PDF format</comment>
-  </data>
-  <data name="InvoicePDFGenerationSecondaryMessage" xml:space="preserve">
-    <value>The invoice is being generated, please wait until the PDF file is opened.</value>
-    <comment>Waiting text of the invoice generation</comment>
-  </data>
-  <data name="InvoicePDFGenerationSuccesCaption" xml:space="preserve">
-    <value>Generation of the invoice ended</value>
-    <comment>Caption of the success of the generation of the invoice to PDF format</comment>
-  </data>
-  <data name="InvoicePDFGenerationSuccess" xml:space="preserve">
-    <value>The invoice has been generated with success.</value>
-    <comment>Text of the success of the generation of the invoice to PDF format</comment>
-  </data>
-  <data name="InvoicePDFOpenConfirmation" xml:space="preserve">
-    <value>Do you want to visualise the invoice in PDF format ?</value>
-    <comment>Ask for visualizing the invoice in PDF format text</comment>
-  </data>
-  <data name="InvoicePDFOpenConfirmationCaption" xml:space="preserve">
-    <value>Open the invoice</value>
-    <comment>Ask for visualizing the invoice in PDF format caption</comment>
-  </data>
-  <data name="InvoicesConfirmShowAll" xml:space="preserve">
-    <value>Are you sure to show all the invoices?</value>
-    <comment>Show all the invoices confirmation text</comment>
-  </data>
-  <data name="InvoicesConfirmShowAllCaption" xml:space="preserve">
-    <value>Show all the invoices</value>
-    <comment>Show all the invoices confirmation caption</comment>
-  </data>
-  <data name="InvoiceSelectedError" xml:space="preserve">
-    <value>Please, select an invoice</value>
-    <comment>Select invoice error text</comment>
-  </data>
-  <data name="InvoiceSelectedErrorCaption" xml:space="preserve">
-    <value>No invoice selected</value>
-    <comment>Select invoice error caption</comment>
-  </data>
-  <data name="InvoiceSubject" xml:space="preserve">
-    <value>Object of the invoice</value>
-    <comment>Object of the invoice</comment>
-  </data>
   <data name="TermDate" xml:space="preserve">
     <value>Term date</value>
     <comment>Term date</comment>
@@ -1076,41 +988,9 @@ Regards,</value>
     <value>Due date selection</value>
     <comment>Due date selection</comment>
   </data>
-  <data name="InvoiceCreation" xml:space="preserve">
-    <value>Invoice creation</value>
-    <comment>Invoice creation</comment>
-  </data>
-  <data name="InvoiceConfirmDelete" xml:space="preserve">
-    <value>Are you sure you want to delete the selected invoice?</value>
-    <comment>Delete invoiceconfirmation text</comment>
-  </data>
-  <data name="InvoiceConfirmDeleteCaption" xml:space="preserve">
-    <value>Delete invoice</value>
-    <comment>Delete invoice confirmation caption</comment>
-  </data>
-  <data name="InvoiceDeletionPrincipalMessage" xml:space="preserve">
-    <value>Deletion of the invoice in progress...</value>
-    <comment>Deletion of the invoice waiting principal message</comment>
-  </data>
-  <data name="InvoiceDeletionSecondaryMessage" xml:space="preserve">
-    <value>The invoice is currently deleted, please wait until this window closes automatically</value>
-    <comment>Deletion of the invoice waiting secondary message</comment>
-  </data>
-  <data name="InvoiceEditionPrincipalMessage" xml:space="preserve">
-    <value>Edition of the invoice in progress...</value>
-    <comment>Edition of the invoice waiting principal message</comment>
-  </data>
-  <data name="InvoiceEditionSecondaryMessage" xml:space="preserve">
-    <value>The invoice is currently modified and saved in the database, please wait until this window closes automatically</value>
-    <comment>Edition of the invoice waiting secondary message</comment>
-  </data>
   <data name="DueDate" xml:space="preserve">
     <value>Due date</value>
     <comment>Due date</comment>
-  </data>
-  <data name="InvoiceNumber" xml:space="preserve">
-    <value>Invoice number</value>
-    <comment>Invoice number</comment>
   </data>
   <data name="Advance" xml:space="preserve">
     <value>Advance</value>
@@ -1164,14 +1044,6 @@ Regards,</value>
     <value>In progress missions</value>
     <comment>In progress missions</comment>
   </data>
-  <data name="InvoiceCreationPrincipalMessage" xml:space="preserve">
-    <value>Creation of the invoice in progress...</value>
-    <comment>Creation of the invoice principal message</comment>
-  </data>
-  <data name="InvoiceCreationSecondaryMessage" xml:space="preserve">
-    <value>Please wait during the creation and export in the database of the invoice</value>
-    <comment>Creation of the invoice secondary message</comment>
-  </data>
   <data name="Restore" xml:space="preserve">
     <value>Restore</value>
     <comment>Restore</comment>
@@ -1179,14 +1051,6 @@ Regards,</value>
   <data name="ArchiveDate" xml:space="preserve">
     <value>Archived date</value>
     <comment>Archived date</comment>
-  </data>
-  <data name="InvoicesShowArchives" xml:space="preserve">
-    <value>Archived invoices</value>
-    <comment>Archived invoices</comment>
-  </data>
-  <data name="InvoicesShowInProgress" xml:space="preserve">
-    <value>In progress invoices</value>
-    <comment>In progress invoices</comment>
   </data>
   <data name="AddPayment" xml:space="preserve">
     <value>Add a payment</value>
@@ -1199,10 +1063,6 @@ Regards,</value>
   <data name="MissionAssociateToInvoiceCaption" xml:space="preserve">
     <value>Mission associated to an invoice</value>
     <comment>Mission associated to an invoice error caption</comment>
-  </data>
-  <data name="InvoiceDueDate" xml:space="preserve">
-    <value>Due date</value>
-    <comment>Due date</comment>
   </data>
   <data name="Card" xml:space="preserve">
     <value>Card</value>
@@ -1224,30 +1084,6 @@ Regards,</value>
     <value>Payment date</value>
     <comment>Payment date</comment>
   </data>
-  <data name="InvoiceAddPaymentNoAmountCaption" xml:space="preserve">
-    <value>No amount entered</value>
-    <comment>No amount for the payment error caption</comment>
-  </data>
-  <data name="InvoiceAddPaymentNoAmountText" xml:space="preserve">
-    <value>Please enter an amount for the payment</value>
-    <comment>No amount for the payment error text</comment>
-  </data>
-  <data name="InvoiceArchivePrincipalMessage" xml:space="preserve">
-    <value>Archive of the invoice in progress...</value>
-    <comment>Archive of the invoice principal message</comment>
-  </data>
-  <data name="InvoiceArchiveSecondaryMessage" xml:space="preserve">
-    <value>Please wait during the archive and the save in the database of the invoice. The associated mission is also archived automatically.</value>
-    <comment>Archive of the invoice secondary message</comment>
-  </data>
-  <data name="InvoiceRestorePrincipalMessage" xml:space="preserve">
-    <value>Restoration of the invoice in progress...</value>
-    <comment>Restoration of the invoice principal message</comment>
-  </data>
-  <data name="InvoiceRestoreSecondaryMessage" xml:space="preserve">
-    <value>Please wait during the restoration and the save in the database of the invoice</value>
-    <comment>Restoration of the invoice secondary message</comment>
-  </data>
   <data name="PaymentMethod" xml:space="preserve">
     <value>Mean of payment</value>
     <comment>Mean of payment</comment>
@@ -1263,14 +1099,6 @@ Regards,</value>
   <data name="Wire" xml:space="preserve">
     <value>Wire</value>
     <comment>Wire</comment>
-  </data>
-  <data name="InvoiceDeletePaymentCaption" xml:space="preserve">
-    <value>Payment delete</value>
-    <comment>Deletion of payment confirmation caption</comment>
-  </data>
-  <data name="InvoiceDeletePaymentText" xml:space="preserve">
-    <value>Are you sure to delete the payment ?</value>
-    <comment>Deletion of payment confirmation text</comment>
   </data>
   <data name="MissionAssociateToInProgressInvoice" xml:space="preserve">
     <value>This mission is associated to an in progress invoice</value>
@@ -1360,14 +1188,6 @@ Regards,</value>
     <value>Please wait during the verification, download and application of updates if available</value>
     <comment>Update in progress secondary message</comment>
   </data>
-  <data name="InvoiceMailBody" xml:space="preserve">
-    <value>Hello, 
-
-Please find attached the asked invoice
-
-Regards,</value>
-    <comment>Body for invoice sent mail</comment>
-  </data>
   <data name="MissionPDFSendEmailCaption" xml:space="preserve">
     <value>Send mission confirmation</value>
     <comment>Send mission confirmation caption</comment>
@@ -1375,14 +1195,6 @@ Regards,</value>
   <data name="MissionPDFSendEmailConfirmation" xml:space="preserve">
     <value>Do you still want to send the mission?</value>
     <comment>Send mission confirmation text</comment>
-  </data>
-  <data name="InvoicePDFSendEmailCaption" xml:space="preserve">
-    <value>Send invoice confirmation</value>
-    <comment>Send invoice confirmation caption</comment>
-  </data>
-  <data name="InvoicePDFSendEmailConfirmation" xml:space="preserve">
-    <value>Do you still want to send the invoice?</value>
-    <comment>Send invoice confirmation text</comment>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>Profile</value>
@@ -1404,25 +1216,9 @@ Regards,</value>
     <value>Name</value>
     <comment>Name</comment>
   </data>
-  <data name="CreditNoteNextNumber" xml:space="preserve">
-    <value>Credit note next next number:</value>
-    <comment>Credit note next number</comment>
-  </data>
-  <data name="CreditNoteNextNumerotation" xml:space="preserve">
-    <value>Next credit note:</value>
-    <comment>Next credit note</comment>
-  </data>
-  <data name="CreditNoteNumerotationFormat" xml:space="preserve">
-    <value>Format of credit notes numerotation</value>
-    <comment>Format of credit notes numerotation</comment>
-  </data>
   <data name="Credit" xml:space="preserve">
     <value>Credit note</value>
     <comment>Credit note</comment>
-  </data>
-  <data name="Credits" xml:space="preserve">
-    <value>Credit notes</value>
-    <comment>Credit notes</comment>
   </data>
   <data name="PickDate" xml:space="preserve">
     <value>Pick a date</value>
@@ -1464,22 +1260,6 @@ Regards,</value>
     <value>Generate an Excel® statement</value>
     <comment>Generate an Excel statement</comment>
   </data>
-  <data name="InvoicesExcelGenerationPrincipalMessage" xml:space="preserve">
-    <value>Generation of the invoices statement in progress...</value>
-    <comment>Generation of the invoices statement primary message</comment>
-  </data>
-  <data name="InvoicesExcelGenerationSecondaryMessage" xml:space="preserve">
-    <value>Please wait during the generation of the invoices statement until Microsoft Excel® is opened</value>
-    <comment>Generation of the invoices statement secondary message</comment>
-  </data>
-  <data name="InvoicesStatementExcelGenerationFailed" xml:space="preserve">
-    <value>The invoices statement could not have been generated. If this happens again, please contact the client support.</value>
-    <comment>Invoices statement not generated error text</comment>
-  </data>
-  <data name="InvoicesStatementExcelGenerationFailedCaption1" xml:space="preserve">
-    <value>Invoices statement not generated</value>
-    <comment>Invoices statement not generated error caption</comment>
-  </data>
   <data name="MicrosoftExcelNotFound" xml:space="preserve">
     <value>Microsoft Excel® could not be started. Check that your Office installation is correct</value>
     <comment>Excel not found error text</comment>
@@ -1518,46 +1298,6 @@ Do you want to continue?</value>
     <value>Create a credit note</value>
     <comment>Create a credit note</comment>
   </data>
-  <data name="CreditNoteCreationPrincipalMessage" xml:space="preserve">
-    <value>Creation of the credit note in progress...</value>
-    <comment>Creation of the credit note principal message</comment>
-  </data>
-  <data name="CreditNoteCreationSecondaryMessage" xml:space="preserve">
-    <value>Please wait during the creation and export in the database of the credit note</value>
-    <comment>Creation of the credit note secondary message</comment>
-  </data>
-  <data name="CreditNoteDate" xml:space="preserve">
-    <value>Credit note sent date</value>
-    <comment>Credit note sent date</comment>
-  </data>
-  <data name="CreditNotesShowArchives" xml:space="preserve">
-    <value>Archived credit notes</value>
-    <comment>Archived credit notes</comment>
-  </data>
-  <data name="CreditNotesShowInProgress" xml:space="preserve">
-    <value>In progress credit notes</value>
-    <comment>In progress credit notes</comment>
-  </data>
-  <data name="CreditNumber" xml:space="preserve">
-    <value>Credit number</value>
-    <comment>Credit number</comment>
-  </data>
-  <data name="CreditSubject" xml:space="preserve">
-    <value>Credit subject</value>
-    <comment>Credit subject</comment>
-  </data>
-  <data name="InvoiceAssociateToArchivedCreditNote" xml:space="preserve">
-    <value>Invoice associated to an archived credit note</value>
-    <comment>Invoice already associated to an archived credit note</comment>
-  </data>
-  <data name="InvoiceAssociateToCreditNoteCaption" xml:space="preserve">
-    <value>Invoice associated to a credit note</value>
-    <comment>Invoice associated to a credit note</comment>
-  </data>
-  <data name="InvoiceAssociateToInProgressCreditNote" xml:space="preserve">
-    <value>Invoice associated to an in progress credit note</value>
-    <comment>Invoice already associated to an in progress credit note</comment>
-  </data>
   <data name="PaidDate" xml:space="preserve">
     <value>Paid date</value>
     <comment>Paid date</comment>
@@ -1582,105 +1322,9 @@ Do you want to continue?</value>
     <value>Amount VAT</value>
     <comment>Amount VAT</comment>
   </data>
-  <data name="CreditNoteConfirmDelete" xml:space="preserve">
-    <value>Are you sure you want to delete the selected credit note</value>
-    <comment>Delete credit note confirmation text</comment>
-  </data>
-  <data name="CreditNoteConfirmDeleteCaption" xml:space="preserve">
-    <value>Delete credit note</value>
-    <comment>Delete credit note confirmation caption</comment>
-  </data>
-  <data name="CreditNoteContactNotFound" xml:space="preserve">
-    <value>The contact associated to the credit note has not been found in the database</value>
-    <comment>Contact not found text</comment>
-  </data>
-  <data name="CreditNoteContactNotFoundCaption" xml:space="preserve">
-    <value>Contact not found</value>
-    <comment>Contact not found caption</comment>
-  </data>
-  <data name="CreditNoteDeletionPrincipalMessage" xml:space="preserve">
-    <value>Deletion of the credit note in progress...</value>
-    <comment>Deletion of the credit note waiting principal message</comment>
-  </data>
-  <data name="CreditNoteDeletionSecondaryMessage" xml:space="preserve">
-    <value>The credit note is currently deleted, please wait until this window closes automatically</value>
-    <comment>Deletion of the credit note waiting secondary message</comment>
-  </data>
-  <data name="CreditNoteMailBody" xml:space="preserve">
-    <value>Hello, 
-
-Please find attached the asked credit note
-
-Regards,</value>
-    <comment>Body for credit note sent mail</comment>
-  </data>
-  <data name="CreditNotePDFGenerationFailed" xml:space="preserve">
-    <value>The credit note could not have been generated. If this happens again, please contact the client support.</value>
-    <comment>Text of the failure of the generation of the credit note to PDF format</comment>
-  </data>
-  <data name="CreditNotePDFGenerationFailedCaption" xml:space="preserve">
-    <value>Failure of the credit note generation</value>
-    <comment>Caption of the failure of the generation of the credit note to PDF format</comment>
-  </data>
-  <data name="CreditNotePDFGenerationPrincipalMessage" xml:space="preserve">
-    <value>Generation of the credit note to PDF format...</value>
-    <comment>Generation of the credit note to PDF format</comment>
-  </data>
-  <data name="CreditNotePDFGenerationSecondaryMessage" xml:space="preserve">
-    <value>The credit note is being generated, please wait until the PDF file is opened.</value>
-    <comment>Waiting text of the credit note generation</comment>
-  </data>
-  <data name="CreditNotePDFOpenConfirmation" xml:space="preserve">
-    <value>Do you want to visualise the credit note in PDF format ?</value>
-    <comment>Ask for visualizing the credit note in PDF format text</comment>
-  </data>
-  <data name="CreditNotePDFOpenConfirmationCaption" xml:space="preserve">
-    <value>Open the credit note</value>
-    <comment>Ask for visualizing the credit note in PDF format caption</comment>
-  </data>
-  <data name="CreditNoteSelectedError" xml:space="preserve">
-    <value>Please, select a credit note</value>
-    <comment>Select credit note error text</comment>
-  </data>
-  <data name="CreditNoteSelectedErrorCaption" xml:space="preserve">
-    <value>No credit ntoe selected</value>
-    <comment>Select credit note error caption</comment>
-  </data>
   <data name="CustomerID" xml:space="preserve">
     <value>Customer ID</value>
     <comment>Customer ID</comment>
-  </data>
-  <data name="CreditNoteArchivePrincipalMessage" xml:space="preserve">
-    <value>Archive of the credit note in progress...</value>
-    <comment>Archive of the credit note principal message</comment>
-  </data>
-  <data name="CreditNoteArchiveSecondaryMessage" xml:space="preserve">
-    <value>Please wait during the archive and the save in the database of the credit note</value>
-    <comment>Archive of the credit note secondary message</comment>
-  </data>
-  <data name="CreditNoteEditionPrincipalMessage" xml:space="preserve">
-    <value>Edition of the credit note in progress...</value>
-    <comment>Edition of the credit note waiting principal message</comment>
-  </data>
-  <data name="CreditNoteEditionSecondaryMessage" xml:space="preserve">
-    <value>The credit note is currently modified and saved in the database, please wait until this window closes automatically</value>
-    <comment>Edition of the credit note waiting secondary message</comment>
-  </data>
-  <data name="CreditNoteRestorePrincipalMessage" xml:space="preserve">
-    <value>Restoration of the credit note in progress...</value>
-    <comment>Restoration of the credit note principal message</comment>
-  </data>
-  <data name="CreditNoteRestoreSecondaryMessage" xml:space="preserve">
-    <value>Please wait during the restoration and the save in the database of the credit note</value>
-    <comment>Restoration of the credit note secondary message</comment>
-  </data>
-  <data name="CreditNoteSubjectMissingSubject" xml:space="preserve">
-    <value>The field 'Subject' must be filled</value>
-    <comment>Missing subject field  error text</comment>
-  </data>
-  <data name="CreditNoteSubjectMissingSubjectCaption" xml:space="preserve">
-    <value>Missing field</value>
-    <comment>Missing subject field  error caption</comment>
   </data>
   <data name="Statistics" xml:space="preserve">
     <value>Statistics</value>
@@ -1733,18 +1377,6 @@ Regards,</value>
   <data name="GlobalDiscountGeneration2" xml:space="preserve">
     <value>% was applied</value>
     <comment>Generation global discount second part</comment>
-  </data>
-  <data name="InvoiceAddPaymentNoPaymentMethodCaption" xml:space="preserve">
-    <value>No payment methode chosen</value>
-    <comment>No payment method for the payment error caption</comment>
-  </data>
-  <data name="InvoiceAddPaymentNoPaymentMethodText" xml:space="preserve">
-    <value>Please select a payment method</value>
-    <comment>No payment method for the payment error text</comment>
-  </data>
-  <data name="InvoicePaidDate" xml:space="preserve">
-    <value>Invoice full paid date</value>
-    <comment>Invoice full paid date</comment>
   </data>
   <data name="DeclinedDate" xml:space="preserve">
     <value>Declined date</value>
@@ -1863,33 +1495,9 @@ User profile - Credentials - New computer</value>
     <value>September</value>
     <comment>September</comment>
   </data>
-  <data name="InvoicesCreated" xml:space="preserve">
-    <value>Created invoices</value>
-    <comment>Created invoices</comment>
-  </data>
-  <data name="InvoicesInprogress" xml:space="preserve">
-    <value>In progress missions</value>
-    <comment>In progress missions</comment>
-  </data>
-  <data name="InvoicesNumber" xml:space="preserve">
-    <value>Number of invoices</value>
-    <comment>Number of invoices</comment>
-  </data>
-  <data name="InvoicesPaid" xml:space="preserve">
-    <value>Paid invoices</value>
-    <comment>Paid invoices</comment>
-  </data>
-  <data name="InvoicesUnpaid" xml:space="preserve">
-    <value>Unpaid invoices</value>
-    <comment>Unpaid invoices</comment>
-  </data>
   <data name="StatisticsInvoices" xml:space="preserve">
     <value>Number of invoices per status and per month for the year</value>
     <comment>Number of invoices per status and per month for the selected year</comment>
-  </data>
-  <data name="InvoicesDueDate" xml:space="preserve">
-    <value>Invoices due date</value>
-    <comment>Invoices due date</comment>
   </data>
   <data name="ExcelNotPresentErrorCaption" xml:space="preserve">
     <value>Microsoft Excel® not installed</value>
@@ -1899,14 +1507,6 @@ User profile - Credentials - New computer</value>
     <value>Microsoft Excel® is not present, please install it before using ZadGestion</value>
     <comment>Excel not installed error text</comment>
   </data>
-  <data name="InvoiceShowInProgressPrincipalMessage" xml:space="preserve">
-    <value>Actualization of the in progress invoices...</value>
-    <comment>Actualization of the invoices principal message</comment>
-  </data>
-  <data name="InvoiceShowInProgressSecondaryMessage" xml:space="preserve">
-    <value>Actualization of the in progress invoices from the database, please wait until this window closes automatically. This operation can take a while</value>
-    <comment>Actualization of the invoices secondary message</comment>
-  </data>
   <data name="MissionshowInProgressPrincipalMessage" xml:space="preserve">
     <value>Actualization of the in progress missions...</value>
     <comment>Actualization of the in progress missions principal message</comment>
@@ -1914,10 +1514,6 @@ User profile - Credentials - New computer</value>
   <data name="MissionshowInProgressSecondaryMessage" xml:space="preserve">
     <value>Actualization of the in progress missions from the database, please wait until this window closes automatically. This operation can take a while</value>
     <comment>Actualization of the in progress missions secondary message</comment>
-  </data>
-  <data name="InvoicesEvolution" xml:space="preserve">
-    <value>Invoices - Evolution</value>
-    <comment>Invoices - Evolution</comment>
   </data>
   <data name="StatisticsInvoicesEvolution" xml:space="preserve">
     <value>Evolution of number of invoices per status along the year</value>
@@ -1955,42 +1551,6 @@ User profile - Credentials - New computer</value>
     <value>Used</value>
     <comment>Used</comment>
   </data>
-  <data name="CreditNoteCreated" xml:space="preserve">
-    <value>Created</value>
-    <comment>Created</comment>
-  </data>
-  <data name="CreditNoteGenerated" xml:space="preserve">
-    <value>Generated</value>
-    <comment>Generated</comment>
-  </data>
-  <data name="CreditNoteSent" xml:space="preserve">
-    <value>Sent</value>
-    <comment>Sent</comment>
-  </data>
-  <data name="CreditNoteUsed" xml:space="preserve">
-    <value>Used</value>
-    <comment>Used</comment>
-  </data>
-  <data name="InvoiceCreated" xml:space="preserve">
-    <value>Created</value>
-    <comment>Created</comment>
-  </data>
-  <data name="InvoiceGenerated" xml:space="preserve">
-    <value>Generated</value>
-    <comment>Generated</comment>
-  </data>
-  <data name="InvoicePaid" xml:space="preserve">
-    <value>Paid</value>
-    <comment>Paid</comment>
-  </data>
-  <data name="InvoiceSent" xml:space="preserve">
-    <value>Sent</value>
-    <comment>Sent</comment>
-  </data>
-  <data name="InvoiceUnpaid" xml:space="preserve">
-    <value>Unpaid</value>
-    <comment>Unpaid</comment>
-  </data>
   <data name="SubjectMissingCaption" xml:space="preserve">
     <value>Missing subject</value>
     <comment>Subject missing caption</comment>
@@ -1998,42 +1558,6 @@ User profile - Credentials - New computer</value>
   <data name="SubjectMissingText" xml:space="preserve">
     <value>Please, add a subject in the corresponding field</value>
     <comment>Subject missing text</comment>
-  </data>
-  <data name="CreditNoteLegendCreated" xml:space="preserve">
-    <value>Created</value>
-    <comment>Created</comment>
-  </data>
-  <data name="CreditNoteLegendGenerated" xml:space="preserve">
-    <value>Generated</value>
-    <comment>Generated</comment>
-  </data>
-  <data name="CreditNoteLegendSent" xml:space="preserve">
-    <value>Sent</value>
-    <comment>Sent</comment>
-  </data>
-  <data name="CreditNoteLegendUsed" xml:space="preserve">
-    <value>Used</value>
-    <comment>Used</comment>
-  </data>
-  <data name="CreditNotesExcelGenerationPrincipalMessage" xml:space="preserve">
-    <value>Generation of the credit notes statement in progress...</value>
-    <comment>Generation of the credit notes statement primary message</comment>
-  </data>
-  <data name="CreditNotesExcelGenerationSecondaryMessage" xml:space="preserve">
-    <value>Please wait during the generation of the credit notes statement until Microsoft Excel® is opened</value>
-    <comment>Generation of the credit notes statement secondary message</comment>
-  </data>
-  <data name="CreditNotes" xml:space="preserve">
-    <value>Credit notes</value>
-    <comment>Credit notes</comment>
-  </data>
-  <data name="CreditNotesStatementExcelGenerationFailed" xml:space="preserve">
-    <value>The credit note statement could not have been generated. If this happens again, please contact the client support.</value>
-    <comment>Credit notes statement not generated error text</comment>
-  </data>
-  <data name="CreditNotesStatementExcelGenerationFailedCaption" xml:space="preserve">
-    <value>Credit notes statement not generated</value>
-    <comment>Credit notes statement not generated error caption</comment>
   </data>
   <data name="UsedDate" xml:space="preserve">
     <value>Used date</value>
@@ -2082,22 +1606,6 @@ User profile - Credentials - New computer</value>
   <data name="MissionshowArchivedSecondaryMessage" xml:space="preserve">
     <value>Actualization of the archived missions from the database, please wait until this window closes automatically. This operation can take a while</value>
     <comment>Actualization of the archived missions secondary message</comment>
-  </data>
-  <data name="InvoiceGetMissionPrincipalMessage" xml:space="preserve">
-    <value>Recovery of the mission in progress...</value>
-    <comment>Recovery of the mission principal message</comment>
-  </data>
-  <data name="InvoiceGetMissionsecondaryMessage" xml:space="preserve">
-    <value>The mission associated to the selected invoice is recovered. Please wait until this window is closed</value>
-    <comment>Recovery of the mission secondary message</comment>
-  </data>
-  <data name="InvoiceShowArchivedPrincipalMessage" xml:space="preserve">
-    <value>Actualization of the archived invoices...</value>
-    <comment>Actualization of the archived invoices principal message</comment>
-  </data>
-  <data name="InvoiceShowArchivedSecondaryMessage" xml:space="preserve">
-    <value>Actualization of the archived invoices from the database, please wait until this window closes automatically. This operation can take a while</value>
-    <comment>Actualization of the archived invoices secondary message</comment>
   </data>
   <data name="SeeCredit" xml:space="preserve">
     <value>See the credit note</value>
@@ -2354,5 +1862,73 @@ User profile - Credentials - New computer</value>
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>
     <comment>Yes</comment>
+  </data>
+  <data name="ClientConfirmDelete" xml:space="preserve">
+    <value>Are you sure you want to delete the selected client ?</value>
+    <comment>Delete client confirmation text</comment>
+  </data>
+  <data name="ClientConfirmDeleteCaption" xml:space="preserve">
+    <value>Delete client</value>
+    <comment>Delete client confirmation caption</comment>
+  </data>
+  <data name="ClientCreationPrincipalMessage" xml:space="preserve">
+    <value>Creation of the client in progress...</value>
+    <comment>Creation of the client waiting principal message</comment>
+  </data>
+  <data name="ClientCreationSecondaryMessage" xml:space="preserve">
+    <value>The client is currently created and saved in the database, please wait until this window closes automatically</value>
+    <comment>Creation of the client waiting secondary message</comment>
+  </data>
+  <data name="ClientDeletionPrincipalMessage" xml:space="preserve">
+    <value>Deletion of the client in progress...</value>
+    <comment>Deletion of the client waiting principal message</comment>
+  </data>
+  <data name="ClientDeletionSecondaryMessage" xml:space="preserve">
+    <value>The client is currently deleted, please wait until this window closes automatically</value>
+    <comment>Deletion of the client waiting secondary message</comment>
+  </data>
+  <data name="ClientEmailPrincipalMessage" xml:space="preserve">
+    <value>Launch emailing default application..</value>
+    <comment>Click on client email principal message</comment>
+  </data>
+  <data name="ClientEmailSecondaryMessage" xml:space="preserve">
+    <value>If an emailing application is installed on your machine, the application is launching, please wait</value>
+    <comment>Click on client phone secondary message</comment>
+  </data>
+  <data name="ClientExcelGenerationPrincipalMessage" xml:space="preserve">
+    <value>Generation of the client statement in progress...</value>
+    <comment>Generation of the client statement primary message</comment>
+  </data>
+  <data name="ClientExcelGenerationSecondaryMessage" xml:space="preserve">
+    <value>Please wait during the generation of the client statement until Microsoft Excel® is opened</value>
+    <comment>Generation of the client statement secondary message</comment>
+  </data>
+  <data name="ClientID" xml:space="preserve">
+    <value>Client ID</value>
+    <comment>Client ID</comment>
+  </data>
+  <data name="ClientPhonePrincipalMessage" xml:space="preserve">
+    <value>Launch Skype application...</value>
+    <comment>Click on client phone principal message</comment>
+  </data>
+  <data name="ClientPhoneSecondaryMessage" xml:space="preserve">
+    <value>If Skype is installed on your machine, the application is launching, please wait</value>
+    <comment>Click on client phone secondary message</comment>
+  </data>
+  <data name="ClientSelectedError" xml:space="preserve">
+    <value>Please, select a client</value>
+    <comment>Selected client error text</comment>
+  </data>
+  <data name="ClientSelectedErrorCaption" xml:space="preserve">
+    <value>No client selected</value>
+    <comment>Selected client error caption</comment>
+  </data>
+  <data name="CorporateName" xml:space="preserve">
+    <value>Corporate name</value>
+    <comment>Corporate name</comment>
+  </data>
+  <data name="CorporateNumber" xml:space="preserve">
+    <value>Corporate number</value>
+    <comment>Corporate number</comment>
   </data>
 </root>

@@ -839,7 +839,7 @@ namespace WindowHostOrHostess
                                     if (childNode.Name == "table" && childNode.Attributes["name"].Value == "villes_france")
                                     {
                                         string zipCode = childNode.ChildNodes[7].InnerText;
-                                        if (zipCode == Txt_HostAndHostess_ZipCode.Text)
+                                        if (zipCode.Contains(Txt_HostAndHostess_ZipCode.Text))
                                         {
                                             string city = childNode.ChildNodes[4].InnerText;
                                             Cmb_HostAndHostess_City.Items.Add(city);

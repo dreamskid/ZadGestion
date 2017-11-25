@@ -384,7 +384,7 @@ namespace GeneralClasses
                 }
                 
                 //Contact informations
-                Hostess contactSel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(m_Bill.id_HostAndHostess));
+                Hostess contactSel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(m_Bill.id_hostorhostess));
                 if (contactSel == null)
                 {
                     string contactNotFound = "";

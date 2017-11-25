@@ -335,6 +335,27 @@ namespace Software
         /// </summary>
         public Button m_Button_Mission_SelectedInvoice = null;
 
+        /// <summary>
+        /// Initialization
+        /// Selected buton
+        /// Selected client cellphone button
+        /// </summary>
+        public Button m_Button_Client_SelectedCellPhone = null;
+
+        /// <summary>
+        /// Initialization
+        /// Selected buton
+        /// Selected client button
+        /// </summary>
+        public Button m_Button_Client_SelectedClient = null;
+
+        /// <summary>
+        /// Initialization
+        /// Selected buton
+        /// Selected client email button
+        /// </summary>
+        public Button m_Button_Client_SelectedEmail = null;
+
         #endregion
 
         #region Specific variables
@@ -366,6 +387,20 @@ namespace Software
         /// Selected hostess id
         /// </summary>
         public string m_Id_SelectedHostAndHostess = "-1";
+
+        /// <summary>
+        /// Initialization
+        /// Specific variable
+        /// Selected client id
+        /// </summary>
+        public string m_Id_SelectedClient = "-1";
+
+        /// <summary>
+        /// Initialization
+        /// Specific variable
+        /// Boolean indicating the sorting way of the clients
+        /// </summary>
+        bool m_IsSortClient_Ascending = true;
 
         /// <summary>
         /// Initialization
@@ -566,7 +601,7 @@ namespace Software
                 DataGrid_Clients_Missions.ItemsSource = m_DataGrid_Clients_MissionsCollection;
 
                 //Labels
-                Lbl_Clients_Research.Content = m_Global_Handler.Resources_Handler.Get_Resources("ResearchHostOrHostess");
+                Lbl_Clients_Research.Content = m_Global_Handler.Resources_Handler.Get_Resources("ResearchClient");
                 Lbl_Clients_Sort.Content = m_Global_Handler.Resources_Handler.Get_Resources("SortBy");
 
                 #endregion
@@ -1006,7 +1041,7 @@ namespace Software
             {
                 //Open the mission window
                 Billing newMission = new Billing();
-                newMission.id_HostAndHostess = m_Id_SelectedHostAndHostess;
+                newMission.id_hostorhostess = m_Id_SelectedHostAndHostess;
                 WindowMission.MainWindow_Mission missionWindow = new WindowMission.MainWindow_Mission(m_Global_Handler, m_Database_Handler, newMission);
                 Nullable<bool> resShow = missionWindow.ShowDialog();
 
@@ -1020,7 +1055,7 @@ namespace Software
 
                         //Get the created mission
                         newMission = missionWindow.m_Mission;
-                        newMission.id_HostAndHostess = m_Id_SelectedHostAndHostess;
+                        newMission.id_hostorhostess = m_Id_SelectedHostAndHostess;
                         newMission.date_Mission_creation = DateTime.Now.ToString();
 
                         //Add to database        
@@ -1234,7 +1269,7 @@ namespace Software
 
                 //Get the created mission
                 Billing newMission = new Billing(missionSel);
-                newMission.id_HostAndHostess = m_Id_SelectedHostAndHostess;
+                newMission.id_hostorhostess = m_Id_SelectedHostAndHostess;
                 newMission.date_Mission_creation = DateTime.Now.ToString();
 
                 //Add to database
@@ -1541,7 +1576,7 @@ namespace Software
                 for (int iMission = 0; iMission < missionsToExport.Count; ++iMission)
                 {
                     Billing mission = missionsToExport[iMission];
-                    Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(mission.id_HostAndHostess));
+                    Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(mission.id_hostorhostess));
                     string Hostesstr = "";
                     string hostessID = "";
                     string hostessCompany = "";
@@ -1798,8 +1833,8 @@ namespace Software
                 {
                     m_Grid_Details_Missions_MissionsCollection.Sort(delegate (Billing x, Billing y)
                     {
-                        Hostess hostess_x = SoftwareObjects.HostsAndHotessesCollection.Find(z => z.id.Equals(x.id_HostAndHostess));
-                        Hostess hostess_y = SoftwareObjects.HostsAndHotessesCollection.Find(z => z.id.Equals(y.id_HostAndHostess));
+                        Hostess hostess_x = SoftwareObjects.HostsAndHotessesCollection.Find(z => z.id.Equals(x.id_hostorhostess));
+                        Hostess hostess_y = SoftwareObjects.HostsAndHotessesCollection.Find(z => z.id.Equals(y.id_hostorhostess));
                         if (hostess_x.lastname == null && hostess_y.lastname == null) return 0;
                         else if (hostess_x.lastname == null) return -1;
                         else if (hostess_y.lastname == null) return 1;
@@ -1841,8 +1876,8 @@ namespace Software
                 {
                     m_Grid_Details_Missions_MissionsCollection.Sort(delegate (Billing x, Billing y)
                     {
-                        Hostess hostess_x = SoftwareObjects.HostsAndHotessesCollection.Find(z => z.id.Equals(x.id_HostAndHostess));
-                        Hostess hostess_y = SoftwareObjects.HostsAndHotessesCollection.Find(z => z.id.Equals(y.id_HostAndHostess));
+                        Hostess hostess_x = SoftwareObjects.HostsAndHotessesCollection.Find(z => z.id.Equals(x.id_hostorhostess));
+                        Hostess hostess_y = SoftwareObjects.HostsAndHotessesCollection.Find(z => z.id.Equals(y.id_hostorhostess));
                         if (hostess_x.city == null && hostess_y.city == null) return 0;
                         else if (hostess_x.city == null) return -1;
                         else if (hostess_y.city == null) return 1;
@@ -2065,7 +2100,7 @@ namespace Software
                     }
 
                     //Get the associated hostess
-                    Hostess Hostessel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(missionSel.id_HostAndHostess));
+                    Hostess Hostessel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(missionSel.id_hostorhostess));
                     if (Hostessel == null)
                     {
                         MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("MissionHostessNotFound"),
@@ -2252,7 +2287,7 @@ namespace Software
                     }
 
                     //Get the associated hostess
-                    Hostess Hostessel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(missionSel.id_HostAndHostess));
+                    Hostess Hostessel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(missionSel.id_hostorhostess));
                     if (Hostessel == null)
                     {
                         Exception error = new Exception("Hostess not found while trying to send the email !");
@@ -2404,7 +2439,7 @@ namespace Software
                         Billing processedMission = SoftwareObjects.MissionsCollection[iMission];
 
                         //Get the associated hostess
-                        Hostess processedHostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(processedMission.id_HostAndHostess));
+                        Hostess processedHostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(processedMission.id_hostorhostess));
 
                         //Research
                         if (processedMission.subject.ToLower().Contains(researchedText))
@@ -2587,7 +2622,7 @@ namespace Software
                 for (int iBill = 0; iBill < SoftwareObjects.MissionsCollection.Count; ++iBill)
                 {
                     Billing billSel = SoftwareObjects.MissionsCollection[iBill];
-                    if (billSel.id_HostAndHostess == hostOrHostess.id)
+                    if (billSel.id_hostorhostess == hostOrHostess.id)
                     {
                         associatedMissions.Add(billSel);
                     }
@@ -3268,7 +3303,7 @@ namespace Software
                         for (int iBill = 0; iBill < SoftwareObjects.MissionsCollection.Count; ++iBill)
                         {
                             Billing bill = SoftwareObjects.MissionsCollection[iBill];
-                            if (bill.id_HostAndHostess == Hostessel.id)
+                            if (bill.id_hostorhostess == Hostessel.id)
                             {
                                 missions.Add(bill);
                             }
@@ -3553,7 +3588,7 @@ namespace Software
                     {
                         Button childButton = (Button)stackSel.Children[iChildren];
                         childButton.Background = m_Color_SelectedHostAndHostess;
-                        if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Phone" && childButton.Tag.ToString() != "Email")
+                        if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Email")
                         {
                             m_Button_HostAndHostess_SelectedHostAndHostess = childButton;
                             m_Id_SelectedHostAndHostess = (string)childButton.Tag;
@@ -3589,7 +3624,7 @@ namespace Software
                     Btn_HostAndHostess_Delete.IsEnabled = true;
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Skype call made to " + hostOrHostess.firstname + " " + hostOrHostess.lastname);
+                    m_Global_Handler.Error_Handler.WriteAction("Skype call made to " + hostOrHostess.firstname + ", " + hostOrHostess.cellphone);
 
                     //Close stop window
                     windowWait.Stop();
@@ -3689,11 +3724,6 @@ namespace Software
                             foundHostessList.Add(processedHostess);
                             continue;
                         }
-                        else if (processedHostess.date_creation.ToLower().Contains(researchedText))
-                        {
-                            foundHostessList.Add(processedHostess);
-                            continue;
-                        }
                         else if (processedHostess.birth_date.ToLower().Contains(researchedText) && researchedText.Length >= 4)
                         {
                             foundHostessList.Add(processedHostess);
@@ -3737,7 +3767,89 @@ namespace Software
         /// </summary>
         private void Btn_Clients_Create_Click(object sender, RoutedEventArgs e)
         {
+            //Creation of the wait window
+            WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
 
+            try
+            {
+                //Open the window
+                WindowClient.MainWindow_Client client_CreateWindow = new WindowClient.MainWindow_Client(m_Global_Handler,
+                    m_Database_Handler, m_Cities_DocFrance, false, null);
+                Nullable<bool> resShow = client_CreateWindow.ShowDialog();
+
+                //Validation
+                if (resShow == true)
+                {
+                    //Open the wait window
+                    windowWait.Start(m_Global_Handler, "ClientCreationPrincipalMessage", "ClientCreationSecondaryMessage");
+
+                    //Refresh datagrid
+                    m_DataGrid_Clients_MissionsCollection.Clear();
+
+                    //Add hostess to grid
+                    Client clientToAdd = client_CreateWindow.m_Client;
+                    Add_ClientToGrid(client_CreateWindow.m_Client);
+
+                    //Action
+                    m_Global_Handler.Error_Handler.WriteAction("Client " + clientToAdd.corporate_name + " created");
+
+                    //Select the last hostess
+                    if (m_Button_Client_SelectedClient != null)
+                    {
+                        m_Button_Client_SelectedClient.Background = m_Color_HostAndHostess;
+                    }
+                    if (m_Button_Client_SelectedCellPhone != null)
+                    {
+                        m_Button_Client_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                    }
+                    if (m_Button_Client_SelectedEmail != null)
+                    {
+                        m_Button_Client_SelectedEmail.Background = m_Color_HostAndHostess;
+                    }
+                    StackPanel stack = Grid_Clients_Details.Children.Cast<StackPanel>().First(f => Grid.GetRow(f) == m_GridHostess_Row && Grid.GetColumn(f) == m_GridHostess_Column - 1);
+                    for (int iChild = 0; iChild < stack.Children.Count; ++iChild)
+                    {
+                        Button childButton = (Button)stack.Children[iChild];
+                        childButton.Background = m_Color_SelectedHostAndHostess;
+                        if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Phone" && childButton.Tag.ToString() != "Email")
+                        {
+                            m_Button_Client_SelectedClient = childButton;
+                            m_Id_SelectedClient = (string)childButton.Tag;
+                        }
+                        else if (childButton.Tag.ToString() == "CellPhone")
+                        {
+                            m_Button_Client_SelectedCellPhone = childButton;
+                        }
+                        else if (childButton.Tag.ToString() == "Email")
+                        {
+                            m_Button_Client_SelectedEmail = childButton;
+                        }
+
+                        //Display the last hostess
+                        ScrollViewer_Clients_Details.ScrollToBottom();
+                    }
+
+                    //Enable the buttons
+                    Btn_Clients_Edit.IsEnabled = true;
+                    Btn_Clients_Delete.IsEnabled = true;
+
+                    //Close the wait window
+                    Thread.Sleep(500);
+                    windowWait.Stop();
+
+                    return;
+                }
+            }
+            catch (Exception exception)
+            {
+                //Close the wait window
+                Thread.Sleep(500);
+                windowWait.Stop();
+
+                //Write the error into log
+                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
         }
 
         /// <summary>
@@ -4058,9 +4170,373 @@ namespace Software
             }
         }
 
+        /// <summary>
+        /// Event
+        /// Clients
+        /// Mouse down on the main client button event
+        /// Select the client
+        /// </summary>
+        private void IsPressed_Client_Button(object sender, RoutedEventArgs ev)
+        {
+            if (sender != null)
+            {
+                try
+                {
+                    //Get the hostess's id
+                    Button buttonSel = (Button)sender;
+                    string idSel = (string)buttonSel.Tag;
+                    m_Id_SelectedClient = idSel;
+
+                    //Manage the buttons
+                    if (m_Button_Client_SelectedClient != null)
+                    {
+                        m_Button_Client_SelectedClient.Background = m_Color_HostAndHostess;
+                    }
+                    if (m_Button_Client_SelectedCellPhone != null)
+                    {
+                        m_Button_Client_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                    }
+                    if (m_Button_Client_SelectedEmail != null)
+                    {
+                        m_Button_Client_SelectedEmail.Background = m_Color_HostAndHostess;
+                    }
+                    m_Button_Client_SelectedClient = null;
+                    m_Button_Client_SelectedCellPhone = null;
+                    m_Button_Client_SelectedEmail = null;
+                    StackPanel stackSel = (StackPanel)buttonSel.Parent;
+                    for (int iChild = 0; iChild < stackSel.Children.Count; ++iChild)
+                    {
+                        Button childButton = (Button)stackSel.Children[iChild];
+                        childButton.Background = m_Color_SelectedHostAndHostess;
+                        if (iChild == 0)
+                        {
+                            m_Button_Client_SelectedClient = childButton;
+                        }
+                        else if (childButton.Tag.ToString() == "CellPhone")
+                        {
+                            m_Button_Client_SelectedCellPhone = childButton;
+                        }
+                        else if (childButton.Tag.ToString() == "Email")
+                        {
+                            m_Button_Client_SelectedEmail = childButton;
+                        }
+                    }
+                    //Select the hostess
+                    Get_SelectedClientFromButton();
+
+                    //Enable the buttons
+                    Btn_Clients_Edit.IsEnabled = true;
+                    Btn_Clients_Delete.IsEnabled = true;
+                }
+                catch (Exception exception)
+                {
+                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Clients
+        /// Mouse down on the client's email button event
+        /// Select client and open a new email with the selected client email adress
+        /// </summary>
+        private void IsPressed_Client_EmailButton(object sender, RoutedEventArgs ev)
+        {
+            if (sender != null)
+            {
+                //Creation of the wait window
+                WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
+
+                try
+                {
+                    //Open the wait window
+                    windowWait.Start(m_Global_Handler, "ClientEmailPrincipalMessage", "ClientEmailSecondaryMessage");
+
+                    //Get the email adress
+                    Button emailButton = (Button)sender;
+                    StackPanel emailStackPanel = (StackPanel)emailButton.Content;
+                    TextBlock emailTextBox = (TextBlock)emailStackPanel.Children[1];
+                    string emailAddress = emailTextBox.Text;
+
+                    //Manage the buttons
+                    if (m_Button_Client_SelectedClient != null)
+                    {
+                        m_Button_Client_SelectedClient.Background = m_Color_HostAndHostess;
+                    }
+                    if (m_Button_Client_SelectedCellPhone != null)
+                    {
+                        m_Button_Client_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                    }
+                    if (m_Button_Client_SelectedEmail != null)
+                    {
+                        m_Button_Client_SelectedEmail.Background = m_Color_HostAndHostess;
+                    }
+                    m_Button_Client_SelectedClient = null;
+                    m_Button_Client_SelectedCellPhone = null;
+                    m_Button_Client_SelectedEmail = null;
+                    StackPanel stackSel = (StackPanel)emailButton.Parent;
+                    for (int iChildren = 0; iChildren < stackSel.Children.Count; ++iChildren)
+                    {
+                        Button childButton = (Button)stackSel.Children[iChildren];
+                        childButton.Background = m_Color_SelectedHostAndHostess;
+                        if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Email")
+                        {
+                            m_Button_Client_SelectedClient = childButton;
+                            m_Id_SelectedClient = (string)childButton.Tag;
+                        }
+                        else if (childButton.Tag.ToString() == "CellPhone")
+                        {
+                            m_Button_Client_SelectedCellPhone = childButton;
+                        }
+                        else if (childButton.Tag.ToString() == "Email")
+                        {
+                            m_Button_Client_SelectedEmail = childButton;
+                        }
+                    }
+
+                    //Select the hostess
+                    Get_SelectedClientFromButton();
+
+                    //Enable the buttons
+                    Btn_Clients_Edit.IsEnabled = true;
+                    Btn_Clients_Delete.IsEnabled = true;
+
+                    //Open the default email sender
+                    Process p = new Process();
+                    string mailto = "mailto:" + emailAddress;
+                    ProcessStartInfo ps = new ProcessStartInfo(mailto);
+                    ps.CreateNoWindow = false;
+                    ps.UseShellExecute = true;
+                    p.StartInfo = ps;
+                    p.Start();
+                    p.WaitForExit();
+
+                    //Action
+                    m_Global_Handler.Error_Handler.WriteAction("Mail sent to " + emailAddress);
+
+                    //Close stop window
+                    windowWait.Stop();
+
+                }
+                catch (Exception exception)
+                {
+                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    windowWait.Stop();
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Clients
+        /// Mouse down on the client's phone button(s) event
+        /// Select the client and open skype
+        /// </summary>
+        private void IsPressed_Client_PhoneButton(object sender, RoutedEventArgs ev)
+        {
+            if (sender != null)
+            {
+                //Confirm skype call
+                MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCall"),
+                                m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCallCaption"),
+                                MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.No)
+                {
+                    return;
+                }
+
+                //Creation of the wait window
+                WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
+
+                try
+                {
+                    //Open the wait window
+                    windowWait.Start(m_Global_Handler, "ClientPhonePrincipalMessage", "ClientPhoneSecondaryMessage");
+
+                    //Get the email adress
+                    Button phoneButton = (Button)sender;
+                    StackPanel phoneStackPanel = (StackPanel)phoneButton.Content;
+                    TextBlock phoneTextBox = (TextBlock)phoneStackPanel.Children[1];
+                    string phoneNumber = phoneTextBox.Text.Trim();
+
+                    //Manage the buttons
+                    if (m_Button_Client_SelectedClient != null)
+                    {
+                        m_Button_Client_SelectedClient.Background = m_Color_HostAndHostess;
+                    }
+                    if (m_Button_Client_SelectedCellPhone != null)
+                    {
+                        m_Button_Client_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                    }
+                    if (m_Button_Client_SelectedEmail != null)
+                    {
+                        m_Button_Client_SelectedEmail.Background = m_Color_HostAndHostess;
+                    }
+                    m_Button_Client_SelectedClient = null;
+                    m_Button_Client_SelectedCellPhone = null;
+                    m_Button_Client_SelectedEmail = null;
+                    StackPanel stackSel = (StackPanel)phoneButton.Parent;
+                    for (int iChildren = 0; iChildren < stackSel.Children.Count; ++iChildren)
+                    {
+                        Button childButton = (Button)stackSel.Children[iChildren];
+                        childButton.Background = m_Color_SelectedHostAndHostess;
+                        if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Email")
+                        {
+                            m_Button_Client_SelectedClient = childButton;
+                            m_Id_SelectedClient = (string)childButton.Tag;
+                        }
+                        else if (childButton.Tag.ToString() == "CellPhone")
+                        {
+                            m_Button_Client_SelectedCellPhone = childButton;
+                        }
+                        else if (childButton.Tag.ToString() == "Email")
+                        {
+                            m_Button_Client_SelectedEmail = childButton;
+                        }
+                    }
+
+                    //Select the hostess
+                    Client client = Get_SelectedClientFromButton();
+
+                    //Open skype
+                    SKYPE4COMLib.Skype skype = new SKYPE4COMLib.Skype();
+                    if (skype != null)
+                    {
+                        if (!skype.Client.IsRunning)
+                        {
+                            skype.Client.Start(true, true);
+                        }
+                        //skype.Attach(8, true);
+                        //skype.Client.OpenDialpadTab();
+                        //SKYPE4COMLib.Call call = skype.PlaceCall(phoneNumber);
+                    }
+
+                    //Enable the buttons
+                    Btn_Clients_Edit.IsEnabled = true;
+                    Btn_Clients_Delete.IsEnabled = true;
+
+                    //Action
+                    m_Global_Handler.Error_Handler.WriteAction("Skype call made to " + client.corporate_name + ", " + client.phone);
+
+                    //Close stop window
+                    windowWait.Stop();
+
+                }
+                catch (Exception exception)
+                {
+                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    windowWait.Stop();
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Boolean tagging the full actualization avoiding to do it multiple time
+        /// This variable is only used in the research client text box text changed event
+        /// </summary>
+        bool actualizationClientDone = true;
+        /// <summary>
+        /// Event
+        /// Client
+        /// Text changed in the research client text box
+        /// Only Hostess containing the text (at least 2 characters) are shown 
+        /// </summary>
+        private void Txt_Client_Research_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //Get the researched text
+            string researchedText = Txt_Clients_Research.Text;
+            researchedText = researchedText.ToLower();
+
+            //Clear the fields
+            m_Button_Client_SelectedClient = null;
+
+            //Verifications - 3 letters minimum
+            if (researchedText.Length < 2)
+            {
+                if (!actualizationClientDone)
+                {
+                    Grid_Clients_Details.Children.Clear();
+                    Actualize_GridClientsFromDatabase();
+                    actualizationClientDone = true;
+                    return;
+                }
+            }
+            else
+            {
+                try
+                {
+                    //Research in each private member of the list of Client
+                    List<Client> foundClientList = new List<Client>();
+                    for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
+                    {
+                        Client processedClient = SoftwareObjects.ClientsCollection[iClient];
+                        if (processedClient.address.ToLower().Contains(researchedText))
+                        {
+                            foundClientList.Add(processedClient);
+                            continue;
+                        }
+                        else if (processedClient.city.ToLower().Contains(researchedText))
+                        {
+                            foundClientList.Add(processedClient);
+                            continue;
+                        }
+                        else if (processedClient.country.ToLower().Contains(researchedText))
+                        {
+                            foundClientList.Add(processedClient);
+                            continue;
+                        }
+                        else if (processedClient.email.ToLower().Contains(researchedText))
+                        {
+                            foundClientList.Add(processedClient);
+                            continue;
+                        }
+                        else if (processedClient.corporate_name.ToLower().Contains(researchedText))
+                        {
+                            foundClientList.Add(processedClient);
+                            continue;
+                        }
+                        else if (processedClient.state.ToLower().Contains(researchedText))
+                        {
+                            foundClientList.Add(processedClient);
+                            continue;
+                        }
+                        else if (processedClient.zipcode.ToLower().Contains(researchedText))
+                        {
+                            foundClientList.Add(processedClient);
+                            continue;
+                        }
+                    }
+
+                    //Displaying the found Client list
+                    Grid_Clients_Details.Children.Clear();
+                    actualizationClientDone = false;
+                    if (foundClientList.Count > 0)
+                    {
+                        //Clear fields
+
+                        //Initialize counter for columns and rows of Grid_Client
+                        m_GridClient_Column = 0;
+                        m_GridClient_Row = 0;
+                    }
+                    for (int iClient = 0; iClient < foundClientList.Count; ++iClient)
+                    {
+                        Add_ClientToGrid(foundClientList[iClient]);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    return;
+                }
+            }
+
+        }
 
         #endregion
-
 
         #region Settings
 
@@ -4621,7 +5097,7 @@ namespace Software
                 for (int iBill = 0; iBill < SoftwareObjects.MissionsCollection.Count; ++iBill)
                 {
                     Billing bill = SoftwareObjects.MissionsCollection[iBill];
-                    if (bill.id_HostAndHostess == hostess.id)
+                    if (bill.id_hostorhostess == hostess.id)
                     {
                         string type = "";
                         if (bill.num_invoice == "" || bill.num_invoice == null)
@@ -4655,7 +5131,6 @@ namespace Software
             return hostess;
         }
 
-
         /// <summary>
         /// Functions
         /// Host and hostess
@@ -4682,7 +5157,330 @@ namespace Software
                 return -1;
             }
         }
+
         #endregion
+
+        #region Clients
+
+        /// <summary>
+        /// Functions
+        /// Clients
+        /// Actualize the grid of Clients from the actual collection
+        /// </summary>
+        private void Actualize_GridClientsFromCollection()
+        {
+            if (m_Database_Handler != null)
+            {
+                //Initialize rows and columns
+                m_GridClient_Column = 0;
+                m_GridClient_Row = 0;
+
+                //Actualization
+                try
+                {
+                    //Sort by last name
+                    SoftwareObjects.ClientsCollection.Sort(delegate (Client x, Client y)
+                    {
+                        if (x.corporate_name == null && y.corporate_name == null) return 0;
+                        else if (x.corporate_name == null) return -1;
+                        else if (y.corporate_name == null) return 1;
+                        else
+                        {
+                            if (m_IsSortHostess_Ascending == true)
+                            {
+                                return x.corporate_name.CompareTo(y.corporate_name);
+                            }
+                            else
+                            {
+                                return y.corporate_name.CompareTo(x.corporate_name);
+                            }
+                        }
+                    });
+                    //Add to grid
+                    for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
+                    {
+                        Client client = SoftwareObjects.ClientsCollection[iClient];
+                        Add_ClientToGrid(client);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    SoftwareObjects.ClientsCollection = new List<Client>();
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Clients
+        /// Actualize the grid of clients from the collection saved in the database
+        /// </summary>
+        private void Actualize_GridClientsFromDatabase()
+        {
+            if (m_Database_Handler != null)
+            {
+                //Initialize rows and columns
+                m_GridClient_Column = 0;
+                m_GridClient_Row = 0;
+
+                //Getting the hosts and hostesses collection  
+                try
+                {
+                    string res = m_Database_Handler.Get_ClientsFromDatabase();
+                    if (res.Contains("OK"))
+                    {
+                        //Sort by last name
+                        SoftwareObjects.ClientsCollection.Sort(delegate (Client x, Client y)
+                        {
+                            if (x.corporate_name == null && y.corporate_name == null) return 0;
+                            else if (x.corporate_name == null) return -1;
+                            else if (y.corporate_name == null) return 1;
+                            else
+                            {
+                                if (m_IsSortClient_Ascending == true)
+                                {
+                                    return x.corporate_name.CompareTo(y.corporate_name);
+                                }
+                                else
+                                {
+                                    return y.corporate_name.CompareTo(x.corporate_name);
+                                }
+                            }
+                        });
+                        //Add to grid
+                        for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
+                        {
+                            Client client = SoftwareObjects.ClientsCollection[iClient];
+                            Add_ClientToGrid(client);
+                        }
+                    }
+                    else if (res.Contains("Error"))
+                    {
+                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("HostsAndHostessesActualizationErrorCaption"),
+                            MessageBoxButton.OK, MessageBoxImage.Error);
+                        SoftwareObjects.HostsAndHotessesCollection = new List<Hostess>();
+                    }
+                }
+                catch (Exception exception)
+                {
+                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    SoftwareObjects.ClientsCollection = new List<Client>();
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Clients
+        /// Increment on grid Client columns
+        /// </summary>
+        private int m_GridClient_Column = 0;
+        /// <summary>
+        /// Functions
+        /// Clients
+        /// Increment on grid Client rows
+        /// </summary>
+        private int m_GridClient_Row = 0;
+        /// <summary>
+        /// Functions
+        /// Clients
+        /// Add a client to the grid, create a stack panel containing all the information of the client
+        /// <param name="_Client">Hostess</param>
+        /// </summary>
+        private void Add_ClientToGrid(Client _Client)
+        {
+            try
+            {
+                //Treatment of the first row
+                Grid_Clients_Details.RowDefinitions[0].MinHeight = 350;
+
+                //Create the hostess button
+                Button buttonClient = new Button();
+                buttonClient.Padding = new Thickness(5);
+                buttonClient.Background = m_Color_HostAndHostess;
+                buttonClient.Click += IsPressed_Client_Button;
+
+                //Treatment of hostess info
+                TextBlock clientInfo = new TextBlock();
+                Run names = new Run("\n" + _Client.corporate_name);
+                names.FontSize = 15;
+                names.FontWeight = FontWeights.Bold;
+                clientInfo.Inlines.Add(names);
+                clientInfo.Inlines.Add(new LineBreak());
+                string creationDate = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Client.date_creation, m_Global_Handler.Language_Handler);
+                string info = _Client.address + "\n" +
+                    _Client.zipcode + ", " + _Client.city + "\n" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("CreationDate") + " : " + creationDate + "\n";
+                clientInfo.Inlines.Add(info);
+                //Create stack button
+                StackPanel buttonStack = new StackPanel();
+                buttonStack.Orientation = Orientation.Horizontal;
+
+                //Add label
+                Label buttonLabel = new Label();
+                buttonLabel.Content = clientInfo;
+                buttonStack.Children.Add(buttonLabel);
+
+                //Add button
+                buttonClient.Content = buttonStack;
+                buttonClient.Tag = _Client.id;
+
+                //Create the main stack panel
+                StackPanel mainStackPanel = new StackPanel();
+                mainStackPanel.MinHeight = 45;
+                mainStackPanel.MinWidth = 145;
+                mainStackPanel.Margin = new Thickness(5);
+                mainStackPanel.Tag = _Client.id;
+                mainStackPanel.Children.Add(buttonClient);
+
+                //Create the cellphone call button
+                Button buttonCallCellPhone = new Button();
+                buttonCallCellPhone.MinHeight = 20;
+                buttonCallCellPhone.Padding = new Thickness(5);
+                buttonCallCellPhone.Background = m_Color_HostAndHostess;
+                buttonCallCellPhone.Click += IsPressed_Client_PhoneButton;
+                buttonCallCellPhone.Tag = "CellPhone";
+                //Treatment of the image in the call button
+                Image imgCellPhone = new Image();
+                imgCellPhone.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Image_CellPhone);
+                StackPanel stackCellPhonePanel = new StackPanel();
+                stackCellPhonePanel.Orientation = Orientation.Horizontal;
+                stackCellPhonePanel.Margin = new Thickness(5);
+                TextBlock cellPhoneInfo = new TextBlock();
+                string phone = _Client.phone;
+                if (phone.Length == 10)
+                {
+                    phone = phone.Insert(8, " ");
+                    phone = phone.Insert(6, " ");
+                    phone = phone.Insert(4, " ");
+                    phone = phone.Insert(2, " ");
+                }
+                string cellPhoneText = "   " + phone;
+                cellPhoneInfo.Inlines.Add(cellPhoneText);
+                stackCellPhonePanel.Children.Add(imgCellPhone);
+                stackCellPhonePanel.Children.Add(cellPhoneInfo);
+                buttonCallCellPhone.Content = stackCellPhonePanel;
+                //Add to the main stack panel
+                mainStackPanel.Children.Add(buttonCallCellPhone);
+
+                //Create the email button
+                Button buttonSendMail = new Button();
+                buttonSendMail.MinHeight = 20;
+                buttonSendMail.Padding = new Thickness(5);
+                buttonSendMail.Background = m_Color_HostAndHostess;
+                buttonSendMail.Click += IsPressed_Client_EmailButton;
+                buttonSendMail.Tag = "Email";
+                //Treatment of the image in the email button
+                Image imgEmail = new Image();
+                imgEmail.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Image_Email);
+                StackPanel stackEmail = new StackPanel();
+                stackEmail.Orientation = Orientation.Horizontal;
+                stackEmail.Margin = new Thickness(5);
+                TextBlock emailInfo = new TextBlock();
+                string emailText = "   " + _Client.email;
+                emailInfo.Inlines.Add(emailText);
+                stackEmail.Children.Add(imgEmail);
+                stackEmail.Children.Add(emailInfo);
+                buttonSendMail.Content = stackEmail;
+                //Add to the main stack panel
+                mainStackPanel.Children.Add(buttonSendMail);
+
+                //Treatment of the increments
+                if (m_GridClient_Column > Grid_Clients_Details.ColumnDefinitions.Count - 1)
+                {
+                    m_GridClient_Column = 0;
+                    m_GridClient_Row += 1;
+                    RowDefinition row = new RowDefinition();
+                    row.MinHeight = 350;
+                    Grid_Clients_Details.RowDefinitions.Add(row);
+                    Grid.SetColumn(mainStackPanel, m_GridClient_Column);
+                    Grid.SetRow(mainStackPanel, m_GridClient_Row);
+                    m_GridClient_Column += 1;
+                }
+                else
+                {
+                    Grid.SetColumn(mainStackPanel, m_GridClient_Column);
+                    Grid.SetRow(mainStackPanel, m_GridClient_Row);
+                    m_GridClient_Column += 1;
+                }
+
+                //Treatment of the Grid_Client column
+                Grid_Clients_Details.Children.Add(mainStackPanel);
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Clients
+        /// Get a client from his id
+        /// <returns>Returns the client corresponding to the id</returns>
+        /// </summary>
+        private Client Get_SelectedClientFromButton()
+        {
+            //Test
+            if (m_Button_Client_SelectedClient == null || m_Button_Client_SelectedClient.Tag == null)
+            {
+                MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ClientSelectedError"),
+                    m_Global_Handler.Resources_Handler.Get_Resources("ClientSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
+                return null;
+            }
+
+            //Get the hostess from the id
+            string id = (string)m_Button_Client_SelectedClient.Tag;
+            Client client = SoftwareObjects.ClientsCollection.Find(x => x.id.Equals(id));
+
+            //Actualize datagrid
+            if (client != null)
+            {
+                //Fill the m_DataGrid_Client_MissionsCollection
+                m_DataGrid_Clients_MissionsCollection.Clear();
+                for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+                {
+                    Billing bill = SoftwareObjects.MissionsCollection[iMission];
+                    if (bill.id_hostorhostess == client.id)
+                    {
+                        string type = "";
+                        if (bill.num_invoice == "" || bill.num_invoice == null)
+                        {
+                            type = m_Global_Handler.Resources_Handler.Get_Resources("Mission");
+                            if (bill.date_Mission_archived != null && bill.date_Mission_archived != "")
+                            {
+                                //Not show archived mission
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            type = m_Global_Handler.Resources_Handler.Get_Resources("Invoice");
+                            if (bill.date_invoice_archived != null && bill.date_invoice_archived != "")
+                            {
+                                //Not show archived invoice
+                                continue;
+                            }
+                        }
+                        string creationDate = m_Global_Handler.DateAndTime_Handler.Treat_Date(bill.date_Mission_creation, m_Global_Handler.Language_Handler);
+                        string sentDate = m_Global_Handler.DateAndTime_Handler.Treat_Date(bill.date_Mission_sent, m_Global_Handler.Language_Handler);
+                        m_DataGrid_Clients_Missions data = new m_DataGrid_Clients_Missions("", "", "", "");
+                        m_DataGrid_Clients_MissionsCollection.Add(data);
+                    }
+                }
+                DataGrid_Clients_Missions.Items.Refresh();
+            }
+
+            //Return the client
+            return client;
+        }
+
+        #endregion
+
 
         #region Missions
 
@@ -5053,7 +5851,7 @@ namespace Software
                 }
 
                 //Get hostess infos
-                Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(_Mission.id_HostAndHostess));
+                Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(_Mission.id_hostorhostess));
                 if (hostess == null)
                 {
                     Exception error = new Exception("No hostess associated to the mission");
@@ -5342,7 +6140,7 @@ namespace Software
                 }
 
                 //Get hostess infos
-                Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(_Mission.id_HostAndHostess));
+                Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(_Mission.id_hostorhostess));
                 if (hostess == null)
                 {
                     Exception error = new Exception("No hostess associated to the mission");

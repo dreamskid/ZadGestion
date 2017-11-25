@@ -69,7 +69,7 @@ namespace SoftwareClasses
         /// </summary>
         public Billing(Billing _Mission)
         {
-            id_HostAndHostess = _Mission.id_HostAndHostess;
+            id_hostorhostess = _Mission.id_hostorhostess;
             id_company = _Mission.id_company;
             amount = _Mission.amount;
             grand_amount = _Mission.grand_amount;
@@ -98,7 +98,7 @@ namespace SoftwareClasses
         /// <summary>
         /// Getter/Setter for bill contact
         /// </summary>
-        public string id_HostAndHostess
+        public string id_hostorhostess
         {
             get;
             set;
