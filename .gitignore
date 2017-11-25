@@ -6,6 +6,8 @@ Common/obj/
 Common/bin/
 Database/obj/
 Database/bin/
+Launcher/bin/
+Launcher/obj/
 Software/obj/
 Software/bin/
 WindowHostOrHostess/obj/
