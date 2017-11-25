@@ -1,1 +1,18 @@
 
+.vs/
+Clients/obj/
+Clients/bin/
+Common/obj/
+Common/bin/
+Database/obj/
+Database/bin/
+Software/obj/
+Software/bin/
+WindowHostOrHostess/obj/
+WindowHostOrHostess/bin/
+WindowMission/obj/
+WindowMission/bin/
+WindowWait/obj/
+WindowWait/bin/
+ZadGestion/obj/
+ZadGestion/bin/
