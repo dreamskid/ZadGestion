@@ -61,15 +61,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;acceptation.
-        /// </summary>
-        public static string AcceptedDate {
-            get {
-                return ResourceManager.GetString("AcceptedDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Erreur lors du chargement de la table Paramètres.
         /// </summary>
         public static string ActualizeSettingsErrorCaption {
@@ -84,15 +75,6 @@ namespace Launcher.Language {
         public static string Add {
             get {
                 return ResourceManager.GetString("Add", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ajouter un paiement.
-        /// </summary>
-        public static string AddPayment {
-            get {
-                return ResourceManager.GetString("AddPayment", resourceCulture);
             }
         }
         
@@ -115,24 +97,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Acompte.
-        /// </summary>
-        public static string Advance {
-            get {
-                return ResourceManager.GetString("Advance", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Acompte total.
-        /// </summary>
-        public static string AdvanceTotal {
-            get {
-                return ResourceManager.GetString("AdvanceTotal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ZadGestion déjà installé sur un autre ordinateur.
         /// </summary>
         public static string AlreadyInstalledCaption {
@@ -148,69 +112,6 @@ namespace Launcher.Language {
         public static string AlreadyInstalledText {
             get {
                 return ResourceManager.GetString("AlreadyInstalledText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Montant.
-        /// </summary>
-        public static string Amount {
-            get {
-                return ResourceManager.GetString("Amount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Montant HT.
-        /// </summary>
-        public static string AmountET {
-            get {
-                return ResourceManager.GetString("AmountET", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to P.U. HT.
-        /// </summary>
-        public static string AmountETUnit {
-            get {
-                return ResourceManager.GetString("AmountETUnit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Montant TTC.
-        /// </summary>
-        public static string AmountIT {
-            get {
-                return ResourceManager.GetString("AmountIT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Montant TTC final.
-        /// </summary>
-        public static string AmountITFinal {
-            get {
-                return ResourceManager.GetString("AmountITFinal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Net à payer.
-        /// </summary>
-        public static string AmountToPay {
-            get {
-                return ResourceManager.GetString("AmountToPay", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Montant TVA.
-        /// </summary>
-        public static string AmountVAT {
-            get {
-                return ResourceManager.GetString("AmountVAT", resourceCulture);
             }
         }
         
@@ -238,15 +139,6 @@ namespace Launcher.Language {
         public static string Archive {
             get {
                 return ResourceManager.GetString("Archive", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;archivage.
-        /// </summary>
-        public static string ArchiveDate {
-            get {
-                return ResourceManager.GetString("ArchiveDate", resourceCulture);
             }
         }
         
@@ -283,15 +175,6 @@ namespace Launcher.Language {
         public static string August {
             get {
                 return ResourceManager.GetString("August", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date de facturation.
-        /// </summary>
-        public static string BillingDate {
-            get {
-                return ResourceManager.GetString("BillingDate", resourceCulture);
             }
         }
         
@@ -350,24 +233,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Carte bancaire.
-        /// </summary>
-        public static string Card {
-            get {
-                return ResourceManager.GetString("Card", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Espèces.
-        /// </summary>
-        public static string Cash {
-            get {
-                return ResourceManager.GetString("Cash", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Téléphone portable.
         /// </summary>
         public static string CellPhone {
@@ -391,15 +256,6 @@ namespace Launcher.Language {
         public static string Choose {
             get {
                 return ResourceManager.GetString("Choose", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Choisir les prestations.
-        /// </summary>
-        public static string ChooseServices {
-            get {
-                return ResourceManager.GetString("ChooseServices", resourceCulture);
             }
         }
         
@@ -431,20 +287,20 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer le client sélectionné(e) ?.
-        /// </summary>
-        public static string ClientConfirmDelete {
-            get {
-                return ResourceManager.GetString("ClientConfirmDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Suppression client.
         /// </summary>
         public static string ClientConfirmDeleteCaption {
             get {
                 return ResourceManager.GetString("ClientConfirmDeleteCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer le client sélectionné(e) ?.
+        /// </summary>
+        public static string ClientConfirmDeleteText {
+            get {
+                return ResourceManager.GetString("ClientConfirmDeleteText", resourceCulture);
             }
         }
         
@@ -674,51 +530,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suppression du contact interdite.
-        /// </summary>
-        public static string ContactForbiddenDeleteCaption {
-            get {
-                return ResourceManager.GetString("ContactForbiddenDeleteCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ce contact ne peut être supprimé car un(des) devis et (ou) facture(s) y sont associé(s).
-        /// </summary>
-        public static string ContactForbiddenDeleteText {
-            get {
-                return ResourceManager.GetString("ContactForbiddenDeleteText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Contacts.
-        /// </summary>
-        public static string Contacts {
-            get {
-                return ResourceManager.GetString("Contacts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to La synthèse des contacts n&apos;a pu être générée. Si cela se reproduit, veuillez contacter le service client..
-        /// </summary>
-        public static string ContactsStatementExcelGenerationFailed {
-            get {
-                return ResourceManager.GetString("ContactsStatementExcelGenerationFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Synthèse des contacts non générée.
-        /// </summary>
-        public static string ContactsStatementExcelGenerationFailedCaption {
-            get {
-                return ResourceManager.GetString("ContactsStatementExcelGenerationFailedCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Continuer.
         /// </summary>
         public static string Continue {
@@ -782,24 +593,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Créer un contact.
-        /// </summary>
-        public static string CreateContact {
-            get {
-                return ResourceManager.GetString("CreateContact", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Créer un avoir.
-        /// </summary>
-        public static string CreateCredit {
-            get {
-                return ResourceManager.GetString("CreateCredit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Créer un hôte ou une hôtesse.
         /// </summary>
         public static string CreateHostOrHostess {
@@ -814,15 +607,6 @@ namespace Launcher.Language {
         public static string CreateMission {
             get {
                 return ResourceManager.GetString("CreateMission", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Créer une prestation.
-        /// </summary>
-        public static string CreateService {
-            get {
-                return ResourceManager.GetString("CreateService", resourceCulture);
             }
         }
         
@@ -917,24 +701,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date du paiement.
-        /// </summary>
-        public static string DatePayment {
-            get {
-                return ResourceManager.GetString("DatePayment", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;utilisation.
-        /// </summary>
-        public static string DateUsed {
-            get {
-                return ResourceManager.GetString("DateUsed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Jour.
         /// </summary>
         public static string Day {
@@ -971,42 +737,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date de refus.
-        /// </summary>
-        public static string DeclinedDate {
-            get {
-                return ResourceManager.GetString("DeclinedDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unité par défaut.
-        /// </summary>
-        public static string DefaultUnit {
-            get {
-                return ResourceManager.GetString("DefaultUnit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Valeurs par défaut.
-        /// </summary>
-        public static string DefaultValues {
-            get {
-                return ResourceManager.GetString("DefaultValues", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TVA par défaut.
-        /// </summary>
-        public static string DefaultVAT {
-            get {
-                return ResourceManager.GetString("DefaultVAT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Supprimer.
         /// </summary>
         public static string Delete {
@@ -1025,38 +755,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Supprimer le contact.
-        /// </summary>
-        public static string DeleteContact {
-            get {
-                return ResourceManager.GetString("DeleteContact", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Supprimer la facture.
-        /// </summary>
-        public static string DeleteInvoice {
-            get {
-                return ResourceManager.GetString("DeleteInvoice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Supprimer la mission.
         /// </summary>
         public static string DeleteMission {
             get {
                 return ResourceManager.GetString("DeleteMission", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Supprimer la prestation sélectionnée.
-        /// </summary>
-        public static string DeleteService {
-            get {
-                return ResourceManager.GetString("DeleteService", resourceCulture);
             }
         }
         
@@ -1097,15 +800,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remise.
-        /// </summary>
-        public static string Discount {
-            get {
-                return ResourceManager.GetString("Discount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Permis.
         /// </summary>
         public static string DriverLicence {
@@ -1115,47 +809,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Glisser-Déplacer votre logo ici.
-        /// </summary>
-        public static string DropImage {
-            get {
-                return ResourceManager.GetString("DropImage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;échéance.
-        /// </summary>
-        public static string DueDate {
-            get {
-                return ResourceManager.GetString("DueDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sélection de la date d&apos;échéance.
-        /// </summary>
-        public static string DueDateSelection {
-            get {
-                return ResourceManager.GetString("DueDateSelection", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Dupliquer la mission.
         /// </summary>
         public static string DuplicateMission {
             get {
                 return ResourceManager.GetString("DuplicateMission", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Dupliquer la prestation sélectionnée.
-        /// </summary>
-        public static string DuplicateService {
-            get {
-                return ResourceManager.GetString("DuplicateService", resourceCulture);
             }
         }
         
@@ -1178,29 +836,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Modifier le contact.
-        /// </summary>
-        public static string EditContact {
-            get {
-                return ResourceManager.GetString("EditContact", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Editer un hôte ou une hôtesse.
         /// </summary>
         public static string EditHostOrHostess {
             get {
                 return ResourceManager.GetString("EditHostOrHostess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Modifier la facture.
-        /// </summary>
-        public static string EditInvoice {
-            get {
-                return ResourceManager.GetString("EditInvoice", resourceCulture);
             }
         }
         
@@ -1214,38 +854,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Modifier la prestation sélectionnée.
-        /// </summary>
-        public static string EditService {
-            get {
-                return ResourceManager.GetString("EditService", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to E-mail.
         /// </summary>
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;envoi.
-        /// </summary>
-        public static string EmailDate {
-            get {
-                return ResourceManager.GetString("EmailDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date de fin.
-        /// </summary>
-        public static string EndDate {
-            get {
-                return ResourceManager.GetString("EndDate", resourceCulture);
             }
         }
         
@@ -1331,83 +944,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total final.
-        /// </summary>
-        public static string FinalTotal {
-            get {
-                return ResourceManager.GetString("FinalTotal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date de début.
-        /// </summary>
-        public static string FirstDate {
-            get {
-                return ResourceManager.GetString("FirstDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Prénom.
         /// </summary>
         public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Prénom de l&apos;hôte ou l&apos;hôtesse.
-        /// </summary>
-        public static string FirstNameHostess {
-            get {
-                return ResourceManager.GetString("FirstNameHostess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pied-de-page.
-        /// </summary>
-        public static string Footer {
-            get {
-                return ResourceManager.GetString("Footer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to %JJ.
-        /// </summary>
-        public static string FormatDay {
-            get {
-                return ResourceManager.GetString("FormatDay", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to %MM.
-        /// </summary>
-        public static string FormatMonth {
-            get {
-                return ResourceManager.GetString("FormatMonth", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to %AAAA.
-        /// </summary>
-        public static string FormatYear1 {
-            get {
-                return ResourceManager.GetString("FormatYear1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to %AA.
-        /// </summary>
-        public static string FormatYear2 {
-            get {
-                return ResourceManager.GetString("FormatYear2", resourceCulture);
             }
         }
         
@@ -1430,65 +971,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;émission.
-        /// </summary>
-        public static string GenerationDate {
-            get {
-                return ResourceManager.GetString("GenerationDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Allemand.
         /// </summary>
         public static string German {
             get {
                 return ResourceManager.GetString("German", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Remise globale.
-        /// </summary>
-        public static string GlobalDiscount {
-            get {
-                return ResourceManager.GetString("GlobalDiscount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Une remise globale de.
-        /// </summary>
-        public static string GlobalDiscountGeneration1 {
-            get {
-                return ResourceManager.GetString("GlobalDiscountGeneration1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to % a été appliquée..
-        /// </summary>
-        public static string GlobalDiscountGeneration2 {
-            get {
-                return ResourceManager.GetString("GlobalDiscountGeneration2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to En-tête.
-        /// </summary>
-        public static string Header {
-            get {
-                return ResourceManager.GetString("Header", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to En-tête/Pied-de-page.
-        /// </summary>
-        public static string HeaderFooter {
-            get {
-                return ResourceManager.GetString("HeaderFooter", resourceCulture);
             }
         }
         
@@ -1502,151 +989,43 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer l&apos;hôte/hôtesse sélectionné(e) ?.
+        ///   Looks up a localized string similar to Hôte ou hôtesse en cours d&apos;archivage.
         /// </summary>
-        public static string HostessConfirmDelete {
+        public static string HostOrHostessArchivePrincipalMessage {
             get {
-                return ResourceManager.GetString("HostessConfirmDelete", resourceCulture);
+                return ResourceManager.GetString("HostOrHostessArchivePrincipalMessage", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suppression hôte/hôtesse.
+        ///   Looks up a localized string similar to Veuillez patienter jusqu&apos;à la fermeture de cette fenêtre pendant l&apos;archivage de l&apos;hôte ou l&apos;hôtesse.
         /// </summary>
-        public static string HostessConfirmDeleteCaption {
+        public static string HostOrHostessArchiveSecondaryMessage {
             get {
-                return ResourceManager.GetString("HostessConfirmDeleteCaption", resourceCulture);
+                return ResourceManager.GetString("HostOrHostessArchiveSecondaryMessage", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suppression de l&apos;hôte/hôtesse en cours ....
+        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer l&apos;hôte ou l&apos;hôtesse sélectionné(e) ?.
         /// </summary>
-        public static string HostessDeletionPrincipalMessage {
+        public static string HostOrHostessConfirmDelete {
             get {
-                return ResourceManager.GetString("HostessDeletionPrincipalMessage", resourceCulture);
+                return ResourceManager.GetString("HostOrHostessConfirmDelete", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to L&apos;hôte/hôtesse est en cours de suppression, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+        ///   Looks up a localized string similar to Suppression hôte ou hôtesse.
         /// </summary>
-        public static string HostessDeletionSecondaryMessage {
+        public static string HostOrHostessConfirmDeleteCaption {
             get {
-                return ResourceManager.GetString("HostessDeletionSecondaryMessage", resourceCulture);
+                return ResourceManager.GetString("HostOrHostessConfirmDeleteCaption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lancement de votre application d&apos;e-mailing par défaut....
-        /// </summary>
-        public static string HostessEmailPrincipalMessage {
-            get {
-                return ResourceManager.GetString("HostessEmailPrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Si une application d&apos;e-mailing est installée sur votre ordinateur, l&apos;application est lancée, merci de patienter.
-        /// </summary>
-        public static string HostessEmailSecondaryMessage {
-            get {
-                return ResourceManager.GetString("HostessEmailSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Génération de la synthèse des hôtes et hôtesses en cours....
-        /// </summary>
-        public static string HostessExcelGenerationPrincipalMessage {
-            get {
-                return ResourceManager.GetString("HostessExcelGenerationPrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Veuillez patienter lors de la génération de la synthèse des hôtes et hôtesses jusqu&apos;à l&apos;ouverture de Microsoft Excel®.
-        /// </summary>
-        public static string HostessExcelGenerationSecondaryMessage {
-            get {
-                return ResourceManager.GetString("HostessExcelGenerationSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ID hôte ou hôtesse.
-        /// </summary>
-        public static string HostessID {
-            get {
-                return ResourceManager.GetString("HostessID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Lancement de Skype....
-        /// </summary>
-        public static string HostessPhonePrincipalMessage {
-            get {
-                return ResourceManager.GetString("HostessPhonePrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Si Skype est installée sur votre ordinateur, l&apos;application est lancée, merci de patienter.
-        /// </summary>
-        public static string HostessPhoneSecondaryMessage {
-            get {
-                return ResourceManager.GetString("HostessPhoneSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer la photo ?.
-        /// </summary>
-        public static string HostessPhotoConfirmDelete {
-            get {
-                return ResourceManager.GetString("HostessPhotoConfirmDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Confirmation de la suppression de la photo.
-        /// </summary>
-        public static string HostessPhotoConfirmDeleteCaption {
-            get {
-                return ResourceManager.GetString("HostessPhotoConfirmDeleteCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Veuillez sélectionner un hôte ou une hôtesse.
-        /// </summary>
-        public static string HostessSelectedError {
-            get {
-                return ResourceManager.GetString("HostessSelectedError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Aucun(e) hôte(sse) sélectionné(e).
-        /// </summary>
-        public static string HostessSelectedErrorCaption {
-            get {
-                return ResourceManager.GetString("HostessSelectedErrorCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Synthèse des hôtes et hôtesses.
-        /// </summary>
-        public static string HostessStatement {
-            get {
-                return ResourceManager.GetString("HostessStatement", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Création de l&apos;hôte/hôtesse en cours....
+        ///   Looks up a localized string similar to Création de l&apos;hôte ou l&apos;hôtesse en cours....
         /// </summary>
         public static string HostOrHostessCreationPrincipalMessage {
             get {
@@ -1655,7 +1034,7 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to L&apos;hôte/hôtesse est en cours de création et sauvegardé(e) dans la base de données, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+        ///   Looks up a localized string similar to L&apos;hôte ou l&apos;hôtesse est en cours de création et sauvegardé(e) dans la base de données, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
         /// </summary>
         public static string HostOrHostessCreationSecondaryMessage {
             get {
@@ -1664,7 +1043,25 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Modification de l&apos;hôte/hôtesse en cours ....
+        ///   Looks up a localized string similar to Suppression de l&apos;hôte ou l&apos;hôtesse en cours ....
+        /// </summary>
+        public static string HostOrHostessDeletionPrincipalMessage {
+            get {
+                return ResourceManager.GetString("HostOrHostessDeletionPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to L&apos;hôte ou l&apos;hôtesse est en cours de suppression, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+        /// </summary>
+        public static string HostOrHostessDeletionSecondaryMessage {
+            get {
+                return ResourceManager.GetString("HostOrHostessDeletionSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modification de l&apos;hôte ou l&apos;hôtesse en cours ....
         /// </summary>
         public static string HostOrHostessEditionPrincipalMessage {
             get {
@@ -1673,11 +1070,128 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to L&apos;hôte/hôtesse est en cours de modification et sauvegardé(e) dans la base de données, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+        ///   Looks up a localized string similar to L&apos;hôte ou l&apos;hôtesse est en cours de modification et sauvegardé(e) dans la base de données, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
         /// </summary>
         public static string HostOrHostessEditionSecondaryMessage {
             get {
                 return ResourceManager.GetString("HostOrHostessEditionSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lancement de votre application d&apos;e-mailing par défaut....
+        /// </summary>
+        public static string HostOrHostessEmailPrincipalMessage {
+            get {
+                return ResourceManager.GetString("HostOrHostessEmailPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Si une application d&apos;e-mailing est installée sur votre ordinateur, l&apos;application est lancée, merci de patienter.
+        /// </summary>
+        public static string HostOrHostessEmailSecondaryMessage {
+            get {
+                return ResourceManager.GetString("HostOrHostessEmailSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prénom de l&apos;hôte ou de l&apos;hôtesse.
+        /// </summary>
+        public static string HostOrHostessFirstName {
+            get {
+                return ResourceManager.GetString("HostOrHostessFirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID de l&apos;hôte ou de l&apos;hôtesse.
+        /// </summary>
+        public static string HostOrHostessID {
+            get {
+                return ResourceManager.GetString("HostOrHostessID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nom de l&apos;hôte ou de l&apos;hôtesse.
+        /// </summary>
+        public static string HostOrHostessLastName {
+            get {
+                return ResourceManager.GetString("HostOrHostessLastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lancement de Skype....
+        /// </summary>
+        public static string HostOrHostessPhonePrincipalMessage {
+            get {
+                return ResourceManager.GetString("HostOrHostessPhonePrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Si Skype est installée sur votre ordinateur, l&apos;application est lancée, merci de patienter.
+        /// </summary>
+        public static string HostOrHostessPhoneSecondaryMessage {
+            get {
+                return ResourceManager.GetString("HostOrHostessPhoneSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer la photo ?.
+        /// </summary>
+        public static string HostOrHostessPhotoConfirmDelete {
+            get {
+                return ResourceManager.GetString("HostOrHostessPhotoConfirmDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirmation de la suppression de la photo.
+        /// </summary>
+        public static string HostOrHostessPhotoConfirmDeleteCaption {
+            get {
+                return ResourceManager.GetString("HostOrHostessPhotoConfirmDeleteCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hôte ou hôtesse en cours de restauration.
+        /// </summary>
+        public static string HostOrHostessRestorePrincipalMessage {
+            get {
+                return ResourceManager.GetString("HostOrHostessRestorePrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez patienter jusqu&apos;à la fermeture de cette fenêtre pendant la restauration de l&apos;hôte ou l&apos;hôtesse.
+        /// </summary>
+        public static string HostOrHostessRestoreSecondaryMessage {
+            get {
+                return ResourceManager.GetString("HostOrHostessRestoreSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez sélectionner un hôte ou une hôtesse.
+        /// </summary>
+        public static string HostOrHostessSelectedError {
+            get {
+                return ResourceManager.GetString("HostOrHostessSelectedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aucun(e) hôte/hôtesse sélectionné(e).
+        /// </summary>
+        public static string HostOrHostessSelectedErrorCaption {
+            get {
+                return ResourceManager.GetString("HostOrHostessSelectedErrorCaption", resourceCulture);
             }
         }
         
@@ -1700,6 +1214,87 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Génération de la synthèse des hôtes et hôtesses en cours....
+        /// </summary>
+        public static string HostsAndHostessesExcelGenerationPrincipalMessage {
+            get {
+                return ResourceManager.GetString("HostsAndHostessesExcelGenerationPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez patienter lors de la génération de la synthèse des hôtes et hôtesses jusqu&apos;à l&apos;ouverture de Microsoft Excel®.
+        /// </summary>
+        public static string HostsAndHostessesExcelGenerationSecondaryMessage {
+            get {
+                return ResourceManager.GetString("HostsAndHostessesExcelGenerationSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hôtes et hôtesses archivés....
+        /// </summary>
+        public static string HostsAndHostessesShowArchivedPrincipalMessage {
+            get {
+                return ResourceManager.GetString("HostsAndHostessesShowArchivedPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Déploiement des hôtes et hôtesses archivés, veuillez patienter jusqu&apos;`a la fermeture de cette fenêtre.
+        /// </summary>
+        public static string HostsAndHostessesShowArchivedSecondaryMessage {
+            get {
+                return ResourceManager.GetString("HostsAndHostessesShowArchivedSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hôtes et hôtesses en cours....
+        /// </summary>
+        public static string HostsAndHostessesShowInProgressPrincipalMessage {
+            get {
+                return ResourceManager.GetString("HostsAndHostessesShowInProgressPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Déploiement des hôtes et hôtesses en cours, veuillez patienter jusqu&apos;`a la fermeture de cette fenêtre.
+        /// </summary>
+        public static string HostsAndHostessesShowInProgressSecondaryMessage {
+            get {
+                return ResourceManager.GetString("HostsAndHostessesShowInProgressSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Synthèse des hôtes et hôtesses.
+        /// </summary>
+        public static string HostsAndHostessesStatement {
+            get {
+                return ResourceManager.GetString("HostsAndHostessesStatement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Génération de la synthèse des hôtes et hôtesses échouée.
+        /// </summary>
+        public static string HostsAndHostessesStatementExcelGenerationFailedCaption {
+            get {
+                return ResourceManager.GetString("HostsAndHostessesStatementExcelGenerationFailedCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La synthèse des hôtes et hôtesses n&apos;a pu être générée. Merci de bien vouloir vérifier aue le fichier n&apos;est pas ouvert..
+        /// </summary>
+        public static string HostsAndHostessesStatementExcelGenerationFailedText {
+            get {
+                return ResourceManager.GetString("HostsAndHostessesStatementExcelGenerationFailedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Identification paie.
         /// </summary>
         public static string IdPaycheck {
@@ -1709,11 +1304,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le fichier ne correspond pas à un fichier image (jpg, jpeg, bmp, png ou gif).
+        ///   Looks up a localized string similar to En cours.
         /// </summary>
-        public static string ImageExtensionFalse {
+        public static string InProgress {
             get {
-                return ResourceManager.GetString("ImageExtensionFalse", resourceCulture);
+                return ResourceManager.GetString("InProgress", resourceCulture);
             }
         }
         
@@ -1750,24 +1345,6 @@ namespace Launcher.Language {
         public static string InvalidEmailCaption {
             get {
                 return ResourceManager.GetString("InvalidEmailCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Licence non conforme, veuillez rentrer une licence valide.
-        /// </summary>
-        public static string InvalidLicence {
-            get {
-                return ResourceManager.GetString("InvalidLicence", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Licence non conforme.
-        /// </summary>
-        public static string InvalidLicenceCaption {
-            get {
-                return ResourceManager.GetString("InvalidLicenceCaption", resourceCulture);
             }
         }
         
@@ -1844,60 +1421,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nom de l&apos;hôte ou l&apos;hôtesse.
-        /// </summary>
-        public static string LastNameHostess {
-            get {
-                return ResourceManager.GetString("LastNameHostess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Licence.
-        /// </summary>
-        public static string Licence {
-            get {
-                return ResourceManager.GetString("Licence", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Licence expirée.
-        /// </summary>
-        public static string LicenceExpiredCaption {
-            get {
-                return ResourceManager.GetString("LicenceExpiredCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Votre licence est expirée. Veuillez contacter le service client.
-        /// </summary>
-        public static string LicenceExpiredText {
-            get {
-                return ResourceManager.GetString("LicenceExpiredText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Logo.
-        /// </summary>
-        public static string Logo {
-            get {
-                return ResourceManager.GetString("Logo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ce logo sera intégré automatiquement lors de la génération de vos documents.
-        /// </summary>
-        public static string LogoExplanation {
-            get {
-                return ResourceManager.GetString("LogoExplanation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to M.
         /// </summary>
         public static string M {
@@ -1921,15 +1444,6 @@ namespace Launcher.Language {
         public static string March {
             get {
                 return ResourceManager.GetString("March", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 00 00 00 00 00.
-        /// </summary>
-        public static string MaskPhoneFormat {
-            get {
-                return ResourceManager.GetString("MaskPhoneFormat", resourceCulture);
             }
         }
         
@@ -1988,15 +1502,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mission acceptée le.
-        /// </summary>
-        public static string MissionAccepted {
-            get {
-                return ResourceManager.GetString("MissionAccepted", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Archivage de la mission en cours....
         /// </summary>
         public static string MissionArchivePrincipalMessage {
@@ -2011,33 +1516,6 @@ namespace Launcher.Language {
         public static string MissionArchiveSecondaryMessage {
             get {
                 return ResourceManager.GetString("MissionArchiveSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cette mission est associé à une facture archivée.
-        /// </summary>
-        public static string MissionAssociateToArchivedInvoice {
-            get {
-                return ResourceManager.GetString("MissionAssociateToArchivedInvoice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cette mission est associé à une facture en cours.
-        /// </summary>
-        public static string MissionAssociateToInProgressInvoice {
-            get {
-                return ResourceManager.GetString("MissionAssociateToInProgressInvoice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Devis associé à une facture.
-        /// </summary>
-        public static string MissionAssociateToInvoiceCaption {
-            get {
-                return ResourceManager.GetString("MissionAssociateToInvoiceCaption", resourceCulture);
             }
         }
         
@@ -2060,33 +1538,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Merci de sélectionner un contact à affilier au devis.
-        /// </summary>
-        public static string MissionContactError {
-            get {
-                return ResourceManager.GetString("MissionContactError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Le contact associé à Cette mission n&apos;a pas été trouvé dans la base.
-        /// </summary>
-        public static string MissionContactNotFound {
-            get {
-                return ResourceManager.GetString("MissionContactNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Contact non trouvé.
-        /// </summary>
-        public static string MissionContactNotFoundCaption {
-            get {
-                return ResourceManager.GetString("MissionContactNotFoundCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Création de la mission en cours....
         /// </summary>
         public static string MissionCreationPrincipalMessage {
@@ -2101,24 +1552,6 @@ namespace Launcher.Language {
         public static string MissionCreationSecondaryMessage {
             get {
                 return ResourceManager.GetString("MissionCreationSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;envoi de la mission.
-        /// </summary>
-        public static string MissionDate {
-            get {
-                return ResourceManager.GetString("MissionDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Devis refusé le.
-        /// </summary>
-        public static string MissionDeclined {
-            get {
-                return ResourceManager.GetString("MissionDeclined", resourceCulture);
             }
         }
         
@@ -2177,24 +1610,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Récupération de la facture en cours.
-        /// </summary>
-        public static string MissionGetInvoicePrincipalMessage {
-            get {
-                return ResourceManager.GetString("MissionGetInvoicePrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to La facture associée à Cette mission est en cours de récupération. Merci de patienter jusqu&apos;`a la fermeture de cette fenêtre.
-        /// </summary>
-        public static string MissionGetInvoiceSecondaryMessage {
-            get {
-                return ResourceManager.GetString("MissionGetInvoiceSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Facturée.
         /// </summary>
         public static string MissionLegendBilled {
@@ -2244,114 +1659,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Prochain devis:.
-        /// </summary>
-        public static string MissionNextNumerotation {
-            get {
-                return ResourceManager.GetString("MissionNextNumerotation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Numéro de la mission.
-        /// </summary>
-        public static string MissionNumber {
-            get {
-                return ResourceManager.GetString("MissionNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to la mission n&apos;a pu être généré,. Si cela se reproduit, merci de contacter le service client..
-        /// </summary>
-        public static string MissionPDFGenerationFailed {
-            get {
-                return ResourceManager.GetString("MissionPDFGenerationFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Echec de la génération de la mission.
-        /// </summary>
-        public static string MissionPDFGenerationFailedCaption {
-            get {
-                return ResourceManager.GetString("MissionPDFGenerationFailedCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Génération de la mission au format PDF en cours ....
-        /// </summary>
-        public static string MissionPDFGenerationPrincipalMessage {
-            get {
-                return ResourceManager.GetString("MissionPDFGenerationPrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to la mission est en cours de génération, merci de patienter jusqu&apos;à l&apos;ouverture automatique du fichier PDF..
-        /// </summary>
-        public static string MissionPDFGenerationSecondaryMessage {
-            get {
-                return ResourceManager.GetString("MissionPDFGenerationSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Génération de la mission terminée.
-        /// </summary>
-        public static string MissionPDFGenerationSuccesCaption {
-            get {
-                return ResourceManager.GetString("MissionPDFGenerationSuccesCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to la mission a été généré avec succès.
-        /// </summary>
-        public static string MissionPDFGenerationSuccess {
-            get {
-                return ResourceManager.GetString("MissionPDFGenerationSuccess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Voulez-vous visualiser la mission au format PDF ?.
-        /// </summary>
-        public static string MissionPDFOpenConfirmation {
-            get {
-                return ResourceManager.GetString("MissionPDFOpenConfirmation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ouverture de la mission.
-        /// </summary>
-        public static string MissionPDFOpenConfirmationCaption {
-            get {
-                return ResourceManager.GetString("MissionPDFOpenConfirmationCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Confirmation d&apos;envoi de la mission.
-        /// </summary>
-        public static string MissionPDFSendEmailCaption {
-            get {
-                return ResourceManager.GetString("MissionPDFSendEmailCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Voulez-vous toujours envoyer la mission ?.
-        /// </summary>
-        public static string MissionPDFSendEmailConfirmation {
-            get {
-                return ResourceManager.GetString("MissionPDFSendEmailConfirmation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Restauration de la mission en cours....
         /// </summary>
         public static string MissionRestorePrincipalMessage {
@@ -2379,24 +1686,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Missions acceptées.
-        /// </summary>
-        public static string MissionsAccepted {
-            get {
-                return ResourceManager.GetString("MissionsAccepted", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Missions facturées.
-        /// </summary>
-        public static string MissionsBilled {
-            get {
-                return ResourceManager.GetString("MissionsBilled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir  visualiser tous les mission ?.
         /// </summary>
         public static string MissionsConfirmShowAll {
@@ -2420,15 +1709,6 @@ namespace Launcher.Language {
         public static string MissionsCreated {
             get {
                 return ResourceManager.GetString("MissionsCreated", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Missions refusées.
-        /// </summary>
-        public static string MissionsDeclined {
-            get {
-                return ResourceManager.GetString("MissionsDeclined", resourceCulture);
             }
         }
         
@@ -2471,63 +1751,18 @@ namespace Launcher.Language {
         /// <summary>
         ///   Looks up a localized string similar to Actualisation des missions archivés....
         /// </summary>
-        public static string MissionshowArchivedPrincipalMessage {
+        public static string MissionsShowArchivedPrincipalMessage {
             get {
-                return ResourceManager.GetString("MissionshowArchivedPrincipalMessage", resourceCulture);
+                return ResourceManager.GetString("MissionsShowArchivedPrincipalMessage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Actualisation des missions archivés depuis la base de données. Merci de patienter jusqu&apos;à la fermeture de cette fenêtre, selon le nombre de devis, cette opération peut prendre quelques minutes.
         /// </summary>
-        public static string MissionshowArchivedSecondaryMessage {
+        public static string MissionsShowArchivedSecondaryMessage {
             get {
-                return ResourceManager.GetString("MissionshowArchivedSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Actualisation des missions en cours....
-        /// </summary>
-        public static string MissionshowInProgressPrincipalMessage {
-            get {
-                return ResourceManager.GetString("MissionshowInProgressPrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Actualisation des missions en cours depuis la base de données. Merci de patienter jusqu&apos;à la fermeture de cette fenêtre, selon le nombre de devis, cette opération peut prendre quelques minutes.
-        /// </summary>
-        public static string MissionshowInProgressSecondaryMessage {
-            get {
-                return ResourceManager.GetString("MissionshowInProgressSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Prochain numéro de devis :.
-        /// </summary>
-        public static string MissionsNextNumber {
-            get {
-                return ResourceManager.GetString("MissionsNextNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Nombre de devis.
-        /// </summary>
-        public static string MissionsNumber {
-            get {
-                return ResourceManager.GetString("MissionsNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Format de numérotation des missions.
-        /// </summary>
-        public static string MissionsNumerotationFormat {
-            get {
-                return ResourceManager.GetString("MissionsNumerotationFormat", resourceCulture);
+                return ResourceManager.GetString("MissionsShowArchivedSecondaryMessage", resourceCulture);
             }
         }
         
@@ -2546,6 +1781,24 @@ namespace Launcher.Language {
         public static string MissionsShowInProgress {
             get {
                 return ResourceManager.GetString("MissionsShowInProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Actualisation des missions en cours....
+        /// </summary>
+        public static string MissionsShowInProgressPrincipalMessage {
+            get {
+                return ResourceManager.GetString("MissionsShowInProgressPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Actualisation des missions en cours depuis la base de données. Merci de patienter jusqu&apos;à la fermeture de cette fenêtre, selon le nombre de devis, cette opération peut prendre quelques minutes.
+        /// </summary>
+        public static string MissionsShowInProgressSecondaryMessage {
+            get {
+                return ResourceManager.GetString("MissionsShowInProgressSecondaryMessage", resourceCulture);
             }
         }
         
@@ -2570,27 +1823,9 @@ namespace Launcher.Language {
         /// <summary>
         ///   Looks up a localized string similar to Objet de la mission.
         /// </summary>
-        public static string Missionsubject {
+        public static string MissionSubject {
             get {
-                return ResourceManager.GetString("Missionsubject", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cette mission est valable 90 jours.
-        /// </summary>
-        public static string MissionValidity {
-            get {
-                return ResourceManager.GetString("MissionValidity", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date de modification.
-        /// </summary>
-        public static string ModificationDate {
-            get {
-                return ResourceManager.GetString("ModificationDate", resourceCulture);
+                return ResourceManager.GetString("MissionSubject", resourceCulture);
             }
         }
         
@@ -2622,38 +1857,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nombre de prestations.
-        /// </summary>
-        public static string NbServices {
-            get {
-                return ResourceManager.GetString("NbServices", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Non.
         /// </summary>
         public static string No {
             get {
                 return ResourceManager.GetString("No", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Absence de date d&apos;échéance.
-        /// </summary>
-        public static string NoDueDateSelectedCaption {
-            get {
-                return ResourceManager.GetString("NoDueDateSelectedCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sélectionner une date d&apos;échéance.
-        /// </summary>
-        public static string NoDueDateSelectedText {
-            get {
-                return ResourceManager.GetString("NoDueDateSelectedText", resourceCulture);
             }
         }
         
@@ -2699,24 +1907,6 @@ namespace Launcher.Language {
         public static string Number {
             get {
                 return ResourceManager.GetString("Number", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Numérotation.
-        /// </summary>
-        public static string Numerotation {
-            get {
-                return ResourceManager.GetString("Numerotation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Vous pouvez renseigner votre format en utilisant les codes ci-dessous :.
-        /// </summary>
-        public static string NumerotationFormatExplanation {
-            get {
-                return ResourceManager.GetString("NumerotationFormatExplanation", resourceCulture);
             }
         }
         
@@ -2771,141 +1961,6 @@ namespace Launcher.Language {
         public static string Page {
             get {
                 return ResourceManager.GetString("Page", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Payé(e).
-        /// </summary>
-        public static string Paid {
-            get {
-                return ResourceManager.GetString("Paid", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date de paiement.
-        /// </summary>
-        public static string PaidDate {
-            get {
-                return ResourceManager.GetString("PaidDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Moyen de paiement.
-        /// </summary>
-        public static string PaymentMethod {
-            get {
-                return ResourceManager.GetString("PaymentMethod", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Paiements.
-        /// </summary>
-        public static string Payments {
-            get {
-                return ResourceManager.GetString("Payments", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Conditions de paiement.
-        /// </summary>
-        public static string PaymentTerms {
-            get {
-                return ResourceManager.GetString("PaymentTerms", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ajouter une condition de paiement.
-        /// </summary>
-        public static string PaymentTermsAdd {
-            get {
-                return ResourceManager.GetString("PaymentTermsAdd", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Absence des conditions de paiement.
-        /// </summary>
-        public static string PaymentTermsMissingCaption {
-            get {
-                return ResourceManager.GetString("PaymentTermsMissingCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to La référence est obligatoire.
-        /// </summary>
-        public static string PaymentTermsMissingReference {
-            get {
-                return ResourceManager.GetString("PaymentTermsMissingReference", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Référence manquante.
-        /// </summary>
-        public static string PaymentTermsMissingReferenceCaption {
-            get {
-                return ResourceManager.GetString("PaymentTermsMissingReferenceCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Veuillez choisir ou rentrer des conditions de paiement.
-        /// </summary>
-        public static string PaymentTermsMissingText {
-            get {
-                return ResourceManager.GetString("PaymentTermsMissingText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Modifier une condition de paiement.
-        /// </summary>
-        public static string PaymentTermsModify {
-            get {
-                return ResourceManager.GetString("PaymentTermsModify", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Référence (affichée dans le menu déroulant de sélection) :.
-        /// </summary>
-        public static string PaymentTermsReference {
-            get {
-                return ResourceManager.GetString("PaymentTermsReference", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to PayPal.
-        /// </summary>
-        public static string PayPal {
-            get {
-                return ResourceManager.GetString("PayPal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Générer en PDF.
-        /// </summary>
-        public static string PdfGeneration {
-            get {
-                return ResourceManager.GetString("PdfGeneration", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Génération PDF.
-        /// </summary>
-        public static string PDFGenerationTitle {
-            get {
-                return ResourceManager.GetString("PDFGenerationTitle", resourceCulture);
             }
         }
         
@@ -3036,15 +2091,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rechercher un avoir.
-        /// </summary>
-        public static string ResearchCreditNote {
-            get {
-                return ResourceManager.GetString("ResearchCreditNote", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Rechercher un(e) hôte(sse).
         /// </summary>
         public static string ResearchHostOrHostess {
@@ -3054,29 +2100,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rechercher une facture.
-        /// </summary>
-        public static string ResearchInvoice {
-            get {
-                return ResourceManager.GetString("ResearchInvoice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Rechercher une mission.
         /// </summary>
         public static string ResearchMission {
             get {
                 return ResourceManager.GetString("ResearchMission", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Rechercher une prestation.
-        /// </summary>
-        public static string ResearchService {
-            get {
-                return ResourceManager.GetString("ResearchService", resourceCulture);
             }
         }
         
@@ -3095,33 +2123,6 @@ namespace Launcher.Language {
         public static string ResourcesNotFoundCaption {
             get {
                 return ResourceManager.GetString("ResourcesNotFoundCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reste à payer.
-        /// </summary>
-        public static string RestAmount {
-            get {
-                return ResourceManager.GetString("RestAmount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Redémarrage nécessaire.
-        /// </summary>
-        public static string RestartNeededCaption {
-            get {
-                return ResourceManager.GetString("RestartNeededCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to L&apos;application de cette modification nécéssite le redémarrage du logiciel. Voulez-vous redémarrer maintenant ?.
-        /// </summary>
-        public static string RestartNeededText {
-            get {
-                return ResourceManager.GetString("RestartNeededText", resourceCulture);
             }
         }
         
@@ -3162,323 +2163,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Voir l&apos;avoir.
-        /// </summary>
-        public static string SeeCredit {
-            get {
-                return ResourceManager.GetString("SeeCredit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Voir la facture.
-        /// </summary>
-        public static string SeeInvoice {
-            get {
-                return ResourceManager.GetString("SeeInvoice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Voir la mission.
-        /// </summary>
-        public static string SeeMission {
-            get {
-                return ResourceManager.GetString("SeeMission", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date de l&apos;acompte.
-        /// </summary>
-        public static string SelectAdvanceDate {
-            get {
-                return ResourceManager.GetString("SelectAdvanceDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Selectionner un contact.
-        /// </summary>
-        public static string SelectContact {
-            get {
-                return ResourceManager.GetString("SelectContact", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Selectionner un contact dans le menu déroulant.
-        /// </summary>
-        public static string SelectContactCombobox {
-            get {
-                return ResourceManager.GetString("SelectContactCombobox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;échéance.
-        /// </summary>
-        public static string SelectDueDate {
-            get {
-                return ResourceManager.GetString("SelectDueDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Envoyer par email.
-        /// </summary>
-        public static string SendByEmail {
-            get {
-                return ResourceManager.GetString("SendByEmail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Envoyer un email.
-        /// </summary>
-        public static string SendEmail {
-            get {
-                return ResourceManager.GetString("SendEmail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;envoi.
-        /// </summary>
-        public static string SentDate {
-            get {
-                return ResourceManager.GetString("SentDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Septembre.
         /// </summary>
         public static string September {
             get {
                 return ResourceManager.GetString("September", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Prestation.
-        /// </summary>
-        public static string Service {
-            get {
-                return ResourceManager.GetString("Service", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer la prestation sélectionnée ?.
-        /// </summary>
-        public static string ServiceConfirmDelete {
-            get {
-                return ResourceManager.GetString("ServiceConfirmDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer toutes les prestations ?.
-        /// </summary>
-        public static string ServiceConfirmDeleteAll {
-            get {
-                return ResourceManager.GetString("ServiceConfirmDeleteAll", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Suppression de toutes les prestations.
-        /// </summary>
-        public static string ServiceConfirmDeleteAllCaption {
-            get {
-                return ResourceManager.GetString("ServiceConfirmDeleteAllCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Suppresion d&apos;une prestation.
-        /// </summary>
-        public static string ServiceConfirmDeleteCaption {
-            get {
-                return ResourceManager.GetString("ServiceConfirmDeleteCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir modifier la prestation sélectionnée ?.
-        /// </summary>
-        public static string ServiceConfirmEdit {
-            get {
-                return ResourceManager.GetString("ServiceConfirmEdit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Modification d&apos;une prestation.
-        /// </summary>
-        public static string ServiceConfirmEditCaption {
-            get {
-                return ResourceManager.GetString("ServiceConfirmEditCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous réellement sûr(e) de vouloir supprimer toutes les prestations ? Cette opération est définitive.
-        /// </summary>
-        public static string ServiceConfirmReallyDeleteAll {
-            get {
-                return ResourceManager.GetString("ServiceConfirmReallyDeleteAll", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Conifrmation - Suppression de toutes les prestations.
-        /// </summary>
-        public static string ServiceConfirmReallyDeleteAllCaption {
-            get {
-                return ResourceManager.GetString("ServiceConfirmReallyDeleteAllCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Création de la prestation en cours....
-        /// </summary>
-        public static string ServiceCreationPrincipalMessage {
-            get {
-                return ResourceManager.GetString("ServiceCreationPrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to La prestation est en cours de création et sauvegardée dans la base de données, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
-        /// </summary>
-        public static string ServiceCreationSecondaryMessage {
-            get {
-                return ResourceManager.GetString("ServiceCreationSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Prestations.
-        /// </summary>
-        public static string Services {
-            get {
-                return ResourceManager.GetString("Services", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Suppression de toutes les prestations en cours ....
-        /// </summary>
-        public static string ServicesDeleteAllPrincipalMessage {
-            get {
-                return ResourceManager.GetString("ServicesDeleteAllPrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Toutes les prestations sont en cours de suppression, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre. Cette opération peut être longue..
-        /// </summary>
-        public static string ServicesDeleteAllSecondaryMessage {
-            get {
-                return ResourceManager.GetString("ServicesDeleteAllSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Suppression de toutes les prestations terminée.
-        /// </summary>
-        public static string ServicesDeleteEnded {
-            get {
-                return ResourceManager.GetString("ServicesDeleteEnded", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Suppression terminée.
-        /// </summary>
-        public static string ServicesDeleteEndedCaption {
-            get {
-                return ResourceManager.GetString("ServicesDeleteEndedCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Importation des prestations depuis Excel® en cours....
-        /// </summary>
-        public static string ServicesExcelImportPrincipalMessage {
-            get {
-                return ResourceManager.GetString("ServicesExcelImportPrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to L&apos;importation des services depuis Excel® est en cours et sauvegardée sur le web, merci de patienter jusqu&apos;à la fermeture de cette fenêtre. Cette opération peut être longue.
-        /// </summary>
-        public static string ServicesExcelImportSecondaryMessage {
-            get {
-                return ResourceManager.GetString("ServicesExcelImportSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Le fichier importé doit contenir 5 colonnes sans intitulées contenant respectivement:
-        ///- Une référence (le tableau sera automatiquement trié selon cette référence);
-        ///- La désignation/description;
-        ///- Une description détaillée si besoin;
-        ///- L&apos;unité;
-        ///- Le montant HT.
-        ///Voulez-vous continuer l&apos;importation ?.
-        /// </summary>
-        public static string ServicesExcelImportTemplate {
-            get {
-                return ResourceManager.GetString("ServicesExcelImportTemplate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Consignes d&apos;importation des prestations.
-        /// </summary>
-        public static string ServicesExcelImportTemplateCaption {
-            get {
-                return ResourceManager.GetString("ServicesExcelImportTemplateCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Import des prestations depuis Excel® terminée.
-        /// </summary>
-        public static string ServicesImportEnded {
-            get {
-                return ResourceManager.GetString("ServicesImportEnded", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Import terminé.
-        /// </summary>
-        public static string ServicesImportEndedCaption {
-            get {
-                return ResourceManager.GetString("ServicesImportEndedCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Aucune référence n&apos;est associée à la prestation, merci de remplir le champ correspondant.
-        /// </summary>
-        public static string ServicesNoReference {
-            get {
-                return ResourceManager.GetString("ServicesNoReference", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Référence absente.
-        /// </summary>
-        public static string ServicesNoReferenceCaption {
-            get {
-                return ResourceManager.GetString("ServicesNoReferenceCaption", resourceCulture);
             }
         }
         
@@ -3515,33 +2204,6 @@ namespace Launcher.Language {
         public static string Sex {
             get {
                 return ResourceManager.GetString("Sex", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to FA.
-        /// </summary>
-        public static string ShortInvoice {
-            get {
-                return ResourceManager.GetString("ShortInvoice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to DE.
-        /// </summary>
-        public static string ShortMission {
-            get {
-                return ResourceManager.GetString("ShortMission", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Tel..
-        /// </summary>
-        public static string ShortPhone {
-            get {
-                return ResourceManager.GetString("ShortPhone", resourceCulture);
             }
         }
         
@@ -3636,51 +2298,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Synthèse entre .
-        /// </summary>
-        public static string StatementBetween {
-            get {
-                return ResourceManager.GetString("StatementBetween", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Statistiques.
-        /// </summary>
-        public static string Statistics {
-            get {
-                return ResourceManager.GetString("Statistics", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Nombre de factures par statut et par mois pour l&apos;année.
-        /// </summary>
-        public static string StatisticsInvoices {
-            get {
-                return ResourceManager.GetString("StatisticsInvoices", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Evolution du nombre de factures par statut le long de l&apos;année.
-        /// </summary>
-        public static string StatisticsInvoicesEvolution {
-            get {
-                return ResourceManager.GetString("StatisticsInvoicesEvolution", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Nombre de devis par statut et par mois pour l&apos;année.
-        /// </summary>
-        public static string StatisticsMissions {
-            get {
-                return ResourceManager.GetString("StatisticsMissions", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Statut.
         /// </summary>
         public static string Status {
@@ -3726,15 +2343,6 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date, signature et mention &quot;Bon pour accord&quot;.
-        /// </summary>
-        public static string TemplateSignature {
-            get {
-                return ResourceManager.GetString("TemplateSignature", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Modèle Word® non trouvé, veuillez contacter le service client.
         /// </summary>
         public static string TemplateWordNotFound {
@@ -3753,227 +2361,11 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;échéance.
-        /// </summary>
-        public static string TermDate {
-            get {
-                return ResourceManager.GetString("TermDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Facturer.
-        /// </summary>
-        public static string ToInvoice {
-            get {
-                return ResourceManager.GetString("ToInvoice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total.
-        /// </summary>
-        public static string Total {
-            get {
-                return ResourceManager.GetString("Total", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total HT.
-        /// </summary>
-        public static string TotalET {
-            get {
-                return ResourceManager.GetString("TotalET", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total TTC.
-        /// </summary>
-        public static string TotalIT {
-            get {
-                return ResourceManager.GetString("TotalIT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total TVA.
-        /// </summary>
-        public static string TotalVAT {
-            get {
-                return ResourceManager.GetString("TotalVAT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Type.
         /// </summary>
         public static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unité.
-        /// </summary>
-        public static string Unit {
-            get {
-                return ResourceManager.GetString("Unit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Impayé(e).
-        /// </summary>
-        public static string Unpaid {
-            get {
-                return ResourceManager.GetString("Unpaid", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Impayés.
-        /// </summary>
-        public static string UnpaidTitle {
-            get {
-                return ResourceManager.GetString("UnpaidTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mise à jour impossible.
-        /// </summary>
-        public static string UpdateErrorCaption {
-            get {
-                return ResourceManager.GetString("UpdateErrorCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Une erreur s&apos;est produite lors de la mise à jour du logiciel, veuillez contacter le service client.
-        /// </summary>
-        public static string UpdateErrorText {
-            get {
-                return ResourceManager.GetString("UpdateErrorText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mise à jour en cours... .
-        /// </summary>
-        public static string UpdatePrincipalMessage {
-            get {
-                return ResourceManager.GetString("UpdatePrincipalMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Merci de patienter lors de la vérification, du téléchargement et de l&apos;application des mises à jours si disponible.
-        /// </summary>
-        public static string UpdateSecondaryMessage {
-            get {
-                return ResourceManager.GetString("UpdateSecondaryMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Utilisé(e).
-        /// </summary>
-        public static string Used {
-            get {
-                return ResourceManager.GetString("Used", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date d&apos;utilisation.
-        /// </summary>
-        public static string UsedDate {
-            get {
-                return ResourceManager.GetString("UsedDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Utilisateur.
-        /// </summary>
-        public static string User {
-            get {
-                return ResourceManager.GetString("User", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Votre compagnie n&apos;a pas été trouvée. Veuillez vérifier les informations entrées dans la rubrique Mon Compte sur le site ZadGestion.
-        /// </summary>
-        public static string UserCompanyNotFound {
-            get {
-                return ResourceManager.GetString("UserCompanyNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Compagnie non trouvée.
-        /// </summary>
-        public static string UserCompanyNotFoundCaption {
-            get {
-                return ResourceManager.GetString("UserCompanyNotFoundCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Utilisateur inexistant, veuillez verifier votre licence.
-        /// </summary>
-        public static string UserNotFound {
-            get {
-                return ResourceManager.GetString("UserNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Utilisateur inexistant.
-        /// </summary>
-        public static string UserNotFoundCaption {
-            get {
-                return ResourceManager.GetString("UserNotFoundCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Valide jusqu&apos;à.
-        /// </summary>
-        public static string ValidUntil {
-            get {
-                return ResourceManager.GetString("ValidUntil", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TVA.
-        /// </summary>
-        public static string VAT {
-            get {
-                return ResourceManager.GetString("VAT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Type de TVA.
-        /// </summary>
-        public static string VATType {
-            get {
-                return ResourceManager.GetString("VATType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Virement.
-        /// </summary>
-        public static string Wire {
-            get {
-                return ResourceManager.GetString("Wire", resourceCulture);
             }
         }
         
@@ -4001,33 +2393,6 @@ namespace Launcher.Language {
         public static string WordNotPresentErrorText {
             get {
                 return ResourceManager.GetString("WordNotPresentErrorText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mauvaise authentification.
-        /// </summary>
-        public static string WrongAuthenticationCaption {
-            get {
-                return ResourceManager.GetString("WrongAuthenticationCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mauvaise authentification, veuillez réessayer, verifiez votre licence ou les paramètres de votre ordinateur (heure et date, connection internet) ou contacter le service client.
-        /// </summary>
-        public static string WrongAuthenticationText {
-            get {
-                return ResourceManager.GetString("WrongAuthenticationText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mauvais fichier.
-        /// </summary>
-        public static string WrongFile {
-            get {
-                return ResourceManager.GetString("WrongFile", resourceCulture);
             }
         }
         

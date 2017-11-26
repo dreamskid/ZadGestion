@@ -11,35 +11,35 @@
         <Rectangle x:Name="Rct_HostOrHostess_Sizes" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="92" Margin="364,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="340"/>
 
         <!--Buttons-->
-        <Button x:Name="Btn_HostAndHostess_Add" Height="33" Margin="10,0,305.333,47.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" Click="Btn_HostAndHostess_Add_Click" TabIndex="19" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Width="694"/>
+        <Button x:Name="Btn_HostAndHostess_Add" Height="33" Margin="10,0,305.333,47.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" Click="Btn_HostAndHostess_Add_Click" TabIndex="31" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Width="694"/>
         <Button x:Name="Btn_HostAndHostess_AddPhoto" Height="33" Margin="709,0,10.333,9.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="AddPhoto" Click="Btn_HostAndHostess_AddPhoto_Click" TabIndex="18" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Width="290" HorizontalAlignment="Right"/>
         <Button x:Name="Btn_HostAndHostess_DeletePhoto" Height="27" Margin="0,0,137.333,53.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="X" Click="Btn_HostAndHostess_DeletePhoto_Click" TabIndex="16" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FFF03535" Width="32" HorizontalAlignment="Right"/>
         <Button x:Name="Btn_HostAndHostess_NextPhoto" Height="27" Margin="0,0,99.333,53.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="&gt;" Click="Btn_HostAndHostess_NextPhoto_Click" TabIndex="17" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Width="33" HorizontalAlignment="Right"/>
         <Button x:Name="Btn_HostAndHostess_PreviousPhoto" Height="27" Margin="0,0,174.333,53.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="&lt;" Click="Btn_HostAndHostess_PreviousPhoto_Click" TabIndex="15" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Width="32" HorizontalAlignment="Right"/>
-        <Button x:Name="Btn_HostAndHostess_QuitWithoutSaving" Height="33" Margin="10,0,305.333,9.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Click="Btn_HostAndHostess_QuitWithoutSaving_Click" Foreground="White" TabIndex="21" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" Width="694"/>
+        <Button x:Name="Btn_HostAndHostess_QuitWithoutSaving" Height="33" Margin="10,0,305.333,9.667" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Click="Btn_HostAndHostess_QuitWithoutSaving_Click" Foreground="White" TabIndex="32" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" Width="694"/>
 
         <!--Check boxes-->
-        <CheckBox x:Name="Chk_HostOrhostess_Language_English" Content="English" HorizontalAlignment="Left" Height="20" Margin="369,0,0,192.667" VerticalAlignment="Bottom" Width="98"/>
-        <CheckBox x:Name="Chk_HostOrhostess_Language_German" Content="German" HorizontalAlignment="Left" Height="20" Margin="486,0,0,192.667" VerticalAlignment="Bottom" Width="98"/>
-        <CheckBox x:Name="Chk_HostOrhostess_Language_Italian" Content="Italian" HorizontalAlignment="Left" Height="20" Margin="369,0,0,172.667" VerticalAlignment="Bottom" Width="98"/>
-        <CheckBox x:Name="Chk_HostOrhostess_Language_Spanish" Content="Spanish" HorizontalAlignment="Left" Height="20" Margin="606,0,0,192.667" VerticalAlignment="Bottom" Width="98"/>
-        <CheckBox x:Name="Chk_HostOrhostess_Profile_Event" Content="Event" HorizontalAlignment="Left" Height="20" Margin="486,0,0,102.667" VerticalAlignment="Bottom" Width="98"/>
-        <CheckBox x:Name="Chk_HostOrhostess_Profile_Permanent" Content="Permanent" HorizontalAlignment="Left" Height="20" Margin="606,0,0,102.667" VerticalAlignment="Bottom" Width="91"/>
-        <CheckBox x:Name="Chk_HostOrhostess_Profile_Street" Content="Street" HorizontalAlignment="Left" Height="20" Margin="369,0,0,102.667" VerticalAlignment="Bottom" Width="98"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Language_English" Content="English" HorizontalAlignment="Left" Height="20" Margin="369,0,0,192.667" VerticalAlignment="Bottom" Width="98" TabIndex="23"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Language_German" Content="German" HorizontalAlignment="Left" Height="20" Margin="486,0,0,192.667" VerticalAlignment="Bottom" Width="98" TabIndex="24"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Language_Italian" Content="Italian" HorizontalAlignment="Left" Height="20" Margin="369,0,0,172.667" VerticalAlignment="Bottom" Width="98" TabIndex="26"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Language_Spanish" Content="Spanish" HorizontalAlignment="Left" Height="20" Margin="606,0,0,192.667" VerticalAlignment="Bottom" Width="98" TabIndex="25"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Profile_Event" Content="Event" HorizontalAlignment="Left" Height="20" Margin="486,0,0,102.667" VerticalAlignment="Bottom" Width="98" TabIndex="29"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Profile_Permanent" Content="Permanent" HorizontalAlignment="Left" Height="20" Margin="606,0,0,102.667" VerticalAlignment="Bottom" Width="91" TabIndex="30"/>
+        <CheckBox x:Name="Chk_HostOrhostess_Profile_Street" Content="Street" HorizontalAlignment="Left" Height="20" Margin="369,0,0,102.667" VerticalAlignment="Bottom" Width="98" TabIndex="28"/>
 
         <!--Combo boxes-->
-        <ComboBox x:Name="Cmb_HostAndHostess_BirthDate_Day" HorizontalAlignment="Left" Height="20" Margin="364,38,0,0" VerticalAlignment="Top" Width="50" TabIndex="4" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_BirthDate_Month" HorizontalAlignment="Left" Height="20" Margin="419,38,0,0" VerticalAlignment="Top" Width="190" TabIndex="5" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_BirthDate_Year" HorizontalAlignment="Left" Height="20" Margin="614,38,0,0" VerticalAlignment="Top" Width="90" TabIndex="6" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_Car" HorizontalAlignment="Left" Height="20" Margin="619,230,0,0" VerticalAlignment="Top" Width="80" TabIndex="4"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_City" HorizontalAlignment="Left" Height="20" Margin="185,0,0,202" VerticalAlignment="Bottom" Width="174" TabIndex="11" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_Country" HorizontalAlignment="Left" Height="20" Margin="10,0,0,144" VerticalAlignment="Bottom" Width="170" TabIndex="12" SelectionChanged="Cmb_HostAndHostess_Country_SelectionChanged"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_Licence" HorizontalAlignment="Left" Height="20" Margin="450,230,0,0" VerticalAlignment="Top" Width="80" TabIndex="4"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_Sex" HorizontalAlignment="Left" Height="20" Margin="185,95,0,0" VerticalAlignment="Top" Width="174" TabIndex="7"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_Size" HorizontalAlignment="Left" Height="20" Margin="481,124,0,0" VerticalAlignment="Top" Width="107" TabIndex="4" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_Sizes_Shirt" HorizontalAlignment="Left" Height="20" Margin="369,178,0,0" VerticalAlignment="Top" Width="107" TabIndex="4" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_Sizes_Pants" HorizontalAlignment="Left" Height="20" Margin="481,178,0,0" VerticalAlignment="Top" Width="107" TabIndex="4" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_HostAndHostess_Sizes_Shoes" HorizontalAlignment="Left" Height="20" Margin="593,178,0,0" VerticalAlignment="Top" Width="106" TabIndex="4" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_BirthDate_Day" HorizontalAlignment="Left" Height="20" Margin="364,38,0,0" VerticalAlignment="Top" Width="50" TabIndex="12" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_BirthDate_Month" HorizontalAlignment="Left" Height="20" Margin="419,38,0,0" VerticalAlignment="Top" Width="190" TabIndex="13" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_BirthDate_Year" HorizontalAlignment="Left" Height="20" Margin="614,38,0,0" VerticalAlignment="Top" Width="90" TabIndex="14" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Car" HorizontalAlignment="Left" Height="20" Margin="619,230,0,0" VerticalAlignment="Top" Width="80" TabIndex="22"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_City" HorizontalAlignment="Left" Height="20" Margin="185,0,0,202" VerticalAlignment="Bottom" Width="174" TabIndex="8" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Country" HorizontalAlignment="Left" Height="20" Margin="10,0,0,144" VerticalAlignment="Bottom" Width="170" TabIndex="9" SelectionChanged="Cmb_HostAndHostess_Country_SelectionChanged"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Licence" HorizontalAlignment="Left" Height="20" Margin="450,230,0,0" VerticalAlignment="Top" Width="80" TabIndex="21"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Sex" HorizontalAlignment="Left" Height="20" Margin="185,95,0,0" VerticalAlignment="Top" Width="174" TabIndex="4"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Size" HorizontalAlignment="Left" Height="20" Margin="481,124,0,0" VerticalAlignment="Top" Width="107" TabIndex="17" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Sizes_Shirt" HorizontalAlignment="Left" Height="20" Margin="369,178,0,0" VerticalAlignment="Top" Width="107" TabIndex="18" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Sizes_Pants" HorizontalAlignment="Left" Height="20" Margin="481,178,0,0" VerticalAlignment="Top" Width="107" TabIndex="19" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_HostAndHostess_Sizes_Shoes" HorizontalAlignment="Left" Height="20" Margin="593,178,0,0" VerticalAlignment="Top" Width="106" TabIndex="20" IsEditable="True"/>
 
         <!--Image-->
         <Image x:Name="Img_HostAndHostess_Photo" Margin="709,10,10.333,85.667"/>
@@ -71,17 +71,17 @@
         <Label x:Name="Lbl_HostAndHostess_ZipCode" Content="ZipCode" HorizontalAlignment="Left" Height="28" Margin="10,0,0,227" VerticalAlignment="Bottom" Width="131"/>
 
         <!--Text boxes-->
-        <TextBox x:Name="Txt_HostAndHostess_Address" Margin="10,218,0,260" TextWrapping="Wrap" TabIndex="9" HorizontalAlignment="Left" Width="349"/>
-        <TextBox x:Name="Txt_HostAndHostess_BirthCity" HorizontalAlignment="Left" Height="20" Margin="366,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" TabIndex="3"/>
+        <TextBox x:Name="Txt_HostAndHostess_Address" Margin="10,218,0,260" TextWrapping="Wrap" TabIndex="6" HorizontalAlignment="Left" Width="349"/>
+        <TextBox x:Name="Txt_HostAndHostess_BirthCity" HorizontalAlignment="Left" Height="20" Margin="366,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" TabIndex="15"/>
         <TextBox x:Name="Txt_HostAndHostess_CellPhone" HorizontalAlignment="Left" Height="20" Margin="10,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TabIndex="3"/>
-        <TextBox x:Name="Txt_HostAndHostess_Email" HorizontalAlignment="Left" Height="20" Margin="10,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" TabIndex="8"/>
+        <TextBox x:Name="Txt_HostAndHostess_Email" HorizontalAlignment="Left" Height="20" Margin="10,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" TabIndex="5"/>
         <TextBox x:Name="Txt_HostAndHostess_FirstName" HorizontalAlignment="Left" Height="20" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TabIndex="1"/>
-        <TextBox x:Name="Txt_HostAndHostess_IdPaycheck" Height="20" Margin="10,0,0,86" TextWrapping="Wrap" VerticalAlignment="Bottom" TabIndex="14" HorizontalAlignment="Left" Width="349"/>
-        <TextBox x:Name="Txt_HostAndHostess_Language_Others" HorizontalAlignment="Left" Height="20" Margin="561,0,0,172.667" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="138" TabIndex="10"/>
+        <TextBox x:Name="Txt_HostAndHostess_IdPaycheck" Height="20" Margin="10,0,0,86" TextWrapping="Wrap" VerticalAlignment="Bottom" TabIndex="11" HorizontalAlignment="Left" Width="349"/>
+        <TextBox x:Name="Txt_HostAndHostess_Language_Others" HorizontalAlignment="Left" Height="20" Margin="561,0,0,172.667" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="138" TabIndex="27"/>
         <TextBox x:Name="Txt_HostAndHostess_LastName" HorizontalAlignment="Left" Height="20" Margin="185,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" TabIndex="2"/>
-        <TextBox x:Name="Txt_HostAndHostess_SocialSecurityNumber" HorizontalAlignment="Left" Height="20" Margin="500,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" TabIndex="3"/>
-        <TextBox x:Name="Txt_HostAndHostess_State" HorizontalAlignment="Left" Height="20" Margin="185,0,0,144" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="174" TabIndex="13"/>
-        <TextBox x:Name="Txt_HostAndHostess_ZipCode" HorizontalAlignment="Left" Height="20" Margin="10,0,0,202" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="170" TabIndex="10" TextChanged="Txt_HostAndHostess_ZipCode_TextChanged"/>
+        <TextBox x:Name="Txt_HostAndHostess_SocialSecurityNumber" HorizontalAlignment="Left" Height="20" Margin="500,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" TabIndex="16"/>
+        <TextBox x:Name="Txt_HostAndHostess_State" HorizontalAlignment="Left" Height="20" Margin="185,0,0,144" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="174" TabIndex="10"/>
+        <TextBox x:Name="Txt_HostAndHostess_ZipCode" HorizontalAlignment="Left" Height="20" Margin="10,0,0,202" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="170" TabIndex="7" TextChanged="Txt_HostAndHostess_ZipCode_TextChanged"/>
 
     </Grid>
 

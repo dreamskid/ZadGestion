@@ -125,14 +125,6 @@
     <value>Adresse</value>
     <comment>Adresse</comment>
   </data>
-  <data name="Amount" xml:space="preserve">
-    <value>Montant</value>
-    <comment>Montant</comment>
-  </data>
-  <data name="BillingDate" xml:space="preserve">
-    <value>Date de facturation</value>
-    <comment>Date de facturation</comment>
-  </data>
   <data name="BlankFields" xml:space="preserve">
     <value>Les champs suivants n'ont pas été renseignés :</value>
     <comment>Liste des champs non renseignés</comment>
@@ -145,10 +137,6 @@
     <value>Téléphone portable</value>
     <comment>Téléphone portable</comment>
   </data>
-  <data name="ChooseServices" xml:space="preserve">
-    <value>Choisir les prestations</value>
-    <comment>Choisir les prestations</comment>
-  </data>
   <data name="City" xml:space="preserve">
     <value>Ville</value>
     <comment>Ville</comment>
@@ -156,10 +144,6 @@
   <data name="ClientCompanyName" xml:space="preserve">
     <value>Société</value>
     <comment>Nom de la société</comment>
-  </data>
-  <data name="Contacts" xml:space="preserve">
-    <value>Contacts</value>
-    <comment>Contacts</comment>
   </data>
   <data name="ConnectivityErrorCaption" xml:space="preserve">
     <value>Erreur de connection</value>
@@ -177,21 +161,21 @@
     <value>Connection à internet perdue. Veuillez vérifier votre configuration. Aucune sauvegarde ne peut être effectuée</value>
     <comment>Texte de connection perdue</comment>
   </data>
-  <data name="HostessConfirmDelete" xml:space="preserve">
-    <value>Êtes-vous sûr(e) de vouloir supprimer l'hôte/hôtesse sélectionné(e) ?</value>
-    <comment>Texte de suppression de l'hôte/hôtesse</comment>
+  <data name="HostOrHostessConfirmDelete" xml:space="preserve">
+    <value>Êtes-vous sûr(e) de vouloir supprimer l'hôte ou l'hôtesse sélectionné(e) ?</value>
+    <comment>Texte de suppression de l'hôte ou l'hôtesse</comment>
   </data>
-  <data name="HostessConfirmDeleteCaption" xml:space="preserve">
-    <value>Suppression hôte/hôtesse</value>
-    <comment>Titre de suppression de l'hôte/hôtesse</comment>
+  <data name="HostOrHostessConfirmDeleteCaption" xml:space="preserve">
+    <value>Suppression hôte ou hôtesse</value>
+    <comment>Titre de suppression de l'hôte ou l'hôtesse</comment>
   </data>
-  <data name="HostessSelectedError" xml:space="preserve">
+  <data name="HostOrHostessSelectedError" xml:space="preserve">
     <value>Veuillez sélectionner un hôte ou une hôtesse</value>
-    <comment>Veuillez sélectionner un hôte ou une hôtesse</comment>
+    <comment>Texte d'erreur de sélection de l'hôte/hôtesse</comment>
   </data>
-  <data name="HostessSelectedErrorCaption" xml:space="preserve">
-    <value>Aucun(e) hôte(sse) sélectionné(e)</value>
-    <comment>Titre d'erreur de sélection de l'hôte ou l'hôtesse</comment>
+  <data name="HostOrHostessSelectedErrorCaption" xml:space="preserve">
+    <value>Aucun(e) hôte/hôtesse sélectionné(e)</value>
+    <comment>Titre d'erreur de sélection de l'hôte/hôtesse</comment>
   </data>
   <data name="ContinueQuestion" xml:space="preserve">
     <value>Voulez-vous continuer ?</value>
@@ -213,17 +197,9 @@
     <value>Supprimer</value>
     <comment>Supprimer</comment>
   </data>
-  <data name="Discount" xml:space="preserve">
-    <value>Remise</value>
-    <comment>Remise</comment>
-  </data>
   <data name="Email" xml:space="preserve">
     <value>E-mail</value>
     <comment>e-mail</comment>
-  </data>
-  <data name="EmailDate" xml:space="preserve">
-    <value>Date d'envoi</value>
-    <comment>Date d'envoi (email)</comment>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Erreur</value>
@@ -233,29 +209,21 @@
     <value>Fax</value>
     <comment>Fax</comment>
   </data>
-  <data name="FinalTotal" xml:space="preserve">
-    <value>Total final</value>
-    <comment>Total final</comment>
-  </data>
   <data name="FirstName" xml:space="preserve">
     <value>Prénom</value>
     <comment>Prénom</comment>
   </data>
-  <data name="FirstNameHostess" xml:space="preserve">
-    <value>Prénom de l'hôte ou l'hôtesse</value>
+  <data name="HostOrHostessFirstName" xml:space="preserve">
+    <value>Prénom de l'hôte ou de l'hôtesse</value>
     <comment>Prénom de l'hôte ou l'hôtesse</comment>
   </data>
   <data name="LastName" xml:space="preserve">
     <value>Nom</value>
     <comment>Nom</comment>
   </data>
-  <data name="LastNameHostess" xml:space="preserve">
-    <value>Nom de l'hôte ou l'hôtesse</value>
+  <data name="HostOrHostessLastName" xml:space="preserve">
+    <value>Nom de l'hôte ou de l'hôtesse</value>
     <comment>Nom de l'hôte ou l'hôtesse</comment>
-  </data>
-  <data name="ModificationDate" xml:space="preserve">
-    <value>Date de modification</value>
-    <comment>Date de modification</comment>
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Modifier</value>
@@ -264,10 +232,6 @@
   <data name="MyAccount" xml:space="preserve">
     <value>Mon compte</value>
     <comment>Compte de l'utilisateur</comment>
-  </data>
-  <data name="NbServices" xml:space="preserve">
-    <value>Nombre de prestations</value>
-    <comment>Nombre de prestations</comment>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Paramètres</value>
@@ -285,14 +249,6 @@
     <value>Suppresion d'une mission</value>
     <comment>Titre de suppression de devis</comment>
   </data>
-  <data name="MissionContactError" xml:space="preserve">
-    <value>Merci de sélectionner un contact à affilier au devis</value>
-    <comment>Texte d'erreur lors de l'ajout d'une mission sans contact affilié</comment>
-  </data>
-  <data name="MissionDate" xml:space="preserve">
-    <value>Date d'envoi de la mission</value>
-    <comment>Date d'envoi de la mission</comment>
-  </data>
   <data name="Missions" xml:space="preserve">
     <value>Missions</value>
     <comment>Missions</comment>
@@ -309,25 +265,9 @@
     <value>Rechercher un client</value>
     <comment>Rechercher un client</comment>
   </data>
-  <data name="ResearchInvoice" xml:space="preserve">
-    <value>Rechercher une facture</value>
-    <comment>Rechercher une facture</comment>
-  </data>
   <data name="ResearchMission" xml:space="preserve">
     <value>Rechercher une mission</value>
     <comment>Rechercher une mission</comment>
-  </data>
-  <data name="SendByEmail" xml:space="preserve">
-    <value>Envoyer par email</value>
-    <comment>Envoyer par email</comment>
-  </data>
-  <data name="ShortInvoice" xml:space="preserve">
-    <value>FA</value>
-    <comment>Diminutif de facture</comment>
-  </data>
-  <data name="ShortMission" xml:space="preserve">
-    <value>DE</value>
-    <comment>Diminutif de devis</comment>
   </data>
   <data name="SoftwareName" xml:space="preserve">
     <value>ZadGestion</value>
@@ -340,10 +280,6 @@
   <data name="State" xml:space="preserve">
     <value>Etat</value>
     <comment>Etat (US uniquement)</comment>
-  </data>
-  <data name="Total" xml:space="preserve">
-    <value>Total</value>
-    <comment>Total</comment>
   </data>
   <data name="WordGeneration" xml:space="preserve">
     <value>Générer sous Word®</value>
@@ -369,10 +305,6 @@
     <value>Visualiser tous les mission</value>
     <comment>Titre de confirmation de visualisation de tous les mission</comment>
   </data>
-  <data name="SentDate" xml:space="preserve">
-    <value>Date d'envoi</value>
-    <comment>Date d'envoi</comment>
-  </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
     <comment>Type</comment>
@@ -381,109 +313,17 @@
     <value>Choisir</value>
     <comment>Choose</comment>
   </data>
-  <data name="DropImage" xml:space="preserve">
-    <value>Glisser-Déplacer votre logo ici</value>
-    <comment>Tooltip de limage du logo</comment>
-  </data>
-  <data name="ImageExtensionFalse" xml:space="preserve">
-    <value>Le fichier ne correspond pas à un fichier image (jpg, jpeg, bmp, png ou gif)</value>
-    <comment>Fichier non correspondant à une image</comment>
-  </data>
-  <data name="Logo" xml:space="preserve">
-    <value>Logo</value>
-    <comment>Logo</comment>
-  </data>
-  <data name="LogoExplanation" xml:space="preserve">
-    <value>Ce logo sera intégré automatiquement lors de la génération de vos documents</value>
-    <comment>Explication de l'utilisation du logo</comment>
-  </data>
-  <data name="VAT" xml:space="preserve">
-    <value>TVA</value>
-    <comment>TVA</comment>
-  </data>
-  <data name="WrongFile" xml:space="preserve">
-    <value>Mauvais fichier</value>
-    <comment>Mauvais fichier</comment>
-  </data>
-  <data name="AmountET" xml:space="preserve">
-    <value>Montant HT</value>
-    <comment>Montant hors taxe</comment>
-  </data>
-  <data name="AmountIT" xml:space="preserve">
-    <value>Montant TTC</value>
-    <comment>Montant toute taxe comprise</comment>
-  </data>
   <data name="Reference" xml:space="preserve">
     <value>Référence</value>
     <comment>Référence</comment>
-  </data>
-  <data name="ResearchService" xml:space="preserve">
-    <value>Rechercher une prestation</value>
-    <comment>Rechercher une prestation</comment>
-  </data>
-  <data name="Service" xml:space="preserve">
-    <value>Prestation</value>
-    <comment>Prestation</comment>
-  </data>
-  <data name="ServiceConfirmDelete" xml:space="preserve">
-    <value>Êtes-vous sûr(e) de vouloir supprimer la prestation sélectionnée ?</value>
-    <comment>Texte de confirmation de suppression de prestation</comment>
-  </data>
-  <data name="ServiceConfirmDeleteCaption" xml:space="preserve">
-    <value>Suppresion d'une prestation</value>
-    <comment>Titre de confirmation de suppression de prestation</comment>
-  </data>
-  <data name="ServiceConfirmEdit" xml:space="preserve">
-    <value>Êtes-vous sûr(e) de vouloir modifier la prestation sélectionnée ?</value>
-    <comment>Texte de confirmation de modification de prestation</comment>
-  </data>
-  <data name="ServiceConfirmEditCaption" xml:space="preserve">
-    <value>Modification d'une prestation</value>
-    <comment>Titre de confirmation de modification de prestation</comment>
-  </data>
-  <data name="Services" xml:space="preserve">
-    <value>Prestations</value>
-    <comment>Prestations</comment>
-  </data>
-  <data name="ServicesNoReference" xml:space="preserve">
-    <value>Aucune référence n'est associée à la prestation, merci de remplir le champ correspondant</value>
-    <comment>Aucune référence associée à la prestation</comment>
-  </data>
-  <data name="ServicesNoReferenceCaption" xml:space="preserve">
-    <value>Référence absente</value>
-    <comment>Référence absente (titre)</comment>
   </data>
   <data name="Quantity" xml:space="preserve">
     <value>Quantité</value>
     <comment>Quantité</comment>
   </data>
-  <data name="Missionsubject" xml:space="preserve">
+  <data name="MissionSubject" xml:space="preserve">
     <value>Objet de la mission</value>
     <comment>Objet de la mission</comment>
-  </data>
-  <data name="PaymentTerms" xml:space="preserve">
-    <value>Conditions de paiement</value>
-    <comment>Conditions de paiement</comment>
-  </data>
-  <data name="AmountITFinal" xml:space="preserve">
-    <value>Montant TTC final</value>
-    <comment>Montant toute taxe comprise final</comment>
-  </data>
-  <data name="DefaultUnit" xml:space="preserve">
-    <value>Unité par défaut</value>
-    <comment>Unité par défaut</comment>
-  </data>
-  <data name="DefaultVAT" xml:space="preserve">
-    <value>TVA par défaut</value>
-    <comment>TVA par défaut</comment>
-  </data>
-  <data name="Footer" xml:space="preserve">
-    <value>Pied-de-page</value>
-    <comment>Pied-de-page</comment>
-  </data>
-  <data name="Header" xml:space="preserve">
-    <value>En-tête</value>
-    <comment>En-tête</comment>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Enregistrer</value>
@@ -497,29 +337,9 @@
     <value>Modification des paramètres</value>
     <comment>Titre de modification des paramètres</comment>
   </data>
-  <data name="MissionContactNotFound" xml:space="preserve">
-    <value>Le contact associé à Cette mission n'a pas été trouvé dans la base</value>
-    <comment>Texte contact non trouvé</comment>
-  </data>
-  <data name="MissionContactNotFoundCaption" xml:space="preserve">
-    <value>Contact non trouvé</value>
-    <comment>Titre contact non trouvé</comment>
-  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Annuler</value>
     <comment>Annuler</comment>
-  </data>
-  <data name="Unit" xml:space="preserve">
-    <value>Unité</value>
-    <comment>Unité</comment>
-  </data>
-  <data name="UserNotFound" xml:space="preserve">
-    <value>Utilisateur inexistant, veuillez verifier votre licence</value>
-    <comment>Texte d'erreur d'utilisateur inexistant</comment>
-  </data>
-  <data name="UserNotFoundCaption" xml:space="preserve">
-    <value>Utilisateur inexistant</value>
-    <comment>Titre d'erreur d'utilsateur inexistant</comment>
   </data>
   <data name="ResourcesNotFound" xml:space="preserve">
     <value>Ressources non trouvées. Veuillez réinstaller le logiciel.</value>
@@ -528,14 +348,6 @@
   <data name="ResourcesNotFoundCaption" xml:space="preserve">
     <value>Ressources non trouvées.</value>
     <comment>Titre d'erreur des ressources non trouvées</comment>
-  </data>
-  <data name="RestartNeededCaption" xml:space="preserve">
-    <value>Redémarrage nécessaire</value>
-    <comment>Titre de redémarrage</comment>
-  </data>
-  <data name="RestartNeededText" xml:space="preserve">
-    <value>L'application de cette modification nécéssite le redémarrage du logiciel. Voulez-vous redémarrer maintenant ?</value>
-    <comment>Texte de redémarrage</comment>
   </data>
   <data name="Subject" xml:space="preserve">
     <value>Objet</value>
@@ -553,18 +365,6 @@ Cordialement,</value>
     <value>Créer</value>
     <comment>Créer</comment>
   </data>
-  <data name="CreateContact" xml:space="preserve">
-    <value>Créer un contact</value>
-    <comment>Créer un contact</comment>
-  </data>
-  <data name="DeleteContact" xml:space="preserve">
-    <value>Supprimer le contact</value>
-    <comment>Supprimer le contact</comment>
-  </data>
-  <data name="EditContact" xml:space="preserve">
-    <value>Modifier le contact</value>
-    <comment>Modifier le contact</comment>
-  </data>
   <data name="ClientCompanyNumber" xml:space="preserve">
     <value>Numéro de SIRET</value>
     <comment>Numéro de SIRET</comment>
@@ -573,22 +373,6 @@ Cordialement,</value>
     <value>Créer une mission</value>
     <comment>Créer une mission</comment>
   </data>
-  <data name="AmountETUnit" xml:space="preserve">
-    <value>P.U. HT</value>
-    <comment>Prix unitaire HT</comment>
-  </data>
-  <data name="AmountToPay" xml:space="preserve">
-    <value>Net à payer</value>
-    <comment>Net à payer</comment>
-  </data>
-  <data name="GenerationDate" xml:space="preserve">
-    <value>Date d'émission</value>
-    <comment>Date d'émission</comment>
-  </data>
-  <data name="ShortPhone" xml:space="preserve">
-    <value>Tel.</value>
-    <comment>Abréviation téléphone</comment>
-  </data>
   <data name="TemplateWordNotFound" xml:space="preserve">
     <value>Modèle Word® non trouvé, veuillez contacter le service client</value>
     <comment>Texte d'erreur du modèle word non trouvé</comment>
@@ -596,34 +380,6 @@ Cordialement,</value>
   <data name="TemplateWordNotFoundCaption" xml:space="preserve">
     <value>Modèle Word® absent</value>
     <comment>Titre d'erreur du modèle word non trouvé</comment>
-  </data>
-  <data name="TotalET" xml:space="preserve">
-    <value>Total HT</value>
-    <comment>Total HT</comment>
-  </data>
-  <data name="TotalIT" xml:space="preserve">
-    <value>Total TTC</value>
-    <comment>Total TTC</comment>
-  </data>
-  <data name="TotalVAT" xml:space="preserve">
-    <value>Total TVA</value>
-    <comment>Total TVA</comment>
-  </data>
-  <data name="UserCompanyNotFound" xml:space="preserve">
-    <value>Votre compagnie n'a pas été trouvée. Veuillez vérifier les informations entrées dans la rubrique Mon Compte sur le site ZadGestion</value>
-    <comment>Texte d'erreur de compagnie non trouvée</comment>
-  </data>
-  <data name="UserCompanyNotFoundCaption" xml:space="preserve">
-    <value>Compagnie non trouvée</value>
-    <comment>Titre d'erreur de compagnie non trouvée</comment>
-  </data>
-  <data name="ValidUntil" xml:space="preserve">
-    <value>Valide jusqu'à</value>
-    <comment>Valide jusqu'à</comment>
-  </data>
-  <data name="PdfGeneration" xml:space="preserve">
-    <value>Générer en PDF</value>
-    <comment>Générer en PDF</comment>
   </data>
   <data name="QuitWithoutSaving" xml:space="preserve">
     <value>Quitter sans enregistrer</value>
@@ -657,109 +413,29 @@ Cordialement,</value>
     <value>Importer depuis Excel®</value>
     <comment>Importer depuis Excel</comment>
   </data>
-  <data name="ServiceConfirmDeleteAll" xml:space="preserve">
-    <value>Êtes-vous sûr(e) de vouloir supprimer toutes les prestations ?</value>
-    <comment>Texte de confirmation de suppression de toutes les prestations</comment>
-  </data>
-  <data name="ServiceConfirmDeleteAllCaption" xml:space="preserve">
-    <value>Suppression de toutes les prestations</value>
-    <comment>Titre de confirmation de suppression de toutes les prestations</comment>
-  </data>
-  <data name="ServiceConfirmReallyDeleteAll" xml:space="preserve">
-    <value>Êtes-vous réellement sûr(e) de vouloir supprimer toutes les prestations ? Cette opération est définitive</value>
-    <comment>Texte de deuxième confirmation de suppression de toutes les prestations</comment>
-  </data>
-  <data name="ServiceConfirmReallyDeleteAllCaption" xml:space="preserve">
-    <value>Conifrmation - Suppression de toutes les prestations</value>
-    <comment>Titre de deuxième confirmation de suppression de toutes les prestations</comment>
-  </data>
-  <data name="ServicesDeleteEnded" xml:space="preserve">
-    <value>Suppression de toutes les prestations terminée</value>
-    <comment>Texte de suppression de toutes les prestations terminée</comment>
-  </data>
-  <data name="ServicesDeleteEndedCaption" xml:space="preserve">
-    <value>Suppression terminée</value>
-    <comment>Titre de suppression de toutes les prestations terminée</comment>
-  </data>
-  <data name="ServicesImportEnded" xml:space="preserve">
-    <value>Import des prestations depuis Excel® terminée</value>
-    <comment>Texte d'import des prestations terminé</comment>
-  </data>
-  <data name="ServicesImportEndedCaption" xml:space="preserve">
-    <value>Import terminé</value>
-    <comment>Titre d'import des prestations terminé</comment>
-  </data>
-  <data name="VATType" xml:space="preserve">
-    <value>Type de TVA</value>
-    <comment>Type de TVA</comment>
-  </data>
-  <data name="MissionPDFGenerationFailed" xml:space="preserve">
-    <value>la mission n'a pu être généré,. Si cela se reproduit, merci de contacter le service client.</value>
-    <comment>Texte d'echec de la génération de la mission au format PDF</comment>
-  </data>
-  <data name="MissionPDFGenerationFailedCaption" xml:space="preserve">
-    <value>Echec de la génération de la mission</value>
-    <comment>Titre d'echec de la génération de la mission au format PDF</comment>
-  </data>
-  <data name="MissionPDFGenerationPrincipalMessage" xml:space="preserve">
-    <value>Génération de la mission au format PDF en cours ...</value>
-    <comment>Génération de la mission au format PDF en cours</comment>
-  </data>
-  <data name="MissionPDFGenerationSecondaryMessage" xml:space="preserve">
-    <value>la mission est en cours de génération, merci de patienter jusqu'à l'ouverture automatique du fichier PDF.</value>
-    <comment>Texte d'attente de génération de la mission</comment>
-  </data>
-  <data name="MissionPDFGenerationSuccesCaption" xml:space="preserve">
-    <value>Génération de la mission terminée</value>
-    <comment>Titre de succès de génération de la mission au format PDF</comment>
-  </data>
-  <data name="MissionPDFGenerationSuccess" xml:space="preserve">
-    <value>la mission a été généré avec succès</value>
-    <comment>Texte de succès de génération de la mission au format PDF</comment>
-  </data>
-  <data name="MissionPDFOpenConfirmation" xml:space="preserve">
-    <value>Voulez-vous visualiser la mission au format PDF ?</value>
-    <comment>Texte de demande de visualisation de la mission au format pdf</comment>
-  </data>
-  <data name="MissionPDFOpenConfirmationCaption" xml:space="preserve">
-    <value>Ouverture de la mission</value>
-    <comment>Titre de demande de visualisation de la mission au format pdf</comment>
-  </data>
-  <data name="CreateService" xml:space="preserve">
-    <value>Créer une prestation</value>
-    <comment>Créer une prestation</comment>
-  </data>
-  <data name="DeleteService" xml:space="preserve">
-    <value>Supprimer la prestation sélectionnée</value>
-    <comment>Supprimer la prestation sélectionnée</comment>
-  </data>
-  <data name="EditService" xml:space="preserve">
-    <value>Modifier la prestation sélectionnée</value>
-    <comment>Modifier la prestation sélectionnée</comment>
-  </data>
   <data name="HostOrHostessCreationPrincipalMessage" xml:space="preserve">
-    <value>Création de l'hôte/hôtesse en cours...</value>
-    <comment>Message principal d'attente de création de l'hôte/hôtess</comment>
+    <value>Création de l'hôte ou l'hôtesse en cours...</value>
+    <comment>Message principal d'attente de création de l'hôte ou l'hôtesse</comment>
   </data>
   <data name="HostOrHostessCreationSecondaryMessage" xml:space="preserve">
-    <value>L'hôte/hôtesse est en cours de création et sauvegardé(e) dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
-    <comment>Message secondaire d'attente de création de l'hôte/hôtess</comment>
+    <value>L'hôte ou l'hôtesse est en cours de création et sauvegardé(e) dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
+    <comment>Message secondaire d'attente de création de l'hôte ou l'hôtesse</comment>
   </data>
-  <data name="HostessDeletionPrincipalMessage" xml:space="preserve">
-    <value>Suppression de l'hôte/hôtesse en cours ...</value>
-    <comment>Message principal d'attente de suppression de l'hôte/hôtesse</comment>
+  <data name="HostOrHostessDeletionPrincipalMessage" xml:space="preserve">
+    <value>Suppression de l'hôte ou l'hôtesse en cours ...</value>
+    <comment>Message principal d'attente de suppression de l'hôte ou l'hôtesse</comment>
   </data>
-  <data name="HostessDeletionSecondaryMessage" xml:space="preserve">
-    <value>L'hôte/hôtesse est en cours de suppression, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
-    <comment>Message secondaire d'attente de suppression de l'hôte/hôtesse</comment>
+  <data name="HostOrHostessDeletionSecondaryMessage" xml:space="preserve">
+    <value>L'hôte ou l'hôtesse est en cours de suppression, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
+    <comment>Message secondaire d'attente de suppression de l'hôte ou l'hôtesse</comment>
   </data>
   <data name="HostOrHostessEditionPrincipalMessage" xml:space="preserve">
-    <value>Modification de l'hôte/hôtesse en cours ...</value>
-    <comment>Message principal d'attente de modification de l'hôte/hôtesse</comment>
+    <value>Modification de l'hôte ou l'hôtesse en cours ...</value>
+    <comment>Message principal d'attente de modification de l'hôte ou l'hôtesse</comment>
   </data>
   <data name="HostOrHostessEditionSecondaryMessage" xml:space="preserve">
-    <value>L'hôte/hôtesse est en cours de modification et sauvegardé(e) dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
-    <comment>Message secondaire d'attente de modification de l'hôte/hôtesse</comment>
+    <value>L'hôte ou l'hôtesse est en cours de modification et sauvegardé(e) dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
+    <comment>Message secondaire d'attente de modification de l'hôte ou l'hôtesse</comment>
   </data>
   <data name="MissionCreationPrincipalMessage" xml:space="preserve">
     <value>Création de la mission en cours...</value>
@@ -785,49 +461,21 @@ Cordialement,</value>
     <value>la mission est en cours de modification et sauvegardé dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
     <comment>Message secondaire d'attente de modification de la mission</comment>
   </data>
-  <data name="ServiceCreationPrincipalMessage" xml:space="preserve">
-    <value>Création de la prestation en cours...</value>
-    <comment>Message principal d'attente de création de la prestation</comment>
-  </data>
-  <data name="ServiceCreationSecondaryMessage" xml:space="preserve">
-    <value>La prestation est en cours de création et sauvegardée dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
-    <comment>Message secondaire d'attente de création de la prestation</comment>
-  </data>
-  <data name="ServicesDeleteAllPrincipalMessage" xml:space="preserve">
-    <value>Suppression de toutes les prestations en cours ...</value>
-    <comment>Message principal d'attente de suppression de toutes les prestations</comment>
-  </data>
-  <data name="ServicesDeleteAllSecondaryMessage" xml:space="preserve">
-    <value>Toutes les prestations sont en cours de suppression, merci de patienter jusqu'à la fermeture automatique de cette fenêtre. Cette opération peut être longue.</value>
-    <comment>Message secondaire d'attente de suppression de toutes les prestations</comment>
-  </data>
-  <data name="ServicesExcelImportPrincipalMessage" xml:space="preserve">
-    <value>Importation des prestations depuis Excel® en cours...</value>
-    <comment>Message principal d'attente d'importation des prestations depuis Excel</comment>
-  </data>
-  <data name="ServicesExcelImportSecondaryMessage" xml:space="preserve">
-    <value>L'importation des services depuis Excel® est en cours et sauvegardée sur le web, merci de patienter jusqu'à la fermeture de cette fenêtre. Cette opération peut être longue</value>
-    <comment>Message secondaire d'attente d'importation des prestations depuis Excel</comment>
-  </data>
-  <data name="SendEmail" xml:space="preserve">
-    <value>Envoyer un email</value>
-    <comment>Envoyer un email</comment>
-  </data>
-  <data name="HostessEmailPrincipalMessage" xml:space="preserve">
+  <data name="HostOrHostessEmailPrincipalMessage" xml:space="preserve">
     <value>Lancement de votre application d'e-mailing par défaut...</value>
-    <comment>Message principal lors du click sur le bouton email de l'hôte ou hôtesse</comment>
+    <comment>Message principal lors du click sur le bouton email de l'hôte ou l'hôtesse</comment>
   </data>
-  <data name="HostessEmailSecondaryMessage" xml:space="preserve">
+  <data name="HostOrHostessEmailSecondaryMessage" xml:space="preserve">
     <value>Si une application d'e-mailing est installée sur votre ordinateur, l'application est lancée, merci de patienter</value>
-    <comment>Message secondaire lors du click sur le bouton email de l'hôte ou hôtesse</comment>
+    <comment>Message secondaire lors du click sur le bouton email de l'hôte ou l'hôtesse</comment>
   </data>
-  <data name="HostessPhonePrincipalMessage" xml:space="preserve">
+  <data name="HostOrHostessPhonePrincipalMessage" xml:space="preserve">
     <value>Lancement de Skype...</value>
-    <comment>Message principal lors du click sur le bouton téléphone de l'hôte ou hôtesse</comment>
+    <comment>Message principal lors du click sur le bouton téléphone de l'hôte ou l'hôtesse</comment>
   </data>
-  <data name="HostessPhoneSecondaryMessage" xml:space="preserve">
+  <data name="HostOrHostessPhoneSecondaryMessage" xml:space="preserve">
     <value>Si Skype est installée sur votre ordinateur, l'application est lancée, merci de patienter</value>
-    <comment>Message secondaire lors du click sur le bouton téléphone de l'hôte ou hôtesse</comment>
+    <comment>Message secondaire lors du click sur le bouton téléphone de l'hôte ou l'hôtesse</comment>
   </data>
   <data name="InvalidEmail" xml:space="preserve">
     <value>Addresse e-mail non conforme, veuillez rentrer une adresse e-mail valide</value>
@@ -836,10 +484,6 @@ Cordialement,</value>
   <data name="InvalidEmailCaption" xml:space="preserve">
     <value>Addresse e-mail invalide</value>
     <comment>Titre d'erreur d'email invalide</comment>
-  </data>
-  <data name="MaskPhoneFormat" xml:space="preserve">
-    <value>00 00 00 00 00</value>
-    <comment>Masque téléphone</comment>
   </data>
   <data name="ConfirmSkypeCall" xml:space="preserve">
     <value>Voulez-vous ouvrir Skype afin d'appeler votre correspondant ?</value>
@@ -861,45 +505,9 @@ Cordialement,</value>
     <value>Continuer</value>
     <comment>Continuer</comment>
   </data>
-  <data name="SelectContact" xml:space="preserve">
-    <value>Selectionner un contact</value>
-    <comment>Selectionner un contact</comment>
-  </data>
-  <data name="SelectContactCombobox" xml:space="preserve">
-    <value>Selectionner un contact dans le menu déroulant</value>
-    <comment>Selectionner un contact dans le menu déroulant</comment>
-  </data>
-  <data name="MissionsNumerotationFormat" xml:space="preserve">
-    <value>Format de numérotation des missions</value>
-    <comment>Format de numérotation des missions</comment>
-  </data>
-  <data name="FormatDay" xml:space="preserve">
-    <value>%JJ</value>
-    <comment>Format du jour</comment>
-  </data>
-  <data name="FormatMonth" xml:space="preserve">
-    <value>%MM</value>
-    <comment>Format du mois</comment>
-  </data>
-  <data name="FormatYear1" xml:space="preserve">
-    <value>%AAAA</value>
-    <comment>Format de l'année</comment>
-  </data>
-  <data name="FormatYear2" xml:space="preserve">
-    <value>%AA</value>
-    <comment>Format de l'année</comment>
-  </data>
   <data name="Month" xml:space="preserve">
     <value>Mois</value>
     <comment>Mois</comment>
-  </data>
-  <data name="Numerotation" xml:space="preserve">
-    <value>Numérotation</value>
-    <comment>Numérotation</comment>
-  </data>
-  <data name="NumerotationFormatExplanation" xml:space="preserve">
-    <value>Vous pouvez renseigner votre format en utilisant les codes ci-dessous :</value>
-    <comment>Texte de présentation des codes</comment>
   </data>
   <data name="Number" xml:space="preserve">
     <value>Numéro</value>
@@ -913,14 +521,6 @@ Cordialement,</value>
     <value>Jour</value>
     <comment>Jour</comment>
   </data>
-  <data name="DefaultValues" xml:space="preserve">
-    <value>Valeurs par défaut</value>
-    <comment>Valeurs par défaut</comment>
-  </data>
-  <data name="HeaderFooter" xml:space="preserve">
-    <value>En-tête/Pied-de-page</value>
-    <comment>En-tête/Pied-de-page</comment>
-  </data>
   <data name="Language" xml:space="preserve">
     <value>Langue</value>
     <comment>Langue</comment>
@@ -929,18 +529,6 @@ Cordialement,</value>
     <value>* Champs obligatoires</value>
     <comment>Champs obligatoires</comment>
   </data>
-  <data name="MissionNextNumerotation" xml:space="preserve">
-    <value>Prochain devis:</value>
-    <comment>Prochain devis</comment>
-  </data>
-  <data name="MissionNumber" xml:space="preserve">
-    <value>Numéro de la mission</value>
-    <comment>Numéro de la mission</comment>
-  </data>
-  <data name="MissionsNextNumber" xml:space="preserve">
-    <value>Prochain numéro de devis :</value>
-    <comment>Prochain numéro de devis</comment>
-  </data>
   <data name="OpenSoftPrincipalMessage" xml:space="preserve">
     <value>Ouverture du logiciel en cours, merci de patienter...</value>
     <comment>Message principal d'ouverture du logiciel</comment>
@@ -948,70 +536,6 @@ Cordialement,</value>
   <data name="OpenSoftSecondaryMessage" xml:space="preserve">
     <value>Chargement en cours des missions, hôtes et hôtesses, clients et paramètres depuis la base de données, cette opération peut durer quelques minutes</value>
     <comment>Message secondaire d'ouverture du logiciel</comment>
-  </data>
-  <data name="ToInvoice" xml:space="preserve">
-    <value>Facturer</value>
-    <comment>Facturer</comment>
-  </data>
-  <data name="PaymentTermsAdd" xml:space="preserve">
-    <value>Ajouter une condition de paiement</value>
-    <comment>Ajouter une condition de paiement</comment>
-  </data>
-  <data name="PaymentTermsMissingReference" xml:space="preserve">
-    <value>La référence est obligatoire</value>
-    <comment>Texte d'absence de référence</comment>
-  </data>
-  <data name="PaymentTermsMissingReferenceCaption" xml:space="preserve">
-    <value>Référence manquante</value>
-    <comment>Titre d'absence de référence</comment>
-  </data>
-  <data name="PaymentTermsReference" xml:space="preserve">
-    <value>Référence (affichée dans le menu déroulant de sélection) :</value>
-    <comment>Référence</comment>
-  </data>
-  <data name="PaymentTermsModify" xml:space="preserve">
-    <value>Modifier une condition de paiement</value>
-    <comment>Modifier une condition de paiement</comment>
-  </data>
-  <data name="DeleteInvoice" xml:space="preserve">
-    <value>Supprimer la facture</value>
-    <comment>Supprimer la facture</comment>
-  </data>
-  <data name="EditInvoice" xml:space="preserve">
-    <value>Modifier la facture</value>
-    <comment>Modifier la facture</comment>
-  </data>
-  <data name="TermDate" xml:space="preserve">
-    <value>Date d'échéance</value>
-    <comment>Date d'échéance</comment>
-  </data>
-  <data name="DueDateSelection" xml:space="preserve">
-    <value>Sélection de la date d'échéance</value>
-    <comment>Sélection de la date d'échéance</comment>
-  </data>
-  <data name="DueDate" xml:space="preserve">
-    <value>Date d'échéance</value>
-    <comment>Date d'échéance</comment>
-  </data>
-  <data name="Advance" xml:space="preserve">
-    <value>Acompte</value>
-    <comment>Acompte</comment>
-  </data>
-  <data name="NoDueDateSelectedCaption" xml:space="preserve">
-    <value>Absence de date d'échéance</value>
-    <comment>Titre d'absence de date d'échéance</comment>
-  </data>
-  <data name="NoDueDateSelectedText" xml:space="preserve">
-    <value>Sélectionner une date d'échéance</value>
-    <comment>Texte d'absence de date d'échéance</comment>
-  </data>
-  <data name="SelectAdvanceDate" xml:space="preserve">
-    <value>Date de l'acompte</value>
-    <comment>Date de l'acompte</comment>
-  </data>
-  <data name="SelectDueDate" xml:space="preserve">
-    <value>Date d'échéance</value>
-    <comment>Date d'échéance</comment>
   </data>
   <data name="Archive" xml:space="preserve">
     <value>Archiver</value>
@@ -1049,30 +573,6 @@ Cordialement,</value>
     <value>Restaurer</value>
     <comment>Resturer</comment>
   </data>
-  <data name="ArchiveDate" xml:space="preserve">
-    <value>Date d'archivage</value>
-    <comment>Date d'archivage</comment>
-  </data>
-  <data name="AddPayment" xml:space="preserve">
-    <value>Ajouter un paiement</value>
-    <comment>Ajouter un paiement</comment>
-  </data>
-  <data name="MissionAssociateToArchivedInvoice" xml:space="preserve">
-    <value>Cette mission est associé à une facture archivée</value>
-    <comment>Texte d'erreur de modification de devis associé à une facture archivée</comment>
-  </data>
-  <data name="MissionAssociateToInvoiceCaption" xml:space="preserve">
-    <value>Devis associé à une facture</value>
-    <comment>Titre d'erreur de modification de devis associé à une facture</comment>
-  </data>
-  <data name="Card" xml:space="preserve">
-    <value>Carte bancaire</value>
-    <comment>Carte bancaire</comment>
-  </data>
-  <data name="Cash" xml:space="preserve">
-    <value>Espèces</value>
-    <comment>Espèces</comment>
-  </data>
   <data name="Check" xml:space="preserve">
     <value>Chèque</value>
     <comment>Chèque</comment>
@@ -1081,49 +581,9 @@ Cordialement,</value>
     <value>Date</value>
     <comment>Date</comment>
   </data>
-  <data name="DatePayment" xml:space="preserve">
-    <value>Date du paiement</value>
-    <comment>Date du paiement</comment>
-  </data>
-  <data name="PaymentMethod" xml:space="preserve">
-    <value>Moyen de paiement</value>
-    <comment>Moyen de paiement</comment>
-  </data>
-  <data name="Payments" xml:space="preserve">
-    <value>Paiements</value>
-    <comment>Paiements</comment>
-  </data>
-  <data name="PayPal" xml:space="preserve">
-    <value>PayPal</value>
-    <comment>PayPal</comment>
-  </data>
-  <data name="Wire" xml:space="preserve">
-    <value>Virement</value>
-    <comment>Virement</comment>
-  </data>
-  <data name="MissionAssociateToInProgressInvoice" xml:space="preserve">
-    <value>Cette mission est associé à une facture en cours</value>
-    <comment>Texte d'erreur de modification de devis associé à une facture en cours</comment>
-  </data>
-  <data name="ContactForbiddenDeleteCaption" xml:space="preserve">
-    <value>Suppression du contact interdite</value>
-    <comment>Suppression du contact interdite</comment>
-  </data>
-  <data name="ContactForbiddenDeleteText" xml:space="preserve">
-    <value>Ce contact ne peut être supprimé car un(des) devis et (ou) facture(s) y sont associé(s)</value>
-    <comment>Ce contact ne peut être supprimé car un(des) devis et (ou) facture(s) y sont associé(s)</comment>
-  </data>
-  <data name="AdvanceTotal" xml:space="preserve">
-    <value>Acompte total</value>
-    <comment>Acompte total</comment>
-  </data>
   <data name="Designation" xml:space="preserve">
     <value>Désignation</value>
     <comment>Désignation</comment>
-  </data>
-  <data name="GlobalDiscount" xml:space="preserve">
-    <value>Remise globale</value>
-    <comment>Remise globale</comment>
   </data>
   <data name="of" xml:space="preserve">
     <value>sur</value>
@@ -1133,61 +593,9 @@ Cordialement,</value>
     <value>Page</value>
     <comment>Page</comment>
   </data>
-  <data name="RestAmount" xml:space="preserve">
-    <value>Reste à payer</value>
-    <comment>Reste à payer</comment>
-  </data>
-  <data name="InvalidLicence" xml:space="preserve">
-    <value>Licence non conforme, veuillez rentrer une licence valide</value>
-    <comment>Texte d'erreur de licence non conforme</comment>
-  </data>
-  <data name="InvalidLicenceCaption" xml:space="preserve">
-    <value>Licence non conforme</value>
-    <comment>Titre d'erreur de licence non conforme</comment>
-  </data>
-  <data name="Licence" xml:space="preserve">
-    <value>Licence</value>
-    <comment>Licence</comment>
-  </data>
-  <data name="WrongAuthenticationCaption" xml:space="preserve">
-    <value>Mauvaise authentification</value>
-    <comment>Mauvaise authentification</comment>
-  </data>
-  <data name="WrongAuthenticationText" xml:space="preserve">
-    <value>Mauvaise authentification, veuillez réessayer, verifiez votre licence ou les paramètres de votre ordinateur (heure et date, connection internet) ou contacter le service client</value>
-    <comment>Texte d'erreur d'authentification</comment>
-  </data>
   <data name="Generalities" xml:space="preserve">
     <value>Généralités</value>
     <comment>Généralités</comment>
-  </data>
-  <data name="PDFGenerationTitle" xml:space="preserve">
-    <value>Génération PDF</value>
-    <comment>Génération PDF</comment>
-  </data>
-  <data name="UpdateErrorCaption" xml:space="preserve">
-    <value>Mise à jour impossible</value>
-    <comment>Titre d'erreur lors de la mise à jour</comment>
-  </data>
-  <data name="UpdateErrorText" xml:space="preserve">
-    <value>Une erreur s'est produite lors de la mise à jour du logiciel, veuillez contacter le service client</value>
-    <comment>Texte d'erreur lors de la mise à jour</comment>
-  </data>
-  <data name="UpdatePrincipalMessage" xml:space="preserve">
-    <value>Mise à jour en cours... </value>
-    <comment>Message principal d'attente lors de la mise à jour du logiciel</comment>
-  </data>
-  <data name="UpdateSecondaryMessage" xml:space="preserve">
-    <value>Merci de patienter lors de la vérification, du téléchargement et de l'application des mises à jours si disponible</value>
-    <comment>Message secondaire d'attente lors de la mise à jour du logiciel</comment>
-  </data>
-  <data name="MissionPDFSendEmailCaption" xml:space="preserve">
-    <value>Confirmation d'envoi de la mission</value>
-    <comment>Titre de confirmation d'envoi de la mission</comment>
-  </data>
-  <data name="MissionPDFSendEmailConfirmation" xml:space="preserve">
-    <value>Voulez-vous toujours envoyer la mission ?</value>
-    <comment>Texte de confirmation d'envoi de la mission</comment>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>Profil</value>
@@ -1200,10 +608,6 @@ Cordialement,</value>
   <data name="PostBox" xml:space="preserve">
     <value>Boîte postale</value>
     <comment>Boîte postale</comment>
-  </data>
-  <data name="User" xml:space="preserve">
-    <value>Utilisateur</value>
-    <comment>Utilisateur</comment>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Nom</value>
@@ -1221,10 +625,6 @@ Cordialement,</value>
     <value>Client</value>
     <comment>Client</comment>
   </data>
-  <data name="EndDate" xml:space="preserve">
-    <value>Date de fin</value>
-    <comment>Date de fin</comment>
-  </data>
   <data name="MissionsExcelGenerationPrincipalMessage" xml:space="preserve">
     <value>Génération de la synthèse des missions en cours...</value>
     <comment>Message principal d'attente lors de la génération de la synthèse des missions</comment>
@@ -1233,17 +633,9 @@ Cordialement,</value>
     <value>Veuillez patienter lors de la génération de la synthèse des missions jusqu'à l'ouverture de Microsoft Excel®</value>
     <comment>Message secondaire d'attente lors de la génération de la synthèse des missions</comment>
   </data>
-  <data name="FirstDate" xml:space="preserve">
-    <value>Date de début</value>
-    <comment>Date de début</comment>
-  </data>
   <data name="GenerateExcelStatement" xml:space="preserve">
     <value>Générer une synthèse Excel®</value>
     <comment>Générer une synthèse Excel</comment>
-  </data>
-  <data name="StatementBetween" xml:space="preserve">
-    <value>Synthèse entre </value>
-    <comment>Synthèse entre</comment>
   </data>
   <data name="MissionsStatementExcelGenerationFailed" xml:space="preserve">
     <value>La synthèse des missions n'a pu être générée. Si cela se reproduit, veuillez contacter le service client.</value>
@@ -1269,32 +661,6 @@ Cordialement,</value>
     <value>Erreur Microsoft Word</value>
     <comment>Titre d'erreur Word non trouvé</comment>
   </data>
-  <data name="ServicesExcelImportTemplate" xml:space="preserve">
-    <value>Le fichier importé doit contenir 5 colonnes sans intitulées contenant respectivement:
-- Une référence (le tableau sera automatiquement trié selon cette référence);
-- La désignation/description;
-- Une description détaillée si besoin;
-- L'unité;
-- Le montant HT.
-Voulez-vous continuer l'importation ?</value>
-    <comment>Texte des consignes d'importation des prestations</comment>
-  </data>
-  <data name="ServicesExcelImportTemplateCaption" xml:space="preserve">
-    <value>Consignes d'importation des prestations</value>
-    <comment>Titre des consignes d'importation des prestations</comment>
-  </data>
-  <data name="CreateCredit" xml:space="preserve">
-    <value>Créer un avoir</value>
-    <comment>Créer un avoir</comment>
-  </data>
-  <data name="PaidDate" xml:space="preserve">
-    <value>Date de paiement</value>
-    <comment>Date de paiement</comment>
-  </data>
-  <data name="ResearchCreditNote" xml:space="preserve">
-    <value>Rechercher un avoir</value>
-    <comment>Rechercher un avoir</comment>
-  </data>
   <data name="ContactCustomerService" xml:space="preserve">
     <value>Contacter le service client</value>
     <comment>Contacter le service client</comment>
@@ -1307,17 +673,9 @@ Voulez-vous continuer l'importation ?</value>
     <value>Le fichier log est automatiquement joint à l'email. Merci de patienter pendant l'ouverture de votre logiciel d'envoi d'email</value>
     <comment>Message secondaire de contact du service client</comment>
   </data>
-  <data name="AmountVAT" xml:space="preserve">
-    <value>Montant TVA</value>
-    <comment>Montant TVA</comment>
-  </data>
   <data name="CustomerID" xml:space="preserve">
     <value>ID client</value>
     <comment>ID client</comment>
-  </data>
-  <data name="Statistics" xml:space="preserve">
-    <value>Statistiques</value>
-    <comment>Statistiques</comment>
   </data>
   <data name="Customers" xml:space="preserve">
     <value>Clients</value>
@@ -1335,18 +693,6 @@ Voulez-vous continuer l'importation ?</value>
     <value>la mission sélectionné  est dupliqué et sauvegardé dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
     <comment>Message secondaire d'attente de duplication de la mission</comment>
   </data>
-  <data name="UnpaidTitle" xml:space="preserve">
-    <value>Impayés</value>
-    <comment>Impayés</comment>
-  </data>
-  <data name="AcceptedDate" xml:space="preserve">
-    <value>Date d'acceptation</value>
-    <comment>Date d'acceptation</comment>
-  </data>
-  <data name="MissionAccepted" xml:space="preserve">
-    <value>Mission acceptée le</value>
-    <comment>Mission acceptée le</comment>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>Détails</value>
     <comment>Détails</comment>
@@ -1358,22 +704,6 @@ Voulez-vous continuer l'importation ?</value>
   <data name="Status" xml:space="preserve">
     <value>Statut</value>
     <comment>Statut</comment>
-  </data>
-  <data name="GlobalDiscountGeneration1" xml:space="preserve">
-    <value>Une remise globale de</value>
-    <comment>Première partie du texte de la génération de la remise globale </comment>
-  </data>
-  <data name="GlobalDiscountGeneration2" xml:space="preserve">
-    <value>% a été appliquée.</value>
-    <comment>Seconde partie du texte de la génération de la remise globale</comment>
-  </data>
-  <data name="DeclinedDate" xml:space="preserve">
-    <value>Date de refus</value>
-    <comment>Date de refus</comment>
-  </data>
-  <data name="MissionDeclined" xml:space="preserve">
-    <value>Devis refusé le</value>
-    <comment>Devis refusé le</comment>
   </data>
   <data name="AlreadyInstalledCaption" xml:space="preserve">
     <value>ZadGestion déjà installé sur un autre ordinateur</value>
@@ -1392,14 +722,6 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Votre compte est désactivé. Veuillez contacter le service client</value>
     <comment>Texte d'erreur de compte désactivé</comment>
   </data>
-  <data name="LicenceExpiredCaption" xml:space="preserve">
-    <value>Licence expirée</value>
-    <comment>Titre d'erreur d'une licence expirée</comment>
-  </data>
-  <data name="LicenceExpiredText" xml:space="preserve">
-    <value>Votre licence est expirée. Veuillez contacter le service client</value>
-    <comment>Texte d'erreur d'une licence expirée</comment>
-  </data>
   <data name="ArchiveMissionCaption" xml:space="preserve">
     <value>Archiver la mission</value>
     <comment>Titre de demande d'archivage de la mission</comment>
@@ -1407,18 +729,6 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="ArchiveMissionText" xml:space="preserve">
     <value>Voulez-vous archiver la mission ?</value>
     <comment>Texte de demande d'archivage de la mission</comment>
-  </data>
-  <data name="DateUsed" xml:space="preserve">
-    <value>Date d'utilisation</value>
-    <comment>Date d'utilisation</comment>
-  </data>
-  <data name="MissionsNumber" xml:space="preserve">
-    <value>Nombre de devis</value>
-    <comment>Nombre de devis</comment>
-  </data>
-  <data name="StatisticsMissions" xml:space="preserve">
-    <value>Nombre de devis par statut et par mois pour l'année</value>
-    <comment>Nombre de devis par statut et par mois pour l'année sélectionnée</comment>
   </data>
   <data name="April" xml:space="preserve">
     <value>Avril</value>
@@ -1432,21 +742,9 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Décembre</value>
     <comment>Décembre</comment>
   </data>
-  <data name="MissionsAccepted" xml:space="preserve">
-    <value>Missions acceptées</value>
-    <comment>Missions acceptées</comment>
-  </data>
-  <data name="MissionsBilled" xml:space="preserve">
-    <value>Missions facturées</value>
-    <comment>Missions facturées</comment>
-  </data>
   <data name="MissionsCreated" xml:space="preserve">
     <value>Missions créées</value>
     <comment>Missions créées</comment>
-  </data>
-  <data name="MissionsDeclined" xml:space="preserve">
-    <value>Missions refusées</value>
-    <comment>Missions refusées</comment>
   </data>
   <data name="February" xml:space="preserve">
     <value>Février</value>
@@ -1484,10 +782,6 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Septembre</value>
     <comment>Septembre</comment>
   </data>
-  <data name="StatisticsInvoices" xml:space="preserve">
-    <value>Nombre de factures par statut et par mois pour l'année</value>
-    <comment>Nombre de factures par statut et par mois pour l'année sélectionnée</comment>
-  </data>
   <data name="ExcelNotPresentErrorCaption" xml:space="preserve">
     <value>Microsoft Excel® absent</value>
     <comment>Titre d'erreur d'absence d'Excel</comment>
@@ -1504,49 +798,17 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Microsoft Word® n'est pas présent, merci de l'installer afin d'utiliser ZadGestion</value>
     <comment>Texte d'erreur d'absence de Word</comment>
   </data>
-  <data name="MissionshowInProgressPrincipalMessage" xml:space="preserve">
+  <data name="MissionsShowInProgressPrincipalMessage" xml:space="preserve">
     <value>Actualisation des missions en cours...</value>
     <comment>Message principal d'actualisation des missions en cours</comment>
   </data>
-  <data name="MissionshowInProgressSecondaryMessage" xml:space="preserve">
+  <data name="MissionsShowInProgressSecondaryMessage" xml:space="preserve">
     <value>Actualisation des missions en cours depuis la base de données. Merci de patienter jusqu'à la fermeture de cette fenêtre, selon le nombre de devis, cette opération peut prendre quelques minutes</value>
     <comment>Message secondaire d'actualisation des missions en cours</comment>
-  </data>
-  <data name="StatisticsInvoicesEvolution" xml:space="preserve">
-    <value>Evolution du nombre de factures par statut le long de l'année</value>
-    <comment>Evolution du nombre de factures par statut le long de l'année</comment>
-  </data>
-  <data name="MissionLegendBilled" xml:space="preserve">
-    <value>Facturée</value>
-    <comment>Facturé(e)</comment>
   </data>
   <data name="MissionLegendCreated" xml:space="preserve">
     <value>Créée</value>
     <comment>Créé(e)</comment>
-  </data>
-  <data name="MissionLegendDeclined" xml:space="preserve">
-    <value>Refusée</value>
-    <comment>Refusé(e)</comment>
-  </data>
-  <data name="Paid" xml:space="preserve">
-    <value>Payé(e)</value>
-    <comment>Payé(e)</comment>
-  </data>
-  <data name="PaymentTermsMissingCaption" xml:space="preserve">
-    <value>Absence des conditions de paiement</value>
-    <comment>Titre d'absence des conditions de paiement</comment>
-  </data>
-  <data name="PaymentTermsMissingText" xml:space="preserve">
-    <value>Veuillez choisir ou rentrer des conditions de paiement</value>
-    <comment>Texte d'absence des conditions de paiement</comment>
-  </data>
-  <data name="Unpaid" xml:space="preserve">
-    <value>Impayé(e)</value>
-    <comment>Impayé(e)</comment>
-  </data>
-  <data name="Used" xml:space="preserve">
-    <value>Utilisé(e)</value>
-    <comment>Utilisé(e)</comment>
   </data>
   <data name="SubjectMissingCaption" xml:space="preserve">
     <value>Object manquant</value>
@@ -1556,61 +818,25 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Veuillez rajouter un objet s'il vous plait dans le champ correspondant</value>
     <comment>Texte d'erreur d'objet manquant</comment>
   </data>
-  <data name="UsedDate" xml:space="preserve">
-    <value>Date d'utilisation</value>
-    <comment>Date d'utilisation</comment>
-  </data>
-  <data name="HostessExcelGenerationPrincipalMessage" xml:space="preserve">
+  <data name="HostsAndHostessesExcelGenerationPrincipalMessage" xml:space="preserve">
     <value>Génération de la synthèse des hôtes et hôtesses en cours...</value>
     <comment>Message principal d'attente lors de la génération de la synthèse des hôtes et hôtesses</comment>
   </data>
-  <data name="HostessExcelGenerationSecondaryMessage" xml:space="preserve">
+  <data name="HostsAndHostessesExcelGenerationSecondaryMessage" xml:space="preserve">
     <value>Veuillez patienter lors de la génération de la synthèse des hôtes et hôtesses jusqu'à l'ouverture de Microsoft Excel®</value>
     <comment>Message secondaire d'attente lors de la génération de la synthèse des hôtes et hôtesses</comment>
   </data>
-  <data name="HostessStatement" xml:space="preserve">
+  <data name="HostsAndHostessesStatement" xml:space="preserve">
     <value>Synthèse des hôtes et hôtesses</value>
     <comment>Synthèse des hôtes et hôtesses</comment>
   </data>
-  <data name="ContactsStatementExcelGenerationFailed" xml:space="preserve">
-    <value>La synthèse des contacts n'a pu être générée. Si cela se reproduit, veuillez contacter le service client.</value>
-    <comment>Texte d'erreur de non génération de la synthèse des contacts</comment>
-  </data>
-  <data name="ContactsStatementExcelGenerationFailedCaption" xml:space="preserve">
-    <value>Synthèse des contacts non générée</value>
-    <comment>Titre d'erreur de non génération de la synthèse des contacts</comment>
-  </data>
-  <data name="MissionGetInvoicePrincipalMessage" xml:space="preserve">
-    <value>Récupération de la facture en cours</value>
-    <comment>Message principal de récupération de la facture</comment>
-  </data>
-  <data name="MissionGetInvoiceSecondaryMessage" xml:space="preserve">
-    <value>La facture associée à Cette mission est en cours de récupération. Merci de patienter jusqu'`a la fermeture de cette fenêtre</value>
-    <comment>Message secondaire de récupération de la facture</comment>
-  </data>
-  <data name="MissionValidity" xml:space="preserve">
-    <value>Cette mission est valable 90 jours</value>
-    <comment>Cette mission est valable 90 jours</comment>
-  </data>
-  <data name="SeeInvoice" xml:space="preserve">
-    <value>Voir la facture</value>
-    <comment>Voir la facture</comment>
-  </data>
-  <data name="MissionshowArchivedPrincipalMessage" xml:space="preserve">
+  <data name="MissionsShowArchivedPrincipalMessage" xml:space="preserve">
     <value>Actualisation des missions archivés...</value>
     <comment>Message principal d'actualisation des missions archivés</comment>
   </data>
-  <data name="MissionshowArchivedSecondaryMessage" xml:space="preserve">
+  <data name="MissionsShowArchivedSecondaryMessage" xml:space="preserve">
     <value>Actualisation des missions archivés depuis la base de données. Merci de patienter jusqu'à la fermeture de cette fenêtre, selon le nombre de devis, cette opération peut prendre quelques minutes</value>
     <comment>Message secondaire d'actualisation des missions archivés</comment>
-  </data>
-  <data name="SeeCredit" xml:space="preserve">
-    <value>Voir l'avoir</value>
-    <comment>Voir l'avoir</comment>
-  </data>
-  <data name="SeeMission" xml:space="preserve">
-    <value>Voir la mission</value>
-    <comment>Voir la mission</comment>
   </data>
   <data name="NoVATMention" xml:space="preserve">
     <value>TVA. Non applicable, art. 293 B du CGI.</value>
@@ -1623,14 +849,6 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="ZadGestionRunningErrorText" xml:space="preserve">
     <value>ZadGestion est déjà en cours d'exécution. Afin d'éviter de potentiels conflits, il est impossible de démarrer deux instances de ZadGestion en même temps.</value>
     <comment>Texte d'erreur de ZadGestion en cours d'execution</comment>
-  </data>
-  <data name="DuplicateService" xml:space="preserve">
-    <value>Dupliquer la prestation sélectionnée</value>
-    <comment>Dupliquer la prestation sélectionnée</comment>
-  </data>
-  <data name="TemplateSignature" xml:space="preserve">
-    <value>Date, signature et mention "Bon pour accord"</value>
-    <comment>Date, signature et mention "Bon pour accord"</comment>
   </data>
   <data name="HostAndHostess" xml:space="preserve">
     <value>Hôte et hôtesse</value>
@@ -1704,11 +922,11 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Erreur lors de la modification du répertoire de photos</value>
     <comment>Titre d'erreur lors de la modification du répertoire de photos</comment>
   </data>
-  <data name="HostessPhotoConfirmDelete" xml:space="preserve">
+  <data name="HostOrHostessPhotoConfirmDelete" xml:space="preserve">
     <value>Êtes-vous sûr(e) de vouloir supprimer la photo ?</value>
     <comment>Texte de confirmation de suppression de la photo</comment>
   </data>
-  <data name="HostessPhotoConfirmDeleteCaption" xml:space="preserve">
+  <data name="HostOrHostessPhotoConfirmDeleteCaption" xml:space="preserve">
     <value>Confirmation de la suppression de la photo</value>
     <comment>Titre de confirmation de suppression de la photo</comment>
   </data>
@@ -1716,9 +934,9 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Erreur lors de l'actualisation des hôtes et hôtesses depuis la BDD</value>
     <comment>Titre d'erreur de l'actualisation des hôtes et hôtesses depuis la BDD</comment>
   </data>
-  <data name="HostessID" xml:space="preserve">
-    <value>ID hôte ou hôtesse</value>
-    <comment>ID hôte ou hôtesse</comment>
+  <data name="HostOrHostessID" xml:space="preserve">
+    <value>ID de l'hôte ou de l'hôtesse</value>
+    <comment>ID de l'hôte ou l'hôtesse</comment>
   </data>
   <data name="MissionLegendDone" xml:space="preserve">
     <value>Effectuée</value>
@@ -1860,7 +1078,7 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Oui</value>
     <comment>Oui</comment>
   </data>
-  <data name="ClientConfirmDelete" xml:space="preserve">
+  <data name="ClientConfirmDeleteText" xml:space="preserve">
     <value>Êtes-vous sûr(e) de vouloir supprimer le client sélectionné(e) ?</value>
     <comment>Texte de suppression du client</comment>
   </data>
@@ -1927,5 +1145,57 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="CorporateNumber" xml:space="preserve">
     <value>Numéro de la société</value>
     <comment>Numéro de la société</comment>
+  </data>
+  <data name="HostsAndHostessesStatementExcelGenerationFailedCaption" xml:space="preserve">
+    <value>Génération de la synthèse des hôtes et hôtesses échouée</value>
+    <comment>Titre d'erreur de la génération de la synthèse Excel des hôtes et hôtesses</comment>
+  </data>
+  <data name="HostsAndHostessesStatementExcelGenerationFailedText" xml:space="preserve">
+    <value>La synthèse des hôtes et hôtesses n'a pu être générée. Merci de bien vouloir vérifier aue le fichier n'est pas ouvert.</value>
+    <comment>Texte d'erreur de la génération de la synthèse Excel des hôtes et hôtesses</comment>
+  </data>
+  <data name="MissionLegendBilled" xml:space="preserve">
+    <value>Facturée</value>
+    <comment>Facturée</comment>
+  </data>
+  <data name="MissionLegendDeclined" xml:space="preserve">
+    <value>Refusée</value>
+    <comment>Refusée</comment>
+  </data>
+  <data name="HostOrHostessArchivePrincipalMessage" xml:space="preserve">
+    <value>Hôte ou hôtesse en cours d'archivage</value>
+    <comment>Message principal d'archivage de l'hôte ou l'hôtesse</comment>
+  </data>
+  <data name="HostOrHostessArchiveSecondaryMessage" xml:space="preserve">
+    <value>Veuillez patienter jusqu'à la fermeture de cette fenêtre pendant l'archivage de l'hôte ou l'hôtesse</value>
+    <comment>Message secondaire d'archivage de l'hôte ou l'hôtesse</comment>
+  </data>
+  <data name="HostOrHostessRestorePrincipalMessage" xml:space="preserve">
+    <value>Hôte ou hôtesse en cours de restauration</value>
+    <comment>Message principal de restauration de l'hôte ou l'hôtesse</comment>
+  </data>
+  <data name="HostOrHostessRestoreSecondaryMessage" xml:space="preserve">
+    <value>Veuillez patienter jusqu'à la fermeture de cette fenêtre pendant la restauration de l'hôte ou l'hôtesse</value>
+    <comment>Message secondaire de restauration de l'hôte ou l'hôtesse</comment>
+  </data>
+  <data name="HostsAndHostessesShowArchivedPrincipalMessage" xml:space="preserve">
+    <value>Hôtes et hôtesses archivés...</value>
+    <comment>Message principal de déploiement des hôtes et hôtesses archivés</comment>
+  </data>
+  <data name="HostsAndHostessesShowArchivedSecondaryMessage" xml:space="preserve">
+    <value>Déploiement des hôtes et hôtesses archivés, veuillez patienter jusqu'`a la fermeture de cette fenêtre</value>
+    <comment>Message secondaire de déploiement des hôtes et hôtesses en cours</comment>
+  </data>
+  <data name="HostsAndHostessesShowInProgressPrincipalMessage" xml:space="preserve">
+    <value>Hôtes et hôtesses en cours...</value>
+    <comment>Message principal de déploiement des hôtes et hôtesses en cours</comment>
+  </data>
+  <data name="HostsAndHostessesShowInProgressSecondaryMessage" xml:space="preserve">
+    <value>Déploiement des hôtes et hôtesses en cours, veuillez patienter jusqu'`a la fermeture de cette fenêtre</value>
+    <comment>Message secondaire de déploiement des hôtes et hôtesses en cours</comment>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>En cours</value>
+    <comment>En cours</comment>
   </data>
 </root>

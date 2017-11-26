@@ -162,7 +162,7 @@ namespace WindowClient
                 Lbl_Client_CorporateName.Content = m_Global_Handler.Resources_Handler.Get_Resources("CorporateName") + " *";
                 Lbl_Client_CorporateNumber.Content = m_Global_Handler.Resources_Handler.Get_Resources("CorporateNumber");
                 Lbl_Client_Country.Content = m_Global_Handler.Resources_Handler.Get_Resources("Country");
-                Lbl_Client_Email.Content = m_Global_Handler.Resources_Handler.Get_Resources("Email");
+                Lbl_Client_Email.Content = m_Global_Handler.Resources_Handler.Get_Resources("Email") + " *";
                 Lbl_Client_Phone.Content = m_Global_Handler.Resources_Handler.Get_Resources("Phone");
                 Lbl_Client_State.Content = m_Global_Handler.Resources_Handler.Get_Resources("State");
                 Lbl_Client_ZipCode.Content = m_Global_Handler.Resources_Handler.Get_Resources("ZipCode");

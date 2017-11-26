@@ -15,6 +15,15 @@
         }
 
         /// <summary>
+        /// Getter/Setter for hostess's archived mode
+        /// </summary>
+        public int archived
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Getter/Setter for hostess's city of birth
         /// </summary>
         public string birth_city

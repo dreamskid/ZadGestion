@@ -15,6 +15,15 @@
         }
 
         /// <summary>
+        /// Getter/Setter for client's archived mode
+        /// </summary>
+        public bool archived
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Getter/Setter for client's city
         /// </summary>
         public string city

@@ -455,6 +455,7 @@ namespace Database
                                                               select new Hostess
                                                               {
                                                                   address = row["address"].ToString(),
+                                                                  archived = (int)row["archived"],
                                                                   birth_city = row["birth_city"].ToString(),
                                                                   birth_date = row["birth_date"].ToString(),
                                                                   cellphone = row["cellphone"].ToString(),
@@ -507,6 +508,43 @@ namespace Database
         #region Client
 
         /// <summary>
+        /// Archive a host or hostess to the ZadGestion's database
+        /// <param name="_Id">Id of the host or hostess</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public string Archive_HostOrHostess(string _Id)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE hostsandhostesses SET archived = @archived WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@archived", 1);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                return e.Message;
+            }
+        }
+
+        /// <summary>
         /// Add a host or hostess to the ZadGestion's database
         /// <param name="_Address">Address of the client</param>
         /// <param name="_City">City of the client</param>
@@ -532,7 +570,8 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "INSERT INTO hostsandhostesses (address, city, corporate_name, corporate_number, country, date_creation, email, id, phone, state, zipcode) VALUES (@address, @city, @corporate_name, @corporate_number, @country, @date_creation, @email, @id, @phone, @state, @zipcode)";
+                cmd.CommandText = "INSERT INTO clients (address, city, corporate_name, corporate_number, country, date_creation, email, id, phone, state, zipcode)" +
+                    " VALUES (@address, @city, @corporate_name, @corporate_number, @country, @date_creation, @email, @id, @phone, @state, @zipcode)";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@address", _Address);
@@ -633,7 +672,8 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "UPDATE clients SET address = @address, city = @city, corporate_name = @corporate_name, corporate_number = @corporate_number, country = @country, email = @email, state = @state, zipcode = @zipcode WHERE id = @id";
+                cmd.CommandText = "UPDATE clients SET address = @address, city = @city, corporate_name = @corporate_name, corporate_number = @corporate_number, " +
+                    "country = @country, email = @email, phone = @phone, state = @state, zipcode = @zipcode WHERE id = @id";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@address", _Address);
@@ -649,7 +689,6 @@ namespace Database
 
                 //Execute request
                 cmd.ExecuteNonQuery();
-                cmd.Dispose();
 
                 //Close connection
                 this.m_SQLConnection.Close();
@@ -697,6 +736,7 @@ namespace Database
                                                      select new Client
                                                      {
                                                          address = row["address"].ToString(),
+                                                         archived = (bool)row["archived"],
                                                          city = row["city"].ToString(),
                                                          corporate_name = row["corporate_name"].ToString(),
                                                          corporate_number = row["corporate_number"].ToString(),
@@ -722,6 +762,43 @@ namespace Database
                 //Write error to log
                 m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return "Error - " + e.Message;
+            }
+        }
+
+        /// <summary>
+        /// Restore a host or hostess to the ZadGestion's database
+        /// <param name="_Id">Id of the host or hostess</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public string Restore_HostOrHostess(string _Id)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE hostsandhostesses SET archived = @archived WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@archived", 0);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                return e.Message;
             }
         }
 

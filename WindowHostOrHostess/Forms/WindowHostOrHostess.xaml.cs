@@ -641,8 +641,8 @@ namespace WindowHostOrHostess
                 }
 
                 //Confirm the delete
-                MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("HostessPhotoConfirmDelete"),
-                    m_Global_Handler.Resources_Handler.Get_Resources("HostessPhotoConfirmDeleteCaption"), MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+                MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessPhotoConfirmDelete"),
+                    m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessPhotoConfirmDeleteCaption"), MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
                 if (result == MessageBoxResult.No)
                 {
                     return;
