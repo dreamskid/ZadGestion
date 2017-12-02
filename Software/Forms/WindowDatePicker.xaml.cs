@@ -54,7 +54,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -108,7 +108,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 this.DialogResult = false;
                 return;
             }

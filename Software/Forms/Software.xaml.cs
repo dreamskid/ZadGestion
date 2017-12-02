@@ -446,7 +446,7 @@ namespace Software
                 m_Database_Handler = _Database_Handler;
 
                 //New session
-                m_Global_Handler.Error_Handler.WriteAction("New session");
+                m_Global_Handler.Log_Handler.WriteAction("New session");
 
                 //Colors
                 BrushConverter converter = new BrushConverter();
@@ -524,7 +524,7 @@ namespace Software
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return;
             }
         }
@@ -565,6 +565,7 @@ namespace Software
                 Btn_HostAndHostess_Delete.Content = m_Global_Handler.Resources_Handler.Get_Resources("Delete");
                 Btn_HostAndHostess_Edit.Content = m_Global_Handler.Resources_Handler.Get_Resources("Edit");
                 Btn_HostAndHostess_GenerateExcelStatement.Content = m_Global_Handler.Resources_Handler.Get_Resources("GenerateExcelStatement");
+                Btn_HostAndHostess_Import.Content = m_Global_Handler.Resources_Handler.Get_Resources("ImportHostAndHostessFromExcel");
                 Btn_HostAndHostess_ShowArchived.Content = m_Global_Handler.Resources_Handler.Get_Resources("Archives");
                 Btn_HostAndHostess_ShowInProgress.Content = m_Global_Handler.Resources_Handler.Get_Resources("InProgress");
 
@@ -679,7 +680,7 @@ namespace Software
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return;
             }
         }
@@ -701,7 +702,7 @@ namespace Software
         {
             try
             {
-                m_Global_Handler.Error_Handler.WriteAction("End session");
+                m_Global_Handler.Log_Handler.WriteAction("End session");
                 Closing -= Software_Window_Closing_Event;
                 e.Cancel = true;
                 var anim = new DoubleAnimation(0, (Duration)TimeSpan.FromSeconds(0.3));
@@ -711,7 +712,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 Close();
             }
         }
@@ -742,7 +743,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 Close();
             }
         }
@@ -758,7 +759,7 @@ namespace Software
             try
             {
                 //Action
-                m_Global_Handler.Error_Handler.WriteAction("Contact customer service");
+                m_Global_Handler.Log_Handler.WriteAction("Contact customer service");
 
                 //Open the wait window
                 windowWait.Start(m_Global_Handler, "HostessCustomerServicePrincipalMessage", "HostessCustomerServiceSecondaryMessage");
@@ -783,7 +784,7 @@ namespace Software
                 //Close window wait
                 windowWait.Stop();
 
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -809,7 +810,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 Close();
             }
         }
@@ -835,7 +836,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 Close();
             }
         }
@@ -861,7 +862,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 Close();
             }
         }
@@ -902,7 +903,7 @@ namespace Software
                     if (res.Contains("result"))
                     {
                         //Action
-                        m_Global_Handler.Error_Handler.WriteAction("Mission " + missionSel.id + " closed");
+                        m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " closed");
 
                         //Actualize grid from collection
                         Actualize_GridMissionsFromDatabase();
@@ -973,7 +974,7 @@ namespace Software
                     if (res.Contains("result"))
                     {
                         //Action
-                        m_Global_Handler.Error_Handler.WriteAction("Mission " + missionSel.id + " restored");
+                        m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " restored");
 
                         //Actualize grid from collection
                         Actualize_GridMissionsFromDatabase();
@@ -1033,7 +1034,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 Close();
             }
         }
@@ -1086,7 +1087,7 @@ namespace Software
                             newMission.num_Mission = m_MissionNextNumber;
 
                             //Action
-                            m_Global_Handler.Error_Handler.WriteAction("Mission " + newMission.id + " created");
+                            m_Global_Handler.Log_Handler.WriteAction("Mission " + newMission.id + " created");
 
                             //Add to collection
                             SoftwareObjects.MissionsCollection.Add(newMission);
@@ -1127,7 +1128,7 @@ namespace Software
             catch (Exception exception)
             {
                 windowWait.Stop();
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
 
@@ -1188,7 +1189,7 @@ namespace Software
                 if (res.Contains("OK"))
                 {
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Mission " + missionSel.id + " deleted");
+                    m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " deleted");
 
                     //Actualize and filter
                     Actualize_GridMissionsFromDatabase();
@@ -1251,7 +1252,7 @@ namespace Software
                 //Close the wait window
                 windowWait.Stop();
 
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -1300,7 +1301,7 @@ namespace Software
                     newMission.num_Mission = m_MissionNextNumber;
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Mission " + missionSel.id + " duplicated to mission " + newMission.id);
+                    m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " duplicated to mission " + newMission.id);
 
                     //Add to collection
                     SoftwareObjects.MissionsCollection.Add(newMission);
@@ -1340,7 +1341,7 @@ namespace Software
             catch (Exception exception)
             {
                 windowWait.Stop();
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -1424,7 +1425,7 @@ namespace Software
                     if (res.Contains("result"))
                     {
                         //Action
-                        m_Global_Handler.Error_Handler.WriteAction("Mission " + missionSel.id + " edited");
+                        m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " edited");
                     }
                     //Error in the edit
                     else if (res.Contains("error"))
@@ -1483,7 +1484,7 @@ namespace Software
                 //Close the window
                 windowWait.Stop();
 
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -1620,7 +1621,7 @@ namespace Software
                 }
 
                 //Action
-                m_Global_Handler.Error_Handler.WriteAction("Missions exported to excel file " + fileNameXLS);
+                m_Global_Handler.Log_Handler.WriteAction("Missions exported to excel file " + fileNameXLS);
 
                 //Close the wait window
                 windowWait.Stop();
@@ -1633,7 +1634,7 @@ namespace Software
                 //Close the wait window
                 windowWait.Stop();
 
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -1692,7 +1693,7 @@ namespace Software
                 //Close the wait window
                 windowWait.Stop();
 
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -1752,7 +1753,7 @@ namespace Software
                 //Close the wait window
                 windowWait.Stop();
 
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -1831,7 +1832,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     m_Grid_Details_Missions_MissionsCollection = savedCollection;
 
                     //Clear the grid
@@ -1873,7 +1874,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     m_Grid_Details_Missions_MissionsCollection = savedCollection;
 
                     //Clear the grid
@@ -1916,7 +1917,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     m_Grid_Details_Missions_MissionsCollection = savedCollection;
 
                     //Clear the grid
@@ -1957,7 +1958,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     m_Grid_Details_Missions_MissionsCollection = savedCollection;
 
                     //Clear the grid
@@ -2151,7 +2152,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -2285,7 +2286,7 @@ namespace Software
                     catch (Exception exceptionMAPI)
                     {
                         //Impossible to manage attachments
-                        m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exceptionMAPI);
+                        m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exceptionMAPI);
 
                         //WIthout attachment
                         Process p = new Process();
@@ -2309,7 +2310,7 @@ namespace Software
                     //Close window wait
                     windowWait.Stop();
 
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -2430,7 +2431,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -2472,7 +2473,7 @@ namespace Software
                     if (res.Contains("OK"))
                     {
                         //Action
-                        m_Global_Handler.Error_Handler.WriteAction("Host/hostess " + hostorHostessSel.firstname + " " + hostorHostessSel.lastname + " archived");
+                        m_Global_Handler.Log_Handler.WriteAction("Host/hostess " + hostorHostessSel.firstname + " " + hostorHostessSel.lastname + " archived");
 
                         //Modify host or hostess archive mode
                         hostorHostessSel.archived = 1;
@@ -2537,7 +2538,7 @@ namespace Software
                     if (res.Contains("OK"))
                     {
                         //Action
-                        m_Global_Handler.Error_Handler.WriteAction("Host/hostess " + hostorHostessSel.firstname + " " + hostorHostessSel.lastname + " restored");
+                        m_Global_Handler.Log_Handler.WriteAction("Host/hostess " + hostorHostessSel.firstname + " " + hostorHostessSel.lastname + " restored");
 
                         //Modify host or hostess archive mode
                         hostorHostessSel.archived = 0;
@@ -2592,7 +2593,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 Close();
             }
         }
@@ -2628,7 +2629,7 @@ namespace Software
                     Add_HostOrHostessToGrid(hostOrHostess_CreateWindow.m_HostOrHostess);
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Host/Hostess " + hostOrHostessToAdd.firstname + " " + hostOrHostessToAdd.lastname + " created");
+                    m_Global_Handler.Log_Handler.WriteAction("Host/Hostess " + hostOrHostessToAdd.firstname + " " + hostOrHostessToAdd.lastname + " created");
 
                     //Select the last hostess
                     if (m_Button_HostAndHostess_SelectedHostAndHostess != null)
@@ -2684,7 +2685,7 @@ namespace Software
                 windowWait.Stop();
 
                 //Write the error into log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -2731,8 +2732,8 @@ namespace Software
                 }
 
                 //Confirm the delete
-                MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostess"),
-                    m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessCaption"), MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+                MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessConfirmDeleteText"),
+                    m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessConfirmDeleteCaption"), MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
                 if (result == MessageBoxResult.No)
                 {
                     return;
@@ -2748,7 +2749,7 @@ namespace Software
                     windowWait.Start(m_Global_Handler, "HostOrHostessDeletionPrincipalMessage", "HostOrHostessDeletionSecondaryMessage");
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Host/Hostess " + hostOrHostess.firstname + " " + hostOrHostess.lastname + " deleted");
+                    m_Global_Handler.Log_Handler.WriteAction("Host/Hostess " + hostOrHostess.firstname + " " + hostOrHostess.lastname + " deleted");
 
                     //Delete the hostess to the collection
                     SoftwareObjects.HostsAndHotessesCollection.Remove(hostOrHostess);
@@ -2794,7 +2795,7 @@ namespace Software
                 windowWait.Stop();
 
                 //Write the error into log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -2827,7 +2828,7 @@ namespace Software
                     hostOrHostess = hostOrHostess_EditWindow.m_HostOrHostess;
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Host/Hostess " + hostOrHostess.firstname + " " + hostOrHostess.lastname + " edited");
+                    m_Global_Handler.Log_Handler.WriteAction("Host/Hostess " + hostOrHostess.firstname + " " + hostOrHostess.lastname + " edited");
 
                     //Treatment of hostess info
                     TextBlock hostessInfo = new TextBlock();
@@ -2965,7 +2966,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Write the error into log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -3015,25 +3016,52 @@ namespace Software
 
                 //Write in a file with tab separated
                 List<string> lines = new List<string>();
-                string columnsHeader = m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessID") + "\t" +
+                string columnsHeader = m_Global_Handler.Resources_Handler.Get_Resources("FirstName") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("LastName") + "\t" +
-                    m_Global_Handler.Resources_Handler.Get_Resources("FirstName") + "\t" +
-                    m_Global_Handler.Resources_Handler.Get_Resources("BirthDate") + "\t" +
-                    m_Global_Handler.Resources_Handler.Get_Resources("IdPaycheck") + "\t" +
-                    m_Global_Handler.Resources_Handler.Get_Resources("Phone") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("CellPhone") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Sex") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Email") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("Address") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("ZipCode") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("City") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("Country") + "\t" +
-                    m_Global_Handler.Resources_Handler.Get_Resources("CreationDate");
+                    m_Global_Handler.Resources_Handler.Get_Resources("IdPaycheck") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("BirthDate") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("BirthCity") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("SocialSecurityNumber") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Size") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("SizeShirt") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("SizePants") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("SizeShoes") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Car") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("DriverLicence") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("English") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("German") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Spanish") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Italian") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Others") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Street") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Event") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Permanent");
                 lines.Add(columnsHeader);
                 for (int iHostess = 0; iHostess < SoftwareObjects.HostsAndHotessesCollection.Count; ++iHostess)
                 {
                     Hostess hostess = SoftwareObjects.HostsAndHotessesCollection[iHostess];
-                    string line = hostess.id + "\t" + hostess.lastname + "\t" + hostess.firstname + "\t" + hostess.birth_date + "\t" +
-                        hostess.id_paycheck + "\t" + hostess.cellphone + "\t" + hostess.address + "\t" + hostess.zipcode + "\t" + hostess.city +
-                        "\t" + hostess.country + "\t" + m_Global_Handler.DateAndTime_Handler.Treat_Date(hostess.date_creation, m_Global_Handler.Language_Handler);
+                    string hasCar = (hostess.has_car == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
+                    string hasDriverLicence = (hostess.has_driver_licence == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
+                    string speakEnglish = (hostess.language_english == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
+                    string speakGerman = (hostess.language_german == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
+                    string speakSpanish = (hostess.language_spanish == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
+                    string speakItalian = (hostess.language_italian == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
+                    string isProfileStreet = (hostess.profile_street == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
+                    string isProfileEvent = (hostess.profile_event == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
+                    string isProfilePermanent = (hostess.profile_permanent == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
+                    string line = hostess.firstname + "\t" + hostess.lastname + "\t" + hostess.cellphone + "\t" + hostess.sex + "\t" + hostess.email + "\t" + hostess.address + "\t" +
+                        hostess.zipcode + "\t" + hostess.city + "\t" + hostess.country + "\t" + hostess.id_paycheck + "\t" + hostess.birth_date + "\t" + hostess.birth_city + "\t" +
+                        hostess.social_number + "\t" + hostess.size + "\t" + hostess.size_shirt + "\t" + hostess.size_pants + "\t" + hostess.size_shoes + "\t" + hasCar + "\t" +
+                        hasDriverLicence + "\t" + speakEnglish + "\t" + speakGerman + "\t" + speakSpanish + "\t" + speakItalian + "\t" + hostess.language_others + "\t" +
+                        isProfileStreet + "\t" + isProfileEvent + "\t" + isProfilePermanent;
+                    ;
                     lines.Add(line);
                 }
 
@@ -3051,7 +3079,7 @@ namespace Software
                 }
 
                 //Action
-                m_Global_Handler.Error_Handler.WriteAction("Hosts and hostesses statement generated to Excel file " + fileNameXLS);
+                m_Global_Handler.Log_Handler.WriteAction("Hosts and hostesses statement generated to Excel file " + fileNameXLS);
 
                 //Close the wait window
                 windowWait.Stop();
@@ -3065,8 +3093,248 @@ namespace Software
                 windowWait.Stop();
 
                 //Write the error into log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Hostess
+        /// Click on Import hosts and hostesses form an Excel file
+        /// </summary>
+        private void Btn_HostAndHostess_Import_Click(object sender, RoutedEventArgs e)
+        {
+            //Verify excel format
+            MessageBoxResult resultTemplate = MessageBox.Show(m_Global_Handler.Resources_Handler.Get_Resources("HostAndHostessExcelImportTemplateText"),
+                m_Global_Handler.Resources_Handler.Get_Resources("HostAndHostessExcelImportTemplateCaption"), MessageBoxButton.OKCancel, MessageBoxImage.Information);
+            if (resultTemplate == MessageBoxResult.Cancel)
+            {
+                return;
+            }
+
+            //Create OpenFileDialog 
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+
+            // Set filter for file extension and default file extension 
+            dlg.DefaultExt = ".xls";
+            dlg.Filter = "Excel Files (*.xls;*.xlsx)|*.xls; *.xlsx";
+
+            //Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Get the selected file name and display it
+            if (result == true)
+            {
+                //Creation of the wait window
+                WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
+
+                //Action
+                m_Global_Handler.Log_Handler.WriteAction("Hosts and hostesses from " + dlg.FileName);
+
+
+                try
+                {
+                    //Open the wait window
+                    windowWait.Start(m_Global_Handler, "HostAndHostessExcelImportPrincipalMessage", "HostAndHostessExcelImportSecondaryMessage");
+
+                    // Open document 
+                    string excelFilename = dlg.FileName;
+                    string extension = Path.GetExtension(excelFilename);
+                    Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+                    Microsoft.Office.Interop.Excel.Workbook workBook = app.Workbooks.Open(excelFilename, 0, true, 5, "", "", true,
+                        Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+                    Microsoft.Office.Interop.Excel.Worksheet workSheet = (Microsoft.Office.Interop.Excel.Worksheet)workBook.ActiveSheet;
+
+                    //Read and fill collection
+                    int index = 2;
+                    while (((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 1]).Value != null)
+                    {
+                        //Creation of service
+                        Hostess hostess = new Hostess();
+                        hostess.firstname = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 1]).Text);
+                        hostess.lastname = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 2]).Text);
+                        hostess.cellphone = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 3]).Value);
+                        hostess.sex = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 4]).Value);
+                        hostess.email = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 5]).Value);
+                        hostess.address = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 6]).Text);
+                        hostess.zipcode = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 7]).Text);
+                        hostess.city = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 8]).Value);
+                        hostess.country = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 9]).Value);
+                        hostess.id_paycheck = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 10]).Value);
+                        hostess.birth_date = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 11]).Value);
+                        hostess.birth_city = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 12]).Value);
+                        hostess.social_number = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 13]).Value);
+                        hostess.size = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 14]).Value);
+                        hostess.size_shirt = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 15]).Value);
+                        hostess.size_pants = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 16]).Value);
+                        hostess.size_shoes = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 17]).Value);
+                        string hasCar = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 15]).Value);
+                        if (hasCar.ToLower() == m_Global_Handler.Resources_Handler.Get_Resources("Yes").ToLower())
+                        {
+                            hostess.has_car = true;
+                        }
+                        else
+                        {
+                            hostess.has_car = false;
+                        }
+                        string hasDriverLicence = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 18]).Value);
+                        if (hasDriverLicence.ToLower() == m_Global_Handler.Resources_Handler.Get_Resources("Yes").ToLower())
+                        {
+                            hostess.has_driver_licence = true;
+                        }
+                        else
+                        {
+                            hostess.has_driver_licence = false;
+                        }
+                        string english = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 19]).Value);
+                        if (english.ToLower() == m_Global_Handler.Resources_Handler.Get_Resources("Yes").ToLower())
+                        {
+                            hostess.language_english = true;
+                        }
+                        else
+                        {
+                            hostess.language_english = false;
+                        }
+                        string german = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 20]).Value);
+                        if (german.ToLower() == m_Global_Handler.Resources_Handler.Get_Resources("Yes").ToLower())
+                        {
+                            hostess.language_german = true;
+                        }
+                        else
+                        {
+                            hostess.language_german = false;
+                        }
+                        string spanish = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 21]).Value);
+                        if (spanish.ToLower() == m_Global_Handler.Resources_Handler.Get_Resources("Yes").ToLower())
+                        {
+                            hostess.language_spanish = true;
+                        }
+                        else
+                        {
+                            hostess.language_spanish = false;
+                        }
+                        string italian = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 22]).Value);
+                        if (italian.ToLower() == m_Global_Handler.Resources_Handler.Get_Resources("Yes").ToLower())
+                        {
+                            hostess.language_italian = true;
+                        }
+                        else
+                        {
+                            hostess.language_italian = false;
+                        }
+                        hostess.language_others = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 23]).Value);
+                        string streetProfile = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 24]).Value);
+                        if (streetProfile.ToLower() == m_Global_Handler.Resources_Handler.Get_Resources("Yes").ToLower())
+                        {
+                            hostess.profile_street = true;
+                        }
+                        else
+                        {
+                            hostess.profile_street = false;
+                        }
+                        string eventProfile = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 25]).Value);
+                        if (eventProfile.ToLower() == m_Global_Handler.Resources_Handler.Get_Resources("Yes").ToLower())
+                        {
+                            hostess.profile_event = true;
+                        }
+                        else
+                        {
+                            hostess.profile_event = false;
+                        }
+                        string permanentProfile = Convert.ToString(((Microsoft.Office.Interop.Excel.Range)workSheet.Cells[index, 25]).Value);
+                        if (permanentProfile.ToLower() == m_Global_Handler.Resources_Handler.Get_Resources("Yes").ToLower())
+                        {
+                            hostess.profile_permanent = true;
+                        }
+                        else
+                        {
+                            hostess.profile_permanent = false;
+                        }
+
+                        //Verification
+                        bool is_HostessAlreadyAdded = false;
+                        for (int iHostess = 0; iHostess < SoftwareObjects.HostsAndHotessesCollection.Count; ++iHostess)
+                        {
+                            Hostess hostessInCollection = SoftwareObjects.HostsAndHotessesCollection[iHostess];
+                            if (hostessInCollection.social_number == hostess.social_number)
+                            {
+                                is_HostessAlreadyAdded = true;
+                                break;
+                            }
+                        }
+                        if (is_HostessAlreadyAdded == true)
+                        {
+                            //Incrementation
+                            ++index;
+
+                            //Continue loop
+                            continue;
+                        }
+
+                        //Creation of the id
+                        hostess.id = hostess.Create_HostOrHostessId();
+
+                        //Creation date
+                        hostess.date_creation = DateTime.Now.ToString();
+
+                        //Add to internet database        
+                        string res = m_Database_Handler.Add_HostAndHostessToDatabase(hostess.address, hostess.birth_city,
+                            hostess.birth_date, hostess.cellphone, hostess.city, hostess.country, hostess.email,
+                            hostess.firstname, hostess.has_car, hostess.has_driver_licence, hostess.id, hostess.id_paycheck,
+                            hostess.language_english, hostess.language_german, hostess.language_italian, hostess.language_others,
+                            hostess.language_spanish, hostess.lastname, hostess.profile_event, hostess.profile_permanent,
+                            hostess.profile_street, hostess.sex, hostess.size, hostess.size_pants, hostess.size_shirt,
+                            hostess.size_shoes, hostess.social_number, "", hostess.zipcode);
+
+                        //Treat the result
+                        if (res.Contains("OK"))
+                        {
+                            //Incrementation
+                            ++index;
+                        }
+                        else if (res.Contains("Error"))
+                        {
+                            //Close the wait window
+                            windowWait.Stop();
+
+                            //Incrementation
+                            ++index;
+
+                            //Treatment of the error
+                            MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+
+                            //Continue loop
+                            continue;
+                        }
+                    }
+
+                    //Actualization
+                    Actualize_GridHostsAndHostessesFromDatabase();
+
+                    //Close the wait window
+                    windowWait.Stop();
+
+                    //Message box and disable the edit and delete buttons
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("HostAndHostessExcelImportEndedText"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("HostAndHostessExcelImportEndedCaption"),
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    //Close the excel file without saving
+                    workBook.Close(false, Type.Missing, Type.Missing);
+
+                    return;
+
+                }
+                catch (Exception exception)
+                {
+                    //Close the wait window
+                    windowWait.Stop();
+
+                    //Write the error into log
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    return;
+                }
             }
         }
 
@@ -3118,7 +3386,7 @@ namespace Software
                 Thread.Sleep(500);
                 windowWait.Stop();
 
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -3171,7 +3439,7 @@ namespace Software
                 Thread.Sleep(500);
                 windowWait.Stop();
 
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -3233,7 +3501,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.HostsAndHotessesCollection = SavedCollection;
 
                     //Clear the grid
@@ -3278,7 +3546,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.HostsAndHotessesCollection = SavedCollection;
 
                     //Clear the grid
@@ -3323,7 +3591,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.HostsAndHotessesCollection = SavedCollection;
 
                     //Clear the grid
@@ -3368,7 +3636,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.HostsAndHotessesCollection = SavedCollection;
 
                     //Clear the grid
@@ -3413,7 +3681,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.HostsAndHotessesCollection = SavedCollection;
 
                     //Clear the grid
@@ -3459,7 +3727,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -3567,7 +3835,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -3633,7 +3901,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -3718,7 +3986,7 @@ namespace Software
                     p.WaitForExit();
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Mail sent to " + emailAddress);
+                    m_Global_Handler.Log_Handler.WriteAction("Mail sent to " + emailAddress);
 
                     //Close stop window
                     windowWait.Stop();
@@ -3726,7 +3994,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     windowWait.Stop();
                     return;
                 }
@@ -3824,7 +4092,7 @@ namespace Software
                     Btn_HostAndHostess_Delete.IsEnabled = true;
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Skype call made to " + hostOrHostess.firstname + ", " + hostOrHostess.cellphone);
+                    m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + hostOrHostess.firstname + ", " + hostOrHostess.cellphone);
 
                     //Close stop window
                     windowWait.Stop();
@@ -3832,7 +4100,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     windowWait.Stop();
                     return;
                 }
@@ -3949,7 +4217,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -3991,7 +4259,7 @@ namespace Software
                     Add_ClientToGrid(client_CreateWindow.m_Client);
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Client " + clientToAdd.corporate_name + " created");
+                    m_Global_Handler.Log_Handler.WriteAction("Client " + clientToAdd.corporate_name + " created");
 
                     //Select the last hostess
                     if (m_Button_Client_SelectedClient != null)
@@ -4047,7 +4315,7 @@ namespace Software
                 windowWait.Stop();
 
                 //Write the error into log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -4112,7 +4380,7 @@ namespace Software
                     windowWait.Start(m_Global_Handler, "ClientDeletionPrincipalMessage", "ClientDeletionSecondaryMessage");
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Client " + client.corporate_name + " deleted");
+                    m_Global_Handler.Log_Handler.WriteAction("Client " + client.corporate_name + " deleted");
 
                     //Delete the hostess to the collection
                     SoftwareObjects.ClientsCollection.Remove(client);
@@ -4158,7 +4426,7 @@ namespace Software
                 windowWait.Stop();
 
                 //Write the error into log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -4191,7 +4459,7 @@ namespace Software
                     client = client_EditWindow.m_Client;
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Client " + client.corporate_name + " edited");
+                    m_Global_Handler.Log_Handler.WriteAction("Client " + client.corporate_name + " edited");
 
                     //Treatment of client info
                     TextBlock clientInfo = new TextBlock();
@@ -4286,7 +4554,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Write the error into log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -4358,7 +4626,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.ClientsCollection = SavedCollection;
 
                     //Clear the grid
@@ -4403,7 +4671,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.ClientsCollection = SavedCollection;
 
                     //Clear the grid
@@ -4448,7 +4716,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.ClientsCollection = SavedCollection;
 
                     //Clear the grid
@@ -4493,7 +4761,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.ClientsCollection = SavedCollection;
 
                     //Clear the grid
@@ -4539,7 +4807,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -4604,7 +4872,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -4688,7 +4956,7 @@ namespace Software
                     p.WaitForExit();
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Mail sent to " + emailAddress);
+                    m_Global_Handler.Log_Handler.WriteAction("Mail sent to " + emailAddress);
 
                     //Close stop window
                     windowWait.Stop();
@@ -4696,7 +4964,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     windowWait.Stop();
                     return;
                 }
@@ -4793,7 +5061,7 @@ namespace Software
                     Btn_Clients_Delete.IsEnabled = true;
 
                     //Action
-                    m_Global_Handler.Error_Handler.WriteAction("Skype call made to " + client.corporate_name + ", " + client.phone);
+                    m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + client.corporate_name + ", " + client.phone);
 
                     //Close stop window
                     windowWait.Stop();
@@ -4801,7 +5069,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     windowWait.Stop();
                     return;
                 }
@@ -4903,7 +5171,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -4943,14 +5211,14 @@ namespace Software
                 }
                 catch (ArgumentException Arg_Ex)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, Arg_Ex);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, Arg_Ex);
                     MessageBox.Show(Arg_Ex.Message, m_Global_Handler.Resources_Handler.Get_Resources("DatabaseDefinitionModificationErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
                     Txt_Settings_General_Database.Text = SoftwareObjects.GlobalSettings.database_definition;
                     return;
                 }
                 catch (MySqlException SQL_Ex)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, SQL_Ex);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, SQL_Ex);
                     MessageBox.Show(SQL_Ex.Message, m_Global_Handler.Resources_Handler.Get_Resources("DatabaseDefinitionModificationErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
                     Txt_Settings_General_Database.Text = SoftwareObjects.GlobalSettings.database_definition;
                     return;
@@ -4969,11 +5237,11 @@ namespace Software
                 }
 
                 //Action
-                m_Global_Handler.Error_Handler.WriteAction("Database " + SoftwareObjects.GlobalSettings.database_definition + " saved");
+                m_Global_Handler.Log_Handler.WriteAction("Database " + SoftwareObjects.GlobalSettings.database_definition + " saved");
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -5005,7 +5273,7 @@ namespace Software
                                 Txt_Settings_General_Photos.Text = SoftwareObjects.GlobalSettings.photos_repository;
 
                                 //Action
-                                m_Global_Handler.Error_Handler.WriteAction("Phots saved to " + SoftwareObjects.GlobalSettings.photos_repository);
+                                m_Global_Handler.Log_Handler.WriteAction("Phots saved to " + SoftwareObjects.GlobalSettings.photos_repository);
                             }
                             else
                             {
@@ -5017,7 +5285,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -5086,7 +5354,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -5173,7 +5441,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.HostsAndHotessesCollection = new List<Hostess>();
                     return;
                 }
@@ -5241,7 +5509,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.HostsAndHotessesCollection = new List<Hostess>();
                     return;
                 }
@@ -5457,7 +5725,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -5546,7 +5814,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return -1;
             }
         }
@@ -5581,7 +5849,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.ClientsCollection = new List<Client>();
                     return;
                 }
@@ -5642,7 +5910,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     SoftwareObjects.ClientsCollection = new List<Client>();
                     return;
                 }
@@ -5789,7 +6057,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -5899,7 +6167,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -5972,7 +6240,7 @@ namespace Software
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -6010,7 +6278,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -6138,7 +6406,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -6426,7 +6694,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -6544,7 +6812,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -6631,7 +6899,7 @@ namespace Software
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 m_Grid_Details_Missions_MissionsCollection = _SavedCollection;
 
                 //Clear the grid

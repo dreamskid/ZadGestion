@@ -217,7 +217,7 @@ namespace GeneralClasses
             }
             catch (Exception error)
             {
-                m_Global_Handler.Error_Handler.WriteMessage(System.Reflection.MethodBase.GetCurrentMethod().Name, error.StackTrace);
+                m_Global_Handler.Log_Handler.WriteMessage(System.Reflection.MethodBase.GetCurrentMethod().Name, error.StackTrace);
                 MessageBox.Show(error.Message, m_Global_Handler.Resources_Handler.Get_Resources("Error"),
                     MessageBoxButton.OK, MessageBoxImage.Error);
 
@@ -298,7 +298,7 @@ namespace GeneralClasses
             }
             catch (Exception error)
             {
-                m_Global_Handler.Error_Handler.WriteMessage(System.Reflection.MethodBase.GetCurrentMethod().Name, error.StackTrace);
+                m_Global_Handler.Log_Handler.WriteMessage(System.Reflection.MethodBase.GetCurrentMethod().Name, error.StackTrace);
                 System.Windows.MessageBox.Show(error.Message,
                     m_Global_Handler.Resources_Handler.Get_Resources("Error"),
                     MessageBoxButton.OK, MessageBoxImage.Error);
@@ -352,7 +352,7 @@ namespace GeneralClasses
             }
             catch (Exception error)
             {
-                m_Global_Handler.Error_Handler.WriteMessage(System.Reflection.MethodBase.GetCurrentMethod().Name, error.StackTrace);
+                m_Global_Handler.Log_Handler.WriteMessage(System.Reflection.MethodBase.GetCurrentMethod().Name, error.StackTrace);
 
                 //Close document and word
                 Close_Word();
@@ -461,7 +461,7 @@ namespace GeneralClasses
             }
             catch (Exception error)
             {
-                m_Global_Handler.Error_Handler.WriteMessage(System.Reflection.MethodBase.GetCurrentMethod().Name, error.StackTrace);
+                m_Global_Handler.Log_Handler.WriteMessage(System.Reflection.MethodBase.GetCurrentMethod().Name, error.StackTrace);
 
                 //Close document and word
                 Close_Word();
@@ -526,7 +526,7 @@ namespace GeneralClasses
             }
             catch (Exception error)
             {
-                m_Global_Handler.Error_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, error);
+                m_Global_Handler.Log_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, error);
 
                 //Close document and word
                 Close_Word();

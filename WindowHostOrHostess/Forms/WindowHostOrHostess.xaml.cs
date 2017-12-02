@@ -217,7 +217,7 @@ namespace WindowHostOrHostess
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -372,7 +372,7 @@ namespace WindowHostOrHostess
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -407,7 +407,7 @@ namespace WindowHostOrHostess
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return new List<string>();
             }
         }
@@ -498,7 +498,7 @@ namespace WindowHostOrHostess
                 if (m_IsModification == false)
                 {
                     //Creation of the id
-                    m_HostOrHostess.id = Create_HostOrHostessId(m_HostOrHostess);
+                    m_HostOrHostess.id = m_HostOrHostess.Create_HostOrHostessId();
 
                     //Add to internet database
                     string res = m_Database_Handler.Add_HostAndHostessToDatabase(m_HostOrHostess.address, m_HostOrHostess.birth_city,
@@ -527,7 +527,7 @@ namespace WindowHostOrHostess
                     {
                         //Treatment of the error
                         MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-                        m_Global_Handler.Error_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                        m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
                         return;
                     }
                 }
@@ -561,21 +561,21 @@ namespace WindowHostOrHostess
                         Log ClassError = m_Database_Handler.Deserialize_JSON<Log>(res);
                         string errorText = ClassError.error;
                         MessageBox.Show(this, errorText, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-                        m_Global_Handler.Error_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, errorText);
+                        m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, errorText);
                         return;
                     }
                     else
                     {
                         //Error connecting to web site
                         MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-                        m_Global_Handler.Error_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                        m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
                         return;
                     }
                 }
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, exception.StackTrace);
+                m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, exception.StackTrace);
                 return;
             }
         }
@@ -621,7 +621,7 @@ namespace WindowHostOrHostess
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -683,7 +683,7 @@ namespace WindowHostOrHostess
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
 
@@ -720,7 +720,7 @@ namespace WindowHostOrHostess
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -756,7 +756,7 @@ namespace WindowHostOrHostess
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -864,7 +864,7 @@ namespace WindowHostOrHostess
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -903,32 +903,6 @@ namespace WindowHostOrHostess
 
         /// <summary>
         /// Functions
-        /// Creation of the Id of the host or hostess
-        /// </summary>
-        private string Create_HostOrHostessId(Hostess _HostOrHostess)
-        {
-            string id = "";
-
-            id += SoftwareObjects.HostsAndHotessesCollection.Count;
-            id += "_";
-            if (_HostOrHostess.firstname != "")
-            {
-                id += _HostOrHostess.firstname.Substring(0, 1);
-            }
-            if (_HostOrHostess.lastname != "")
-            {
-                id += _HostOrHostess.lastname.Substring(0, 1);
-            }
-            if (_HostOrHostess.zipcode != "")
-            {
-                id += "_" + _HostOrHostess.zipcode;
-            }
-
-            return id;
-        }
-
-        /// <summary>
-        /// Functions
         /// Save the picture on the disc
         /// </summary>
         private void Save_PhotosToDisc(Hostess _HostOrHostess)
@@ -955,7 +929,7 @@ namespace WindowHostOrHostess
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }

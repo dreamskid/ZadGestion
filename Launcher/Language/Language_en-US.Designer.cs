@@ -962,6 +962,61 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End of the import.
+        /// </summary>
+        public static string HostAndHostessExcelImportEndedCaption {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportEndedCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import of the hosts and hostesses ended, thank you for your patience.
+        /// </summary>
+        public static string HostAndHostessExcelImportEndedText {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportEndedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import of the hosts and hostesses in progress....
+        /// </summary>
+        public static string HostAndHostessExcelImportPrincipalMessage {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import of the hosts and hostesses in progress, please wait until the message sginaling the end of import appears..
+        /// </summary>
+        public static string HostAndHostessExcelImportSecondaryMessage {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Importation template for hosts and hostesses.
+        /// </summary>
+        public static string HostAndHostessExcelImportTemplateCaption {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportTemplateCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Importation of hosts and hostesses from an Excel file, column order should be:
+        ///Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Country, Paycheck number, Birth city, Birth date (ex : 5 February 1982), Social security number, Height, Pants size, Shirt size, Shoe size, Car (Yes/No), Driver licence (Yes/No), English (Yes/No), German (Yes/No), Spanish (Yes/No), Italian (Yes/No), Other languages, Profile street (Yes/No), Profile event (Yes/No), Profile permanent (Yes/No).
+        /// </summary>
+        public static string HostAndHostessExcelImportTemplateText {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportTemplateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Archiving the host or hostess in progress....
         /// </summary>
         public static string HostOrHostessArchivePrincipalMessage {
@@ -980,20 +1035,20 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete the selected host/hostess ?.
-        /// </summary>
-        public static string HostOrHostessConfirmDelete {
-            get {
-                return ResourceManager.GetString("HostOrHostessConfirmDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Delete host/hostess.
         /// </summary>
         public static string HostOrHostessConfirmDeleteCaption {
             get {
                 return ResourceManager.GetString("HostOrHostessConfirmDeleteCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the selected host/hostess ?.
+        /// </summary>
+        public static string HostOrHostessConfirmDeleteText {
+            get {
+                return ResourceManager.GetString("HostOrHostessConfirmDeleteText", resourceCulture);
             }
         }
         
@@ -1273,6 +1328,15 @@ namespace Launcher.Language {
         public static string IdPaycheck {
             get {
                 return ResourceManager.GetString("IdPaycheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import from Excel.
+        /// </summary>
+        public static string ImportHostAndHostessFromExcel {
+            get {
+                return ResourceManager.GetString("ImportHostAndHostessFromExcel", resourceCulture);
             }
         }
         

@@ -76,7 +76,7 @@ namespace WindowWait
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -121,7 +121,7 @@ namespace WindowWait
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, exception);
+                    m_Global_Handler.Log_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             });
@@ -150,7 +150,7 @@ namespace WindowWait
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }

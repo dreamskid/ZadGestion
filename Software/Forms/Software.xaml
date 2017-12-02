@@ -36,7 +36,7 @@
         <Button x:Name="Btn_Software_Settings" HorizontalAlignment="Right" Height="86" Margin="0,0,10,0" VerticalAlignment="Top" Width="112" FontWeight="Bold" FontSize="16" FontFamily="Arial" BorderThickness="0" Click="Btn_Software_Settings_Click" Content="Settings" Background="#FF3B3839" Foreground="White" />
 
         <!--Missions-->
-        <Grid x:Name="Grid_Missions" Margin="10,101,10,10" Visibility="Collapsed">
+        <Grid x:Name="Grid_Missions" Margin="10,101,10,10" Visibility="Visible">
             <!--Scroll viewer-->
             <ScrollViewer x:Name="Scrl_Grid_Missions_Details" Margin="452,40,10,10" CanContentScroll="True">
                 <Grid x:Name="Grid_Missions_Details" MinWidth="300" Visibility="Visible" MinHeight="120">
@@ -125,13 +125,14 @@
         </Grid>
 
         <!--Host and hostess-->
-        <Grid x:Name="Grid_HostAndHostess" Margin="10,101,10,10" Visibility="Visible">
+        <Grid x:Name="Grid_HostAndHostess" Margin="10,101,10,10" Visibility="Collapsed">
             <!--Buttons-->
             <Button x:Name="Btn_HostAndHostess_Archive" HorizontalAlignment="Left" Height="33" Margin="35,0,0,48" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Archive" VerticalAlignment="Bottom" Click="Btn_HostAndHostess_Archive_Click" TabIndex="7" IsEnabled="False" Background="#FF595C61" Foreground="White"/>
             <Button x:Name="Btn_HostAndHostess_Create" HorizontalAlignment="Left" Height="33" Margin="35,65,0,0" VerticalAlignment="Top" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Create" Click="Btn_HostAndHostess_Create_Click" Background="#FF6F0178" Foreground="White"/>
             <Button x:Name="Btn_HostAndHostess_Delete" HorizontalAlignment="Left" Height="33" Margin="35,0,0,10" VerticalAlignment="Bottom" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" Click="Btn_HostAndHostess_Delete_Click" Background="#FFF03535" IsEnabled="False" Foreground="White"/>
             <Button x:Name="Btn_HostAndHostess_Edit" HorizontalAlignment="Left" Height="33" Margin="35,0,0,86" VerticalAlignment="Bottom" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Edit" Click="Btn_HostAndHostess_Edit_Click" Background="#FF6F0178" IsEnabled="False" Foreground="White"/>
-            <Button x:Name="Btn_HostAndHostess_GenerateExcelStatement" Height="25" HorizontalAlignment="Left" Margin="452,10,0,0" Width="204" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="GenerateExcelStatement" Click="Btn_HostAndHostess_GenerateExcelStatement_Click" TabIndex="10" VerticalAlignment="Top" Background="#FF6F0178" Foreground="White"/>
+            <Button x:Name="Btn_HostAndHostess_GenerateExcelStatement" Height="25" HorizontalAlignment="Left" Margin="452,0,0,10" Width="204" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="GenerateExcelStatement" Click="Btn_HostAndHostess_GenerateExcelStatement_Click" TabIndex="10" VerticalAlignment="Bottom" Background="#FF6F0178" Foreground="White"/>
+            <Button x:Name="Btn_HostAndHostess_Import" Height="25" HorizontalAlignment="Left" Margin="661,0,0,10" Width="204" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Import" Click="Btn_HostAndHostess_Import_Click" TabIndex="10" VerticalAlignment="Bottom" Background="#FF6F0178" Foreground="White"/>
             <Button x:Name="Btn_HostAndHostess_ShowArchived" HorizontalAlignment="Right" Height="25" Margin="0,10,10,0" Width="143" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="ArchivedHostsAndHostesses" Click="Btn_HostAndHostess_ShowArchived_Click" VerticalAlignment="Top" TabIndex="12" Background="#FF595C61" Foreground="White"/>
             <Button x:Name="Btn_HostAndHostess_ShowInProgress" HorizontalAlignment="Right" Height="25" Margin="0,10,158,0" Width="182" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="InProgressHostsAndHostesses" Click="Btn_HostAndHostess_ShowInProgress_Click" VerticalAlignment="Top" TabIndex="11" Background="#FF6F0178" Foreground="White"/>
 
@@ -172,7 +173,7 @@
             <Label x:Name="Lbl_HostAndHostess_Sort" Content="SortBy" HorizontalAlignment="Left" Height="30" Margin="226,10,0,0" Width="164" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="White"/>
 
             <!--Scroll viewer-->
-            <ScrollViewer x:Name="ScrollViewer_HostAndHostess_Details" HorizontalScrollBarVisibility="Auto" Margin="452,40,10,10" VerticalScrollBarVisibility="Auto" CanContentScroll="True">
+            <ScrollViewer x:Name="ScrollViewer_HostAndHostess_Details" HorizontalScrollBarVisibility="Auto" Margin="452,40,10,40" VerticalScrollBarVisibility="Auto" CanContentScroll="True">
                 <Grid x:Name="Grid_HostAndHostess_Details" MinWidth="300" Visibility="Visible" MinHeight="120">
                     <Grid.RowDefinitions>
                         <RowDefinition MinHeight="50" MaxHeight="120"/>

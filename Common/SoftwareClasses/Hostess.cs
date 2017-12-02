@@ -284,5 +284,31 @@
             set;
         }
 
+        /// <summary>
+        /// Functions
+        /// Creation of the Id of the host or hostess
+        /// </summary>
+        public string Create_HostOrHostessId()
+        {
+            string id = "";
+
+            id += SoftwareObjects.HostsAndHotessesCollection.Count;
+            id += "_";
+            if (firstname != "")
+            {
+                id += firstname.Substring(0, 1);
+            }
+            if (lastname != "")
+            {
+                id += lastname.Substring(0, 1);
+            }
+            if (zipcode != "")
+            {
+                id += "_" + zipcode;
+            }
+
+            return id;
+        }
+
     }
 }

@@ -161,7 +161,7 @@
     <value>Connection à internet perdue. Veuillez vérifier votre configuration. Aucune sauvegarde ne peut être effectuée</value>
     <comment>Texte de connection perdue</comment>
   </data>
-  <data name="HostOrHostessConfirmDelete" xml:space="preserve">
+  <data name="HostOrHostessConfirmDeleteText" xml:space="preserve">
     <value>Êtes-vous sûr(e) de vouloir supprimer l'hôte ou l'hôtesse sélectionné(e) ?</value>
     <comment>Texte de suppression de l'hôte ou l'hôtesse</comment>
   </data>
@@ -1197,5 +1197,34 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="InProgress" xml:space="preserve">
     <value>En cours</value>
     <comment>En cours</comment>
+  </data>
+  <data name="HostAndHostessExcelImportEndedCaption" xml:space="preserve">
+    <value>Fin de l'importation</value>
+    <comment>Titre de fin d'import des hôtes et hôtesses depuis un fichier Excel</comment>
+  </data>
+  <data name="HostAndHostessExcelImportEndedText" xml:space="preserve">
+    <value>Importation des hôtes et hôtesses terminée, merci pour votre patience.</value>
+    <comment>Texte de fin d'import des hôtes et hôtesses depuis un fichier Excel</comment>
+  </data>
+  <data name="HostAndHostessExcelImportPrincipalMessage" xml:space="preserve">
+    <value>Importation des hôtes et hôtesses en cours...</value>
+    <comment>Message principal d'importation des hôtes et hôtesses depuis un fichier Excel</comment>
+  </data>
+  <data name="HostAndHostessExcelImportSecondaryMessage" xml:space="preserve">
+    <value>Importation des hôtes et hôtesses en cours, merci de patienter jusqu'au message signalant la fin de l'importation</value>
+    <comment>Message secondaire d'importation des hôtes et hôtesses depuis un fichier Excel</comment>
+  </data>
+  <data name="HostAndHostessExcelImportTemplateCaption" xml:space="preserve">
+    <value>Template d'importation des hôtes et hôtesses</value>
+    <comment>Titre d'import Excel des hôtes et hôtesses de description du template</comment>
+  </data>
+  <data name="HostAndHostessExcelImportTemplateText" xml:space="preserve">
+    <value>Importation des hôtes et hôtesses depuis un fichier Excel, l'ordre des colonnes doit être le suivant:
+Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays, Numéro de paie, Ville de naissance, Date de naissance (ex : 5 Février 1982), Numéro de sécurité social, Taille, Taille pantalon, Taille haut, Pointure, Voiture (Oui/Non), Permis de conduire (Oui/Non), Anglais (Oui/Non), Allemand (Oui/Non), Espagnol (Oui/Non), Italie (Oui/ Non), Autres langues, Profil street (Oui/Non), Profil event (Oui/Non), Profil permanent (Oui/Non)</value>
+    <comment>Texte d'import Excel des hôtes et hôtesses de description du template</comment>
+  </data>
+  <data name="ImportHostAndHostessFromExcel" xml:space="preserve">
+    <value>Importer depuis Excel</value>
+    <comment>Importer depuis Excel</comment>
   </data>
 </root>

@@ -20,9 +20,9 @@
         private Files m_File_Handler = new Files();
 
         /// <summary>
-        /// Handler for error
+        /// Handler for log
         /// </summary>
-        private Log m_Error_Handler = new Log();
+        private Log m_Log_Handler = new Log();
 
         /// <summary>
         /// Handler for date and times
@@ -91,15 +91,15 @@
         /// <summary>
         /// Getter/Setter for Error_Handler
         /// </summary>
-        public Log Error_Handler
+        public Log Log_Handler
         {
             get
             {
-                return m_Error_Handler;
+                return m_Log_Handler;
             }
             set
             {
-                m_Error_Handler = value;
+                m_Log_Handler = value;
             }
         }
 

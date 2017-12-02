@@ -161,7 +161,7 @@
     <value>Connection to internet lost. Please, verify your configuration. Unable to save your work while the connection is not effective</value>
     <comment>Connection lost text</comment>
   </data>
-  <data name="HostOrHostessConfirmDelete" xml:space="preserve">
+  <data name="HostOrHostessConfirmDeleteText" xml:space="preserve">
     <value>Are you sure you want to delete the selected host/hostess ?</value>
     <comment>Delete host/hostess confirmation text</comment>
   </data>
@@ -1185,5 +1185,34 @@ User profile - Credentials - New computer</value>
   <data name="InProgress" xml:space="preserve">
     <value>In progress</value>
     <comment>In progress</comment>
+  </data>
+  <data name="HostAndHostessExcelImportEndedCaption" xml:space="preserve">
+    <value>End of the import</value>
+    <comment>End of import of the hosts and hostesses caption</comment>
+  </data>
+  <data name="HostAndHostessExcelImportEndedText" xml:space="preserve">
+    <value>Import of the hosts and hostesses ended, thank you for your patience</value>
+    <comment>End of import of the hosts and hostesses text</comment>
+  </data>
+  <data name="HostAndHostessExcelImportPrincipalMessage" xml:space="preserve">
+    <value>Import of the hosts and hostesses in progress...</value>
+    <comment>Import of the hosts and hostesses in progress principal message</comment>
+  </data>
+  <data name="HostAndHostessExcelImportSecondaryMessage" xml:space="preserve">
+    <value>Import of the hosts and hostesses in progress, please wait until the message sginaling the end of import appears.</value>
+    <comment>Import of the hosts and hostesses in progress secondary message</comment>
+  </data>
+  <data name="HostAndHostessExcelImportTemplateCaption" xml:space="preserve">
+    <value>Importation template for hosts and hostesses</value>
+    <comment>Import of hosts and hostesses caption</comment>
+  </data>
+  <data name="HostAndHostessExcelImportTemplateText" xml:space="preserve">
+    <value>Importation of hosts and hostesses from an Excel file, column order should be:
+Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Country, Paycheck number, Birth city, Birth date (ex : 5 February 1982), Social security number, Height, Pants size, Shirt size, Shoe size, Car (Yes/No), Driver licence (Yes/No), English (Yes/No), German (Yes/No), Spanish (Yes/No), Italian (Yes/No), Other languages, Profile street (Yes/No), Profile event (Yes/No), Profile permanent (Yes/No)</value>
+    <comment>Import of hosts and hostesses text</comment>
+  </data>
+  <data name="ImportHostAndHostessFromExcel" xml:space="preserve">
+    <value>Import from Excel</value>
+    <comment>Import from Excel</comment>
   </data>
 </root>

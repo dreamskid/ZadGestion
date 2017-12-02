@@ -94,7 +94,7 @@ namespace Launcher
             {
                 MessageBox.Show(this, exception.Message,
                                m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-                m_Global_Handler.Error_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(System.Reflection.MethodBase.GetCurrentMethod().Name, exception);
                 Close();
                 return;
             }

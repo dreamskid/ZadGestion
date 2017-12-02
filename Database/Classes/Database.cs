@@ -63,7 +63,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return "";
             }
         }
@@ -84,7 +84,7 @@ namespace Database
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return default(T);
             }
         }
@@ -272,10 +272,10 @@ namespace Database
                 this.m_SQLConnection.Close();
 
                 //Write error to log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 if (e.InnerException != null)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e.InnerException);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e.InnerException);
                 }
                 return "Error - " + e.Message;
             }
@@ -313,7 +313,7 @@ namespace Database
                 this.m_SQLConnection.Close();
 
                 //Write error to log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return "Error - " + e.Message;
             }
         }
@@ -420,7 +420,7 @@ namespace Database
                 this.m_SQLConnection.Close();
 
                 //Write error to log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return "Error - " + e.Message;
             }
         }
@@ -498,7 +498,7 @@ namespace Database
                 this.m_SQLConnection.Close();
 
                 //Write error to log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return "Error - " + e.Message;
             }
         }
@@ -539,7 +539,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return e.Message;
             }
         }
@@ -600,10 +600,10 @@ namespace Database
                 this.m_SQLConnection.Close();
 
                 //Write error to log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 if (e.InnerException != null)
                 {
-                    m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e.InnerException);
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e.InnerException);
                 }
                 return "Error - " + e.Message;
             }
@@ -641,7 +641,7 @@ namespace Database
                 this.m_SQLConnection.Close();
 
                 //Write error to log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return "Error - " + e.Message;
             }
         }
@@ -701,7 +701,7 @@ namespace Database
                 this.m_SQLConnection.Close();
 
                 //Write error to log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return "Error - " + e.Message;
             }
         }
@@ -760,7 +760,7 @@ namespace Database
                 this.m_SQLConnection.Close();
 
                 //Write error to log
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return "Error - " + e.Message;
             }
         }
@@ -797,7 +797,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return e.Message;
             }
         }
@@ -819,7 +819,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return e.Message;
             }
         }
@@ -837,7 +837,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return e.Message;
             }
         }
@@ -855,7 +855,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return e.Message;
             }
         }
@@ -872,7 +872,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return e.Message;
             }
         }
@@ -890,7 +890,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return e.Message;
             }
         }
@@ -908,7 +908,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return e.Message;
             }
         }
@@ -926,7 +926,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return e.Message;
             }
         }
@@ -967,7 +967,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
 
                 //Close connection
                 this.m_SQLConnection.Close();
@@ -1007,7 +1007,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
 
                 //Close connection
                 this.m_SQLConnection.Close();

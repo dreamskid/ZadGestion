@@ -142,7 +142,7 @@ namespace WindowClient
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -214,7 +214,7 @@ namespace WindowClient
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }
@@ -249,7 +249,7 @@ namespace WindowClient
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return new List<string>();
             }
         }
@@ -321,7 +321,7 @@ namespace WindowClient
                     {
                         //Treatment of the error
                         MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-                        m_Global_Handler.Error_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                        m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
                         return;
                     }
                 }
@@ -347,21 +347,21 @@ namespace WindowClient
                         Log ClassError = m_Database_Handler.Deserialize_JSON<Log>(res);
                         string errorText = ClassError.error;
                         MessageBox.Show(this, errorText, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-                        m_Global_Handler.Error_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, errorText);
+                        m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, errorText);
                         return;
                     }
                     else
                     {
                         //Error connecting to web site
                         MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-                        m_Global_Handler.Error_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                        m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
                         return;
                     }
                 }
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, exception.StackTrace);
+                m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, exception.StackTrace);
                 return;
             }
         }
@@ -469,7 +469,7 @@ namespace WindowClient
             }
             catch (Exception exception)
             {
-                m_Global_Handler.Error_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
         }

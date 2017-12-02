@@ -989,6 +989,61 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fin de l&apos;importation.
+        /// </summary>
+        public static string HostAndHostessExcelImportEndedCaption {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportEndedCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Importation des hôtes et hôtesses terminée, merci pour votre patience..
+        /// </summary>
+        public static string HostAndHostessExcelImportEndedText {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportEndedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Importation des hôtes et hôtesses en cours....
+        /// </summary>
+        public static string HostAndHostessExcelImportPrincipalMessage {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Importation des hôtes et hôtesses en cours, merci de patienter jusqu&apos;au message signalant la fin de l&apos;importation.
+        /// </summary>
+        public static string HostAndHostessExcelImportSecondaryMessage {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Template d&apos;importation des hôtes et hôtesses.
+        /// </summary>
+        public static string HostAndHostessExcelImportTemplateCaption {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportTemplateCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Importation des hôtes et hôtesses depuis un fichier Excel, l&apos;ordre des colonnes doit être le suivant:
+        ///Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays, Numéro de paie, Ville de naissance, Date de naissance (ex : 5 Février 1982), Numéro de sécurité social, Taille, Taille pantalon, Taille haut, Pointure, Voiture (Oui/Non), Permis de conduire (Oui/Non), Anglais (Oui/Non), Allemand (Oui/Non), Espagnol (Oui/Non), Italie (Oui/ Non), Autres langues, Profil street (Oui/Non), Profil eve [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string HostAndHostessExcelImportTemplateText {
+            get {
+                return ResourceManager.GetString("HostAndHostessExcelImportTemplateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hôte ou hôtesse en cours d&apos;archivage.
         /// </summary>
         public static string HostOrHostessArchivePrincipalMessage {
@@ -1007,20 +1062,20 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer l&apos;hôte ou l&apos;hôtesse sélectionné(e) ?.
-        /// </summary>
-        public static string HostOrHostessConfirmDelete {
-            get {
-                return ResourceManager.GetString("HostOrHostessConfirmDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Suppression hôte ou hôtesse.
         /// </summary>
         public static string HostOrHostessConfirmDeleteCaption {
             get {
                 return ResourceManager.GetString("HostOrHostessConfirmDeleteCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer l&apos;hôte ou l&apos;hôtesse sélectionné(e) ?.
+        /// </summary>
+        public static string HostOrHostessConfirmDeleteText {
+            get {
+                return ResourceManager.GetString("HostOrHostessConfirmDeleteText", resourceCulture);
             }
         }
         
@@ -1300,6 +1355,15 @@ namespace Launcher.Language {
         public static string IdPaycheck {
             get {
                 return ResourceManager.GetString("IdPaycheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Importer depuis Excel.
+        /// </summary>
+        public static string ImportHostAndHostessFromExcel {
+            get {
+                return ResourceManager.GetString("ImportHostAndHostessFromExcel", resourceCulture);
             }
         }
         
