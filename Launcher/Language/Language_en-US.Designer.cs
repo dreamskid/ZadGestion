@@ -431,6 +431,51 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generation of the clients&apos; statement in progress....
+        /// </summary>
+        public static string ClientsExcelGenerationPrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientsExcelGenerationPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please wait during the generation of the clients&apos; statement until Microsoft Excel® is opened.
+        /// </summary>
+        public static string ClientsExcelGenerationSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientsExcelGenerationSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clients&apos; statement.
+        /// </summary>
+        public static string ClientsStatement {
+            get {
+                return ResourceManager.GetString("ClientsStatement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clients&apos; statement not generated.
+        /// </summary>
+        public static string ClientsStatementExcelGenerationFailedCaption {
+            get {
+                return ResourceManager.GetString("ClientsStatementExcelGenerationFailedCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The clients&apos; statement could not have been generated. If this happens again, please contact the client support..
+        /// </summary>
+        public static string ClientsStatementExcelGenerationFailedText {
+            get {
+                return ResourceManager.GetString("ClientsStatementExcelGenerationFailedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close mission.
         /// </summary>
         public static string CloseMission {

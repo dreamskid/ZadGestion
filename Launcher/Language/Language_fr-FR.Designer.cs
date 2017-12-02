@@ -431,6 +431,51 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Génération de la synthèse des clients en cours....
+        /// </summary>
+        public static string ClientsExcelGenerationPrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientsExcelGenerationPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez patienter lors de la génération de la synthèse des clients jusqu&apos;à l&apos;ouverture de Microsoft Excel®.
+        /// </summary>
+        public static string ClientsExcelGenerationSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientsExcelGenerationSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Synthèse des clients.
+        /// </summary>
+        public static string ClientsStatement {
+            get {
+                return ResourceManager.GetString("ClientsStatement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Génération de la synthèse des clients échouée.
+        /// </summary>
+        public static string ClientsStatementExcelGenerationFailedCaption {
+            get {
+                return ResourceManager.GetString("ClientsStatementExcelGenerationFailedCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La synthèse des clients n&apos;a pu être générée. Merci de bien vouloir vérifier que le fichier n&apos;est pas ouvert..
+        /// </summary>
+        public static string ClientsStatementExcelGenerationFailedText {
+            get {
+                return ResourceManager.GetString("ClientsStatementExcelGenerationFailedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clôturer la mission.
         /// </summary>
         public static string CloseMission {
@@ -1341,7 +1386,7 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La synthèse des hôtes et hôtesses n&apos;a pu être générée. Merci de bien vouloir vérifier aue le fichier n&apos;est pas ouvert..
+        ///   Looks up a localized string similar to La synthèse des hôtes et hôtesses n&apos;a pu être générée. Merci de bien vouloir vérifier que le fichier n&apos;est pas ouvert..
         /// </summary>
         public static string HostsAndHostessesStatementExcelGenerationFailedText {
             get {

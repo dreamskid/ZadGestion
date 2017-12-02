@@ -1186,6 +1186,26 @@ User profile - Credentials - New computer</value>
     <value>In progress</value>
     <comment>In progress</comment>
   </data>
+  <data name="ClientsExcelGenerationPrincipalMessage" xml:space="preserve">
+    <value>Generation of the clients' statement in progress...</value>
+    <comment>Generation of the clients' statement primary message</comment>
+  </data>
+  <data name="ClientsExcelGenerationSecondaryMessage" xml:space="preserve">
+    <value>Please wait during the generation of the clients' statement until Microsoft Excel® is opened</value>
+    <comment>Generation of the clients' statement secondary message</comment>
+  </data>
+  <data name="ClientsStatement" xml:space="preserve">
+    <value>Clients' statement</value>
+    <comment>Clients' statement</comment>
+  </data>
+  <data name="ClientsStatementExcelGenerationFailedCaption" xml:space="preserve">
+    <value>Clients' statement not generated</value>
+    <comment>Clients' statement not generated error caption</comment>
+  </data>
+  <data name="ClientsStatementExcelGenerationFailedText" xml:space="preserve">
+    <value>The clients' statement could not have been generated. If this happens again, please contact the client support.</value>
+    <comment>Clients' statement not generated error text</comment>
+  </data>
   <data name="HostAndHostessExcelImportEndedCaption" xml:space="preserve">
     <value>End of the import</value>
     <comment>End of import of the hosts and hostesses caption</comment>

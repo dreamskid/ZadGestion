@@ -4566,7 +4566,92 @@ namespace Software
         /// /// </summary>
         private void Btn_Clients_GenerateExcelStatement_Click(object sender, RoutedEventArgs e)
         {
+            //Creation of the wait window
+            WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
 
+            try
+            {
+                //Get the name of the pdf
+                string today = m_Global_Handler.DateAndTime_Handler.Treat_Date(DateTime.Today.ToString("yyyy-MM-dd"), m_Global_Handler.Language_Handler);
+                today = today.Replace("/", "-");
+                string fileNameXLS = m_Global_Handler.Resources_Handler.Get_Resources("ClientsStatement") + " - " + today;
+                System.Windows.Forms.SaveFileDialog saveFile = new System.Windows.Forms.SaveFileDialog();
+                saveFile.FileName = fileNameXLS;
+                saveFile.Filter = "Excel files (*.xlsx, *.xls)|*.xlsx;*.xls";
+                if (saveFile.ShowDialog() != System.Windows.Forms.DialogResult.OK || saveFile.FileName.Length == 0)
+                {
+                    return;
+                }
+                else
+                {
+                    fileNameXLS = saveFile.FileName;
+                }
+
+                //Open the wait window
+                windowWait.Start(m_Global_Handler, "ClientsExcelGenerationPrincipalMessage", "ClientsExcelGenerationSecondaryMessage");
+
+                //Sort the collection
+                SoftwareObjects.ClientsCollection.Sort(delegate (Client x, Client y)
+                {
+                    if (x.corporate_name == null && y.corporate_name == null) return 0;
+                    else if (x.corporate_name == null) return 1;
+                    else if (y.corporate_name == null) return -1;
+                    else
+                    {
+                        return x.corporate_name.CompareTo(y.corporate_name);
+                    }
+                });
+
+                //Write in a file with tab separated
+                List<string> lines = new List<string>();
+                string columnsHeader = m_Global_Handler.Resources_Handler.Get_Resources("CorporateName") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("CorporateNumber") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Email") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Phone") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Address") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("ZipCode") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("City") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("Country");
+                lines.Add(columnsHeader);
+                for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
+                {
+                    Client client = SoftwareObjects.ClientsCollection[iClient];
+                     string line = client.corporate_name + "\t" + client.corporate_number + "\t" + client.email + "\t" + client.phone + "\t" + client.address + "\t" + client.zipcode + "\t" +
+                        client.city + "\t" + client.country;
+                    lines.Add(line);
+                }
+
+                //Generate the excel file
+                int result = m_Global_Handler.Excel_Handler.Generate_ExcelStatement(fileNameXLS, lines);
+                if (result == -1)
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ClientsStatementExcelGenerationFailedText"),
+                                m_Global_Handler.Resources_Handler.Get_Resources("ClientsStatementExcelGenerationFailedCaption"),
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+                    //Close the wait window
+                    windowWait.Stop();
+
+                    return;
+                }
+
+                //Action
+                m_Global_Handler.Log_Handler.WriteAction("Clients statement generated to Excel file " + fileNameXLS);
+
+                //Close the wait window
+                windowWait.Stop();
+
+                //Open the file
+                Process.Start(fileNameXLS);
+            }
+            catch (Exception exception)
+            {
+                //Close the wait window
+                windowWait.Stop();
+
+                //Write the error into log
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
         }
 
         /// <summary>

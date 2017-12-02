@@ -1151,7 +1151,7 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <comment>Titre d'erreur de la génération de la synthèse Excel des hôtes et hôtesses</comment>
   </data>
   <data name="HostsAndHostessesStatementExcelGenerationFailedText" xml:space="preserve">
-    <value>La synthèse des hôtes et hôtesses n'a pu être générée. Merci de bien vouloir vérifier aue le fichier n'est pas ouvert.</value>
+    <value>La synthèse des hôtes et hôtesses n'a pu être générée. Merci de bien vouloir vérifier que le fichier n'est pas ouvert.</value>
     <comment>Texte d'erreur de la génération de la synthèse Excel des hôtes et hôtesses</comment>
   </data>
   <data name="MissionLegendBilled" xml:space="preserve">
@@ -1197,6 +1197,26 @@ Profil - Identifiants - Nouveau ordinateur</value>
   <data name="InProgress" xml:space="preserve">
     <value>En cours</value>
     <comment>En cours</comment>
+  </data>
+  <data name="ClientsExcelGenerationPrincipalMessage" xml:space="preserve">
+    <value>Génération de la synthèse des clients en cours...</value>
+    <comment>Message principal d'attente lors de la génération de la synthèse des clients</comment>
+  </data>
+  <data name="ClientsExcelGenerationSecondaryMessage" xml:space="preserve">
+    <value>Veuillez patienter lors de la génération de la synthèse des clients jusqu'à l'ouverture de Microsoft Excel®</value>
+    <comment>Message secondaire d'attente lors de la génération de la synthèse des clients</comment>
+  </data>
+  <data name="ClientsStatement" xml:space="preserve">
+    <value>Synthèse des clients</value>
+    <comment>Synthèse des clients</comment>
+  </data>
+  <data name="ClientsStatementExcelGenerationFailedCaption" xml:space="preserve">
+    <value>Génération de la synthèse des clients échouée</value>
+    <comment>Titre d'erreur de la génération de la synthèse Excel des clients</comment>
+  </data>
+  <data name="ClientsStatementExcelGenerationFailedText" xml:space="preserve">
+    <value>La synthèse des clients n'a pu être générée. Merci de bien vouloir vérifier que le fichier n'est pas ouvert.</value>
+    <comment>Texte d'erreur de la génération de la synthèse Excel des clients</comment>
   </data>
   <data name="HostAndHostessExcelImportEndedCaption" xml:space="preserve">
     <value>Fin de l'importation</value>
