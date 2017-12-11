@@ -282,13 +282,6 @@ namespace Software
         /// </summary>
         public bool m_Is_InitializationDone = false;
 
-        /// <summary>
-        /// Initialization
-        /// Global variable
-        /// Boolean indicating if the invoices should be corrected (rest amount and dates)
-        /// </summary>
-        public bool m_VerifyInvoices = false;
-
         #endregion
 
         #region Selected buttons
@@ -366,6 +359,13 @@ namespace Software
         /// Boolean indicating if the host or hostess category is in archive mode or not
         /// </summary>
         private bool m_HostsAndHostesses_IsArchiveMode = false;
+
+        /// <summary>
+        /// Initialization
+        /// Specific variable
+        /// Boolean indicating if the clients category is in archive mode or not
+        /// </summary>
+        private bool m_Clients_IsArchiveMode = false;
 
         /// <summary>
         /// Initialization
@@ -594,10 +594,13 @@ namespace Software
                 #region Clients
 
                 //Buttons
+                Btn_Clients_Archive.Content = m_Global_Handler.Resources_Handler.Get_Resources("Archive");
                 Btn_Clients_Create.Content = m_Global_Handler.Resources_Handler.Get_Resources("Create");
                 Btn_Clients_Delete.Content = m_Global_Handler.Resources_Handler.Get_Resources("Delete");
                 Btn_Clients_Edit.Content = m_Global_Handler.Resources_Handler.Get_Resources("Edit");
                 Btn_Clients_GenerateExcelStatement.Content = m_Global_Handler.Resources_Handler.Get_Resources("GenerateExcelStatement");
+                Btn_Clients_ShowArchived.Content = m_Global_Handler.Resources_Handler.Get_Resources("Archives");
+                Btn_Clients_ShowInProgress.Content = m_Global_Handler.Resources_Handler.Get_Resources("InProgress");
 
                 //Combobox
                 List<string> cmbClients = new List<string>();
@@ -4221,12 +4224,168 @@ namespace Software
                     return;
                 }
             }
-
         }
 
         #endregion
 
         #region Clients
+
+        /// <summary>
+        /// Event
+        /// Clients
+        /// Click on archive client
+        /// </summary>
+        private void Btn_Clients_Archive_Click(object sender, RoutedEventArgs e)
+        {
+            //Creation of the wait window
+            WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
+
+            try
+            {
+                //Get the client
+                Client clientSel = Get_SelectedClientFromButton();
+                if (clientSel == null)
+                {
+                    return;
+                }
+
+                //In progress mode
+                if (m_Clients_IsArchiveMode == false)
+                {
+                    //Open the window wait
+                    windowWait.Start(m_Global_Handler, "ClientArchivePrincipalMessage", "ClientArchiveSecondaryMessage");
+
+                    //Add to database    
+                    string res = m_Database_Handler.Archive_Client(clientSel.id);
+
+                    //Treat the result
+                    if (res.Contains("OK"))
+                    {
+                        //Action
+                        m_Global_Handler.Log_Handler.WriteAction("Client " + clientSel.corporate_name + " archived");
+
+                        //Modify client archive mode
+                        clientSel.archived = 1;
+
+                        //Actualize grid from collection
+                        Actualize_GridClientsFromDatabase();
+
+                        //Clear the fields
+                        Txt_Clients_Research.Text = "";
+                        m_DataGrid_Clients_MissionsCollection.Clear();
+                        DataGrid_Clients_Missions.Items.Refresh();
+
+                        //Null buttons
+                        m_Button_Client_SelectedCellPhone = null;
+                        m_Button_Client_SelectedEmail = null;
+                        m_Button_Client_SelectedClient = null;
+
+                        //Disable the buttons
+                        Btn_Clients_Archive.IsEnabled = false;
+                        Btn_Clients_Create.IsEnabled = false;
+                        Btn_Clients_Edit.IsEnabled = false;
+                        Btn_Clients_Delete.IsEnabled = false;
+
+                        //Close the wait window
+                        windowWait.Stop();
+
+                        return;
+                    }
+                    else if (res.Contains("error"))
+                    {
+                        //Close the wait window
+                        windowWait.Stop();
+
+                        //Treatment of the error
+                        Log ClassError = m_Database_Handler.Deserialize_JSON<Log>(res);
+                        string errorText = ClassError.error;
+                        MessageBox.Show(this, errorText, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+
+                        return;
+                    }
+                    else
+                    {
+                        //Close the wait window
+                        windowWait.Stop();
+
+                        //Error connecting to web site
+                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+
+                        return;
+                    }
+                }
+                //In restore mode
+                else
+                {
+                    //Open the window wait
+                    windowWait.Start(m_Global_Handler, "ClientRestorePrincipalMessage", "ClientRestoreSecondaryMessage");
+
+                    //Add to database    
+                    string res = m_Database_Handler.Restore_Client(clientSel.id);
+
+                    //Treat the result
+                    if (res.Contains("OK"))
+                    {
+                        //Action
+                        m_Global_Handler.Log_Handler.WriteAction("Client " + clientSel.corporate_name + " restored");
+
+                        //Modify client archive mode
+                        clientSel.archived = 0;
+
+                        //Actualize grid from collection
+                        Actualize_GridClientsFromDatabase();
+
+                        //Clear the fields
+                        Txt_Clients_Research.Text = "";
+                        m_DataGrid_Clients_MissionsCollection.Clear();
+                        DataGrid_Clients_Missions.Items.Refresh();
+
+                        //Null buttons
+                        m_Button_Client_SelectedCellPhone = null;
+                        m_Button_Client_SelectedEmail = null;
+                        m_Button_Client_SelectedClient = null;
+
+                        //Disable the buttons
+                        Btn_Clients_Archive.IsEnabled = false;
+                        Btn_Clients_Create.IsEnabled = false;
+                        Btn_Clients_Edit.IsEnabled = false;
+                        Btn_Clients_Delete.IsEnabled = false;
+
+                        //Close the wait window
+                        windowWait.Stop();
+
+                        return;
+                    }
+                    else if (res.Contains("error"))
+                    {
+                        //Close the wait window
+                        windowWait.Stop();
+
+                        //Treatment of the error
+                        Log ClassError = m_Database_Handler.Deserialize_JSON<Log>(res);
+                        string errorText = ClassError.error;
+                        MessageBox.Show(this, errorText, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+
+                        return;
+                    }
+                    else
+                    {
+                        //Close the wait window
+                        windowWait.Stop();
+
+                        //Error connecting to web site
+                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+
+                        return;
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                Close();
+            }
+        }
 
         /// <summary>
         /// Event
@@ -4298,6 +4457,7 @@ namespace Software
                     }
 
                     //Enable the buttons
+                    Btn_Clients_Archive.IsEnabled = true;
                     Btn_Clients_Edit.IsEnabled = true;
                     Btn_Clients_Delete.IsEnabled = true;
 
@@ -4400,6 +4560,7 @@ namespace Software
                     m_Button_Client_SelectedCellPhone = null;
 
                     //Disable the buttons
+                    Btn_Clients_Archive.IsEnabled = false;
                     Btn_Clients_Edit.IsEnabled = false;
                     Btn_Clients_Delete.IsEnabled = false;
 
@@ -4616,8 +4777,8 @@ namespace Software
                 for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
                 {
                     Client client = SoftwareObjects.ClientsCollection[iClient];
-                     string line = client.corporate_name + "\t" + client.corporate_number + "\t" + client.email + "\t" + client.phone + "\t" + client.address + "\t" + client.zipcode + "\t" +
-                        client.city + "\t" + client.country;
+                    string line = client.corporate_name + "\t" + client.corporate_number + "\t" + client.email + "\t" + client.phone + "\t" + client.address + "\t" + client.zipcode + "\t" +
+                       client.city + "\t" + client.country;
                     lines.Add(line);
                 }
 
@@ -4649,6 +4810,112 @@ namespace Software
                 windowWait.Stop();
 
                 //Write the error into log
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Clients
+        /// Click on show archived clients
+        /// </summary>
+        private void Btn_Clients_ShowArchived_Click(object sender, RoutedEventArgs e)
+        {
+            //Creation of the wait window
+            WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
+
+            try
+            {
+                //Open the window wait
+                windowWait.Start(m_Global_Handler, "ClientsShowArchivedPrincipalMessage", "ClientsShowArchivedSecondaryMessage");
+
+                //Mode
+                m_Clients_IsArchiveMode = true;
+
+                //Actualize
+                Actualize_GridClientsFromDatabase();
+
+                //Clear the fields
+                Txt_Clients_Research.Text = "";
+                m_DataGrid_Clients_MissionsCollection.Clear();
+                DataGrid_Clients_Missions.Items.Refresh();
+
+                //Null buttons
+                m_Button_Client_SelectedCellPhone = null;
+                m_Button_Client_SelectedEmail = null;
+                m_Button_Client_SelectedClient = null;
+
+                //Disable the buttons
+                Btn_Clients_Archive.IsEnabled = false;
+                Btn_Clients_Archive.Content = m_Global_Handler.Resources_Handler.Get_Resources("Restore");
+                Btn_Clients_Create.IsEnabled = false;
+                Btn_Clients_Edit.IsEnabled = false;
+                Btn_Clients_Delete.IsEnabled = false;
+
+                //Close the wait window
+                Thread.Sleep(500);
+                windowWait.Stop();
+            }
+            catch (Exception exception)
+            {
+                //Close the wait window
+                Thread.Sleep(500);
+                windowWait.Stop();
+
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Clients
+        /// Click on show in progress clients
+        /// </summary>
+        private void Btn_Clients_ShowInProgress_Click(object sender, RoutedEventArgs e)
+        {
+            //Creation of the wait window
+            WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
+
+            try
+            {
+                //Open the window wait
+                windowWait.Start(m_Global_Handler, "ClientsShowInProgressPrincipalMessage", "ClientsShowInProgressSecondaryMessage");
+
+                //Mode
+                m_Clients_IsArchiveMode = false;
+
+                //Actualize
+                Actualize_GridClientsFromDatabase();
+
+                //Clear the fields
+                Txt_Clients_Research.Text = "";
+                m_DataGrid_Clients_MissionsCollection.Clear();
+                DataGrid_Clients_Missions.Items.Refresh();
+
+                //Null buttons
+                m_Button_Client_SelectedCellPhone = null;
+                m_Button_Client_SelectedEmail = null;
+                m_Button_Client_SelectedClient = null;
+
+                //Disable the buttons
+                Btn_Clients_Archive.IsEnabled = false;
+                Btn_Clients_Archive.Content = m_Global_Handler.Resources_Handler.Get_Resources("Archive");
+                Btn_Clients_Create.IsEnabled = false;
+                Btn_Clients_Edit.IsEnabled = false;
+                Btn_Clients_Delete.IsEnabled = false;
+
+                //Close the wait window
+                Thread.Sleep(500);
+                windowWait.Stop();
+            }
+            catch (Exception exception)
+            {
+                //Close the wait window
+                Thread.Sleep(500);
+                windowWait.Stop();
+
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
@@ -4903,7 +5170,7 @@ namespace Software
         /// Mouse down on the main client button event
         /// Select the client
         /// </summary>
-        private void IsPressed_Client_Button(object sender, RoutedEventArgs ev)
+        private void IsPressed_Clients_Button(object sender, RoutedEventArgs ev)
         {
             if (sender != null)
             {
@@ -4952,6 +5219,7 @@ namespace Software
                     Get_SelectedClientFromButton();
 
                     //Enable the buttons
+                    Btn_Clients_Archive.IsEnabled = true;
                     Btn_Clients_Edit.IsEnabled = true;
                     Btn_Clients_Delete.IsEnabled = true;
                 }
@@ -4969,7 +5237,7 @@ namespace Software
         /// Mouse down on the client's email button event
         /// Select client and open a new email with the selected client email adress
         /// </summary>
-        private void IsPressed_Client_EmailButton(object sender, RoutedEventArgs ev)
+        private void IsPressed_Clients_EmailButton(object sender, RoutedEventArgs ev)
         {
             if (sender != null)
             {
@@ -5027,6 +5295,7 @@ namespace Software
                     Get_SelectedClientFromButton();
 
                     //Enable the buttons
+                    Btn_Clients_Archive.IsEnabled = true;
                     Btn_Clients_Edit.IsEnabled = true;
                     Btn_Clients_Delete.IsEnabled = true;
 
@@ -5062,7 +5331,7 @@ namespace Software
         /// Mouse down on the client's phone button(s) event
         /// Select the client and open skype
         /// </summary>
-        private void IsPressed_Client_PhoneButton(object sender, RoutedEventArgs ev)
+        private void IsPressed_Clients_PhoneButton(object sender, RoutedEventArgs ev)
         {
             if (sender != null)
             {
@@ -5142,6 +5411,7 @@ namespace Software
                     }
 
                     //Enable the buttons
+                    Btn_Clients_Archive.IsEnabled = true;
                     Btn_Clients_Edit.IsEnabled = true;
                     Btn_Clients_Delete.IsEnabled = true;
 
@@ -5168,11 +5438,11 @@ namespace Software
         bool actualizationClientDone = true;
         /// <summary>
         /// Event
-        /// Client
+        /// Clients
         /// Text changed in the research client text box
         /// Only Hostess containing the text (at least 2 characters) are shown 
         /// </summary>
-        private void Txt_Client_Research_TextChanged(object sender, TextChangedEventArgs e)
+        private void Txt_Clients_Research_TextChanged(object sender, TextChangedEventArgs e)
         {
             //Get the researched text
             string researchedText = Txt_Clients_Research.Text;
@@ -5322,7 +5592,7 @@ namespace Software
                 }
 
                 //Action
-                m_Global_Handler.Log_Handler.WriteAction("Database " + SoftwareObjects.GlobalSettings.database_definition + " saved");
+                m_Global_Handler.Log_Handler.WriteAction("Settings: Database " + SoftwareObjects.GlobalSettings.database_definition + " saved");
             }
             catch (Exception exception)
             {
@@ -5358,7 +5628,7 @@ namespace Software
                                 Txt_Settings_General_Photos.Text = SoftwareObjects.GlobalSettings.photos_repository;
 
                                 //Action
-                                m_Global_Handler.Log_Handler.WriteAction("Phots saved to " + SoftwareObjects.GlobalSettings.photos_repository);
+                                m_Global_Handler.Log_Handler.WriteAction("Settings: Photos saved to " + SoftwareObjects.GlobalSettings.photos_repository);
                             }
                             else
                             {
@@ -5929,7 +6199,14 @@ namespace Software
                     for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
                     {
                         Client client = SoftwareObjects.ClientsCollection[iClient];
-                        Add_ClientToGrid(client);
+                        if (m_Clients_IsArchiveMode == true && client.archived == 1)
+                        {
+                            Add_ClientToGrid(client);
+                        }
+                        else if (m_Clients_IsArchiveMode == false && client.archived == 0)
+                        {
+                            Add_ClientToGrid(client);
+                        }
                     }
                 }
                 catch (Exception exception)
@@ -5983,7 +6260,14 @@ namespace Software
                         for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
                         {
                             Client client = SoftwareObjects.ClientsCollection[iClient];
-                            Add_ClientToGrid(client);
+                            if (m_Clients_IsArchiveMode == true && client.archived == 1)
+                            {
+                                Add_ClientToGrid(client);
+                            }
+                            else if (m_Clients_IsArchiveMode == false && client.archived == 0)
+                            {
+                                Add_ClientToGrid(client);
+                            }
                         }
                     }
                     else if (res.Contains("Error"))
@@ -6030,8 +6314,15 @@ namespace Software
                 //Create the hostess button
                 Button buttonClient = new Button();
                 buttonClient.Padding = new Thickness(5);
-                buttonClient.Background = m_Color_HostAndHostess;
-                buttonClient.Click += IsPressed_Client_Button;
+                if (m_Clients_IsArchiveMode == false)
+                {
+                    buttonClient.Background = m_Color_Mission;
+                }
+                else
+                {
+                    buttonClient.Background = m_Color_ArchivedMission;
+                }
+                buttonClient.Click += IsPressed_Clients_Button;
 
                 //Treatment of hostess info
                 TextBlock clientInfo = new TextBlock();
@@ -6070,8 +6361,15 @@ namespace Software
                 Button buttonCallCellPhone = new Button();
                 buttonCallCellPhone.MinHeight = 20;
                 buttonCallCellPhone.Padding = new Thickness(5);
-                buttonCallCellPhone.Background = m_Color_HostAndHostess;
-                buttonCallCellPhone.Click += IsPressed_Client_PhoneButton;
+                if (m_Clients_IsArchiveMode == false)
+                {
+                    buttonCallCellPhone.Background = m_Color_Mission;
+                }
+                else
+                {
+                    buttonCallCellPhone.Background = m_Color_ArchivedMission;
+                }
+                buttonCallCellPhone.Click += IsPressed_Clients_PhoneButton;
                 buttonCallCellPhone.Tag = "CellPhone";
                 //Treatment of the image in the call button
                 Image imgCellPhone = new Image();
@@ -6100,8 +6398,15 @@ namespace Software
                 Button buttonSendMail = new Button();
                 buttonSendMail.MinHeight = 20;
                 buttonSendMail.Padding = new Thickness(5);
-                buttonSendMail.Background = m_Color_HostAndHostess;
-                buttonSendMail.Click += IsPressed_Client_EmailButton;
+                if (m_Clients_IsArchiveMode == false)
+                {
+                    buttonSendMail.Background = m_Color_Mission;
+                }
+                else
+                {
+                    buttonSendMail.Background = m_Color_ArchivedMission;
+                }
+                buttonSendMail.Click += IsPressed_Clients_EmailButton;
                 buttonSendMail.Tag = "Email";
                 //Treatment of the image in the email button
                 Image imgEmail = new Image();
@@ -7035,5 +7340,6 @@ namespace Software
         #endregion
 
         #endregion
+
     }
 }

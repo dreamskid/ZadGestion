@@ -269,6 +269,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Veuillez patienter jusqu&apos;à la fermeture de cette fenêtre pendant l&apos;archivage du client.
+        /// </summary>
+        public static string ClientArchiveSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientArchiveSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Société.
         /// </summary>
         public static string ClientCompanyName {
@@ -404,6 +413,33 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Client en cours d&apos;archivage.
+        /// </summary>
+        public static string ClientPrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client en cours de restauration.
+        /// </summary>
+        public static string ClientRestorePrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientRestorePrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez patienter jusqu&apos;à la fermeture de cette fenêtre pendant la restauration du client.
+        /// </summary>
+        public static string ClientRestoreSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientRestoreSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clients.
         /// </summary>
         public static string Clients {
@@ -445,6 +481,42 @@ namespace Launcher.Language {
         public static string ClientsExcelGenerationSecondaryMessage {
             get {
                 return ResourceManager.GetString("ClientsExcelGenerationSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clients archivés....
+        /// </summary>
+        public static string ClientsShowArchivedPrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientsShowArchivedPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Déploiement des clients archivés, veuillez patienter jusqu&apos;`a la fermeture de cette fenêtre.
+        /// </summary>
+        public static string ClientsShowArchivedSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientsShowArchivedSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clients en cours....
+        /// </summary>
+        public static string ClientsShowInProgressPrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientsShowInProgressPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Déploiement des clients en cours, veuillez patienter jusqu&apos;`a la fermeture de cette fenêtre.
+        /// </summary>
+        public static string ClientsShowInProgressSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientsShowInProgressSecondaryMessage", resourceCulture);
             }
         }
         

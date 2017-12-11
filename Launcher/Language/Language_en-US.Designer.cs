@@ -269,6 +269,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Archiving the client in progress....
+        /// </summary>
+        public static string ClientArchivePrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientArchivePrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please wait while the client is being archived.
+        /// </summary>
+        public static string ClientArchiveSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientArchiveSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Company name.
         /// </summary>
         public static string ClientCompanyName {
@@ -404,6 +422,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Restoration the client in progress....
+        /// </summary>
+        public static string ClientRestorePrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientRestorePrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please wait while the client is being restored .
+        /// </summary>
+        public static string ClientRestoreSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientRestoreSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clients.
         /// </summary>
         public static string Clients {
@@ -445,6 +481,42 @@ namespace Launcher.Language {
         public static string ClientsExcelGenerationSecondaryMessage {
             get {
                 return ResourceManager.GetString("ClientsExcelGenerationSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Archived clients....
+        /// </summary>
+        public static string ClientsShowArchivedPrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientsShowArchivedPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deployment of the archived clients, please wait until this window closes.
+        /// </summary>
+        public static string ClientsShowArchivedSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientsShowArchivedSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In progress clients....
+        /// </summary>
+        public static string ClientsShowInProgressPrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientsShowInProgressPrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deployment of the in progress clients, please wait until this window closes.
+        /// </summary>
+        public static string ClientsShowInProgressSecondaryMessage {
+            get {
+                return ResourceManager.GetString("ClientsShowInProgressSecondaryMessage", resourceCulture);
             }
         }
         

@@ -169,6 +169,43 @@ namespace Database
         #region Host and hostess
 
         /// <summary>
+        /// Archive a host or hostess to the ZadGestion's database
+        /// <param name="_Id">Id of the host or hostess</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public string Archive_HostOrHostess(string _Id)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE hostsandhostesses SET archived = @archived WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@archived", 1);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                return e.Message;
+            }
+        }
+
+        /// <summary>
         /// Add a host or hostess to the ZadGestion's database
         /// <param name="_Address">Address of the host or hostess</param>
         /// <param name="_BirthCity">City of birth of the host or hostess</param>
@@ -503,16 +540,12 @@ namespace Database
             }
         }
 
-        #endregion
-
-        #region Client
-
         /// <summary>
-        /// Archive a host or hostess to the ZadGestion's database
+        /// Restore a host or hostess to the ZadGestion's database
         /// <param name="_Id">Id of the host or hostess</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
-        public string Archive_HostOrHostess(string _Id)
+        public string Restore_HostOrHostess(string _Id)
         {
             try
             {
@@ -524,6 +557,47 @@ namespace Database
 
                 //SQL request
                 cmd.CommandText = "UPDATE hostsandhostesses SET archived = @archived WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@archived", 0);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                return e.Message;
+            }
+        }
+
+        #endregion
+
+        #region Client
+
+        /// <summary>
+        /// Archive a client to the ZadGestion's database
+        /// <param name="_Id">Id of the client</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public string Archive_Client(string _Id)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE clients SET archived = @archived WHERE id = @id";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@id", _Id);
@@ -736,7 +810,7 @@ namespace Database
                                                      select new Client
                                                      {
                                                          address = row["address"].ToString(),
-                                                         archived = (bool)row["archived"],
+                                                         archived = (int)row["archived"],
                                                          city = row["city"].ToString(),
                                                          corporate_name = row["corporate_name"].ToString(),
                                                          corporate_number = row["corporate_number"].ToString(),
@@ -766,11 +840,11 @@ namespace Database
         }
 
         /// <summary>
-        /// Restore a host or hostess to the ZadGestion's database
-        /// <param name="_Id">Id of the host or hostess</param>
+        /// Restore a client to the ZadGestion's database
+        /// <param name="_Id">Id of the client</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
-        public string Restore_HostOrHostess(string _Id)
+        public string Restore_Client(string _Id)
         {
             try
             {
@@ -781,7 +855,7 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "UPDATE hostsandhostesses SET archived = @archived WHERE id = @id";
+                cmd.CommandText = "UPDATE clients SET archived = @archived WHERE id = @id";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@id", _Id);
@@ -1019,7 +1093,6 @@ namespace Database
         #endregion
 
         #endregion
-
 
     }
 }

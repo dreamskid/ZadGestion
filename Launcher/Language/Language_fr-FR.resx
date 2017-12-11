@@ -1247,4 +1247,36 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
     <value>Importer depuis Excel</value>
     <comment>Importer depuis Excel</comment>
   </data>
+  <data name="ClientArchiveSecondaryMessage" xml:space="preserve">
+    <value>Veuillez patienter jusqu'à la fermeture de cette fenêtre pendant l'archivage du client</value>
+    <comment>Message secondaire d'archivage du client</comment>
+  </data>
+  <data name="ClientPrincipalMessage" xml:space="preserve">
+    <value>Client en cours d'archivage</value>
+    <comment>Message principal d'archivage du client</comment>
+  </data>
+  <data name="ClientRestorePrincipalMessage" xml:space="preserve">
+    <value>Client en cours de restauration</value>
+    <comment>Message principal de restauration du client</comment>
+  </data>
+  <data name="ClientRestoreSecondaryMessage" xml:space="preserve">
+    <value>Veuillez patienter jusqu'à la fermeture de cette fenêtre pendant la restauration du client</value>
+    <comment>Message secondaire de restauration du client</comment>
+  </data>
+  <data name="ClientsShowArchivedPrincipalMessage" xml:space="preserve">
+    <value>Clients archivés...</value>
+    <comment>Message principal de déploiement des clients archivés</comment>
+  </data>
+  <data name="ClientsShowArchivedSecondaryMessage" xml:space="preserve">
+    <value>Déploiement des clients archivés, veuillez patienter jusqu'`a la fermeture de cette fenêtre</value>
+    <comment>Message secondaire de déploiement des clients en cours</comment>
+  </data>
+  <data name="ClientsShowInProgressPrincipalMessage" xml:space="preserve">
+    <value>Clients en cours...</value>
+    <comment>Message principal de déploiement des clients en cours</comment>
+  </data>
+  <data name="ClientsShowInProgressSecondaryMessage" xml:space="preserve">
+    <value>Déploiement des clients en cours, veuillez patienter jusqu'`a la fermeture de cette fenêtre</value>
+    <comment>Message secondaire de déploiement des clients en cours</comment>
+  </data>
 </root>

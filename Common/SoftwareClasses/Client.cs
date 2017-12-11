@@ -17,7 +17,7 @@
         /// <summary>
         /// Getter/Setter for client's archived mode
         /// </summary>
-        public bool archived
+        public int archived
         {
             get;
             set;
