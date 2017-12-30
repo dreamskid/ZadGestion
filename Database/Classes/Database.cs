@@ -33,64 +33,6 @@ namespace Database
 
         #endregion
 
-        #region Common
-
-        /// <summary>
-        /// Function which calculate the MD5
-        /// <param name="_Input">Input key</param>
-        /// <returns>The calculated key</returns>
-        /// </summary>
-        private string Calculate_MD5Hash()
-        {
-            try
-            {
-                // Creation of the datekey
-                string dateKey = "S" + m_Global_Handler.DateAndTime_Handler.Get_PresentYear() + "L" + m_Global_Handler.DateAndTime_Handler.Get_PresentDay() + "C" + m_Global_Handler.DateAndTime_Handler.Get_PresentMonth();
-                string input = dateKey;
-
-                // step 1, calculate MD5 hash from input
-                MD5 md5 = MD5.Create();
-                byte[] inputBytes = Encoding.ASCII.GetBytes(input);
-                byte[] hash = md5.ComputeHash(inputBytes);
-
-                // step 2, convert byte array to hex string
-                StringBuilder sb = new StringBuilder();
-                for (int i = 0; i < hash.Length; ++i)
-                {
-                    sb.Append(hash[i].ToString("X2"));
-                }
-                return sb.ToString();
-            }
-            catch (Exception e)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
-                return "";
-            }
-        }
-
-        /// <summary>
-        /// Template Deserialization function for JSON
-        /// <param name="_JsonString">string containing the json</param>
-        /// <returns>Returns the collection of objects red in the string</returns>
-        /// </summary>
-        public T Deserialize_JSON<T>(string _JsonString)
-        {
-            try
-            {
-                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(T));
-                MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(_JsonString));
-                T obj = (T)ser.ReadObject(ms);
-                return obj;
-            }
-            catch (Exception exception)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                return default(T);
-            }
-        }
-
-        #endregion
-
         #region Initialisation
 
         /// <summary>
@@ -582,43 +524,6 @@ namespace Database
         #region Client
 
         /// <summary>
-        /// Archive a client to the ZadGestion's database
-        /// <param name="_Id">Id of the client</param>
-        /// <returns>The string containing the result of the operation (OK, error)</returns>
-        /// </summary>
-        public string Archive_Client(string _Id)
-        {
-            try
-            {
-                //Open SQL connection
-                this.m_SQLConnection.Open();
-
-                //Create SQL command
-                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
-
-                //SQL request
-                cmd.CommandText = "UPDATE clients SET archived = @archived WHERE id = @id";
-
-                //Fill SQL parameters
-                cmd.Parameters.AddWithValue("@id", _Id);
-                cmd.Parameters.AddWithValue("@archived", 1);
-
-                //Execute request
-                cmd.ExecuteNonQuery();
-
-                //Close connection
-                this.m_SQLConnection.Close();
-
-                return "OK";
-            }
-            catch (Exception e)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
-                return e.Message;
-            }
-        }
-
-        /// <summary>
         /// Add a host or hostess to the ZadGestion's database
         /// <param name="_Address">Address of the client</param>
         /// <param name="_City">City of the client</param>
@@ -680,6 +585,43 @@ namespace Database
                     m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e.InnerException);
                 }
                 return "Error - " + e.Message;
+            }
+        }
+
+        /// <summary>
+        /// Archive a client to the ZadGestion's database
+        /// <param name="_Id">Id of the client</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public string Archive_Client(string _Id)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE clients SET archived = @archived WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@archived", 1);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                return e.Message;
             }
         }
 
@@ -881,15 +823,99 @@ namespace Database
         #region Mission
 
         /// <summary>
-        /// Get all the missions from ZadGestion's database
-        /// <param name="_GetClosed">Boolean indicating if closed missions should be pulled</param>
-        /// <returns>The string containing all the missions</returns>
+        /// Add a mission to the ZadGestion's database
+        /// <param name="_Address">Address of the mission</param>
+        /// <param name="_City">City of the mission</param>
+        /// <param name="_ClientName">Name of the client</param>
+        /// <param name="_Country">Country of the mission</param>
+        /// <param name="_EndDate">End date of the mission</param>
+        /// <param name="_Id">Id of the mission</param>
+        /// <param name="_ListOfShiftsId">List of shifts id of the mission</param>
+        /// <param name="_StartDate">Start date of the mission</param>
+        /// <param name="_State">State of the mission</param>
+        /// <param name="_ZipCode">Zip code of the mission</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
-        public string Get_MissionsFromDatabaseDatabase(bool _GetClosed)
+        public string Add_MissionToDatabase(string _Address, string _City,
+                        string _ClientName, string _Country, string _EndDate, string _Id,
+                        string _ListOfShiftsId, string _StartDate, string _State, string _ZipCode)
         {
             try
             {
-                return "";
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "INSERT INTO missions (address, city, client_name, country, end_date, id, id_list_shifts, start_date, state, zipcode)" +
+                    " VALUES (@address, @city, @client_name, @country, @end_date, @id, @id_list_shifts, @start_date, @state, @zipcode)";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@address", _Address);
+                cmd.Parameters.AddWithValue("@city", _City);
+                cmd.Parameters.AddWithValue("@client_name", _ClientName);
+                cmd.Parameters.AddWithValue("@country", _Country);
+                cmd.Parameters.AddWithValue("@date_creation", DateTime.Today);
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@id_list_shifts", _ListOfShiftsId);
+                cmd.Parameters.AddWithValue("@start_date", _StartDate);
+                cmd.Parameters.AddWithValue("@state", _State);
+                cmd.Parameters.AddWithValue("@zipcode", _ZipCode);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                //Write error to log
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                if (e.InnerException != null)
+                {
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e.InnerException);
+                }
+                return "Error - " + e.Message;
+            }
+        }
+
+        /// <summary>
+        /// Close a mission to the ZadGestion's database
+        /// <param name="_Id">Id of the mission</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public string Archive_Mission(string _Id)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE missions SET archived = @archived WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@archived", 1);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
             }
             catch (Exception e)
             {
@@ -899,15 +925,30 @@ namespace Database
         }
 
         /// <summary>
-        /// Get the mission from its Id from ZadGestion's database
-        /// <param name="_Id">Id of the mission asked</param>
-        /// <returns>The string containing the mission</returns>
+        /// Delete a mission to the ZadGestion's database
+        /// <param name="_Id">Id of the mission</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
-        public string Get_MissionByIdFromDatabaseDatabase(int _Id)
+        public string Delete_MissionToDatabase(string _Id)
         {
             try
             {
-                return "";
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "DELETE FROM missions WHERE id = '" + _Id + "'";
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
             }
             catch (Exception e)
             {
@@ -918,67 +959,111 @@ namespace Database
 
         /// <summary>
         /// Edit an mission to the ZadGestion's database
+        /// <param name="_Address">Address of the mission</param>
+        /// <param name="_City">City of the mission</param>
+        /// <param name="_ClientName">Name of the client</param>
+        /// <param name="_Country">Country of the mission</param>
+        /// <param name="_EndDate">End date of the mission</param>
         /// <param name="_Id">Id of the mission</param>
+        /// <param name="_ListOfShiftsId">List of shifts id of the mission</param>
+        /// <param name="_StartDate">Start date of the mission</param>
+        /// <param name="_State">State of the mission</param>
+        /// <param name="_ZipCode">Zip code of the mission</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
-        public string Edit_MissionToDatabase(int _Id)
+        public string Edit_MissionToDatabase(string _Address, string _City,
+                        string _ClientName, string _Country, string _EndDate, string _Id,
+                        string _ListOfShiftsId, string _StartDate, string _State, string _ZipCode)
         {
             try
             {
-                return "";
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE missions SET address = @address, city = @city, client_name = @client_name, country = @country, " +
+                    "country = @country, id_list_shifts = @id_list_shifts, start_date = @start_date, state = @state, zipcode = @zipcode WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@address", _Address);
+                cmd.Parameters.AddWithValue("@city", _City);
+                cmd.Parameters.AddWithValue("@client_name", _ClientName);
+                cmd.Parameters.AddWithValue("@country", _Country);
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@id_list_shifts", _ListOfShiftsId);
+                cmd.Parameters.AddWithValue("@start_date", _StartDate);
+                cmd.Parameters.AddWithValue("@state", _State);
+                cmd.Parameters.AddWithValue("@zipcode", _ZipCode);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
             }
             catch (Exception e)
             {
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                //Write error to log
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
-                return e.Message;
+                return "Error - " + e.Message;
             }
         }
 
         /// <summary>
-        /// Add a mission to the ZadGestion's database
-        /// <returns>The string containing the result of the operation (Id of the mission created, error)</returns>
+        /// Get all the missions from ZadGestion's database
+        /// <returns>The string containing all the missions</returns>
         /// </summary>
-        public string Add_MissionToDatabase()
+        public string Get_MissionsFromDatabase()
         {
             try
             {
-                return "";
-            }
-            catch (Exception e)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
-                return e.Message;
-            }
-        }
+                //Clear collection
+                SoftwareObjects.MissionsCollection.Clear();
 
-        /// <summary>
-        /// Delete an mission to the ZadGestion's database
-        /// <param name="_Id">Id of the mission</param>
-        /// <returns>The string containing the result of the operation (OK, error)</returns>
-        /// </summary>
-        public string Delete_MissionToDatabase(int _Id)
-        {
-            try
-            {
-                return "";
-            }
-            catch (Exception e)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
-                return e.Message;
-            }
-        }
+                //Open SQL connection
+                this.m_SQLConnection.Open();
 
-        /// <summary>
-        /// Close a mission to the ZadGestion's database
-        /// <param name="_Id">Id of the mission</param>
-        /// <returns>The string containing the result of the operation (OK, error)</returns>
-        /// </summary>
-        public string Close_Mission(int _Id)
-        {
-            try
-            {
-                return "";
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "SELECT * FROM missions";
+
+                //Execute request
+                MySqlDataAdapter mySQLDatabaseAdapter = new MySqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                mySQLDatabaseAdapter.Fill(table);
+
+                //Fill collection
+                SoftwareObjects.MissionsCollection = (from DataRow row in table.Rows.OfType<DataRow>()
+                                                      select new Mission
+                                                      {
+                                                          address = row["address"].ToString(),
+                                                          archived = (int)row["archived"],
+                                                          city = row["city"].ToString(),
+                                                          client_name = row["client_name"].ToString(),
+                                                          country = row["country"].ToString(),
+                                                          date_creation = row["date_creation"].ToString(),
+                                                          end_date = row["end_date"].ToString(),
+                                                          id_list_shifts = row["id_list_shifts"].ToString(),
+                                                          id = row["id"].ToString(),
+                                                          start_date = row["start_date"].ToString(),
+                                                          state = row["state"].ToString(),
+                                                          zipcode = row["zipcode"].ToString()
+                                                      }).ToList();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
             }
             catch (Exception e)
             {
@@ -992,11 +1077,30 @@ namespace Database
         /// <param name="_Id">Id of the mission</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
-        public string Reopen_Mission(int _Id)
+        public string Restore_Mission(string _Id)
         {
             try
             {
-                return "";
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE missions SET archived = @archived WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@archived", 0);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
             }
             catch (Exception e)
             {

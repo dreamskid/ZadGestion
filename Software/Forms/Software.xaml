@@ -36,7 +36,7 @@
         <Button x:Name="Btn_Software_Settings" HorizontalAlignment="Right" Height="86" Margin="0,0,10,0" VerticalAlignment="Top" Width="112" FontWeight="Bold" FontSize="16" FontFamily="Arial" BorderThickness="0" Click="Btn_Software_Settings_Click" Content="Settings" Background="#FF3B3839" Foreground="White" />
 
         <!--Missions-->
-        <Grid x:Name="Grid_Missions" Margin="10,101,10,10" Visibility="Collapsed">
+        <Grid x:Name="Grid_Missions" Margin="10,101,10,10" Visibility="Visible">
             <!--Scroll viewer-->
             <ScrollViewer x:Name="Scrl_Grid_Missions_Details" Margin="452,40,10,10" CanContentScroll="True">
                 <Grid x:Name="Grid_Missions_Details" MinWidth="300" Visibility="Visible" MinHeight="120">
@@ -52,20 +52,20 @@
             </ScrollViewer>
 
             <!--Buttons-->
-            <Button x:Name="Btn_Missions_Close" HorizontalAlignment="Left" Height="33" Margin="62,0,0,56" Width="290" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Close" VerticalAlignment="Bottom" Click="Btn_Missions_Close_Click" TabIndex="7" IsEnabled="False" Background="#FF595C61" Foreground="White"/>
+            <Button x:Name="Btn_Missions_Archive" HorizontalAlignment="Left" Height="33" Margin="62,0,0,56" Width="290" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Close" VerticalAlignment="Bottom" Click="Btn_Missions_Archive_Click" TabIndex="7" IsEnabled="False" Background="#FF595C61" Foreground="White"/>
             <Button x:Name="Btn_Missions_Create" HorizontalAlignment="Left" Height="33" Margin="62,145,0,0" Width="290" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="CreateMission" VerticalAlignment="Top" Click="Btn_Missions_Create_Click" TabIndex="2" Background="#FF6F0178" Foreground="White"/>
             <Button x:Name="Btn_Missions_Delete" HorizontalAlignment="Left" Height="33" Margin="10,0,0,10" Width="437" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" VerticalAlignment="Bottom" Click="Btn_Missions_Delete_Click" TabIndex="8" IsEnabled="False" Background="#FFF03535" Foreground="White"/>
             <Button x:Name="Btn_Missions_Duplicate" HorizontalAlignment="Left" Height="33"  Margin="62,0,0,132.333" Width="290" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="DuplicateMission" VerticalAlignment="Bottom" TabIndex="3" Click="Btn_Missions_Duplicate_Click" IsEnabled="False" Background="#FF6F0178" Foreground="White"/>
             <Button x:Name="Btn_Missions_Edit" HorizontalAlignment="Left" Height="33" Margin="62,0,0,94.333" Width="290" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="EditMission" VerticalAlignment="Bottom" Click="Btn_Missions_Edit_Click" TabIndex="4" IsEnabled="False"  Background="#FF6F0178" Foreground="White"/>
             <Button x:Name="Btn_Missions_GenerateExcelStatement" Height="25" HorizontalAlignment="Left" Margin="452,10,0,0" Width="204" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="GenerateExcelStatement" Click="Btn_Missions_GenerateExcelStatement_Click" TabIndex="10" VerticalAlignment="Top" Background="#FF6F0178" Foreground="White"/>
-            <Button x:Name="Btn_Missions_ShowClosed" HorizontalAlignment="Right" Height="25" Margin="0,10,10,0" Width="143" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="ArchivedMissions" Click="Btn_Missions_ShowClosed_Click" VerticalAlignment="Top" TabIndex="12" Background="#FF595C61" Foreground="White"/>
+            <Button x:Name="Btn_Missions_ShowArchived" HorizontalAlignment="Right" Height="25" Margin="0,10,10,0" Width="143" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="ArchivedMissions" Click="Btn_Missions_ShowArchived_Click" VerticalAlignment="Top" TabIndex="12" Background="#FF595C61" Foreground="White"/>
             <Button x:Name="Btn_Missions_ShowInProgress" HorizontalAlignment="Right" Height="25" Margin="0,10,158,0" Width="182" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="InProgressMissions" Click="Btn_Missions_ShowInProgress_Click" VerticalAlignment="Top" TabIndex="11" Background="#FF6F0178" Foreground="White"/>
 
             <!--Combo box-->
             <ComboBox x:Name="Cmb_Missions_SortBy" HorizontalAlignment="Left" Height="20" Margin="226,40,0,0" VerticalAlignment="Top" Width="164" DropDownClosed="Cmb_Missions_SortBy_SelectionChanged" TabIndex="9" FontSize="11"/>
 
             <!--Data grid-->
-            <DataGrid x:Name="DataGrid_Missions_Services" HorizontalAlignment="Left" Margin="35,266,0,170.333" Width="356" Opacity="0.75" AutoGeneratingColumn="Datagrid_Missions_Services_AutoGeneratingColumn" IsReadOnly="True" BorderBrush="#FF245580" BorderThickness="0" IsEnabled="True">
+            <DataGrid x:Name="Datagrid_Missions_Shifts" HorizontalAlignment="Left" Margin="35,266,0,170" Width="356" Opacity="0.75" AutoGeneratingColumn="Datagrid_Missions_Shifts_AutoGeneratingColumn" IsReadOnly="True" BorderBrush="#FF245580" BorderThickness="0" IsEnabled="True">
                 <DataGrid.RowStyle>
                     <Style TargetType="{x:Type DataGridRow}">
                         <Style.Triggers>
@@ -117,10 +117,10 @@
             <Label x:Name="Lbl_Missions_Image_Mission_Billed" Content="Billed" HorizontalAlignment="Left" Margin="330,118,0,0" VerticalAlignment="Top" Height="27" Width="66" FontSize="10" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White"/>
 
             <!--Text boxes-->
-            <TextBox x:Name="Txt_Missions_ClientCompanyName" IsEnabled="False" HorizontalAlignment="Left" Height="20" Margin="35,213,0,0" TextWrapping="Wrap" Width="356"  VerticalAlignment="Top"/>
+            <TextBox x:Name="Txt_Missions_Client" IsEnabled="False" HorizontalAlignment="Left" Height="20" Margin="35,213,0,0" TextWrapping="Wrap" Width="356"  VerticalAlignment="Top"/>
             <TextBox x:Name="Txt_Missions_CreationDate" IsEnabled="False" HorizontalAlignment="Left" Height="20" Margin="221,242,0,0" TextWrapping="Wrap" Width="170" IsReadOnly="True" VerticalAlignment="Top"/>
-            <TextBox x:Name="Txt_Missions_FirstName" IsEnabled="False" HorizontalAlignment="Left" Height="20" Margin="35,188,0,0" TextWrapping="Wrap" Width="175" IsReadOnly="True" VerticalAlignment="Top"/>
-            <TextBox x:Name="Txt_Missions_LastName" IsEnabled="False" HorizontalAlignment="Left" Height="20" Margin="215,188,0,0" TextWrapping="Wrap" Width="176" IsReadOnly="True" VerticalAlignment="Top"/>
+            <TextBox x:Name="Txt_Missions_StartDate" IsEnabled="False" HorizontalAlignment="Left" Height="20" Margin="35,188,0,0" TextWrapping="Wrap" Width="175" IsReadOnly="True" VerticalAlignment="Top"/>
+            <TextBox x:Name="Txt_Missions_EndDate" IsEnabled="False" HorizontalAlignment="Left" Height="20" Margin="215,188,0,0" TextWrapping="Wrap" Width="176" IsReadOnly="True" VerticalAlignment="Top"/>
             <TextBox x:Name="Txt_Missions_Research" HorizontalAlignment="Left" Height="20" Margin="35,40,0,0" TextWrapping="Wrap" Width="186" TabIndex="1" VerticalAlignment="Top" TextChanged="Txt_Missions_Research_TextChanged"/>
         </Grid>
 
@@ -191,7 +191,7 @@
         </Grid>
 
         <!--Clients-->
-        <Grid x:Name="Grid_Clients" Margin="10,101,10,10" Visibility="Visible">
+        <Grid x:Name="Grid_Clients" Margin="10,101,10,10" Visibility="Collapsed">
             <!--Buttons-->
             <Button x:Name="Btn_Clients_Archive" HorizontalAlignment="Left" Height="33" Margin="35,0,0,48" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Archive" VerticalAlignment="Bottom" Click="Btn_Clients_Archive_Click" TabIndex="7" IsEnabled="False" Background="#FF595C61" Foreground="White"/>
             <Button x:Name="Btn_Clients_Create" HorizontalAlignment="Left" Height="33" Margin="35,65,0,0" VerticalAlignment="Top" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Create" Click="Btn_Clients_Create_Click" Background="#FF6F0178" Foreground="White"/>

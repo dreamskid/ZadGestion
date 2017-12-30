@@ -344,10 +344,8 @@ namespace WindowClient
                     else if (res.Contains("error"))
                     {
                         //Treatment of the error
-                        Log ClassError = m_Database_Handler.Deserialize_JSON<Log>(res);
-                        string errorText = ClassError.error;
-                        MessageBox.Show(this, errorText, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-                        m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, errorText);
+                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+                        m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
                         return;
                     }
                     else

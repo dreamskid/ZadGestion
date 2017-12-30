@@ -24,7 +24,7 @@ namespace GeneralClasses
         /// <summary>
         /// Bill to treat
         /// </summary>
-        private static Billing m_Bill = new Billing();
+        private static Mission m_Mission = new Mission();
 
         /// <summary>
         /// Word application
@@ -42,11 +42,6 @@ namespace GeneralClasses
         private string m_GeneratedBillFileName = "";
 
         /// <summary>
-        /// Type of bill to generate
-        /// </summary>
-        private BillType m_Type;
-
-        /// <summary>
         /// Error handler
         /// </summary>
         private static Log m_Error_Handler = new Log();
@@ -60,12 +55,12 @@ namespace GeneralClasses
         /// Object missing definition
         /// </summary>
         private static object m_Missing = System.Reflection.Missing.Value;
-        
+
         /// <summary>
         /// Object for adding row in tables
         /// </summary>
         private Object m_BeforeRow = Type.Missing;
-        
+
         #endregion
 
         #region Getter/Setter
@@ -163,15 +158,14 @@ namespace GeneralClasses
         /// <param name="_FinalFilename">PDF output file name</param>
         /// <returns>0 if everything went well, 1 otherwise</returns>
         /// </summary>
-        public int Generate_Bill(Handlers _Global_Handler, Billing _Bill, BillType _Type, bool _Is_Visible, string _FinalFilename)
+        public int Generate_Bill(Handlers _Global_Handler, Mission _Bill, bool _Is_Visible, string _FinalFilename)
         {
             try
             {
                 //Initialize
                 m_GeneratedBillFileName = _FinalFilename;
                 m_Global_Handler = _Global_Handler;
-                m_Bill = _Bill;
-                m_Type = _Type;
+                m_Mission = _Bill;
 
                 //Connection to word
                 m_AppWord = new Microsoft.Office.Interop.Word.Application();
@@ -244,15 +238,14 @@ namespace GeneralClasses
         /// <param name="_FinalFilename">PDF output file name</param>
         /// <returns>0 if everything went well, 1 otherwise</returns>
         /// </summary>
-        public int Generate_CreditNote(Handlers _Global_Handler, Billing _CreditNote, bool _Is_Visible, string _FinalFilename)
+        public int Generate_CreditNote(Handlers _Global_Handler, Mission _CreditNote, bool _Is_Visible, string _FinalFilename)
         {
             try
             {
                 //Initialize
                 m_GeneratedBillFileName = _FinalFilename;
                 m_Global_Handler = _Global_Handler;
-                m_Bill = _CreditNote;
-                m_Type = BillType.CREDITNOTE;
+                m_Mission = _CreditNote;
 
                 //Connection to word
                 m_AppWord = new Microsoft.Office.Interop.Word.Application();
@@ -369,22 +362,10 @@ namespace GeneralClasses
         private bool Replace_Fields()
         {
             try
-            {
-                if (m_Type == BillType.Mission)
-                {
-                    Replace_Text("SLC_Bill_Title", m_Global_Handler.Resources_Handler.Get_Resources("Mission") + " " + m_Bill.num_Mission, m_AppWord);
-                }
-                else if (m_Type == BillType.INVOICE)
-                {
-                    Replace_Text("SLC_Bill_Title", m_Global_Handler.Resources_Handler.Get_Resources("Invoice") + " " + m_Bill.num_invoice, m_AppWord);
-                }
-                else if (m_Type == BillType.CREDITNOTE)
-                {
-                    Replace_Text("SLC_Bill_Title", m_Global_Handler.Resources_Handler.Get_Resources("Credit") + " " + m_Bill.num_credit, m_AppWord);
-                }
+            {/*
                 
                 //Contact informations
-                Hostess contactSel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(m_Bill.id_hostorhostess));
+                Hostess contactSel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(m_Mission.id_hostorhostess));
                 if (contactSel == null)
                 {
                     string contactNotFound = "";
@@ -436,7 +417,7 @@ namespace GeneralClasses
                 Replace_Text("SLC_Bill_Sign", m_Global_Handler.Resources_Handler.Get_Resources("TemplateSignature"), m_AppWord);
 
                 //Bill informations
-                Replace_Text("SLC_Bill_Subject", m_Bill.subject, m_AppWord);
+                Replace_Text("SLC_Bill_Subject", m_Mission.subject, m_AppWord);
                 string dateGenerated = m_Global_Handler.Resources_Handler.Get_Resources("GenerationDate") + " : ";
                 dateGenerated = dateGenerated + m_Global_Handler.DateAndTime_Handler.Treat_Date(DateTime.Today.ToString(), m_Global_Handler.Language_Handler);
                 Replace_Text("SLC_Bill_DateGenerated", dateGenerated, m_AppWord);
@@ -447,17 +428,18 @@ namespace GeneralClasses
                 else if (m_Type == BillType.INVOICE)
                 {
                     string MissionDateTermStr = m_Global_Handler.Resources_Handler.Get_Resources("TermDate");
-                    MissionDateTermStr = MissionDateTermStr + " : " + m_Global_Handler.DateAndTime_Handler.Treat_Date(m_Bill.date_invoice_due, m_Global_Handler.Language_Handler);
+                    MissionDateTermStr = MissionDateTermStr + " : " + m_Global_Handler.DateAndTime_Handler.Treat_Date(m_Mission.date_invoice_due, m_Global_Handler.Language_Handler);
                     Replace_Text("SLC_Bill_Validity", MissionDateTermStr, m_AppWord);
                 }
                 string globalDicount = "";
-                if (m_Bill.discount != 0)
+                if (m_Mission.discount != 0)
                 {
-                    globalDicount = m_Global_Handler.Resources_Handler.Get_Resources("GlobalDiscountGeneration1") + " " + m_Bill.discount + m_Global_Handler.Resources_Handler.Get_Resources("GlobalDiscountGeneration2");
+                    globalDicount = m_Global_Handler.Resources_Handler.Get_Resources("GlobalDiscountGeneration1") + " " + m_Mission.discount + m_Global_Handler.Resources_Handler.Get_Resources("GlobalDiscountGeneration2");
                 }
                 Replace_Text("SLC_Bill_GlobalDiscount", globalDicount, m_AppWord);
-
+                */
                 return true;
+
             }
             catch (Exception error)
             {
@@ -468,7 +450,6 @@ namespace GeneralClasses
 
                 return false;
             }
-
         }
 
         /// <summary>
@@ -479,10 +460,11 @@ namespace GeneralClasses
         {
             try
             {
+                /*
                 //Save doc
                 string date = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString() + "_" +
                     DateTime.Now.Hour.ToString() + "-" + DateTime.Now.Minute.ToString() + "-" + DateTime.Now.Second.ToString();
-                object fileName = m_AppDir + "\\" + m_Bill.num_Mission + "_" + m_Bill.subject + "__" + date + ".docx";
+                object fileName = m_AppDir + "\\" + m_Mission.num_Mission + "_" + m_Mission.subject + "__" + date + ".docx";
                 m_NewWordDoc.SaveAs(ref fileName, ref m_Missing, ref m_Missing, ref m_Missing, ref m_Missing,
                             ref m_Missing, ref m_Missing, ref m_Missing, ref m_Missing, ref m_Missing,
                             ref m_Missing, ref m_Missing, ref m_Missing, ref m_Missing, ref m_Missing,
@@ -502,7 +484,7 @@ namespace GeneralClasses
                 {
                     prefix = m_Global_Handler.Resources_Handler.Get_Resources("Credit");
                 }
-                string fileNamePDF = m_AppDir + "\\" + prefix + " - " + m_Bill.subject + ".pdf";
+                string fileNamePDF = m_AppDir + "\\" + prefix + " - " + m_Mission.subject + ".pdf";
                 if (m_GeneratedBillFileName != "")
                 {
                     fileNamePDF = m_GeneratedBillFileName;
@@ -522,6 +504,7 @@ namespace GeneralClasses
                 {
                     m_Global_Handler.File_Handler.Delete_File(fileName.ToString());
                 }
+                */
                 return true;
             }
             catch (Exception error)

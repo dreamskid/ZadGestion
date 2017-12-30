@@ -65,7 +65,8 @@
     <Compile Include="GeneralClasses\Images.cs" />
     <Compile Include="GeneralClasses\WordGeneration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SoftwareClasses\Billing.cs" />
+    <Compile Include="SoftwareClasses\Shift.cs" />
+    <Compile Include="SoftwareClasses\Mission.cs" />
     <Compile Include="SoftwareClasses\Client.cs" />
     <Compile Include="SoftwareClasses\Hostess.cs" />
     <Compile Include="SoftwareClasses\Settings.cs" />

@@ -858,9 +858,9 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <value>Clients</value>
     <comment>Clients</comment>
   </data>
-  <data name="CloseMission" xml:space="preserve">
-    <value>Clôturer la mission</value>
-    <comment>Clôturer la mission</comment>
+  <data name="ArchiveMission" xml:space="preserve">
+    <value>Archiver la mission</value>
+    <comment>Archiver la mission</comment>
   </data>
   <data name="AddPhotoHostOrHostess" xml:space="preserve">
     <value>Ajouter une photo</value>
@@ -1278,5 +1278,21 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
   <data name="ClientsShowInProgressSecondaryMessage" xml:space="preserve">
     <value>Déploiement des clients en cours, veuillez patienter jusqu'`a la fermeture de cette fenêtre</value>
     <comment>Message secondaire de déploiement des clients en cours</comment>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Date de fin</value>
+    <comment>Date de fin</comment>
+  </data>
+  <data name="Shifts" xml:space="preserve">
+    <value>Shifts</value>
+    <comment>Shifts</comment>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Date de début</value>
+    <comment>Date de début</comment>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+    <comment>Id</comment>
   </data>
 </root>

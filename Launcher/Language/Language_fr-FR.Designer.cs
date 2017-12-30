@@ -145,6 +145,15 @@ namespace Launcher.Language {
         /// <summary>
         ///   Looks up a localized string similar to Archiver la mission.
         /// </summary>
+        public static string ArchiveMission {
+            get {
+                return ResourceManager.GetString("ArchiveMission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Archiver la mission.
+        /// </summary>
         public static string ArchiveMissionCaption {
             get {
                 return ResourceManager.GetString("ArchiveMissionCaption", resourceCulture);
@@ -544,15 +553,6 @@ namespace Launcher.Language {
         public static string ClientsStatementExcelGenerationFailedText {
             get {
                 return ResourceManager.GetString("ClientsStatementExcelGenerationFailedText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Clôturer la mission.
-        /// </summary>
-        public static string CloseMission {
-            get {
-                return ResourceManager.GetString("CloseMission", resourceCulture);
             }
         }
         
@@ -976,6 +976,15 @@ namespace Launcher.Language {
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date de fin.
+        /// </summary>
+        public static string EndDate {
+            get {
+                return ResourceManager.GetString("EndDate", resourceCulture);
             }
         }
         
@@ -1463,6 +1472,15 @@ namespace Launcher.Language {
         public static string HostsAndHostessesStatementExcelGenerationFailedText {
             get {
                 return ResourceManager.GetString("HostsAndHostessesStatementExcelGenerationFailedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id.
+        /// </summary>
+        public static string Id {
+            get {
+                return ResourceManager.GetString("Id", resourceCulture);
             }
         }
         
@@ -2389,6 +2407,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shifts.
+        /// </summary>
+        public static string Shifts {
+            get {
+                return ResourceManager.GetString("Shifts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Taille.
         /// </summary>
         public static string Size {
@@ -2466,6 +2493,15 @@ namespace Launcher.Language {
         public static string Spanish {
             get {
                 return ResourceManager.GetString("Spanish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date de début.
+        /// </summary>
+        public static string StartDate {
+            get {
+                return ResourceManager.GetString("StartDate", resourceCulture);
             }
         }
         

@@ -28,7 +28,7 @@ namespace GeneralClasses
         /// <summary>
         /// Bill to treat
         /// </summary>
-        private static Billing m_Bill = new Billing();
+        private static Mission m_Bill = new Mission();
 
         #endregion
 

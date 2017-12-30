@@ -14,7 +14,12 @@ namespace SoftwareClasses
         /// <summary>
         /// List of missions
         /// </summary>
-        private static List<Billing> m_MissionsCollection = new List<Billing>();
+        private static List<Mission> m_MissionsCollection = new List<Mission>();
+
+        /// <summary>
+        /// List of shifts
+        /// </summary>
+        private static List<Shift> m_ShiftsCollection = new List<Shift>();
 
         /// <summary>
         /// List of host and hostesses
@@ -36,6 +41,24 @@ namespace SoftwareClasses
         #region Getter/Setter
 
         /// <summary>
+        /// Getter/Setter for the collection of missions
+        /// </summary>
+        public static List<Mission> MissionsCollection
+        {
+            get { return m_MissionsCollection; }
+            set { m_MissionsCollection = value; }
+        }
+
+        /// <summary>
+        /// Getter/Setter for the collection of shifts
+        /// </summary>
+        public static List<Shift> ShiftsCollection
+        {
+            get { return m_ShiftsCollection; }
+            set { m_ShiftsCollection = value; }
+        }
+
+        /// <summary>
         /// Getter/Setter for the collection of hosts and hostesses
         /// </summary>
         public static List<Hostess> HostsAndHotessesCollection
@@ -51,15 +74,6 @@ namespace SoftwareClasses
         {
             get { return m_ClientsCollection; }
             set { m_ClientsCollection = value; }
-        }
-
-        /// <summary>
-        /// Getter/Setter for the collection of missions
-        /// </summary>
-        public static List<Billing> MissionsCollection
-        {
-            get { return m_MissionsCollection; }
-            set { m_MissionsCollection = value; }
         }
 
         /// <summary>

@@ -846,9 +846,9 @@ User profile - Credentials - New computer</value>
     <value>Clients</value>
     <comment>Clients</comment>
   </data>
-  <data name="CloseMission" xml:space="preserve">
-    <value>Close mission</value>
-    <comment>Close mission</comment>
+  <data name="ArchiveMission" xml:space="preserve">
+    <value>Archive mission</value>
+    <comment>Archive mission</comment>
   </data>
   <data name="AddPhotoHostOrHostess" xml:space="preserve">
     <value>Add photo</value>
@@ -1266,5 +1266,21 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
   <data name="ClientsShowInProgressSecondaryMessage" xml:space="preserve">
     <value>Deployment of the in progress clients, please wait until this window closes</value>
     <comment>Secondary message of the deployment of the in progress clients</comment>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End date</value>
+    <comment>End date</comment>
+  </data>
+  <data name="Shifts" xml:space="preserve">
+    <value>Shifts</value>
+    <comment>Shifts</comment>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start date</value>
+    <comment>Start date</comment>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+    <comment>Id</comment>
   </data>
 </root>
