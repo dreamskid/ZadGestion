@@ -962,6 +962,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End time.
+        /// </summary>
+        public static string EndTime {
+            get {
+                return ResourceManager.GetString("EndTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to English.
         /// </summary>
         public static string English {
@@ -1139,6 +1148,15 @@ namespace Launcher.Language {
         public static string HostAndHostessExcelImportTemplateText {
             get {
                 return ResourceManager.GetString("HostAndHostessExcelImportTemplateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Host or hostess.
+        /// </summary>
+        public static string HostOrHostess {
+            get {
+                return ResourceManager.GetString("HostOrHostess", resourceCulture);
             }
         }
         
@@ -1665,6 +1683,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Missing date selection.
+        /// </summary>
+        public static string MissingSelectedDateErrorCaption {
+            get {
+                return ResourceManager.GetString("MissingSelectedDateErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date not selected, please verify.
+        /// </summary>
+        public static string MissingSelectedDateErrorText {
+            get {
+                return ResourceManager.GetString("MissingSelectedDateErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mission.
         /// </summary>
         public static string Mission {
@@ -1854,6 +1890,15 @@ namespace Launcher.Language {
         public static string Missions {
             get {
                 return ResourceManager.GetString("Missions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while actualizing the missions from database.
+        /// </summary>
+        public static string MissionsActualizationErrorCaption {
+            get {
+                return ResourceManager.GetString("MissionsActualizationErrorCaption", resourceCulture);
             }
         }
         
@@ -2475,6 +2520,15 @@ namespace Launcher.Language {
         public static string StartDate {
             get {
                 return ResourceManager.GetString("StartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start time.
+        /// </summary>
+        public static string StartTime {
+            get {
+                return ResourceManager.GetString("StartTime", resourceCulture);
             }
         }
         

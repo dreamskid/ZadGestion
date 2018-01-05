@@ -837,7 +837,7 @@ namespace Database
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Add_MissionToDatabase(string _Address, string _City,
-                        string _ClientName, string _Country, string _EndDate, string _Id,
+                        string _ClientName, string _Country, string _Description, string _EndDate, string _Id,
                         string _ListOfShiftsId, string _StartDate, string _State, string _ZipCode)
         {
             try
@@ -849,8 +849,8 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "INSERT INTO missions (address, city, client_name, country, end_date, id, id_list_shifts, start_date, state, zipcode)" +
-                    " VALUES (@address, @city, @client_name, @country, @end_date, @id, @id_list_shifts, @start_date, @state, @zipcode)";
+                cmd.CommandText = "INSERT INTO missions (address, city, client_name, country, date_creation, description, end_date, id, id_list_shifts, start_date, state, zipcode)" +
+                    " VALUES (@address, @city, @client_name, @country, @date_creation, @description, @end_date, @id, @id_list_shifts, @start_date, @state, @zipcode)";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@address", _Address);
@@ -858,6 +858,8 @@ namespace Database
                 cmd.Parameters.AddWithValue("@client_name", _ClientName);
                 cmd.Parameters.AddWithValue("@country", _Country);
                 cmd.Parameters.AddWithValue("@date_creation", DateTime.Today);
+                cmd.Parameters.AddWithValue("@description", _Description);
+                cmd.Parameters.AddWithValue("@end_date", _EndDate);
                 cmd.Parameters.AddWithValue("@id", _Id);
                 cmd.Parameters.AddWithValue("@id_list_shifts", _ListOfShiftsId);
                 cmd.Parameters.AddWithValue("@start_date", _StartDate);
@@ -972,7 +974,7 @@ namespace Database
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Edit_MissionToDatabase(string _Address, string _City,
-                        string _ClientName, string _Country, string _EndDate, string _Id,
+                        string _ClientName, string _Country, string _Description, string _EndDate, string _Id,
                         string _ListOfShiftsId, string _StartDate, string _State, string _ZipCode)
         {
             try
@@ -984,14 +986,16 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "UPDATE missions SET address = @address, city = @city, client_name = @client_name, country = @country, " +
-                    "country = @country, id_list_shifts = @id_list_shifts, start_date = @start_date, state = @state, zipcode = @zipcode WHERE id = @id";
+                cmd.CommandText = "UPDATE missions SET address = @address, city = @city, client_name = @client_name, country = @country, description = @description," +
+                    "end_date = @end_date, id_list_shifts = @id_list_shifts, start_date = @start_date, state = @state, zipcode = @zipcode WHERE id = @id";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@address", _Address);
                 cmd.Parameters.AddWithValue("@city", _City);
                 cmd.Parameters.AddWithValue("@client_name", _ClientName);
                 cmd.Parameters.AddWithValue("@country", _Country);
+                cmd.Parameters.AddWithValue("@description", _Description);
+                cmd.Parameters.AddWithValue("@end_date", _EndDate);
                 cmd.Parameters.AddWithValue("@id", _Id);
                 cmd.Parameters.AddWithValue("@id_list_shifts", _ListOfShiftsId);
                 cmd.Parameters.AddWithValue("@start_date", _StartDate);
@@ -1052,6 +1056,7 @@ namespace Database
                                                           client_name = row["client_name"].ToString(),
                                                           country = row["country"].ToString(),
                                                           date_creation = row["date_creation"].ToString(),
+                                                          description = row["description"].ToString(),
                                                           end_date = row["end_date"].ToString(),
                                                           id_list_shifts = row["id_list_shifts"].ToString(),
                                                           id = row["id"].ToString(),

@@ -4,13 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Imaging;
 using System.Xml;
 
 namespace WindowMission
@@ -151,6 +147,16 @@ namespace WindowMission
                 m_Cities_DocFrance = _Cities_DocFrance;
                 m_IsModification = _IsModification;
 
+                //Fill clients combo box
+                for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
+                {
+                    Client client = SoftwareObjects.ClientsCollection[iClient];
+                    if (client.archived == 0)
+                    {
+                        Cmb_Mission_Client.Items.Add(client.corporate_name);
+                    }
+                }
+
                 //Define content
                 if (m_Global_Handler != null)
                 {
@@ -163,20 +169,27 @@ namespace WindowMission
                     m_Mission = _Mission;
 
                     //Fill the fields
-                    Cmb_Mission_Client.Text = m_Mission.client_name;
                     Txt_Mission_Address.Text = m_Mission.address;
+                    Txt_Mission_Description.Text = m_Mission.description;
                     Txt_Mission_Zipcode.Text = m_Mission.zipcode;
+
                     Cmb_Mission_City.Text = m_Mission.city;
+                    Cmb_Mission_Client.Text = m_Mission.client_name;
                     Cmb_Mission_Country.Text = m_Mission.country;
                     if (Cmb_Mission_Country.SelectedItem.ToString() == "United States")
                     {
                         Lbl_Mission_State.Visibility = Visibility.Visible;
                         Txt_Mission_State.Visibility = Visibility.Visible;
                     }
+
                     DateTime startDate = Convert.ToDateTime(m_Mission.start_date);
                     Cld_Mission_StartDate.SelectedDate = startDate;
+                    Cld_Mission_StartDate.DisplayDate = startDate;
                     DateTime endDate = Convert.ToDateTime(m_Mission.end_date);
                     Cld_Mission_EndDate.SelectedDate = endDate;
+                    Cld_Mission_EndDate.DisplayDate = endDate;
+
+                    //Fill shifts
                     String[] listShifts = m_Mission.id_list_shifts.Split(';');
                     //TODO - Get shifts
                 }
@@ -210,8 +223,9 @@ namespace WindowMission
                 //Labels
                 Lbl_Mission_Address.Content = m_Global_Handler.Resources_Handler.Get_Resources("Address");
                 Lbl_Mission_City.Content = m_Global_Handler.Resources_Handler.Get_Resources("City");
-                Lbl_Mission_Client.Content = m_Global_Handler.Resources_Handler.Get_Resources("Client") + "*";
+                Lbl_Mission_Client.Content = m_Global_Handler.Resources_Handler.Get_Resources("Customer") + "*";
                 Lbl_Mission_Country.Content = m_Global_Handler.Resources_Handler.Get_Resources("Country");
+                Lbl_Mission_Description.Content = m_Global_Handler.Resources_Handler.Get_Resources("Description") + "*";
                 Lbl_Mission_EndDate.Content = m_Global_Handler.Resources_Handler.Get_Resources("EndDate");
                 Lbl_Mission_Shifts.Content = m_Global_Handler.Resources_Handler.Get_Resources("Shifts");
                 Lbl_Mission_StartDate.Content = m_Global_Handler.Resources_Handler.Get_Resources("StartDate");
@@ -252,6 +266,7 @@ namespace WindowMission
 
                 //List of controls
                 m_ListOfFields.Add(Cmb_Mission_Client);
+                m_ListOfFields.Add(Txt_Mission_Description);
             }
             catch (Exception exception)
             {
@@ -311,18 +326,25 @@ namespace WindowMission
             {
                 //Verify the fields
                 List<string> neededFieldsToVerify = new List<string>();
-                neededFieldsToVerify.Add(m_Global_Handler.Resources_Handler.Get_Resources("Client"));
+                neededFieldsToVerify.Add(m_Global_Handler.Resources_Handler.Get_Resources("Customer"));
+                neededFieldsToVerify.Add(m_Global_Handler.Resources_Handler.Get_Resources("Description"));
                 MessageBoxResult result = m_Global_Handler.Controls_Handler.Verify_BlankFields(m_ListOfFields, neededFieldsToVerify, m_Global_Handler.Resources_Handler);
                 if (result == MessageBoxResult.OK || result == MessageBoxResult.Cancel)
                 {
                     return;
                 }
-
+                if (Cld_Mission_EndDate.SelectedDate == null || Cld_Mission_StartDate.SelectedDate == null)
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorText"), 
+                        m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
                 //Fill parameters
                 m_Mission.address = Txt_Mission_Address.Text;
                 m_Mission.city = Cmb_Mission_City.Text; ;
                 m_Mission.client_name = Cmb_Mission_Client.Text;
                 m_Mission.country = Cmb_Mission_Country.Text;
+                m_Mission.description = Txt_Mission_Description.Text;
                 m_Mission.end_date = Cld_Mission_EndDate.SelectedDate.ToString();
                 m_Mission.start_date = Cld_Mission_StartDate.SelectedDate.ToString();
                 m_Mission.state = Txt_Mission_State.Text;
@@ -338,7 +360,7 @@ namespace WindowMission
 
                     //Add to internet database
                     string res = m_Database_Handler.Add_MissionToDatabase(m_Mission.address, m_Mission.city,
-                        m_Mission.client_name, m_Mission.country, m_Mission.end_date, m_Mission.id,
+                        m_Mission.client_name, m_Mission.description, m_Mission.country, m_Mission.end_date, m_Mission.id,
                         m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
 
                     //Treat the result
@@ -365,7 +387,7 @@ namespace WindowMission
                 {
                     //Edit in internet database
                     string res = m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
-                        m_Mission.client_name, m_Mission.country, m_Mission.end_date, m_Mission.id,
+                        m_Mission.client_name, m_Mission.country, m_Mission.description, m_Mission.end_date, m_Mission.id,
                         m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
 
                     //Treat the result
@@ -374,7 +396,6 @@ namespace WindowMission
                         //Close
                         m_ConfirmQuit = true;
                         this.DialogResult = true;
-
                         Close();
                     }
                     else if (res.Contains("error"))

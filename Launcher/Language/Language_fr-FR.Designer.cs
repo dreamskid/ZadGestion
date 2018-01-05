@@ -989,6 +989,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fin.
+        /// </summary>
+        public static string EndTime {
+            get {
+                return ResourceManager.GetString("EndTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Anglais.
         /// </summary>
         public static string English {
@@ -1161,11 +1170,20 @@ namespace Launcher.Language {
         
         /// <summary>
         ///   Looks up a localized string similar to Importation des hôtes et hôtesses depuis un fichier Excel, l&apos;ordre des colonnes doit être le suivant:
-        ///Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays, Numéro de paie, Ville de naissance, Date de naissance (ex : 5 Février 1982), Numéro de sécurité social, Taille, Taille pantalon, Taille haut, Pointure, Voiture (Oui/Non), Permis de conduire (Oui/Non), Anglais (Oui/Non), Allemand (Oui/Non), Espagnol (Oui/Non), Italie (Oui/ Non), Autres langues, Profil street (Oui/Non), Profil eve [rest of string was truncated]&quot;;.
+        ///Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays, Numéro de paie, Ville de naissance, Date de naissance (ex : 5 Février 1982), Numéro de sécurité social, Taille, Taille pantalon, Taille haut, Pointure, Voiture (Oui/Non), Permis de conduire (Oui/Non), Anglais (Oui/Non), Allemand (Oui/Non), Espagnol (Oui/Non), Italien (Oui/ Non), Autres langues, Profil street (Oui/Non), Profil ev [rest of string was truncated]&quot;;.
         /// </summary>
         public static string HostAndHostessExcelImportTemplateText {
             get {
                 return ResourceManager.GetString("HostAndHostessExcelImportTemplateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hôte ou hôtesse.
+        /// </summary>
+        public static string HostOrHostess {
+            get {
+                return ResourceManager.GetString("HostOrHostess", resourceCulture);
             }
         }
         
@@ -1692,6 +1710,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date non sélectionnée.
+        /// </summary>
+        public static string MissingSelectedDateErrorCaption {
+            get {
+                return ResourceManager.GetString("MissingSelectedDateErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Une date n&apos;a pas été sélectionnée, merci de vérifier..
+        /// </summary>
+        public static string MissingSelectedDateErrorText {
+            get {
+                return ResourceManager.GetString("MissingSelectedDateErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mission.
         /// </summary>
         public static string Mission {
@@ -1719,7 +1755,7 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer la mission sélectionné ?.
+        ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir supprimer la mission sélectionnée ?.
         /// </summary>
         public static string MissionConfirmDelete {
             get {
@@ -1782,7 +1818,7 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to la mission sélectionné  est dupliqué et sauvegardé dans la base de données, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
+        ///   Looks up a localized string similar to La mission sélectionnée  est dupliquée et sauvegardée dans la base de données, merci de patienter jusqu&apos;à la fermeture automatique de cette fenêtre.
         /// </summary>
         public static string MissionDuplicationSecondaryMessage {
             get {
@@ -1885,6 +1921,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Erreur lors de l&apos;actualisation des missions depuis la BDD.
+        /// </summary>
+        public static string MissionsActualizationErrorCaption {
+            get {
+                return ResourceManager.GetString("MissionsActualizationErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Êtes-vous sûr(e) de vouloir  visualiser tous les mission ?.
         /// </summary>
         public static string MissionsConfirmShowAll {
@@ -1921,7 +1966,7 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aucune mission sélectionné.
+        ///   Looks up a localized string similar to Aucune mission sélectionnée.
         /// </summary>
         public static string MissionSelectedErrorCaption {
             get {
@@ -1944,6 +1989,15 @@ namespace Launcher.Language {
         public static string MissionsExcelGenerationSecondaryMessage {
             get {
                 return ResourceManager.GetString("MissionsExcelGenerationSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string MissionshowInProgressPrincipalMessage {
+            get {
+                return ResourceManager.GetString("MissionshowInProgressPrincipalMessage", resourceCulture);
             }
         }
         
@@ -2502,6 +2556,15 @@ namespace Launcher.Language {
         public static string StartDate {
             get {
                 return ResourceManager.GetString("StartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Début.
+        /// </summary>
+        public static string StartTime {
+            get {
+                return ResourceManager.GetString("StartTime", resourceCulture);
             }
         }
         

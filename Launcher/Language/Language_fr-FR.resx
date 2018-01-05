@@ -242,12 +242,12 @@
     <comment>Téléphone</comment>
   </data>
   <data name="MissionConfirmDelete" xml:space="preserve">
-    <value>Êtes-vous sûr(e) de vouloir supprimer la mission sélectionné ?</value>
-    <comment>Texte de suppression de devis</comment>
+    <value>Êtes-vous sûr(e) de vouloir supprimer la mission sélectionnée ?</value>
+    <comment>Texte de suppression de mission</comment>
   </data>
   <data name="MissionConfirmDeleteCaption" xml:space="preserve">
     <value>Suppresion d'une mission</value>
-    <comment>Titre de suppression de devis</comment>
+    <comment>Titre de suppression de mission</comment>
   </data>
   <data name="Missions" xml:space="preserve">
     <value>Missions</value>
@@ -258,7 +258,7 @@
     <comment>Texte d'erreur de selection de la mission</comment>
   </data>
   <data name="MissionSelectedErrorCaption" xml:space="preserve">
-    <value>Aucune mission sélectionné</value>
+    <value>Aucune mission sélectionnée</value>
     <comment>Titre d'erreur de sélection de la mission</comment>
   </data>
   <data name="ResearchClient" xml:space="preserve">
@@ -690,7 +690,7 @@ Cordialement,</value>
     <comment>Message principal d'attente de duplication de la mission</comment>
   </data>
   <data name="MissionDuplicationSecondaryMessage" xml:space="preserve">
-    <value>la mission sélectionné  est dupliqué et sauvegardé dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
+    <value>La mission sélectionnée  est dupliquée et sauvegardée dans la base de données, merci de patienter jusqu'à la fermeture automatique de cette fenêtre</value>
     <comment>Message secondaire d'attente de duplication de la mission</comment>
   </data>
   <data name="Details" xml:space="preserve">
@@ -1240,7 +1240,7 @@ Profil - Identifiants - Nouveau ordinateur</value>
   </data>
   <data name="HostAndHostessExcelImportTemplateText" xml:space="preserve">
     <value>Importation des hôtes et hôtesses depuis un fichier Excel, l'ordre des colonnes doit être le suivant:
-Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays, Numéro de paie, Ville de naissance, Date de naissance (ex : 5 Février 1982), Numéro de sécurité social, Taille, Taille pantalon, Taille haut, Pointure, Voiture (Oui/Non), Permis de conduire (Oui/Non), Anglais (Oui/Non), Allemand (Oui/Non), Espagnol (Oui/Non), Italie (Oui/ Non), Autres langues, Profil street (Oui/Non), Profil event (Oui/Non), Profil permanent (Oui/Non)</value>
+Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays, Numéro de paie, Ville de naissance, Date de naissance (ex : 5 Février 1982), Numéro de sécurité social, Taille, Taille pantalon, Taille haut, Pointure, Voiture (Oui/Non), Permis de conduire (Oui/Non), Anglais (Oui/Non), Allemand (Oui/Non), Espagnol (Oui/Non), Italien (Oui/ Non), Autres langues, Profil street (Oui/Non), Profil event (Oui/Non), Profil permanent (Oui/Non)</value>
     <comment>Texte d'import Excel des hôtes et hôtesses de description du template</comment>
   </data>
   <data name="ImportHostAndHostessFromExcel" xml:space="preserve">
@@ -1294,5 +1294,32 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
   <data name="Id" xml:space="preserve">
     <value>Id</value>
     <comment>Id</comment>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>Fin</value>
+    <comment>Fin</comment>
+  </data>
+  <data name="HostOrHostess" xml:space="preserve">
+    <value>Hôte ou hôtesse</value>
+    <comment>Hôte ou hôtesse</comment>
+  </data>
+  <data name="MissingSelectedDateErrorCaption" xml:space="preserve">
+    <value>Date non sélectionnée</value>
+    <comment>Titre d'erreur de date non sélectionnée</comment>
+  </data>
+  <data name="MissingSelectedDateErrorText" xml:space="preserve">
+    <value>Une date n'a pas été sélectionnée, merci de vérifier.</value>
+    <comment>Texte d'erreur de date non sélectionnée</comment>
+  </data>
+  <data name="MissionsActualizationErrorCaption" xml:space="preserve">
+    <value>Erreur lors de l'actualisation des missions depuis la BDD</value>
+    <comment>Titre d'erreur de l'actualisation des missions depuis la BDD</comment>
+  </data>
+  <data name="MissionshowInProgressPrincipalMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Début</value>
+    <comment>Début</comment>
   </data>
 </root>

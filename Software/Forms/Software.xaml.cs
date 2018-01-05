@@ -126,10 +126,11 @@ namespace Software
             /// <summary>
             /// Constructor
             /// </summary>
-            public m_Datagrid_Mission_Shifts(string _Id, string _Date, string _StartTime, string _EndTime)
+            public m_Datagrid_Mission_Shifts(string _Id, string _Date, string _HostOrHostess, string _StartTime, string _EndTime)
             {
                 id = _Id;
                 date = _Date;
+                hostorhostess = _HostOrHostess;
                 start_time = _StartTime;
                 end_time = _EndTime;
             }
@@ -142,6 +143,10 @@ namespace Software
             /// Date
             /// </summary>
             public string date { set; get; }
+            /// <summary>
+            /// Date
+            /// </summary>
+            public string hostorhostess { set; get; }
             /// <summary>
             /// Start time
             /// </summary>
@@ -214,11 +219,12 @@ namespace Software
             /// <summary>
             /// Constructor
             /// </summary>
-            public m_Datagrid_Clients_Missions(string _Id, string _City, string _Date)
+            public m_Datagrid_Clients_Missions(string _Id, string _City, string _Date, string _Description)
             {
                 id = _Id;
                 city = _City;
                 date = _Date;
+                description = _Description;
             }
 
             /// <summary>
@@ -233,6 +239,10 @@ namespace Software
             /// Date
             /// </summary>
             public string date { set; get; }
+            /// <summary>
+            /// Description
+            /// </summary>
+            public string description { set; get; }
         }
 
         /// <summary>
@@ -543,6 +553,46 @@ namespace Software
                 Btn_Software_Missions.Content = m_Global_Handler.Resources_Handler.Get_Resources("Missions");
                 Btn_Software_Settings.Content = m_Global_Handler.Resources_Handler.Get_Resources("Settings");
 
+
+                #region Missions
+
+                //Buttons
+                Btn_Missions_Archive.Content = m_Global_Handler.Resources_Handler.Get_Resources("ArchiveMission");
+                Btn_Missions_Create.Content = m_Global_Handler.Resources_Handler.Get_Resources("CreateMission");
+                Btn_Missions_Delete.Content = m_Global_Handler.Resources_Handler.Get_Resources("DeleteMission");
+                Btn_Missions_Duplicate.Content = m_Global_Handler.Resources_Handler.Get_Resources("DuplicateMission");
+                Btn_Missions_Edit.Content = m_Global_Handler.Resources_Handler.Get_Resources("EditMission");
+                Btn_Missions_ShowArchived.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionsShowArchives");
+                Btn_Missions_ShowInProgress.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionsShowInProgress");
+                Btn_Missions_GenerateExcelStatement.Content = m_Global_Handler.Resources_Handler.Get_Resources("GenerateExcelStatement");
+
+                //Combo boxes
+                List<string> cmbMission = new List<string>();
+                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("Customer"));
+                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("City"));
+                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("CreationDate"));
+                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("ZipCode"));
+                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("Status"));
+                cmbMission.Sort();
+                foreach (string cmbMissionstr in cmbMission)
+                {
+                    Cmb_Missions_SortBy.Items.Add(cmbMissionstr);
+                }
+
+                //Datagrid
+                Datagrid_Missions_Shifts.ItemsSource = m_Datagrid_Missions_ShiftsCollection;
+
+                //Labels
+                Lbl_Missions_CreationDate.Content = m_Global_Handler.Resources_Handler.Get_Resources("CreationDate");
+                Lbl_Missions_Research.Content = m_Global_Handler.Resources_Handler.Get_Resources("ResearchMission");
+                Lbl_Missions_Sort.Content = m_Global_Handler.Resources_Handler.Get_Resources("SortBy");
+                Lbl_Missions_Image_Mission_Done.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionLegendDone");
+                Lbl_Missions_Image_Mission_Billed.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionLegendBilled");
+                Lbl_Missions_Image_Mission_Created.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionLegendCreated");
+                Lbl_Missions_Image_Mission_Declined.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionLegendDeclined");
+
+                #endregion
+
                 #region Host and hostess
 
                 //Buttons
@@ -608,47 +658,6 @@ namespace Software
                 Lbl_Clients_Sort.Content = m_Global_Handler.Resources_Handler.Get_Resources("SortBy");
 
                 #endregion
-
-                #region Missions
-
-                //Buttons
-                Btn_Missions_Archive.Content = m_Global_Handler.Resources_Handler.Get_Resources("ArchiveMission");
-                Btn_Missions_Create.Content = m_Global_Handler.Resources_Handler.Get_Resources("CreateMission");
-                Btn_Missions_Delete.Content = m_Global_Handler.Resources_Handler.Get_Resources("DeleteMission");
-                Btn_Missions_Duplicate.Content = m_Global_Handler.Resources_Handler.Get_Resources("DuplicateMission");
-                Btn_Missions_Edit.Content = m_Global_Handler.Resources_Handler.Get_Resources("EditMission");
-                Btn_Missions_ShowArchived.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionsShowArchives");
-                Btn_Missions_ShowInProgress.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionsShowInProgress");
-                Btn_Missions_GenerateExcelStatement.Content = m_Global_Handler.Resources_Handler.Get_Resources("GenerateExcelStatement");
-
-                //Combo boxes
-                List<string> cmbMission = new List<string>();
-                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("Customer"));
-                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("City"));
-                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("CreationDate"));
-                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("City"));
-                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("ZipCode"));
-                cmbMission.Add(m_Global_Handler.Resources_Handler.Get_Resources("Status"));
-                cmbMission.Sort();
-                foreach (string cmbMissionstr in cmbMission)
-                {
-                    Cmb_Missions_SortBy.Items.Add(cmbMissionstr);
-                }
-
-                //Datagrid
-                Datagrid_Missions_Shifts.ItemsSource = m_Datagrid_Missions_ShiftsCollection;
-
-                //Labels
-                Lbl_Missions_CreationDate.Content = m_Global_Handler.Resources_Handler.Get_Resources("CreationDate");
-                Lbl_Missions_Research.Content = m_Global_Handler.Resources_Handler.Get_Resources("ResearchMission");
-                Lbl_Missions_Sort.Content = m_Global_Handler.Resources_Handler.Get_Resources("SortBy");
-                Lbl_Missions_Image_Mission_Done.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionLegendDone");
-                Lbl_Missions_Image_Mission_Billed.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionLegendBilled");
-                Lbl_Missions_Image_Mission_Created.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionLegendCreated");
-                Lbl_Missions_Image_Mission_Declined.Content = m_Global_Handler.Resources_Handler.Get_Resources("MissionLegendDeclined");
-
-                #endregion
-
                 #region Settings
 
                 //Tab item
@@ -889,14 +898,13 @@ namespace Software
                     string res = m_Database_Handler.Archive_Mission(missionSel.id);
 
                     //Treat the result
-                    if (res.Contains("result"))
+                    if (res.Contains("OK"))
                     {
                         //Action
                         m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " archived");
 
                         //Actualize grid from collection
                         Actualize_GridMissionsFromDatabase();
-                        Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
 
                         //Clear the fields
                         Cmb_Missions_SortBy.Text = "";
@@ -922,16 +930,6 @@ namespace Software
 
                         return;
                     }
-                    else if (res.Contains("error"))
-                    {
-                        //Close the wait window
-                        windowWait.Stop();
-
-                        //Treatment of the error
-                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-
-                        return;
-                    }
                     else
                     {
                         //Close the wait window
@@ -953,7 +951,7 @@ namespace Software
                     string res = m_Database_Handler.Restore_Mission(missionSel.id);
 
                     //Treat the result
-                    if (res.Contains("result"))
+                    if (res.Contains("OK"))
                     {
                         //Action
                         m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " restored");
@@ -983,16 +981,6 @@ namespace Software
 
                         //Close the wait window
                         windowWait.Stop();
-
-                        return;
-                    }
-                    else if (res.Contains("error"))
-                    {
-                        //Close the wait window
-                        windowWait.Stop();
-
-                        //Treatment of the error
-                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
 
                         return;
                     }
@@ -1113,7 +1101,7 @@ namespace Software
                 //Confirm the delete
                 MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("MissionConfirmDelete"),
                     m_Global_Handler.Resources_Handler.Get_Resources("MissionConfirmDeleteCaption"),
-                    MessageBoxButton.YesNo, MessageBoxImage.Error);
+                    MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
                 if (result == MessageBoxResult.No)
                 {
                     return;
@@ -1133,7 +1121,6 @@ namespace Software
 
                     //Actualize and filter
                     Actualize_GridMissionsFromDatabase();
-                    Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
 
                     //Clear the fields
                     m_Id_SelectedMission = "-1";
@@ -1221,10 +1208,10 @@ namespace Software
 
                 //Add to database
                 string res = m_Database_Handler.Add_MissionToDatabase(newMission.address, newMission.city, newMission.client_name, newMission.country,
-                    newMission.end_date, newMission.id, newMission.id_list_shifts, newMission.start_date, newMission.state, newMission.zipcode);
+                    newMission.description, newMission.end_date, newMission.id, newMission.id_list_shifts, newMission.start_date, newMission.state, newMission.zipcode);
 
                 //Treat the result
-                if (res.Contains("result"))
+                if (res.Contains("OK"))
                 {
                     //Action
                     m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.client_name + " - From " + missionSel.start_date + " to " + missionSel.end_date + " duplicated");
@@ -1232,21 +1219,14 @@ namespace Software
                     //Add to collection
                     SoftwareObjects.MissionsCollection.Add(newMission);
 
+                    //Actualize and filter
+                    Actualize_GridMissionsFromDatabase();
+
                     //Select the new mission
                     Select_Mission(newMission);
 
                     //Close the window wait
                     windowWait.Stop();
-
-                    return;
-                }
-                else if (res.Contains("error"))
-                {
-                    //Close the wait window
-                    windowWait.Stop();
-
-                    //Treatment of the error
-                    MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
 
                     return;
                 }
@@ -1305,69 +1285,37 @@ namespace Software
                     //Open the window wait
                     windowWait.Start(m_Global_Handler, "MissionEditionPrincipalMessage", "MissionEditionSecondaryMessage");
 
-                    //Get the edited mission
-                    missionSel = missionWindow.m_Mission;
+                    //Action
+                    m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " edited");
 
-                    //Edit in database
-                    string res = m_Database_Handler.Edit_MissionToDatabase(missionSel.address, missionSel.city, missionSel.client_name, missionSel.country,
-                        missionSel.end_date, missionSel.id, missionSel.id_list_shifts, missionSel.start_date, missionSel.state, missionSel.zipcode);
+                    //State of mission
+                    MissionStatus missionstate = MissionStatus.NONE;
 
-                    //Treat the result
-                    if (res.Contains("result"))
+                    //Treatment of mission button
+                    StackPanel panel = (StackPanel)m_Button_Mission_SelectedMission.Parent;
+                    Button buttonMission = (Button)panel.Children[0];
+                    Manage_MissionButton(missionSel, buttonMission, false);
+
+                    if (missionstate == MissionStatus.DONE)
                     {
-                        //Action
-                        m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " edited");
+                        Actualize_GridMissionsFromDatabase();
+                        m_Mission_SelectedStatus = MissionStatus.DONE;
+                        Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
+                        Select_Mission(missionSel);
                     }
-                    //Error in the edit
-                    else if (res.Contains("error"))
+                    else if (missionstate == MissionStatus.DECLINED)
                     {
-                        //Close the wait window
-                        windowWait.Stop();
-
-                        //Treatment of the error
-                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-
-                        return;
+                        Actualize_GridMissionsFromDatabase();
+                        m_Mission_SelectedStatus = MissionStatus.DECLINED;
+                        Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
+                        Select_Mission(missionSel);
                     }
-                    else
-                    {
-                        //Close the wait window
-                        windowWait.Stop();
-                        //Error connecting to web site
-                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
 
-                        return;
-                    }
+                    //Close the window
+                    windowWait.Stop();
+
+                    return;
                 }
-
-                //State of mission
-                MissionStatus missionstate = MissionStatus.NONE;
-
-                //Treatment of mission button
-                StackPanel panel = (StackPanel)m_Button_Mission_SelectedMission.Parent;
-                Button buttonMission = (Button)panel.Children[0];
-                Button buttonMissionsendEmail = (Button)panel.Children[1];
-                Manage_MissionButton(missionSel, buttonMission, buttonMissionsendEmail, false, true);
-
-                if (missionstate == MissionStatus.DONE)
-                {
-                    Actualize_GridMissionsFromDatabase();
-                    m_Mission_SelectedStatus = MissionStatus.DONE;
-                    Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
-                    Select_Mission(missionSel);
-                }
-                else if (missionstate == MissionStatus.DECLINED)
-                {
-                    Actualize_GridMissionsFromDatabase();
-                    m_Mission_SelectedStatus = MissionStatus.DECLINED;
-                    Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
-                    Select_Mission(missionSel);
-                }
-
-                //Close the window
-                windowWait.Stop();
-
-                return;
             }
             catch (Exception exception)
             {
@@ -1527,7 +1475,7 @@ namespace Software
             try
             {
                 //Open the window wait
-                windowWait.Start(m_Global_Handler, "MissionshowArchivedPrincipalMessage", "MissionshowArchivedSecondaryMessage");
+                windowWait.Start(m_Global_Handler, "MissionsShowArchivedPrincipalMessage", "MissionsShowArchivedSecondaryMessage");
 
                 //Mode
                 m_Mission_IsArchiveMode = true;
@@ -1559,6 +1507,7 @@ namespace Software
                 Btn_Missions_Legend_Mission_Done.Background = m_Color_Button;
 
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
             }
             catch (Exception exception)
@@ -1584,7 +1533,7 @@ namespace Software
             try
             {
                 //Open the window wait
-                windowWait.Start(m_Global_Handler, "MissionshowInProgressPrincipalMessage", "MissionshowInProgressSecondaryMessage");
+                windowWait.Start(m_Global_Handler, "MissionsShowInProgressPrincipalMessage", "MissionsShowInProgressSecondaryMessage");
 
                 //Mode
                 m_Mission_IsArchiveMode = false;
@@ -1616,6 +1565,7 @@ namespace Software
                 Btn_Missions_Legend_Mission_Done.Background = m_Color_Button;
 
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
             }
             catch (Exception exception)
@@ -1651,7 +1601,7 @@ namespace Software
                     savedCollection.Add(mission);
                 }
                 //In progress
-                else if (m_Mission_IsArchiveMode == false && mission.archived == 1)
+                else if (m_Mission_IsArchiveMode == false && mission.archived == 0)
                 {
                     savedCollection.Add(mission);
                 }
@@ -1851,6 +1801,11 @@ namespace Software
         private void Datagrid_Missions_Shifts_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
             string columnHeader = e.Column.Header.ToString();
+            if (columnHeader == "date")
+            {
+                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("Date");
+                e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
+            }
             if (columnHeader == "hostorhostess")
             {
                 e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostess");
@@ -1890,7 +1845,7 @@ namespace Software
                     //Get the mission's id
                     Button buttonSel = (Button)sender;
                     StackPanel stackSel = (StackPanel)buttonSel.Parent;
-                    int idSel = (int)stackSel.Tag;
+                    string idSel = (string)stackSel.Tag;
 
                     //Get the mission
                     Mission missionSel = SoftwareObjects.MissionsCollection.Find(x => x.id.Equals(idSel));
@@ -3523,13 +3478,23 @@ namespace Software
                             m_Button_HostAndHostess_SelectedEmail = childButton;
                         }
                     }
-                    //Select the hostess
+                    //Select the host or hostess
                     Get_SelectedHostOrHostessFromButton();
 
-                    //Enable the buttons
-                    Btn_HostAndHostess_Archive.IsEnabled = true;
-                    Btn_HostAndHostess_Edit.IsEnabled = true;
-                    Btn_HostAndHostess_Delete.IsEnabled = true;
+                    if (m_HostsAndHostesses_IsArchiveMode == false)
+                    {
+                        //Enable the buttons
+                        Btn_HostAndHostess_Archive.IsEnabled = true;
+                        Btn_HostAndHostess_Edit.IsEnabled = true;
+                        Btn_HostAndHostess_Delete.IsEnabled = true;
+                    }
+                    else
+                    {
+                        //Enable the buttons
+                        Btn_HostAndHostess_Archive.IsEnabled = true;
+                        Btn_HostAndHostess_Edit.IsEnabled = false;
+                        Btn_HostAndHostess_Delete.IsEnabled = false;
+                    }
                 }
                 catch (Exception exception)
                 {
@@ -4843,10 +4808,20 @@ namespace Software
                     //Select the hostess
                     Get_SelectedClientFromButton();
 
-                    //Enable the buttons
-                    Btn_Clients_Archive.IsEnabled = true;
-                    Btn_Clients_Edit.IsEnabled = true;
-                    Btn_Clients_Delete.IsEnabled = true;
+                    if (m_Clients_IsArchiveMode == false)
+                    {
+                        //Enable the buttons
+                        Btn_Clients_Archive.IsEnabled = true;
+                        Btn_Clients_Edit.IsEnabled = true;
+                        Btn_Clients_Delete.IsEnabled = true;
+                    }
+                    else
+                    {
+                        //Disable the buttons
+                        Btn_Clients_Archive.IsEnabled = true;
+                        Btn_Clients_Edit.IsEnabled = false;
+                        Btn_Clients_Delete.IsEnabled = false;
+                    }
                 }
                 catch (Exception exception)
                 {
@@ -4919,27 +4894,36 @@ namespace Software
                     //Select the hostess
                     Get_SelectedClientFromButton();
 
-                    //Enable the buttons
-                    Btn_Clients_Archive.IsEnabled = true;
-                    Btn_Clients_Edit.IsEnabled = true;
-                    Btn_Clients_Delete.IsEnabled = true;
+                    if (m_Clients_IsArchiveMode == false)
+                    {
+                        //Enable the buttons
+                        Btn_Clients_Archive.IsEnabled = true;
+                        Btn_Clients_Edit.IsEnabled = true;
+                        Btn_Clients_Delete.IsEnabled = true;
 
-                    //Open the default email sender
-                    Process p = new Process();
-                    string mailto = "mailto:" + emailAddress;
-                    ProcessStartInfo ps = new ProcessStartInfo(mailto);
-                    ps.CreateNoWindow = false;
-                    ps.UseShellExecute = true;
-                    p.StartInfo = ps;
-                    p.Start();
-                    p.WaitForExit();
+                        //Open the default email sender
+                        Process p = new Process();
+                        string mailto = "mailto:" + emailAddress;
+                        ProcessStartInfo ps = new ProcessStartInfo(mailto);
+                        ps.CreateNoWindow = false;
+                        ps.UseShellExecute = true;
+                        p.StartInfo = ps;
+                        p.Start();
+                        p.WaitForExit();
 
-                    //Action
-                    m_Global_Handler.Log_Handler.WriteAction("Mail sent to " + emailAddress);
+                        //Action
+                        m_Global_Handler.Log_Handler.WriteAction("Mail sent to " + emailAddress);
+                    }
+                    else
+                    {
+                        //Disable the buttons
+                        Btn_Clients_Archive.IsEnabled = true;
+                        Btn_Clients_Edit.IsEnabled = false;
+                        Btn_Clients_Delete.IsEnabled = false;
+                    }
 
                     //Close stop window
                     windowWait.Stop();
-
                 }
                 catch (Exception exception)
                 {
@@ -5019,29 +5003,39 @@ namespace Software
                         }
                     }
 
-                    //Select the hostess
-                    Client client = Get_SelectedClientFromButton();
-
-                    //Open skype
-                    SKYPE4COMLib.Skype skype = new SKYPE4COMLib.Skype();
-                    if (skype != null)
+                    if (m_Clients_IsArchiveMode == false)
                     {
-                        if (!skype.Client.IsRunning)
+                        //Enable the buttons
+                        Btn_Clients_Archive.IsEnabled = true;
+                        Btn_Clients_Edit.IsEnabled = true;
+                        Btn_Clients_Delete.IsEnabled = true;
+
+                        //Select the hostess
+                        Client client = Get_SelectedClientFromButton();
+
+                        //Open skype
+                        SKYPE4COMLib.Skype skype = new SKYPE4COMLib.Skype();
+                        if (skype != null)
                         {
-                            skype.Client.Start(true, true);
+                            if (!skype.Client.IsRunning)
+                            {
+                                skype.Client.Start(true, true);
+                            }
+                            //skype.Attach(8, true);
+                            //skype.Client.OpenDialpadTab();
+                            //SKYPE4COMLib.Call call = skype.PlaceCall(phoneNumber);
                         }
-                        //skype.Attach(8, true);
-                        //skype.Client.OpenDialpadTab();
-                        //SKYPE4COMLib.Call call = skype.PlaceCall(phoneNumber);
+
+                        //Action
+                        m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + client.corporate_name + ", " + client.phone);
                     }
-
-                    //Enable the buttons
-                    Btn_Clients_Archive.IsEnabled = true;
-                    Btn_Clients_Edit.IsEnabled = true;
-                    Btn_Clients_Delete.IsEnabled = true;
-
-                    //Action
-                    m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + client.corporate_name + ", " + client.phone);
+                    else
+                    {
+                        //Disable the buttons
+                        Btn_Clients_Archive.IsEnabled = true;
+                        Btn_Clients_Edit.IsEnabled = false;
+                        Btn_Clients_Delete.IsEnabled = false;
+                    }
 
                     //Close stop window
                     windowWait.Stop();
@@ -5321,6 +5315,638 @@ namespace Software
                 {
                     e.Handled = false;
                 }
+            }
+        }
+
+        #endregion
+
+        #region Missions
+
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Actualize the grid of missions from the actual billing collection
+        /// </summary>
+        private void Actualize_GridMissionsFromMissionsCollection()
+        {
+            if (m_Database_Handler != null)
+            {
+                //Initialize rows and columns
+                m_GridMission_Column = 0;
+                m_GridMission_Row = 0;
+
+                //Actualization
+                try
+                {
+                    Grid_Missions_Details.Children.Clear();
+                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
+                    for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
+                    {
+                        //Get mission
+                        Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
+                        //Show archive or not
+                        if (m_Mission_IsArchiveMode == true && mission.archived == 1)
+                        {
+                            Add_MissionToGrid(mission);
+                        }
+                        if (m_Mission_IsArchiveMode == false && mission.archived == 0)
+                        {
+                            Add_MissionToGrid(mission);
+                        }
+                    }
+                }
+                catch (Exception exception)
+                {
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Actualize the grid of missions from the collection saved in the database
+        /// </summary>
+        private void Actualize_GridMissionsFromDatabase()
+        {
+            if (m_Database_Handler != null)
+            {
+                //Initialize rows and columns
+                m_GridMission_Column = 0;
+                m_GridMission_Row = 0;
+                Grid_Missions_Details.Children.Clear();
+
+                //Getting the hosts and hostesses collection  
+                try
+                {
+                    string res = m_Database_Handler.Get_MissionsFromDatabase();
+                    if (res.Contains("OK"))
+                    {
+                        //Add to grid
+                        for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+                        {
+                            Mission mission = SoftwareObjects.MissionsCollection[iMission];
+                            if (m_Mission_IsArchiveMode == true && mission.archived == 1)
+                            {
+                                Add_MissionToGrid(mission);
+                            }
+                            else if (m_Mission_IsArchiveMode == false && mission.archived == 0)
+                            {
+                                Add_MissionToGrid(mission);
+                            }
+                        }
+                    }
+                    else if (res.Contains("Error"))
+                    {
+                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("MissionsActualizationErrorCaption"),
+                            MessageBoxButton.OK, MessageBoxImage.Error);
+                        SoftwareObjects.MissionsCollection = new List<Mission>();
+                    }
+                }
+                catch (Exception exception)
+                {
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    SoftwareObjects.MissionsCollection = new List<Mission>();
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Increment on grid missions columns
+        /// </summary>
+        private int m_GridMission_Column = 0;
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Increment on grid missions rows
+        /// </summary>
+        private int m_GridMission_Row = 0;
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Add an mission to the grid, create a stack panel containing all the information of the mission
+        /// <param name="_Mission">Mission</param>
+        /// </summary>
+        private void Add_MissionToGrid(Mission _Mission)
+        {
+            try
+            {
+                //Treatment of the first row
+                Grid_Missions_Details.RowDefinitions[0].MinHeight = 350;
+
+                //Create the buttons
+                Button buttonMission = new Button();
+                Manage_MissionButton(_Mission, buttonMission, true);
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Filter the grid of missions from the actual billing collection
+        /// </summary>
+        private void Filter_GridMissionsFromMissionsCollection(MissionStatus _Status)
+        {
+            try
+            {
+                //Get selected mission
+                Mission missionSel = Get_SelectedMissionFromButton(false);
+
+                //Initialize rows and columns
+                m_GridMission_Column = 0;
+                m_GridMission_Row = 0;
+
+                //Initialize status
+                m_Mission_SelectedStatus = _Status;
+
+                //Get status
+                List<Mission> createdMissions = new List<Mission>();
+                List<Mission> generatedMissions = new List<Mission>();
+                List<Mission> sentMissions = new List<Mission>();
+                List<Mission> acceptedMissions = new List<Mission>();
+                List<Mission> declinedMissions = new List<Mission>();
+                List<Mission> billedMissions = new List<Mission>();
+                for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
+                {
+                    //TODO
+                    Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
+                    //if (mission.date_invoice_creation != "" && mission.date_invoice_creation != null && mission.date_invoice_creation != "0000-00-00")
+                    //{
+                    //    billedMissions.Add(mission);
+                    //}
+                    //else if (mission.date_Mission_accepted != "" && mission.date_Mission_accepted != null && mission.date_Mission_accepted != "0000-00-00")
+                    //{
+                    //    acceptedMissions.Add(mission);
+                    //}
+                    //else if (mission.date_Mission_declined != "" && mission.date_Mission_declined != null && mission.date_Mission_declined != "0000-00-00")
+                    //{
+                    //    declinedMissions.Add(mission);
+                    //}
+                    //else if (mission.date_Mission_sent != "" && mission.date_Mission_sent != null && mission.date_Mission_sent != "0000-00-00")
+                    //{
+                    //    sentMissions.Add(mission);
+                    //}
+                    //else if (mission.date_Mission_generated != "" && mission.date_Mission_generated != null && mission.date_Mission_generated != "0000-00-00")
+                    //{
+                    //    generatedMissions.Add(mission);
+                    //}
+                    //else
+                    //{
+                    createdMissions.Add(mission);
+                    //}
+                }
+
+                //Buttons
+                Btn_Missions_Legend_Mission_Done.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Billed.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Created.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Declined.Background = m_Color_Button;
+
+                //Get filtered collection
+                List<Mission> filteredMissions = new List<Mission>();
+                if (_Status == MissionStatus.CREATED)
+                {
+                    Btn_Missions_Legend_Mission_Created.Background = m_Color_SelectedMission;
+                    filteredMissions = createdMissions;
+                }
+                else if (_Status == MissionStatus.DECLINED)
+                {
+                    Btn_Missions_Legend_Mission_Declined.Background = m_Color_SelectedMission;
+                    filteredMissions = declinedMissions;
+                }
+                else if (_Status == MissionStatus.DONE)
+                {
+                    Btn_Missions_Legend_Mission_Done.Background = m_Color_SelectedMission;
+                    filteredMissions = acceptedMissions;
+                }
+                else if (_Status == MissionStatus.BILLED)
+                {
+                    Btn_Missions_Legend_Mission_Billed.Background = m_Color_SelectedMission;
+                    filteredMissions = billedMissions;
+                }
+                else if (_Status == MissionStatus.NONE)
+                {
+                    filteredMissions = m_Grid_Details_Missions_MissionsCollection;
+                }
+
+                //Filter
+                Grid_Missions_Details.Children.Clear();
+                Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
+                Mission missionFound = null;
+                for (int iMission = 0; iMission < filteredMissions.Count; ++iMission)
+                {
+                    //Get mission
+                    Mission mission = filteredMissions[iMission];
+                    //Show archive or not
+                    if (m_Mission_IsArchiveMode == true && mission.archived == 1)
+                    {
+                        Add_MissionToGrid(mission);
+                    }
+                    if (m_Mission_IsArchiveMode == false && mission.archived == 0)
+                    {
+                        Add_MissionToGrid(mission);
+                    }
+                    if (missionSel != null)
+                    {
+                        if (missionSel.id == mission.id)
+                        {
+                            missionFound = mission;
+                        }
+                    }
+                }
+
+                //Select mission if necessary
+                Select_Mission(missionFound);
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Get a mission from its button
+        /// <returns>Returns the mission corresponding to the button</returns>
+        /// </summary>
+        private Mission Get_SelectedMissionFromButton(bool _ShowMessage = true)
+        {
+            try
+            {
+                //Tests
+                if (m_Button_Mission_SelectedMission == null)
+                {
+                    if (_ShowMessage == true)
+                    {
+                        MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("MissionSelectedError"), m_Global_Handler.Resources_Handler.Get_Resources("MissionSelectedErrorCaption"),
+                            MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    return null;
+                }
+                StackPanel stack = (StackPanel)m_Button_Mission_SelectedMission.Parent;
+                if (stack.Tag == null)
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("MissionSelectedError"), m_Global_Handler.Resources_Handler.Get_Resources("MissionSelectedErrorCaption"),
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                    return null;
+                }
+
+                //Get the mission from the id
+                string id = (string)stack.Tag;
+                Mission mission = SoftwareObjects.MissionsCollection.Find(x => x.id.Equals(id));
+
+                return mission;
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Manage the mission button, create and add or modify
+        /// </summary>
+        private void Manage_MissionButton(Mission _Mission, Button _MissionButton, bool _Is_NewButton)
+        {
+            try
+            {
+                //Treatment of dates
+                string creationDate = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.date_creation, m_Global_Handler.Language_Handler);
+                string startDate = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.start_date, m_Global_Handler.Language_Handler);
+                string endDate = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.end_date, m_Global_Handler.Language_Handler);
+
+                //Treatment of mission button
+                TextBlock textInfo = new TextBlock();
+                Run names = new Run("\n" + _Mission.client_name);
+                names.FontSize = 15;
+                names.FontWeight = FontWeights.Bold;
+                textInfo.Inlines.Add(names);
+                textInfo.Inlines.Add(new LineBreak());
+                string[] descriptionTable = _Mission.description.Split(' ');
+                string descriptionStr = "\n";
+                for (int iWord = 0; iWord < descriptionTable.Length; ++iWord)
+                {
+                    descriptionStr = descriptionStr + descriptionTable[iWord] + " ";
+                    if (iWord % 4 == 0 && iWord != 0)
+                    {
+                        descriptionStr = descriptionStr + "\n";
+                    }
+                }
+                Run description = new Run(descriptionStr);
+                description.FontSize = 14;
+                description.FontWeight = FontWeights.Bold;
+                textInfo.Inlines.Add(description);
+                textInfo.Inlines.Add(new LineBreak());
+                Run dates = new Run("\n" + startDate + "\t" + endDate);
+                dates.FontSize = 13;
+                textInfo.Inlines.Add(dates);
+                textInfo.Inlines.Add(new LineBreak());
+                string info = _Mission.address + "\n" +
+                    _Mission.zipcode + ", " + _Mission.city + "\n" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("CreationDate") + " : " + creationDate + "\n";
+                textInfo.Inlines.Add(info);
+                textInfo.TextWrapping = TextWrapping.Wrap;
+
+                //Create stack button
+                StackPanel buttonStack = new StackPanel();
+                buttonStack.Orientation = Orientation.Horizontal;
+
+                //Create image TODO
+                Image imgMission = new Image();
+                //if (_Mission.num_invoice != null && _Mission.num_invoice != "")
+                //{
+                //    //Related invoice created
+                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Billed);
+                //}
+                //else if (_Mission.date_Mission_accepted != null && _Mission.date_Mission_accepted != "")
+                //{
+                //    //Mission accepted
+                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Accepted);
+                //}
+                //else if (_Mission.date_Mission_declined != null && _Mission.date_Mission_declined != "")
+                //{
+                //    //Mission declined
+                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Declined);
+                //}
+                //else if (_Mission.date_Mission_sent != null && _Mission.date_Mission_sent != "")
+                //{
+                //    //Mission sent by email icon
+                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Sent);
+                //}
+                //else if (_Mission.date_Mission_generated != null && _Mission.date_Mission_generated != "")
+                //{
+                //    //Mission generated
+                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Generated);
+                //}
+                //else
+                //{
+                //Default icon
+                imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Created);
+                //}
+
+                //Effect
+                System.Windows.Media.Effects.DropShadowEffect dropShadowEffect = new System.Windows.Media.Effects.DropShadowEffect();
+                Color shadowColor = new Color();
+                shadowColor.ScA = 1;
+                shadowColor.ScB = 0;
+                shadowColor.ScG = 0;
+                shadowColor.ScR = 0;
+                dropShadowEffect.Color = shadowColor;
+                dropShadowEffect.Direction = 320;
+                dropShadowEffect.ShadowDepth = 10;
+                dropShadowEffect.BlurRadius = 10;
+                dropShadowEffect.Opacity = 0.5;
+                imgMission.Effect = dropShadowEffect;
+
+                //Add image
+                buttonStack.Children.Add(imgMission);
+
+                //Add void
+                Label voidLabel = new Label();
+                voidLabel.Content = "\t";
+                buttonStack.Children.Add(voidLabel);
+
+                //Add text
+                Label buttonLabel = new Label();
+                buttonLabel.Content = textInfo;
+                buttonStack.Children.Add(buttonLabel);
+
+                //Fill button
+                _MissionButton.Content = buttonStack;
+
+                if (_Is_NewButton == true)
+                {
+                    //Create the stack panel
+                    StackPanel stackPanel = new StackPanel();
+                    stackPanel.MinHeight = 45;
+                    stackPanel.MinWidth = 145;
+                    stackPanel.Margin = new Thickness(5);
+                    stackPanel.Tag = _Mission.id;
+
+                    //Properties of the mission button
+                    _MissionButton.Padding = new Thickness(5);
+                    _MissionButton.Background = m_Color_Mission;
+                    if (_Mission.archived == 0)
+                    {
+                        //In progress mission
+                        _MissionButton.Background = m_Color_Mission;
+                    }
+                    else
+                    {
+                        //Archived mission
+                        _MissionButton.Background = m_Color_ArchivedMission;
+                    }
+                    _MissionButton.Click += IsPressed_MissionButton;
+                    stackPanel.Children.Add(_MissionButton);
+
+                    //Treatment of the increments
+                    if (m_GridMission_Column > Grid_Missions_Details.ColumnDefinitions.Count - 1)
+                    {
+                        m_GridMission_Column = 0;
+                        m_GridMission_Row += 1;
+                        RowDefinition row = new RowDefinition();
+                        row.MinHeight = 350;
+                        Grid_Missions_Details.RowDefinitions.Add(row);
+                        Grid.SetColumn(stackPanel, m_GridMission_Column);
+                        Grid.SetRow(stackPanel, m_GridMission_Row);
+                        _MissionButton.Tag = m_GridMission_Row.ToString() + "|" + m_GridMission_Column.ToString();
+                        m_GridMission_Column += 1;
+                    }
+                    else
+                    {
+                        Grid.SetColumn(stackPanel, m_GridMission_Column);
+                        Grid.SetRow(stackPanel, m_GridMission_Row);
+                        _MissionButton.Tag = m_GridMission_Row.ToString() + "|" + m_GridMission_Column.ToString();
+                        m_GridMission_Column += 1;
+                    }
+
+                    //Treatment of the Grid_Mission column
+                    Grid_Missions_Details.Children.Add(stackPanel);
+                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Select an mission
+        /// </summary>
+        private void Select_Mission(Mission _Mission)
+        {
+            try
+            {
+                //Verification
+                if (_Mission == null)
+                {
+                    return;
+                }
+
+                //Manage the button
+                Brush colorMission = m_Color_Mission;
+                Brush colorSelectedMission = m_Color_SelectedMission;
+                if (m_Mission_IsArchiveMode == true)
+                {
+                    colorMission = m_Color_ArchivedMission;
+                    colorSelectedMission = m_Color_SelectedArchivedMission;
+                }
+                if (m_Button_Mission_SelectedMission != null)
+                {
+                    m_Button_Mission_SelectedMission.Background = colorMission;
+                }
+                //Get the mission stack panel
+                double row = 0;
+                for (int iMission = 0; iMission < Grid_Missions_Details.Children.Count; ++iMission)
+                {
+                    StackPanel stackSel = (StackPanel)Grid_Missions_Details.Children[iMission];
+                    if ((string)stackSel.Tag == _Mission.id)
+                    {
+                        m_Button_Mission_SelectedMission = (Button)stackSel.Children[0];
+                        m_Button_Mission_SelectedMission.Background = colorSelectedMission;
+                        stackSel.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+                        stackSel.Arrange(new Rect(0, 0, stackSel.DesiredSize.Width, stackSel.DesiredSize.Height));
+                        row = Grid.GetRow(stackSel) * stackSel.ActualHeight;
+                        break;
+                    }
+                }
+
+                //Hostess text box
+                Txt_Missions_Client.Text = _Mission.client_name;
+                Txt_Missions_CreationDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.date_creation, m_Global_Handler.Language_Handler);
+                Txt_Missions_EndDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.end_date, m_Global_Handler.Language_Handler);
+                Txt_Missions_StartDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.start_date, m_Global_Handler.Language_Handler);
+
+                //Scroll to the selected invoice
+                Scrl_Grid_Missions_Details.ScrollToVerticalOffset(row);
+
+                //Enable the buttons
+                if (_Mission.archived == 0)
+                {
+                    Btn_Missions_Duplicate.IsEnabled = true;
+                    Btn_Missions_Edit.IsEnabled = true;
+                    Btn_Missions_Delete.IsEnabled = true;
+                    Btn_Missions_Archive.IsEnabled = true;
+                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Missions
+        /// Sort the grid of missions by status
+        /// </summary>
+        private void Sort_MissionsByStatus(List<Mission> _SavedCollection)
+        {
+            try
+            {
+                //Get status
+                List<Mission> createdMissions = new List<Mission>();
+                List<Mission> generatedMissions = new List<Mission>();
+                List<Mission> sendMissions = new List<Mission>();
+                List<Mission> acceptedMissions = new List<Mission>();
+                List<Mission> declinedMissions = new List<Mission>();
+                List<Mission> billedMissions = new List<Mission>();
+                for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
+                {
+                    //TODO
+                    //Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
+                    //if (mission.date_invoice_creation != "" && mission.date_invoice_creation != null)
+                    //{
+                    //    billedMissions.Add(mission);
+                    //}
+                    //else if (mission.date_Mission_accepted != "" && mission.date_Mission_accepted != null)
+                    //{
+                    //    acceptedMissions.Add(mission);
+                    //}
+                    //else if (mission.date_Mission_declined != "" && mission.date_Mission_declined != null)
+                    //{
+                    //    declinedMissions.Add(mission);
+                    //}
+                    //else if (mission.date_Mission_sent != "" && mission.date_Mission_sent != null)
+                    //{
+                    //    sendMissions.Add(mission);
+                    //}
+                    //else if (mission.date_Mission_generated != "" && mission.date_Mission_generated != null)
+                    //{
+                    //    generatedMissions.Add(mission);
+                    //}
+                    //else
+                    //{
+                    //    createdMissions.Add(mission);
+                    //}
+                }
+                //Sort each category by num mission
+                List<List<Mission>> listCollections = new List<List<Mission>>();
+                listCollections.Add(createdMissions);
+                listCollections.Add(generatedMissions);
+                listCollections.Add(sendMissions);
+                listCollections.Add(declinedMissions);
+                listCollections.Add(acceptedMissions);
+                listCollections.Add(billedMissions);
+                for (int iList = 0; iList < listCollections.Count; ++iList)
+                {
+                    List<Mission> list = listCollections[iList];
+                    list.Sort(delegate (Mission x, Mission y)
+                    {
+                        return x.id.CompareTo(y.id);
+                    });
+                }
+
+                //Add to grid layout collection
+                m_Grid_Details_Missions_MissionsCollection.Clear();
+                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[0]);
+                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[1]);
+                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[2]);
+                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[3]);
+                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[4]);
+                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[5]);
+
+                //Clear the grid
+                Grid_Missions_Details.Children.Clear();
+                Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
+
+                //Actualize the collection
+                Actualize_GridMissionsFromMissionsCollection();
+
+                //Select Status in the combo box
+                Cmb_Missions_SortBy.SelectedItem = m_Global_Handler.Resources_Handler.Get_Resources("Status");
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                m_Grid_Details_Missions_MissionsCollection = _SavedCollection;
+
+                //Clear the grid
+                Grid_Missions_Details.Children.Clear();
+                Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
+
+                //Actualize the collection
+                Actualize_GridMissionsFromMissionsCollection();
+
+                return;
             }
         }
 
@@ -5658,37 +6284,45 @@ namespace Software
         /// </summary>
         private Hostess Get_SelectedHostOrHostessFromButton()
         {
-            //Test
-            if (m_Button_HostAndHostess_SelectedHostAndHostess == null || m_Button_HostAndHostess_SelectedHostAndHostess.Tag == null)
+            try
             {
-                MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessSelectedError"),
-                    m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
+                //Test
+                if (m_Button_HostAndHostess_SelectedHostAndHostess == null || m_Button_HostAndHostess_SelectedHostAndHostess.Tag == null)
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessSelectedError"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    return null;
+                }
+
+                //Get the hostess from the id
+                string id = (string)m_Button_HostAndHostess_SelectedHostAndHostess.Tag;
+                Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(id));
+
+                //Actualize datagrid
+                if (hostess != null)
+                {
+                    //Fill the m_DataGrid_HostAndHostess_MissionsCollection
+                    m_DataGrid_HostAndHostess_MissionsCollection.Clear();
+                    for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+                    {
+                        Mission missionSel = SoftwareObjects.MissionsCollection[iMission];
+                        if (missionSel.id == hostess.id) //TODO
+                        {
+                            m_Datagrid_HostAndHostess_Missions data = new m_Datagrid_HostAndHostess_Missions(missionSel.id, missionSel.client_name, missionSel.city, missionSel.start_date);
+                            m_DataGrid_HostAndHostess_MissionsCollection.Add(data);
+                        }
+                    }
+                    DataGrid_HostAndHostess_Missions.Items.Refresh();
+                }
+
+                //Return the hostess
+                return hostess;
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return null;
             }
-
-            //Get the hostess from the id
-            string id = (string)m_Button_HostAndHostess_SelectedHostAndHostess.Tag;
-            Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(id));
-
-            //Actualize datagrid
-            if (hostess != null)
-            {
-                //Fill the m_DataGrid_HostAndHostess_MissionsCollection
-                m_DataGrid_HostAndHostess_MissionsCollection.Clear();
-                for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
-                {
-                    Mission missionSel = SoftwareObjects.MissionsCollection[iMission];
-                    if (missionSel.id == hostess.id) //TODO
-                    {
-                        m_Datagrid_HostAndHostess_Missions data = new m_Datagrid_HostAndHostess_Missions(missionSel.id, missionSel.client_name, missionSel.city, missionSel.start_date);
-                        m_DataGrid_HostAndHostess_MissionsCollection.Add(data);
-                    }
-                }
-                DataGrid_HostAndHostess_Missions.Items.Refresh();
-            }
-
-            //Return the hostess
-            return hostess;
         }
 
         /// <summary>
@@ -6004,628 +6638,44 @@ namespace Software
         /// </summary>
         private Client Get_SelectedClientFromButton()
         {
-            //Test
-            if (m_Button_Client_SelectedClient == null || m_Button_Client_SelectedClient.Tag == null)
+            try
             {
-                MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ClientSelectedError"),
-                    m_Global_Handler.Resources_Handler.Get_Resources("ClientSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
-                return null;
-            }
-
-            //Get the hostess from the id
-            string id = (string)m_Button_Client_SelectedClient.Tag;
-            Client client = SoftwareObjects.ClientsCollection.Find(x => x.id.Equals(id));
-
-            //Actualize datagrid
-            if (client != null)
-            {
-                //Fill the m_DataGrid_Client_MissionsCollection
-                m_DataGrid_Clients_MissionsCollection.Clear();
-                for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+                //Test
+                if (m_Button_Client_SelectedClient == null || m_Button_Client_SelectedClient.Tag == null)
                 {
-                    Mission missionSel = SoftwareObjects.MissionsCollection[iMission];
-                    if (missionSel.id == client.id) //TODO
-                    {
-                        m_Datagrid_Clients_Missions data = new m_Datagrid_Clients_Missions(missionSel.id, missionSel.city, missionSel.start_date);
-                        m_DataGrid_Clients_MissionsCollection.Add(data);
-                    }
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ClientSelectedError"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("ClientSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    return null;
                 }
-                DataGrid_Clients_Missions.Items.Refresh();
-            }
 
-            //Return the client
-            return client;
-        }
+                //Get the hostess from the id
+                string id = (string)m_Button_Client_SelectedClient.Tag;
+                Client client = SoftwareObjects.ClientsCollection.Find(x => x.id.Equals(id));
 
-        #endregion
-
-        #region Missions
-
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Actualize the grid of missions from the actual billing collection
-        /// </summary>
-        private void Actualize_GridMissionsFromMissionsCollection()
-        {
-            if (m_Database_Handler != null)
-            {
-                //Initialize rows and columns
-                m_GridMission_Column = 0;
-                m_GridMission_Row = 0;
-
-                //Actualization
-                try
+                //Actualize datagrid
+                if (client != null)
                 {
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-                    for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
-                    {
-                        //Get mission
-                        Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
-                        //Show archive or not
-                        if (m_Mission_IsArchiveMode == true && mission.archived == 1)
-                        {
-                            Add_MissionToGrid(mission);
-                        }
-                        if (m_Mission_IsArchiveMode == false && mission.archived == 0)
-                        {
-                            Add_MissionToGrid(mission);
-                        }
-                    }
-                }
-                catch (Exception exception)
-                {
-                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                    return;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Actualize the grid of missions from the collection saved in the database
-        /// </summary>
-        private void Actualize_GridMissionsFromDatabase()
-        {
-            if (m_Database_Handler != null)
-            {
-                //Initialize rows and columns
-                m_GridMission_Column = 0;
-                m_GridMission_Row = 0;
-                Grid_Missions_Details.Children.Clear();
-
-                //Actualization
-                try
-                {
-                    //Add to grid
+                    //Fill the m_DataGrid_Client_MissionsCollection
+                    m_DataGrid_Clients_MissionsCollection.Clear();
                     for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
                     {
-                        Mission Mission = SoftwareObjects.MissionsCollection[iMission];
-                        if (m_Mission_IsArchiveMode == true && Mission.archived == 1)
+                        Mission missionSel = SoftwareObjects.MissionsCollection[iMission];
+                        if (missionSel.id == client.id) //TODO
                         {
-                            Add_MissionToGrid(Mission);
-                        }
-                        else if (m_Mission_IsArchiveMode == false && Mission.archived == 0)
-                        {
-                            Add_MissionToGrid(Mission);
+                            m_Datagrid_Clients_Missions data = new m_Datagrid_Clients_Missions(missionSel.id, missionSel.city, missionSel.start_date, missionSel.description);
+                            m_DataGrid_Clients_MissionsCollection.Add(data);
                         }
                     }
+                    DataGrid_Clients_Missions.Items.Refresh();
                 }
-                catch (Exception exception)
-                {
-                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                    SoftwareObjects.MissionsCollection = new List<Mission>();
-                    return;
-                }
-            }
-        }
 
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Increment on grid missions columns
-        /// </summary>
-        private int m_GridMission_Column = 0;
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Increment on grid missions rows
-        /// </summary>
-        private int m_GridMission_Row = 0;
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Add an mission to the grid, create a stack panel containing all the information of the mission
-        /// <param name="_Mission">Mission</param>
-        /// </summary>
-        private void Add_MissionToGrid(Mission _Mission)
-        {
-            try
-            {
-                //Treatment of the first row
-                Grid_Missions_Details.RowDefinitions[0].MinHeight = 350;
-
-                //Create the buttons
-                Button buttonMission = new Button();
-                Button buttonMissionsendMail = new Button();
-                Manage_MissionButton(_Mission, buttonMission, buttonMissionsendMail, true, false);
+                //Return the client
+                return client;
             }
             catch (Exception exception)
             {
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                return;
-            }
-        }
-
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Filter the grid of missions from the actual billing collection
-        /// </summary>
-        private void Filter_GridMissionsFromMissionsCollection(MissionStatus _Status)
-        {
-            try
-            {
-                //Get selected mission
-                Mission missionSel = Get_SelectedMissionFromButton(false);
-
-                //Initialize rows and columns
-                m_GridMission_Column = 0;
-                m_GridMission_Row = 0;
-
-                //Initialize status
-                m_Mission_SelectedStatus = _Status;
-
-                //Get status
-                List<Mission> createdMissions = new List<Mission>();
-                List<Mission> generatedMissions = new List<Mission>();
-                List<Mission> sentMissions = new List<Mission>();
-                List<Mission> acceptedMissions = new List<Mission>();
-                List<Mission> declinedMissions = new List<Mission>();
-                List<Mission> billedMissions = new List<Mission>();
-                for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
-                {
-                    //TODO
-                    //Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
-                    //if (mission.date_invoice_creation != "" && mission.date_invoice_creation != null && mission.date_invoice_creation != "0000-00-00")
-                    //{
-                    //    billedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_accepted != "" && mission.date_Mission_accepted != null && mission.date_Mission_accepted != "0000-00-00")
-                    //{
-                    //    acceptedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_declined != "" && mission.date_Mission_declined != null && mission.date_Mission_declined != "0000-00-00")
-                    //{
-                    //    declinedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_sent != "" && mission.date_Mission_sent != null && mission.date_Mission_sent != "0000-00-00")
-                    //{
-                    //    sentMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_generated != "" && mission.date_Mission_generated != null && mission.date_Mission_generated != "0000-00-00")
-                    //{
-                    //    generatedMissions.Add(mission);
-                    //}
-                    //else
-                    //{
-                    //    createdMissions.Add(mission);
-                    //}
-                }
-
-                //Buttons
-                Btn_Missions_Legend_Mission_Done.Background = m_Color_Button;
-                Btn_Missions_Legend_Mission_Billed.Background = m_Color_Button;
-                Btn_Missions_Legend_Mission_Created.Background = m_Color_Button;
-                Btn_Missions_Legend_Mission_Declined.Background = m_Color_Button;
-
-                //Get filtered collection
-                List<Mission> filteredMissions = new List<Mission>();
-                if (_Status == MissionStatus.CREATED)
-                {
-                    Btn_Missions_Legend_Mission_Created.Background = m_Color_SelectedMission;
-                    filteredMissions = createdMissions;
-                }
-                else if (_Status == MissionStatus.DECLINED)
-                {
-                    Btn_Missions_Legend_Mission_Declined.Background = m_Color_SelectedMission;
-                    filteredMissions = declinedMissions;
-                }
-                else if (_Status == MissionStatus.DONE)
-                {
-                    Btn_Missions_Legend_Mission_Done.Background = m_Color_SelectedMission;
-                    filteredMissions = acceptedMissions;
-                }
-                else if (_Status == MissionStatus.BILLED)
-                {
-                    Btn_Missions_Legend_Mission_Billed.Background = m_Color_SelectedMission;
-                    filteredMissions = billedMissions;
-                }
-                else if (_Status == MissionStatus.NONE)
-                {
-                    filteredMissions = m_Grid_Details_Missions_MissionsCollection;
-                }
-
-                //Filter
-                Grid_Missions_Details.Children.Clear();
-                Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-                Mission missionFound = null;
-                for (int iMission = 0; iMission < filteredMissions.Count; ++iMission)
-                {
-                    //Get mission
-                    Mission mission = filteredMissions[iMission];
-                    //Show archive or not
-                    if (m_Mission_IsArchiveMode == true && mission.archived == 1)
-                    {
-                        Add_MissionToGrid(mission);
-                    }
-                    if (m_Mission_IsArchiveMode == false && mission.archived == 0)
-                    {
-                        Add_MissionToGrid(mission);
-                    }
-                    if (missionSel != null)
-                    {
-                        if (missionSel.id == mission.id)
-                        {
-                            missionFound = mission;
-                        }
-                    }
-                }
-
-                //Select mission if necessary
-                Select_Mission(missionFound);
-            }
-            catch (Exception exception)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                return;
-            }
-        }
-
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Get an mission from its button
-        /// <returns>Returns the mission corresponding to the button</returns>
-        /// </summary>
-        private Mission Get_SelectedMissionFromButton(bool _ShowMessage = true)
-        {
-            //Tests
-            if (m_Button_Mission_SelectedMission == null)
-            {
-                if (_ShowMessage == true)
-                {
-                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("missionSelectedError"), m_Global_Handler.Resources_Handler.Get_Resources("missionSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
-                }
                 return null;
-            }
-            StackPanel stack = (StackPanel)m_Button_Mission_SelectedMission.Parent;
-            if (stack.Tag == null)
-            {
-                MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("missionSelectedError"), m_Global_Handler.Resources_Handler.Get_Resources("missionSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
-                return null;
-            }
-
-            //Get the mission from the id
-            int id = (int)stack.Tag;
-            Mission mission = SoftwareObjects.MissionsCollection.Find(x => x.id.Equals(id));
-
-            return mission;
-        }
-
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Manage the mission button, create and add or modify
-        /// </summary>
-        private void Manage_MissionButton(Mission _Mission, Button _MissionButton, Button _MissionsendMailButton, bool _Is_NewButton, bool _Is_Edition)
-        {
-            try
-            {
-                //Treatment of the creation date
-                string creationDate = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.date_creation, m_Global_Handler.Language_Handler);
-
-                //Treatment of mission button
-                TextBlock textInfo = new TextBlock();
-                Run names = new Run("\n" + _Mission.client_name);
-                names.FontSize = 15;
-                names.FontWeight = FontWeights.Bold;
-                textInfo.Inlines.Add(names);
-                //textInfo.Inlines.Add(new LineBreak());
-                //textInfo.Inlines.Add(company);
-                textInfo.Inlines.Add(new LineBreak());
-                Run dates = new Run(_Mission.start_date + "\t" + _Mission.end_date);
-                dates.FontSize = 13.5;
-                dates.FontWeight = FontWeights.Bold;
-                textInfo.Inlines.Add(dates);
-                textInfo.Inlines.Add(new LineBreak());
-                string info = _Mission.address + "\n" +
-                    _Mission.zipcode + ", " + _Mission.city + "\n" +
-                    m_Global_Handler.Resources_Handler.Get_Resources("CreationDate") + " : " + creationDate + "\n";
-                textInfo.Inlines.Add(info);
-
-                //Create stack button
-                StackPanel buttonStack = new StackPanel();
-                buttonStack.Orientation = Orientation.Horizontal;
-
-                //Create image TODO
-                Image imgMission = new Image();
-                //if (_Mission.num_invoice != null && _Mission.num_invoice != "")
-                //{
-                //    //Related invoice created
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Billed);
-                //}
-                //else if (_Mission.date_Mission_accepted != null && _Mission.date_Mission_accepted != "")
-                //{
-                //    //Mission accepted
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Accepted);
-                //}
-                //else if (_Mission.date_Mission_declined != null && _Mission.date_Mission_declined != "")
-                //{
-                //    //Mission declined
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Declined);
-                //}
-                //else if (_Mission.date_Mission_sent != null && _Mission.date_Mission_sent != "")
-                //{
-                //    //Mission sent by email icon
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Sent);
-                //}
-                //else if (_Mission.date_Mission_generated != null && _Mission.date_Mission_generated != "")
-                //{
-                //    //Mission generated
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Generated);
-                //}
-                //else
-                //{
-                //Default icon
-                imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Created);
-                //}
-
-                //Effect
-                System.Windows.Media.Effects.DropShadowEffect dropShadowEffect = new System.Windows.Media.Effects.DropShadowEffect();
-                Color shadowColor = new Color();
-                shadowColor.ScA = 1;
-                shadowColor.ScB = 0;
-                shadowColor.ScG = 0;
-                shadowColor.ScR = 0;
-                dropShadowEffect.Color = shadowColor;
-                dropShadowEffect.Direction = 320;
-                dropShadowEffect.ShadowDepth = 10;
-                dropShadowEffect.BlurRadius = 10;
-                dropShadowEffect.Opacity = 0.5;
-                imgMission.Effect = dropShadowEffect;
-
-                //Add image
-                buttonStack.Children.Add(imgMission);
-
-                //Add void
-                Label voidLabel = new Label();
-                voidLabel.Content = "\t";
-                buttonStack.Children.Add(voidLabel);
-
-                //Add text
-                Label buttonLabel = new Label();
-                buttonLabel.Content = textInfo;
-                buttonStack.Children.Add(buttonLabel);
-
-                //Fill button
-                _MissionButton.Content = buttonStack;
-
-                if (_Is_NewButton == true)
-                {
-                    //Create the stack panel
-                    StackPanel stackPanel = new StackPanel();
-                    stackPanel.MinHeight = 45;
-                    stackPanel.MinWidth = 145;
-                    stackPanel.Margin = new Thickness(5);
-                    stackPanel.Tag = _Mission.id;
-
-                    //Properties of the mission button
-                    _MissionButton.Padding = new Thickness(5);
-                    _MissionButton.Background = m_Color_Mission;
-                    if (_Mission.archived == 1)
-                    {
-                        //In progress mission
-                        _MissionButton.Background = m_Color_Mission;
-                    }
-                    else
-                    {
-                        //Archived mission
-                        _MissionButton.Background = m_Color_ArchivedMission;
-                    }
-                    _MissionButton.Click += IsPressed_MissionButton;
-                    stackPanel.Children.Add(_MissionButton);
-
-                    //Treatment of the increments
-                    if (m_GridMission_Column > Grid_Missions_Details.ColumnDefinitions.Count - 1)
-                    {
-                        m_GridMission_Column = 0;
-                        m_GridMission_Row += 1;
-                        RowDefinition row = new RowDefinition();
-                        row.MinHeight = 350;
-                        Grid_Missions_Details.RowDefinitions.Add(row);
-                        Grid.SetColumn(stackPanel, m_GridMission_Column);
-                        Grid.SetRow(stackPanel, m_GridMission_Row);
-                        _MissionButton.Tag = m_GridMission_Row.ToString() + "|" + m_GridMission_Column.ToString();
-                        m_GridMission_Column += 1;
-                    }
-                    else
-                    {
-                        Grid.SetColumn(stackPanel, m_GridMission_Column);
-                        Grid.SetRow(stackPanel, m_GridMission_Row);
-                        _MissionButton.Tag = m_GridMission_Row.ToString() + "|" + m_GridMission_Column.ToString();
-                        m_GridMission_Column += 1;
-                    }
-
-                    //Treatment of the Grid_Mission column
-                    Grid_Missions_Details.Children.Add(stackPanel);
-                }
-            }
-            catch (Exception exception)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                return;
-            }
-        }
-
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Select an mission
-        /// </summary>
-        private void Select_Mission(Mission _Mission)
-        {
-            try
-            {
-                //Manage the button
-                Brush colorMission = m_Color_Mission;
-                Brush colorSelectedMission = m_Color_SelectedMission;
-                if (m_Mission_IsArchiveMode == true)
-                {
-                    colorMission = m_Color_ArchivedMission;
-                    colorSelectedMission = m_Color_SelectedArchivedMission;
-                }
-                if (m_Button_Mission_SelectedMission != null)
-                {
-                    m_Button_Mission_SelectedMission.Background = colorMission;
-                }
-                //Get the mission stack panel
-                double row = 0;
-                for (int iMission = 0; iMission < Grid_Missions_Details.Children.Count; ++iMission)
-                {
-                    StackPanel stackSel = (StackPanel)Grid_Missions_Details.Children[iMission];
-                    if ((string)stackSel.Tag == _Mission.id)
-                    {
-                        m_Button_Mission_SelectedMission = (Button)stackSel.Children[0];
-                        m_Button_Mission_SelectedMission.Background = colorSelectedMission;
-                        stackSel.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
-                        stackSel.Arrange(new Rect(0, 0, stackSel.DesiredSize.Width, stackSel.DesiredSize.Height));
-                        row = Grid.GetRow(stackSel) * stackSel.ActualHeight;
-                        break;
-                    }
-                }
-
-                //Hostess text box
-                Txt_Missions_Client.Text = _Mission.client_name;
-                Txt_Missions_CreationDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.date_creation, m_Global_Handler.Language_Handler);
-                Txt_Missions_EndDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.end_date, m_Global_Handler.Language_Handler);
-                Txt_Missions_StartDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.start_date, m_Global_Handler.Language_Handler);
-
-                //Scroll to the selected invoice
-                Scrl_Grid_Missions_Details.ScrollToVerticalOffset(row);
-
-                //Enable the buttons
-                if (_Mission.archived == 0)
-                {
-                    Btn_Missions_Duplicate.IsEnabled = true;
-                    Btn_Missions_Edit.IsEnabled = true;
-                    Btn_Missions_Delete.IsEnabled = true;
-                    Btn_Missions_Archive.IsEnabled = true;
-                }
-            }
-            catch (Exception exception)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                return;
-            }
-        }
-
-        /// <summary>
-        /// Functions
-        /// Missions
-        /// Sort the grid of missions by status
-        /// </summary>
-        private void Sort_MissionsByStatus(List<Mission> _SavedCollection)
-        {
-            try
-            {
-                //Get status
-                List<Mission> createdMissions = new List<Mission>();
-                List<Mission> generatedMissions = new List<Mission>();
-                List<Mission> sendMissions = new List<Mission>();
-                List<Mission> acceptedMissions = new List<Mission>();
-                List<Mission> declinedMissions = new List<Mission>();
-                List<Mission> billedMissions = new List<Mission>();
-                for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
-                {
-                    //TODO
-                    //Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
-                    //if (mission.date_invoice_creation != "" && mission.date_invoice_creation != null)
-                    //{
-                    //    billedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_accepted != "" && mission.date_Mission_accepted != null)
-                    //{
-                    //    acceptedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_declined != "" && mission.date_Mission_declined != null)
-                    //{
-                    //    declinedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_sent != "" && mission.date_Mission_sent != null)
-                    //{
-                    //    sendMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_generated != "" && mission.date_Mission_generated != null)
-                    //{
-                    //    generatedMissions.Add(mission);
-                    //}
-                    //else
-                    //{
-                    //    createdMissions.Add(mission);
-                    //}
-                }
-                //Sort each category by num mission
-                List<List<Mission>> listCollections = new List<List<Mission>>();
-                listCollections.Add(createdMissions);
-                listCollections.Add(generatedMissions);
-                listCollections.Add(sendMissions);
-                listCollections.Add(declinedMissions);
-                listCollections.Add(acceptedMissions);
-                listCollections.Add(billedMissions);
-                for (int iList = 0; iList < listCollections.Count; ++iList)
-                {
-                    List<Mission> list = listCollections[iList];
-                    list.Sort(delegate (Mission x, Mission y)
-                    {
-                        return x.id.CompareTo(y.id);
-                    });
-                }
-
-                //Add to grid layout collection
-                m_Grid_Details_Missions_MissionsCollection.Clear();
-                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[0]);
-                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[1]);
-                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[2]);
-                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[3]);
-                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[4]);
-                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[5]);
-
-                //Clear the grid
-                Grid_Missions_Details.Children.Clear();
-                Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-
-                //Actualize the collection
-                Actualize_GridMissionsFromMissionsCollection();
-
-                //Select Status in the combo box
-                Cmb_Missions_SortBy.SelectedItem = m_Global_Handler.Resources_Handler.Get_Resources("Status");
-            }
-            catch (Exception exception)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                m_Grid_Details_Missions_MissionsCollection = _SavedCollection;
-
-                //Clear the grid
-                Grid_Missions_Details.Children.Clear();
-                Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-
-                //Actualize the collection
-                Actualize_GridMissionsFromMissionsCollection();
-
-                return;
             }
         }
 

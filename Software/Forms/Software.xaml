@@ -3,7 +3,14 @@
         xmlns:ctr="clr-namespace:Software"
         xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         x:Name="Main_Software" x:Class="Software.MainWindow_Software"
-        Title="ZadGestion" Height="879" Width="1029" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="ThreeDBorderWindow" Closing="Software_Window_Closing_Event" Background="Black">
+        Title="ZadGestion" Height="879" Width="1029" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="ThreeDBorderWindow" Closing="Software_Window_Closing_Event">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FFFF8CC2" Offset="0"/>
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="Black" Offset="0.41"/>
+        </LinearGradientBrush>
+    </Window.Background>
 
     <!--Window_Properties-->
     <Window.BorderBrush>
@@ -38,7 +45,7 @@
         <!--Missions-->
         <Grid x:Name="Grid_Missions" Margin="10,101,10,10" Visibility="Visible">
             <!--Scroll viewer-->
-            <ScrollViewer x:Name="Scrl_Grid_Missions_Details" Margin="452,40,10,10" CanContentScroll="True">
+            <ScrollViewer x:Name="Scrl_Grid_Missions_Details" Margin="452,40,10,40" CanContentScroll="True">
                 <Grid x:Name="Grid_Missions_Details" MinWidth="300" Visibility="Visible" MinHeight="120">
                     <Grid.RowDefinitions>
                         <RowDefinition MinHeight="50" MaxHeight="120"/>
@@ -57,7 +64,7 @@
             <Button x:Name="Btn_Missions_Delete" HorizontalAlignment="Left" Height="33" Margin="10,0,0,10" Width="437" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" VerticalAlignment="Bottom" Click="Btn_Missions_Delete_Click" TabIndex="8" IsEnabled="False" Background="#FFF03535" Foreground="White"/>
             <Button x:Name="Btn_Missions_Duplicate" HorizontalAlignment="Left" Height="33"  Margin="62,0,0,132.333" Width="290" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="DuplicateMission" VerticalAlignment="Bottom" TabIndex="3" Click="Btn_Missions_Duplicate_Click" IsEnabled="False" Background="#FF6F0178" Foreground="White"/>
             <Button x:Name="Btn_Missions_Edit" HorizontalAlignment="Left" Height="33" Margin="62,0,0,94.333" Width="290" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="EditMission" VerticalAlignment="Bottom" Click="Btn_Missions_Edit_Click" TabIndex="4" IsEnabled="False"  Background="#FF6F0178" Foreground="White"/>
-            <Button x:Name="Btn_Missions_GenerateExcelStatement" Height="25" HorizontalAlignment="Left" Margin="452,10,0,0" Width="204" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="GenerateExcelStatement" Click="Btn_Missions_GenerateExcelStatement_Click" TabIndex="10" VerticalAlignment="Top" Background="#FF6F0178" Foreground="White"/>
+            <Button x:Name="Btn_Missions_GenerateExcelStatement" Height="25" HorizontalAlignment="Left" Margin="452,0,0,10" Width="204" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="GenerateExcelStatement" Click="Btn_Missions_GenerateExcelStatement_Click" TabIndex="10" VerticalAlignment="Bottom" Background="#FF6F0178" Foreground="White"/>
             <Button x:Name="Btn_Missions_ShowArchived" HorizontalAlignment="Right" Height="25" Margin="0,10,10,0" Width="143" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="ArchivedMissions" Click="Btn_Missions_ShowArchived_Click" VerticalAlignment="Top" TabIndex="12" Background="#FF595C61" Foreground="White"/>
             <Button x:Name="Btn_Missions_ShowInProgress" HorizontalAlignment="Right" Height="25" Margin="0,10,158,0" Width="182" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="InProgressMissions" Click="Btn_Missions_ShowInProgress_Click" VerticalAlignment="Top" TabIndex="11" Background="#FF6F0178" Foreground="White"/>
 
@@ -129,7 +136,7 @@
             <!--Buttons-->
             <Button x:Name="Btn_HostAndHostess_Archive" HorizontalAlignment="Left" Height="33" Margin="35,0,0,48" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Archive" VerticalAlignment="Bottom" Click="Btn_HostAndHostess_Archive_Click" TabIndex="7" IsEnabled="False" Background="#FF595C61" Foreground="White"/>
             <Button x:Name="Btn_HostAndHostess_Create" HorizontalAlignment="Left" Height="33" Margin="35,65,0,0" VerticalAlignment="Top" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Create" Click="Btn_HostAndHostess_Create_Click" Background="#FF6F0178" Foreground="White"/>
-            <Button x:Name="Btn_HostAndHostess_Delete" HorizontalAlignment="Left" Height="33" Margin="35,0,0,10" VerticalAlignment="Bottom" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" Click="Btn_HostAndHostess_Delete_Click" Background="#FFF03535" IsEnabled="False" Foreground="White"/>
+            <Button x:Name="Btn_HostAndHostess_Delete" HorizontalAlignment="Left" Height="33" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="437" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" Click="Btn_HostAndHostess_Delete_Click" Background="#FFF03535" IsEnabled="False" Foreground="White"/>
             <Button x:Name="Btn_HostAndHostess_Edit" HorizontalAlignment="Left" Height="33" Margin="35,0,0,86" VerticalAlignment="Bottom" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Edit" Click="Btn_HostAndHostess_Edit_Click" Background="#FF6F0178" IsEnabled="False" Foreground="White"/>
             <Button x:Name="Btn_HostAndHostess_GenerateExcelStatement" Height="25" HorizontalAlignment="Left" Margin="452,0,0,10" Width="204" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="GenerateExcelStatement" Click="Btn_HostAndHostess_GenerateExcelStatement_Click" TabIndex="10" VerticalAlignment="Bottom" Background="#FF6F0178" Foreground="White"/>
             <Button x:Name="Btn_HostAndHostess_Import" Height="25" HorizontalAlignment="Left" Margin="661,0,0,10" Width="204" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Import" Click="Btn_HostAndHostess_Import_Click" TabIndex="10" VerticalAlignment="Bottom" Background="#FF6F0178" Foreground="White"/>
@@ -195,7 +202,7 @@
             <!--Buttons-->
             <Button x:Name="Btn_Clients_Archive" HorizontalAlignment="Left" Height="33" Margin="35,0,0,48" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Archive" VerticalAlignment="Bottom" Click="Btn_Clients_Archive_Click" TabIndex="7" IsEnabled="False" Background="#FF595C61" Foreground="White"/>
             <Button x:Name="Btn_Clients_Create" HorizontalAlignment="Left" Height="33" Margin="35,65,0,0" VerticalAlignment="Top" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Create" Click="Btn_Clients_Create_Click" Background="#FF6F0178" Foreground="White"/>
-            <Button x:Name="Btn_Clients_Delete" HorizontalAlignment="Left" Height="33" Margin="35,0,0,10" VerticalAlignment="Bottom" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" Click="Btn_Clients_Delete_Click" Background="#FFF03535" IsEnabled="False" Foreground="White"/>
+            <Button x:Name="Btn_Clients_Delete" HorizontalAlignment="Left" Height="33" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="437" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" Click="Btn_Clients_Delete_Click" Background="#FFF03535" IsEnabled="False" Foreground="White"/>
             <Button x:Name="Btn_Clients_Edit" HorizontalAlignment="Left" Height="33" Margin="35,0,0,86" VerticalAlignment="Bottom" Width="355" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Edit" Click="Btn_Clients_Edit_Click" Background="#FF6F0178" IsEnabled="False" Foreground="White"/>
             <Button x:Name="Btn_Clients_GenerateExcelStatement" Height="25" HorizontalAlignment="Left" Margin="452,0,0,10" Width="204" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="GenerateExcelStatement" Click="Btn_Clients_GenerateExcelStatement_Click" TabIndex="10" VerticalAlignment="Bottom" Background="#FF6F0178" Foreground="White"/>
             <Button x:Name="Btn_Clients_ShowArchived" HorizontalAlignment="Right" Height="25" Margin="0,10,10,0" Width="143" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="ArchivedClients" Click="Btn_Clients_ShowArchived_Click" VerticalAlignment="Top" TabIndex="12" Background="#FF595C61" Foreground="White"/>

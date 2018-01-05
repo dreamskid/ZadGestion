@@ -33,6 +33,7 @@
             city = _MissionToCopy.city;
             client_name = _MissionToCopy.client_name;
             country = _MissionToCopy.country;
+            description = _MissionToCopy.description;
             end_date = _MissionToCopy.end_date;
             start_date = _MissionToCopy.start_date;
             state = _MissionToCopy.state;
@@ -88,6 +89,15 @@
         /// Getter/Setter for the creation date
         /// </summary>
         public string date_creation
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Getter/Setter for the description
+        /// </summary>
+        public string description
         {
             get;
             set;

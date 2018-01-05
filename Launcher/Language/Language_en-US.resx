@@ -1283,4 +1283,28 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
     <value>Id</value>
     <comment>Id</comment>
   </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>End time</value>
+    <comment>End time</comment>
+  </data>
+  <data name="HostOrHostess" xml:space="preserve">
+    <value>Host or hostess</value>
+    <comment>Host or hostess</comment>
+  </data>
+  <data name="MissingSelectedDateErrorCaption" xml:space="preserve">
+    <value>Missing date selection</value>
+    <comment>Missing selected date error caption</comment>
+  </data>
+  <data name="MissingSelectedDateErrorText" xml:space="preserve">
+    <value>Date not selected, please verify</value>
+    <comment>Missing selected date error text</comment>
+  </data>
+  <data name="MissionsActualizationErrorCaption" xml:space="preserve">
+    <value>Error while actualizing the missions from database</value>
+    <comment>Actualization of missions error caption</comment>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Start time</value>
+    <comment>Start time</comment>
+  </data>
 </root>
