@@ -1307,4 +1307,8 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
     <value>Start time</value>
     <comment>Start time</comment>
   </data>
+  <data name="VATNumber" xml:space="preserve">
+    <value>VAT number</value>
+    <comment>VAT number</comment>
+  </data>
 </root>

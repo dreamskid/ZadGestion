@@ -51,15 +51,6 @@
         }
 
         /// <summary>
-        /// Getter/Setter for client's email
-        /// </summary>
-        public string email
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// Getter/Setter for client's id
         /// </summary>
         public string id
@@ -99,6 +90,15 @@
         /// Getter/Setter for client's state
         /// </summary>
         public string state
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Getter/Setter for client's vat_number
+        /// </summary>
+        public string vat_number
         {
             get;
             set;

@@ -674,7 +674,7 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Numéro de la société.
+        ///   Looks up a localized string similar to Numéro SIREN.
         /// </summary>
         public static string CorporateNumber {
             get {
@@ -2646,6 +2646,15 @@ namespace Launcher.Language {
         public static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Numéro de TVA.
+        /// </summary>
+        public static string VATNumber {
+            get {
+                return ResourceManager.GetString("VATNumber", resourceCulture);
             }
         }
         

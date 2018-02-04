@@ -119,9 +119,9 @@ namespace WindowClient
                     Txt_Client_CorporateName.Text = m_Client.corporate_name;
                     Txt_Client_CorporateNumber.Text = m_Client.corporate_number;
                     Cmb_Client_Country.Text = m_Client.country;
-                    Txt_Client_Email.Text = m_Client.email;
                     Txt_Client_Phone.Text = m_Client.phone;
                     Txt_Client_State.Text = m_Client.state;
+                    Txt_Client_VATNumber.Text = m_Client.vat_number;
                     Txt_Client_ZipCode.Text = m_Client.zipcode;
                     if (Cmb_Client_Country.SelectedItem.ToString() == "United States")
                     {
@@ -162,9 +162,9 @@ namespace WindowClient
                 Lbl_Client_CorporateName.Content = m_Global_Handler.Resources_Handler.Get_Resources("CorporateName") + " *";
                 Lbl_Client_CorporateNumber.Content = m_Global_Handler.Resources_Handler.Get_Resources("CorporateNumber");
                 Lbl_Client_Country.Content = m_Global_Handler.Resources_Handler.Get_Resources("Country");
-                Lbl_Client_Email.Content = m_Global_Handler.Resources_Handler.Get_Resources("Email") + " *";
                 Lbl_Client_Phone.Content = m_Global_Handler.Resources_Handler.Get_Resources("Phone");
                 Lbl_Client_State.Content = m_Global_Handler.Resources_Handler.Get_Resources("State");
+                Lbl_Client_VATNumber.Content = m_Global_Handler.Resources_Handler.Get_Resources("VATNumber");
                 Lbl_Client_ZipCode.Content = m_Global_Handler.Resources_Handler.Get_Resources("ZipCode");
 
                 //Languages specificities
@@ -204,12 +204,12 @@ namespace WindowClient
                 m_ListOfFields.Add(Txt_Client_CorporateName);
                 m_ListOfFields.Add(Txt_Client_CorporateNumber);
                 m_ListOfFields.Add(Cmb_Client_Country);
-                m_ListOfFields.Add(Txt_Client_Email);
                 m_ListOfFields.Add(Txt_Client_Phone);
                 if (m_Global_Handler.Language_Handler == "en-US")
                 {
                     m_ListOfFields.Add(Txt_Client_State);
                 }
+                m_ListOfFields.Add(Txt_Client_VATNumber);
                 m_ListOfFields.Add(Txt_Client_ZipCode);
             }
             catch (Exception exception)
@@ -276,13 +276,6 @@ namespace WindowClient
                 {
                     return;
                 }
-                Regex pattern = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-                if (pattern.IsMatch(Txt_Client_Email.Text) == false)
-                {
-                    MessageBox.Show(m_Global_Handler.Resources_Handler.Get_Resources("InvalidEmail"), m_Global_Handler.Resources_Handler.Get_Resources("InvalidEmailCaption"),
-                        MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                    return;
-                }
 
                 //Fill parameters
                 m_Client.address = Txt_Client_Address.Text;
@@ -291,9 +284,9 @@ namespace WindowClient
                 m_Client.corporate_name = Txt_Client_CorporateName.Text;
                 m_Client.corporate_number = Txt_Client_CorporateNumber.Text;
                 m_Client.date_creation = DateTime.Now.ToString();
-                m_Client.email = Txt_Client_Email.Text;
                 m_Client.phone = Txt_Client_Phone.Text;
                 m_Client.state = Txt_Client_State.Text;
+                m_Client.vat_number = Txt_Client_VATNumber.Text;
                 m_Client.zipcode = Txt_Client_ZipCode.Text;
 
                 //Creation
@@ -304,7 +297,7 @@ namespace WindowClient
 
                     //Add to internet database
                     string res = m_Database_Handler.Add_ClientToDatabase(m_Client.address, m_Client.city, m_Client.corporate_name,
-                        m_Client.corporate_number, m_Client.country, m_Client.email, m_Client.id, m_Client.phone, m_Client.state, m_Client.zipcode);
+                        m_Client.corporate_number, m_Client.country, m_Client.id, m_Client.phone, m_Client.state, m_Client.vat_number, m_Client.zipcode);
 
                     //Treat the result
                     if (res.Contains("OK"))
@@ -330,7 +323,7 @@ namespace WindowClient
                 {
                     //Edit in internet database
                     string res = m_Database_Handler.Edit_ClientToDatabase(m_Client.address, m_Client.city, m_Client.corporate_name,
-                        m_Client.corporate_number, m_Client.country, m_Client.email, m_Client.id, m_Client.phone, m_Client.state, m_Client.zipcode);
+                        m_Client.corporate_number, m_Client.country, m_Client.id, m_Client.phone, m_Client.state, m_Client.vat_number, m_Client.zipcode);
 
                     //Treat the result
                     if (res.Contains("OK"))

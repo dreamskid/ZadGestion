@@ -2614,6 +2614,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to VAT number.
+        /// </summary>
+        public static string VATNumber {
+            get {
+                return ResourceManager.GetString("VATNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Word® generation.
         /// </summary>
         public static string WordGeneration {

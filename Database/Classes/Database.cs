@@ -530,15 +530,15 @@ namespace Database
         /// <param name="_CorporateName">Corporate name of the client</param>
         /// <param name="_CorporateNumber">Corporate number of the client</param>
         /// <param name="_Country">Country of the client</param>
-        /// <param name="_Email">E-mail of the client</param>
         /// <param name="_Id">Id of the client</param>
         /// <param name="_Phone">Phone of the client</param>
         /// <param name="_State">State of the client</param>
+        /// <param name="_VATNumber">VAT number of the client</param>
         /// <param name="_ZipCode">Zip code of the client</param>
         /// <returns>The string containing the result of the operation (Id of the contact created, error)</returns>
         /// </summary>
         public string Add_ClientToDatabase(string _Address, string _City, string _CorporateName, string _CorporateNumber, string _Country,
-            string _Email, string _Id, string _Phone, string _State, string _ZipCode)
+            string _Id, string _Phone, string _State, string _VATNumber, string _ZipCode)
         {
             try
             {
@@ -549,8 +549,8 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "INSERT INTO clients (address, city, corporate_name, corporate_number, country, date_creation, email, id, phone, state, zipcode)" +
-                    " VALUES (@address, @city, @corporate_name, @corporate_number, @country, @date_creation, @email, @id, @phone, @state, @zipcode)";
+                cmd.CommandText = "INSERT INTO clients (address, city, corporate_name, corporate_number, country, date_creation, id, phone, state, vat_number, zipcode)" +
+                    " VALUES (@address, @city, @corporate_name, @corporate_number, @country, @date_creation, @id, @phone, @state, @vat_number, @zipcode)";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@address", _Address);
@@ -559,10 +559,10 @@ namespace Database
                 cmd.Parameters.AddWithValue("@corporate_number", _CorporateNumber);
                 cmd.Parameters.AddWithValue("@country", _Country);
                 cmd.Parameters.AddWithValue("@date_creation", DateTime.Today);
-                cmd.Parameters.AddWithValue("@email", _Email);
                 cmd.Parameters.AddWithValue("@id", _Id);
                 cmd.Parameters.AddWithValue("@phone", _Phone);
                 cmd.Parameters.AddWithValue("@state", _State);
+                cmd.Parameters.AddWithValue("@vat_number", _VATNumber);
                 cmd.Parameters.AddWithValue("@zipcode", _ZipCode);
 
                 //Execute request
@@ -669,15 +669,15 @@ namespace Database
         /// <param name="_CorporateName">Corporate name of the client</param>
         /// <param name="_CorporateNumber">Corporate number of the client</param>
         /// <param name="_Country">Country of the client</param>
-        /// <param name="_Email">E-mail of the client</param>
         /// <param name="_Id">Id of the client</param>
         /// <param name="_Phone">Phone of the client</param>
         /// <param name="_State">State of the client</param>
+        /// <param name="_VATNumber">VAT number of the client</param>
         /// <param name="_ZipCode">Zip code of the client</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Edit_ClientToDatabase(string _Address, string _City, string _CorporateName, string _CorporateNumber, string _Country,
-            string _Email, string _Id, string _Phone, string _State, string _ZipCode)
+            string _Id, string _Phone, string _State, string _VATNumber, string _ZipCode)
         {
             try
             {
@@ -689,7 +689,7 @@ namespace Database
 
                 //SQL request
                 cmd.CommandText = "UPDATE clients SET address = @address, city = @city, corporate_name = @corporate_name, corporate_number = @corporate_number, " +
-                    "country = @country, email = @email, phone = @phone, state = @state, zipcode = @zipcode WHERE id = @id";
+                    "country = @country, phone = @phone, state = @state, vat_number = @vat_number, zipcode = @zipcode WHERE id = @id";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@address", _Address);
@@ -697,10 +697,10 @@ namespace Database
                 cmd.Parameters.AddWithValue("@corporate_name", _CorporateName);
                 cmd.Parameters.AddWithValue("@corporate_number", _CorporateNumber);
                 cmd.Parameters.AddWithValue("@country", _Country);
-                cmd.Parameters.AddWithValue("@email", _Email);
                 cmd.Parameters.AddWithValue("@id", _Id);
                 cmd.Parameters.AddWithValue("@phone", _Phone);
                 cmd.Parameters.AddWithValue("@state", _State);
+                cmd.Parameters.AddWithValue("@vat_number", _VATNumber);
                 cmd.Parameters.AddWithValue("@zipcode", _ZipCode);
 
                 //Execute request
@@ -758,10 +758,10 @@ namespace Database
                                                          corporate_number = row["corporate_number"].ToString(),
                                                          country = row["country"].ToString(),
                                                          date_creation = row["date_creation"].ToString(),
-                                                         email = row["email"].ToString(),
                                                          id = row["id"].ToString(),
                                                          phone = row["phone"].ToString(),
                                                          state = row["state"].ToString(),
+                                                         vat_number = row["vat_number"].ToString(),
                                                          zipcode = row["zipcode"].ToString()
                                                      }).ToList();
 

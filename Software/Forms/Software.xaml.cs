@@ -119,6 +119,13 @@ namespace Software
         /// <summary>
         /// Initialization
         /// Datagrid
+        /// Collection containing the missions displayed
+        /// </summary>
+        private List<Mission> m_DisplayedMissionsCollection = new List<Mission>();
+
+        /// <summary>
+        /// Initialization
+        /// Datagrid
         /// Class describing a shift contained in the missions category datagrid
         /// </summary>
         public class m_Datagrid_Mission_Shifts
@@ -168,6 +175,13 @@ namespace Software
         /// <summary>
         /// Initialization
         /// Datagrid
+        /// Collection containing the hosts and hostesses displayed
+        /// </summary>
+        private List<Hostess> m_DisplayedHostsAndHostessesCollection = new List<Hostess>();
+
+        /// <summary>
+        /// Initialization
+        /// Datagrid
         /// Class describing a mission contained in the host and hostess category datagrid
         /// </summary>
         public class m_Datagrid_HostAndHostess_Missions
@@ -208,6 +222,13 @@ namespace Software
         /// </summary>
         ObservableCollection<m_Datagrid_HostAndHostess_Missions> m_DataGrid_HostAndHostess_MissionsCollection =
             new ObservableCollection<m_Datagrid_HostAndHostess_Missions>();
+
+        /// <summary>
+        /// Initialization
+        /// Datagrid
+        /// Collection containing the clients displayed
+        /// </summary>
+        private List<Client> m_DisplayedClientsCollection = new List<Client>();
 
         /// <summary>
         /// Initialization
@@ -452,11 +473,11 @@ namespace Software
                 m_Color_Button = (Brush)converter.ConvertFromString("#FF6F0178");
                 m_Color_Red = (Brush)converter.ConvertFromString("#FFF03535");
                 m_Color_HostAndHostess = panelColor;
-                m_Color_SelectedHostAndHostess = (Brush)converter.ConvertFromString("#FF595C61");
+                m_Color_SelectedHostAndHostess = (Brush)converter.ConvertFromString("#FFF73D7B");
                 m_Color_ArchivedMission = (Brush)converter.ConvertFromString("#FF595C61");
                 m_Color_SelectedArchivedMission = (Brush)converter.ConvertFromString("#FF66A2CD");
                 m_Color_Mission = panelColor;
-                m_Color_SelectedMission = (Brush)converter.ConvertFromString("#FF595C61");
+                m_Color_SelectedMission = (Brush)converter.ConvertFromString("#FFF73D7B");
 
                 //Graphism
                 m_Color_MainButton = Btn_Software_Missions.Background;
@@ -1388,9 +1409,9 @@ namespace Software
 
                 //Get the list of missions in this two dates
                 List<Mission> missionsToExport = new List<Mission>();
-                for (int iBill = 0; iBill < SoftwareObjects.MissionsCollection.Count; ++iBill)
+                for (int iMission = 0; iMission < m_DisplayedMissionsCollection.Count; ++iMission)
                 {
-                    Mission mission = SoftwareObjects.MissionsCollection[iBill];
+                    Mission mission = (Mission)Datagrid_Missions_Shifts.Items[iMission];
                     DateTime dateCreation = Convert.ToDateTime(mission.date_creation);
                     if (dateCreation >= firstDatePicker && dateCreation <= endDatePicker)
                     {
@@ -2000,6 +2021,9 @@ namespace Software
                             continue;
                         }
                     }
+
+                    //Clear displayed collection
+                    m_DisplayedMissionsCollection.Clear();
 
                     //Displaying the found missions list
                     Grid_Missions_Details.Children.Clear();
@@ -2632,9 +2656,9 @@ namespace Software
                     m_Global_Handler.Resources_Handler.Get_Resources("Event") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("Permanent");
                 lines.Add(columnsHeader);
-                for (int iHostess = 0; iHostess < SoftwareObjects.HostsAndHotessesCollection.Count; ++iHostess)
+                for (int iHostess = 0; iHostess < m_DisplayedHostsAndHostessesCollection.Count; ++iHostess)
                 {
-                    Hostess hostess = SoftwareObjects.HostsAndHotessesCollection[iHostess];
+                    Hostess hostess = m_DisplayedHostsAndHostessesCollection[iHostess];
                     string hasCar = (hostess.has_car == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
                     string hasDriverLicence = (hostess.has_driver_licence == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
                     string speakEnglish = (hostess.language_english == true) ? m_Global_Handler.Resources_Handler.Get_Resources("Yes") : m_Global_Handler.Resources_Handler.Get_Resources("No");
@@ -3384,6 +3408,9 @@ namespace Software
                                     m_Mission_IsArchiveMode = true;
                                 }
 
+                                //Clear displayed collection
+                                m_DisplayedMissionsCollection.Clear();
+
                                 //Adding associated missions
                                 Grid_Missions_Details.Children.Clear();
                                 m_GridMission_Column = 0;
@@ -3447,15 +3474,36 @@ namespace Software
                     //Manage the buttons
                     if (m_Button_HostAndHostess_SelectedHostAndHostess != null)
                     {
-                        m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
+                        if (m_HostsAndHostesses_IsArchiveMode == false)
+                        {
+                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_ArchivedMission;
+                        }
                     }
                     if (m_Button_HostAndHostess_SelectedCellPhone != null)
                     {
-                        m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                        if (m_HostsAndHostesses_IsArchiveMode == false)
+                        {
+                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_ArchivedMission;
+                        }
                     }
                     if (m_Button_HostAndHostess_SelectedEmail != null)
                     {
-                        m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
+                        if (m_HostsAndHostesses_IsArchiveMode == false)
+                        {
+                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_ArchivedMission;
+                        }
                     }
                     m_Button_HostAndHostess_SelectedHostAndHostess = null;
                     m_Button_HostAndHostess_SelectedCellPhone = null;
@@ -3531,15 +3579,36 @@ namespace Software
                     //Manage the buttons
                     if (m_Button_HostAndHostess_SelectedHostAndHostess != null)
                     {
-                        m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
+                        if (m_HostsAndHostesses_IsArchiveMode == false)
+                        {
+                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_ArchivedMission;
+                        }
                     }
                     if (m_Button_HostAndHostess_SelectedCellPhone != null)
                     {
-                        m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                        if (m_HostsAndHostesses_IsArchiveMode == false)
+                        {
+                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_ArchivedMission;
+                        }
                     }
                     if (m_Button_HostAndHostess_SelectedEmail != null)
                     {
-                        m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
+                        if (m_HostsAndHostesses_IsArchiveMode == false)
+                        {
+                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_ArchivedMission;
+                        }
                     }
                     m_Button_HostAndHostess_SelectedHostAndHostess = null;
                     m_Button_HostAndHostess_SelectedCellPhone = null;
@@ -3634,15 +3703,36 @@ namespace Software
                     //Manage the buttons
                     if (m_Button_HostAndHostess_SelectedHostAndHostess != null)
                     {
-                        m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
+                        if (m_HostsAndHostesses_IsArchiveMode == false)
+                        {
+                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_ArchivedMission;
+                        }
                     }
                     if (m_Button_HostAndHostess_SelectedCellPhone != null)
                     {
-                        m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                        if (m_HostsAndHostesses_IsArchiveMode == false)
+                        {
+                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_ArchivedMission;
+                        }
                     }
                     if (m_Button_HostAndHostess_SelectedEmail != null)
                     {
-                        m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
+                        if (m_HostsAndHostesses_IsArchiveMode == false)
+                        {
+                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_ArchivedMission;
+                        }
                     }
                     m_Button_HostAndHostess_SelectedHostAndHostess = null;
                     m_Button_HostAndHostess_SelectedCellPhone = null;
@@ -3807,6 +3897,7 @@ namespace Software
                         m_GridHostess_Column = 0;
                         m_GridHostess_Row = 0;
                     }
+                    m_DisplayedHostsAndHostessesCollection.Clear();
                     for (int iHostess = 0; iHostess < foundHostessList.Count; ++iHostess)
                     {
                         Add_HostOrHostessToGrid(foundHostessList[iHostess]);
@@ -4244,7 +4335,6 @@ namespace Software
                     //Get buttons
                     StackPanel panel = (StackPanel)m_Button_Client_SelectedClient.Parent;
                     Button buttonCellPhone = null;
-                    Button buttonEmail = null;
                     for (int iChild = 1; iChild < panel.Children.Count; ++iChild)
                     {
                         Button childButton = (Button)panel.Children[iChild];
@@ -4253,12 +4343,6 @@ namespace Software
                             buttonCellPhone = childButton;
                             m_Button_Client_SelectedCellPhone = childButton;
                         }
-                        else if (childButton.Tag.ToString() == "Email")
-                        {
-                            buttonEmail = childButton;
-                            m_Button_Client_SelectedEmail = childButton;
-                        }
-
                     }
 
                     //Modification of the cellphone button
@@ -4283,21 +4367,6 @@ namespace Software
                     stackCellPhonePanel.Children.Add(cellPhoneInfo);
                     buttonCellPhone.Content = stackCellPhonePanel;
                     buttonCellPhone.Tag = "CellPhone";
-
-                    //Modification of the email button
-                    buttonEmail.Content = null;
-                    Image imgEmail = new Image();
-                    imgEmail.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Image_Email);
-                    StackPanel stackEmailPanel = new StackPanel();
-                    stackEmailPanel.Orientation = Orientation.Horizontal;
-                    stackEmailPanel.Margin = new Thickness(5);
-                    TextBlock EmailInfo = new TextBlock();
-                    string EmailText = "   " + client.email;
-                    EmailInfo.Inlines.Add(EmailText);
-                    stackEmailPanel.Children.Add(imgEmail);
-                    stackEmailPanel.Children.Add(EmailInfo);
-                    buttonEmail.Content = stackEmailPanel;
-                    buttonEmail.Tag = "Email";
                 }
 
                 return;
@@ -4357,17 +4426,17 @@ namespace Software
                 List<string> lines = new List<string>();
                 string columnsHeader = m_Global_Handler.Resources_Handler.Get_Resources("CorporateName") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("CorporateNumber") + "\t" +
-                    m_Global_Handler.Resources_Handler.Get_Resources("Email") + "\t" +
+                    m_Global_Handler.Resources_Handler.Get_Resources("VATNumber") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("Phone") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("Address") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("ZipCode") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("City") + "\t" +
                     m_Global_Handler.Resources_Handler.Get_Resources("Country");
                 lines.Add(columnsHeader);
-                for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
+                for (int iClient = 0; iClient < m_DisplayedClientsCollection.Count; ++iClient)
                 {
-                    Client client = SoftwareObjects.ClientsCollection[iClient];
-                    string line = client.corporate_name + "\t" + client.corporate_number + "\t" + client.email + "\t" + client.phone + "\t" + client.address + "\t" + client.zipcode + "\t" +
+                    Client client = m_DisplayedClientsCollection[iClient];
+                    string line = client.corporate_name + "\t" + client.corporate_number + "\t" + client.vat_number + "\t" + client.phone + "\t" + client.address + "\t" + client.zipcode + "\t" +
                        client.city + "\t" + client.country;
                     lines.Add(line);
                 }
@@ -4774,15 +4843,36 @@ namespace Software
                     //Manage the buttons
                     if (m_Button_Client_SelectedClient != null)
                     {
-                        m_Button_Client_SelectedClient.Background = m_Color_HostAndHostess;
+                        if (m_Clients_IsArchiveMode == false)
+                        {
+                            m_Button_Client_SelectedClient.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_Client_SelectedClient.Background = m_Color_ArchivedMission;
+                        }
                     }
                     if (m_Button_Client_SelectedCellPhone != null)
                     {
-                        m_Button_Client_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                        if (m_Clients_IsArchiveMode == false)
+                        {
+                            m_Button_Client_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_Client_SelectedCellPhone.Background = m_Color_ArchivedMission;
+                        }
                     }
                     if (m_Button_Client_SelectedEmail != null)
                     {
-                        m_Button_Client_SelectedEmail.Background = m_Color_HostAndHostess;
+                        if (m_Clients_IsArchiveMode == false)
+                        {
+                            m_Button_Client_SelectedEmail.Background = m_Color_HostAndHostess;
+                        }
+                        else
+                        {
+                            m_Button_Client_SelectedEmail.Background = m_Color_ArchivedMission;
+                        }
                     }
                     m_Button_Client_SelectedClient = null;
                     m_Button_Client_SelectedCellPhone = null;
@@ -5105,11 +5195,6 @@ namespace Software
                             foundClientList.Add(processedClient);
                             continue;
                         }
-                        else if (processedClient.email.ToLower().Contains(researchedText))
-                        {
-                            foundClientList.Add(processedClient);
-                            continue;
-                        }
                         else if (processedClient.corporate_name.ToLower().Contains(researchedText))
                         {
                             foundClientList.Add(processedClient);
@@ -5127,12 +5212,16 @@ namespace Software
                         }
                     }
 
+                    //Clear displayed collection
+                    m_DisplayedClientsCollection.Clear();
+
                     //Displaying the found Client list
                     Grid_Clients_Details.Children.Clear();
                     actualizationClientDone = false;
                     if (foundClientList.Count > 0)
                     {
                         //Clear fields
+                        Txt_Clients_Research.Text = "";
 
                         //Initialize counter for columns and rows of Grid_Client
                         m_GridClient_Column = 0;
@@ -5338,6 +5427,9 @@ namespace Software
                 //Actualization
                 try
                 {
+                    //Clear displayed collection
+                    m_DisplayedMissionsCollection.Clear();
+
                     Grid_Missions_Details.Children.Clear();
                     Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
                     for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
@@ -5376,6 +5468,9 @@ namespace Software
                 m_GridMission_Column = 0;
                 m_GridMission_Row = 0;
                 Grid_Missions_Details.Children.Clear();
+
+                //Clear displayed collection
+                m_DisplayedMissionsCollection.Clear();
 
                 //Getting the hosts and hostesses collection  
                 try
@@ -5437,6 +5532,9 @@ namespace Software
             {
                 //Treatment of the first row
                 Grid_Missions_Details.RowDefinitions[0].MinHeight = 350;
+
+                //Add to displayed collection
+                m_DisplayedMissionsCollection.Add(_Mission);
 
                 //Create the buttons
                 Button buttonMission = new Button();
@@ -5537,6 +5635,9 @@ namespace Software
                 {
                     filteredMissions = m_Grid_Details_Missions_MissionsCollection;
                 }
+
+                //Clear displayed collection
+                m_DisplayedMissionsCollection.Clear();
 
                 //Filter
                 Grid_Missions_Details.Children.Clear();
@@ -5971,6 +6072,9 @@ namespace Software
                 //Actualization
                 try
                 {
+                    //Clear displayed collection
+                    m_DisplayedHostsAndHostessesCollection.Clear();
+
                     //Add to grid
                     for (int iHostess = 0; iHostess < SoftwareObjects.HostsAndHotessesCollection.Count; ++iHostess)
                     {
@@ -6007,6 +6111,9 @@ namespace Software
                 m_GridHostess_Column = 0;
                 m_GridHostess_Row = 0;
                 Grid_HostAndHostess_Details.Children.Clear();
+
+                //Clear displayed collection
+                m_DisplayedHostsAndHostessesCollection.Clear();
 
                 //Getting the hosts and hostesses collection  
                 try
@@ -6084,6 +6191,9 @@ namespace Software
         {
             try
             {
+                //Add to visible collection
+                m_DisplayedHostsAndHostessesCollection.Add(_HostOrHostess);
+
                 //Treatment of the first row
                 Grid_HostAndHostess_Details.RowDefinitions[0].MinHeight = 350;
 
@@ -6370,6 +6480,9 @@ namespace Software
                 m_GridClient_Row = 0;
                 Grid_Clients_Details.Children.Clear();
 
+                //Clear displayed collection
+                m_DisplayedClientsCollection.Clear();
+
                 //Actualization
                 try
                 {
@@ -6409,6 +6522,9 @@ namespace Software
                 m_GridClient_Column = 0;
                 m_GridClient_Row = 0;
                 Grid_Clients_Details.Children.Clear();
+
+                //Clear displayed collection
+                m_DisplayedClientsCollection.Clear();
 
                 //Getting the hosts and hostesses collection  
                 try
@@ -6486,6 +6602,9 @@ namespace Software
         {
             try
             {
+                //Add to displayed collection
+                m_DisplayedClientsCollection.Add(_Client);
+
                 //Treatment of the first row
                 Grid_Clients_Details.RowDefinitions[0].MinHeight = 350;
 
@@ -6571,35 +6690,6 @@ namespace Software
                 buttonCallCellPhone.Content = stackCellPhonePanel;
                 //Add to the main stack panel
                 mainStackPanel.Children.Add(buttonCallCellPhone);
-
-                //Create the email button
-                Button buttonSendMail = new Button();
-                buttonSendMail.MinHeight = 20;
-                buttonSendMail.Padding = new Thickness(5);
-                if (m_Clients_IsArchiveMode == false)
-                {
-                    buttonSendMail.Background = m_Color_Mission;
-                }
-                else
-                {
-                    buttonSendMail.Background = m_Color_ArchivedMission;
-                }
-                buttonSendMail.Click += IsPressed_Clients_EmailButton;
-                buttonSendMail.Tag = "Email";
-                //Treatment of the image in the email button
-                Image imgEmail = new Image();
-                imgEmail.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Image_Email);
-                StackPanel stackEmail = new StackPanel();
-                stackEmail.Orientation = Orientation.Horizontal;
-                stackEmail.Margin = new Thickness(5);
-                TextBlock emailInfo = new TextBlock();
-                string emailText = "   " + _Client.email;
-                emailInfo.Inlines.Add(emailText);
-                stackEmail.Children.Add(imgEmail);
-                stackEmail.Children.Add(emailInfo);
-                buttonSendMail.Content = stackEmail;
-                //Add to the main stack panel
-                mainStackPanel.Children.Add(buttonSendMail);
 
                 //Treatment of the increments
                 if (m_GridClient_Column > Grid_Clients_Details.ColumnDefinitions.Count - 1)

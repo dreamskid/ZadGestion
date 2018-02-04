@@ -1143,8 +1143,8 @@ Profil - Identifiants - Nouveau ordinateur</value>
     <comment>Nom de la société</comment>
   </data>
   <data name="CorporateNumber" xml:space="preserve">
-    <value>Numéro de la société</value>
-    <comment>Numéro de la société</comment>
+    <value>Numéro SIREN</value>
+    <comment>Numéro SIREN</comment>
   </data>
   <data name="HostsAndHostessesStatementExcelGenerationFailedCaption" xml:space="preserve">
     <value>Génération de la synthèse des hôtes et hôtesses échouée</value>
@@ -1321,5 +1321,9 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
   <data name="StartTime" xml:space="preserve">
     <value>Début</value>
     <comment>Début</comment>
+  </data>
+  <data name="VATNumber" xml:space="preserve">
+    <value>Numéro de TVA</value>
+    <comment>Numéro de TVA</comment>
   </data>
 </root>
