@@ -1311,4 +1311,28 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
     <value>VAT number</value>
     <comment>VAT number</comment>
   </data>
+  <data name="EndHour" xml:space="preserve">
+    <value>End hour</value>
+    <comment>End hour</comment>
+  </data>
+  <data name="HourlyRate" xml:space="preserve">
+    <value>Hourly rate</value>
+    <comment>Hourly rate</comment>
+  </data>
+  <data name="LoanSuit" xml:space="preserve">
+    <value>Loan suit</value>
+    <comment>Loan suit</comment>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>Modify</value>
+    <comment>Modify</comment>
+  </data>
+  <data name="PauseDuration" xml:space="preserve">
+    <value>Pause duration</value>
+    <comment>Pause duration</comment>
+  </data>
+  <data name="StartHour" xml:space="preserve">
+    <value>Start hour</value>
+    <comment>Start hour</comment>
+  </data>
 </root>

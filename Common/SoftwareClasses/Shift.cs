@@ -16,9 +16,9 @@
         }
 
         /// <summary>
-        /// Getter/Setter for mission id
+        /// Getter/Setter for the time of the end of shift
         /// </summary>
-        public string id
+        public string end_time
         {
             get;
             set;
@@ -28,6 +28,15 @@
         /// Getter/Setter for the hourly rate
         /// </summary>
         public string hourly_rate
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Getter/Setter for the shift id
+        /// </summary>
+        public string id
         {
             get;
             set;
@@ -52,7 +61,7 @@
         }
 
         /// <summary>
-        /// Getter/Setter for the start  of shift time
+        /// Getter/Setter for the start time of the shift
         /// </summary>
         public string start_time
         {
@@ -61,9 +70,9 @@
         }
 
         /// <summary>
-        /// Getter/Setter for the end of shift time
+        /// Getter/Setter for suit loan
         /// </summary>
-        public string end_time
+        public bool suit
         {
             get;
             set;

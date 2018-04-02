@@ -259,10 +259,11 @@ namespace WindowMission
                 }
                 else
                 {
-                    Btn_Mission_Add.Content = m_Global_Handler.Resources_Handler.Get_Resources("Edit");
+                    Btn_Mission_Add.Content = m_Global_Handler.Resources_Handler.Get_Resources("Modify");
                     this.Title = m_Global_Handler.Resources_Handler.Get_Resources("EditMission");
                 }
                 Btn_Mission_QuitWithoutSaving.Content = m_Global_Handler.Resources_Handler.Get_Resources("QuitWithoutSaving");
+                Btn_Mission_Shifts_Edit.Content = m_Global_Handler.Resources_Handler.Get_Resources("Edit");
 
                 //List of controls
                 m_ListOfFields.Add(Cmb_Mission_Client);
@@ -335,7 +336,7 @@ namespace WindowMission
                 }
                 if (Cld_Mission_EndDate.SelectedDate == null || Cld_Mission_StartDate.SelectedDate == null)
                 {
-                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorText"), 
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorText"),
                         m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
@@ -443,20 +444,22 @@ namespace WindowMission
 
         /// <summary>
         /// Event
-        /// Click on add shift button
+        /// Click on edit shifts button
         /// </summary>
-        private void Btn_Mission_Shift_Add_Click(object sender, RoutedEventArgs e)
+        private void Btn_Mission_Shifts_Edit_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                //Open the mission window
+                MainWindowShift shiftsWindow = new MainWindowShift(m_Global_Handler, m_Database_Handler, m_Mission);
+                Nullable<bool> resShow = shiftsWindow.ShowDialog();
 
-        }
-
-        /// <summary>
-        /// Event
-        /// Click on delete shift button
-        /// </summary>
-        private void Btn_Missions_Shift_Delete_Click(object sender, RoutedEventArgs e)
-        {
-
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, exception.StackTrace);
+                return;
+            }
         }
 
         /// <summary>
@@ -484,7 +487,7 @@ namespace WindowMission
 
         /// <summary>
         /// Event
-        /// Change in the country combo box
+        /// Datagrid shifts autogenerating columns
         /// </summary>
         private void Datagrid_Shifts_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {

@@ -55,6 +55,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\WindowShift.xaml.cs">
+      <DependentUpon>WindowShift.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\WindowMission.xaml.cs">
       <DependentUpon>WindowMission.xaml</DependentUpon>
     </Compile>
@@ -76,6 +79,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Forms\WindowShift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Forms\WindowMission.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -7,8 +7,7 @@
         <!--Buttons-->
         <Button x:Name="Btn_Mission_Add" Height="33" Margin="10,0,10,48" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" Click="Btn_Mission_Add_Click" TabIndex="13" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178"/>
         <Button x:Name="Btn_Mission_QuitWithoutSaving" Height="33" Margin="10,0,10,10" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Click="Btn_Mission_QuitWithoutSaving_Click" Foreground="White" TabIndex="14" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center"/>
-        <Button x:Name="Btn_Mission_Shift_Add" Height="33" Margin="0,0,13,124" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="+" TabIndex="11" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" HorizontalAlignment="Right" Width="75" Click="Btn_Mission_Shift_Add_Click"/>
-        <Button x:Name="Btn_Missions_Shift_Delete" Height="33" Margin="0,0,13,86" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="-" Foreground="White" TabIndex="12" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="75" Click="Btn_Missions_Shift_Delete_Click"/>
+        <Button x:Name="Btn_Mission_Shifts_Edit" Height="26" Margin="0,552,10,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Edit" TabIndex="11" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" HorizontalAlignment="Right" Width="75" Click="Btn_Mission_Shifts_Edit_Click"/>
 
         <!--Calendars-->
         <Calendar x:Name="Cld_Mission_EndDate" HorizontalAlignment="Right" Margin="0,291,10,0" VerticalAlignment="Top" TabIndex="8"/>
@@ -32,7 +31,7 @@
         <Label x:Name="Lbl_Mission_Zipcode" Content="Zipcode" HorizontalAlignment="Left" Height="27" Margin="10,148,0,0" VerticalAlignment="Top" Width="131"/>
 
         <!--Datagrid-->
-        <DataGrid x:Name="Datagrid_Shifts" Margin="10,583,93,86" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" AlternationCount="2" AutoGeneratingColumn="Datagrid_Shifts_AutoGeneratingColumn" CanUserSortColumns="False" BorderBrush="White" BorderThickness="0" IsReadOnly="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" TabIndex="10">
+        <DataGrid x:Name="Datagrid_Shifts" Margin="10,583,10,86" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" AlternationCount="2" AutoGeneratingColumn="Datagrid_Shifts_AutoGeneratingColumn" CanUserSortColumns="False" BorderBrush="White" BorderThickness="0" IsReadOnly="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" TabIndex="10">
             <DataGrid.RowStyle>
                 <Style TargetType="{x:Type DataGridRow}">
                     <Style.Triggers>

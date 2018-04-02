@@ -962,6 +962,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End hour.
+        /// </summary>
+        public static string EndHour {
+            get {
+                return ResourceManager.GetString("EndHour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to End time.
         /// </summary>
         public static string EndTime {
@@ -1467,6 +1476,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hourly rate.
+        /// </summary>
+        public static string HourlyRate {
+            get {
+                return ResourceManager.GetString("HourlyRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
         public static string Id {
@@ -1607,6 +1625,15 @@ namespace Launcher.Language {
         public static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loan suit.
+        /// </summary>
+        public static string LoanSuit {
+            get {
+                return ResourceManager.GetString("LoanSuit", resourceCulture);
             }
         }
         
@@ -2047,6 +2074,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Modify.
+        /// </summary>
+        public static string Modify {
+            get {
+                return ResourceManager.GetString("Modify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Month.
         /// </summary>
         public static string Month {
@@ -2178,6 +2214,15 @@ namespace Launcher.Language {
         public static string Page {
             get {
                 return ResourceManager.GetString("Page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pause duration.
+        /// </summary>
+        public static string PauseDuration {
+            get {
+                return ResourceManager.GetString("PauseDuration", resourceCulture);
             }
         }
         
@@ -2520,6 +2565,15 @@ namespace Launcher.Language {
         public static string StartDate {
             get {
                 return ResourceManager.GetString("StartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start hour.
+        /// </summary>
+        public static string StartHour {
+            get {
+                return ResourceManager.GetString("StartHour", resourceCulture);
             }
         }
         

@@ -1116,6 +1116,77 @@ namespace Database
 
         #endregion
 
+        #region Shifts
+
+        /// <summary>
+        /// Get all the shifts from a list of shifts Id
+        /// <param name="_ListOfShiftsId">Id of the client</param>
+        /// <returns>The list of corresponding shifts</returns>
+        /// </summary>
+        public List<Shift> Get_ShiftsFromListOfId(List<string> _ListOfShiftsId)
+        {
+            List<Shift> shifts = new List<Shift>();
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                for (int iShift = 0; iShift < _ListOfShiftsId.Count; ++iShift)
+                {
+                    //Verify Id
+                    if (_ListOfShiftsId[iShift] == "")
+                    {
+                        continue;
+                    }
+
+                    //SQL request
+                    cmd.CommandText = "SELECT * FROM shifts WHERE @id=" + _ListOfShiftsId[iShift];
+
+                    //Execute request
+                    MySqlDataAdapter mySQLDatabaseAdapter = new MySqlDataAdapter(cmd);
+                    DataTable table = new DataTable();
+                    mySQLDatabaseAdapter.Fill(table);
+
+                    //Fill collection
+                    List<Shift> shift = (from DataRow row in table.Rows.OfType<DataRow>()
+                                         select new Shift
+                                         {
+                                             date = row["date"].ToString(),
+                                             end_time = row["end_time"].ToString(),
+                                             hourly_rate = row["hourly_rate"].ToString(),
+                                             id_list_hostsandhostesses = row["id_list_hostsandhostesses"].ToString(),
+                                             id_mission = row["id_mission"].ToString(),
+                                             start_time = row["start_time"].ToString(),
+                                             suit = (bool)row["suit"]
+                                         }).ToList();
+
+                    //Add to the list
+                    shifts.AddRange(shift);
+                }
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return shifts;
+            }
+            catch (Exception e)
+            {
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                //Write error to log
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                return shifts;
+            }
+        }
+
+
+
+        #endregion
+
         #region Settings
 
         #region General

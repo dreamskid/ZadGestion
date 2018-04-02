@@ -1,0 +1,85 @@
+﻿<Window xmlns:Toolkit="http://schemas.xceed.com/wpf/xaml/toolkit" x:Name="Window_Shift" x:Class="WindowMission.MainWindowShift"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shifts" Height="769.365" Width="647.5" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid>
+        <!--Rectangle -->
+        <Rectangle Fill="#FFF4F4F5" Height="142" Margin="0,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="642"/>
+
+        <!--Buttons -->
+        <Button x:Name="Btn_Shifts_Add" Height="33" Margin="10,368,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" TabIndex="10" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Click="Btn_Shifts_Save_Click" HorizontalAlignment="Left" Width="200"/>
+        <Button x:Name="Btn_Shifts_Delete" Height="33" Margin="0,368,10,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" Foreground="White" TabIndex="12" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" Click="Btn_Shifts_QuitWithoutSaving_Click" HorizontalAlignment="Right" Width="212"/>
+        <Button x:Name="Btn_Shifts_Modify" Height="33" Margin="215,368,227,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Modify" TabIndex="11" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF017832" Click="Btn_Shifts_Save_Click" Width="200"/>
+        <Button x:Name="Btn_Shifts_QuitWithoutSaving" Height="33" Margin="10,0,10,10" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Foreground="White" TabIndex="18" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" Click="Btn_Shifts_QuitWithoutSaving_Click"/>
+        <Button x:Name="Btn_Shifts_Save" Height="33" Margin="10,0,10,48" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Save" TabIndex="14" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Click="Btn_Shifts_Save_Click"/>
+
+        <!--Calendar -->
+        <Calendar x:Name="Cld_Shifts_Shift_Date" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" TabIndex="1" Height="173"/>
+
+        <!--Checkbox -->
+        <CheckBox x:Name="Chk_Shifts_Shift_Suit" Content="Suit" HorizontalAlignment="Left" Height="21" Margin="194,228,0,0" VerticalAlignment="Top" Width="206" TabIndex="7"/>
+
+        <!--Combo boxes -->
+        <ComboBox x:Name="Cmb_Shifts_Shift_EndHour_Hour" HorizontalAlignment="Left" Height="20" Margin="339,190,0,0" VerticalAlignment="Top" Width="61" TabIndex="4"/>
+        <ComboBox x:Name="Cmb_Shifts_Shift_EndHour_Min" HorizontalAlignment="Left" Height="20" Margin="405,190,0,0" VerticalAlignment="Top" Width="61" TabIndex="5"/>
+        <ComboBox x:Name="Cmb_Shifts_Shift_HostOrHostess" Height="20" Margin="298,332,10,0" VerticalAlignment="Top" TabIndex="9"/>
+        <ComboBox x:Name="Cmb_Shifts_Shift_StartHour_Hour" HorizontalAlignment="Left" Height="20" Margin="194,190,0,0" VerticalAlignment="Top" Width="61" TabIndex="2"/>
+        <ComboBox x:Name="Cmb_Shifts_Shift_StartHour_Min" HorizontalAlignment="Left" Height="20" Margin="260,190,0,0" VerticalAlignment="Top" Width="61" TabIndex="3"/>
+
+        <!--Datagrid-->
+        <DataGrid x:Name="Datagrid_Shifts" Margin="10,435,10,86" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" AlternationCount="2" AutoGeneratingColumn="Datagrid_Shifts_AutoGeneratingColumn" CanUserSortColumns="False" BorderBrush="White" BorderThickness="0" IsReadOnly="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" TabIndex="13">
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Style.Triggers>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                            <Setter Property="Background" Value="#FFF7F7F7" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="#FFFFF29D" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="Orange" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+
+        <!--Labels -->
+        <Label x:Name="Lbl_Shifts_Mission_Client" HorizontalAlignment="Left" Height="33" Margin="10,89,0,0" VerticalAlignment="Top" Width="131" Content="Client"/>
+        <Label x:Name="Lbl_Shifts_Mission_City" HorizontalAlignment="Left" Height="33" Margin="260,89,0,0" VerticalAlignment="Top" Width="130" Content="City"/>
+        <Label x:Name="Lbl_Shifts_Mission_Description" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="131" Content="Mission"/>
+        <Label x:Name="Lbl_Shifts_Mission_EndDate" HorizontalAlignment="Left" Height="33" Margin="532,89,0,0" VerticalAlignment="Top" Width="100" Content="EndDate"/>
+        <Label x:Name="Lbl_Shifts_Mission_StartDate" HorizontalAlignment="Left" Height="33" Margin="428,89,0,0" VerticalAlignment="Top" Width="99" Content="StartDate"/>
+        <Label x:Name="Lbl_Shifts_Shift_Date" HorizontalAlignment="Left" Height="33" Margin="10,157,0,0" VerticalAlignment="Top" Width="99" Content="Date"/>
+        <Label x:Name="Lbl_Shifts_Shift_EndHour" HorizontalAlignment="Left" Height="33" Margin="339,157,0,0" VerticalAlignment="Top" Width="99" Content="EndHour"/>
+        <Label x:Name="Lbl_Shifts_Shift_HostOrHostess" HorizontalAlignment="Left" Height="33" Margin="194,325,0,0" VerticalAlignment="Top" Width="99" Content="HostOrHostess"/>
+        <Label x:Name="Lbl_Shifts_Shift_HourlyRate" HorizontalAlignment="Right" Height="33" Margin="0,157,58,0" VerticalAlignment="Top" Width="99" Content="HourlyRate"/>
+        <Label x:Name="Lbl_Shifts_Shift_Pause" HorizontalAlignment="Right" Height="33" Margin="0,222,162,0" VerticalAlignment="Top" Width="141" Content="Pause"/>
+        <Label x:Name="Lbl_Shifts_Shift_StartHour" HorizontalAlignment="Left" Height="33" Margin="194,157,0,0" VerticalAlignment="Top" Width="99" Content="StartHour"/>
+        <Label x:Name="Lbl_Shifts_Shifts" Content="Shifts" HorizontalAlignment="Left" Height="24" Margin="10,406,0,0" VerticalAlignment="Top" Width="131"/>
+
+        <!--Textboxes-->
+        <TextBox x:Name="Txt_Shifts_Mission" Height="42" Margin="10,42,10,0" TextWrapping="Wrap" VerticalAlignment="Top" TabIndex="3" IsEnabled="False" AllowDrop="False" Focusable="False" IsTabStop="False"/>
+        <TextBox x:Name="Txt_Shifts_Mission_Client" HorizontalAlignment="Left" Height="20" Margin="10,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" TabIndex="3" IsEnabled="False" IsTabStop="False"/>
+        <TextBox x:Name="Txt_Shifts_Mission_City" HorizontalAlignment="Left" Height="20" Margin="260,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" TabIndex="3" IsEnabled="False" IsTabStop="False"/>
+        <TextBox x:Name="Txt_Shifts_Mission_EndDate" HorizontalAlignment="Right" Height="20" Margin="0,122,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TabIndex="3" IsEnabled="False" IsTabStop="False"/>
+        <TextBox x:Name="Txt_Shifts_Mission_StartDate" HorizontalAlignment="Right" Height="20" Margin="0,122,115,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TabIndex="3" IsEnabled="False" IsTabStop="False"/>
+        <TextBox x:Name="Txt_Shifts_Shift_HourlyRate" HorizontalAlignment="Right" Height="20" Margin="0,190,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" TabIndex="6"/>
+        <TextBox x:Name="Txt_Shifts_Shift_Pause" HorizontalAlignment="Right" Height="20" Margin="0,228,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" TabIndex="8" />
+
+    </Grid>
+
+</Window>

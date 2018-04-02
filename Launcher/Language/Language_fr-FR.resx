@@ -226,8 +226,8 @@
     <comment>Nom de l'hôte ou l'hôtesse</comment>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Modifier</value>
-    <comment>Modifier</comment>
+    <value>Editer</value>
+    <comment>Editer</comment>
   </data>
   <data name="MyAccount" xml:space="preserve">
     <value>Mon compte</value>
@@ -1325,5 +1325,29 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
   <data name="VATNumber" xml:space="preserve">
     <value>Numéro de TVA</value>
     <comment>Numéro de TVA</comment>
+  </data>
+  <data name="EndHour" xml:space="preserve">
+    <value>Heure de fin</value>
+    <comment>Heure de fin</comment>
+  </data>
+  <data name="HourlyRate" xml:space="preserve">
+    <value>Taux horaire</value>
+    <comment>Taux horaire</comment>
+  </data>
+  <data name="LoanSuit" xml:space="preserve">
+    <value>Prêt tenue</value>
+    <comment>Prêt tenue</comment>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>Modifier</value>
+    <comment>Modifier</comment>
+  </data>
+  <data name="PauseDuration" xml:space="preserve">
+    <value>Durée de pause</value>
+    <comment>Durée de pause</comment>
+  </data>
+  <data name="StartHour" xml:space="preserve">
+    <value>Heure de début</value>
+    <comment>Heure de début</comment>
   </data>
 </root>
