@@ -340,52 +340,31 @@ namespace WindowMission
                         m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                //Fill parameters
-                m_Mission.address = Txt_Mission_Address.Text;
-                m_Mission.city = Cmb_Mission_City.Text; ;
-                m_Mission.client_name = Cmb_Mission_Client.Text;
-                m_Mission.country = Cmb_Mission_Country.Text;
-                m_Mission.description = Txt_Mission_Description.Text;
-                m_Mission.end_date = Cld_Mission_EndDate.SelectedDate.ToString();
-                m_Mission.start_date = Cld_Mission_StartDate.SelectedDate.ToString();
-                m_Mission.state = Txt_Mission_State.Text;
-                m_Mission.zipcode = Txt_Mission_Zipcode.Text;
-                m_Mission.id_list_shifts = ""; //TODO
 
                 //Creation
                 if (m_IsModification == false)
                 {
-                    //Creation of the id
-                    m_Mission.id = m_Mission.Create_MissionId();
-                    m_Mission.date_creation = DateTime.Today.ToString();
+                    Add_MissionToDatabase();
 
-                    //Add to internet database
-                    string res = m_Database_Handler.Add_MissionToDatabase(m_Mission.address, m_Mission.city,
-                        m_Mission.client_name, m_Mission.description, m_Mission.country, m_Mission.end_date, m_Mission.id,
-                        m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
-
-                    //Treat the result
-                    if (res.Contains("OK"))
-                    {
-                        //Add to collection
-                        SoftwareObjects.MissionsCollection.Add(m_Mission);
-
-                        //Close the window
-                        m_ConfirmQuit = true;
-                        this.DialogResult = true;
-                        Close();
-                    }
-                    else if (res.Contains("Error"))
-                    {
-                        //Treatment of the error
-                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
-                        m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
-                        return;
-                    }
+                    //Close the window
+                    m_ConfirmQuit = true;
+                    this.DialogResult = true;
+                    Close();
                 }
                 //Modification
                 else
                 {
+                    //Fill parameters
+                    m_Mission.address = Txt_Mission_Address.Text;
+                    m_Mission.city = Cmb_Mission_City.Text; ;
+                    m_Mission.client_name = Cmb_Mission_Client.Text;
+                    m_Mission.country = Cmb_Mission_Country.Text;
+                    m_Mission.description = Txt_Mission_Description.Text;
+                    m_Mission.end_date = Cld_Mission_EndDate.SelectedDate.ToString();
+                    m_Mission.start_date = Cld_Mission_StartDate.SelectedDate.ToString();
+                    m_Mission.state = Txt_Mission_State.Text;
+                    m_Mission.zipcode = Txt_Mission_Zipcode.Text;
+
                     //Edit in internet database
                     string res = m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
                         m_Mission.client_name, m_Mission.country, m_Mission.description, m_Mission.end_date, m_Mission.id,
@@ -450,10 +429,14 @@ namespace WindowMission
         {
             try
             {
+                if (SoftwareObjects.MissionsCollection.Find(x => x.id.Equals(m_Mission.id)) == null)
+                {
+                    Add_MissionToDatabase();
+                }
+
                 //Open the mission window
                 MainWindowShift shiftsWindow = new MainWindowShift(m_Global_Handler, m_Database_Handler, m_Mission);
                 Nullable<bool> resShow = shiftsWindow.ShowDialog();
-
             }
             catch (Exception exception)
             {
@@ -611,5 +594,47 @@ namespace WindowMission
         }
 
         #endregion
+
+        #region Functions
+
+        private void Add_MissionToDatabase()
+        {
+            //Fill parameters
+            m_Mission.address = Txt_Mission_Address.Text;
+            m_Mission.city = Cmb_Mission_City.Text; ;
+            m_Mission.client_name = Cmb_Mission_Client.Text;
+            m_Mission.country = Cmb_Mission_Country.Text;
+            m_Mission.description = Txt_Mission_Description.Text;
+            m_Mission.end_date = Cld_Mission_EndDate.SelectedDate.ToString();
+            m_Mission.start_date = Cld_Mission_StartDate.SelectedDate.ToString();
+            m_Mission.state = Txt_Mission_State.Text;
+            m_Mission.zipcode = Txt_Mission_Zipcode.Text;
+
+            //Creation of the id
+            m_Mission.id = m_Mission.Create_MissionId();
+            m_Mission.date_creation = DateTime.Today.ToString();
+
+            //Add to internet database
+            string res = m_Database_Handler.Add_MissionToDatabase(m_Mission.address, m_Mission.city,
+                m_Mission.client_name, m_Mission.description, m_Mission.country, m_Mission.end_date, m_Mission.id,
+                m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+
+            //Treat the result
+            if (res.Contains("OK"))
+            {
+                //Add to collection
+                SoftwareObjects.MissionsCollection.Add(m_Mission);
+            }
+            else if (res.Contains("Error"))
+            {
+                //Treatment of the error
+                MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+                m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                return;
+            }
+        }
+
+        #endregion
+
     }
 }

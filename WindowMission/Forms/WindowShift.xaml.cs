@@ -84,16 +84,17 @@ namespace WindowMission
         /// <summary>
         /// Initialization
         /// Variables
-        /// Contact modified or created
+        /// List of controls
         /// </summary>
-        public Mission m_Mission = null;
+        private List<Control> m_ListOfFields = new List<Control>();
 
         /// <summary>
         /// Initialization
         /// Variables
-        /// List of controls
+        /// List of hosts and hostesses in string format
         /// </summary>
-        private List<Control> m_ListOfFields = new List<Control>();
+        private List<string> m_List_HostsAndHostesses = new List<string>();
+        private List<string> m_List_IdHostsAndHostesses = new List<string>();
 
         /// <summary>
         /// Initialization
@@ -146,6 +147,20 @@ namespace WindowMission
         ObservableCollection<m_Datagrid_Mission_Shifts> m_Datagrid_Missions_ShiftsCollection =
             new ObservableCollection<m_Datagrid_Mission_Shifts>();
 
+        /// <summary>
+        /// Initialization
+        /// Variables
+        /// Mission
+        /// </summary>
+        public Mission m_Mission = null;
+
+        /// <summary>
+        /// Initialization
+        /// Variables
+        /// Shift modified or created
+        /// </summary>
+        public Shift m_Shift = new Shift();
+
         #endregion
 
         #region Functions
@@ -169,7 +184,11 @@ namespace WindowMission
                 m_Mission = _Mission;
 
                 //Load shifts
-                List<String> listShiftsId = new List<string>(m_Mission.id_list_shifts.Split(';'));
+                List<String> listShiftsId = new List<string>();
+                if (m_Mission.id_list_shifts != null)
+                {
+                    listShiftsId = new List<string>(m_Mission.id_list_shifts.Split(';'));
+                }
                 m_ListOfShifts = m_Database_Handler.Get_ShiftsFromListOfId(listShiftsId);
 
                 //Fill infos mission
@@ -185,18 +204,34 @@ namespace WindowMission
                     Cmb_Shifts_Shift_EndHour_Hour.Items.Add(iHour.ToString("00")); ;
                     Cmb_Shifts_Shift_StartHour_Hour.Items.Add(iHour.ToString("00")); ;
                 }
-                for (int iMin = 0; iMin <= 59; ++iMin)
+                Cmb_Shifts_Shift_EndHour_Hour.SelectedIndex = 12;
+                Cmb_Shifts_Shift_StartHour_Hour.SelectedIndex = 12;
+                for (int iMin = 0; iMin < 4; ++iMin)
                 {
+                    iMin = iMin * 15;
                     Cmb_Shifts_Shift_EndHour_Min.Items.Add(iMin.ToString("00")); ;
                     Cmb_Shifts_Shift_StartHour_Min.Items.Add(iMin.ToString("00")); ;
                 }
+                Cmb_Shifts_Shift_EndHour_Min.SelectedIndex = 0;
+                Cmb_Shifts_Shift_StartHour_Min.SelectedIndex = 0;
 
+                for (int iHostess = 0; iHostess < SoftwareObjects.HostsAndHotessesCollection.Count; ++iHostess)
+                {
+                    Hostess hostess = SoftwareObjects.HostsAndHotessesCollection[iHostess];
+                    string name = hostess.zipcode + " \t " + hostess.firstname + " " + hostess.lastname;
+                    m_List_HostsAndHostesses.Add(name);
+                    m_List_IdHostsAndHostesses.Add(hostess.id);
+                    Cmb_Shifts_Shift_HostOrHostess.Items.Add(name);
+                }
                 //Fill shifts datagrid
                 m_Datagrid_Missions_ShiftsCollection.Clear();
                 for (int iShift = 0; iShift < m_ListOfShifts.Count; ++iShift)
                 {
                     Shift shiftSel = m_ListOfShifts[iShift];
-                    m_Datagrid_Mission_Shifts data = new m_Datagrid_Mission_Shifts(shiftSel.date, SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(shiftSel.id_list_hostsandhostesses)).lastname, shiftSel.start_time, shiftSel.end_time);
+                    m_Datagrid_Mission_Shifts data = new m_Datagrid_Mission_Shifts(shiftSel.date,
+                        SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(shiftSel.id_hostorhostess)).firstname + " " +
+                        SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(shiftSel.id_hostorhostess)).lastname,
+                        shiftSel.start_time, shiftSel.end_time);
                     m_Datagrid_Missions_ShiftsCollection.Add(data);
                 }
                 Datagrid_Shifts.Items.Refresh();
@@ -300,6 +335,89 @@ namespace WindowMission
 
         /// <summary>
         /// Event
+        /// Click on the add button
+        /// </summary>
+        private void Btn_Shifts_Add_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Fill parameters
+                DateTime dateSelected = DateTime.Today;
+                if (Cld_Shifts_Shift_Date.SelectedDate != null)
+                {
+                    dateSelected = (DateTime)Cld_Shifts_Shift_Date.SelectedDate;
+                }
+                m_Shift.date = dateSelected.ToString("dd/MM/yyyy");
+                m_Shift.end_time = Cmb_Shifts_Shift_EndHour_Hour.Text + ":" + Cmb_Shifts_Shift_EndHour_Min.Text;
+                m_Shift.start_time = Cmb_Shifts_Shift_StartHour_Hour.Text + ":" + Cmb_Shifts_Shift_StartHour_Min.Text;
+                m_Shift.hourly_rate = Txt_Shifts_Shift_HourlyRate.Text;
+                m_Shift.id_hostorhostess = m_List_IdHostsAndHostesses[Cmb_Shifts_Shift_HostOrHostess.SelectedIndex];
+                m_Shift.id = m_Mission.id + "_" + m_Shift.date + "_" + m_Shift.start_time + "_" + m_Shift.end_time + "_" + m_Shift.id_hostorhostess;
+                m_Shift.id_mission = m_Mission.id;
+                m_Shift.suit = (bool)Chk_Shifts_Shift_Suit.IsChecked;
+                if (m_Mission.id_list_shifts == "")
+                {
+                    m_Mission.id_list_shifts = m_Shift.id;
+                }
+                else
+                {
+                    m_Mission.id_list_shifts += ";" + m_Shift.id;
+                }
+
+                //Add to internet database
+                string res = m_Database_Handler.Add_ShiftToDatabase(m_Shift.date, m_Shift.end_time, m_Shift.hourly_rate, m_Shift.id, m_Shift.id_hostorhostess, m_Shift.id_mission,
+                    m_Shift.start_time, m_Shift.suit);
+
+                //Treat the result
+                if (res.Contains("OK"))
+                {
+                    //Add to collection
+                    SoftwareObjects.ShiftsCollection.Add(m_Shift);
+
+                    //Add to datagrid
+                    string hostOrHostess = Cmb_Shifts_Shift_HostOrHostess.Text.Split('\t')[1];
+                    m_Datagrid_Missions_ShiftsCollection.Add(new m_Datagrid_Mission_Shifts(m_Shift.date, hostOrHostess, m_Shift.start_time, m_Shift.end_time));
+                    Datagrid_Shifts.Items.Refresh();
+
+                    //Edit the mission to include the id of the new shift
+                    m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
+                        m_Mission.client_name, m_Mission.country, m_Mission.description, m_Mission.end_date, m_Mission.id,
+                        m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+                }
+                else if (res.Contains("Error"))
+                {
+                    //Treatment of the error
+                    MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                    return;
+                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Click on the delete button
+        /// </summary>
+        private void Btn_Shifts_Delete_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
         /// Click on quit wihout saving button
         /// </summary>
         private void Btn_Shifts_QuitWithoutSaving_Click(object sender, RoutedEventArgs e)
@@ -320,11 +438,36 @@ namespace WindowMission
 
         /// <summary>
         /// Event
+        /// Click on the modify button
+        /// </summary>
+        private void Btn_Shifts_Modify_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
         /// Click on the save button
         /// </summary>
         private void Btn_Shifts_Save_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
         }
 
         /// <summary>
@@ -333,9 +476,13 @@ namespace WindowMission
         /// </summary>
         private void Datagrid_Shifts_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
-            //TODO
             string columnHeader = e.Column.Header.ToString();
-            if (columnHeader == "hostorhostess")
+            if (columnHeader == "date")
+            {
+                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("Date");
+                e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
+            }
+            else if (columnHeader == "hostorhostess")
             {
                 e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostess");
                 e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);

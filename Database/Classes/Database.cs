@@ -178,7 +178,7 @@ namespace Database
         /// <param name="_SocialNumber">State of the host or hostess</param>
         /// <param name="_State">State of the host or hostess</param>
         /// <param name="_ZipCode">Zip code of the host or hostess</param>
-        /// <returns>The string containing the result of the operation (Id of the contact created, error)</returns>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Add_HostAndHostessToDatabase(string _Address, string _BirthCity, string _BirthDate, string _CellPhone, string _City, string _Country,
             string _Email, string _FirstName, bool _HasCar, bool _HasDriverLicence, string _Id, string _IdPaycheck, bool _LanguageEnglish,
@@ -535,7 +535,7 @@ namespace Database
         /// <param name="_State">State of the client</param>
         /// <param name="_VATNumber">VAT number of the client</param>
         /// <param name="_ZipCode">Zip code of the client</param>
-        /// <returns>The string containing the result of the operation (Id of the contact created, error)</returns>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Add_ClientToDatabase(string _Address, string _City, string _CorporateName, string _CorporateNumber, string _Country,
             string _Id, string _Phone, string _State, string _VATNumber, string _ZipCode)
@@ -837,8 +837,8 @@ namespace Database
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Add_MissionToDatabase(string _Address, string _City,
-                        string _ClientName, string _Country, string _Description, string _EndDate, string _Id,
-                        string _ListOfShiftsId, string _StartDate, string _State, string _ZipCode)
+                        string _ClientName, string _Country, string _Description, string _EndDate,
+                        string _Id, string _StartDate, string _State, string _ZipCode)
         {
             try
             {
@@ -849,8 +849,8 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "INSERT INTO missions (address, city, client_name, country, date_creation, description, end_date, id, id_list_shifts, start_date, state, zipcode)" +
-                    " VALUES (@address, @city, @client_name, @country, @date_creation, @description, @end_date, @id, @id_list_shifts, @start_date, @state, @zipcode)";
+                cmd.CommandText = "INSERT INTO missions (address, city, client_name, country, date_creation, description, end_date, id, start_date, state, zipcode)" +
+                    " VALUES (@address, @city, @client_name, @country, @date_creation, @description, @end_date, @id, @start_date, @state, @zipcode)";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@address", _Address);
@@ -861,7 +861,6 @@ namespace Database
                 cmd.Parameters.AddWithValue("@description", _Description);
                 cmd.Parameters.AddWithValue("@end_date", _EndDate);
                 cmd.Parameters.AddWithValue("@id", _Id);
-                cmd.Parameters.AddWithValue("@id_list_shifts", _ListOfShiftsId);
                 cmd.Parameters.AddWithValue("@start_date", _StartDate);
                 cmd.Parameters.AddWithValue("@state", _State);
                 cmd.Parameters.AddWithValue("@zipcode", _ZipCode);
@@ -1119,7 +1118,7 @@ namespace Database
         #region Shifts
 
         /// <summary>
-        /// Get all the shifts from a list of shifts Id
+        /// Add a shift to the database
         /// <param name="_ListOfShiftsId">Id of the client</param>
         /// <returns>The list of corresponding shifts</returns>
         /// </summary>
@@ -1143,7 +1142,7 @@ namespace Database
                     }
 
                     //SQL request
-                    cmd.CommandText = "SELECT * FROM shifts WHERE @id=" + _ListOfShiftsId[iShift];
+                    cmd.CommandText = "SELECT * FROM shifts WHERE id=\"" + _ListOfShiftsId[iShift] + "\"";
 
                     //Execute request
                     MySqlDataAdapter mySQLDatabaseAdapter = new MySqlDataAdapter(cmd);
@@ -1157,7 +1156,8 @@ namespace Database
                                              date = row["date"].ToString(),
                                              end_time = row["end_time"].ToString(),
                                              hourly_rate = row["hourly_rate"].ToString(),
-                                             id_list_hostsandhostesses = row["id_list_hostsandhostesses"].ToString(),
+                                             id = _ListOfShiftsId[iShift],
+                                             id_hostorhostess = row["id_hostorhostess"].ToString(),
                                              id_mission = row["id_mission"].ToString(),
                                              start_time = row["start_time"].ToString(),
                                              suit = (bool)row["suit"]
@@ -1183,6 +1183,60 @@ namespace Database
             }
         }
 
+        /// <summary>
+        /// Get all the shifts from a list of shifts Id
+        /// <param name="_Date">Date of the shift</param>
+        /// <param name="_EndTime">End time of the shift</param>
+        /// <param name="_HourlyRate">Hourly rate of the shift</param>
+        /// <param name="_Id">Id of the shift</param>
+        /// <param name="_Id_HostOrHostess">Id of the host or hostess assigned to the shift</param>
+        /// <param name="_Date">Date of the shift</param>
+        /// <param name="_StartTime">Start time of the shift</param>
+        /// <param name="_Suit">Suit lent or not</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public String Add_ShiftToDatabase(string _Date, string _EndTime, string _HourlyRate, string _Id, string _Id_HostOrHostess, string _IdMission, string _StartTime, bool _Suit)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "INSERT INTO shifts (date, end_time, hourly_rate, id, id_hostorhostess, id_mission, start_time, suit)" +
+                    " VALUES (@date, @end_time, @hourly_rate, @id, @id_hostorhostess, @id_mission, @start_time, @suit)";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@date", _Date);
+                cmd.Parameters.AddWithValue("@end_time", _EndTime);
+                cmd.Parameters.AddWithValue("@hourly_rate", _HourlyRate);
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@id_hostorhostess", _Id_HostOrHostess);
+                cmd.Parameters.AddWithValue("@id_mission", _IdMission);
+                cmd.Parameters.AddWithValue("@start_time", _StartTime);
+                cmd.Parameters.AddWithValue("@suit", _Suit);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "Error - " + e.Message;
+            }
+        }
 
 
         #endregion

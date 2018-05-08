@@ -8,9 +8,9 @@
         <Rectangle Fill="#FFF4F4F5" Height="142" Margin="0,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="642"/>
 
         <!--Buttons -->
-        <Button x:Name="Btn_Shifts_Add" Height="33" Margin="10,368,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" TabIndex="10" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Click="Btn_Shifts_Save_Click" HorizontalAlignment="Left" Width="200"/>
-        <Button x:Name="Btn_Shifts_Delete" Height="33" Margin="0,368,10,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" Foreground="White" TabIndex="12" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" Click="Btn_Shifts_QuitWithoutSaving_Click" HorizontalAlignment="Right" Width="212"/>
-        <Button x:Name="Btn_Shifts_Modify" Height="33" Margin="215,368,227,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Modify" TabIndex="11" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF017832" Click="Btn_Shifts_Save_Click" Width="200"/>
+        <Button x:Name="Btn_Shifts_Add" Height="33" Margin="10,368,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" TabIndex="10" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" HorizontalAlignment="Left" Width="200" Click="Btn_Shifts_Add_Click"/>
+        <Button x:Name="Btn_Shifts_Delete" Height="33" Margin="0,368,10,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" Foreground="White" TabIndex="12" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="212" Click="Btn_Shifts_Delete_Click"/>
+        <Button x:Name="Btn_Shifts_Modify" Height="33" Margin="215,368,227,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Modify" TabIndex="11" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF017832" Width="200" Click="Btn_Shifts_Modify_Click"/>
         <Button x:Name="Btn_Shifts_QuitWithoutSaving" Height="33" Margin="10,0,10,10" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Foreground="White" TabIndex="18" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" Click="Btn_Shifts_QuitWithoutSaving_Click"/>
         <Button x:Name="Btn_Shifts_Save" Height="33" Margin="10,0,10,48" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Save" TabIndex="14" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Click="Btn_Shifts_Save_Click"/>
 
@@ -23,7 +23,7 @@
         <!--Combo boxes -->
         <ComboBox x:Name="Cmb_Shifts_Shift_EndHour_Hour" HorizontalAlignment="Left" Height="20" Margin="339,190,0,0" VerticalAlignment="Top" Width="61" TabIndex="4"/>
         <ComboBox x:Name="Cmb_Shifts_Shift_EndHour_Min" HorizontalAlignment="Left" Height="20" Margin="405,190,0,0" VerticalAlignment="Top" Width="61" TabIndex="5"/>
-        <ComboBox x:Name="Cmb_Shifts_Shift_HostOrHostess" Height="20" Margin="298,332,10,0" VerticalAlignment="Top" TabIndex="9"/>
+        <ComboBox x:Name="Cmb_Shifts_Shift_HostOrHostess" Height="20" Margin="298,332,10,0" VerticalAlignment="Top" TabIndex="9" IsEditable="True"/>
         <ComboBox x:Name="Cmb_Shifts_Shift_StartHour_Hour" HorizontalAlignment="Left" Height="20" Margin="194,190,0,0" VerticalAlignment="Top" Width="61" TabIndex="2"/>
         <ComboBox x:Name="Cmb_Shifts_Shift_StartHour_Min" HorizontalAlignment="Left" Height="20" Margin="260,190,0,0" VerticalAlignment="Top" Width="61" TabIndex="3"/>
 

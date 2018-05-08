@@ -43,9 +43,9 @@
         }
 
         /// <summary>
-        /// Getter/Setter for the list of hosts and hostesses id
+        /// Getter/Setter for the host or hostess id
         /// </summary>
-        public string id_list_hostsandhostesses
+        public string id_hostorhostess
         {
             get;
             set;

@@ -1225,11 +1225,10 @@ namespace Software
                 Mission newMission = new Mission(missionSel);
                 newMission.id = newMission.Create_MissionId();
                 newMission.date_creation = DateTime.Now.ToString();
-                newMission.id_list_shifts = "";
 
                 //Add to database
                 string res = m_Database_Handler.Add_MissionToDatabase(newMission.address, newMission.city, newMission.client_name, newMission.country,
-                    newMission.description, newMission.end_date, newMission.id, newMission.id_list_shifts, newMission.start_date, newMission.state, newMission.zipcode);
+                    newMission.description, newMission.end_date, newMission.id, newMission.start_date, newMission.state, newMission.zipcode);
 
                 //Treat the result
                 if (res.Contains("OK"))
