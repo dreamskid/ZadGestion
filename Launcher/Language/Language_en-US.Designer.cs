@@ -19,7 +19,7 @@ namespace Launcher.Language {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Language_en_US {
@@ -994,6 +994,15 @@ namespace Launcher.Language {
         public static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while creating the directory.
+        /// </summary>
+        public static string ErrorCreateDirectory {
+            get {
+                return ResourceManager.GetString("ErrorCreateDirectory", resourceCulture);
             }
         }
         
@@ -2119,6 +2128,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No host or hostess selected.
+        /// </summary>
+        public static string NoHostSelectedErrorCaption {
+            get {
+                return ResourceManager.GetString("NoHostSelectedErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please, select a host or a hostess.
+        /// </summary>
+        public static string NoHostSelectedErrorText {
+            get {
+                return ResourceManager.GetString("NoHostSelectedErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Non numerical expression, please correct the value.
         /// </summary>
         public static string NonNumericExpression {
@@ -2133,6 +2160,24 @@ namespace Launcher.Language {
         public static string NonNumericExpressionCaption {
             get {
                 return ResourceManager.GetString("NonNumericExpressionCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No shift selected.
+        /// </summary>
+        public static string NoShiftSelectedErrorCaption {
+            get {
+                return ResourceManager.GetString("NoShiftSelectedErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please, select a shift.
+        /// </summary>
+        public static string NoShiftSelectedErrorText {
+            get {
+                return ResourceManager.GetString("NoShiftSelectedErrorText", resourceCulture);
             }
         }
         
@@ -2295,6 +2340,15 @@ namespace Launcher.Language {
         public static string Quantity {
             get {
                 return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quit.
+        /// </summary>
+        public static string Quit {
+            get {
+                return ResourceManager.GetString("Quit", resourceCulture);
             }
         }
         
@@ -2470,11 +2524,38 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the selected shift?.
+        /// </summary>
+        public static string ShiftConfirmDelete {
+            get {
+                return ResourceManager.GetString("ShiftConfirmDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete shift.
+        /// </summary>
+        public static string ShiftConfirmDeleteCaption {
+            get {
+                return ResourceManager.GetString("ShiftConfirmDeleteCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shifts.
         /// </summary>
         public static string Shifts {
             get {
                 return ResourceManager.GetString("Shifts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while filling the shifts collection.
+        /// </summary>
+        public static string ShiftsFillCollectionErrorCaption {
+            get {
+                return ResourceManager.GetString("ShiftsFillCollectionErrorCaption", resourceCulture);
             }
         }
         

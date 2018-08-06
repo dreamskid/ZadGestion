@@ -533,6 +533,9 @@ namespace Software
                 //Actualize the missions collection
                 Actualize_GridMissionsFromDatabase();
 
+                //Fill the shifts collection
+                Fill_ShiftsCollectionFromDatabase();
+
                 //Setting the contents of objects
                 if (m_Global_Handler != null)
                 {
@@ -947,6 +950,7 @@ namespace Software
                         Btn_Missions_Edit.IsEnabled = false;
 
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         return;
@@ -954,6 +958,7 @@ namespace Software
                     else
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Error connecting to web site
@@ -1074,9 +1079,12 @@ namespace Software
                                 m_Id_SelectedMission = (string)childButton.Tag;
                             }
 
-                            //Display the last hostess
+                            //Display the last mission
                             Scrl_Grid_Missions_Details.ScrollToBottom();
                         }
+
+                        //Select the mission
+                        Select_Mission(missionToAdd);
 
                         //Enable the buttons
                         Btn_Missions_Delete.IsEnabled = true;
@@ -1140,6 +1148,17 @@ namespace Software
                     //Action
                     m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.client_name + " - From " + missionSel.start_date + " to " + missionSel.end_date + " deleted");
 
+                    //Delete the associated shifts
+                    List<String> listShiftsId = new List<string>();
+                    if (missionSel.id_list_shifts != null)
+                    {
+                        listShiftsId = new List<string>(missionSel.id_list_shifts.Split(';'));
+                    }
+                    for (int iShift = 0; iShift < listShiftsId.Count; ++iShift)
+                    {
+                        m_Database_Handler.Delete_ShiftFromDatabase(listShiftsId[iShift]);
+                    }
+
                     //Actualize and filter
                     Actualize_GridMissionsFromDatabase();
 
@@ -1164,6 +1183,7 @@ namespace Software
                     Btn_Missions_Edit.IsEnabled = false;
 
                     //Close the wait window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                     return;
@@ -1171,6 +1191,7 @@ namespace Software
                 else if (res.Contains("error"))
                 {
                     //Close the wait window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                     //Treatment of the error
@@ -1246,6 +1267,7 @@ namespace Software
                     Select_Mission(newMission);
 
                     //Close the window wait
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                     return;
@@ -1253,6 +1275,7 @@ namespace Software
                 else
                 {
                     //Close the wait window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                     //Error connecting to web site
@@ -1264,6 +1287,7 @@ namespace Software
             }
             catch (Exception exception)
             {
+                Thread.Sleep(500);
                 windowWait.Stop();
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
@@ -1332,6 +1356,7 @@ namespace Software
                     }
 
                     //Close the window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                     return;
@@ -1340,6 +1365,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Close the window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
@@ -1533,6 +1559,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
@@ -1591,6 +1618,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
@@ -2351,7 +2379,7 @@ namespace Software
                 }
 
                 //Edit in internet database
-                string res = m_Database_Handler.Delete_HostAndHostessToDatabase(hostOrHostess.id);
+                string res = m_Database_Handler.Delete_HostAndHostessFromDatabase(hostOrHostess.id);
 
                 //Treat the result
                 if (res.Contains("OK"))
@@ -4211,7 +4239,7 @@ namespace Software
                 }
 
                 //Edit in internet database
-                string res = m_Database_Handler.Delete_ClientToDatabase(client.id);
+                string res = m_Database_Handler.Delete_ClientFromDatabase(client.id);
 
                 //Treat the result
                 if (res.Contains("OK"))
@@ -5530,7 +5558,7 @@ namespace Software
             try
             {
                 //Treatment of the first row
-                Grid_Missions_Details.RowDefinitions[0].MinHeight = 350;
+                Grid_Missions_Details.RowDefinitions[0].MinHeight = 200;
 
                 //Add to displayed collection
                 m_DisplayedMissionsCollection.Add(_Mission);
@@ -5859,7 +5887,7 @@ namespace Software
                         m_GridMission_Column = 0;
                         m_GridMission_Row += 1;
                         RowDefinition row = new RowDefinition();
-                        row.MinHeight = 350;
+                        row.MinHeight = 200;
                         Grid_Missions_Details.RowDefinitions.Add(row);
                         Grid.SetColumn(stackPanel, m_GridMission_Column);
                         Grid.SetRow(stackPanel, m_GridMission_Row);
@@ -6765,6 +6793,43 @@ namespace Software
             {
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return null;
+            }
+        }
+
+        #endregion
+
+        #region Shifts
+
+        /// <summary>
+        /// Functions
+        /// Shifts
+        /// Fill the shifts collection from database
+        /// </summary>
+        private void Fill_ShiftsCollectionFromDatabase()
+        {
+            try
+            {
+                if (m_Database_Handler != null)
+                {
+                    SoftwareObjects.ShiftsCollection.Clear();
+                    string res = m_Database_Handler.Get_ShiftsFromDatabase();
+                    if (res.Contains("OK"))
+                    {
+                        return;
+                    }
+                    else if (res.Contains("Error"))
+                    {
+                        MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("ShiftsFillCollectionErrorCaption"),
+                            MessageBoxButton.OK, MessageBoxImage.Error);
+                        SoftwareObjects.ShiftsCollection = new List<Shift>();
+                        return;
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
             }
         }
 

@@ -9,8 +9,8 @@
         <Button x:Name="Btn_Client_QuitWithoutSaving" Height="33" Margin="10,0,10,10" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Click="Btn_Client_QuitWithoutSaving_Click" Foreground="White" TabIndex="11" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center"/>
 
         <!--Combo boxes-->
-        <ComboBox x:Name="Cmb_Client_City" Height="20" Margin="185,0,10,266" VerticalAlignment="Bottom" TabIndex="7" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_Client_Country" HorizontalAlignment="Left" Height="20" Margin="10,0,0,208" VerticalAlignment="Bottom" Width="170" TabIndex="8" SelectionChanged="Cmb_Client_Country_SelectionChanged"/>
+        <ComboBox x:Name="Cmb_Client_City" Height="20" Margin="185,0,10,266" VerticalAlignment="Bottom" TabIndex="4" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_Client_Country" HorizontalAlignment="Left" Height="20" Margin="10,0,0,208" VerticalAlignment="Bottom" Width="170" TabIndex="5" SelectionChanged="Cmb_Client_Country_SelectionChanged"/>
 
         <!--Labels-->
         <Label x:Name="Lbl_Client_Address" Content="Address" HorizontalAlignment="Left" Height="28" Margin="10,63,0,0" VerticalAlignment="Top" Width="131"/>
@@ -24,13 +24,13 @@
         <Label x:Name="Lbl_Client_ZipCode" Content="ZipCode" HorizontalAlignment="Left" Height="28" Margin="10,0,0,291" VerticalAlignment="Bottom" Width="131"/>
 
         <!--Text boxes-->
-        <TextBox x:Name="Txt_Client_Address" Margin="10,96,10,324" TextWrapping="Wrap" TabIndex="5"/>
+        <TextBox x:Name="Txt_Client_Address" Margin="10,96,10,324" TextWrapping="Wrap" TabIndex="2"/>
         <TextBox x:Name="Txt_Client_CorporateName" Height="20" Margin="10,38,10,0" TextWrapping="Wrap" VerticalAlignment="Top" TabIndex="1"/>
-        <TextBox x:Name="Txt_Client_CorporateNumber" Height="20" Margin="185,0,10,151" TextWrapping="Wrap" VerticalAlignment="Bottom" TabIndex="3"/>
-        <TextBox x:Name="Txt_Client_VATNumber" Height="20" Margin="10,0,10,98" TextWrapping="Wrap" VerticalAlignment="Bottom" TabIndex="4"/>
-        <TextBox x:Name="Txt_Client_Phone" HorizontalAlignment="Left" Height="20" Margin="10,0,0,151" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="170" TabIndex="2"/>
-        <TextBox x:Name="Txt_Client_State" Height="20" Margin="185,0,10,208" TextWrapping="Wrap" VerticalAlignment="Bottom" TabIndex="9"/>
-        <TextBox x:Name="Txt_Client_ZipCode" HorizontalAlignment="Left" Height="20" Margin="10,0,0,266" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="170" TabIndex="6" TextChanged="Txt_Client_ZipCode_TextChanged"/>
+        <TextBox x:Name="Txt_Client_CorporateNumber" Height="20" Margin="185,0,10,151" TextWrapping="Wrap" VerticalAlignment="Bottom" TabIndex="8"/>
+        <TextBox x:Name="Txt_Client_VATNumber" Height="20" Margin="10,0,10,98" TextWrapping="Wrap" VerticalAlignment="Bottom" TabIndex="9"/>
+        <TextBox x:Name="Txt_Client_Phone" HorizontalAlignment="Left" Height="20" Margin="10,0,0,151" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="170" TabIndex="7"/>
+        <TextBox x:Name="Txt_Client_State" Height="20" Margin="185,0,10,208" TextWrapping="Wrap" VerticalAlignment="Bottom" TabIndex="6"/>
+        <TextBox x:Name="Txt_Client_ZipCode" HorizontalAlignment="Left" Height="20" Margin="10,0,0,266" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="170" TabIndex="3" TextChanged="Txt_Client_ZipCode_TextChanged"/>
 
     </Grid>
 

@@ -35,46 +35,6 @@ namespace WindowMission
         private static Database.Database m_Database_Handler = null;
 
         /// <summary>
-        /// Class for Datagrid_Shifts
-        /// </summary>
-        public class m_Datagrid_Shifts
-        {
-
-            /// <summary>
-            /// Constructor for m_Datagrid_Shifts
-            /// </summary>
-            public m_Datagrid_Shifts(int _Id, string _Date, string _StartTime, string EndTime)
-            {
-                id = _Id;
-                date = _Date;
-                start_time = _StartTime;
-                end_time = EndTime;
-            }
-
-            /// <summary>
-            /// Id
-            /// </summary>
-            public int id { set; get; }
-            /// <summary>
-            /// Date
-            /// </summary>
-            public string date { set; get; }
-            /// <summary>
-            /// Start of the shift time
-            /// </summary>
-            public string start_time { set; get; }
-            /// <summary>
-            /// End of the shift time
-            /// </summary>
-            public string end_time { set; get; }
-        }
-
-        /// <summary>
-        /// List of shifts
-        /// </summary>
-        private List<m_Datagrid_Shifts> m_Datagrid_ShiftsCollection = new List<m_Datagrid_Shifts>();
-
-        /// <summary>
         /// Initialization
         /// Variables
         /// Global handlers for common objects
@@ -113,14 +73,19 @@ namespace WindowMission
             /// <summary>
             /// Constructor
             /// </summary>
-            public m_Datagrid_Mission_Shifts(string _Date, string _HostOrHostess, string _StartTime, string _EndTime)
+            public m_Datagrid_Mission_Shifts(string _Id, string _Date, string _HostOrHostess, string _StartTime, string _EndTime)
             {
+                id = _Id;
                 date = _Date;
                 hostorhostess = _HostOrHostess;
                 start_time = _StartTime;
                 end_time = _EndTime;
             }
 
+            /// <summary>
+            /// Id
+            /// </summary>
+            public string id { set; get; }
             /// <summary>
             /// Date
             /// </summary>
@@ -197,7 +162,11 @@ namespace WindowMission
                 Txt_Shifts_Mission_Client.Text = m_Mission.client_name;
                 Txt_Shifts_Mission_EndDate.Text = m_Mission.end_date;
                 Txt_Shifts_Mission_StartDate.Text = m_Mission.start_date;
-
+                if (m_Mission.start_date != "")
+                {
+                    Cld_Shifts_Shift_Date.SelectedDate = Convert.ToDateTime(m_Mission.start_date);
+                    Cld_Shifts_Shift_Date.DisplayDate = Convert.ToDateTime(m_Mission.start_date);
+                }
                 //Fill combo boxes
                 for (int iHour = 0; iHour <= 24; ++iHour)
                 {
@@ -208,9 +177,9 @@ namespace WindowMission
                 Cmb_Shifts_Shift_StartHour_Hour.SelectedIndex = 12;
                 for (int iMin = 0; iMin < 4; ++iMin)
                 {
-                    iMin = iMin * 15;
-                    Cmb_Shifts_Shift_EndHour_Min.Items.Add(iMin.ToString("00")); ;
-                    Cmb_Shifts_Shift_StartHour_Min.Items.Add(iMin.ToString("00")); ;
+                    int min = iMin * 15;
+                    Cmb_Shifts_Shift_EndHour_Min.Items.Add(min.ToString("00")); ;
+                    Cmb_Shifts_Shift_StartHour_Min.Items.Add(min.ToString("00")); ;
                 }
                 Cmb_Shifts_Shift_EndHour_Min.SelectedIndex = 0;
                 Cmb_Shifts_Shift_StartHour_Min.SelectedIndex = 0;
@@ -228,7 +197,7 @@ namespace WindowMission
                 for (int iShift = 0; iShift < m_ListOfShifts.Count; ++iShift)
                 {
                     Shift shiftSel = m_ListOfShifts[iShift];
-                    m_Datagrid_Mission_Shifts data = new m_Datagrid_Mission_Shifts(shiftSel.date,
+                    m_Datagrid_Mission_Shifts data = new m_Datagrid_Mission_Shifts(shiftSel.id, shiftSel.date,
                         SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(shiftSel.id_hostorhostess)).firstname + " " +
                         SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(shiftSel.id_hostorhostess)).lastname,
                         shiftSel.start_time, shiftSel.end_time);
@@ -279,8 +248,7 @@ namespace WindowMission
                 Btn_Shifts_Add.Content = m_Global_Handler.Resources_Handler.Get_Resources("Add");
                 Btn_Shifts_Delete.Content = m_Global_Handler.Resources_Handler.Get_Resources("Delete");
                 Btn_Shifts_Modify.Content = m_Global_Handler.Resources_Handler.Get_Resources("Modify");
-                Btn_Shifts_Save.Content = m_Global_Handler.Resources_Handler.Get_Resources("Save");
-                Btn_Shifts_QuitWithoutSaving.Content = m_Global_Handler.Resources_Handler.Get_Resources("QuitWithoutSaving");
+                Btn_Shifts_Quit.Content = m_Global_Handler.Resources_Handler.Get_Resources("Quit");
 
                 //Datagrid
                 Datagrid_Shifts.ItemsSource = m_Datagrid_Missions_ShiftsCollection;
@@ -351,7 +319,17 @@ namespace WindowMission
                 m_Shift.end_time = Cmb_Shifts_Shift_EndHour_Hour.Text + ":" + Cmb_Shifts_Shift_EndHour_Min.Text;
                 m_Shift.start_time = Cmb_Shifts_Shift_StartHour_Hour.Text + ":" + Cmb_Shifts_Shift_StartHour_Min.Text;
                 m_Shift.hourly_rate = Txt_Shifts_Shift_HourlyRate.Text;
-                m_Shift.id_hostorhostess = m_List_IdHostsAndHostesses[Cmb_Shifts_Shift_HostOrHostess.SelectedIndex];
+                m_Shift.pause = Txt_Shifts_Shift_Pause.Text;
+                if (Cmb_Shifts_Shift_HostOrHostess.SelectedIndex != -1)
+                {
+                    m_Shift.id_hostorhostess = m_List_IdHostsAndHostesses[Cmb_Shifts_Shift_HostOrHostess.SelectedIndex];
+                }
+                else
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("NoHostSelectedErrorText"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("NoHostSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
                 m_Shift.id = m_Mission.id + "_" + m_Shift.date + "_" + m_Shift.start_time + "_" + m_Shift.end_time + "_" + m_Shift.id_hostorhostess;
                 m_Shift.id_mission = m_Mission.id;
                 m_Shift.suit = (bool)Chk_Shifts_Shift_Suit.IsChecked;
@@ -366,18 +344,22 @@ namespace WindowMission
 
                 //Add to internet database
                 string res = m_Database_Handler.Add_ShiftToDatabase(m_Shift.date, m_Shift.end_time, m_Shift.hourly_rate, m_Shift.id, m_Shift.id_hostorhostess, m_Shift.id_mission,
-                    m_Shift.start_time, m_Shift.suit);
+                    m_Shift.pause, m_Shift.start_time, m_Shift.suit);
 
                 //Treat the result
                 if (res.Contains("OK"))
                 {
+                    //Action
+                    m_Global_Handler.Log_Handler.WriteAction("Shift " + m_Shift.id + " added");
+
                     //Add to collection
                     SoftwareObjects.ShiftsCollection.Add(m_Shift);
 
                     //Add to datagrid
                     string hostOrHostess = Cmb_Shifts_Shift_HostOrHostess.Text.Split('\t')[1];
-                    m_Datagrid_Missions_ShiftsCollection.Add(new m_Datagrid_Mission_Shifts(m_Shift.date, hostOrHostess, m_Shift.start_time, m_Shift.end_time));
+                    m_Datagrid_Missions_ShiftsCollection.Add(new m_Datagrid_Mission_Shifts(m_Shift.id, m_Shift.date, hostOrHostess, m_Shift.start_time, m_Shift.end_time));
                     Datagrid_Shifts.Items.Refresh();
+                    Datagrid_Shifts.SelectedItem = Datagrid_Shifts.Items[Datagrid_Shifts.Items.Count - 1];
 
                     //Edit the mission to include the id of the new shift
                     m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
@@ -407,32 +389,89 @@ namespace WindowMission
         {
             try
             {
+                //Verification
+                if (m_Shift.id == null)
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("NoShiftSelectedErrorText"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("NoShiftSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
 
+                //Confirm the delete
+                MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ShiftConfirmDelete"),
+                    m_Global_Handler.Resources_Handler.Get_Resources("ShiftConfirmDeleteCaption"),
+                    MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+                if (result == MessageBoxResult.No)
+                {
+                    return;
+                }
+
+                //Delete in database
+                string res = m_Database_Handler.Delete_ShiftFromDatabase(m_Shift.id);
+
+                //Treat the result
+                if (res.Contains("OK"))
+                {
+                    //Action
+                    m_Global_Handler.Log_Handler.WriteAction("Shift " + m_Shift.id + " deleted");
+
+                    //Delete from the datagrid
+                    int index = Datagrid_Shifts.SelectedIndex;
+                    m_Datagrid_Missions_ShiftsCollection.Remove((m_Datagrid_Mission_Shifts)Datagrid_Shifts.SelectedItem);
+                    Datagrid_Shifts.Items.Refresh();
+                    if (index - 1 >= 0)
+                    {
+                        //Select the one before the deleted item
+                        Datagrid_Shifts.SelectedIndex = index - 1;
+                    }
+                    else if (Datagrid_Shifts.Items.Count > 0)
+                    {
+                        //Select the first one
+                        Datagrid_Shifts.SelectedItem = 0;
+                    }
+
+                    //Delete from the mission
+                    m_Mission.id_list_shifts = m_Mission.id_list_shifts.Replace(m_Shift.id + ";", "");
+                    m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
+                        m_Mission.client_name, m_Mission.country, m_Mission.description, m_Mission.end_date, m_Mission.id,
+                        m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+
+                    //Delete from the collection
+                    SoftwareObjects.ShiftsCollection.Remove(m_Shift);
+
+                    //Clear boxes
+                    Cld_Shifts_Shift_Date.SelectedDate = DateTime.Today;
+                    Cld_Shifts_Shift_Date.DisplayDate = DateTime.Today;
+                    Txt_Shifts_Shift_HourlyRate.Text = "";
+                    Txt_Shifts_Shift_Pause.Text = "";
+                    Cmb_Shifts_Shift_EndHour_Hour.Text = "";
+                    Cmb_Shifts_Shift_EndHour_Min.Text = "";
+                    Cmb_Shifts_Shift_HostOrHostess.Text = "";
+                    Cmb_Shifts_Shift_StartHour_Hour.Text = "";
+                    Cmb_Shifts_Shift_StartHour_Min.Text = "";
+                    Chk_Shifts_Shift_Suit.IsChecked = false;
+
+                    return;
+                }
+                else if (res.Contains("error"))
+                {
+                    //Treatment of the error
+                    MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                    return;
+                }
+                else
+                {
+                    //Error connecting to web site
+                    MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                    return;
+                }
             }
             catch (Exception exception)
             {
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
-            }
-        }
-
-        /// <summary>
-        /// Event
-        /// Click on quit wihout saving button
-        /// </summary>
-        private void Btn_Shifts_QuitWithoutSaving_Click(object sender, RoutedEventArgs e)
-        {
-            //Confirm
-            MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("QuitWithoutSavingMessage"),
-                            m_Global_Handler.Resources_Handler.Get_Resources("QuitWithoutSavingCaption"),
-                            MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
-
-            //Quit
-            if (result == MessageBoxResult.Yes)
-            {
-                m_ConfirmQuit = true;
-                this.DialogResult = false;
-                Close();
             }
         }
 
@@ -444,7 +483,86 @@ namespace WindowMission
         {
             try
             {
+                //Fill parameters
+                DateTime dateSelected = DateTime.Today;
+                if (Cld_Shifts_Shift_Date.SelectedDate != null)
+                {
+                    dateSelected = (DateTime)Cld_Shifts_Shift_Date.SelectedDate;
+                }
+                m_Shift.date = dateSelected.ToString("dd/MM/yyyy");
+                m_Shift.end_time = Cmb_Shifts_Shift_EndHour_Hour.Text + ":" + Cmb_Shifts_Shift_EndHour_Min.Text;
+                m_Shift.start_time = Cmb_Shifts_Shift_StartHour_Hour.Text + ":" + Cmb_Shifts_Shift_StartHour_Min.Text;
+                m_Shift.hourly_rate = Txt_Shifts_Shift_HourlyRate.Text;
+                if (Cmb_Shifts_Shift_HostOrHostess.SelectedIndex != -1)
+                {
+                    m_Shift.id_hostorhostess = m_List_IdHostsAndHostesses[Cmb_Shifts_Shift_HostOrHostess.SelectedIndex];
+                }
+                else
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("NoHostSelectedErrorText"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("NoHostSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+                m_Shift.id_mission = m_Mission.id;
+                m_Shift.pause = Txt_Shifts_Shift_Pause.Text;
+                m_Shift.suit = (bool)Chk_Shifts_Shift_Suit.IsChecked;
 
+                //Edit to internet database
+                string res = m_Database_Handler.Edit_ShiftToDatabase(m_Shift.date, m_Shift.end_time, m_Shift.hourly_rate, m_Shift.id, m_Shift.id_hostorhostess, m_Shift.id_mission,
+                    m_Shift.pause, m_Shift.start_time, m_Shift.suit);
+
+                //Treat the result
+                if (res.Contains("OK"))
+                {
+                    //Edit id
+                    string newId = m_Mission.id + "_" + m_Shift.date + "_" + m_Shift.start_time + "_" + m_Shift.end_time + "_" + m_Shift.id_hostorhostess;
+                    m_Database_Handler.Edit_ShiftIdToDatabase(m_Shift.id, newId);
+                    //Edit the mission to include the id of the new shift
+                    m_Mission.id_list_shifts = m_Mission.id_list_shifts.Replace(m_Shift.id, newId);
+                    m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
+                        m_Mission.client_name, m_Mission.country, m_Mission.description, m_Mission.end_date, m_Mission.id,
+                        m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+
+                    //Edit into the collection
+                    Shift shift = SoftwareObjects.ShiftsCollection.Find(x => x.id.Equals(m_Shift.id));
+                    shift.date = m_Shift.date;
+                    shift.end_time = m_Shift.end_time;
+                    shift.hourly_rate = m_Shift.hourly_rate;
+                    shift.id = newId;
+                    shift.id_hostorhostess = m_Shift.id_hostorhostess;
+                    shift.id_mission = m_Shift.id_mission;
+                    shift.pause = m_Shift.pause;
+                    shift.start_time = m_Shift.start_time;
+                    shift.suit = m_Shift.suit;
+
+                    //Modify selected shift id
+                    m_Shift.id = newId;
+
+                    //Edit into the datagrid
+                    m_Datagrid_Mission_Shifts datagridShift = (m_Datagrid_Mission_Shifts)Datagrid_Shifts.SelectedItem;
+                    if (datagridShift != null)
+                    {
+                        datagridShift.id = m_Shift.id;
+                        datagridShift.date = m_Shift.date;
+                        datagridShift.end_time = m_Shift.end_time;
+                        datagridShift.hostorhostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(m_Shift.id_hostorhostess)).firstname + " " +
+                        SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(m_Shift.id_hostorhostess)).lastname;
+                        datagridShift.start_time = m_Shift.start_time;
+                    }
+                    Datagrid_Shifts.Items.Refresh();
+
+                    //Edit the mission to include the id of the new shift
+                    m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
+                        m_Mission.client_name, m_Mission.country, m_Mission.description, m_Mission.end_date, m_Mission.id,
+                        m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+                }
+                else if (res.Contains("Error"))
+                {
+                    //Treatment of the error
+                    MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                    return;
+                }
             }
             catch (Exception exception)
             {
@@ -457,11 +575,13 @@ namespace WindowMission
         /// Event
         /// Click on the save button
         /// </summary>
-        private void Btn_Shifts_Save_Click(object sender, RoutedEventArgs e)
+        private void Btn_Shifts_Quit_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-
+                m_ConfirmQuit = true;
+                this.DialogResult = true;
+                Close();
             }
             catch (Exception exception)
             {
@@ -477,7 +597,11 @@ namespace WindowMission
         private void Datagrid_Shifts_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
             string columnHeader = e.Column.Header.ToString();
-            if (columnHeader == "date")
+            if (columnHeader == "id")
+            {
+                e.Column.Visibility = Visibility.Collapsed;
+            }
+            else if (columnHeader == "date")
             {
                 e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("Date");
                 e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
@@ -503,6 +627,41 @@ namespace WindowMission
             else
             {
                 e.Column.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Datagrid shifts selcetion changed
+        /// </summary>
+        private void Datagrid_Shifts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                m_Datagrid_Mission_Shifts selectedShift = (m_Datagrid_Mission_Shifts)Datagrid_Shifts.SelectedItem;
+                if (selectedShift != null)
+                {
+                    //Find the shift in the collection
+                    Shift shift = SoftwareObjects.ShiftsCollection.Find(x => x.id.Equals(selectedShift.id));
+                    //Fill boxes
+                    Cmb_Shifts_Shift_StartHour_Hour.Text = shift.start_time.Split(':')[0];
+                    Cmb_Shifts_Shift_StartHour_Min.Text = shift.start_time.Split(':')[1];
+                    Cmb_Shifts_Shift_EndHour_Hour.Text = shift.end_time.Split(':')[0];
+                    Cmb_Shifts_Shift_EndHour_Min.Text = shift.end_time.Split(':')[1];
+                    Txt_Shifts_Shift_HourlyRate.Text = shift.hourly_rate;
+                    Txt_Shifts_Shift_Pause.Text = shift.pause;
+                    Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(y => y.id.Equals(shift.id_hostorhostess));
+                    Cmb_Shifts_Shift_HostOrHostess.Text = hostess.zipcode + " \t " + hostess.firstname + " " + hostess.lastname;
+                    Chk_Shifts_Shift_Suit.IsChecked = shift.suit;
+                    Cld_Shifts_Shift_Date.SelectedDate = Convert.ToDateTime(shift.date);
+                    Cld_Shifts_Shift_Date.DisplayDate = Convert.ToDateTime(shift.date);
+                    m_Shift = shift;
+                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
             }
         }
 
@@ -535,6 +694,5 @@ namespace WindowMission
         }
 
         #endregion
-
     }
 }

@@ -911,7 +911,17 @@ namespace WindowHostOrHostess
                 string repository = SoftwareObjects.GlobalSettings.photos_repository + "\\" + _HostOrHostess.id;
                 if (Directory.Exists(repository) == false)
                 {
-                    Directory.CreateDirectory(repository);
+                    try
+                    {
+                        Directory.CreateDirectory(repository);
+                    }
+                    catch (Exception exception)
+                    {
+                        //Treatment of the error
+                        MessageBox.Show(this, exception.Message, m_Global_Handler.Resources_Handler.Get_Resources("ErrorCreateDirectory"), MessageBoxButton.OK, MessageBoxImage.Error);
+                        m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                        return;
+                    }
                 }
 
                 // Save files

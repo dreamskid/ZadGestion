@@ -1350,4 +1350,40 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
     <value>Heure de début</value>
     <comment>Heure de début</comment>
   </data>
+  <data name="ErrorCreateDirectory" xml:space="preserve">
+    <value>Erreur lors de la création du répertoire</value>
+    <comment>Erreur lors de la création du répertoire</comment>
+  </data>
+  <data name="NoHostSelectedErrorCaption" xml:space="preserve">
+    <value>Aucun(e) hôte ou hôtesse sélectionné(e)</value>
+    <comment>Titre d'erreur d'absence d'hôte ou d'hôtesse lors de la création d'un shift</comment>
+  </data>
+  <data name="NoHostSelectedErrorText" xml:space="preserve">
+    <value>Veuilez sélectionner un hôte ou une hôtesse</value>
+    <comment>Texte d'erreur d'absence d'hôte ou d'hôtesse lors de la création d'un shift</comment>
+  </data>
+  <data name="NoShiftSelectedErrorCaption" xml:space="preserve">
+    <value>Aucun shift sélectionné</value>
+    <comment>Titre d'erreur d'absence de shift sélectionné</comment>
+  </data>
+  <data name="NoShiftSelectedErrorText" xml:space="preserve">
+    <value>Veuilez sélectionner un shift</value>
+    <comment>Texte d'erreur d'absence de shift sélectionné</comment>
+  </data>
+  <data name="Quit" xml:space="preserve">
+    <value>Quitter</value>
+    <comment>Quitter</comment>
+  </data>
+  <data name="ShiftConfirmDelete" xml:space="preserve">
+    <value>Êtes-vous sûr(e) de vouloir supprimer le shift sélectionné ?</value>
+    <comment>Texte de suppression de shift</comment>
+  </data>
+  <data name="ShiftConfirmDeleteCaption" xml:space="preserve">
+    <value>Suppresion d'un shift</value>
+    <comment>Titre de suppression de shift</comment>
+  </data>
+  <data name="ShiftsFillCollectionErrorCaption" xml:space="preserve">
+    <value>Erreur lors de la récupération des shifts depuis la base de données</value>
+    <comment>Titre d'erreur de récupération des shifts depuis la base de données</comment>
+  </data>
 </root>

@@ -11,8 +11,7 @@
         <Button x:Name="Btn_Shifts_Add" Height="33" Margin="10,368,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" TabIndex="10" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" HorizontalAlignment="Left" Width="200" Click="Btn_Shifts_Add_Click"/>
         <Button x:Name="Btn_Shifts_Delete" Height="33" Margin="0,368,10,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Delete" Foreground="White" TabIndex="12" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="212" Click="Btn_Shifts_Delete_Click"/>
         <Button x:Name="Btn_Shifts_Modify" Height="33" Margin="215,368,227,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Modify" TabIndex="11" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF017832" Width="200" Click="Btn_Shifts_Modify_Click"/>
-        <Button x:Name="Btn_Shifts_QuitWithoutSaving" Height="33" Margin="10,0,10,10" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Foreground="White" TabIndex="18" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center" Click="Btn_Shifts_QuitWithoutSaving_Click"/>
-        <Button x:Name="Btn_Shifts_Save" Height="33" Margin="10,0,10,48" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Save" TabIndex="14" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Click="Btn_Shifts_Save_Click"/>
+        <Button x:Name="Btn_Shifts_Quit" Height="33" Margin="10,0,9.8,10" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Quit" TabIndex="14" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" Click="Btn_Shifts_Quit_Click"/>
 
         <!--Calendar -->
         <Calendar x:Name="Cld_Shifts_Shift_Date" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" TabIndex="1" Height="173"/>
@@ -28,7 +27,7 @@
         <ComboBox x:Name="Cmb_Shifts_Shift_StartHour_Min" HorizontalAlignment="Left" Height="20" Margin="260,190,0,0" VerticalAlignment="Top" Width="61" TabIndex="3"/>
 
         <!--Datagrid-->
-        <DataGrid x:Name="Datagrid_Shifts" Margin="10,435,10,86" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" AlternationCount="2" AutoGeneratingColumn="Datagrid_Shifts_AutoGeneratingColumn" CanUserSortColumns="False" BorderBrush="White" BorderThickness="0" IsReadOnly="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" TabIndex="13">
+        <DataGrid x:Name="Datagrid_Shifts" Margin="10,435,9.8,48" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" AlternationCount="2" AutoGeneratingColumn="Datagrid_Shifts_AutoGeneratingColumn" CanUserSortColumns="False" BorderBrush="White" BorderThickness="0" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" TabIndex="13" SelectionChanged="Datagrid_Shifts_SelectionChanged">
             <DataGrid.RowStyle>
                 <Style TargetType="{x:Type DataGridRow}">
                     <Style.Triggers>

@@ -61,6 +61,15 @@
         }
 
         /// <summary>
+        /// Getter/Setter for the pause
+        /// </summary>
+        public string pause
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Getter/Setter for the start time of the shift
         /// </summary>
         public string start_time

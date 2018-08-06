@@ -261,11 +261,11 @@ namespace Database
         }
 
         /// <summary>
-        /// Delete a host or hostess to the ZadGestion's database
+        /// Delete a host or hostess from the ZadGestion's database
         /// <param name="_Id">Id of the host or hostess</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
-        public string Delete_HostAndHostessToDatabase(string _Id)
+        public string Delete_HostAndHostessFromDatabase(string _Id)
         {
             try
             {
@@ -626,11 +626,11 @@ namespace Database
         }
 
         /// <summary>
-        /// Delete a client to the ZadGestion's database
+        /// Delete a client from the ZadGestion's database
         /// <param name="_Id">Id of the client</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
-        public string Delete_ClientToDatabase(string _Id)
+        public string Delete_ClientFromDatabase(string _Id)
         {
             try
             {
@@ -1118,7 +1118,63 @@ namespace Database
         #region Shifts
 
         /// <summary>
-        /// Add a shift to the database
+        /// Get shifts from the database
+        /// <returns>The list of corresponding shifts</returns>
+        /// </summary>
+        public string Get_ShiftsFromDatabase()
+        {
+            try
+            {
+                //Clear collection
+                SoftwareObjects.ShiftsCollection.Clear();
+
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "SELECT * FROM shifts";
+
+                //Execute request
+                MySqlDataAdapter mySQLDatabaseAdapter = new MySqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                mySQLDatabaseAdapter.Fill(table);
+
+                //Fill collection
+                SoftwareObjects.ShiftsCollection = (from DataRow row in table.Rows.OfType<DataRow>()
+                                                     select new Shift
+                                                     {
+                                                         date = row["date"].ToString(),
+                                                         end_time = row["end_time"].ToString(),
+                                                         hourly_rate = row["hourly_rate"].ToString(),
+                                                         id = row["id"].ToString(),
+                                                         id_hostorhostess = row["id_hostorhostess"].ToString(),
+                                                         id_mission = row["id_mission"].ToString(),
+                                                         pause = row["pause"].ToString(),
+                                                         start_time = row["start_time"].ToString(),
+                                                         suit = (bool)row["suit"]
+                                                     }).ToList();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                //Write error to log
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                return "Error - " + e.Message;
+            }
+        }
+
+        /// <summary>
+        /// Get specifics shifts from database
         /// <param name="_ListOfShiftsId">Id of the client</param>
         /// <returns>The list of corresponding shifts</returns>
         /// </summary>
@@ -1195,7 +1251,7 @@ namespace Database
         /// <param name="_Suit">Suit lent or not</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
-        public String Add_ShiftToDatabase(string _Date, string _EndTime, string _HourlyRate, string _Id, string _Id_HostOrHostess, string _IdMission, string _StartTime, bool _Suit)
+        public String Add_ShiftToDatabase(string _Date, string _EndTime, string _HourlyRate, string _Id, string _Id_HostOrHostess, string _IdMission, string _Pause, string _StartTime, bool _Suit)
         {
             try
             {
@@ -1206,8 +1262,8 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "INSERT INTO shifts (date, end_time, hourly_rate, id, id_hostorhostess, id_mission, start_time, suit)" +
-                    " VALUES (@date, @end_time, @hourly_rate, @id, @id_hostorhostess, @id_mission, @start_time, @suit)";
+                cmd.CommandText = "INSERT INTO shifts (date, end_time, hourly_rate, id, id_hostorhostess, id_mission, pause, start_time, suit)" +
+                    " VALUES (@date, @end_time, @hourly_rate, @id, @id_hostorhostess, @id_mission, @pause, @start_time, @suit)";
 
                 //Fill SQL parameters
                 cmd.Parameters.AddWithValue("@date", _Date);
@@ -1216,6 +1272,7 @@ namespace Database
                 cmd.Parameters.AddWithValue("@id", _Id);
                 cmd.Parameters.AddWithValue("@id_hostorhostess", _Id_HostOrHostess);
                 cmd.Parameters.AddWithValue("@id_mission", _IdMission);
+                cmd.Parameters.AddWithValue("@pause", _Pause);
                 cmd.Parameters.AddWithValue("@start_time", _StartTime);
                 cmd.Parameters.AddWithValue("@suit", _Suit);
 
@@ -1238,6 +1295,142 @@ namespace Database
             }
         }
 
+        /// <summary>
+        /// Adit a shift into the database
+        /// <param name="_Date">Date of the shift</param>
+        /// <param name="_EndTime">End time of the shift</param>
+        /// <param name="_HourlyRate">Hourly rate of the shift</param>
+        /// <param name="_Id">Id of the shift</param>
+        /// <param name="_Id_HostOrHostess">Id of the host or hostess assigned to the shift</param>
+        /// <param name="_Date">Date of the shift</param>
+        /// <param name="_StartTime">Start time of the shift</param>
+        /// <param name="_Suit">Suit lent or not</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public String Edit_ShiftToDatabase(string _Date, string _EndTime, string _HourlyRate, string _Id, string _Id_HostOrHostess, string _IdMission, string _Pause, string _StartTime, bool _Suit)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE shifts SET date = @date, end_time = @end_time, hourly_rate = @hourly_rate, id_hostorhostess = @id_hostorhostess, id_mission = @id_mission, " +
+                    "pause = @pause, start_time = @start_time, suit = @suit WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@date", _Date);
+                cmd.Parameters.AddWithValue("@end_time", _EndTime);
+                cmd.Parameters.AddWithValue("@hourly_rate", _HourlyRate);
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@id_hostorhostess", _Id_HostOrHostess);
+                cmd.Parameters.AddWithValue("@id_mission", _IdMission);
+                cmd.Parameters.AddWithValue("@pause", _Pause);
+                cmd.Parameters.AddWithValue("@start_time", _StartTime);
+                cmd.Parameters.AddWithValue("@suit", _Suit);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "Error - " + e.Message;
+            }
+        }
+
+        /// <summary>
+        /// Edit the Id of a shift
+        /// <param name="_OldId">Old Id of the shift</param>
+        /// <param name="_NewId">New Id of the shift</param>
+        /// <param name="_HourlyRate">Hourly rate of the shift</param>
+        /// <param name="_Id">Id of the shift</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public String Edit_ShiftIdToDatabase(string _OldId, string _NewId)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE shifts SET id = @newId WHERE id = @oldId";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@newId", _NewId);
+                cmd.Parameters.AddWithValue("@oldId", _OldId);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "Error - " + e.Message;
+            }
+        }
+
+        /// <summary>
+        /// Delete a shift from the ZadGestion's database
+        /// <param name="_Id">Id of the shift</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public string Delete_ShiftFromDatabase(string _Id)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "DELETE FROM shifts WHERE id = '" + _Id + "'";
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                //Write error to log
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                return "Error - " + e.Message;
+            }
+        }
 
         #endregion
 

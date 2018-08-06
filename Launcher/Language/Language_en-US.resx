@@ -1335,4 +1335,40 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
     <value>Start hour</value>
     <comment>Start hour</comment>
   </data>
+  <data name="ErrorCreateDirectory" xml:space="preserve">
+    <value>Error while creating the directory</value>
+    <comment>Error while creating the directory</comment>
+  </data>
+  <data name="NoHostSelectedErrorCaption" xml:space="preserve">
+    <value>No host or hostess selected</value>
+    <comment>Missing host or hostess when creating the shift error caption</comment>
+  </data>
+  <data name="NoHostSelectedErrorText" xml:space="preserve">
+    <value>Please, select a host or a hostess</value>
+    <comment>Missing host or hostess when creating the shift error text</comment>
+  </data>
+  <data name="NoShiftSelectedErrorCaption" xml:space="preserve">
+    <value>No shift selected</value>
+    <comment>No shift selected error caption</comment>
+  </data>
+  <data name="NoShiftSelectedErrorText" xml:space="preserve">
+    <value>Please, select a shift</value>
+    <comment>No shift selected error text</comment>
+  </data>
+  <data name="Quit" xml:space="preserve">
+    <value>Quit</value>
+    <comment>Quit</comment>
+  </data>
+  <data name="ShiftConfirmDelete" xml:space="preserve">
+    <value>Are you sure you want to delete the selected shift?</value>
+    <comment>Delete shiftconfirmation text</comment>
+  </data>
+  <data name="ShiftConfirmDeleteCaption" xml:space="preserve">
+    <value>Delete shift</value>
+    <comment>Delete shiftconfirmation caption</comment>
+  </data>
+  <data name="ShiftsFillCollectionErrorCaption" xml:space="preserve">
+    <value>Error while filling the shifts collection</value>
+    <comment>Filling the shifts collection error caption</comment>
+  </data>
 </root>
