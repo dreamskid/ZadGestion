@@ -809,6 +809,33 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Billed.
+        /// </summary>
+        public static string DateBilled {
+            get {
+                return ResourceManager.GetString("DateBilled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Declined.
+        /// </summary>
+        public static string DateDeclined {
+            get {
+                return ResourceManager.GetString("DateDeclined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Done.
+        /// </summary>
+        public static string DateDone {
+            get {
+                return ResourceManager.GetString("DateDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Day.
         /// </summary>
         public static string Day {

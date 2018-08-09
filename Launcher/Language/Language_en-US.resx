@@ -1395,6 +1395,18 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
     <value>Shift starting time</value>
     <comment>Shift starting time</comment>
   </data>
+  <data name="DateBilled" xml:space="preserve">
+    <value>Billed</value>
+    <comment>Billed</comment>
+  </data>
+  <data name="DateDeclined" xml:space="preserve">
+    <value>Declined</value>
+    <comment>Declined</comment>
+  </data>
+  <data name="DateDone" xml:space="preserve">
+    <value>Done</value>
+    <comment>Done</comment>
+  </data>
   <data name="FirstDate" xml:space="preserve">
     <value>First date</value>
     <comment>First date</comment>

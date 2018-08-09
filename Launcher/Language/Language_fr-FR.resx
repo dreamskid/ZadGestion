@@ -1410,6 +1410,18 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
     <value>Début du shift</value>
     <comment>Début du shift</comment>
   </data>
+  <data name="DateBilled" xml:space="preserve">
+    <value>Facturée</value>
+    <comment>Facturée</comment>
+  </data>
+  <data name="DateDeclined" xml:space="preserve">
+    <value>Refusée</value>
+    <comment>Refusée</comment>
+  </data>
+  <data name="DateDone" xml:space="preserve">
+    <value>Réalisée</value>
+    <comment>Réalisée</comment>
+  </data>
   <data name="FirstDate" xml:space="preserve">
     <value>Date de début</value>
     <comment>Date de fin</comment>

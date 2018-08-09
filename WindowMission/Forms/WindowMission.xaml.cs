@@ -157,6 +157,9 @@ namespace WindowMission
                     }
                 }
 
+                //Fill dates combo boxes
+
+
                 //Define content
                 if (m_Global_Handler != null)
                 {
@@ -181,7 +184,9 @@ namespace WindowMission
                         Lbl_Mission_State.Visibility = Visibility.Visible;
                         Txt_Mission_State.Visibility = Visibility.Visible;
                     }
-
+                    Dtp_Mission_DateBilled.Text = m_Mission.date_billed;
+                    Dtp_Mission_DateDeclined.Text = m_Mission.date_declined;
+                    Dtp_Mission_DateDone.Text = m_Mission.date_done;
                     DateTime startDate = Convert.ToDateTime(m_Mission.start_date);
                     Cld_Mission_StartDate.SelectedDate = startDate;
                     Cld_Mission_StartDate.DisplayDate = startDate;
@@ -189,9 +194,6 @@ namespace WindowMission
                     Cld_Mission_EndDate.SelectedDate = endDate;
                     Cld_Mission_EndDate.DisplayDate = endDate;
 
-                    //Fill shifts
-                    String[] listShifts = m_Mission.id_list_shifts.Split(';');
-                    //TODO - Get shifts
                 }
                 else
                 {
@@ -225,6 +227,9 @@ namespace WindowMission
                 Lbl_Mission_City.Content = m_Global_Handler.Resources_Handler.Get_Resources("City");
                 Lbl_Mission_Client.Content = m_Global_Handler.Resources_Handler.Get_Resources("Customer") + "*";
                 Lbl_Mission_Country.Content = m_Global_Handler.Resources_Handler.Get_Resources("Country");
+                Lbl_Mission_DateBilled.Content = m_Global_Handler.Resources_Handler.Get_Resources("DateBilled");
+                Lbl_Mission_DateDeclined.Content = m_Global_Handler.Resources_Handler.Get_Resources("DateDeclined");
+                Lbl_Mission_DateDone.Content = m_Global_Handler.Resources_Handler.Get_Resources("DateDone");
                 Lbl_Mission_Description.Content = m_Global_Handler.Resources_Handler.Get_Resources("Description") + "*";
                 Lbl_Mission_EndDate.Content = m_Global_Handler.Resources_Handler.Get_Resources("EndDate");
                 Lbl_Mission_Shifts.Content = m_Global_Handler.Resources_Handler.Get_Resources("Shifts");
@@ -600,6 +605,9 @@ namespace WindowMission
             m_Mission.city = Cmb_Mission_City.Text; ;
             m_Mission.client_name = Cmb_Mission_Client.Text;
             m_Mission.country = Cmb_Mission_Country.Text;
+            m_Mission.date_billed = Dtp_Mission_DateBilled.Text;
+            m_Mission.date_declined = Dtp_Mission_DateDeclined.Text;
+            m_Mission.date_done = Dtp_Mission_DateDone.Text;
             m_Mission.description = Txt_Mission_Description.Text;
             m_Mission.end_date = Cld_Mission_EndDate.SelectedDate.ToString();
             m_Mission.start_date = Cld_Mission_StartDate.SelectedDate.ToString();
@@ -612,8 +620,8 @@ namespace WindowMission
 
             //Add to internet database
             string res = m_Database_Handler.Add_MissionToDatabase(m_Mission.address, m_Mission.city,
-                m_Mission.client_name, m_Mission.country, m_Mission.description, m_Mission.end_date, m_Mission.id,
-                m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+                m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_declined, m_Mission.date_done,
+                m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
 
             //Treat the result
             if (res.Contains("OK"))
@@ -641,6 +649,9 @@ namespace WindowMission
             m_Mission.city = Cmb_Mission_City.Text; ;
             m_Mission.client_name = Cmb_Mission_Client.Text;
             m_Mission.country = Cmb_Mission_Country.Text;
+            m_Mission.date_billed = Dtp_Mission_DateBilled.Text;
+            m_Mission.date_declined = Dtp_Mission_DateDeclined.Text;
+            m_Mission.date_done = Dtp_Mission_DateDone.Text;
             m_Mission.description = Txt_Mission_Description.Text;
             m_Mission.end_date = Cld_Mission_EndDate.SelectedDate.ToString();
             m_Mission.start_date = Cld_Mission_StartDate.SelectedDate.ToString();
@@ -649,7 +660,7 @@ namespace WindowMission
 
             //Edit in internet database
             string res = m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
-                m_Mission.client_name, m_Mission.country, m_Mission.description, m_Mission.end_date, m_Mission.id,
+                m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_declined, m_Mission.date_done, m_Mission.description, m_Mission.end_date, m_Mission.id,
                 m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
 
             //Treat the result
@@ -673,6 +684,5 @@ namespace WindowMission
         }
 
         #endregion
-
     }
 }

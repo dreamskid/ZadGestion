@@ -1,42 +1,50 @@
 ﻿<Window xmlns:Toolkit="http://schemas.xceed.com/wpf/xaml/toolkit" x:Name="Window_Mission" x:Class="WindowMission.MainWindow_Mission"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Mission" Height="706.965" Width="391" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Mission" Height="765.365" Width="435" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
 
     <Grid>
         <!--Buttons-->
-        <Button x:Name="Btn_Mission_Add" Height="33" Margin="10,0,10,48" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" Click="Btn_Mission_Add_Click" TabIndex="12" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178"/>
-        <Button x:Name="Btn_Mission_QuitWithoutSaving" Height="33" Margin="10,0,10,10" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Click="Btn_Mission_QuitWithoutSaving_Click" Foreground="White" TabIndex="13" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center"/>
-        <Button x:Name="Btn_Mission_Shifts_Edit" Height="26" Margin="0,0,9.8,85.6" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Edit" TabIndex="9" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" HorizontalAlignment="Right" Width="75" Click="Btn_Mission_Shifts_Edit_Click"/>
+        <Button x:Name="Btn_Mission_Add" Height="33" Margin="10,0,10,48" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Add" Click="Btn_Mission_Add_Click" TabIndex="15" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178"/>
+        <Button x:Name="Btn_Mission_QuitWithoutSaving" Height="33" Margin="10,0,10,10" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="QuitWithoutSaving" Click="Btn_Mission_QuitWithoutSaving_Click" Foreground="White" TabIndex="16" HorizontalContentAlignment="Center" Background="#FFF03535" VerticalContentAlignment="Center"/>
+        <Button x:Name="Btn_Mission_Shifts_Edit" Height="26" Margin="0,0,9.4,93" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Edit" TabIndex="14" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" Background="#FF6F0178" HorizontalAlignment="Right" Width="75" Click="Btn_Mission_Shifts_Edit_Click" RenderTransformOrigin="0.525,-0.331"/>
 
         <!--Calendars-->
         <Calendar x:Name="Cld_Mission_EndDate" HorizontalAlignment="Right" Margin="0,291,10,0" VerticalAlignment="Top" TabIndex="8"/>
         <Calendar x:Name="Cld_Mission_StartDate" HorizontalAlignment="Left" Margin="10,291,0,0" VerticalAlignment="Top" TabIndex="7"/>
 
-        <!--Combo boxe-->
+        <!--Combo boxes-->
         <ComboBox x:Name="Cmb_Mission_City" Height="20" Margin="193,180,10,0" VerticalAlignment="Top" TabIndex="4" IsEditable="True"/>
         <ComboBox x:Name="Cmb_Mission_Client" Height="22" Margin="10,42,10,0" VerticalAlignment="Top" TabIndex="1" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_Mission_Country" HorizontalAlignment="Left" Height="20" Margin="10,238,0,0" VerticalAlignment="Top" Width="178" TabIndex="5" SelectionChanged="Cmb_Mission_Country_SelectionChanged"/>
+        <ComboBox x:Name="Cmb_Mission_Country" HorizontalAlignment="Left" Height="20" Margin="10,238,0,0" VerticalAlignment="Top" Width="184" TabIndex="5" SelectionChanged="Cmb_Mission_Country_SelectionChanged"/>
+
+        <!--Date pickers-->
+        <DatePicker x:Name="Dtp_Mission_DateDone" HorizontalAlignment="Left" Height="27" Margin="10,0,0,124" VerticalAlignment="Bottom" Width="105"/>
+        <DatePicker x:Name="Dtp_Mission_DateDeclined" Height="27" Margin="163,0,160.8,124" VerticalAlignment="Bottom" Width="105"/>
+        <DatePicker x:Name="Dtp_Mission_DateBilled" Height="27" Margin="0,0,10.8,124" VerticalAlignment="Bottom" Width="105" HorizontalAlignment="Right"/>
 
         <!--Labels-->
         <Label x:Name="Lbl_Mission_Address" Content="Address" HorizontalAlignment="Left" Height="27" Margin="10,69,0,0" VerticalAlignment="Top" Width="131"/>
         <Label x:Name="Lbl_Mission_City" Content="City" Height="27" Margin="193,153,61,0" VerticalAlignment="Top" Width="131"/>
         <Label x:Name="Lbl_Mission_Client" Content="Client" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="131"/>
         <Label x:Name="Lbl_Mission_Country" Content="Country" HorizontalAlignment="Left" Height="28" Margin="10,205,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label x:Name="Lbl_Mission_DateBilled" Content="DateBilled" HorizontalAlignment="Right" Height="26" Margin="0,0,10.8,156" VerticalAlignment="Bottom" Width="105"/>
+        <Label x:Name="Lbl_Mission_DateDeclined" Content="DateDeclined" Height="26" Margin="163,0,160.8,156" VerticalAlignment="Bottom" Width="105"/>
+        <Label x:Name="Lbl_Mission_DateDone" Content="DateDone" HorizontalAlignment="Left" Height="26" Margin="10,0,0,156" VerticalAlignment="Bottom" Width="105"/>
         <Label x:Name="Lbl_Mission_Description" Content="Description" HorizontalAlignment="Left" Height="27" Margin="10,464,0,0" VerticalAlignment="Top" Width="131"/>
         <Label x:Name="Lbl_Mission_EndDate" Content="EndDate" HorizontalAlignment="Right" Height="23" Margin="0,263,63,0" VerticalAlignment="Top" Width="129"/>
-        <Label x:Name="Lbl_Mission_Shifts" Content="Shifts" HorizontalAlignment="Left" Height="26" Margin="10,0,0,85.6" VerticalAlignment="Bottom" Width="131"/>
+        <Label x:Name="Lbl_Mission_Shifts" Content="Shifts" HorizontalAlignment="Left" Height="26" Margin="8,0,0,93" VerticalAlignment="Bottom" Width="131"/>
         <Label x:Name="Lbl_Mission_StartDate" Content="StartDate" HorizontalAlignment="Left" Height="23" Margin="10,263,0,0" VerticalAlignment="Top" Width="129"/>
         <Label x:Name="Lbl_Mission_State" Content="State" HorizontalAlignment="Right" Height="28" Margin="0,205,58,0" VerticalAlignment="Top" Width="131"/>
         <Label x:Name="Lbl_Mission_Zipcode" Content="Zipcode" HorizontalAlignment="Left" Height="27" Margin="10,148,0,0" VerticalAlignment="Top" Width="131"/>
 
-        <!--Datagrid-->
-
         <!--Text boxes-->
         <TextBox x:Name="Txt_Mission_Address" Height="42" Margin="10,101,10,0" TextWrapping="Wrap" VerticalAlignment="Top" TabIndex="2"/>
-        <TextBox x:Name="Txt_Mission_Description" Margin="10,501,9.8,116.6" TextWrapping="Wrap" TabIndex="9"/>
+        <TextBox x:Name="Txt_Mission_Description" Margin="10,501,10.4,187" TextWrapping="Wrap" TabIndex="9"/>
+        <TextBox x:Name="Txt_Mission_State" HorizontalAlignment="Right" Height="20" Margin="0,238,10.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" TabIndex="6"/>
         <TextBox x:Name="Txt_Mission_Zipcode" HorizontalAlignment="Left" Height="20" Margin="10,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TabIndex="3" TextChanged="Txt_Mission_ZipCode_TextChanged"/>
-        <TextBox x:Name="Txt_Mission_State" HorizontalAlignment="Right" Height="20" Margin="0,238,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" TabIndex="6"/>
+
+        <!--Calendars-->
     </Grid>
 
 </Window>

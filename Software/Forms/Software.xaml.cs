@@ -1248,7 +1248,7 @@ namespace Software
                 newMission.date_creation = DateTime.Now.ToString();
 
                 //Add to database
-                string res = m_Database_Handler.Add_MissionToDatabase(newMission.address, newMission.city, newMission.client_name, newMission.country,
+                string res = m_Database_Handler.Add_MissionToDatabase(newMission.address, newMission.city, newMission.client_name, newMission.country, "", "", "",
                     newMission.description, newMission.end_date, newMission.id, newMission.start_date, newMission.state, newMission.zipcode);
 
                 //Treat the result
@@ -1642,10 +1642,10 @@ namespace Software
 
             //Save in case of problems
             List<Mission> savedCollection = new List<Mission>();
-            for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+            for (int iMission = 0; iMission < m_DisplayedMissionsCollection.Count; ++iMission)
             {
                 //Get mission
-                Mission mission = SoftwareObjects.MissionsCollection[iMission];
+                Mission mission = m_DisplayedMissionsCollection[iMission];
                 //Archived
                 if (m_Mission_IsArchiveMode == true && mission.archived == 1)
                 {
@@ -1662,10 +1662,6 @@ namespace Software
             //No sort
             if (Cmb_Missions_SortBy.SelectedIndex == -1)
             {
-                //Clear the grid
-                Grid_Missions_Details.Children.Clear();
-                Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-
                 //Actualize the collection                
                 Actualize_GridMissionsFromMissionsCollection();
             }
@@ -1688,10 +1684,6 @@ namespace Software
                         }
                     });
 
-                    //Clear the grid
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-
                     //Actualize the collection
                     Actualize_GridMissionsFromMissionsCollection();
                 }
@@ -1699,10 +1691,6 @@ namespace Software
                 {
                     m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     m_Grid_Details_Missions_MissionsCollection = savedCollection;
-
-                    //Clear the grid
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridMissionsFromMissionsCollection();
@@ -1728,10 +1716,6 @@ namespace Software
                         }
                     });
 
-                    //Clear the grid
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-
                     //Actualize the collection
                     Actualize_GridMissionsFromMissionsCollection();
                 }
@@ -1739,10 +1723,6 @@ namespace Software
                 {
                     m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     m_Grid_Details_Missions_MissionsCollection = savedCollection;
-
-                    //Clear the grid
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridMissionsFromMissionsCollection();
@@ -1771,10 +1751,6 @@ namespace Software
                         }
                     });
 
-                    //Clear the grid
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-
                     //Actualize the collection
                     Actualize_GridMissionsFromMissionsCollection();
                 }
@@ -1782,10 +1758,6 @@ namespace Software
                 {
                     m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     m_Grid_Details_Missions_MissionsCollection = savedCollection;
-
-                    //Clear the grid
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridMissionsFromMissionsCollection();
@@ -1812,10 +1784,6 @@ namespace Software
                         }
                     });
 
-                    //Clear the grid
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-
                     //Actualize the collection
                     Actualize_GridMissionsFromMissionsCollection();
                 }
@@ -1823,10 +1791,6 @@ namespace Software
                 {
                     m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     m_Grid_Details_Missions_MissionsCollection = savedCollection;
-
-                    //Clear the grid
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridMissionsFromMissionsCollection();
@@ -2016,7 +1980,6 @@ namespace Software
             Txt_Missions_Client.Text = "";
             Txt_Missions_CreationDate.Text = "";
             Txt_Missions_EndDate.Text = "";
-            Txt_Missions_Research.Text = "";
             Txt_Missions_StartDate.Text = "";
             m_Datagrid_Missions_ShiftsCollection.Clear();
             Datagrid_Missions_Shifts.Items.Refresh();
@@ -2069,7 +2032,17 @@ namespace Software
                             foundMissionsList.Add(processedMission);
                             continue;
                         }
-                        else if (processedMission.zipcode.ToLower().Contains(researchedText))
+                        else if (processedMission.zipcode.ToLower().Equals(researchedText))
+                        {
+                            foundMissionsList.Add(processedMission);
+                            continue;
+                        }
+                        else if (processedMission.description.ToLower().Contains(researchedText))
+                        {
+                            foundMissionsList.Add(processedMission);
+                            continue;
+                        }
+                        else if (processedMission.date_creation.ToLower().Equals(researchedText))
                         {
                             foundMissionsList.Add(processedMission);
                             continue;
@@ -2082,19 +2055,16 @@ namespace Software
                     //Displaying the found missions list
                     Grid_Missions_Details.Children.Clear();
                     actualizationMissionsDone = false;
-                    if (foundMissionsList.Count > 0)
+                    //Initialize counter for columns and rows of Grid_Missions
+                    m_GridMission_Column = 0;
+                    m_GridMission_Row = 0;
+                    for (int iMission = 0; iMission < foundMissionsList.Count; ++iMission)
                     {
-                        //Initialize counter for columns and rows of Grid_Missions
-                        m_GridMission_Column = 0;
-                        m_GridMission_Row = 0;
-                        for (int iMission = 0; iMission < foundMissionsList.Count; ++iMission)
-                        {
-                            Add_MissionToGrid(foundMissionsList[iMission]);
-                        }
-
-                        //Save the research collection
-                        m_Grid_Details_Missions_MissionsCollection = foundMissionsList;
+                        Add_MissionToGrid(foundMissionsList[iMission]);
                     }
+
+                    //Save the research collection
+                    m_Grid_Details_Missions_MissionsCollection = foundMissionsList;
 
                     //Apply filter
                     Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
@@ -5472,40 +5442,37 @@ namespace Software
         /// </summary>
         private void Actualize_GridMissionsFromMissionsCollection()
         {
-            if (m_Database_Handler != null)
+            //Initialize rows and columns
+            m_GridMission_Column = 0;
+            m_GridMission_Row = 0;
+            Grid_Missions_Details.Children.Clear();
+
+            //Clear displayed collection
+            m_DisplayedMissionsCollection.Clear();
+
+            //Actualization
+            try
             {
-                //Initialize rows and columns
-                m_GridMission_Column = 0;
-                m_GridMission_Row = 0;
-
-                //Actualization
-                try
+                // Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
+                for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
                 {
-                    //Clear displayed collection
-                    m_DisplayedMissionsCollection.Clear();
-
-                    Grid_Missions_Details.Children.Clear();
-                    Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
-                    for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
+                    //Get mission
+                    Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
+                    //Show archive or not
+                    if (m_Mission_IsArchiveMode == true && mission.archived == 1)
                     {
-                        //Get mission
-                        Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
-                        //Show archive or not
-                        if (m_Mission_IsArchiveMode == true && mission.archived == 1)
-                        {
-                            Add_MissionToGrid(mission);
-                        }
-                        if (m_Mission_IsArchiveMode == false && mission.archived == 0)
-                        {
-                            Add_MissionToGrid(mission);
-                        }
+                        Add_MissionToGrid(mission);
+                    }
+                    if (m_Mission_IsArchiveMode == false && mission.archived == 0)
+                    {
+                        Add_MissionToGrid(mission);
                     }
                 }
-                catch (Exception exception)
-                {
-                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                    return;
-                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
             }
         }
 
@@ -5695,7 +5662,7 @@ namespace Software
 
                 //Filter
                 Grid_Missions_Details.Children.Clear();
-                Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
+                //Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
                 Mission missionFound = null;
                 for (int iMission = 0; iMission < filteredMissions.Count; ++iMission)
                 {
@@ -5820,38 +5787,28 @@ namespace Software
                 StackPanel buttonStack = new StackPanel();
                 buttonStack.Orientation = Orientation.Horizontal;
 
-                //Create image TODO
+                //Create image
                 Image imgMission = new Image();
-                //if (_Mission.num_invoice != null && _Mission.num_invoice != "")
-                //{
-                //    //Related invoice created
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Billed);
-                //}
-                //else if (_Mission.date_Mission_accepted != null && _Mission.date_Mission_accepted != "")
-                //{
-                //    //Mission accepted
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Accepted);
-                //}
-                //else if (_Mission.date_Mission_declined != null && _Mission.date_Mission_declined != "")
-                //{
-                //    //Mission declined
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Declined);
-                //}
-                //else if (_Mission.date_Mission_sent != null && _Mission.date_Mission_sent != "")
-                //{
-                //    //Mission sent by email icon
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Sent);
-                //}
-                //else if (_Mission.date_Mission_generated != null && _Mission.date_Mission_generated != "")
-                //{
-                //    //Mission generated
-                //    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Generated);
-                //}
-                //else
-                //{
-                //Default icon
-                imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Created);
-                //}
+                if (_Mission.date_billed != null && _Mission.date_billed != "")
+                {
+                    //Related invoice created
+                    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Billed);
+                }
+                else if (_Mission.date_done != null && _Mission.date_done != "")
+                {
+                    //Mission accepted
+                    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Accepted);
+                }
+                else if (_Mission.date_declined != null && _Mission.date_declined != "")
+                {
+                    //Mission declined
+                    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Declined);
+                }
+                else
+                {
+                    //Default icon
+                    imgMission.Source = m_Global_Handler.Image_Handler.Convert_ToBitmapSource(Properties.Resources.Icon_Mission_Created);
+                }
 
                 //Effect
                 System.Windows.Media.Effects.DropShadowEffect dropShadowEffect = new System.Windows.Media.Effects.DropShadowEffect();
@@ -6041,48 +5998,35 @@ namespace Software
             {
                 //Get status
                 List<Mission> createdMissions = new List<Mission>();
-                List<Mission> generatedMissions = new List<Mission>();
-                List<Mission> sendMissions = new List<Mission>();
                 List<Mission> acceptedMissions = new List<Mission>();
                 List<Mission> declinedMissions = new List<Mission>();
                 List<Mission> billedMissions = new List<Mission>();
                 for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
                 {
-                    //TODO
-                    //Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
-                    //if (mission.date_invoice_creation != "" && mission.date_invoice_creation != null)
-                    //{
-                    //    billedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_accepted != "" && mission.date_Mission_accepted != null)
-                    //{
-                    //    acceptedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_declined != "" && mission.date_Mission_declined != null)
-                    //{
-                    //    declinedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_sent != "" && mission.date_Mission_sent != null)
-                    //{
-                    //    sendMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_generated != "" && mission.date_Mission_generated != null)
-                    //{
-                    //    generatedMissions.Add(mission);
-                    //}
-                    //else
-                    //{
-                    //    createdMissions.Add(mission);
-                    //}
+                    Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
+                    if (mission.date_billed != "" && mission.date_billed != null)
+                    {
+                        billedMissions.Add(mission);
+                    }
+                    else if (mission.date_done != "" && mission.date_done != null)
+                    {
+                        acceptedMissions.Add(mission);
+                    }
+                    else if (mission.date_declined != "" && mission.date_declined != null)
+                    {
+                        declinedMissions.Add(mission);
+                    }
+                    else
+                    {
+                        createdMissions.Add(mission);
+                    }
                 }
                 //Sort each category by num mission
                 List<List<Mission>> listCollections = new List<List<Mission>>();
                 listCollections.Add(createdMissions);
-                listCollections.Add(generatedMissions);
-                listCollections.Add(sendMissions);
-                listCollections.Add(declinedMissions);
                 listCollections.Add(acceptedMissions);
                 listCollections.Add(billedMissions);
+                listCollections.Add(declinedMissions);
                 for (int iList = 0; iList < listCollections.Count; ++iList)
                 {
                     List<Mission> list = listCollections[iList];
@@ -6098,8 +6042,6 @@ namespace Software
                 m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[1]);
                 m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[2]);
                 m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[3]);
-                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[4]);
-                m_Grid_Details_Missions_MissionsCollection.AddRange(listCollections[5]);
 
                 //Clear the grid
                 Grid_Missions_Details.Children.Clear();

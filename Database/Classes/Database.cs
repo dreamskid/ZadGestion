@@ -828,6 +828,9 @@ namespace Database
         /// <param name="_City">City of the mission</param>
         /// <param name="_ClientName">Name of the client</param>
         /// <param name="_Country">Country of the mission</param>
+        /// <param name="_DateBilled">Billed date of the mission</param>
+        /// <param name="_DateDeclined">Declined date of the mission</param>
+        /// <param name="_DateDone">Done date of the mission</param>
         /// <param name="_EndDate">End date of the mission</param>
         /// <param name="_Id">Id of the mission</param>
         /// <param name="_ListOfShiftsId">List of shifts id of the mission</param>
@@ -837,8 +840,8 @@ namespace Database
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Add_MissionToDatabase(string _Address, string _City,
-                        string _ClientName, string _Country, string _Description, string _EndDate,
-                        string _Id, string _StartDate, string _State, string _ZipCode)
+                        string _ClientName, string _Country, string _DateBilled, string _DateDeclined, string _DateDone,
+                        string _Description, string _EndDate, string _Id, string _StartDate, string _State, string _ZipCode)
         {
             try
             {
@@ -849,15 +852,19 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "INSERT INTO missions (address, city, client_name, country, date_creation, description, end_date, id, start_date, state, zipcode)" +
-                    " VALUES (@address, @city, @client_name, @country, @date_creation, @description, @end_date, @id, @start_date, @state, @zipcode)";
+                cmd.CommandText = "INSERT INTO missions (address, city, client_name, country, date_billed, date_creation, date_declined, date_done, description, end_date, id, start_date, state, zipcode)" +
+                    " VALUES (@address, @city, @client_name, @country, @date_billed, @date_creation, @date_declined, @date_done, @description, @end_date, @id, @start_date, @state, @zipcode)";
 
                 //Fill SQL parameters
+                string dateCreation = DateTime.Today.ToString("dd/MM/yyyy");
                 cmd.Parameters.AddWithValue("@address", _Address);
                 cmd.Parameters.AddWithValue("@city", _City);
                 cmd.Parameters.AddWithValue("@client_name", _ClientName);
                 cmd.Parameters.AddWithValue("@country", _Country);
-                cmd.Parameters.AddWithValue("@date_creation", DateTime.Today);
+                cmd.Parameters.AddWithValue("@date_billed", _DateBilled);
+                cmd.Parameters.AddWithValue("@date_creation", dateCreation);
+                cmd.Parameters.AddWithValue("@date_declined", _DateDeclined);
+                cmd.Parameters.AddWithValue("@date_done", _DateDone);
                 cmd.Parameters.AddWithValue("@description", _Description);
                 cmd.Parameters.AddWithValue("@end_date", _EndDate);
                 cmd.Parameters.AddWithValue("@id", _Id);
@@ -964,6 +971,9 @@ namespace Database
         /// <param name="_City">City of the mission</param>
         /// <param name="_ClientName">Name of the client</param>
         /// <param name="_Country">Country of the mission</param>
+        /// <param name="_DateBilled">Billed date of the mission</param>
+        /// <param name="_DateDeclined">Declined date of the mission</param>
+        /// <param name="_DateDone">Done date of the mission</param>
         /// <param name="_EndDate">End date of the mission</param>
         /// <param name="_Id">Id of the mission</param>
         /// <param name="_ListOfShiftsId">List of shifts id of the mission</param>
@@ -973,8 +983,8 @@ namespace Database
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Edit_MissionToDatabase(string _Address, string _City,
-                        string _ClientName, string _Country, string _Description, string _EndDate, string _Id,
-                        string _ListOfShiftsId, string _StartDate, string _State, string _ZipCode)
+                        string _ClientName, string _Country, string _DateBilled, string _DateDeclined, string _DateDone,
+                        string _Description, string _EndDate, string _Id, string _ListOfShiftsId, string _StartDate, string _State, string _ZipCode)
         {
             try
             {
@@ -985,7 +995,8 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "UPDATE missions SET address = @address, city = @city, client_name = @client_name, country = @country, description = @description," +
+                cmd.CommandText = "UPDATE missions SET address = @address, city = @city, client_name = @client_name, country = @country, date_billed = @date_billed, " +
+                    "date_declined = @date_declined, date_done = @date_done,description = @description," +
                     "end_date = @end_date, id_list_shifts = @id_list_shifts, start_date = @start_date, state = @state, zipcode = @zipcode WHERE id = @id";
 
                 //Fill SQL parameters
@@ -993,6 +1004,9 @@ namespace Database
                 cmd.Parameters.AddWithValue("@city", _City);
                 cmd.Parameters.AddWithValue("@client_name", _ClientName);
                 cmd.Parameters.AddWithValue("@country", _Country);
+                cmd.Parameters.AddWithValue("@date_billed", _DateBilled);
+                cmd.Parameters.AddWithValue("@date_declined", _DateDeclined);
+                cmd.Parameters.AddWithValue("@date_done", _DateDone);
                 cmd.Parameters.AddWithValue("@description", _Description);
                 cmd.Parameters.AddWithValue("@end_date", _EndDate);
                 cmd.Parameters.AddWithValue("@id", _Id);
@@ -1054,7 +1068,10 @@ namespace Database
                                                           city = row["city"].ToString(),
                                                           client_name = row["client_name"].ToString(),
                                                           country = row["country"].ToString(),
+                                                          date_billed = row["date_billed"].ToString(),
                                                           date_creation = row["date_creation"].ToString(),
+                                                          date_declined = row["date_declined"].ToString(),
+                                                          date_done = row["date_done"].ToString(),
                                                           description = row["description"].ToString(),
                                                           end_date = row["end_date"].ToString(),
                                                           id_list_shifts = row["id_list_shifts"].ToString(),
@@ -1144,18 +1161,18 @@ namespace Database
 
                 //Fill collection
                 SoftwareObjects.ShiftsCollection = (from DataRow row in table.Rows.OfType<DataRow>()
-                                                     select new Shift
-                                                     {
-                                                         date = row["date"].ToString(),
-                                                         end_time = row["end_time"].ToString(),
-                                                         hourly_rate = row["hourly_rate"].ToString(),
-                                                         id = row["id"].ToString(),
-                                                         id_hostorhostess = row["id_hostorhostess"].ToString(),
-                                                         id_mission = row["id_mission"].ToString(),
-                                                         pause = row["pause"].ToString(),
-                                                         start_time = row["start_time"].ToString(),
-                                                         suit = (bool)row["suit"]
-                                                     }).ToList();
+                                                    select new Shift
+                                                    {
+                                                        date = row["date"].ToString(),
+                                                        end_time = row["end_time"].ToString(),
+                                                        hourly_rate = row["hourly_rate"].ToString(),
+                                                        id = row["id"].ToString(),
+                                                        id_hostorhostess = row["id_hostorhostess"].ToString(),
+                                                        id_mission = row["id_mission"].ToString(),
+                                                        pause = row["pause"].ToString(),
+                                                        start_time = row["start_time"].ToString(),
+                                                        suit = (bool)row["suit"]
+                                                    }).ToList();
 
                 //Close connection
                 this.m_SQLConnection.Close();

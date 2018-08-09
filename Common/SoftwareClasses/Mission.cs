@@ -86,9 +86,36 @@
         }
 
         /// <summary>
+        /// Getter/Setter for the billed date
+        /// </summary>
+        public string date_billed
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Getter/Setter for the creation date
         /// </summary>
         public string date_creation
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Getter/Setter for the declined date
+        /// </summary>
+        public string date_declined
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Getter/Setter for the realized date
+        /// </summary>
+        public string date_done
         {
             get;
             set;
