@@ -337,7 +337,7 @@ namespace WindowMission
                 if (Cld_Mission_EndDate.SelectedDate == null || Cld_Mission_StartDate.SelectedDate == null)
                 {
                     MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorText"),
-                        m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
+                        m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
 
@@ -392,6 +392,23 @@ namespace WindowMission
         {
             try
             {
+                //Verify the fields
+                List<string> neededFieldsToVerify = new List<string>();
+                neededFieldsToVerify.Add(m_Global_Handler.Resources_Handler.Get_Resources("Customer"));
+                neededFieldsToVerify.Add(m_Global_Handler.Resources_Handler.Get_Resources("Description"));
+                MessageBoxResult result = m_Global_Handler.Controls_Handler.Verify_BlankFields(m_ListOfFields, neededFieldsToVerify, m_Global_Handler.Resources_Handler);
+                if (result == MessageBoxResult.OK || result == MessageBoxResult.Cancel)
+                {
+                    return;
+                }
+                if (Cld_Mission_EndDate.SelectedDate == null || Cld_Mission_StartDate.SelectedDate == null)
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorText"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("MissingSelectedDateErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+
+                //Add or edit
                 if (SoftwareObjects.MissionsCollection.Find(x => x.id.Equals(m_Mission.id)) == null)
                 {
                     Add_MissionToDatabase();

@@ -1068,7 +1068,7 @@ namespace Software
                         {
                             m_Button_Mission_SelectedMission.Background = m_Color_Mission;
                         }
-                        StackPanel stack = Grid_Missions_Details.Children.Cast<StackPanel>().First(f => Grid.GetRow(f) == m_GridHostess_Row && Grid.GetColumn(f) == m_GridHostess_Column - 1);
+                        StackPanel stack = Grid_Missions_Details.Children.Cast<StackPanel>().First(f => Grid.GetRow(f) == m_GridMission_Row && Grid.GetColumn(f) == m_GridMission_Column - 1);
                         for (int iChild = 0; iChild < stack.Children.Count; ++iChild)
                         {
                             Button childButton = (Button)stack.Children[iChild];
@@ -1344,16 +1344,18 @@ namespace Software
                     {
                         Actualize_GridMissionsFromDatabase();
                         m_Mission_SelectedStatus = MissionStatus.DONE;
-                        Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
-                        Select_Mission(missionSel);
                     }
                     else if (missionstate == MissionStatus.DECLINED)
                     {
                         Actualize_GridMissionsFromDatabase();
                         m_Mission_SelectedStatus = MissionStatus.DECLINED;
-                        Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
-                        Select_Mission(missionSel);
                     }
+
+                    //Filter
+                    //Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
+
+                    //Select the mission
+                    Select_Mission(missionSel);
 
                     //Close the window
                     Thread.Sleep(500);
@@ -1436,7 +1438,7 @@ namespace Software
                 List<Mission> missionsToExport = new List<Mission>();
                 for (int iMission = 0; iMission < m_DisplayedMissionsCollection.Count; ++iMission)
                 {
-                    Mission mission = (Mission)Datagrid_Missions_Shifts.Items[iMission];
+                    Mission mission = m_DisplayedMissionsCollection[iMission];
                     DateTime dateCreation = Convert.ToDateTime(mission.date_creation);
                     if (dateCreation >= firstDatePicker && dateCreation <= endDatePicker)
                     {
@@ -1471,7 +1473,8 @@ namespace Software
                 for (int iMission = 0; iMission < missionsToExport.Count; ++iMission)
                 {
                     Mission mission = missionsToExport[iMission];
-                    string line = mission.id + "\t" + mission.date_creation + "\t" + mission.client_name + "\t" + mission.start_date + "\t" + mission.end_date + "\t" +
+                    string line = mission.id + "\t" + Convert.ToDateTime(mission.date_creation).ToString("dd/MM/yyy") + "\t" + mission.client_name + "\t" +
+                        Convert.ToDateTime(mission.start_date).ToString("dd/MM/yyy") + "\t" + Convert.ToDateTime(mission.end_date).ToString("dd/MM/yyy") + "\t" +
                         mission.address + "\t" + mission.zipcode + "\t" + mission.city + "\t"; //TODO status
                     lines.Add(line);
                 }
@@ -1854,7 +1857,7 @@ namespace Software
                 e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("Date");
                 e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
             }
-            if (columnHeader == "hostorhostess")
+            else if (columnHeader == "hostorhostess")
             {
                 e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostess");
                 e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
@@ -1864,12 +1867,12 @@ namespace Software
             }
             else if (columnHeader == "start_time")
             {
-                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("StartTime");
+                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("StartTime") + "\t";
                 e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
             }
             else if (columnHeader == "end_time")
             {
-                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("EndTime");
+                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("EndTime") + "\t";
                 e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
             }
             else
@@ -1905,57 +1908,81 @@ namespace Software
 
                     if (missionSel != null)
                     {
-                        //Fill the fields
-                        Txt_Missions_Client.Text = missionSel.client_name;
-                        Txt_Missions_CreationDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.date_creation, m_Global_Handler.Language_Handler);
-                        Txt_Missions_EndDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.end_date, m_Global_Handler.Language_Handler);
-                        Txt_Missions_StartDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.start_date, m_Global_Handler.Language_Handler);
+                        ////Fill the fields
+                        //Txt_Missions_Client.Text = missionSel.client_name;
+                        //Txt_Missions_CreationDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.date_creation, m_Global_Handler.Language_Handler);
+                        //Txt_Missions_EndDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.end_date, m_Global_Handler.Language_Handler);
+                        //Txt_Missions_StartDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.start_date, m_Global_Handler.Language_Handler);
 
-                        //Manage the button
-                        if (m_Button_Mission_SelectedMission != null)
-                        {
-                            if (m_Mission_IsArchiveMode == false)
-                            {
-                                m_Button_Mission_SelectedMission.Background = m_Color_Mission;
-                            }
-                            else
-                            {
-                                m_Button_Mission_SelectedMission.Background = m_Color_ArchivedMission;
-                            }
-                        }
-                        for (int iChild = 0; iChild < stackSel.Children.Count; ++iChild)
-                        {
-                            Button childButton = (Button)stackSel.Children[iChild];
-                            if (m_Mission_IsArchiveMode == false)
-                            {
-                                childButton.Background = m_Color_SelectedMission;
-                            }
-                            else
-                            {
-                                childButton.Background = m_Color_SelectedArchivedMission;
-                            }
-                            if (iChild == 0)
-                            {
-                                m_Button_Mission_SelectedMission = childButton;
-                            }
-                        }
+                        ////Manage the button
+                        //if (m_Button_Mission_SelectedMission != null)
+                        //{
+                        //    if (m_Mission_IsArchiveMode == false)
+                        //    {
+                        //        m_Button_Mission_SelectedMission.Background = m_Color_Mission;
+                        //    }
+                        //    else
+                        //    {
+                        //        m_Button_Mission_SelectedMission.Background = m_Color_ArchivedMission;
+                        //    }
+                        //}
+                        //for (int iChild = 0; iChild < stackSel.Children.Count; ++iChild)
+                        //{
+                        //    Button childButton = (Button)stackSel.Children[iChild];
+                        //    if (m_Mission_IsArchiveMode == false)
+                        //    {
+                        //        childButton.Background = m_Color_SelectedMission;
+                        //    }
+                        //    else
+                        //    {
+                        //        childButton.Background = m_Color_SelectedArchivedMission;
+                        //    }
+                        //    if (iChild == 0)
+                        //    {
+                        //        m_Button_Mission_SelectedMission = childButton;
+                        //    }
+                        //}
 
-                        if (m_Mission_IsArchiveMode == false)
-                        {
-                            //Enable the buttons
-                            Btn_Missions_Archive.IsEnabled = true;
-                            Btn_Missions_Delete.IsEnabled = true;
-                            Btn_Missions_Duplicate.IsEnabled = true;
-                            Btn_Missions_Edit.IsEnabled = true;
-                        }
-                        else
-                        {
-                            //Disable the buttons but Restore
-                            Btn_Missions_Archive.IsEnabled = true;
-                            Btn_Missions_Delete.IsEnabled = false;
-                            Btn_Missions_Duplicate.IsEnabled = false;
-                            Btn_Missions_Edit.IsEnabled = false;
-                        }
+                        ////Datagrid shifts
+                        //List<string> listOfShiftsStr = new List<string>();
+                        //if (missionSel.id_list_shifts != null)
+                        //{
+                        //    listOfShiftsStr = new List<string>(missionSel.id_list_shifts.Split(';'));
+                        //}
+                        //List<Shift> listOfShifts = m_Database_Handler.Get_ShiftsFromListOfId(listOfShiftsStr);
+                        //m_Datagrid_Missions_ShiftsCollection.Clear();
+                        //for (int iShift = 0; iShift < listOfShifts.Count; ++iShift)
+                        //{
+                        //    Shift shift = listOfShifts[iShift];
+                        //    Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(shift.id_hostorhostess));
+                        //    m_Datagrid_Mission_Shifts shiftDatagrid = new m_Datagrid_Mission_Shifts(shift.id, shift.date, "", shift.start_time, shift.end_time);
+                        //    if (hostess != null)
+                        //    {
+                        //        shiftDatagrid = new m_Datagrid_Mission_Shifts(shift.id, shift.date, hostess.firstname + " " + hostess.lastname,
+                        //            shift.start_time, shift.end_time);
+                        //    }
+                        //    m_Datagrid_Missions_ShiftsCollection.Add(shiftDatagrid);
+                        //}
+                        //Datagrid_Missions_Shifts.Items.Refresh();
+
+                        ////Buttons
+                        //if (m_Mission_IsArchiveMode == false)
+                        //{
+                        //    //Enable the buttons
+                        //    Btn_Missions_Archive.IsEnabled = true;
+                        //    Btn_Missions_Delete.IsEnabled = true;
+                        //    Btn_Missions_Duplicate.IsEnabled = true;
+                        //    Btn_Missions_Edit.IsEnabled = true;
+                        //}
+                        //else
+                        //{
+                        //    //Disable the buttons but Restore
+                        //    Btn_Missions_Archive.IsEnabled = true;
+                        //    Btn_Missions_Delete.IsEnabled = false;
+                        //    Btn_Missions_Duplicate.IsEnabled = false;
+                        //    Btn_Missions_Edit.IsEnabled = false;
+                        //}
+                        Select_Mission(missionSel);
                     }
                 }
                 catch (Exception exception)
@@ -5949,21 +5976,43 @@ namespace Software
                     {
                         m_Button_Mission_SelectedMission = (Button)stackSel.Children[0];
                         m_Button_Mission_SelectedMission.Background = colorSelectedMission;
-                        stackSel.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
-                        stackSel.Arrange(new Rect(0, 0, stackSel.DesiredSize.Width, stackSel.DesiredSize.Height));
+                        //stackSel.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+                        //stackSel.Arrange(new Rect(0, 0, stackSel.DesiredSize.Width, stackSel.DesiredSize.Height));
                         row = Grid.GetRow(stackSel) * stackSel.ActualHeight;
                         break;
                     }
                 }
+                //Scroll to the selected mission
+                Scrl_Grid_Missions_Details.ScrollToVerticalOffset(row);
 
-                //Hostess text box
+                //Hostess text boxes
                 Txt_Missions_Client.Text = _Mission.client_name;
                 Txt_Missions_CreationDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.date_creation, m_Global_Handler.Language_Handler);
                 Txt_Missions_EndDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.end_date, m_Global_Handler.Language_Handler);
                 Txt_Missions_StartDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(_Mission.start_date, m_Global_Handler.Language_Handler);
 
-                //Scroll to the selected invoice
-                Scrl_Grid_Missions_Details.ScrollToVerticalOffset(row);
+                //Datagrid shifts
+                List<string> listOfShiftsStr = new List<string>();
+                if (_Mission.id_list_shifts != null)
+                {
+                    listOfShiftsStr = new List<string>(_Mission.id_list_shifts.Split(';'));
+                }
+                List<Shift> listOfShifts = m_Database_Handler.Get_ShiftsFromListOfId(listOfShiftsStr);
+                listOfShifts.Sort((x, y) => DateTime.Compare(Convert.ToDateTime(x.date + " " + x.start_time), Convert.ToDateTime(y.date + " " + y.start_time)));
+                m_Datagrid_Missions_ShiftsCollection.Clear();
+                for (int iShift = 0; iShift < listOfShifts.Count; ++iShift)
+                {
+                    Shift shift = listOfShifts[iShift];
+                    Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(shift.id_hostorhostess));
+                    m_Datagrid_Mission_Shifts shiftDatagrid = new m_Datagrid_Mission_Shifts(shift.id, shift.date, "", shift.start_time, shift.end_time);
+                    if (hostess != null)
+                    {
+                        shiftDatagrid = new m_Datagrid_Mission_Shifts(shift.id, shift.date, hostess.firstname + " " + hostess.lastname,
+                            shift.start_time, shift.end_time);
+                    }
+                    m_Datagrid_Missions_ShiftsCollection.Add(shiftDatagrid);
+                }
+                Datagrid_Missions_Shifts.Items.Refresh();
 
                 //Enable the buttons
                 if (_Mission.archived == 0)
@@ -6222,7 +6271,7 @@ namespace Software
                 m_DisplayedHostsAndHostessesCollection.Add(_HostOrHostess);
 
                 //Treatment of the first row
-                Grid_HostAndHostess_Details.RowDefinitions[0].MinHeight = 350;
+                Grid_HostAndHostess_Details.RowDefinitions[0].MinHeight = 250;
 
                 //Create the hostess button
                 Button buttonHostess = new Button();
@@ -6390,7 +6439,7 @@ namespace Software
                     m_GridHostess_Column = 0;
                     m_GridHostess_Row += 1;
                     RowDefinition row = new RowDefinition();
-                    row.MinHeight = 350;
+                    row.MinHeight = 250;
                     Grid_HostAndHostess_Details.RowDefinitions.Add(row);
                     Grid.SetColumn(mainStackPanel, m_GridHostess_Column);
                     Grid.SetRow(mainStackPanel, m_GridHostess_Row);
@@ -6633,7 +6682,7 @@ namespace Software
                 m_DisplayedClientsCollection.Add(_Client);
 
                 //Treatment of the first row
-                Grid_Clients_Details.RowDefinitions[0].MinHeight = 350;
+                Grid_Clients_Details.RowDefinitions[0].MinHeight = 200;
 
                 //Create the hostess button
                 Button buttonClient = new Button();
@@ -6724,7 +6773,7 @@ namespace Software
                     m_GridClient_Column = 0;
                     m_GridClient_Row += 1;
                     RowDefinition row = new RowDefinition();
-                    row.MinHeight = 350;
+                    row.MinHeight = 200;
                     Grid_Clients_Details.RowDefinitions.Add(row);
                     Grid.SetColumn(mainStackPanel, m_GridClient_Column);
                     Grid.SetRow(mainStackPanel, m_GridClient_Row);

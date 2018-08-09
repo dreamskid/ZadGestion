@@ -1386,4 +1386,36 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
     <value>Erreur lors de la récupération des shifts depuis la base de données</value>
     <comment>Titre d'erreur de récupération des shifts depuis la base de données</comment>
   </data>
+  <data name="BadDateSelectedErrorCaption" xml:space="preserve">
+    <value>Mauvaise date sélectionnée</value>
+    <comment>Titre d'erreur de mauvaise date sélectionnée</comment>
+  </data>
+  <data name="BadDateSelectedErrorText" xml:space="preserve">
+    <value>La date sélectionnée n'est pas comprise dans les dates correspondant à la mission. Veuillez sélectionner une date correcte</value>
+    <comment>Texte d'erreur de mauvaise date sélectionnée</comment>
+  </data>
+  <data name="NoDateSelectedErrorCaption" xml:space="preserve">
+    <value>No date selected</value>
+    <comment>Titre d'erreur d'absence de date sélectionnée</comment>
+  </data>
+  <data name="NoDateSelectedErrorText" xml:space="preserve">
+    <value>Merci de sélectionner une date pour le shift</value>
+    <comment>Texte d'erreur d'absence de date sélectionnée</comment>
+  </data>
+  <data name="ShiftEndTime" xml:space="preserve">
+    <value>Fin du shift</value>
+    <comment>Fin du shift</comment>
+  </data>
+  <data name="ShiftStartTime" xml:space="preserve">
+    <value>Début du shift</value>
+    <comment>Début du shift</comment>
+  </data>
+  <data name="FirstDate" xml:space="preserve">
+    <value>Date de début</value>
+    <comment>Date de fin</comment>
+  </data>
+  <data name="StatementBetween" xml:space="preserve">
+    <value>Etat entre le </value>
+    <comment>Etat entre le </comment>
+  </data>
 </root>

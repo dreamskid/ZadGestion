@@ -188,6 +188,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mauvaise date sélectionnée.
+        /// </summary>
+        public static string BadDateSelectedErrorCaption {
+            get {
+                return ResourceManager.GetString("BadDateSelectedErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La date sélectionnée n&apos;est pas comprise dans les dates correspondant à la mission. Veuillez sélectionner une date correcte.
+        /// </summary>
+        public static string BadDateSelectedErrorText {
+            get {
+                return ResourceManager.GetString("BadDateSelectedErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ville de naissance.
         /// </summary>
         public static string BirthCity {
@@ -1093,6 +1111,15 @@ namespace Launcher.Language {
         public static string Female {
             get {
                 return ResourceManager.GetString("Female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date de début.
+        /// </summary>
+        public static string FirstDate {
+            get {
+                return ResourceManager.GetString("FirstDate", resourceCulture);
             }
         }
         
@@ -2164,6 +2191,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No date selected.
+        /// </summary>
+        public static string NoDateSelectedErrorCaption {
+            get {
+                return ResourceManager.GetString("NoDateSelectedErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merci de sélectionner une date pour le shift.
+        /// </summary>
+        public static string NoDateSelectedErrorText {
+            get {
+                return ResourceManager.GetString("NoDateSelectedErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Aucun(e) hôte ou hôtesse sélectionné(e).
         /// </summary>
         public static string NoHostSelectedErrorCaption {
@@ -2578,6 +2623,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fin du shift.
+        /// </summary>
+        public static string ShiftEndTime {
+            get {
+                return ResourceManager.GetString("ShiftEndTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shifts.
         /// </summary>
         public static string Shifts {
@@ -2592,6 +2646,15 @@ namespace Launcher.Language {
         public static string ShiftsFillCollectionErrorCaption {
             get {
                 return ResourceManager.GetString("ShiftsFillCollectionErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Début du shift.
+        /// </summary>
+        public static string ShiftStartTime {
+            get {
+                return ResourceManager.GetString("ShiftStartTime", resourceCulture);
             }
         }
         
@@ -2709,6 +2772,15 @@ namespace Launcher.Language {
         public static string State {
             get {
                 return ResourceManager.GetString("State", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Etat entre le .
+        /// </summary>
+        public static string StatementBetween {
+            get {
+                return ResourceManager.GetString("StatementBetween", resourceCulture);
             }
         }
         

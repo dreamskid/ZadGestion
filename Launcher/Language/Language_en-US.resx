@@ -1371,4 +1371,36 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
     <value>Error while filling the shifts collection</value>
     <comment>Filling the shifts collection error caption</comment>
   </data>
+  <data name="BadDateSelectedErrorCaption" xml:space="preserve">
+    <value>Bad selected date</value>
+    <comment>Bad date selected error caption</comment>
+  </data>
+  <data name="BadDateSelectedErrorText" xml:space="preserve">
+    <value>The date selected is not in the range of the mission, please select a correct date</value>
+    <comment>Bad date selected error text</comment>
+  </data>
+  <data name="NoDateSelectedErrorCaption" xml:space="preserve">
+    <value>No date selected</value>
+    <comment>No date selected error caption</comment>
+  </data>
+  <data name="NoDateSelectedErrorText" xml:space="preserve">
+    <value>Please select a date for the shift</value>
+    <comment>No date selected error text</comment>
+  </data>
+  <data name="ShiftEndTime" xml:space="preserve">
+    <value>Shift ending time</value>
+    <comment>Shift ending time</comment>
+  </data>
+  <data name="ShiftStartTime" xml:space="preserve">
+    <value>Shift starting time</value>
+    <comment>Shift starting time</comment>
+  </data>
+  <data name="FirstDate" xml:space="preserve">
+    <value>First date</value>
+    <comment>First date</comment>
+  </data>
+  <data name="StatementBetween" xml:space="preserve">
+    <value>Statement between the </value>
+    <comment>Statement between the</comment>
+  </data>
 </root>

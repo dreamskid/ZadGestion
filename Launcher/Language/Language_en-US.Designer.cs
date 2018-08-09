@@ -188,6 +188,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bad selected date.
+        /// </summary>
+        public static string BadDateSelectedErrorCaption {
+            get {
+                return ResourceManager.GetString("BadDateSelectedErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The date selected is not in the range of the mission, please select a correct date.
+        /// </summary>
+        public static string BadDateSelectedErrorText {
+            get {
+                return ResourceManager.GetString("BadDateSelectedErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City of birth.
         /// </summary>
         public static string BirthCity {
@@ -1066,6 +1084,15 @@ namespace Launcher.Language {
         public static string Female {
             get {
                 return ResourceManager.GetString("Female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First date.
+        /// </summary>
+        public static string FirstDate {
+            get {
+                return ResourceManager.GetString("FirstDate", resourceCulture);
             }
         }
         
@@ -2128,6 +2155,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No date selected.
+        /// </summary>
+        public static string NoDateSelectedErrorCaption {
+            get {
+                return ResourceManager.GetString("NoDateSelectedErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select a date for the shift.
+        /// </summary>
+        public static string NoDateSelectedErrorText {
+            get {
+                return ResourceManager.GetString("NoDateSelectedErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No host or hostess selected.
         /// </summary>
         public static string NoHostSelectedErrorCaption {
@@ -2542,6 +2587,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shift ending time.
+        /// </summary>
+        public static string ShiftEndTime {
+            get {
+                return ResourceManager.GetString("ShiftEndTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shifts.
         /// </summary>
         public static string Shifts {
@@ -2556,6 +2610,15 @@ namespace Launcher.Language {
         public static string ShiftsFillCollectionErrorCaption {
             get {
                 return ResourceManager.GetString("ShiftsFillCollectionErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shift starting time.
+        /// </summary>
+        public static string ShiftStartTime {
+            get {
+                return ResourceManager.GetString("ShiftStartTime", resourceCulture);
             }
         }
         
@@ -2673,6 +2736,15 @@ namespace Launcher.Language {
         public static string State {
             get {
                 return ResourceManager.GetString("State", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Statement between the .
+        /// </summary>
+        public static string StatementBetween {
+            get {
+                return ResourceManager.GetString("StatementBetween", resourceCulture);
             }
         }
         

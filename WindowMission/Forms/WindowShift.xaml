@@ -77,7 +77,7 @@
         <TextBox x:Name="Txt_Shifts_Mission_EndDate" HorizontalAlignment="Right" Height="20" Margin="0,122,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TabIndex="3" IsEnabled="False" IsTabStop="False"/>
         <TextBox x:Name="Txt_Shifts_Mission_StartDate" HorizontalAlignment="Right" Height="20" Margin="0,122,115,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TabIndex="3" IsEnabled="False" IsTabStop="False"/>
         <TextBox x:Name="Txt_Shifts_Shift_HourlyRate" HorizontalAlignment="Right" Height="20" Margin="0,190,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" TabIndex="6"/>
-        <TextBox x:Name="Txt_Shifts_Shift_Pause" HorizontalAlignment="Right" Height="20" Margin="0,228,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" TabIndex="8" />
+        <TextBox x:Name="Txt_Shifts_Shift_Pause" HorizontalAlignment="Right" Height="20" Margin="0,228,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" TabIndex="8" Text="0" />
 
     </Grid>
 

@@ -139,7 +139,7 @@ namespace WindowMission
         {
             try
             {
-                //Intialize the components
+                //Initialize the components
                 InitializeComponent();
                 this.Closing += new CancelEventHandler(Window_Closing);
 
@@ -155,6 +155,7 @@ namespace WindowMission
                     listShiftsId = new List<string>(m_Mission.id_list_shifts.Split(';'));
                 }
                 m_ListOfShifts = m_Database_Handler.Get_ShiftsFromListOfId(listShiftsId);
+                m_ListOfShifts.Sort((x, y) => DateTime.Compare(Convert.ToDateTime(x.date + " " + x.start_time), Convert.ToDateTime(y.date + " " + y.start_time)));
 
                 //Fill infos mission
                 Txt_Shifts_Mission.Text = m_Mission.description;
@@ -167,6 +168,7 @@ namespace WindowMission
                     Cld_Shifts_Shift_Date.SelectedDate = Convert.ToDateTime(m_Mission.start_date);
                     Cld_Shifts_Shift_Date.DisplayDate = Convert.ToDateTime(m_Mission.start_date);
                 }
+
                 //Fill combo boxes
                 for (int iHour = 0; iHour <= 24; ++iHour)
                 {
@@ -174,7 +176,7 @@ namespace WindowMission
                     Cmb_Shifts_Shift_StartHour_Hour.Items.Add(iHour.ToString("00")); ;
                 }
                 Cmb_Shifts_Shift_EndHour_Hour.SelectedIndex = 12;
-                Cmb_Shifts_Shift_StartHour_Hour.SelectedIndex = 12;
+                Cmb_Shifts_Shift_StartHour_Hour.SelectedIndex = 8;
                 for (int iMin = 0; iMin < 4; ++iMin)
                 {
                     int min = iMin * 15;
@@ -187,10 +189,13 @@ namespace WindowMission
                 for (int iHostess = 0; iHostess < SoftwareObjects.HostsAndHotessesCollection.Count; ++iHostess)
                 {
                     Hostess hostess = SoftwareObjects.HostsAndHotessesCollection[iHostess];
-                    string name = hostess.zipcode + " \t " + hostess.firstname + " " + hostess.lastname;
-                    m_List_HostsAndHostesses.Add(name);
-                    m_List_IdHostsAndHostesses.Add(hostess.id);
-                    Cmb_Shifts_Shift_HostOrHostess.Items.Add(name);
+                    if (hostess.archived == 0)
+                    {
+                        string name = hostess.zipcode + " \t " + hostess.firstname + " " + hostess.lastname;
+                        m_List_HostsAndHostesses.Add(name);
+                        m_List_IdHostsAndHostesses.Add(hostess.id);
+                        Cmb_Shifts_Shift_HostOrHostess.Items.Add(name);
+                    }
                 }
                 //Fill shifts datagrid
                 m_Datagrid_Missions_ShiftsCollection.Clear();
@@ -309,12 +314,22 @@ namespace WindowMission
         {
             try
             {
-                //Fill parameters
-                DateTime dateSelected = DateTime.Today;
-                if (Cld_Shifts_Shift_Date.SelectedDate != null)
+                //Verifications
+                if (Cld_Shifts_Shift_Date.SelectedDate == null)
                 {
-                    dateSelected = (DateTime)Cld_Shifts_Shift_Date.SelectedDate;
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("NoDateSelectedErrorText"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("NoDateSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
                 }
+                if (Cld_Shifts_Shift_Date.SelectedDate < Convert.ToDateTime(m_Mission.start_date) || Cld_Shifts_Shift_Date.SelectedDate > Convert.ToDateTime(m_Mission.end_date))
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("BadDateSelectedErrorText"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("BadDateSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+
+                //Fill parameters
+                DateTime dateSelected = (DateTime)Cld_Shifts_Shift_Date.SelectedDate;
                 m_Shift.date = dateSelected.ToString("dd/MM/yyyy");
                 m_Shift.end_time = Cmb_Shifts_Shift_EndHour_Hour.Text + ":" + Cmb_Shifts_Shift_EndHour_Min.Text;
                 m_Shift.start_time = Cmb_Shifts_Shift_StartHour_Hour.Text + ":" + Cmb_Shifts_Shift_StartHour_Min.Text;
@@ -359,7 +374,6 @@ namespace WindowMission
                     string hostOrHostess = Cmb_Shifts_Shift_HostOrHostess.Text.Split('\t')[1];
                     m_Datagrid_Missions_ShiftsCollection.Add(new m_Datagrid_Mission_Shifts(m_Shift.id, m_Shift.date, hostOrHostess, m_Shift.start_time, m_Shift.end_time));
                     Datagrid_Shifts.Items.Refresh();
-                    Datagrid_Shifts.SelectedItem = Datagrid_Shifts.Items[Datagrid_Shifts.Items.Count - 1];
 
                     //Edit the mission to include the id of the new shift
                     m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
@@ -419,16 +433,6 @@ namespace WindowMission
                     int index = Datagrid_Shifts.SelectedIndex;
                     m_Datagrid_Missions_ShiftsCollection.Remove((m_Datagrid_Mission_Shifts)Datagrid_Shifts.SelectedItem);
                     Datagrid_Shifts.Items.Refresh();
-                    if (index - 1 >= 0)
-                    {
-                        //Select the one before the deleted item
-                        Datagrid_Shifts.SelectedIndex = index - 1;
-                    }
-                    else if (Datagrid_Shifts.Items.Count > 0)
-                    {
-                        //Select the first one
-                        Datagrid_Shifts.SelectedItem = 0;
-                    }
 
                     //Delete from the mission
                     m_Mission.id_list_shifts = m_Mission.id_list_shifts.Replace(m_Shift.id + ";", "");
@@ -438,6 +442,7 @@ namespace WindowMission
 
                     //Delete from the collection
                     SoftwareObjects.ShiftsCollection.Remove(m_Shift);
+                    m_Shift = null;
 
                     //Clear boxes
                     Cld_Shifts_Shift_Date.SelectedDate = DateTime.Today;
@@ -616,12 +621,12 @@ namespace WindowMission
             }
             else if (columnHeader == "start_time")
             {
-                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("StartTime");
+                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("StartTime") + "\t";
                 e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
             }
             else if (columnHeader == "end_time")
             {
-                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("EndTime");
+                e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("EndTime") + "\t";
                 e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
             }
             else
