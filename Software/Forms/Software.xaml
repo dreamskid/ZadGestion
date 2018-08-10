@@ -101,16 +101,16 @@
             </DataGrid>
 
             <!--Buttons legend-->
-            <Button x:Name="Btn_Missions_Legend_Mission_Created" HorizontalAlignment="Left" Height="57" Margin="35,65,0,0" VerticalAlignment="Top" Width="55" Background="#FF6F0178">
+            <Button x:Name="Btn_Missions_Legend_Mission_Created" HorizontalAlignment="Left" Height="57" Margin="35,65,0,0" VerticalAlignment="Top" Width="55" Background="#FF6F0178" Click="Btn_Missions_Legend_Mission_Created_Click">
                 <Image Source="/Software;component/Resources/Icon_Mission_Created.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Margin="7,-4,7,5" />
             </Button>
-            <Button x:Name="Btn_Missions_Legend_Mission_Done" HorizontalAlignment="Left" Height="57" Margin="133,65,0,0" VerticalAlignment="Top" Width="55" Background="#FF6F0178">
+            <Button x:Name="Btn_Missions_Legend_Mission_Done" HorizontalAlignment="Left" Height="57" Margin="133,65,0,0" VerticalAlignment="Top" Width="55" Background="#FF6F0178" Click="Btn_Missions_Legend_Mission_Done_Click">
                 <Image Source="/Software;component/Resources/Icon_Mission_Accepted.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Stretch="Uniform" Margin="7,-4,7,5" />
             </Button>
-            <Button x:Name="Btn_Missions_Legend_Mission_Declined" HorizontalAlignment="Left" Height="57" Margin="237,65,0,0" VerticalAlignment="Top" Width="55" Background="#FF6F0178">
+            <Button x:Name="Btn_Missions_Legend_Mission_Declined" HorizontalAlignment="Left" Height="57" Margin="237,65,0,0" VerticalAlignment="Top" Width="55" Background="#FF6F0178" Click="Btn_Missions_Legend_Mission_Declined_Click">
                 <Image Source="/Software;component/Resources/Icon_Mission_Declined.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Stretch="Uniform" Margin="7,-4,7,5" />
             </Button>
-            <Button x:Name="Btn_Missions_Legend_Mission_Billed" HorizontalAlignment="Left" Height="57" Margin="335,65,0,0" VerticalAlignment="Top" Width="55" Background="#FF6F0178">
+            <Button x:Name="Btn_Missions_Legend_Mission_Billed" HorizontalAlignment="Left" Height="57" Margin="335,65,0,0" VerticalAlignment="Top" Width="55" Background="#FF6F0178" Click="Btn_Missions_Legend_Mission_Billed_Click">
                 <Image Source="/Software;component/Resources/Icon_Mission_Billed.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Stretch="Uniform" Margin="7,-4,7,5" />
             </Button>
 

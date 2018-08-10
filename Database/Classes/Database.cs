@@ -1084,6 +1084,9 @@ namespace Database
                 //Close connection
                 this.m_SQLConnection.Close();
 
+                //Sort by creation date
+                SoftwareObjects.MissionsCollection.Sort((y, x) => DateTime.Compare(Convert.ToDateTime(x.date_creation), Convert.ToDateTime(y.date_creation)));
+
                 return "OK";
             }
             catch (Exception e)

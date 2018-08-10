@@ -1084,7 +1084,7 @@ namespace Software
                         }
 
                         //Select the mission
-                        Select_Mission(missionToAdd);
+                        Select_Mission(missionToAdd, true);
 
                         //Enable the buttons
                         Btn_Missions_Delete.IsEnabled = true;
@@ -1264,7 +1264,7 @@ namespace Software
                     Actualize_GridMissionsFromDatabase();
 
                     //Select the new mission
-                    Select_Mission(newMission);
+                    Select_Mission(newMission, true);
 
                     //Close the window wait
                     Thread.Sleep(500);
@@ -1355,7 +1355,7 @@ namespace Software
                     //Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
 
                     //Select the mission
-                    Select_Mission(missionSel);
+                    Select_Mission(missionSel, false);
 
                     //Close the window
                     Thread.Sleep(500);
@@ -1505,6 +1505,200 @@ namespace Software
             {
                 //Close the wait window
                 windowWait.Stop();
+
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Missions
+        /// Click on billed status button
+        /// </summary>
+        private void Btn_Missions_Legend_Mission_Billed_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Status
+                m_Mission_SelectedStatus = MissionStatus.BILLED;
+
+                //Buttons
+                Btn_Missions_Legend_Mission_Billed.Background = m_Color_SelectedMission;
+                Btn_Missions_Legend_Mission_Created.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Declined.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Done.Background = m_Color_Button;
+
+                //Displayed missions
+                List<Mission> billedMissions = new List<Mission>();
+                for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+                {
+                    Mission mission = SoftwareObjects.MissionsCollection[iMission];
+                    if (mission.date_billed != "" && mission.date_billed != null)
+                    {
+                        billedMissions.Add(mission);
+                    }
+                }
+
+                //Add to grid layout collection
+                m_Grid_Details_Missions_MissionsCollection.Clear();
+                m_Grid_Details_Missions_MissionsCollection.AddRange(billedMissions);
+
+                //Clear the grid
+                Grid_Missions_Details.Children.Clear();
+
+                //Actualize the collection
+                Actualize_GridMissionsFromMissionsCollection();
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Missions
+        /// Click on created status button
+        /// </summary>
+        private void Btn_Missions_Legend_Mission_Created_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Status
+                m_Mission_SelectedStatus = MissionStatus.CREATED;
+
+                //Buttons
+                Btn_Missions_Legend_Mission_Billed.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Created.Background = m_Color_SelectedMission;
+                Btn_Missions_Legend_Mission_Declined.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Done.Background = m_Color_Button;
+
+                //Displayed missions
+                List<Mission> createdMissions = new List<Mission>();
+                for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+                {
+                    Mission mission = SoftwareObjects.MissionsCollection[iMission];
+                    if (mission.date_creation != "" && mission.date_creation != null)
+                    {
+                        if (mission.date_billed == "" && mission.date_declined == "" && mission.date_done == "")
+                        {
+                            createdMissions.Add(mission);
+                        }
+                    }
+                }
+
+                //Add to grid layout collection
+                m_Grid_Details_Missions_MissionsCollection.Clear();
+                m_Grid_Details_Missions_MissionsCollection.AddRange(createdMissions);
+
+                //Clear the grid
+                Grid_Missions_Details.Children.Clear();
+
+                //Actualize the collection
+                Actualize_GridMissionsFromMissionsCollection();
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Missions
+        /// Click on declined status button
+        /// </summary>
+        private void Btn_Missions_Legend_Mission_Declined_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Status
+                m_Mission_SelectedStatus = MissionStatus.DECLINED;
+
+                //Buttons
+                Btn_Missions_Legend_Mission_Billed.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Created.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Declined.Background = m_Color_SelectedMission;
+                Btn_Missions_Legend_Mission_Done.Background = m_Color_Button;
+
+                //Displayed missions
+                List<Mission> declinedMissions = new List<Mission>();
+                for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+                {
+                    Mission mission = SoftwareObjects.MissionsCollection[iMission];
+                    if (mission.date_declined != "" && mission.date_declined != null)
+                    {
+                        if (mission.date_billed == "")
+                        {
+                            declinedMissions.Add(mission);
+                        }
+                    }
+                }
+
+                //Add to grid layout collection
+                m_Grid_Details_Missions_MissionsCollection.Clear();
+                m_Grid_Details_Missions_MissionsCollection.AddRange(declinedMissions);
+
+                //Clear the grid
+                Grid_Missions_Details.Children.Clear();
+
+                //Actualize the collection
+                Actualize_GridMissionsFromMissionsCollection();
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Missions
+        /// Click on done status button
+        /// </summary>
+        private void Btn_Missions_Legend_Mission_Done_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Status
+                m_Mission_SelectedStatus = MissionStatus.DONE;
+
+                //Buttons
+                Btn_Missions_Legend_Mission_Billed.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Created.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Declined.Background = m_Color_Button;
+                Btn_Missions_Legend_Mission_Done.Background = m_Color_SelectedMission;
+
+                //Displayed missions
+                List<Mission> doneMissions = new List<Mission>();
+                for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+                {
+                    Mission mission = SoftwareObjects.MissionsCollection[iMission];
+                    if (mission.date_done != "" && mission.date_done != null)
+                    {
+                        if (mission.date_billed == "")
+                        {
+                            doneMissions.Add(mission);
+                        }
+                    }
+                }
+
+                //Add to grid layout collection
+                m_Grid_Details_Missions_MissionsCollection.Clear();
+                m_Grid_Details_Missions_MissionsCollection.AddRange(doneMissions);
+
+                //Clear the grid
+                Grid_Missions_Details.Children.Clear();
+
+                //Actualize the collection
+                Actualize_GridMissionsFromMissionsCollection();
+            }
+            catch (Exception exception)
+            {
 
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
@@ -1801,7 +1995,7 @@ namespace Software
             else if (Cmb_Missions_SortBy.SelectedItem.ToString() == m_Global_Handler.Resources_Handler.Get_Resources("Status"))
             {
                 //Sort by status
-                Sort_MissionsByStatus(savedCollection);
+                Sort_MissionsByStatus();
             }
 
             //Apply filter
@@ -1872,81 +2066,7 @@ namespace Software
 
                     if (missionSel != null)
                     {
-                        ////Fill the fields
-                        //Txt_Missions_Client.Text = missionSel.client_name;
-                        //Txt_Missions_CreationDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.date_creation, m_Global_Handler.Language_Handler);
-                        //Txt_Missions_EndDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.end_date, m_Global_Handler.Language_Handler);
-                        //Txt_Missions_StartDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.start_date, m_Global_Handler.Language_Handler);
-
-                        ////Manage the button
-                        //if (m_Button_Mission_SelectedMission != null)
-                        //{
-                        //    if (m_Mission_IsArchiveMode == false)
-                        //    {
-                        //        m_Button_Mission_SelectedMission.Background = m_Color_Mission;
-                        //    }
-                        //    else
-                        //    {
-                        //        m_Button_Mission_SelectedMission.Background = m_Color_ArchivedMission;
-                        //    }
-                        //}
-                        //for (int iChild = 0; iChild < stackSel.Children.Count; ++iChild)
-                        //{
-                        //    Button childButton = (Button)stackSel.Children[iChild];
-                        //    if (m_Mission_IsArchiveMode == false)
-                        //    {
-                        //        childButton.Background = m_Color_SelectedMission;
-                        //    }
-                        //    else
-                        //    {
-                        //        childButton.Background = m_Color_SelectedArchivedMission;
-                        //    }
-                        //    if (iChild == 0)
-                        //    {
-                        //        m_Button_Mission_SelectedMission = childButton;
-                        //    }
-                        //}
-
-                        ////Datagrid shifts
-                        //List<string> listOfShiftsStr = new List<string>();
-                        //if (missionSel.id_list_shifts != null)
-                        //{
-                        //    listOfShiftsStr = new List<string>(missionSel.id_list_shifts.Split(';'));
-                        //}
-                        //List<Shift> listOfShifts = m_Database_Handler.Get_ShiftsFromListOfId(listOfShiftsStr);
-                        //m_Datagrid_Missions_ShiftsCollection.Clear();
-                        //for (int iShift = 0; iShift < listOfShifts.Count; ++iShift)
-                        //{
-                        //    Shift shift = listOfShifts[iShift];
-                        //    Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(shift.id_hostorhostess));
-                        //    m_Datagrid_Mission_Shifts shiftDatagrid = new m_Datagrid_Mission_Shifts(shift.id, shift.date, "", shift.start_time, shift.end_time);
-                        //    if (hostess != null)
-                        //    {
-                        //        shiftDatagrid = new m_Datagrid_Mission_Shifts(shift.id, shift.date, hostess.firstname + " " + hostess.lastname,
-                        //            shift.start_time, shift.end_time);
-                        //    }
-                        //    m_Datagrid_Missions_ShiftsCollection.Add(shiftDatagrid);
-                        //}
-                        //Datagrid_Missions_Shifts.Items.Refresh();
-
-                        ////Buttons
-                        //if (m_Mission_IsArchiveMode == false)
-                        //{
-                        //    //Enable the buttons
-                        //    Btn_Missions_Archive.IsEnabled = true;
-                        //    Btn_Missions_Delete.IsEnabled = true;
-                        //    Btn_Missions_Duplicate.IsEnabled = true;
-                        //    Btn_Missions_Edit.IsEnabled = true;
-                        //}
-                        //else
-                        //{
-                        //    //Disable the buttons but Restore
-                        //    Btn_Missions_Archive.IsEnabled = true;
-                        //    Btn_Missions_Delete.IsEnabled = false;
-                        //    Btn_Missions_Duplicate.IsEnabled = false;
-                        //    Btn_Missions_Edit.IsEnabled = false;
-                        //}
-                        Select_Mission(missionSel);
+                        Select_Mission(missionSel, false);
                     }
                 }
                 catch (Exception exception)
@@ -3459,7 +3579,7 @@ namespace Software
 
                                 //Select the mission
                                 Filter_GridMissionsFromMissionsCollection(MissionStatus.NONE);
-                                Select_Mission(missionSel);
+                                Select_Mission(missionSel, true);
 
                                 //Enable the buttons
                                 Btn_Missions_Duplicate.IsEnabled = true;
@@ -5499,19 +5619,8 @@ namespace Software
                     string res = m_Database_Handler.Get_MissionsFromDatabase();
                     if (res.Contains("OK"))
                     {
-                        //Add to grid
-                        for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
-                        {
-                            Mission mission = SoftwareObjects.MissionsCollection[iMission];
-                            if (m_Mission_IsArchiveMode == true && mission.archived == 1)
-                            {
-                                Add_MissionToGrid(mission);
-                            }
-                            else if (m_Mission_IsArchiveMode == false && mission.archived == 0)
-                            {
-                                Add_MissionToGrid(mission);
-                            }
-                        }
+                        //Sort by status
+                        Sort_MissionsByStatus();
                     }
                     else if (res.Contains("Error"))
                     {
@@ -5589,39 +5698,28 @@ namespace Software
 
                 //Get status
                 List<Mission> createdMissions = new List<Mission>();
-                List<Mission> generatedMissions = new List<Mission>();
-                List<Mission> sentMissions = new List<Mission>();
                 List<Mission> acceptedMissions = new List<Mission>();
                 List<Mission> declinedMissions = new List<Mission>();
                 List<Mission> billedMissions = new List<Mission>();
                 for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
                 {
-                    //TODO
                     Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
-                    //if (mission.date_invoice_creation != "" && mission.date_invoice_creation != null && mission.date_invoice_creation != "0000-00-00")
-                    //{
-                    //    billedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_accepted != "" && mission.date_Mission_accepted != null && mission.date_Mission_accepted != "0000-00-00")
-                    //{
-                    //    acceptedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_declined != "" && mission.date_Mission_declined != null && mission.date_Mission_declined != "0000-00-00")
-                    //{
-                    //    declinedMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_sent != "" && mission.date_Mission_sent != null && mission.date_Mission_sent != "0000-00-00")
-                    //{
-                    //    sentMissions.Add(mission);
-                    //}
-                    //else if (mission.date_Mission_generated != "" && mission.date_Mission_generated != null && mission.date_Mission_generated != "0000-00-00")
-                    //{
-                    //    generatedMissions.Add(mission);
-                    //}
-                    //else
-                    //{
-                    createdMissions.Add(mission);
-                    //}
+                    if (mission.date_billed != "" && mission.date_billed != null)
+                    {
+                        billedMissions.Add(mission);
+                    }
+                    else if (mission.date_done != "" && mission.date_done != null)
+                    {
+                        acceptedMissions.Add(mission);
+                    }
+                    else if (mission.date_declined != "" && mission.date_declined != null)
+                    {
+                        declinedMissions.Add(mission);
+                    }
+                    else
+                    {
+                        createdMissions.Add(mission);
+                    }
                 }
 
                 //Buttons
@@ -5662,7 +5760,6 @@ namespace Software
 
                 //Filter
                 Grid_Missions_Details.Children.Clear();
-                //Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
                 Mission missionFound = null;
                 for (int iMission = 0; iMission < filteredMissions.Count; ++iMission)
                 {
@@ -5687,7 +5784,7 @@ namespace Software
                 }
 
                 //Select mission if necessary
-                Select_Mission(missionFound);
+                Select_Mission(missionFound, true);
             }
             catch (Exception exception)
             {
@@ -5902,7 +5999,7 @@ namespace Software
         /// Missions
         /// Select an mission
         /// </summary>
-        private void Select_Mission(Mission _Mission)
+        private void Select_Mission(Mission _Mission, bool _GoToRow)
         {
             try
             {
@@ -5939,8 +6036,11 @@ namespace Software
                         break;
                     }
                 }
-                //Scroll to the selected mission
-                Scrl_Grid_Missions_Details.ScrollToVerticalOffset(row);
+                if (_GoToRow == true)
+                {
+                    //Scroll to the selected mission
+                    Scrl_Grid_Missions_Details.ScrollToVerticalOffset(row);
+                }
 
                 //Hostess text boxes
                 Txt_Missions_Client.Text = _Mission.client_name;
@@ -5979,6 +6079,13 @@ namespace Software
                     Btn_Missions_Delete.IsEnabled = true;
                     Btn_Missions_Archive.IsEnabled = true;
                 }
+                else
+                {
+                    Btn_Missions_Duplicate.IsEnabled = false;
+                    Btn_Missions_Edit.IsEnabled = false;
+                    Btn_Missions_Delete.IsEnabled = false;
+                    Btn_Missions_Archive.IsEnabled = true;
+                }
             }
             catch (Exception exception)
             {
@@ -5992,18 +6099,21 @@ namespace Software
         /// Missions
         /// Sort the grid of missions by status
         /// </summary>
-        private void Sort_MissionsByStatus(List<Mission> _SavedCollection)
+        private void Sort_MissionsByStatus()
         {
             try
             {
+                //General status
+                m_Mission_SelectedStatus = MissionStatus.NONE;
+
                 //Get status
                 List<Mission> createdMissions = new List<Mission>();
                 List<Mission> acceptedMissions = new List<Mission>();
                 List<Mission> declinedMissions = new List<Mission>();
                 List<Mission> billedMissions = new List<Mission>();
-                for (int iMission = 0; iMission < m_Grid_Details_Missions_MissionsCollection.Count; ++iMission)
+                for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
                 {
-                    Mission mission = m_Grid_Details_Missions_MissionsCollection[iMission];
+                    Mission mission = SoftwareObjects.MissionsCollection[iMission];
                     if (mission.date_billed != "" && mission.date_billed != null)
                     {
                         billedMissions.Add(mission);
@@ -6027,14 +6137,14 @@ namespace Software
                 listCollections.Add(acceptedMissions);
                 listCollections.Add(billedMissions);
                 listCollections.Add(declinedMissions);
-                for (int iList = 0; iList < listCollections.Count; ++iList)
-                {
-                    List<Mission> list = listCollections[iList];
-                    list.Sort(delegate (Mission x, Mission y)
-                    {
-                        return x.id.CompareTo(y.id);
-                    });
-                }
+                //for (int iList = 0; iList < listCollections.Count; ++iList)
+                //{
+                //    List<Mission> list = listCollections[iList];
+                //    list.Sort(delegate (Mission x, Mission y)
+                //    {
+                //        return x.id.CompareTo(y.id);
+                //    });
+                //}
 
                 //Add to grid layout collection
                 m_Grid_Details_Missions_MissionsCollection.Clear();
@@ -6045,7 +6155,6 @@ namespace Software
 
                 //Clear the grid
                 Grid_Missions_Details.Children.Clear();
-                Grid_Missions_Details.RowDefinitions.RemoveRange(0, Grid_Missions_Details.RowDefinitions.Count - 1);
 
                 //Actualize the collection
                 Actualize_GridMissionsFromMissionsCollection();
@@ -6056,7 +6165,7 @@ namespace Software
             catch (Exception exception)
             {
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                m_Grid_Details_Missions_MissionsCollection = _SavedCollection;
+                m_Grid_Details_Missions_MissionsCollection = SoftwareObjects.MissionsCollection;
 
                 //Clear the grid
                 Grid_Missions_Details.Children.Clear();
