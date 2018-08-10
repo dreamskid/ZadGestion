@@ -431,7 +431,7 @@ namespace WindowMission
 
                     //Delete from the datagrid
                     int index = Datagrid_Shifts.SelectedIndex;
-                    m_Datagrid_Missions_ShiftsCollection.Remove((m_Datagrid_Mission_Shifts)Datagrid_Shifts.SelectedItem);
+                    m_Datagrid_Missions_ShiftsCollection.RemoveAt(index);
                     Datagrid_Shifts.Items.Refresh();
 
                     //Delete from the mission
@@ -441,7 +441,7 @@ namespace WindowMission
                         m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
 
                     //Delete from the collection
-                    SoftwareObjects.ShiftsCollection.Remove(m_Shift);
+                    SoftwareObjects.ShiftsCollection.Remove(SoftwareObjects.ShiftsCollection.Find(x => x.id.Equals(m_Shift.id)));
                     m_Shift = null;
 
                     //Clear boxes
