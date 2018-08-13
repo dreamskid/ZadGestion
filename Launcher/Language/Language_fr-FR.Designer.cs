@@ -2623,6 +2623,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enregistrement des paramètres pour les shifts en cours....
+        /// </summary>
+        public static string SettingsShiftSavePrincipalMessage {
+            get {
+                return ResourceManager.GetString("SettingsShiftSavePrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez patienter lors de l&apos;enregistrement des paramètres pour les shifts dans la base de données..
+        /// </summary>
+        public static string SettingsShiftSaveSecondaryMessage {
+            get {
+                return ResourceManager.GetString("SettingsShiftSaveSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sexe.
         /// </summary>
         public static string Sex {

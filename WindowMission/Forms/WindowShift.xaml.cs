@@ -168,6 +168,8 @@ namespace WindowMission
                     Cld_Shifts_Shift_Date.SelectedDate = Convert.ToDateTime(m_Mission.start_date);
                     Cld_Shifts_Shift_Date.DisplayDate = Convert.ToDateTime(m_Mission.start_date);
                 }
+                Txt_Shifts_Shift_HourlyRate.Text = SoftwareObjects.GlobalSettings.hourly_rate;
+                Txt_Shifts_Shift_Pause.Text = SoftwareObjects.GlobalSettings.pause_duration;
 
                 //Fill combo boxes
                 for (int iHour = 0; iHour <= 24; ++iHour)

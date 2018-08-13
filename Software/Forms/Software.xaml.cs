@@ -682,6 +682,7 @@ namespace Software
                 Lbl_Clients_Sort.Content = m_Global_Handler.Resources_Handler.Get_Resources("SortBy");
 
                 #endregion
+
                 #region Settings
 
                 //Tab item
@@ -690,10 +691,14 @@ namespace Software
                 //Buttons
                 Btn_Settings_General_Database_Save.Content = m_Global_Handler.Resources_Handler.Get_Resources("Save");
                 Btn_Settings_General_Photos_Choose.Content = m_Global_Handler.Resources_Handler.Get_Resources("Choose");
+                Btn_Settings_Shift_Save.Content = m_Global_Handler.Resources_Handler.Get_Resources("Save");
 
                 //Labels
                 Lbl_Settings_General_Database.Content = m_Global_Handler.Resources_Handler.Get_Resources("DatabaseDefinition");
                 Lbl_Settings_General_Photos.Content = m_Global_Handler.Resources_Handler.Get_Resources("PhotosDirectory");
+                Lbl_Settings_Shift.Content = m_Global_Handler.Resources_Handler.Get_Resources("Shift");
+                Lbl_Settings_Shift_HourlyRate.Content = m_Global_Handler.Resources_Handler.Get_Resources("HourlyRate");
+                Lbl_Settings_Shift_Pause.Content = m_Global_Handler.Resources_Handler.Get_Resources("Pause");
 
                 #endregion
 
@@ -5497,6 +5502,135 @@ namespace Software
             }
         }
 
+        /// <summary>
+        /// Event
+        /// Settings
+        /// Shift
+        /// Save shift informations
+        /// </summary>
+        private void Btn_Settings_Shift_Save_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Creation of the wait window
+                WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
+
+                //Open the wait window
+                windowWait.Start(m_Global_Handler, "SettingsShiftSavePrincipalMessage", "SettingsShiftSaveSecondaryMessage");
+
+                //Save to database
+                string res = m_Database_Handler.Edit_Settings_General_Shift(Txt_Settings_Shift_HourlyRate.Text, SoftwareObjects.GlobalSettings.id, Txt_Settings_Shift_Pause.Text);
+
+                //Treat the result
+                if (res.Contains("OK"))
+                {
+
+                    //Action
+                    m_Global_Handler.Log_Handler.WriteAction("Settings: Pause duration = " + SoftwareObjects.GlobalSettings.pause_duration + " and " +
+                        " hourly rate = " + SoftwareObjects.GlobalSettings.hourly_rate + " saved");
+
+                    //Save in the collection
+                    SoftwareObjects.GlobalSettings.hourly_rate = Txt_Settings_Shift_HourlyRate.Text;
+                    SoftwareObjects.GlobalSettings.pause_duration = Txt_Settings_Shift_Pause.Text;
+
+                    //Change color button
+                    Btn_Settings_Shift_Save.Background = m_Color_Button;
+
+                    //Close the wait window
+                    Thread.Sleep(500);
+                    windowWait.Stop();
+                }
+                else if (res.Contains("Error"))
+                {
+                    //Close the wait window
+                    Thread.Sleep(500);
+                    windowWait.Stop();
+
+                    //Treatment of the error
+                    MessageBox.Show(this, res, m_Global_Handler.Resources_Handler.Get_Resources("Error"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    m_Global_Handler.Log_Handler.WriteMessage(MethodBase.GetCurrentMethod().Name, res);
+                    return;
+                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Settings
+        /// Shift
+        /// Text changed for database definition
+        /// </summary>
+        private void Txt_Settings_General_Database_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Txt_Settings_General_Database.Text != SoftwareObjects.GlobalSettings.database_definition)
+            {
+                Btn_Settings_General_Database_Save.Background = m_Color_Red;
+            }
+            else
+            {
+                Btn_Settings_General_Database_Save.Background = m_Color_Button;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Settings
+        /// Shift
+        /// Text changed for photos folder definition
+        /// </summary>
+        private void Txt_Settings_General_Photos_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Txt_Settings_General_Photos.Text != SoftwareObjects.GlobalSettings.photos_repository)
+            {
+                Btn_Settings_General_Photos_Choose.Background = m_Color_Red;
+            }
+            else
+            {
+                Btn_Settings_General_Photos_Choose.Background = m_Color_Button;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Settings
+        /// Shift
+        /// Text changed for hourly rate
+        /// </summary>
+        private void Txt_Settings_Shift_HourlyRate_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Txt_Settings_Shift_HourlyRate.Text != SoftwareObjects.GlobalSettings.hourly_rate)
+            {
+                Btn_Settings_Shift_Save.Background = m_Color_Red;
+            }
+            else
+            {
+                Btn_Settings_Shift_Save.Background = m_Color_Button;
+            }
+        }
+
+        /// <summary>
+        /// Event
+        /// Settings
+        /// Shift
+        /// Text changed for hourly rate
+        /// </summary>
+        private void Txt_Settings_Shift_Pause_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Txt_Settings_Shift_Pause.Text != SoftwareObjects.GlobalSettings.pause_duration)
+            {
+                Btn_Settings_Shift_Save.Background = m_Color_Red;
+            }
+            else
+            {
+                Btn_Settings_Shift_Save.Background = m_Color_Button;
+            }
+        }
+
         #endregion
 
         #endregion
@@ -6937,8 +7071,6 @@ namespace Software
 
         #region Settings
 
-        #region
-
         /// <summary>
         /// Functions
         /// Settings
@@ -6955,6 +7087,8 @@ namespace Software
                 //Fill text boxes
                 Txt_Settings_General_Database.Text = SoftwareObjects.GlobalSettings.database_definition;
                 Txt_Settings_General_Photos.Text = SoftwareObjects.GlobalSettings.photos_repository;
+                Txt_Settings_Shift_HourlyRate.Text = SoftwareObjects.GlobalSettings.hourly_rate;
+                Txt_Settings_Shift_Pause.Text = SoftwareObjects.GlobalSettings.pause_duration;
 
                 return;
             }
@@ -6964,8 +7098,6 @@ namespace Software
                 return;
             }
         }
-
-        #endregion
 
         #endregion
 

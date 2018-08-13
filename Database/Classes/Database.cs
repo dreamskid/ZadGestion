@@ -1456,8 +1456,6 @@ namespace Database
 
         #region Settings
 
-        #region General
-
         /// <summary>
         /// Edit the directory of the photo in the database
         /// <param name="_PhotosDirectory">Photo directory</param>
@@ -1497,6 +1495,51 @@ namespace Database
             }
         }
 
+
+        /// <summary>
+        /// Edit the shift parameters in the database
+        /// <param name="_HourlyRate">Hourly rate</param>
+        /// <param name="_Id">Id</param>
+        /// <param name="_PauseDuration">Pause duration</param>
+        /// <returns>The string containing the result of the operation (OK, error)</returns>
+        /// </summary>
+        public string Edit_Settings_General_Shift(string _HourlyRate, string _Id, string _PauseDuration)
+        {
+            try
+            {
+                //Open SQL connection
+                this.m_SQLConnection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
+
+                //SQL request
+                cmd.CommandText = "UPDATE settings SET hourly_rate = @hourly_rate, pause_duration = @pause_duration WHERE id = @id";
+
+                //Fill SQL parameters
+                cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@hourly_rate", _HourlyRate);
+                cmd.Parameters.AddWithValue("@pause_duration", _PauseDuration);
+
+                //Execute request
+                cmd.ExecuteNonQuery();
+
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                //Close connection
+                this.m_SQLConnection.Close();
+
+                //Write error to log
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
+                return "Error - " + e.Message;
+            }
+        }
+
         /// <summary>
         /// Get the setting form the database
         /// <returns>The string containing the result of the operation (OK, error)</returns>
@@ -1518,6 +1561,9 @@ namespace Database
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
+                    SoftwareObjects.GlobalSettings.hourly_rate = reader.GetString("hourly_rate");
+                    SoftwareObjects.GlobalSettings.id = reader.GetString("id");
+                    SoftwareObjects.GlobalSettings.pause_duration = reader.GetString("pause_duration");
                     SoftwareObjects.GlobalSettings.photos_repository = reader.GetString("photos_repository");
                 }
 
@@ -1536,8 +1582,6 @@ namespace Database
                 return e.Message;
             }
         }
-
-        #endregion
 
         #endregion
 

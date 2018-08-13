@@ -2587,6 +2587,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Saving shift parameters....
+        /// </summary>
+        public static string SettingsShiftSavePrincipalMessage {
+            get {
+                return ResourceManager.GetString("SettingsShiftSavePrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please wait while the settings for shift are saved into the database.
+        /// </summary>
+        public static string SettingsShiftSaveSecondaryMessage {
+            get {
+                return ResourceManager.GetString("SettingsShiftSaveSecondaryMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sex.
         /// </summary>
         public static string Sex {

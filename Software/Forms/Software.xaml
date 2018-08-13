@@ -265,7 +265,7 @@
 
         <!--Settings-->
         <Grid x:Name="Grid_Settings" Margin="10,101,10,10" Visibility="Collapsed" >
-            <TabControl x:Name="TbCtrl_Settings" Margin="10">
+            <TabControl x:Name="TbCtrl_Settings" Margin="10,10,10.4,10" TabIndex="23454241">
 
                 <!--Background-->
                 <TabControl.Background>
@@ -276,16 +276,22 @@
                 <TabItem x:Name="TbItem_Settings_General" Header="General" AllowDrop="True" Margin="0,0,-37,0" Height="30" Style="{DynamicResource TabItemStyle}">
                     <Grid>
                         <!--Buttons-->
-                        <Button x:Name="Btn_Settings_General_Database_Save" HorizontalAlignment="Left" Height="33" Margin="614,35,0,0" VerticalAlignment="Top" Width="144" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Save" Background="#FF6F0178" Foreground="White" Click="Btn_Settings_General_Database_Save_Click"/>
-                        <Button x:Name="Btn_Settings_General_Photos_Choose" HorizontalAlignment="Left" Height="33" Margin="614,114,0,0" VerticalAlignment="Top" Width="144" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Choose" Background="#FF6F0178" Foreground="White" Click="Btn_Settings_General_Photos_Choose_Click"/>
+                        <Button x:Name="Btn_Settings_General_Database_Save" HorizontalAlignment="Left" Height="33" Margin="614,35,0,0" VerticalAlignment="Top" Width="144" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Save" Background="#FF6F0178" Foreground="White" Click="Btn_Settings_General_Database_Save_Click" TabIndex="2"/>
+                        <Button x:Name="Btn_Settings_General_Photos_Choose" HorizontalAlignment="Left" Height="33" Margin="614,114,0,0" VerticalAlignment="Top" Width="144" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Choose" Background="#FF6F0178" Foreground="White" Click="Btn_Settings_General_Photos_Choose_Click" TabIndex="4"/>
+                        <Button x:Name="Btn_Settings_Shift_Save" HorizontalAlignment="Left" Height="33" Margin="614,230,0,0" VerticalAlignment="Top" Width="144" FontWeight="Bold" FontFamily="Arial" BorderThickness="0" Content="Save" Background="#FF6F0178" Foreground="White" Click="Btn_Settings_Shift_Save_Click" TabIndex="7"/>
 
                         <!--Labels-->
                         <Label x:Name="Lbl_Settings_General_Database" Content="DatabaseLocation" HorizontalAlignment="Left" Height="29" Margin="10,36,0,0" VerticalAlignment="Top" Width="224" FontWeight="Bold" FontSize="14" Foreground="White"/>
                         <Label x:Name="Lbl_Settings_General_Photos" Content="PhotosLocation" HorizontalAlignment="Left" Height="29" Margin="10,115,0,0" VerticalAlignment="Top" Width="224" FontWeight="Bold" FontSize="14" Foreground="White"/>
+                        <Label x:Name="Lbl_Settings_Shift" Content="Shift" HorizontalAlignment="Left" Height="29" Margin="10,188,0,0" VerticalAlignment="Top" Width="224" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                        <Label x:Name="Lbl_Settings_Shift_HourlyRate" Content="HourlyRate" HorizontalAlignment="Left" Height="29" Margin="10,234,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontSize="14" Foreground="White"/>
+                        <Label x:Name="Lbl_Settings_Shift_Pause" Content="PauseDuration" HorizontalAlignment="Left" Height="29" Margin="267,234,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontSize="14" Foreground="White"/>
 
                         <!--Text boxes-->
-                        <TextBox x:Name="Txt_Settings_General_Database" TextWrapping="Wrap" Margin="239,36,0,0" Width="365" VerticalAlignment="Top" HorizontalAlignment="Left" Height="32"/>
-                        <TextBox x:Name="Txt_Settings_General_Photos" TextWrapping="Wrap" Margin="239,115,0,0" Width="365" VerticalAlignment="Top" HorizontalAlignment="Left" Height="32"/>
+                        <TextBox x:Name="Txt_Settings_General_Database" TextWrapping="Wrap" Margin="239,36,0,0" Width="365" VerticalAlignment="Top" HorizontalAlignment="Left" Height="32" TextChanged="Txt_Settings_General_Database_TextChanged" VerticalContentAlignment="Center" TabIndex="1"/>
+                        <TextBox x:Name="Txt_Settings_General_Photos" TextWrapping="Wrap" Margin="239,115,0,0" Width="365" VerticalAlignment="Top" HorizontalAlignment="Left" Height="32" TextChanged="Txt_Settings_General_Photos_TextChanged" VerticalContentAlignment="Center" TabIndex="3"/>
+                        <TextBox x:Name="Txt_Settings_Shift_HourlyRate" TextWrapping="Wrap" Margin="112,234,0,0" Width="122" VerticalAlignment="Top" HorizontalAlignment="Left" Height="29" TextChanged="Txt_Settings_Shift_HourlyRate_TextChanged" VerticalContentAlignment="Center" TabIndex="5"/>
+                        <TextBox x:Name="Txt_Settings_Shift_Pause" TextWrapping="Wrap" Margin="392,234,0,0" Width="122" VerticalAlignment="Top" HorizontalAlignment="Left" Height="29" TextChanged="Txt_Settings_Shift_Pause_TextChanged" VerticalContentAlignment="Center" TabIndex="6"/>
                     </Grid>
                 </TabItem>
 

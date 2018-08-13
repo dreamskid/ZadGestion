@@ -1415,4 +1415,12 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
     <value>Statement between the </value>
     <comment>Statement between the</comment>
   </data>
+  <data name="SettingsShiftSavePrincipalMessage" xml:space="preserve">
+    <value>Saving shift parameters...</value>
+    <comment>Settings for shift saved principal message</comment>
+  </data>
+  <data name="SettingsShiftSaveSecondaryMessage" xml:space="preserve">
+    <value>Please wait while the settings for shift are saved into the database</value>
+    <comment>Settings for shift saved secondary message</comment>
+  </data>
 </root>

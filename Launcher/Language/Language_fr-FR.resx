@@ -1430,4 +1430,12 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
     <value>Etat entre le </value>
     <comment>Etat entre le </comment>
   </data>
+  <data name="SettingsShiftSavePrincipalMessage" xml:space="preserve">
+    <value>Enregistrement des paramètres pour les shifts en cours...</value>
+    <comment>Message principal d'enregistrement des paramètres pour les shifts</comment>
+  </data>
+  <data name="SettingsShiftSaveSecondaryMessage" xml:space="preserve">
+    <value>Veuillez patienter lors de l'enregistrement des paramètres pour les shifts dans la base de données.</value>
+    <comment>Message secondaire d'enregistrement des paramètres pour les shifts</comment>
+  </data>
 </root>
