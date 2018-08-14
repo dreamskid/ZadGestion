@@ -2614,6 +2614,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shift.
+        /// </summary>
+        public static string Shift {
+            get {
+                return ResourceManager.GetString("Shift", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to delete the selected shift?.
         /// </summary>
         public static string ShiftConfirmDelete {

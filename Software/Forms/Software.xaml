@@ -147,7 +147,7 @@
             <ComboBox x:Name="Cmb_HostAndHostess_SortBy" HorizontalAlignment="Left" Height="20" Margin="226,40,0,0" VerticalAlignment="Top" Width="164" DropDownClosed="Cmb_HostAndHostess_SortBy_SelectionChanged"/>
 
             <!--Data grid-->
-            <DataGrid x:Name="DataGrid_HostAndHostess_Missions" Margin="10,103,0,124" Width="437" Opacity="0.75" HorizontalAlignment="Left" AutoGeneratingColumn="DataGrid_HostAndHostessMissions_AutoGeneratingColumn" IsReadOnly="True" BorderBrush="#FF245580" BorderThickness="0" FontSize="15">
+            <DataGrid x:Name="DataGrid_HostAndHostess_Missions" Margin="10,103,0,124" Width="437" Opacity="0.75" HorizontalAlignment="Left" AutoGeneratingColumn="DataGrid_HostAndHostessMissions_AutoGeneratingColumn" IsReadOnly="True" BorderBrush="#FF245580" BorderThickness="0">
                 <DataGrid.RowStyle>
                     <Style TargetType="{x:Type DataGridRow}">
                         <Style.Triggers>
@@ -213,7 +213,7 @@
 
             <!--Data grid-->
 
-            <DataGrid x:Name="DataGrid_Clients_Missions" Margin="10,103,0,124" Width="437" Opacity="0.75" HorizontalAlignment="Left" AutoGeneratingColumn="DataGrid_ClientsMissions_AutoGeneratingColumn" IsReadOnly="True" BorderBrush="#FF245580" BorderThickness="0" FontSize="15">
+            <DataGrid x:Name="DataGrid_Clients_Missions" Margin="10,103,0,124" Width="437" Opacity="0.75" HorizontalAlignment="Left" AutoGeneratingColumn="DataGrid_ClientsMissions_AutoGeneratingColumn" IsReadOnly="True" BorderBrush="#FF245580" BorderThickness="0">
                 <DataGrid.RowStyle>
                     <Style TargetType="{x:Type DataGridRow}">
                         <Style.Triggers>

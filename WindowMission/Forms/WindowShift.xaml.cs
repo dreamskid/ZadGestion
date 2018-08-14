@@ -379,8 +379,8 @@ namespace WindowMission
 
                     //Edit the mission to include the id of the new shift
                     m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
-                        m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_declined, m_Mission.date_done,
-                        m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+                        m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_creation, m_Mission.date_declined, m_Mission.date_done,
+                        m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_client, m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
                 }
                 else if (res.Contains("Error"))
                 {
@@ -439,8 +439,9 @@ namespace WindowMission
                     //Delete from the mission
                     m_Mission.id_list_shifts = m_Mission.id_list_shifts.Replace(m_Shift.id + ";", "");
                     m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
-                        m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_declined, m_Mission.date_done,
-                        m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+                        m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_creation, m_Mission.date_declined, m_Mission.date_done,
+                        m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_client, m_Mission.id_list_shifts,
+                        m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
 
                     //Delete from the collection
                     SoftwareObjects.ShiftsCollection.Remove(SoftwareObjects.ShiftsCollection.Find(x => x.id.Equals(m_Shift.id)));
@@ -527,8 +528,9 @@ namespace WindowMission
                     //Edit the mission to include the id of the new shift
                     m_Mission.id_list_shifts = m_Mission.id_list_shifts.Replace(m_Shift.id, newId);
                     m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
-                        m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_declined, m_Mission.date_done,
-                        m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+                        m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_creation, m_Mission.date_declined, m_Mission.date_done,
+                        m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_client, m_Mission.id_list_shifts,
+                        m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
 
                     //Edit into the collection
                     Shift shift = SoftwareObjects.ShiftsCollection.Find(x => x.id.Equals(m_Shift.id));
@@ -560,8 +562,9 @@ namespace WindowMission
 
                     //Edit the mission to include the id of the new shift
                     m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
-                        m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_declined, m_Mission.date_done,
-                        m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+                        m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_creation, m_Mission.date_declined, m_Mission.date_done,
+                        m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_client, m_Mission.id_list_shifts,
+                        m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
                 }
                 else if (res.Contains("Error"))
                 {

@@ -1438,4 +1438,8 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
     <value>Veuillez patienter lors de l'enregistrement des paramètres pour les shifts dans la base de données.</value>
     <comment>Message secondaire d'enregistrement des paramètres pour les shifts</comment>
   </data>
+  <data name="Shift" xml:space="preserve">
+    <value>Shift</value>
+    <comment>Shift</comment>
+  </data>
 </root>

@@ -119,6 +119,13 @@ namespace WindowMission
         /// <summary>
         /// Initialization
         /// Variables
+        /// List of client ids
+        /// </summary>
+        private List<string> m_ListOfIdClients = new List<string>();
+
+        /// <summary>
+        /// Initialization
+        /// Variables
         /// List of shifts
         /// </summary>
         private List<Shift> m_ListOfShifts = new List<Shift>();
@@ -147,18 +154,16 @@ namespace WindowMission
                 m_Cities_DocFrance = _Cities_DocFrance;
                 m_IsModification = _IsModification;
 
-                //Fill clients combo box
+                //Fill clients combo box                
                 for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
                 {
                     Client client = SoftwareObjects.ClientsCollection[iClient];
                     if (client.archived == 0)
                     {
                         Cmb_Mission_Client.Items.Add(client.corporate_name);
+                        m_ListOfIdClients.Add(client.id);
                     }
                 }
-
-                //Fill dates combo boxes
-
 
                 //Define content
                 if (m_Global_Handler != null)
@@ -610,6 +615,7 @@ namespace WindowMission
             m_Mission.date_done = Dtp_Mission_DateDone.Text;
             m_Mission.description = Txt_Mission_Description.Text;
             m_Mission.end_date = Cld_Mission_EndDate.SelectedDate.ToString();
+            m_Mission.id_client = m_ListOfIdClients[Cmb_Mission_Client.SelectedIndex];
             m_Mission.start_date = Cld_Mission_StartDate.SelectedDate.ToString();
             m_Mission.state = Txt_Mission_State.Text;
             m_Mission.zipcode = Txt_Mission_Zipcode.Text;
@@ -621,7 +627,7 @@ namespace WindowMission
             //Add to internet database
             string res = m_Database_Handler.Add_MissionToDatabase(m_Mission.address, m_Mission.city,
                 m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_declined, m_Mission.date_done,
-                m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+                m_Mission.description, m_Mission.end_date, m_Mission.id, m_Mission.id_client, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
 
             //Treat the result
             if (res.Contains("OK"))
@@ -654,14 +660,15 @@ namespace WindowMission
             m_Mission.date_done = Dtp_Mission_DateDone.Text;
             m_Mission.description = Txt_Mission_Description.Text;
             m_Mission.end_date = Cld_Mission_EndDate.SelectedDate.ToString();
+            m_Mission.id_client = m_ListOfIdClients[Cmb_Mission_Client.SelectedIndex];
             m_Mission.start_date = Cld_Mission_StartDate.SelectedDate.ToString();
             m_Mission.state = Txt_Mission_State.Text;
             m_Mission.zipcode = Txt_Mission_Zipcode.Text;
 
             //Edit in internet database
             string res = m_Database_Handler.Edit_MissionToDatabase(m_Mission.address, m_Mission.city,
-                m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_declined, m_Mission.date_done, m_Mission.description, m_Mission.end_date, m_Mission.id,
-                m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
+                m_Mission.client_name, m_Mission.country, m_Mission.date_billed, m_Mission.date_creation, m_Mission.date_declined, m_Mission.date_done, m_Mission.description, m_Mission.end_date,
+                m_Mission.id, m_Mission.id_client, m_Mission.id_list_shifts, m_Mission.start_date, m_Mission.state, m_Mission.zipcode);
 
             //Treat the result
             if (res.Contains("OK"))

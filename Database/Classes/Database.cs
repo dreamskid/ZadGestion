@@ -833,6 +833,7 @@ namespace Database
         /// <param name="_DateDone">Done date of the mission</param>
         /// <param name="_EndDate">End date of the mission</param>
         /// <param name="_Id">Id of the mission</param>
+        /// <param name="_Id">Client id of the mission</param>
         /// <param name="_ListOfShiftsId">List of shifts id of the mission</param>
         /// <param name="_StartDate">Start date of the mission</param>
         /// <param name="_State">State of the mission</param>
@@ -841,7 +842,7 @@ namespace Database
         /// </summary>
         public string Add_MissionToDatabase(string _Address, string _City,
                         string _ClientName, string _Country, string _DateBilled, string _DateDeclined, string _DateDone,
-                        string _Description, string _EndDate, string _Id, string _StartDate, string _State, string _ZipCode)
+                        string _Description, string _EndDate, string _Id, string _IdClient, string _StartDate, string _State, string _ZipCode)
         {
             try
             {
@@ -852,11 +853,13 @@ namespace Database
                 MySqlCommand cmd = this.m_SQLConnection.CreateCommand();
 
                 //SQL request
-                cmd.CommandText = "INSERT INTO missions (address, city, client_name, country, date_billed, date_creation, date_declined, date_done, description, end_date, id, start_date, state, zipcode)" +
-                    " VALUES (@address, @city, @client_name, @country, @date_billed, @date_creation, @date_declined, @date_done, @description, @end_date, @id, @start_date, @state, @zipcode)";
+                cmd.CommandText = "INSERT INTO missions (address, city, client_name, country, date_billed, date_creation, date_declined, date_done, description, end_date, id, id_client, start_date, state, zipcode)" +
+                    " VALUES (@address, @city, @client_name, @country, @date_billed, @date_creation, @date_declined, @date_done, @description, @end_date, @id, @id_client, @start_date, @state, @zipcode)";
 
                 //Fill SQL parameters
                 string dateCreation = DateTime.Today.ToString("dd/MM/yyyy");
+                string startDate = Convert.ToDateTime(_StartDate).ToString("dd/MM/yyyy");
+                string endDate = Convert.ToDateTime(_EndDate).ToString("dd/MM/yyyy");
                 cmd.Parameters.AddWithValue("@address", _Address);
                 cmd.Parameters.AddWithValue("@city", _City);
                 cmd.Parameters.AddWithValue("@client_name", _ClientName);
@@ -866,9 +869,10 @@ namespace Database
                 cmd.Parameters.AddWithValue("@date_declined", _DateDeclined);
                 cmd.Parameters.AddWithValue("@date_done", _DateDone);
                 cmd.Parameters.AddWithValue("@description", _Description);
-                cmd.Parameters.AddWithValue("@end_date", _EndDate);
+                cmd.Parameters.AddWithValue("@end_date", endDate);
                 cmd.Parameters.AddWithValue("@id", _Id);
-                cmd.Parameters.AddWithValue("@start_date", _StartDate);
+                cmd.Parameters.AddWithValue("@id_client", _IdClient);
+                cmd.Parameters.AddWithValue("@start_date", startDate);
                 cmd.Parameters.AddWithValue("@state", _State);
                 cmd.Parameters.AddWithValue("@zipcode", _ZipCode);
 
@@ -972,6 +976,7 @@ namespace Database
         /// <param name="_ClientName">Name of the client</param>
         /// <param name="_Country">Country of the mission</param>
         /// <param name="_DateBilled">Billed date of the mission</param>
+        /// <param name="_DateCreation">Creation date of the mission</param>
         /// <param name="_DateDeclined">Declined date of the mission</param>
         /// <param name="_DateDone">Done date of the mission</param>
         /// <param name="_EndDate">End date of the mission</param>
@@ -983,8 +988,8 @@ namespace Database
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Edit_MissionToDatabase(string _Address, string _City,
-                        string _ClientName, string _Country, string _DateBilled, string _DateDeclined, string _DateDone,
-                        string _Description, string _EndDate, string _Id, string _ListOfShiftsId, string _StartDate, string _State, string _ZipCode)
+                        string _ClientName, string _Country, string _DateBilled, string _DateCreation, string _DateDeclined, string _DateDone,
+                        string _Description, string _EndDate, string _Id, string _IdClient, string _ListOfShiftsId, string _StartDate, string _State, string _ZipCode)
         {
             try
             {
@@ -996,22 +1001,27 @@ namespace Database
 
                 //SQL request
                 cmd.CommandText = "UPDATE missions SET address = @address, city = @city, client_name = @client_name, country = @country, date_billed = @date_billed, " +
-                    "date_declined = @date_declined, date_done = @date_done,description = @description," +
-                    "end_date = @end_date, id_list_shifts = @id_list_shifts, start_date = @start_date, state = @state, zipcode = @zipcode WHERE id = @id";
+                    "date_creation = @date_creation, date_declined = @date_declined, date_done = @date_done,description = @description," +
+                    "end_date = @end_date, id_client = @id_client, id_list_shifts = @id_list_shifts, start_date = @start_date, state = @state, zipcode = @zipcode WHERE id = @id";
 
                 //Fill SQL parameters
+                string dateCreation = (Convert.ToDateTime(_DateCreation)).ToString("dd/MM/yyyy");
+                string startDate = Convert.ToDateTime(_StartDate).ToString("dd/MM/yyyy");
+                string endDate = Convert.ToDateTime(_EndDate).ToString("dd/MM/yyyy");
                 cmd.Parameters.AddWithValue("@address", _Address);
                 cmd.Parameters.AddWithValue("@city", _City);
                 cmd.Parameters.AddWithValue("@client_name", _ClientName);
                 cmd.Parameters.AddWithValue("@country", _Country);
                 cmd.Parameters.AddWithValue("@date_billed", _DateBilled);
+                cmd.Parameters.AddWithValue("@date_creation", dateCreation);
                 cmd.Parameters.AddWithValue("@date_declined", _DateDeclined);
                 cmd.Parameters.AddWithValue("@date_done", _DateDone);
                 cmd.Parameters.AddWithValue("@description", _Description);
-                cmd.Parameters.AddWithValue("@end_date", _EndDate);
+                cmd.Parameters.AddWithValue("@end_date", endDate);
                 cmd.Parameters.AddWithValue("@id", _Id);
+                cmd.Parameters.AddWithValue("@id_client", _IdClient);
                 cmd.Parameters.AddWithValue("@id_list_shifts", _ListOfShiftsId);
-                cmd.Parameters.AddWithValue("@start_date", _StartDate);
+                cmd.Parameters.AddWithValue("@start_date", startDate);
                 cmd.Parameters.AddWithValue("@state", _State);
                 cmd.Parameters.AddWithValue("@zipcode", _ZipCode);
 
@@ -1076,6 +1086,7 @@ namespace Database
                                                           end_date = row["end_date"].ToString(),
                                                           id_list_shifts = row["id_list_shifts"].ToString(),
                                                           id = row["id"].ToString(),
+                                                          id_client = row["id_client"].ToString(),
                                                           start_date = row["start_date"].ToString(),
                                                           state = row["state"].ToString(),
                                                           zipcode = row["zipcode"].ToString()

@@ -149,6 +149,15 @@
         }
 
         /// <summary>
+        /// Getter/Setter for mission client id
+        /// </summary>
+        public string id_client
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Getter/Setter for the list of shifts id
         /// </summary>
         public string id_list_shifts

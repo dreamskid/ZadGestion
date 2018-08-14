@@ -240,11 +240,12 @@ namespace Software
             /// <summary>
             /// Constructor
             /// </summary>
-            public m_Datagrid_Clients_Missions(string _Id, string _City, string _Date, string _Description)
+            public m_Datagrid_Clients_Missions(string _Id, string _City, string _StartDate, string _EndDate, string _Description)
             {
                 id = _Id;
                 city = _City;
-                date = _Date;
+                start_date = _StartDate;
+                end_date = _EndDate;
                 description = _Description;
             }
 
@@ -259,7 +260,11 @@ namespace Software
             /// <summary>
             /// Date
             /// </summary>
-            public string date { set; get; }
+            public string start_date { set; get; }
+            /// <summary>
+            /// End date
+            /// </summary>
+            public string end_date { set; get; }
             /// <summary>
             /// Description
             /// </summary>
@@ -698,7 +703,7 @@ namespace Software
                 Lbl_Settings_General_Photos.Content = m_Global_Handler.Resources_Handler.Get_Resources("PhotosDirectory");
                 Lbl_Settings_Shift.Content = m_Global_Handler.Resources_Handler.Get_Resources("Shift");
                 Lbl_Settings_Shift_HourlyRate.Content = m_Global_Handler.Resources_Handler.Get_Resources("HourlyRate");
-                Lbl_Settings_Shift_Pause.Content = m_Global_Handler.Resources_Handler.Get_Resources("Pause");
+                Lbl_Settings_Shift_Pause.Content = m_Global_Handler.Resources_Handler.Get_Resources("PauseDuration");
 
                 #endregion
 
@@ -1011,6 +1016,8 @@ namespace Software
                         Btn_Missions_Edit.IsEnabled = false;
 
                         //Close the wait window
+                        //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         return;
@@ -1018,6 +1025,7 @@ namespace Software
                     else
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Error connecting to web site
@@ -1029,6 +1037,10 @@ namespace Software
             }
             catch (Exception exception)
             {
+                //Close the wait window
+                Thread.Sleep(500);
+                windowWait.Stop();
+
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 Close();
             }
@@ -1106,7 +1118,10 @@ namespace Software
             }
             catch (Exception exception)
             {
+                //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
+
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
@@ -1207,6 +1222,7 @@ namespace Software
                 else
                 {
                     //Close the wait window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                     //Error connecting to web site
@@ -1218,6 +1234,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
@@ -1254,7 +1271,7 @@ namespace Software
 
                 //Add to database
                 string res = m_Database_Handler.Add_MissionToDatabase(newMission.address, newMission.city, newMission.client_name, newMission.country, "", "", "",
-                    newMission.description, newMission.end_date, newMission.id, newMission.start_date, newMission.state, newMission.zipcode);
+                    newMission.description, newMission.end_date, newMission.id, newMission.id_client, newMission.start_date, newMission.state, newMission.zipcode);
 
                 //Treat the result
                 if (res.Contains("OK"))
@@ -1292,8 +1309,10 @@ namespace Software
             }
             catch (Exception exception)
             {
+                //Close the wait window
                 Thread.Sleep(500);
                 windowWait.Stop();
+
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return;
             }
@@ -1492,6 +1511,7 @@ namespace Software
                                 m_Global_Handler.Resources_Handler.Get_Resources("MissionsStatementExcelGenerationFailedCaption"),
                                 MessageBoxButton.OK, MessageBoxImage.Error);
                     //Close the wait window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                     return;
@@ -1501,6 +1521,7 @@ namespace Software
                 m_Global_Handler.Log_Handler.WriteAction("Missions exported to excel file " + fileNameXLS);
 
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 //Open the file
@@ -1509,6 +1530,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
@@ -2140,6 +2162,16 @@ namespace Software
                     {
                         //Get the mission
                         Mission processedMission = SoftwareObjects.MissionsCollection[iMission];
+
+                        //Verifify archives
+                        if (m_Mission_IsArchiveMode == false && processedMission.archived == 1)
+                        {
+                            continue;
+                        }
+                        if (m_Mission_IsArchiveMode == true && processedMission.archived == 0)
+                        {
+                            continue;
+                        }
 
                         //Research
                         if (processedMission.client_name.ToLower().Contains(researchedText))
@@ -3474,126 +3506,16 @@ namespace Software
                 else if (e.Column.Header.ToString() == "city")
                 {
                     e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("City");
-                    e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
+                    e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
                 }
                 else if (e.Column.Header.ToString() == "date")
                 {
                     e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("Date");
-                    e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
+                    e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
                 }
                 else if (e.Column.Header.ToString() == "id")
                 {
                     e.Column.Visibility = Visibility.Hidden;
-                }
-            }
-            catch (Exception exception)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                return;
-            }
-        }
-
-        /// <summary>
-        /// Event
-        /// Hostess
-        /// Double click on a row of the datagrid containing the bills
-        /// Open the selected bill category
-        /// </summary>
-        private void DataGrid_HostAndHostessBilling_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            try
-            {
-                if (sender != null)
-                {
-                    DataGrid grid = sender as DataGrid;
-                    if (grid != null && grid.SelectedItems != null && grid.SelectedItems.Count == 1)
-                    {
-                        //Get the hostess
-                        m_Datagrid_HostAndHostess_Missions hostessGrid = (m_Datagrid_HostAndHostess_Missions)grid.SelectedItems[0];
-                        Hostess Hostessel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals((int)m_Button_HostAndHostess_SelectedHostAndHostess.Tag));
-                        if (Hostessel == null)
-                        {
-                            return;
-                        }
-
-                        //Get selected bill in the datagrid
-                        int indexSel = grid.SelectedIndex;
-                        if (indexSel < 0 || indexSel > m_DataGrid_HostAndHostess_MissionsCollection.Count - 1)
-                        {
-                            return;
-                        }
-                        m_Datagrid_HostAndHostess_Missions billDatagrid = (m_Datagrid_HostAndHostess_Missions)grid.SelectedCells[0].Item;
-
-                        //Get the missions associated to the selected host or hostess
-                        List<Mission> missions = new List<Mission>();
-                        for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
-                        {
-                            Mission bill = SoftwareObjects.MissionsCollection[iMission];
-                            if (bill.id == Hostessel.id)//TODO
-                            {
-                                missions.Add(bill);
-                            }
-                        }
-                        m_Grid_Details_Missions_MissionsCollection = missions;
-
-                        //Get selected bill from collection
-                        Mission missionSel = SoftwareObjects.MissionsCollection.Find(x => x.id.Equals(billDatagrid.id));
-                        if (missionSel != null)
-                        {
-                            //Mission
-                            if (missionSel.id == "" || missionSel.id == null)
-                            {
-                                //Graphism
-                                Btn_Software_Missions.Background = m_Color_MainButton;
-                                Btn_Software_HostAndHostess.Background = m_Color_SelectedMainButton;
-
-                                //Visibility
-                                Grid_HostAndHostess.Visibility = Visibility.Collapsed;
-                                Grid_Missions.Visibility = Visibility.Visible;
-
-                                //Archived or in progress
-                                if (missionSel.archived == 1)
-                                {
-                                    m_Mission_IsArchiveMode = true;
-                                }
-
-                                //Clear displayed collection
-                                m_DisplayedMissionsCollection.Clear();
-
-                                //Adding associated missions
-                                Grid_Missions_Details.Children.Clear();
-                                m_GridMission_Column = 0;
-                                m_GridMission_Row = 0;
-                                for (int iMission = 0; iMission < missions.Count; ++iMission)
-                                {
-                                    if (m_Mission_IsArchiveMode == true && missions[iMission].archived == 1)
-                                    {
-                                        Add_MissionToGrid(missions[iMission]);
-                                    }
-                                    else if (m_Mission_IsArchiveMode == false && missions[iMission].archived == 0)
-                                    {
-                                        Add_MissionToGrid(missions[iMission]);
-                                    }
-                                }
-
-                                //Fields
-                                Txt_Missions_Client.Text = missionSel.client_name;
-                                Txt_Missions_CreationDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.date_creation, m_Global_Handler.Language_Handler);
-                                Txt_Missions_EndDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.end_date, m_Global_Handler.Language_Handler);
-                                Txt_Missions_StartDate.Text = m_Global_Handler.DateAndTime_Handler.Treat_Date(missionSel.start_date, m_Global_Handler.Language_Handler);
-
-                                //Select the mission
-                                Filter_GridMissionsFromMissionsCollection(MissionStatus.NONE);
-                                Select_Mission(missionSel, true);
-
-                                //Enable the buttons
-                                Btn_Missions_Duplicate.IsEnabled = true;
-                                Btn_Missions_Edit.IsEnabled = true;
-                                Btn_Missions_Delete.IsEnabled = true;
-                                Btn_Missions_Archive.IsEnabled = true;
-                            }
-                        }
-                    }
                 }
             }
             catch (Exception exception)
@@ -3620,77 +3542,17 @@ namespace Software
                     string idSel = (string)buttonSel.Tag;
                     m_Id_SelectedHostAndHostess = idSel;
 
-                    //Manage the buttons
-                    if (m_Button_HostAndHostess_SelectedHostAndHostess != null)
+                    //Get the host or hostess
+                    Hostess hostOrHostessSel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(idSel));
+                    if (hostOrHostessSel == null)
                     {
-                        if (m_HostsAndHostesses_IsArchiveMode == false)
-                        {
-                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_ArchivedMission;
-                        }
+                        Exception error = new Exception("Host or hostess not found !");
+                        throw error;
                     }
-                    if (m_Button_HostAndHostess_SelectedCellPhone != null)
-                    {
-                        if (m_HostsAndHostesses_IsArchiveMode == false)
-                        {
-                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    if (m_Button_HostAndHostess_SelectedEmail != null)
-                    {
-                        if (m_HostsAndHostesses_IsArchiveMode == false)
-                        {
-                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    m_Button_HostAndHostess_SelectedHostAndHostess = null;
-                    m_Button_HostAndHostess_SelectedCellPhone = null;
-                    m_Button_HostAndHostess_SelectedEmail = null;
-                    StackPanel stackSel = (StackPanel)buttonSel.Parent;
-                    for (int iChild = 0; iChild < stackSel.Children.Count; ++iChild)
-                    {
-                        Button childButton = (Button)stackSel.Children[iChild];
-                        childButton.Background = m_Color_SelectedHostAndHostess;
-                        if (iChild == 0)
-                        {
-                            m_Button_HostAndHostess_SelectedHostAndHostess = childButton;
-                        }
-                        else if (childButton.Tag.ToString() == "CellPhone")
-                        {
-                            m_Button_HostAndHostess_SelectedCellPhone = childButton;
-                        }
-                        else if (childButton.Tag.ToString() == "Email")
-                        {
-                            m_Button_HostAndHostess_SelectedEmail = childButton;
-                        }
-                    }
-                    //Select the host or hostess
-                    Get_SelectedHostOrHostessFromButton();
 
-                    if (m_HostsAndHostesses_IsArchiveMode == false)
+                    if (hostOrHostessSel != null)
                     {
-                        //Enable the buttons
-                        Btn_HostAndHostess_Archive.IsEnabled = true;
-                        Btn_HostAndHostess_Edit.IsEnabled = true;
-                        Btn_HostAndHostess_Delete.IsEnabled = true;
-                    }
-                    else
-                    {
-                        //Enable the buttons
-                        Btn_HostAndHostess_Archive.IsEnabled = true;
-                        Btn_HostAndHostess_Edit.IsEnabled = false;
-                        Btn_HostAndHostess_Delete.IsEnabled = false;
+                        Select_HostorHostess(hostOrHostessSel);
                     }
                 }
                 catch (Exception exception)
@@ -3719,76 +3581,31 @@ namespace Software
                     //Open the wait window
                     windowWait.Start(m_Global_Handler, "HostOrHostessEmailPrincipalMessage", "HostOrHostessEmailSecondaryMessage");
 
+                    //Get the hostess's id
+                    Button buttonSel = (Button)sender;
+                    StackPanel stackParent = (StackPanel)buttonSel.Parent;
+                    Button mainButton = (Button)stackParent.Children[0];
+                    string idSel = (string)mainButton.Tag;
+                    m_Id_SelectedHostAndHostess = idSel;
+
+                    //Get the host or hostess
+                    Hostess hostOrHostessSel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(idSel));
+                    if (hostOrHostessSel == null)
+                    {
+                        Exception error = new Exception("Host or hostess not found !");
+                        throw error;
+                    }
+
+                    if (hostOrHostessSel != null)
+                    {
+                        Select_HostorHostess(hostOrHostessSel);
+                    }
+
                     //Get the email adress
                     Button emailButton = (Button)sender;
                     StackPanel emailStackPanel = (StackPanel)emailButton.Content;
                     TextBlock emailTextBox = (TextBlock)emailStackPanel.Children[1];
                     string emailAddress = emailTextBox.Text;
-
-                    //Manage the buttons
-                    if (m_Button_HostAndHostess_SelectedHostAndHostess != null)
-                    {
-                        if (m_HostsAndHostesses_IsArchiveMode == false)
-                        {
-                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    if (m_Button_HostAndHostess_SelectedCellPhone != null)
-                    {
-                        if (m_HostsAndHostesses_IsArchiveMode == false)
-                        {
-                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    if (m_Button_HostAndHostess_SelectedEmail != null)
-                    {
-                        if (m_HostsAndHostesses_IsArchiveMode == false)
-                        {
-                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    m_Button_HostAndHostess_SelectedHostAndHostess = null;
-                    m_Button_HostAndHostess_SelectedCellPhone = null;
-                    m_Button_HostAndHostess_SelectedEmail = null;
-                    StackPanel stackSel = (StackPanel)emailButton.Parent;
-                    for (int iChildren = 0; iChildren < stackSel.Children.Count; ++iChildren)
-                    {
-                        Button childButton = (Button)stackSel.Children[iChildren];
-                        childButton.Background = m_Color_SelectedHostAndHostess;
-                        if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Email")
-                        {
-                            m_Button_HostAndHostess_SelectedHostAndHostess = childButton;
-                            m_Id_SelectedHostAndHostess = (string)childButton.Tag;
-                        }
-                        else if (childButton.Tag.ToString() == "CellPhone")
-                        {
-                            m_Button_HostAndHostess_SelectedCellPhone = childButton;
-                        }
-                        else if (childButton.Tag.ToString() == "Email")
-                        {
-                            m_Button_HostAndHostess_SelectedEmail = childButton;
-                        }
-                    }
-
-                    //Select the hostess
-                    Get_SelectedHostOrHostessFromButton();
-
-                    //Enable the buttons
-                    Btn_HostAndHostess_Archive.IsEnabled = true;
-                    Btn_HostAndHostess_Edit.IsEnabled = true;
-                    Btn_HostAndHostess_Delete.IsEnabled = true;
 
                     //Open the default email sender
                     Process p = new Process();
@@ -3804,11 +3621,15 @@ namespace Software
                     m_Global_Handler.Log_Handler.WriteAction("Mail sent to " + emailAddress);
 
                     //Close stop window
+                    Thread.Sleep(500);
                     windowWait.Stop();
-
                 }
                 catch (Exception exception)
                 {
+                    //Close stop window
+                    Thread.Sleep(500);
+                    windowWait.Stop();
+
                     m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     windowWait.Stop();
                     return;
@@ -3843,71 +3664,31 @@ namespace Software
                     //Open the wait window
                     windowWait.Start(m_Global_Handler, "HostOrHostessPhonePrincipalMessage", "HostOrHostessPhoneSecondaryMessage");
 
-                    //Get the email adress
+                    //Get the hostess's id
+                    Button buttonSel = (Button)sender;
+                    StackPanel stackParent = (StackPanel)buttonSel.Parent;
+                    Button mainButton = (Button)stackParent.Children[0];
+                    string idSel = (string)mainButton.Tag;
+                    m_Id_SelectedHostAndHostess = idSel;
+
+                    //Get the host or hostess
+                    Hostess hostOrHostessSel = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(idSel));
+                    if (hostOrHostessSel == null)
+                    {
+                        Exception error = new Exception("Host or hostess not found !");
+                        throw error;
+                    }
+
+                    if (hostOrHostessSel != null)
+                    {
+                        Select_HostorHostess(hostOrHostessSel);
+                    }
+
+                    //Get the phone nuber
                     Button phoneButton = (Button)sender;
                     StackPanel phoneStackPanel = (StackPanel)phoneButton.Content;
                     TextBlock phoneTextBox = (TextBlock)phoneStackPanel.Children[1];
                     string phoneNumber = phoneTextBox.Text.Trim();
-
-                    //Manage the buttons
-                    if (m_Button_HostAndHostess_SelectedHostAndHostess != null)
-                    {
-                        if (m_HostsAndHostesses_IsArchiveMode == false)
-                        {
-                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    if (m_Button_HostAndHostess_SelectedCellPhone != null)
-                    {
-                        if (m_HostsAndHostesses_IsArchiveMode == false)
-                        {
-                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    if (m_Button_HostAndHostess_SelectedEmail != null)
-                    {
-                        if (m_HostsAndHostesses_IsArchiveMode == false)
-                        {
-                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_HostAndHostess_SelectedEmail.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    m_Button_HostAndHostess_SelectedHostAndHostess = null;
-                    m_Button_HostAndHostess_SelectedCellPhone = null;
-                    m_Button_HostAndHostess_SelectedEmail = null;
-                    StackPanel stackSel = (StackPanel)phoneButton.Parent;
-                    for (int iChildren = 0; iChildren < stackSel.Children.Count; ++iChildren)
-                    {
-                        Button childButton = (Button)stackSel.Children[iChildren];
-                        childButton.Background = m_Color_SelectedHostAndHostess;
-                        if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Email")
-                        {
-                            m_Button_HostAndHostess_SelectedHostAndHostess = childButton;
-                            m_Id_SelectedHostAndHostess = (string)childButton.Tag;
-                        }
-                        else if (childButton.Tag.ToString() == "CellPhone")
-                        {
-                            m_Button_HostAndHostess_SelectedCellPhone = childButton;
-                        }
-                        else if (childButton.Tag.ToString() == "Email")
-                        {
-                            m_Button_HostAndHostess_SelectedEmail = childButton;
-                        }
-                    }
-
-                    //Select the hostess
-                    Hostess hostOrHostess = Get_SelectedHostOrHostessFromButton();
 
                     //Open skype
                     SKYPE4COMLib.Skype skype = new SKYPE4COMLib.Skype();
@@ -3928,14 +3709,19 @@ namespace Software
                     Btn_HostAndHostess_Delete.IsEnabled = true;
 
                     //Action
-                    m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + hostOrHostess.firstname + ", " + hostOrHostess.cellphone);
+                    m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + hostOrHostessSel.firstname + ", " + hostOrHostessSel.cellphone);
 
                     //Close stop window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                 }
                 catch (Exception exception)
                 {
+                    //Close stop window
+                    Thread.Sleep(500);
+                    windowWait.Stop();
+
                     m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     windowWait.Stop();
                     return;
@@ -3961,7 +3747,19 @@ namespace Software
             researchedText = researchedText.ToLower();
 
             //Clear the fields
-            m_Button_HostAndHostess_SelectedHostAndHostess = null;
+            m_Id_SelectedMission = "-1";
+            Cmb_Missions_SortBy.Text = "";
+            m_Datagrid_Missions_ShiftsCollection.Clear();
+            Datagrid_Missions_Shifts.Items.Refresh();
+
+            //Null buttons
+            m_Button_Mission_SelectedMission = null;
+
+            //Disable the buttons
+            Btn_Missions_Archive.IsEnabled = false;
+            Btn_Missions_Delete.IsEnabled = false;
+            Btn_Missions_Duplicate.IsEnabled = false;
+            Btn_Missions_Edit.IsEnabled = false;
 
             //Verifications - 3 letters minimum
             if (researchedText.Length < 2)
@@ -3982,7 +3780,20 @@ namespace Software
                     List<Hostess> foundHostessList = new List<Hostess>();
                     for (int iHostess = 0; iHostess < SoftwareObjects.HostsAndHotessesCollection.Count; ++iHostess)
                     {
+                        //Get the host or hostess
                         Hostess processedHostess = SoftwareObjects.HostsAndHotessesCollection[iHostess];
+
+                        //Verifify archives
+                        if (m_HostsAndHostesses_IsArchiveMode == false && processedHostess.archived == 1)
+                        {
+                            continue;
+                        }
+                        if (m_HostsAndHostesses_IsArchiveMode == true && processedHostess.archived == 0)
+                        {
+                            continue;
+                        }
+
+                        //Research
                         if (processedHostess.address.ToLower().Contains(researchedText))
                         {
                             foundHostessList.Add(processedHostess);
@@ -4040,8 +3851,6 @@ namespace Software
                     actualizationHostessDone = false;
                     if (foundHostessList.Count > 0)
                     {
-                        //Clear fields
-
                         //Initialize counter for columns and rows of Grid_HostAndHostess
                         m_GridHostess_Column = 0;
                         m_GridHostess_Row = 0;
@@ -4953,12 +4762,17 @@ namespace Software
                 else if (e.Column.Header.ToString() == "city")
                 {
                     e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("City");
-                    e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
+                    e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
                 }
-                else if (e.Column.Header.ToString() == "date")
+                else if (e.Column.Header.ToString() == "start_date")
                 {
-                    e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("Date");
-                    e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
+                    e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("StartDate");
+                    e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
+                }
+                else if (e.Column.Header.ToString() == "end_date")
+                {
+                    e.Column.Header = m_Global_Handler.Resources_Handler.Get_Resources("EndDate");
+                    e.Column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
                 }
                 else if (e.Column.Header.ToString() == "id")
                 {
@@ -4989,77 +4803,17 @@ namespace Software
                     string idSel = (string)buttonSel.Tag;
                     m_Id_SelectedClient = idSel;
 
-                    //Manage the buttons
-                    if (m_Button_Client_SelectedClient != null)
+                    //Get the mission
+                    Client clientSel = SoftwareObjects.ClientsCollection.Find(x => x.id.Equals(idSel));
+                    if (clientSel == null)
                     {
-                        if (m_Clients_IsArchiveMode == false)
-                        {
-                            m_Button_Client_SelectedClient.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_Client_SelectedClient.Background = m_Color_ArchivedMission;
-                        }
+                        Exception error = new Exception("Client not found !");
+                        throw error;
                     }
-                    if (m_Button_Client_SelectedCellPhone != null)
-                    {
-                        if (m_Clients_IsArchiveMode == false)
-                        {
-                            m_Button_Client_SelectedCellPhone.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_Client_SelectedCellPhone.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    if (m_Button_Client_SelectedEmail != null)
-                    {
-                        if (m_Clients_IsArchiveMode == false)
-                        {
-                            m_Button_Client_SelectedEmail.Background = m_Color_HostAndHostess;
-                        }
-                        else
-                        {
-                            m_Button_Client_SelectedEmail.Background = m_Color_ArchivedMission;
-                        }
-                    }
-                    m_Button_Client_SelectedClient = null;
-                    m_Button_Client_SelectedCellPhone = null;
-                    m_Button_Client_SelectedEmail = null;
-                    StackPanel stackSel = (StackPanel)buttonSel.Parent;
-                    for (int iChild = 0; iChild < stackSel.Children.Count; ++iChild)
-                    {
-                        Button childButton = (Button)stackSel.Children[iChild];
-                        childButton.Background = m_Color_SelectedHostAndHostess;
-                        if (iChild == 0)
-                        {
-                            m_Button_Client_SelectedClient = childButton;
-                        }
-                        else if (childButton.Tag.ToString() == "CellPhone")
-                        {
-                            m_Button_Client_SelectedCellPhone = childButton;
-                        }
-                        else if (childButton.Tag.ToString() == "Email")
-                        {
-                            m_Button_Client_SelectedEmail = childButton;
-                        }
-                    }
-                    //Select the hostess
-                    Get_SelectedClientFromButton();
 
-                    if (m_Clients_IsArchiveMode == false)
+                    if (clientSel != null)
                     {
-                        //Enable the buttons
-                        Btn_Clients_Archive.IsEnabled = true;
-                        Btn_Clients_Edit.IsEnabled = true;
-                        Btn_Clients_Delete.IsEnabled = true;
-                    }
-                    else
-                    {
-                        //Disable the buttons
-                        Btn_Clients_Archive.IsEnabled = true;
-                        Btn_Clients_Edit.IsEnabled = false;
-                        Btn_Clients_Delete.IsEnabled = false;
+                        Select_Client(clientSel);
                     }
                 }
                 catch (Exception exception)
@@ -5094,44 +4848,25 @@ namespace Software
                     TextBlock emailTextBox = (TextBlock)emailStackPanel.Children[1];
                     string emailAddress = emailTextBox.Text;
 
-                    //Manage the buttons
-                    if (m_Button_Client_SelectedClient != null)
+                    //Get the hostess's id
+                    Button buttonSel = (Button)sender;
+                    StackPanel stackParent = (StackPanel)buttonSel.Parent;
+                    Button mainButton = (Button)stackParent.Children[0];
+                    string idSel = (string)mainButton.Tag;
+                    m_Id_SelectedHostAndHostess = idSel;
+
+                    //Get the host or hostess
+                    Client clientSel = SoftwareObjects.ClientsCollection.Find(x => x.id.Equals(idSel));
+                    if (clientSel == null)
                     {
-                        m_Button_Client_SelectedClient.Background = m_Color_HostAndHostess;
-                    }
-                    if (m_Button_Client_SelectedCellPhone != null)
-                    {
-                        m_Button_Client_SelectedCellPhone.Background = m_Color_HostAndHostess;
-                    }
-                    if (m_Button_Client_SelectedEmail != null)
-                    {
-                        m_Button_Client_SelectedEmail.Background = m_Color_HostAndHostess;
-                    }
-                    m_Button_Client_SelectedClient = null;
-                    m_Button_Client_SelectedCellPhone = null;
-                    m_Button_Client_SelectedEmail = null;
-                    StackPanel stackSel = (StackPanel)emailButton.Parent;
-                    for (int iChildren = 0; iChildren < stackSel.Children.Count; ++iChildren)
-                    {
-                        Button childButton = (Button)stackSel.Children[iChildren];
-                        childButton.Background = m_Color_SelectedHostAndHostess;
-                        if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Email")
-                        {
-                            m_Button_Client_SelectedClient = childButton;
-                            m_Id_SelectedClient = (string)childButton.Tag;
-                        }
-                        else if (childButton.Tag.ToString() == "CellPhone")
-                        {
-                            m_Button_Client_SelectedCellPhone = childButton;
-                        }
-                        else if (childButton.Tag.ToString() == "Email")
-                        {
-                            m_Button_Client_SelectedEmail = childButton;
-                        }
+                        Exception error = new Exception("Client not found !");
+                        throw error;
                     }
 
-                    //Select the hostess
-                    Get_SelectedClientFromButton();
+                    if (clientSel != null)
+                    {
+                        Select_Client(clientSel);
+                    }
 
                     if (m_Clients_IsArchiveMode == false)
                     {
@@ -5162,10 +4897,15 @@ namespace Software
                     }
 
                     //Close stop window
+                    Thread.Sleep(500);
                     windowWait.Stop();
                 }
                 catch (Exception exception)
                 {
+                    //Close stop window
+                    Thread.Sleep(500);
+                    windowWait.Stop();
+
                     m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     windowWait.Stop();
                     return;
@@ -5206,40 +4946,24 @@ namespace Software
                     TextBlock phoneTextBox = (TextBlock)phoneStackPanel.Children[1];
                     string phoneNumber = phoneTextBox.Text.Trim();
 
-                    //Manage the buttons
-                    if (m_Button_Client_SelectedClient != null)
+                    //Get the hostess's id
+                    Button buttonSel = (Button)sender;
+                    StackPanel stackParent = (StackPanel)buttonSel.Parent;
+                    Button mainButton = (Button)stackParent.Children[0];
+                    string idSel = (string)mainButton.Tag;
+                    m_Id_SelectedHostAndHostess = idSel;
+
+                    //Get the host or hostess
+                    Client clientSel = SoftwareObjects.ClientsCollection.Find(x => x.id.Equals(idSel));
+                    if (clientSel == null)
                     {
-                        m_Button_Client_SelectedClient.Background = m_Color_HostAndHostess;
+                        Exception error = new Exception("Client not found !");
+                        throw error;
                     }
-                    if (m_Button_Client_SelectedCellPhone != null)
+
+                    if (clientSel != null)
                     {
-                        m_Button_Client_SelectedCellPhone.Background = m_Color_HostAndHostess;
-                    }
-                    if (m_Button_Client_SelectedEmail != null)
-                    {
-                        m_Button_Client_SelectedEmail.Background = m_Color_HostAndHostess;
-                    }
-                    m_Button_Client_SelectedClient = null;
-                    m_Button_Client_SelectedCellPhone = null;
-                    m_Button_Client_SelectedEmail = null;
-                    StackPanel stackSel = (StackPanel)phoneButton.Parent;
-                    for (int iChildren = 0; iChildren < stackSel.Children.Count; ++iChildren)
-                    {
-                        Button childButton = (Button)stackSel.Children[iChildren];
-                        childButton.Background = m_Color_SelectedHostAndHostess;
-                        if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Email")
-                        {
-                            m_Button_Client_SelectedClient = childButton;
-                            m_Id_SelectedClient = (string)childButton.Tag;
-                        }
-                        else if (childButton.Tag.ToString() == "CellPhone")
-                        {
-                            m_Button_Client_SelectedCellPhone = childButton;
-                        }
-                        else if (childButton.Tag.ToString() == "Email")
-                        {
-                            m_Button_Client_SelectedEmail = childButton;
-                        }
+                        Select_Client(clientSel);
                     }
 
                     if (m_Clients_IsArchiveMode == false)
@@ -5307,7 +5031,20 @@ namespace Software
             researchedText = researchedText.ToLower();
 
             //Clear the fields
+            m_Id_SelectedClient = "-1";
+            Cmb_Clients_SortBy.Text = "";
+            m_DataGrid_Clients_MissionsCollection.Clear();
+            DataGrid_Clients_Missions.Items.Refresh();
+
+            //Null buttons
+            m_Button_Client_SelectedCellPhone = null;
             m_Button_Client_SelectedClient = null;
+            m_Button_Client_SelectedEmail = null;
+
+            //Disable the buttons
+            Btn_Clients_Archive.IsEnabled = false;
+            Btn_Clients_Delete.IsEnabled = false;
+            Btn_Clients_Edit.IsEnabled = false;
 
             //Verifications - 3 letters minimum
             if (researchedText.Length < 2)
@@ -5328,7 +5065,20 @@ namespace Software
                     List<Client> foundClientList = new List<Client>();
                     for (int iClient = 0; iClient < SoftwareObjects.ClientsCollection.Count; ++iClient)
                     {
+                        //Get the client
                         Client processedClient = SoftwareObjects.ClientsCollection[iClient];
+
+                        //Verify archives
+                        if (m_Clients_IsArchiveMode == false && processedClient.archived == 1)
+                        {
+                            continue;
+                        }
+                        if (m_Clients_IsArchiveMode == true && processedClient.archived == 0)
+                        {
+                            continue;
+                        }
+
+                        //Research
                         if (processedClient.address.ToLower().Contains(researchedText))
                         {
                             foundClientList.Add(processedClient);
@@ -5369,9 +5119,6 @@ namespace Software
                     actualizationClientDone = false;
                     if (foundClientList.Count > 0)
                     {
-                        //Clear fields
-                        Txt_Clients_Research.Text = "";
-
                         //Initialize counter for columns and rows of Grid_Client
                         m_GridClient_Column = 0;
                         m_GridClient_Row = 0;
@@ -6650,55 +6397,6 @@ namespace Software
         /// <summary>
         /// Functions
         /// Host and hostess
-        /// Get a hostess from his id
-        /// <returns>Returns the hostess corresponding to the id</returns>
-        /// </summary>
-        private Hostess Get_SelectedHostOrHostessFromButton()
-        {
-            try
-            {
-                //Test
-                if (m_Button_HostAndHostess_SelectedHostAndHostess == null || m_Button_HostAndHostess_SelectedHostAndHostess.Tag == null)
-                {
-                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessSelectedError"),
-                        m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
-                    return null;
-                }
-
-                //Get the hostess from the id
-                string id = (string)m_Button_HostAndHostess_SelectedHostAndHostess.Tag;
-                Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(id));
-
-                //Actualize datagrid
-                if (hostess != null)
-                {
-                    //Fill the m_DataGrid_HostAndHostess_MissionsCollection
-                    m_DataGrid_HostAndHostess_MissionsCollection.Clear();
-                    for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
-                    {
-                        Mission missionSel = SoftwareObjects.MissionsCollection[iMission];
-                        if (missionSel.id == hostess.id) //TODO
-                        {
-                            m_Datagrid_HostAndHostess_Missions data = new m_Datagrid_HostAndHostess_Missions(missionSel.id, missionSel.client_name, missionSel.city, missionSel.start_date);
-                            m_DataGrid_HostAndHostess_MissionsCollection.Add(data);
-                        }
-                    }
-                    DataGrid_HostAndHostess_Missions.Items.Refresh();
-                }
-
-                //Return the hostess
-                return hostess;
-            }
-            catch (Exception exception)
-            {
-                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Functions
-        /// Host and hostess
         /// Compute age from birth date
         /// <returns>Returns the hostess corresponding to the id</returns>
         /// </summary>
@@ -6720,6 +6418,157 @@ namespace Software
             {
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return -1;
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Host and hostess
+        /// Get a hostess from his id
+        /// <returns>Returns the hostess corresponding to the id</returns>
+        /// </summary>
+        private Hostess Get_SelectedHostOrHostessFromButton()
+        {
+            try
+            {
+                //Test
+                if (m_Button_HostAndHostess_SelectedHostAndHostess == null || m_Button_HostAndHostess_SelectedHostAndHostess.Tag == null)
+                {
+                    MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessSelectedError"),
+                        m_Global_Handler.Resources_Handler.Get_Resources("HostOrHostessSelectedErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    return null;
+                }
+
+                //Get the hostess from the id
+                string id = (string)m_Button_HostAndHostess_SelectedHostAndHostess.Tag;
+                Hostess hostess = SoftwareObjects.HostsAndHotessesCollection.Find(x => x.id.Equals(id));
+
+                //Return the hostess
+                return hostess;
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// Host and hostess
+        /// Select a host or a hostess
+        /// </summary>
+        private void Select_HostorHostess(Hostess _HostOrHostess)
+        {
+            try
+            {
+                //Verification
+                if (_HostOrHostess == null)
+                {
+                    return;
+                }
+
+                //Manage the buttons
+                if (m_Button_HostAndHostess_SelectedHostAndHostess != null)
+                {
+                    if (m_HostsAndHostesses_IsArchiveMode == false)
+                    {
+                        m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_HostAndHostess;
+                    }
+                    else
+                    {
+                        m_Button_HostAndHostess_SelectedHostAndHostess.Background = m_Color_ArchivedMission;
+                    }
+                }
+                if (m_Button_HostAndHostess_SelectedCellPhone != null)
+                {
+                    if (m_HostsAndHostesses_IsArchiveMode == false)
+                    {
+                        m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_HostAndHostess;
+                    }
+                    else
+                    {
+                        m_Button_HostAndHostess_SelectedCellPhone.Background = m_Color_ArchivedMission;
+                    }
+                }
+                if (m_Button_HostAndHostess_SelectedEmail != null)
+                {
+                    if (m_HostsAndHostesses_IsArchiveMode == false)
+                    {
+                        m_Button_HostAndHostess_SelectedEmail.Background = m_Color_HostAndHostess;
+                    }
+                    else
+                    {
+                        m_Button_HostAndHostess_SelectedEmail.Background = m_Color_ArchivedMission;
+                    }
+                }
+
+                //Get the host or hostess stack panel and select 
+                m_Button_HostAndHostess_SelectedHostAndHostess = null;
+                m_Button_HostAndHostess_SelectedCellPhone = null;
+                m_Button_HostAndHostess_SelectedEmail = null;
+                for (int iHostess = 0; iHostess < Grid_HostAndHostess_Details.Children.Count; ++iHostess)
+                {
+                    StackPanel stackSel = (StackPanel)Grid_HostAndHostess_Details.Children[iHostess];
+                    for (int iChild = 0; iChild < stackSel.Children.Count; ++iChild)
+                    {
+                        if ((string)stackSel.Tag == _HostOrHostess.id)
+                        {
+                            Button childButton = (Button)stackSel.Children[iChild];
+                            childButton.Background = m_Color_SelectedHostAndHostess;
+                            if (iChild == 0)
+                            {
+                                m_Button_HostAndHostess_SelectedHostAndHostess = childButton;
+                            }
+                            else if (childButton.Tag.ToString() == "CellPhone")
+                            {
+                                m_Button_HostAndHostess_SelectedCellPhone = childButton;
+                            }
+                            else if (childButton.Tag.ToString() == "Email")
+                            {
+                                m_Button_HostAndHostess_SelectedEmail = childButton;
+                            }
+                        }
+                    }
+                }
+
+                //Find list of shifts made by the selected host or hostess
+                List<Shift> lisftOfShifts = SoftwareObjects.ShiftsCollection.FindAll(x => x.id_hostorhostess.Equals(_HostOrHostess.id));
+                lisftOfShifts.Sort((x, y) => DateTime.Compare(Convert.ToDateTime(y.date + " " + y.start_time), Convert.ToDateTime(x.date + " " + x.start_time)));
+
+                //Actualize datagrid
+                m_DataGrid_HostAndHostess_MissionsCollection.Clear();
+                for (int iShift = 0; iShift < lisftOfShifts.Count; ++iShift)
+                {
+                    Shift shiftSel = lisftOfShifts[iShift];
+                    Mission missionSel = SoftwareObjects.MissionsCollection.Find(x => x.id.Equals(shiftSel.id_mission));
+                    if (missionSel != null)
+                    {
+                        m_Datagrid_HostAndHostess_Missions data = new m_Datagrid_HostAndHostess_Missions(shiftSel.id, missionSel.client_name, missionSel.city, shiftSel.date);
+                        m_DataGrid_HostAndHostess_MissionsCollection.Add(data);
+                    }
+                }
+
+                //Manage buttons
+                if (m_HostsAndHostesses_IsArchiveMode == false)
+                {
+                    //Enable the buttons
+                    Btn_HostAndHostess_Archive.IsEnabled = true;
+                    Btn_HostAndHostess_Edit.IsEnabled = true;
+                    Btn_HostAndHostess_Delete.IsEnabled = true;
+                }
+                else
+                {
+                    //Enable the buttons
+                    Btn_HostAndHostess_Archive.IsEnabled = true;
+                    Btn_HostAndHostess_Edit.IsEnabled = false;
+                    Btn_HostAndHostess_Delete.IsEnabled = false;
+                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
             }
         }
 
@@ -7013,7 +6862,8 @@ namespace Software
                         Mission missionSel = SoftwareObjects.MissionsCollection[iMission];
                         if (missionSel.id == client.id) //TODO
                         {
-                            m_Datagrid_Clients_Missions data = new m_Datagrid_Clients_Missions(missionSel.id, missionSel.city, missionSel.start_date, missionSel.description);
+                            m_Datagrid_Clients_Missions data = new m_Datagrid_Clients_Missions(missionSel.id, missionSel.city, missionSel.start_date,
+                                missionSel.end_date, missionSel.description);
                             m_DataGrid_Clients_MissionsCollection.Add(data);
                         }
                     }
@@ -7027,6 +6877,125 @@ namespace Software
             {
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 return null;
+            }
+        }
+
+        /// <summary>
+        /// Functions
+        /// CLient
+        /// Select a client
+        /// </summary>
+        private void Select_Client(Client _Client)
+        {
+            try
+            {
+                //Verification
+                if (_Client == null)
+                {
+                    return;
+                }
+
+                //Manage the buttons
+                if (m_Button_Client_SelectedClient != null)
+                {
+                    if (m_HostsAndHostesses_IsArchiveMode == false)
+                    {
+                        m_Button_Client_SelectedClient.Background = m_Color_Mission;
+                    }
+                    else
+                    {
+                        m_Button_Client_SelectedClient.Background = m_Color_ArchivedMission;
+                    }
+                }
+                if (m_Button_Client_SelectedCellPhone != null)
+                {
+                    if (m_HostsAndHostesses_IsArchiveMode == false)
+                    {
+                        m_Button_Client_SelectedCellPhone.Background = m_Color_Mission;
+                    }
+                    else
+                    {
+                        m_Button_Client_SelectedCellPhone.Background = m_Color_ArchivedMission;
+                    }
+                }
+                if (m_Button_Client_SelectedEmail != null)
+                {
+                    if (m_HostsAndHostesses_IsArchiveMode == false)
+                    {
+                        m_Button_Client_SelectedEmail.Background = m_Color_Mission;
+                    }
+                    else
+                    {
+                        m_Button_Client_SelectedEmail.Background = m_Color_ArchivedMission;
+                    }
+                }
+
+                //Get the host or hostess stack panel and select 
+                m_Button_Client_SelectedClient = null;
+                m_Button_Client_SelectedCellPhone = null;
+                m_Button_Client_SelectedEmail = null;
+                for (int iHostess = 0; iHostess < Grid_Clients_Details.Children.Count; ++iHostess)
+                {
+                    StackPanel stackSel = (StackPanel)Grid_Clients_Details.Children[iHostess];
+                    for (int iChild = 0; iChild < stackSel.Children.Count; ++iChild)
+                    {
+                        if ((string)stackSel.Tag == _Client.id)
+                        {
+                            Button childButton = (Button)stackSel.Children[iChild];
+                            childButton.Background = m_Color_SelectedMission;
+                            if (iChild == 0)
+                            {
+                                m_Button_Client_SelectedClient = childButton;
+                            }
+                            else if (childButton.Tag.ToString() == "CellPhone")
+                            {
+                                m_Button_Client_SelectedCellPhone = childButton;
+                            }
+                            else if (childButton.Tag.ToString() == "Email")
+                            {
+                                m_Button_Client_SelectedEmail = childButton;
+                            }
+                        }
+                    }
+                }
+
+                //Find list of missions for the client
+                List<Mission> lisftOfMissions = SoftwareObjects.MissionsCollection.FindAll(x => x.id_client.Equals(_Client.id));
+                lisftOfMissions.Sort((x, y) => DateTime.Compare(Convert.ToDateTime(y.start_date), Convert.ToDateTime(x.start_date)));
+
+                //Actualize datagrid
+                m_DataGrid_Clients_MissionsCollection.Clear();
+                for (int iMission = 0; iMission < lisftOfMissions.Count; ++iMission)
+                {
+                    Mission missionSel = lisftOfMissions[iMission];
+                    if (missionSel != null)
+                    {
+                        m_Datagrid_Clients_Missions data = new m_Datagrid_Clients_Missions(missionSel.id, missionSel.city, missionSel.start_date,
+                            missionSel.end_date, missionSel.description);
+                        m_DataGrid_Clients_MissionsCollection.Add(data);
+                    }
+                }
+
+                //Manage buttons
+                if (m_Clients_IsArchiveMode == false)
+                {
+                    //Enable the buttons
+                    Btn_Clients_Archive.IsEnabled = true;
+                    Btn_Clients_Edit.IsEnabled = true;
+                    Btn_Clients_Delete.IsEnabled = true;
+                }
+                else
+                {
+                    //Enable the buttons
+                    Btn_Clients_Archive.IsEnabled = true;
+                    Btn_Clients_Edit.IsEnabled = false;
+                    Btn_Clients_Delete.IsEnabled = false;
+                }
+            }
+            catch (Exception exception)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                return;
             }
         }
 
