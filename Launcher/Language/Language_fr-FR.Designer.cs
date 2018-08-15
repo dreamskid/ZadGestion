@@ -863,7 +863,7 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Réalisée.
+        ///   Looks up a localized string similar to Effectuée.
         /// </summary>
         public static string DateDone {
             get {
@@ -1620,7 +1620,7 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Importer depuis Excel.
+        ///   Looks up a localized string similar to Importer depuis Excel®.
         /// </summary>
         public static string ImportHostAndHostessFromExcel {
             get {

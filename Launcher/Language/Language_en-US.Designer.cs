@@ -1584,7 +1584,7 @@ namespace Launcher.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Import from Excel.
+        ///   Looks up a localized string similar to Import from Excel®.
         /// </summary>
         public static string ImportHostAndHostessFromExcel {
             get {

@@ -1069,11 +1069,11 @@ namespace Software
                     {
                         //Open the wait window
                         windowWait.Start(m_Global_Handler, "MissionCreationPrincipalMessage", "MissionCreationSecondaryMessage");
-                        
+
                         //Action
                         Mission missionToAdd = missionWindow.m_Mission;
                         m_Global_Handler.Log_Handler.WriteAction("Mission " + missionToAdd.client_name + " - From " + missionToAdd.start_date + " to " + missionToAdd.end_date + " created");
-                        
+
                         //Actualize shifts
                         Fill_ShiftsCollectionFromDatabase();
 

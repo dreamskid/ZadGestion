@@ -16,6 +16,7 @@ namespace WindowMission
     /// </summary>
     public partial class MainWindow_Mission : Window
     {
+
         #region Initialization
 
         #region Variables
@@ -691,5 +692,6 @@ namespace WindowMission
         }
 
         #endregion
+
     }
 }

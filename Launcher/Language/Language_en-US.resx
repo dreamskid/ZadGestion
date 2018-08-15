@@ -1232,7 +1232,7 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
     <comment>Import of hosts and hostesses text</comment>
   </data>
   <data name="ImportHostAndHostessFromExcel" xml:space="preserve">
-    <value>Import from Excel</value>
+    <value>Import from Excel®</value>
     <comment>Import from Excel</comment>
   </data>
   <data name="ClientArchivePrincipalMessage" xml:space="preserve">

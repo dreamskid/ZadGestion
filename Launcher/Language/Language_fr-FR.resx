@@ -1244,7 +1244,7 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
     <comment>Texte d'import Excel des hôtes et hôtesses de description du template</comment>
   </data>
   <data name="ImportHostAndHostessFromExcel" xml:space="preserve">
-    <value>Importer depuis Excel</value>
+    <value>Importer depuis Excel®</value>
     <comment>Importer depuis Excel</comment>
   </data>
   <data name="ClientArchiveSecondaryMessage" xml:space="preserve">
@@ -1419,7 +1419,7 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
     <comment>Refusée</comment>
   </data>
   <data name="DateDone" xml:space="preserve">
-    <value>Réalisée</value>
+    <value>Effectuée</value>
     <comment>Réalisée</comment>
   </data>
   <data name="FirstDate" xml:space="preserve">
