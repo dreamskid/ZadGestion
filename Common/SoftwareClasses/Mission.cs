@@ -35,6 +35,7 @@
             country = _MissionToCopy.country;
             description = _MissionToCopy.description;
             end_date = _MissionToCopy.end_date;
+            id_client = _MissionToCopy.id_client;
             start_date = _MissionToCopy.start_date;
             state = _MissionToCopy.state;
             zipcode = _MissionToCopy.zipcode;

@@ -15,7 +15,7 @@
 
         <!--Combo boxes-->
         <ComboBox x:Name="Cmb_Mission_City" Height="20" Margin="193,180,10,0" VerticalAlignment="Top" TabIndex="4" IsEditable="True"/>
-        <ComboBox x:Name="Cmb_Mission_Client" Height="22" Margin="10,42,10,0" VerticalAlignment="Top" TabIndex="1" IsEditable="True"/>
+        <ComboBox x:Name="Cmb_Mission_Client" Height="22" Margin="10,42,10,0" VerticalAlignment="Top" TabIndex="1"/>
         <ComboBox x:Name="Cmb_Mission_Country" HorizontalAlignment="Left" Height="20" Margin="10,238,0,0" VerticalAlignment="Top" Width="184" TabIndex="5" SelectionChanged="Cmb_Mission_Country_SelectionChanged"/>
 
         <!--Date pickers-->

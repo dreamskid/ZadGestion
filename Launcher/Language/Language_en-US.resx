@@ -1423,6 +1423,14 @@ Firstname, Lastname, Cellphone, Sex (F/M), E-mail, Adress, Zipcode, City, Countr
     <value>Please wait while the settings for shift are saved into the database</value>
     <comment>Settings for shift saved secondary message</comment>
   </data>
+  <data name="HostessForbiddenDeleteCaption" xml:space="preserve">
+    <value>Host or hostess delete forbidden</value>
+    <comment>Impossible to delete the host or hostess error caption</comment>
+  </data>
+  <data name="HostessForbiddenDeleteText" xml:space="preserve">
+    <value>The host or hostess cannot be delete, please try to archive instead.</value>
+    <comment>Impossible to delete the host or hostess error text</comment>
+  </data>
   <data name="Shift" xml:space="preserve">
     <value>Shift</value>
     <comment>Shift</comment>

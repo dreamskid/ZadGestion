@@ -1069,36 +1069,41 @@ namespace Software
                     {
                         //Open the wait window
                         windowWait.Start(m_Global_Handler, "MissionCreationPrincipalMessage", "MissionCreationSecondaryMessage");
-
-                        //Refresh datagrid
-                        m_Datagrid_Missions_ShiftsCollection.Clear();
-
-                        //Add mission to grid
-                        Mission missionToAdd = missionWindow.m_Mission;
-                        Add_MissionToGrid(missionToAdd);
-
+                        
                         //Action
+                        Mission missionToAdd = missionWindow.m_Mission;
                         m_Global_Handler.Log_Handler.WriteAction("Mission " + missionToAdd.client_name + " - From " + missionToAdd.start_date + " to " + missionToAdd.end_date + " created");
+                        
+                        //Actualize shifts
+                        Fill_ShiftsCollectionFromDatabase();
 
-                        //Select the last hostess
-                        if (m_Button_Mission_SelectedMission != null)
+                        //State of mission
+                        MissionStatus missionState = MissionStatus.NONE;
+                        if (missionToAdd.date_billed != null && missionToAdd.date_billed != "")
                         {
-                            m_Button_Mission_SelectedMission.Background = m_Color_Mission;
+                            //Mission created
+                            missionState = MissionStatus.BILLED;
                         }
-                        StackPanel stack = Grid_Missions_Details.Children.Cast<StackPanel>().First(f => Grid.GetRow(f) == m_GridMission_Row && Grid.GetColumn(f) == m_GridMission_Column - 1);
-                        for (int iChild = 0; iChild < stack.Children.Count; ++iChild)
+                        else if (missionToAdd.date_done != null && missionToAdd.date_done != "")
                         {
-                            Button childButton = (Button)stack.Children[iChild];
-                            childButton.Background = m_Color_SelectedMission;
-                            if (childButton.Tag.ToString() != "" && childButton.Tag.ToString() != "CellPhone" && childButton.Tag.ToString() != "Phone" && childButton.Tag.ToString() != "Email")
-                            {
-                                m_Button_Mission_SelectedMission = childButton;
-                                m_Id_SelectedMission = (string)childButton.Tag;
-                            }
+                            //Mission accepted
+                            missionState = MissionStatus.DONE;
+                        }
+                        else if (missionToAdd.date_declined != null && missionToAdd.date_declined != "")
+                        {
+                            //Mission declined
+                            missionState = MissionStatus.DECLINED;
+                        }
+                        else
+                        {
+                            //Default icon
+                            missionState = MissionStatus.CREATED;
+                        }
+                        Actualize_GridMissionsFromDatabase();
+                        m_Mission_SelectedStatus = missionState;
 
-                            //Display the last mission
-                            Scrl_Grid_Missions_Details.ScrollToBottom();
-                        }
+                        //Filter
+                        Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
 
                         //Select the mission
                         Select_Mission(missionToAdd, true);
@@ -1180,7 +1185,10 @@ namespace Software
                     }
 
                     //Actualize and filter
+                    Fill_ShiftsCollectionFromDatabase();
+                    MissionStatus status = m_Mission_SelectedStatus;
                     Actualize_GridMissionsFromDatabase();
+                    Filter_GridMissionsFromMissionsCollection(status);
 
                     //Clear the fields
                     m_Id_SelectedMission = "-1";
@@ -1284,6 +1292,7 @@ namespace Software
 
                     //Actualize and filter
                     Actualize_GridMissionsFromDatabase();
+                    Filter_GridMissionsFromMissionsCollection(MissionStatus.CREATED);
 
                     //Select the new mission
                     Select_Mission(newMission, true);
@@ -1356,27 +1365,39 @@ namespace Software
                     //Action
                     m_Global_Handler.Log_Handler.WriteAction("Mission " + missionSel.id + " edited");
 
-                    //State of mission
-                    MissionStatus missionstate = MissionStatus.NONE;
 
                     //Treatment of mission button
                     StackPanel panel = (StackPanel)m_Button_Mission_SelectedMission.Parent;
                     Button buttonMission = (Button)panel.Children[0];
                     Manage_MissionButton(missionSel, buttonMission, false);
 
-                    if (missionstate == MissionStatus.DONE)
+                    //State of mission
+                    MissionStatus missionState = MissionStatus.NONE;
+                    if (missionSel.date_billed != null && missionSel.date_billed != "")
                     {
-                        Actualize_GridMissionsFromDatabase();
-                        m_Mission_SelectedStatus = MissionStatus.DONE;
+                        //Mission created
+                        missionState = MissionStatus.BILLED;
                     }
-                    else if (missionstate == MissionStatus.DECLINED)
+                    else if (missionSel.date_done != null && missionSel.date_done != "")
                     {
-                        Actualize_GridMissionsFromDatabase();
-                        m_Mission_SelectedStatus = MissionStatus.DECLINED;
+                        //Mission accepted
+                        missionState = MissionStatus.DONE;
                     }
+                    else if (missionSel.date_declined != null && missionSel.date_declined != "")
+                    {
+                        //Mission declined
+                        missionState = MissionStatus.DECLINED;
+                    }
+                    else
+                    {
+                        //Default icon
+                        missionState = MissionStatus.CREATED;
+                    }
+                    Actualize_GridMissionsFromDatabase();
+                    m_Mission_SelectedStatus = missionState;
 
                     //Filter
-                    //Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
+                    Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
 
                     //Select the mission
                     Select_Mission(missionSel, false);
@@ -1576,6 +1597,26 @@ namespace Software
 
                 //Actualize the collection
                 Actualize_GridMissionsFromMissionsCollection();
+
+                //Clear the fields
+                m_Id_SelectedMission = "-1";
+                Cmb_Missions_SortBy.Text = "";
+                Txt_Missions_Client.Text = "";
+                Txt_Missions_CreationDate.Text = "";
+                Txt_Missions_EndDate.Text = "";
+                Txt_Missions_Research.Text = "";
+                Txt_Missions_StartDate.Text = "";
+                m_Datagrid_Missions_ShiftsCollection.Clear();
+                Datagrid_Missions_Shifts.Items.Refresh();
+
+                //Null buttons
+                m_Button_Mission_SelectedMission = null;
+
+                //Disable the buttons
+                Btn_Missions_Archive.IsEnabled = false;
+                Btn_Missions_Delete.IsEnabled = false;
+                Btn_Missions_Duplicate.IsEnabled = false;
+                Btn_Missions_Edit.IsEnabled = false;
             }
             catch (Exception exception)
             {
@@ -1625,6 +1666,26 @@ namespace Software
 
                 //Actualize the collection
                 Actualize_GridMissionsFromMissionsCollection();
+
+                //Clear the fields
+                m_Id_SelectedMission = "-1";
+                Cmb_Missions_SortBy.Text = "";
+                Txt_Missions_Client.Text = "";
+                Txt_Missions_CreationDate.Text = "";
+                Txt_Missions_EndDate.Text = "";
+                Txt_Missions_Research.Text = "";
+                Txt_Missions_StartDate.Text = "";
+                m_Datagrid_Missions_ShiftsCollection.Clear();
+                Datagrid_Missions_Shifts.Items.Refresh();
+
+                //Null buttons
+                m_Button_Mission_SelectedMission = null;
+
+                //Disable the buttons
+                Btn_Missions_Archive.IsEnabled = false;
+                Btn_Missions_Delete.IsEnabled = false;
+                Btn_Missions_Duplicate.IsEnabled = false;
+                Btn_Missions_Edit.IsEnabled = false;
             }
             catch (Exception exception)
             {
@@ -1674,6 +1735,26 @@ namespace Software
 
                 //Actualize the collection
                 Actualize_GridMissionsFromMissionsCollection();
+
+                //Clear the fields
+                m_Id_SelectedMission = "-1";
+                Cmb_Missions_SortBy.Text = "";
+                Txt_Missions_Client.Text = "";
+                Txt_Missions_CreationDate.Text = "";
+                Txt_Missions_EndDate.Text = "";
+                Txt_Missions_Research.Text = "";
+                Txt_Missions_StartDate.Text = "";
+                m_Datagrid_Missions_ShiftsCollection.Clear();
+                Datagrid_Missions_Shifts.Items.Refresh();
+
+                //Null buttons
+                m_Button_Mission_SelectedMission = null;
+
+                //Disable the buttons
+                Btn_Missions_Archive.IsEnabled = false;
+                Btn_Missions_Delete.IsEnabled = false;
+                Btn_Missions_Duplicate.IsEnabled = false;
+                Btn_Missions_Edit.IsEnabled = false;
             }
             catch (Exception exception)
             {
@@ -1723,6 +1804,26 @@ namespace Software
 
                 //Actualize the collection
                 Actualize_GridMissionsFromMissionsCollection();
+
+                //Clear the fields
+                m_Id_SelectedMission = "-1";
+                Cmb_Missions_SortBy.Text = "";
+                Txt_Missions_Client.Text = "";
+                Txt_Missions_CreationDate.Text = "";
+                Txt_Missions_EndDate.Text = "";
+                Txt_Missions_Research.Text = "";
+                Txt_Missions_StartDate.Text = "";
+                m_Datagrid_Missions_ShiftsCollection.Clear();
+                Datagrid_Missions_Shifts.Items.Refresh();
+
+                //Null buttons
+                m_Button_Mission_SelectedMission = null;
+
+                //Disable the buttons
+                Btn_Missions_Archive.IsEnabled = false;
+                Btn_Missions_Delete.IsEnabled = false;
+                Btn_Missions_Duplicate.IsEnabled = false;
+                Btn_Missions_Edit.IsEnabled = false;
             }
             catch (Exception exception)
             {
@@ -1767,6 +1868,7 @@ namespace Software
 
                 //Manage buttons
                 Btn_Missions_Duplicate.IsEnabled = false;
+                Btn_Missions_Create.IsEnabled = false;
                 Btn_Missions_Edit.IsEnabled = false;
                 Btn_Missions_Delete.IsEnabled = false;
                 Btn_Missions_Archive.IsEnabled = false;
@@ -1826,6 +1928,7 @@ namespace Software
 
                 //Manage buttons
                 Btn_Missions_Archive.IsEnabled = false;
+                Btn_Missions_Create.IsEnabled = true;
                 Btn_Missions_Delete.IsEnabled = false;
                 Btn_Missions_Duplicate.IsEnabled = false;
                 Btn_Missions_Edit.IsEnabled = false;
@@ -2147,8 +2250,8 @@ namespace Software
                 {
                     Grid_Missions_Details.Children.Clear();
                     Actualize_GridMissionsFromDatabase();
-                    actualizationMissionsDone = true;
                     Filter_GridMissionsFromMissionsCollection(m_Mission_SelectedStatus);
+                    actualizationMissionsDone = true;
                     return;
                 }
             }
@@ -2295,6 +2398,7 @@ namespace Software
                         Btn_HostAndHostess_Delete.IsEnabled = false;
 
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         return;
@@ -2302,6 +2406,7 @@ namespace Software
                     else if (res.Contains("error"))
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Treatment of the error
@@ -2312,6 +2417,7 @@ namespace Software
                     else
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Error connecting to web site
@@ -2358,6 +2464,7 @@ namespace Software
                         Btn_HostAndHostess_Delete.IsEnabled = false;
 
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         return;
@@ -2365,6 +2472,7 @@ namespace Software
                     else if (res.Contains("error"))
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Treatment of the error
@@ -2375,6 +2483,7 @@ namespace Software
                     else
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Error connecting to web site
@@ -2420,6 +2529,9 @@ namespace Software
                     //Add hostess to grid
                     Hostess hostOrHostessToAdd = hostOrHostess_CreateWindow.m_HostOrHostess;
                     Add_HostOrHostessToGrid(hostOrHostess_CreateWindow.m_HostOrHostess);
+
+                    //Actualize shifts
+                    Fill_ShiftsCollectionFromDatabase();
 
                     //Action
                     m_Global_Handler.Log_Handler.WriteAction("Host/Hostess " + hostOrHostessToAdd.firstname + " " + hostOrHostessToAdd.lastname + " created");
@@ -2503,24 +2615,31 @@ namespace Software
                 }
 
                 //Verification of the presence of missions or invoices
-                List<Mission> associatedMissions = new List<Mission>();
-                for (int iMission = 0; iMission < SoftwareObjects.MissionsCollection.Count; ++iMission)
+                List<Shift> associatedShifts = new List<Shift>();
+                for (int iShift = 0; iShift < SoftwareObjects.ShiftsCollection.Count; ++iShift)
                 {
-                    Mission missionSel = SoftwareObjects.MissionsCollection[iMission];
-                    if (missionSel.id == hostOrHostess.id) //TODO
+                    Shift ShiftSel = SoftwareObjects.ShiftsCollection[iShift];
+                    if (ShiftSel.id_hostorhostess == hostOrHostess.id)
                     {
-                        associatedMissions.Add(missionSel);
+                        associatedShifts.Add(ShiftSel);
                     }
                 }
-                if (associatedMissions.Count > 0)
+                if (associatedShifts.Count > 0)
                 {
                     string message = m_Global_Handler.Resources_Handler.Get_Resources("HostessForbiddenDeleteText") + "\n";
-                    message += m_Global_Handler.Resources_Handler.Get_Resources("Mission") + ": ";
-                    for (int iMission = 0; iMission < associatedMissions.Count; ++iMission)
+                    message += m_Global_Handler.Resources_Handler.Get_Resources("Mission") + "(s) :\n";
+                    List<Mission> listOfMissions = new List<Mission>();
+                    for (int iShift = 0; iShift < associatedShifts.Count; ++iShift)
                     {
-                        message += " " + associatedMissions[iMission].client_name;
+                        Mission mission = SoftwareObjects.MissionsCollection.Find(x => x.id.Equals(associatedShifts[iShift].id_mission));
+                        if (!listOfMissions.Contains(mission) && mission != null)
+                        {
+                            listOfMissions.Add(mission);
+                            message += "- " + mission.client_name + " (" + m_Global_Handler.Resources_Handler.Get_Resources("StartDate") + " " + mission.start_date +
+                                " - " + m_Global_Handler.Resources_Handler.Get_Resources("EndDate") + " " + mission.end_date + ")\n";
+                        }
                     }
-                    MessageBox.Show(this, message, m_Global_Handler.Resources_Handler.Get_Resources("HostessForbiddenDeleteCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(this, message, m_Global_Handler.Resources_Handler.Get_Resources("HostessForbiddenDeleteCaption"), MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
 
@@ -2585,6 +2704,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 //Write the error into log
@@ -2875,6 +2995,7 @@ namespace Software
                 m_Global_Handler.Log_Handler.WriteAction("Hosts and hostesses statement generated to Excel file " + fileNameXLS);
 
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 //Open the file
@@ -2883,6 +3004,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 //Write the error into log
@@ -2924,7 +3046,6 @@ namespace Software
 
                 //Action
                 m_Global_Handler.Log_Handler.WriteAction("Hosts and hostesses from " + dlg.FileName);
-
 
                 try
                 {
@@ -3069,7 +3190,7 @@ namespace Software
                         hostess.id = hostess.Create_HostOrHostessId();
 
                         //Creation date
-                        hostess.date_creation = DateTime.Now.ToString();
+                        hostess.date_creation = DateTime.Now.ToString("dd/MM/yyyy");
 
                         //Add to internet database        
                         string res = m_Database_Handler.Add_HostAndHostessToDatabase(hostess.address, hostess.birth_city,
@@ -3106,6 +3227,7 @@ namespace Software
                     Actualize_GridHostsAndHostessesFromDatabase();
 
                     //Close the wait window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                     //Message box and disable the edit and delete buttons
@@ -3122,6 +3244,7 @@ namespace Software
                 catch (Exception exception)
                 {
                     //Close the wait window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                     //Write the error into log
@@ -3218,7 +3341,7 @@ namespace Software
                 //Disable the buttons
                 Btn_HostAndHostess_Archive.IsEnabled = false;
                 Btn_HostAndHostess_Archive.Content = m_Global_Handler.Resources_Handler.Get_Resources("Archive");
-                Btn_HostAndHostess_Create.IsEnabled = false;
+                Btn_HostAndHostess_Create.IsEnabled = true;
                 Btn_HostAndHostess_Edit.IsEnabled = false;
                 Btn_HostAndHostess_Delete.IsEnabled = false;
 
@@ -3607,18 +3730,21 @@ namespace Software
                     TextBlock emailTextBox = (TextBlock)emailStackPanel.Children[1];
                     string emailAddress = emailTextBox.Text;
 
-                    //Open the default email sender
-                    Process p = new Process();
-                    string mailto = "mailto:" + emailAddress;
-                    ProcessStartInfo ps = new ProcessStartInfo(mailto);
-                    ps.CreateNoWindow = false;
-                    ps.UseShellExecute = true;
-                    p.StartInfo = ps;
-                    p.Start();
-                    p.WaitForExit();
+                    if (emailAddress != "")
+                    {
+                        //Open the default email sender
+                        Process p = new Process();
+                        string mailto = "mailto:" + emailAddress;
+                        ProcessStartInfo ps = new ProcessStartInfo(mailto);
+                        ps.CreateNoWindow = false;
+                        ps.UseShellExecute = true;
+                        p.StartInfo = ps;
+                        p.Start();
+                        p.WaitForExit();
 
-                    //Action
-                    m_Global_Handler.Log_Handler.WriteAction("Mail sent to " + emailAddress);
+                        //Action
+                        m_Global_Handler.Log_Handler.WriteAction("Mail sent to " + emailAddress);
+                    }
 
                     //Close stop window
                     Thread.Sleep(500);
@@ -3647,23 +3773,11 @@ namespace Software
         {
             if (sender != null)
             {
-                //Confirm skype call
-                MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCall"),
-                                m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCallCaption"),
-                                MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (result == MessageBoxResult.No)
-                {
-                    return;
-                }
-
                 //Creation of the wait window
                 WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
 
                 try
                 {
-                    //Open the wait window
-                    windowWait.Start(m_Global_Handler, "HostOrHostessPhonePrincipalMessage", "HostOrHostessPhoneSecondaryMessage");
-
                     //Get the hostess's id
                     Button buttonSel = (Button)sender;
                     StackPanel stackParent = (StackPanel)buttonSel.Parent;
@@ -3690,31 +3804,40 @@ namespace Software
                     TextBlock phoneTextBox = (TextBlock)phoneStackPanel.Children[1];
                     string phoneNumber = phoneTextBox.Text.Trim();
 
-                    //Open skype
-                    SKYPE4COMLib.Skype skype = new SKYPE4COMLib.Skype();
-                    if (skype != null)
+                    if (phoneNumber != "")
                     {
-                        if (!skype.Client.IsRunning)
+                        //Confirm skype call
+                        MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCall"),
+                                        m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCallCaption"),
+                                        MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        if (result == MessageBoxResult.No)
                         {
-                            skype.Client.Start(true, true);
+                            return;
                         }
-                        //skype.Attach(8, true);
-                        //skype.Client.OpenDialpadTab();
-                        //SKYPE4COMLib.Call call = skype.PlaceCall(phoneNumber);
+
+                        //Open the wait window
+                        windowWait.Start(m_Global_Handler, "HostOrHostessPhonePrincipalMessage", "HostOrHostessPhoneSecondaryMessage");
+
+                        //Open skype
+                        SKYPE4COMLib.Skype skype = new SKYPE4COMLib.Skype();
+                        if (skype != null)
+                        {
+                            if (!skype.Client.IsRunning)
+                            {
+                                skype.Client.Start(true, true);
+                            }
+                            //skype.Attach(8, true);
+                            //skype.Client.OpenDialpadTab();
+                            //SKYPE4COMLib.Call call = skype.PlaceCall(phoneNumber);
+                        }
+
+                        //Action
+                        m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + hostOrHostessSel.firstname + ", " + hostOrHostessSel.cellphone);
                     }
-
-                    //Enable the buttons
-                    Btn_HostAndHostess_Archive.IsEnabled = true;
-                    Btn_HostAndHostess_Edit.IsEnabled = true;
-                    Btn_HostAndHostess_Delete.IsEnabled = true;
-
-                    //Action
-                    m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + hostOrHostessSel.firstname + ", " + hostOrHostessSel.cellphone);
 
                     //Close stop window
                     Thread.Sleep(500);
                     windowWait.Stop();
-
                 }
                 catch (Exception exception)
                 {
@@ -3930,6 +4053,7 @@ namespace Software
                         Btn_Clients_Delete.IsEnabled = false;
 
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         return;
@@ -3937,6 +4061,7 @@ namespace Software
                     else if (res.Contains("error"))
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Treatment of the error
@@ -3947,6 +4072,7 @@ namespace Software
                     else
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Error connecting to web site
@@ -3993,6 +4119,7 @@ namespace Software
                         Btn_Clients_Delete.IsEnabled = false;
 
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         return;
@@ -4000,6 +4127,7 @@ namespace Software
                     else if (res.Contains("error"))
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Treatment of the error
@@ -4010,6 +4138,7 @@ namespace Software
                     else
                     {
                         //Close the wait window
+                        Thread.Sleep(500);
                         windowWait.Stop();
 
                         //Error connecting to web site
@@ -4021,6 +4150,10 @@ namespace Software
             }
             catch (Exception exception)
             {
+                //Close the wait window
+                Thread.Sleep(500);
+                windowWait.Stop();
+
                 m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                 Close();
             }
@@ -4126,7 +4259,6 @@ namespace Software
         /// </summary>
         private void Btn_Clients_Delete_Click(object sender, RoutedEventArgs e)
         {
-
             //Creation of the wait window
             WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
 
@@ -4223,6 +4355,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 //Write the error into log
@@ -4416,6 +4549,7 @@ namespace Software
                 m_Global_Handler.Log_Handler.WriteAction("Clients statement generated to Excel file " + fileNameXLS);
 
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 //Open the file
@@ -4424,6 +4558,7 @@ namespace Software
             catch (Exception exception)
             {
                 //Close the wait window
+                Thread.Sleep(500);
                 windowWait.Stop();
 
                 //Write the error into log
@@ -4519,7 +4654,7 @@ namespace Software
                 //Disable the buttons
                 Btn_Clients_Archive.IsEnabled = false;
                 Btn_Clients_Archive.Content = m_Global_Handler.Resources_Handler.Get_Resources("Archive");
-                Btn_Clients_Create.IsEnabled = false;
+                Btn_Clients_Create.IsEnabled = true;
                 Btn_Clients_Edit.IsEnabled = false;
                 Btn_Clients_Delete.IsEnabled = false;
 
@@ -4558,7 +4693,6 @@ namespace Software
             {
                 //Clear the grid
                 Grid_Clients_Details.Children.Clear();
-                Grid_Clients_Details.RowDefinitions.RemoveRange(0, Grid_Clients_Details.RowDefinitions.Count - 1);
 
                 //Actualize the collection
                 Actualize_GridClientsFromCollection();
@@ -4588,7 +4722,6 @@ namespace Software
 
                     //Clear the grid
                     Grid_Clients_Details.Children.Clear();
-                    Grid_Clients_Details.RowDefinitions.RemoveRange(0, Grid_Clients_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridClientsFromCollection();
@@ -4600,7 +4733,6 @@ namespace Software
 
                     //Clear the grid
                     Grid_Clients_Details.Children.Clear();
-                    Grid_Clients_Details.RowDefinitions.RemoveRange(0, Grid_Clients_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridClientsFromCollection();
@@ -4633,7 +4765,6 @@ namespace Software
 
                     //Clear the grid
                     Grid_Clients_Details.Children.Clear();
-                    Grid_Clients_Details.RowDefinitions.RemoveRange(0, Grid_Clients_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridClientsFromCollection();
@@ -4645,7 +4776,6 @@ namespace Software
 
                     //Clear the grid
                     Grid_Clients_Details.Children.Clear();
-                    Grid_Clients_Details.RowDefinitions.RemoveRange(0, Grid_Clients_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridClientsFromCollection();
@@ -4678,7 +4808,6 @@ namespace Software
 
                     //Clear the grid
                     Grid_Clients_Details.Children.Clear();
-                    Grid_Clients_Details.RowDefinitions.RemoveRange(0, Grid_Clients_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridClientsFromCollection();
@@ -4690,7 +4819,6 @@ namespace Software
 
                     //Clear the grid
                     Grid_Clients_Details.Children.Clear();
-                    Grid_Clients_Details.RowDefinitions.RemoveRange(0, Grid_Clients_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridClientsFromCollection();
@@ -4723,7 +4851,6 @@ namespace Software
 
                     //Clear the grid
                     Grid_Clients_Details.Children.Clear();
-                    Grid_Clients_Details.RowDefinitions.RemoveRange(0, Grid_Clients_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridClientsFromCollection();
@@ -4735,7 +4862,6 @@ namespace Software
 
                     //Clear the grid
                     Grid_Clients_Details.Children.Clear();
-                    Grid_Clients_Details.RowDefinitions.RemoveRange(0, Grid_Clients_Details.RowDefinitions.Count - 1);
 
                     //Actualize the collection
                     Actualize_GridClientsFromCollection();
@@ -4842,12 +4968,6 @@ namespace Software
                     //Open the wait window
                     windowWait.Start(m_Global_Handler, "ClientEmailPrincipalMessage", "ClientEmailSecondaryMessage");
 
-                    //Get the email adress
-                    Button emailButton = (Button)sender;
-                    StackPanel emailStackPanel = (StackPanel)emailButton.Content;
-                    TextBlock emailTextBox = (TextBlock)emailStackPanel.Children[1];
-                    string emailAddress = emailTextBox.Text;
-
                     //Get the hostess's id
                     Button buttonSel = (Button)sender;
                     StackPanel stackParent = (StackPanel)buttonSel.Parent;
@@ -4870,30 +4990,27 @@ namespace Software
 
                     if (m_Clients_IsArchiveMode == false)
                     {
-                        //Enable the buttons
-                        Btn_Clients_Archive.IsEnabled = true;
-                        Btn_Clients_Edit.IsEnabled = true;
-                        Btn_Clients_Delete.IsEnabled = true;
+                        //Get the email adress
+                        Button emailButton = (Button)sender;
+                        StackPanel emailStackPanel = (StackPanel)emailButton.Content;
+                        TextBlock emailTextBox = (TextBlock)emailStackPanel.Children[1];
+                        string emailAddress = emailTextBox.Text;
 
-                        //Open the default email sender
-                        Process p = new Process();
-                        string mailto = "mailto:" + emailAddress;
-                        ProcessStartInfo ps = new ProcessStartInfo(mailto);
-                        ps.CreateNoWindow = false;
-                        ps.UseShellExecute = true;
-                        p.StartInfo = ps;
-                        p.Start();
-                        p.WaitForExit();
+                        if (emailAddress != "")
+                        {
+                            //Open the default email sender
+                            Process p = new Process();
+                            string mailto = "mailto:" + emailAddress;
+                            ProcessStartInfo ps = new ProcessStartInfo(mailto);
+                            ps.CreateNoWindow = false;
+                            ps.UseShellExecute = true;
+                            p.StartInfo = ps;
+                            p.Start();
+                            p.WaitForExit();
 
-                        //Action
-                        m_Global_Handler.Log_Handler.WriteAction("Mail sent to " + emailAddress);
-                    }
-                    else
-                    {
-                        //Disable the buttons
-                        Btn_Clients_Archive.IsEnabled = true;
-                        Btn_Clients_Edit.IsEnabled = false;
-                        Btn_Clients_Delete.IsEnabled = false;
+                            //Action
+                            m_Global_Handler.Log_Handler.WriteAction("Mail sent to " + emailAddress);
+                        }
                     }
 
                     //Close stop window
@@ -4923,29 +5040,11 @@ namespace Software
         {
             if (sender != null)
             {
-                //Confirm skype call
-                MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCall"),
-                                m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCallCaption"),
-                                MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (result == MessageBoxResult.No)
-                {
-                    return;
-                }
-
                 //Creation of the wait window
                 WindowWait.MainWindow_Wait windowWait = new WindowWait.MainWindow_Wait();
 
                 try
                 {
-                    //Open the wait window
-                    windowWait.Start(m_Global_Handler, "ClientPhonePrincipalMessage", "ClientPhoneSecondaryMessage");
-
-                    //Get the email adress
-                    Button phoneButton = (Button)sender;
-                    StackPanel phoneStackPanel = (StackPanel)phoneButton.Content;
-                    TextBlock phoneTextBox = (TextBlock)phoneStackPanel.Children[1];
-                    string phoneNumber = phoneTextBox.Text.Trim();
-
                     //Get the hostess's id
                     Button buttonSel = (Button)sender;
                     StackPanel stackParent = (StackPanel)buttonSel.Parent;
@@ -4968,46 +5067,56 @@ namespace Software
 
                     if (m_Clients_IsArchiveMode == false)
                     {
-                        //Enable the buttons
-                        Btn_Clients_Archive.IsEnabled = true;
-                        Btn_Clients_Edit.IsEnabled = true;
-                        Btn_Clients_Delete.IsEnabled = true;
+                        //Get the phone number
+                        Button phoneButton = (Button)sender;
+                        StackPanel phoneStackPanel = (StackPanel)phoneButton.Content;
+                        TextBlock phoneTextBox = (TextBlock)phoneStackPanel.Children[1];
+                        string phoneNumber = phoneTextBox.Text.Trim();
 
-                        //Select the hostess
-                        Client client = Get_SelectedClientFromButton();
-
-                        //Open skype
-                        SKYPE4COMLib.Skype skype = new SKYPE4COMLib.Skype();
-                        if (skype != null)
+                        if (phoneNumber != "")
                         {
-                            if (!skype.Client.IsRunning)
+                            //Confirm skype call
+                            MessageBoxResult result = MessageBox.Show(this, m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCall"),
+                                            m_Global_Handler.Resources_Handler.Get_Resources("ConfirmSkypeCallCaption"),
+                                            MessageBoxButton.YesNo, MessageBoxImage.Question);
+                            if (result == MessageBoxResult.No)
                             {
-                                skype.Client.Start(true, true);
+                                return;
                             }
-                            //skype.Attach(8, true);
-                            //skype.Client.OpenDialpadTab();
-                            //SKYPE4COMLib.Call call = skype.PlaceCall(phoneNumber);
-                        }
 
-                        //Action
-                        m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + client.corporate_name + ", " + client.phone);
-                    }
-                    else
-                    {
-                        //Disable the buttons
-                        Btn_Clients_Archive.IsEnabled = true;
-                        Btn_Clients_Edit.IsEnabled = false;
-                        Btn_Clients_Delete.IsEnabled = false;
+                            //Open the wait window
+                            windowWait.Start(m_Global_Handler, "ClientPhonePrincipalMessage", "ClientPhoneSecondaryMessage");
+
+                            //Open skype
+                            SKYPE4COMLib.Skype skype = new SKYPE4COMLib.Skype();
+                            if (skype != null)
+                            {
+                                if (!skype.Client.IsRunning)
+                                {
+                                    skype.Client.Start(true, true);
+                                }
+                                //skype.Attach(8, true);
+                                //skype.Client.OpenDialpadTab();
+                                //SKYPE4COMLib.Call call = skype.PlaceCall(phoneNumber);
+                            }
+
+                            //Action
+                            m_Global_Handler.Log_Handler.WriteAction("Skype call made to " + clientSel.corporate_name + ", " + clientSel.phone);
+                        }
                     }
 
                     //Close stop window
+                    Thread.Sleep(500);
                     windowWait.Stop();
 
                 }
                 catch (Exception exception)
                 {
-                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
+                    //Close stop window
+                    Thread.Sleep(500);
                     windowWait.Stop();
+
+                    m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, exception);
                     return;
                 }
             }
@@ -5576,6 +5685,13 @@ namespace Software
 
                 //Initialize status
                 m_Mission_SelectedStatus = _Status;
+                if (m_Mission_SelectedStatus == MissionStatus.NONE)
+                {
+                    Btn_Missions_Legend_Mission_Billed.Background = m_Color_Button;
+                    Btn_Missions_Legend_Mission_Created.Background = m_Color_Button;
+                    Btn_Missions_Legend_Mission_Declined.Background = m_Color_Button;
+                    Btn_Missions_Legend_Mission_Done.Background = m_Color_Button;
+                }
 
                 //Get status
                 List<Mission> createdMissions = new List<Mission>();
@@ -5984,9 +6100,6 @@ namespace Software
         {
             try
             {
-                //General status
-                m_Mission_SelectedStatus = MissionStatus.NONE;
-
                 //Get status
                 List<Mission> createdMissions = new List<Mission>();
                 List<Mission> acceptedMissions = new List<Mission>();

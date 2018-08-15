@@ -296,6 +296,15 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Archivage du client en cours....
+        /// </summary>
+        public static string ClientArchivePrincipalMessage {
+            get {
+                return ResourceManager.GetString("ClientArchivePrincipalMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Veuillez patienter jusqu&apos;à la fermeture de cette fenêtre pendant l&apos;archivage du client.
         /// </summary>
         public static string ClientArchiveSecondaryMessage {
@@ -1247,6 +1256,24 @@ namespace Launcher.Language {
         public static string HostAndHostessExcelImportTemplateText {
             get {
                 return ResourceManager.GetString("HostAndHostessExcelImportTemplateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interdiction de supprimer l&apos;hôte ou l&apos;hôtesse.
+        /// </summary>
+        public static string HostessForbiddenDeleteCaption {
+            get {
+                return ResourceManager.GetString("HostessForbiddenDeleteCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to L&apos;hôte ou l&apos;hotesse ne peut être supprimé(e), veuillez l&apos;archiver..
+        /// </summary>
+        public static string HostessForbiddenDeleteText {
+            get {
+                return ResourceManager.GetString("HostessForbiddenDeleteText", resourceCulture);
             }
         }
         

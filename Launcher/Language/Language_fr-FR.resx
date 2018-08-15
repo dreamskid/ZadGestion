@@ -1438,6 +1438,18 @@ Prénom, Nom, Téléphone, Sexe (F/M), E-mail, Adresse, Code postal, Ville, Pays
     <value>Veuillez patienter lors de l'enregistrement des paramètres pour les shifts dans la base de données.</value>
     <comment>Message secondaire d'enregistrement des paramètres pour les shifts</comment>
   </data>
+  <data name="ClientArchivePrincipalMessage" xml:space="preserve">
+    <value>Archivage du client en cours...</value>
+    <comment>Message principal d'archivage du client</comment>
+  </data>
+  <data name="HostessForbiddenDeleteCaption" xml:space="preserve">
+    <value>Interdiction de supprimer l'hôte ou l'hôtesse</value>
+    <comment>Titre d'erreur de suppression de l'hôte ou l'hôtesse impossible</comment>
+  </data>
+  <data name="HostessForbiddenDeleteText" xml:space="preserve">
+    <value>L'hôte ou l'hotesse ne peut être supprimé(e), veuillez l'archiver.</value>
+    <comment>Texte d'erreur de suppression de l'hôte ou l'hôtesse impossible</comment>
+  </data>
   <data name="Shift" xml:space="preserve">
     <value>Shift</value>
     <comment>Shift</comment>

@@ -1224,6 +1224,24 @@ namespace Launcher.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Host or hostess delete forbidden.
+        /// </summary>
+        public static string HostessForbiddenDeleteCaption {
+            get {
+                return ResourceManager.GetString("HostessForbiddenDeleteCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The host or hostess cannot be delete, please try to archive instead..
+        /// </summary>
+        public static string HostessForbiddenDeleteText {
+            get {
+                return ResourceManager.GetString("HostessForbiddenDeleteText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Host or hostess.
         /// </summary>
         public static string HostOrHostess {
