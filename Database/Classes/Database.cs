@@ -4,11 +4,11 @@ using SoftwareClasses;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.Serialization.Json;
-using System.Security.Cryptography;
+using System.ServiceProcess;
 using System.Text;
 
 namespace Database
@@ -50,60 +50,71 @@ namespace Database
         /// </summary>
         private void InitConnection()
         {
-            //Database repository
-            string settingsFilePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\Resources\\Settings.zad";
-            string settingsFile = new Uri(settingsFilePath).LocalPath;
-            bool is_filePresent = true;
-            if (m_Global_Handler.File_Handler.File_Exists(settingsFile) == true)
+            try
             {
-                //Read database file
-                var listLines = new List<string>();
-                var fileStream = new FileStream(settingsFile, FileMode.Open, FileAccess.Read);
-                using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+                //Database repository
+                string settingsFilePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\Resources\\Settings.zad";
+                string settingsFile = new Uri(settingsFilePath).LocalPath;
+                bool is_filePresent = true;
+                if (m_Global_Handler.File_Handler.File_Exists(settingsFile) == true)
                 {
-                    string line;
-                    while ((line = streamReader.ReadLine()) != null)
+                    //Read database file
+                    var listLines = new List<string>();
+                    var fileStream = new FileStream(settingsFile, FileMode.Open, FileAccess.Read);
+                    using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                     {
-                        listLines.Add(line);
+                        string line;
+                        while ((line = streamReader.ReadLine()) != null)
+                        {
+                            listLines.Add(line);
+                        }
                     }
-                }
-                //Apply to login and licence
-                if (listLines.Count > 0)
-                {
-                    SoftwareObjects.GlobalSettings.database_definition = listLines[0];
+                    //Apply to login and licence
+                    if (listLines.Count > 0)
+                    {
+                        SoftwareObjects.GlobalSettings.database_definition = listLines[0];
+                    }
+                    else
+                    {
+                        //Corrupted file, create a new one
+                        is_filePresent = false;
+                    }
                 }
                 else
                 {
-                    //Corrupted file, create a new one
                     is_filePresent = false;
                 }
-            }
-            else
-            {
-                is_filePresent = false;
-            }
 
-            //File not on the disk, create and save by default
-            if (is_filePresent == false)
-            {
-                //Default settings
-                SoftwareObjects.GlobalSettings.database_definition = "SERVER=127.0.0.1; DATABASE=zadgestion; UID=root; PASSWORD=";
-
-                //Save infos
-                string uriPath = settingsFilePath;
-                string localPath = new Uri(uriPath).LocalPath;
-                using (StreamWriter file = new StreamWriter(localPath, true))
+                //File not on the disk, create and save by default
+                if (is_filePresent == false)
                 {
-                    file.WriteLine(SoftwareObjects.GlobalSettings.database_definition);
+                    //Default settings
+                    SoftwareObjects.GlobalSettings.database_definition = "SERVER=127.0.0.1; DATABASE=zadgestion; UID=root; PASSWORD=";
+
+                    //Save infos
+                    string uriPath = settingsFilePath;
+                    string localPath = new Uri(uriPath).LocalPath;
+                    using (StreamWriter file = new StreamWriter(localPath, true))
+                    {
+                        file.WriteLine(SoftwareObjects.GlobalSettings.database_definition);
+                    }
+
+                    //Exit function
+                    return;
                 }
 
-                //Exit function
+                // Creation of the connection chain
+                string connectionString = SoftwareObjects.GlobalSettings.database_definition;
+                this.m_SQLConnection = new MySqlConnection(connectionString);
+
+                return;
+
+            }
+            catch (Exception e)
+            {
+                m_Global_Handler.Log_Handler.WriteException(MethodBase.GetCurrentMethod().Name, e);
                 return;
             }
-
-            // Creation of the connection chain
-            string connectionString = SoftwareObjects.GlobalSettings.database_definition;
-            this.m_SQLConnection = new MySqlConnection(connectionString);
         }
 
         #endregion
