@@ -13,7 +13,7 @@ namespace GeneralClasses
         /// <summary>
         /// Log file name
         /// </summary>
-        private string m_LogFile = "ZadGestion.log";
+        private string m_LogFile = "BookEvent.log";
 
         #endregion
 
@@ -51,7 +51,7 @@ namespace GeneralClasses
         public void WriteAction(string _Action)
         {
             using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter("./ZadGestion.log", true))
+            new System.IO.StreamWriter("./BookEvent.log", true))
             {
                 file.WriteLine("[ACTION] " + DateTime.Now.ToString() + " - " + _Action);
             }
@@ -65,7 +65,7 @@ namespace GeneralClasses
         public void WriteMessage(string _MethodName, string _Message = "")
         {
             using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter("./ZadGestion.log", true))
+            new System.IO.StreamWriter("./BookEvent.log", true))
             {
                 file.WriteLine("[MESSAGE] " + DateTime.Now.ToString() + " - " + _MethodName + "\t" + _Message);
             }
@@ -82,7 +82,7 @@ namespace GeneralClasses
         public void WriteException(string _MethodName, Exception _Exception)
         {
             using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter("./ZadGestion.log", true))
+            new System.IO.StreamWriter("./BookEvent.log", true))
             {
                 string exceptionMessage = "[EXCEPTION] " + DateTime.Now.ToString() + " - " + _MethodName + "\t" + _Exception.Message;
                 if (_Exception.InnerException != null)

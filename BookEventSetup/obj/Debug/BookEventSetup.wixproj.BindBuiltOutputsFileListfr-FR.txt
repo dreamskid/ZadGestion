@@ -1,0 +1,2 @@
+C:\Users\Yohann\Desktop\Softwares\BookEvent\BookEvent\BookEventSetup\bin\Debug\fr-FR\BookEvent.msi
+C:\Users\Yohann\Desktop\Softwares\BookEvent\BookEvent\BookEventSetup\bin\Debug\fr-FR\BookEvent.wixpdb

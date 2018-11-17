@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <?define BookEvent_TargetDir=$(var.BookEvent.TargetDir)?>
+  <Product Id="49f59a59-c2ca-495d-9cd2-311543154767" Name="BookEvent" Language="1033" Version="1.0.0.0" Manufacturer="BookEvent" UpgradeCode="d92dc551-3460-4b3a-aab0-11dbc2554ee4">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perUser" />
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+    <Property Id="ApplicationFolderName" Value="BookEvent" />
+
+    <UIRef Id="MyWixUI_InstallDir" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+    <Icon Id="icon.ico" SourceFile="$(var.ProjectDir)Icon_Logo_64x64.ico" />
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+    <Property Id="INSTALLDESKTOPSHORTCUT" Value="1" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+
+    <WixVariable Id="WixUIBannerBmp" Value="Images\Logo_Banner.bmp" />
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\License.rtf" />
+    <WixVariable Id="WixUISupportPerUser" Value="0" />
+
+    <Feature Id="ProductFeature" Title="BookEvent" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="Resources_files" />
+      <ComponentGroupRef Id="Cities_files" />
+      <ComponentGroupRef Id="Language_files" />
+      <ComponentGroupRef Id="Template_files" />
+      <ComponentRef Id="PrivateData" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+      <ComponentRef Id="France.xml" />
+    </Feature>
+
+    <UI>
+      <Publish Dialog="ExitDialog"
+          Control="Finish"
+          Event="DoAction"
+          Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
+    </UI>
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="!(loc.LaunchApplication)" />
+    <Property Id="WixShellExecTarget" Value="[#BookEvent.exe]" />
+    <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+
+  </Product>
+
+  <Fragment>
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="INSTALLFOLDER" Name="BookEvent">
+        <Directory Id="Resources" Name="Resources" />
+        <Directory Id="Cities" Name="Cities" />
+        <Directory Id="Language" Name="Language" />
+        <Directory Id="Template" Name="Template" />
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="BookEvent" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+    <Property Id="INSTALLFOLDER">
+      <RegistrySearch Root="HKCU" Key="Software\BookEvent" Type="raw"
+                      Id="APPLICATIONFOLDER_REGSEARCH" Name="PrivateDir" />
+    </Property>
+    <DirectoryRef Id='INSTALLFOLDER'>
+      <Component Id="PrivateData" Guid="dc39111e-2abe-40ed-a4ae-9e8211a36ceb">
+        <CreateFolder Directory="INSTALLFOLDER"/>
+        <util:RemoveFolderEx Property="INSTALLFOLDER" On="uninstall"/>
+        <RemoveFolder Id="INSTALLFOLDER" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\BookEvent" Name="PrivateDir"
+                       Type="string" Value="[INSTALLFOLDER]" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+
+  </Fragment>
+
+  <Fragment>
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="d31574a9-f628-4875-aed8-78666a8268cf">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="BookEvent" Description="BookEvent" Target="[INSTALLFOLDER]BookEvent.exe" WorkingDirectory="INSTALLFOLDER" />
+        <Shortcut Id="UninstallProduct" Name="!(loc.UninstallShortcut)" Description="!(loc.UninstallDescription)" Target="[System64Folder]msiexec.exe" Arguments="/x [ProductCode]" />
+        <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\BookEvent" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationShortcutDesktop" Guid="9774bea7-175e-4e84-9f83-50a8758c62c0">
+        <Condition>INSTALLDESKTOPSHORTCUT</Condition>
+        <Shortcut Id="ApplicationDesktopShortcut" Name="SLCloud" Description="BookEvent" Target="[INSTALLFOLDER]BookEvent.exe" WorkingDirectory="INSTALLFOLDER" />
+        <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\BookEvent" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+  </Fragment>
+
+  <Fragment>
+
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+
+      <Component Id="Common.dll" Guid="714eede9-263c-4421-b4d4-c946dc8f676b">
+        <File Id="Common.dll" Name="Common.dll" Source="$(var.BookEvent_TargetDir)Common.dll" />
+      </Component>
+      <Component Id="Database.dll" Guid="5dfd8efd-4627-4d82-9635-da8dce7af348">
+        <File Id="Database.dll" Name="Database.dll" Source="$(var.BookEvent_TargetDir)Database.dll" />
+      </Component>
+      <Component Id="Software.dll" Guid="46df7ff4-a330-43ee-a528-54bbdd66eeb2">
+        <File Id="Software.dll" Name="Software.dll" Source="$(var.BookEvent_TargetDir)Software.dll" />
+      </Component>
+      <Component Id="WindowHostAndHostess.dll" Guid="151acf21-4ec8-47c6-958c-2fd9163c09b8">
+        <File Id="WindowHostAndHostess.dll" Name="WindowHostAndHostess.dll" Source="$(var.BookEvent_TargetDir)WindowHostAndHostess.dll" />
+      </Component>
+      <Component Id="WindowMission.dll" Guid="1ea870e3-a21c-4ff3-8d57-9a66b9e4044d">
+        <File Id="WindowMission.dll" Name="WindowMission.dll" Source="$(var.BookEvent_TargetDir)WindowMission.dll" />
+      </Component>
+      <Component Id="WindowWait.dll" Guid="958d9fa8-2b36-4953-a766-923d403abe0c">
+        <File Id="WindowWait.dll" Name="WindowWait.dll" Source="$(var.BookEvent_TargetDir)WindowWait.dll" />
+      </Component>
+      <Component Id="BookEvent.exe" Guid="87e271fe-f843-4aa4-a347-02dd5b6150c6">
+        <File Id="BookEvent.exe" Name="BookEvent.exe" Source="$(var.BookEvent_TargetDir)BookEvent.exe" />
+      </Component>
+      <Component Id="BookEvent.exe.config" Guid="00849b96-840b-461d-8d40-883900086b68">
+        <File Id="BookEvent.exe.config" Name="BookEvent.exe.config" Source="$(var.BookEvent_TargetDir)BookEvent.exe.config" />
+      </Component>
+
+      <Component Id="System.Windows.Controls.DataVisualization.Toolkit.dll" Guid="0076078d-4a99-4d08-bcaa-5465ecb7a21c">
+        <File Id="System.Windows.Controls.DataVisualization.Toolkit.dll" Name="System.Windows.Controls.DataVisualization.Toolkit.dll" Source="$(var.BookEvent_TargetDir)System.Windows.Controls.DataVisualization.Toolkit.dll" />
+      </Component>
+      <Component Id="System.Windows.Controls.Input.Toolkit.dll" Guid="a4807295-ad12-4658-bffd-711a97c6f5c6">
+        <File Id="System.Windows.Controls.Input.Toolkit.dll" Name="System.Windows.Controls.Input.Toolkit.dll" Source="$(var.BookEvent_TargetDir)System.Windows.Controls.Input.Toolkit.dll" />
+      </Component>
+      <Component Id="System.Windows.Controls.Layout.Toolkit.dll" Guid="5f8cf69f-4777-4fdb-b157-17a7cb99cdd4">
+        <File Id="System.Windows.Controls.Layout.Toolkit.dll" Name="System.Windows.Controls.Layout.Toolkit.dll" Source="$(var.BookEvent_TargetDir)System.Windows.Controls.Layout.Toolkit.dll" />
+      </Component>
+      <Component Id="WPFToolkit.dll" Guid="e816f54c-e4cc-4623-9888-01bdaf63381b">
+        <File Id="WPFToolkit.dll" Name="WPFToolkit.dll" Source="$(var.BookEvent_TargetDir)WPFToolkit.dll" />
+      </Component>
+      <Component Id="HtmlRenderer.dll" Guid="041d764b-7cda-4214-a47d-e17bc166ed3b">
+        <File Id="HtmlRenderer.dll" Name="HtmlRenderer.dll" Source="$(var.BookEvent_TargetDir)HtmlRenderer.dll" />
+      </Component>
+      <Component Id="HtmlRenderer.WPF.dll" Guid="de571c2f-1733-4d2e-aaea-26ce718da0c5">
+        <File Id="HtmlRenderer.WPF.dll" Name="HtmlRenderer.WPF.dll" Source="$(var.BookEvent_TargetDir)HtmlRenderer.WPF.dll" />
+      </Component>
+    </ComponentGroup>
+
+  </Fragment>
+
+  <Fragment>
+
+    <ComponentGroup Id="Resources_files" Directory="Resources">
+      <Component Id="Update.slc" Guid="dfd61b92-a009-4afb-959b-ca6e7163ae46">
+        <File Id="Update.slc" Name="Update.slc" Source="$(var.BookEvent_TargetDir)Resources\Update.slc" />
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="Cities_files" Directory="Cities">
+      <Component Id="France.xml" Guid="9e004013-50a7-4781-82c9-be3aa72bf45e">
+        <File Id="France.xml" Name="France.xml" Source="$(var.BookEvent_TargetDir)Cities\France.xml" />
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="Language_files" Directory="Language">
+      <Component Id="Language_en_US.Designer.cs" Guid="c4faaae9-aaaf-4283-864f-a04334e88850">
+        <File Id="Language_en_US.Designer.cs" Name="Language_en-US.Designer.cs" Source="$(var.BookEvent_TargetDir)Language\Language_en-US.Designer.cs" />
+      </Component>
+      <Component Id="Language_en_US.resx" Guid="4d42b697-8985-4dcb-bd12-8fdabb1fc715">
+        <File Id="Language_en_US.resx" Name="Language_en-US.resx" Source="$(var.BookEvent_TargetDir)Language\Language_en-US.resx" />
+      </Component>
+      <Component Id="Language_fr_FR.Designer.cs" Guid="30f8290d-7f58-4baf-8db2-325cd1ba8992">
+        <File Id="Language_fr_FR.Designer.cs" Name="Language_fr-FR.Designer.cs" Source="$(var.BookEvent_TargetDir)Language\Language_fr-FR.Designer.cs" />
+      </Component>
+      <Component Id="Language_fr_FR.resx" Guid="ea50af46-f599-441c-ab35-de6eb602ce65">
+        <File Id="Language_fr_FR.resx" Name="Language_fr-FR.resx" Source="$(var.BookEvent_TargetDir)Language\Language_fr-FR.resx" />
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="Template_files" Directory="Template">
+      <Component Id="Template.docx" Guid="bb4277c1-13f9-4fa7-823c-c279c535244d">
+        <File Id="Template.docx" Name="Template.docx" Source="$(var.BookEvent_TargetDir)Template\Template.docx" />
+      </Component>
+      <Component Id="TemplateCreditNote.docx" Guid="27ed76e5-ccb9-471e-aa2d-a62f1ccc1b36">
+        <File Id="TemplateCreditNote.docx" Name="TemplateCreditNote.docx" Source="$(var.BookEvent_TargetDir)Template\TemplateCreditNote.docx" />
+      </Component>
+    </ComponentGroup>
+
+  </Fragment>
+
+</Wix>

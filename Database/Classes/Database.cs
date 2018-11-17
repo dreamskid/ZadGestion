@@ -4,11 +4,9 @@ using SoftwareClasses;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.ServiceProcess;
 using System.Text;
 
 namespace Database
@@ -89,7 +87,7 @@ namespace Database
                 if (is_filePresent == false)
                 {
                     //Default settings
-                    SoftwareObjects.GlobalSettings.database_definition = "SERVER=127.0.0.1; DATABASE=zadgestion; UID=root; PASSWORD=";
+                    SoftwareObjects.GlobalSettings.database_definition = "SERVER=127.0.0.1; DATABASE=bookevent; UID=root; PASSWORD=";
 
                     //Save infos
                     string uriPath = settingsFilePath;
@@ -122,7 +120,7 @@ namespace Database
         #region Host and hostess
 
         /// <summary>
-        /// Archive a host or hostess to the ZadGestion's database
+        /// Archive a host or hostess to the BookEvent's database
         /// <param name="_Id">Id of the host or hostess</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
@@ -159,7 +157,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Add a host or hostess to the ZadGestion's database
+        /// Add a host or hostess to the BookEvent's database
         /// <param name="_Address">Address of the host or hostess</param>
         /// <param name="_BirthCity">City of birth of the host or hostess</param>
         /// <param name="_BirthDate">Date of birth of the host or hostess</param>
@@ -272,7 +270,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Delete a host or hostess from the ZadGestion's database
+        /// Delete a host or hostess from the BookEvent's database
         /// <param name="_Id">Id of the host or hostess</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
@@ -309,7 +307,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Edit a host or hostess to the ZadGestion's database
+        /// Edit a host or hostess to the BookEvent's database
         /// <param name="_Address">Address of the host or hostess</param>
         /// <param name="_BirthCity">City of birth of the host or hostess</param>
         /// <param name="_BirthDate">Date of birth of the host or hostess</param>
@@ -416,7 +414,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Get all the hosts and hostesses from ZadGestion's database
+        /// Get all the hosts and hostesses from BookEvent's database
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Get_HostsAndHostessesFromDatabase()
@@ -494,7 +492,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Restore a host or hostess to the ZadGestion's database
+        /// Restore a host or hostess to the BookEvent's database
         /// <param name="_Id">Id of the host or hostess</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
@@ -535,7 +533,7 @@ namespace Database
         #region Client
 
         /// <summary>
-        /// Add a host or hostess to the ZadGestion's database
+        /// Add a host or hostess to the BookEvent's database
         /// <param name="_Address">Address of the client</param>
         /// <param name="_City">City of the client</param>
         /// <param name="_CorporateName">Corporate name of the client</param>
@@ -600,7 +598,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Archive a client to the ZadGestion's database
+        /// Archive a client to the BookEvent's database
         /// <param name="_Id">Id of the client</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
@@ -637,7 +635,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Delete a client from the ZadGestion's database
+        /// Delete a client from the BookEvent's database
         /// <param name="_Id">Id of the client</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
@@ -674,7 +672,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Edit a client to the ZadGestion's database
+        /// Edit a client to the BookEvent's database
         /// <param name="_Address">Address of the client</param>
         /// <param name="_City">City of the client</param>
         /// <param name="_CorporateName">Corporate name of the client</param>
@@ -734,7 +732,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Get all the clients from ZadGestion's database
+        /// Get all the clients from BookEvent's database
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
         public string Get_ClientsFromDatabase()
@@ -793,7 +791,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Restore a client to the ZadGestion's database
+        /// Restore a client to the BookEvent's database
         /// <param name="_Id">Id of the client</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
@@ -834,7 +832,7 @@ namespace Database
         #region Mission
 
         /// <summary>
-        /// Add a mission to the ZadGestion's database
+        /// Add a mission to the BookEvent's database
         /// <param name="_Address">Address of the mission</param>
         /// <param name="_City">City of the mission</param>
         /// <param name="_ClientName">Name of the client</param>
@@ -911,7 +909,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Close a mission to the ZadGestion's database
+        /// Close a mission to the BookEvent's database
         /// <param name="_Id">Id of the mission</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
@@ -948,7 +946,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Delete a mission to the ZadGestion's database
+        /// Delete a mission to the BookEvent's database
         /// <param name="_Id">Id of the mission</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
@@ -981,7 +979,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Edit an mission to the ZadGestion's database
+        /// Edit an mission to the BookEvent's database
         /// <param name="_Address">Address of the mission</param>
         /// <param name="_City">City of the mission</param>
         /// <param name="_ClientName">Name of the client</param>
@@ -1056,7 +1054,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Get all the missions from ZadGestion's database
+        /// Get all the missions from BookEvent's database
         /// <returns>The string containing all the missions</returns>
         /// </summary>
         public string Get_MissionsFromDatabase()
@@ -1119,7 +1117,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Restore a mission to the ZadGestion's database
+        /// Restore a mission to the BookEvent's database
         /// <param name="_Id">Id of the mission</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>
@@ -1438,7 +1436,7 @@ namespace Database
         }
 
         /// <summary>
-        /// Delete a shift from the ZadGestion's database
+        /// Delete a shift from the BookEvent's database
         /// <param name="_Id">Id of the shift</param>
         /// <returns>The string containing the result of the operation (OK, error)</returns>
         /// </summary>

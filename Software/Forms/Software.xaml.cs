@@ -565,7 +565,7 @@ namespace Software
             {
                 //Title
                 string version = m_Global_Handler.Resources_Handler.Read_Version();
-                this.Title = "Zad Gestion - v" + version;
+                this.Title = "BookEvent - v" + version;
 
                 //Buttons
                 Btn_Software_Clients.Content = m_Global_Handler.Resources_Handler.Get_Resources("Clients");
@@ -799,7 +799,7 @@ namespace Software
                 //Send the email with the log attached
                 string exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\";
                 exePath = exePath.Replace("file:\\", "");
-                string file = exePath + "ZadGestion.log";
+                string file = exePath + "BookEvent.log";
                 string[] attachments = new string[] { file };
                 if (!File.Exists(file))
                 {

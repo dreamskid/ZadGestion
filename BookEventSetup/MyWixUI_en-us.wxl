@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" Codepage="1252" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+
+  <String Id="InstallDirDlgDesktopShortcut" Overridable="yes">Create a shortcut on the desktop.</String>
+  
+  <String Id="UninstallShortcut" Overridable="yes">Uninstall BookEvent</String>
+  <String Id="UninstallDescription" Overridable="yes">Uninstall BookEvent from your computer.</String>
+
+  <String Id="LaunchApplication" Overridable="yes">Launch BookEvent</String>
+  
+  <String Id="UpgradeDescription" Overridable="yes">A newer version of BookEvent is already installed on your computer.</String>
+  
+</WixLocalization>

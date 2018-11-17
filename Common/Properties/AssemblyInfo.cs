@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Common")]
 [assembly: AssemblyDescription("Class library containing all the common classes")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ZadGestion")]
+[assembly: AssemblyCompany("BookEvent")]
 [assembly: AssemblyProduct("Common")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
