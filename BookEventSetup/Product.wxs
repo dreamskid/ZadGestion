@@ -144,6 +144,9 @@
       <Component Id="HtmlRenderer.WPF.dll" Guid="de571c2f-1733-4d2e-aaea-26ce718da0c5">
         <File Id="HtmlRenderer.WPF.dll" Name="HtmlRenderer.WPF.dll" Source="$(var.BookEvent_TargetDir)HtmlRenderer.WPF.dll" />
       </Component>
+      <Component Id="MySql.Data.dll" Guid="14c44b65-87d7-47b5-ae76-dab66e3c6d80">
+        <File Id="MySql.Data.dll" Name="MySql.Data.dll" Source="$(var.BookEvent_TargetDir)MySql.Data.dll" />
+      </Component>
     </ComponentGroup>
 
   </Fragment>
@@ -153,6 +156,9 @@
     <ComponentGroup Id="Resources_files" Directory="Resources">
       <Component Id="Update.slc" Guid="dfd61b92-a009-4afb-959b-ca6e7163ae46">
         <File Id="Update.slc" Name="Update.slc" Source="$(var.BookEvent_TargetDir)Resources\Update.slc" />
+      </Component>
+      <Component Id="Settings.zad" Guid="b941f802-fb1c-43dc-adc4-ea26a1be6663">
+        <File Id="Settings.zad" Name="Settings.zad" Source="$(var.BookEvent_TargetDir)Resources\Settings.zad" />
       </Component>
     </ComponentGroup>
 
